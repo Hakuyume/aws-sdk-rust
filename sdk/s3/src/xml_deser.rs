@@ -2494,12 +2494,6 @@ pub fn deser_member_com_amazonaws_s3_synthetic_copy_object_output_copy_object_re
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("CopyObjectResult")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CopyObjectResult got {:?}",
-            start_el
-        )));
-    }
     crate::xml_deser::deser_structure_crate_model_copy_object_result(&mut decoder)
 }
 
