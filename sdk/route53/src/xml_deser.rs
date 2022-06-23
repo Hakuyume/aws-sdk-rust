@@ -13,7 +13,6 @@ pub fn deser_structure_crate_error_concurrent_modification_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -46,7 +45,6 @@ pub fn deser_structure_crate_error_invalid_input_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -80,7 +78,6 @@ pub fn deser_structure_crate_error_invalid_key_signing_key_status_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -113,7 +110,6 @@ pub fn deser_structure_crate_error_invalid_kms_arn_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -146,7 +142,6 @@ pub fn deser_structure_crate_error_invalid_signing_status_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -179,7 +174,6 @@ pub fn deser_structure_crate_error_no_such_key_signing_key_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -210,7 +204,6 @@ pub fn deser_operation_crate_operation_activate_key_signing_key(
     mut builder: crate::output::activate_key_signing_key_output::Builder,
 ) -> Result<crate::output::activate_key_signing_key_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -248,7 +241,6 @@ pub fn deser_structure_crate_error_conflicting_domain_exists_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -281,7 +273,6 @@ pub fn deser_structure_crate_error_invalid_vpc_id_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -314,7 +305,6 @@ pub fn deser_structure_crate_error_limits_exceeded_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -347,7 +337,6 @@ pub fn deser_structure_crate_error_no_such_hosted_zone_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -380,7 +369,6 @@ pub fn deser_structure_crate_error_not_authorized_exception_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -413,7 +401,6 @@ pub fn deser_structure_crate_error_prior_request_not_complete_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -446,7 +433,6 @@ pub fn deser_structure_crate_error_public_zone_vpc_association_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
@@ -479,7 +465,6 @@ pub fn deser_operation_crate_operation_associate_vpc_with_hosted_zone(
     crate::output::associate_vpc_with_hosted_zone_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -510,30 +495,54 @@ pub fn deser_operation_crate_operation_associate_vpc_with_hosted_zone(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_invalid_change_batch_xml_err(
+pub fn deser_structure_crate_error_cidr_block_in_use_exception_xml_err(
     inp: &[u8],
-    mut builder: crate::error::invalid_change_batch::Builder,
-) -> Result<crate::error::invalid_change_batch::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::cidr_block_in_use_exception::Builder,
+) -> Result<crate::error::cidr_block_in_use_exception::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("messages") /* messages com.amazonaws.route53#InvalidChangeBatch$messages */ =>  {
+            s if s.matches("Message") /* Message com.amazonaws.route53#CidrBlockInUseException$Message */ =>  {
                 let var_16 =
                     Some(
-                        crate::xml_deser::deser_list_com_amazonaws_route53_error_messages(&mut tag)
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
                         ?
                     )
                 ;
-                builder = builder.set_messages(var_16);
+                builder = builder.set_message(var_16);
             }
             ,
-            s if s.matches("message") /* message com.amazonaws.route53#InvalidChangeBatch$message */ =>  {
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_cidr_collection_version_mismatch_exception_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::cidr_collection_version_mismatch_exception::Builder,
+) -> Result<
+    crate::error::cidr_collection_version_mismatch_exception::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("Message") /* Message com.amazonaws.route53#CidrCollectionVersionMismatchException$Message */ =>  {
                 let var_17 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -553,20 +562,22 @@ pub fn deser_structure_crate_error_invalid_change_batch_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_health_check_xml_err(
+pub fn deser_structure_crate_error_no_such_cidr_collection_exception_xml_err(
     inp: &[u8],
-    mut builder: crate::error::no_such_health_check::Builder,
-) -> Result<crate::error::no_such_health_check::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::no_such_cidr_collection_exception::Builder,
+) -> Result<
+    crate::error::no_such_cidr_collection_exception::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchHealthCheck$message */ =>  {
+            s if s.matches("Message") /* Message com.amazonaws.route53#NoSuchCidrCollectionException$Message */ =>  {
                 let var_18 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -586,59 +597,26 @@ pub fn deser_structure_crate_error_no_such_health_check_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_change_resource_record_sets(
+pub fn deser_operation_crate_operation_change_cidr_collection(
     inp: &[u8],
-    mut builder: crate::output::change_resource_record_sets_output::Builder,
-) -> Result<
-    crate::output::change_resource_record_sets_output::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
-    use std::convert::TryFrom;
+    mut builder: crate::output::change_cidr_collection_output::Builder,
+) -> Result<crate::output::change_cidr_collection_output::Builder, aws_smithy_xml::decode::XmlError>
+{
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("ChangeResourceRecordSetsResponse")) {
+    if !(start_el.matches("ChangeCidrCollectionResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected ChangeResourceRecordSetsResponse got {:?}",
+            "invalid root, expected ChangeCidrCollectionResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#ChangeResourceRecordSetsOutput$ChangeInfo */ =>  {
+            s if s.matches("Id") /* Id com.amazonaws.route53.synthetic#ChangeCidrCollectionOutput$Id */ =>  {
                 let var_19 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_change_info(var_19);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_throttling_exception_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::throttling_exception::Builder,
-) -> Result<crate::error::throttling_exception::Builder, aws_smithy_xml::decode::XmlError> {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
-    #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#ThrottlingException$message */ =>  {
-                let var_20 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -647,7 +625,7 @@ pub fn deser_structure_crate_error_throttling_exception_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_20);
+                builder = builder.set_id(var_19);
             }
             ,
             _ => {}
@@ -657,20 +635,29 @@ pub fn deser_structure_crate_error_throttling_exception_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_health_check_already_exists_xml_err(
+pub fn deser_structure_crate_error_invalid_change_batch_xml_err(
     inp: &[u8],
-    mut builder: crate::error::health_check_already_exists::Builder,
-) -> Result<crate::error::health_check_already_exists::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::invalid_change_batch::Builder,
+) -> Result<crate::error::invalid_change_batch::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#HealthCheckAlreadyExists$message */ =>  {
+            s if s.matches("messages") /* messages com.amazonaws.route53#InvalidChangeBatch$messages */ =>  {
+                let var_20 =
+                    Some(
+                        crate::xml_deser::deser_list_com_amazonaws_route53_error_messages(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_messages(var_20);
+            }
+            ,
+            s if s.matches("message") /* message com.amazonaws.route53#InvalidChangeBatch$message */ =>  {
                 let var_21 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -690,20 +677,19 @@ pub fn deser_structure_crate_error_health_check_already_exists_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_too_many_health_checks_xml_err(
+pub fn deser_structure_crate_error_no_such_health_check_xml_err(
     inp: &[u8],
-    mut builder: crate::error::too_many_health_checks::Builder,
-) -> Result<crate::error::too_many_health_checks::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::no_such_health_check::Builder,
+) -> Result<crate::error::no_such_health_check::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TooManyHealthChecks$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchHealthCheck$message */ =>  {
                 let var_22 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -723,32 +709,34 @@ pub fn deser_structure_crate_error_too_many_health_checks_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_health_check(
+pub fn deser_operation_crate_operation_change_resource_record_sets(
     inp: &[u8],
-    mut builder: crate::output::create_health_check_output::Builder,
-) -> Result<crate::output::create_health_check_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
+    mut builder: crate::output::change_resource_record_sets_output::Builder,
+) -> Result<
+    crate::output::change_resource_record_sets_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("CreateHealthCheckResponse")) {
+    if !(start_el.matches("ChangeResourceRecordSetsResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateHealthCheckResponse got {:?}",
+            "invalid root, expected ChangeResourceRecordSetsResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("HealthCheck") /* HealthCheck com.amazonaws.route53.synthetic#CreateHealthCheckOutput$HealthCheck */ =>  {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#ChangeResourceRecordSetsOutput$ChangeInfo */ =>  {
                 let var_23 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_health_check(&mut tag)
+                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_health_check(var_23);
+                builder = builder.set_change_info(var_23);
             }
             ,
             _ => {}
@@ -758,20 +746,19 @@ pub fn deser_operation_crate_operation_create_health_check(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_delegation_set_not_available_xml_err(
+pub fn deser_structure_crate_error_throttling_exception_xml_err(
     inp: &[u8],
-    mut builder: crate::error::delegation_set_not_available::Builder,
-) -> Result<crate::error::delegation_set_not_available::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::throttling_exception::Builder,
+) -> Result<crate::error::throttling_exception::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetNotAvailable$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#ThrottlingException$message */ =>  {
                 let var_24 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -791,20 +778,22 @@ pub fn deser_structure_crate_error_delegation_set_not_available_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_delegation_set_not_reusable_xml_err(
+pub fn deser_structure_crate_error_cidr_collection_already_exists_exception_xml_err(
     inp: &[u8],
-    mut builder: crate::error::delegation_set_not_reusable::Builder,
-) -> Result<crate::error::delegation_set_not_reusable::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::cidr_collection_already_exists_exception::Builder,
+) -> Result<
+    crate::error::cidr_collection_already_exists_exception::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetNotReusable$message */ =>  {
+            s if s.matches("Message") /* Message com.amazonaws.route53#CidrCollectionAlreadyExistsException$Message */ =>  {
                 let var_25 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -824,30 +813,32 @@ pub fn deser_structure_crate_error_delegation_set_not_reusable_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_hosted_zone_already_exists_xml_err(
+pub fn deser_operation_crate_operation_create_cidr_collection(
     inp: &[u8],
-    mut builder: crate::error::hosted_zone_already_exists::Builder,
-) -> Result<crate::error::hosted_zone_already_exists::Builder, aws_smithy_xml::decode::XmlError> {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    mut builder: crate::output::create_cidr_collection_output::Builder,
+) -> Result<crate::output::create_cidr_collection_output::Builder, aws_smithy_xml::decode::XmlError>
+{
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
     #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("CreateCidrCollectionResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected CreateCidrCollectionResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#HostedZoneAlreadyExists$message */ =>  {
+            s if s.matches("Collection") /* Collection com.amazonaws.route53.synthetic#CreateCidrCollectionOutput$Collection */ =>  {
                 let var_26 =
                     Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
+                        crate::xml_deser::deser_structure_crate_model_cidr_collection(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_message(var_26);
+                builder = builder.set_collection(var_26);
             }
             ,
             _ => {}
@@ -857,20 +848,19 @@ pub fn deser_structure_crate_error_hosted_zone_already_exists_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_invalid_domain_name_xml_err(
+pub fn deser_structure_crate_error_health_check_already_exists_xml_err(
     inp: &[u8],
-    mut builder: crate::error::invalid_domain_name::Builder,
-) -> Result<crate::error::invalid_domain_name::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::health_check_already_exists::Builder,
+) -> Result<crate::error::health_check_already_exists::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#InvalidDomainName$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#HealthCheckAlreadyExists$message */ =>  {
                 let var_27 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -890,20 +880,19 @@ pub fn deser_structure_crate_error_invalid_domain_name_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_delegation_set_xml_err(
+pub fn deser_structure_crate_error_too_many_health_checks_xml_err(
     inp: &[u8],
-    mut builder: crate::error::no_such_delegation_set::Builder,
-) -> Result<crate::error::no_such_delegation_set::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::too_many_health_checks::Builder,
+) -> Result<crate::error::too_many_health_checks::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchDelegationSet$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TooManyHealthChecks$message */ =>  {
                 let var_28 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -923,21 +912,54 @@ pub fn deser_structure_crate_error_no_such_delegation_set_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_too_many_hosted_zones_xml_err(
+pub fn deser_operation_crate_operation_create_health_check(
     inp: &[u8],
-    mut builder: crate::error::too_many_hosted_zones::Builder,
-) -> Result<crate::error::too_many_hosted_zones::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::output::create_health_check_output::Builder,
+) -> Result<crate::output::create_health_check_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("CreateHealthCheckResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected CreateHealthCheckResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("HealthCheck") /* HealthCheck com.amazonaws.route53.synthetic#CreateHealthCheckOutput$HealthCheck */ =>  {
+                let var_29 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_health_check(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_health_check(var_29);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_delegation_set_not_available_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::delegation_set_not_available::Builder,
+) -> Result<crate::error::delegation_set_not_available::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TooManyHostedZones$message */ =>  {
-                let var_29 =
+            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetNotAvailable$message */ =>  {
+                let var_30 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -946,7 +968,7 @@ pub fn deser_structure_crate_error_too_many_hosted_zones_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_29);
+                builder = builder.set_message(var_30);
             }
             ,
             _ => {}
@@ -956,85 +978,115 @@ pub fn deser_structure_crate_error_too_many_hosted_zones_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_hosted_zone(
+pub fn deser_structure_crate_error_delegation_set_not_reusable_xml_err(
     inp: &[u8],
-    mut builder: crate::output::create_hosted_zone_output::Builder,
-) -> Result<crate::output::create_hosted_zone_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("CreateHostedZoneResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateHostedZoneResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("HostedZone") /* HostedZone com.amazonaws.route53.synthetic#CreateHostedZoneOutput$HostedZone */ =>  {
-                let var_30 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_hosted_zone(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_hosted_zone(var_30);
-            }
-            ,
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#CreateHostedZoneOutput$ChangeInfo */ =>  {
-                let var_31 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_change_info(var_31);
-            }
-            ,
-            s if s.matches("DelegationSet") /* DelegationSet com.amazonaws.route53.synthetic#CreateHostedZoneOutput$DelegationSet */ =>  {
-                let var_32 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_delegation_set(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_delegation_set(var_32);
-            }
-            ,
-            s if s.matches("VPC") /* VPC com.amazonaws.route53.synthetic#CreateHostedZoneOutput$VPC */ =>  {
-                let var_33 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_vpc(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_vpc(var_33);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_invalid_argument_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::invalid_argument::Builder,
-) -> Result<crate::error::invalid_argument::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::delegation_set_not_reusable::Builder,
+) -> Result<crate::error::delegation_set_not_reusable::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#InvalidArgument$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetNotReusable$message */ =>  {
+                let var_31 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_31);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_hosted_zone_already_exists_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::hosted_zone_already_exists::Builder,
+) -> Result<crate::error::hosted_zone_already_exists::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#HostedZoneAlreadyExists$message */ =>  {
+                let var_32 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_32);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_invalid_domain_name_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::invalid_domain_name::Builder,
+) -> Result<crate::error::invalid_domain_name::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#InvalidDomainName$message */ =>  {
+                let var_33 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_33);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_no_such_delegation_set_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::no_such_delegation_set::Builder,
+) -> Result<crate::error::no_such_delegation_set::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchDelegationSet$message */ =>  {
                 let var_34 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1054,20 +1106,19 @@ pub fn deser_structure_crate_error_invalid_argument_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_invalid_key_signing_key_name_xml_err(
+pub fn deser_structure_crate_error_too_many_hosted_zones_xml_err(
     inp: &[u8],
-    mut builder: crate::error::invalid_key_signing_key_name::Builder,
-) -> Result<crate::error::invalid_key_signing_key_name::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::too_many_hosted_zones::Builder,
+) -> Result<crate::error::too_many_hosted_zones::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#InvalidKeySigningKeyName$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TooManyHostedZones$message */ =>  {
                 let var_35 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1087,110 +1138,61 @@ pub fn deser_structure_crate_error_invalid_key_signing_key_name_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_key_signing_key_already_exists_xml_err(
+pub fn deser_operation_crate_operation_create_hosted_zone(
     inp: &[u8],
-    mut builder: crate::error::key_signing_key_already_exists::Builder,
-) -> Result<crate::error::key_signing_key_already_exists::Builder, aws_smithy_xml::decode::XmlError>
-{
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
-    #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyAlreadyExists$message */ =>  {
-                let var_36 =
-                    Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
-                        ?
-                    )
-                ;
-                builder = builder.set_message(var_36);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_too_many_key_signing_keys_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::too_many_key_signing_keys::Builder,
-) -> Result<crate::error::too_many_key_signing_keys::Builder, aws_smithy_xml::decode::XmlError> {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
-    #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TooManyKeySigningKeys$message */ =>  {
-                let var_37 =
-                    Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
-                        ?
-                    )
-                ;
-                builder = builder.set_message(var_37);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_key_signing_key(
-    inp: &[u8],
-    mut builder: crate::output::create_key_signing_key_output::Builder,
-) -> Result<crate::output::create_key_signing_key_output::Builder, aws_smithy_xml::decode::XmlError>
-{
-    use std::convert::TryFrom;
+    mut builder: crate::output::create_hosted_zone_output::Builder,
+) -> Result<crate::output::create_hosted_zone_output::Builder, aws_smithy_xml::decode::XmlError> {
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("CreateKeySigningKeyResponse")) {
+    if !(start_el.matches("CreateHostedZoneResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateKeySigningKeyResponse got {:?}",
+            "invalid root, expected CreateHostedZoneResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#CreateKeySigningKeyOutput$ChangeInfo */ =>  {
-                let var_38 =
+            s if s.matches("HostedZone") /* HostedZone com.amazonaws.route53.synthetic#CreateHostedZoneOutput$HostedZone */ =>  {
+                let var_36 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_hosted_zone(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_hosted_zone(var_36);
+            }
+            ,
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#CreateHostedZoneOutput$ChangeInfo */ =>  {
+                let var_37 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_change_info(var_38);
+                builder = builder.set_change_info(var_37);
             }
             ,
-            s if s.matches("KeySigningKey") /* KeySigningKey com.amazonaws.route53.synthetic#CreateKeySigningKeyOutput$KeySigningKey */ =>  {
-                let var_39 =
+            s if s.matches("DelegationSet") /* DelegationSet com.amazonaws.route53.synthetic#CreateHostedZoneOutput$DelegationSet */ =>  {
+                let var_38 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_key_signing_key(&mut tag)
+                        crate::xml_deser::deser_structure_crate_model_delegation_set(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_key_signing_key(var_39);
+                builder = builder.set_delegation_set(var_38);
+            }
+            ,
+            s if s.matches("VPC") /* VPC com.amazonaws.route53.synthetic#CreateHostedZoneOutput$VPC */ =>  {
+                let var_39 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_vpc(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_vpc(var_39);
             }
             ,
             _ => {}
@@ -1200,23 +1202,19 @@ pub fn deser_operation_crate_operation_create_key_signing_key(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_insufficient_cloud_watch_logs_resource_policy_xml_err(
+pub fn deser_structure_crate_error_invalid_argument_xml_err(
     inp: &[u8],
-    mut builder: crate::error::insufficient_cloud_watch_logs_resource_policy::Builder,
-) -> Result<
-    crate::error::insufficient_cloud_watch_logs_resource_policy::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
+    mut builder: crate::error::invalid_argument::Builder,
+) -> Result<crate::error::invalid_argument::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#InsufficientCloudWatchLogsResourcePolicy$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#InvalidArgument$message */ =>  {
                 let var_40 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1236,23 +1234,19 @@ pub fn deser_structure_crate_error_insufficient_cloud_watch_logs_resource_policy
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_cloud_watch_logs_log_group_xml_err(
+pub fn deser_structure_crate_error_invalid_key_signing_key_name_xml_err(
     inp: &[u8],
-    mut builder: crate::error::no_such_cloud_watch_logs_log_group::Builder,
-) -> Result<
-    crate::error::no_such_cloud_watch_logs_log_group::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
+    mut builder: crate::error::invalid_key_signing_key_name::Builder,
+) -> Result<crate::error::invalid_key_signing_key_name::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchCloudWatchLogsLogGroup$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#InvalidKeySigningKeyName$message */ =>  {
                 let var_41 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1272,23 +1266,20 @@ pub fn deser_structure_crate_error_no_such_cloud_watch_logs_log_group_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_query_logging_config_already_exists_xml_err(
+pub fn deser_structure_crate_error_key_signing_key_already_exists_xml_err(
     inp: &[u8],
-    mut builder: crate::error::query_logging_config_already_exists::Builder,
-) -> Result<
-    crate::error::query_logging_config_already_exists::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
+    mut builder: crate::error::key_signing_key_already_exists::Builder,
+) -> Result<crate::error::key_signing_key_already_exists::Builder, aws_smithy_xml::decode::XmlError>
+{
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#QueryLoggingConfigAlreadyExists$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyAlreadyExists$message */ =>  {
                 let var_42 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1308,103 +1299,74 @@ pub fn deser_structure_crate_error_query_logging_config_already_exists_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_query_logging_config(
+pub fn deser_structure_crate_error_too_many_key_signing_keys_xml_err(
     inp: &[u8],
-    mut builder: crate::output::create_query_logging_config_output::Builder,
-) -> Result<
-    crate::output::create_query_logging_config_output::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
-    use std::convert::TryFrom;
+    mut builder: crate::error::too_many_key_signing_keys::Builder,
+) -> Result<crate::error::too_many_key_signing_keys::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#TooManyKeySigningKeys$message */ =>  {
+                let var_43 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_43);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_create_key_signing_key(
+    inp: &[u8],
+    mut builder: crate::output::create_key_signing_key_output::Builder,
+) -> Result<crate::output::create_key_signing_key_output::Builder, aws_smithy_xml::decode::XmlError>
+{
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("CreateQueryLoggingConfigResponse")) {
+    if !(start_el.matches("CreateKeySigningKeyResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateQueryLoggingConfigResponse got {:?}",
+            "invalid root, expected CreateKeySigningKeyResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("QueryLoggingConfig") /* QueryLoggingConfig com.amazonaws.route53.synthetic#CreateQueryLoggingConfigOutput$QueryLoggingConfig */ =>  {
-                let var_43 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_query_logging_config(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_query_logging_config(var_43);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_delegation_set_already_created_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::delegation_set_already_created::Builder,
-) -> Result<crate::error::delegation_set_already_created::Builder, aws_smithy_xml::decode::XmlError>
-{
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
-    #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetAlreadyCreated$message */ =>  {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#CreateKeySigningKeyOutput$ChangeInfo */ =>  {
                 let var_44 =
                     Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
+                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_message(var_44);
+                builder = builder.set_change_info(var_44);
             }
             ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_delegation_set_already_reusable_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::delegation_set_already_reusable::Builder,
-) -> Result<crate::error::delegation_set_already_reusable::Builder, aws_smithy_xml::decode::XmlError>
-{
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
-    #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetAlreadyReusable$message */ =>  {
+            s if s.matches("KeySigningKey") /* KeySigningKey com.amazonaws.route53.synthetic#CreateKeySigningKeyOutput$KeySigningKey */ =>  {
                 let var_45 =
                     Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
+                        crate::xml_deser::deser_structure_crate_model_key_signing_key(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_message(var_45);
+                builder = builder.set_key_signing_key(var_45);
             }
             ,
             _ => {}
@@ -1414,20 +1376,22 @@ pub fn deser_structure_crate_error_delegation_set_already_reusable_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_hosted_zone_not_found_xml_err(
+pub fn deser_structure_crate_error_insufficient_cloud_watch_logs_resource_policy_xml_err(
     inp: &[u8],
-    mut builder: crate::error::hosted_zone_not_found::Builder,
-) -> Result<crate::error::hosted_zone_not_found::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::insufficient_cloud_watch_logs_resource_policy::Builder,
+) -> Result<
+    crate::error::insufficient_cloud_watch_logs_resource_policy::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#HostedZoneNotFound$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#InsufficientCloudWatchLogsResourcePolicy$message */ =>  {
                 let var_46 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1447,35 +1411,32 @@ pub fn deser_structure_crate_error_hosted_zone_not_found_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_reusable_delegation_set(
+pub fn deser_structure_crate_error_no_such_cloud_watch_logs_log_group_xml_err(
     inp: &[u8],
-    mut builder: crate::output::create_reusable_delegation_set_output::Builder,
+    mut builder: crate::error::no_such_cloud_watch_logs_log_group::Builder,
 ) -> Result<
-    crate::output::create_reusable_delegation_set_output::Builder,
+    crate::error::no_such_cloud_watch_logs_log_group::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("CreateReusableDelegationSetResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateReusableDelegationSetResponse got {:?}",
-            start_el
-        )));
+    if inp.is_empty() {
+        return Ok(builder);
     }
-    while let Some(mut tag) = decoder.next_tag() {
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("DelegationSet") /* DelegationSet com.amazonaws.route53.synthetic#CreateReusableDelegationSetOutput$DelegationSet */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchCloudWatchLogsLogGroup$message */ =>  {
                 let var_47 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_delegation_set(&mut tag)
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
                         ?
                     )
                 ;
-                builder = builder.set_delegation_set(var_47);
+                builder = builder.set_message(var_47);
             }
             ,
             _ => {}
@@ -1485,21 +1446,22 @@ pub fn deser_operation_crate_operation_create_reusable_delegation_set(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_invalid_traffic_policy_document_xml_err(
+pub fn deser_structure_crate_error_query_logging_config_already_exists_xml_err(
     inp: &[u8],
-    mut builder: crate::error::invalid_traffic_policy_document::Builder,
-) -> Result<crate::error::invalid_traffic_policy_document::Builder, aws_smithy_xml::decode::XmlError>
-{
+    mut builder: crate::error::query_logging_config_already_exists::Builder,
+) -> Result<
+    crate::error::query_logging_config_already_exists::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#InvalidTrafficPolicyDocument$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#QueryLoggingConfigAlreadyExists$message */ =>  {
                 let var_48 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1519,30 +1481,34 @@ pub fn deser_structure_crate_error_invalid_traffic_policy_document_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_too_many_traffic_policies_xml_err(
+pub fn deser_operation_crate_operation_create_query_logging_config(
     inp: &[u8],
-    mut builder: crate::error::too_many_traffic_policies::Builder,
-) -> Result<crate::error::too_many_traffic_policies::Builder, aws_smithy_xml::decode::XmlError> {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    mut builder: crate::output::create_query_logging_config_output::Builder,
+) -> Result<
+    crate::output::create_query_logging_config_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
     #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("CreateQueryLoggingConfigResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected CreateQueryLoggingConfigResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TooManyTrafficPolicies$message */ =>  {
+            s if s.matches("QueryLoggingConfig") /* QueryLoggingConfig com.amazonaws.route53.synthetic#CreateQueryLoggingConfigOutput$QueryLoggingConfig */ =>  {
                 let var_49 =
                     Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
+                        crate::xml_deser::deser_structure_crate_model_query_logging_config(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_message(var_49);
+                builder = builder.set_query_logging_config(var_49);
             }
             ,
             _ => {}
@@ -1552,21 +1518,20 @@ pub fn deser_structure_crate_error_too_many_traffic_policies_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_traffic_policy_already_exists_xml_err(
+pub fn deser_structure_crate_error_delegation_set_already_created_xml_err(
     inp: &[u8],
-    mut builder: crate::error::traffic_policy_already_exists::Builder,
-) -> Result<crate::error::traffic_policy_already_exists::Builder, aws_smithy_xml::decode::XmlError>
+    mut builder: crate::error::delegation_set_already_created::Builder,
+) -> Result<crate::error::delegation_set_already_created::Builder, aws_smithy_xml::decode::XmlError>
 {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TrafficPolicyAlreadyExists$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetAlreadyCreated$message */ =>  {
                 let var_50 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1586,33 +1551,30 @@ pub fn deser_structure_crate_error_traffic_policy_already_exists_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_traffic_policy(
+pub fn deser_structure_crate_error_delegation_set_already_reusable_xml_err(
     inp: &[u8],
-    mut builder: crate::output::create_traffic_policy_output::Builder,
-) -> Result<crate::output::create_traffic_policy_output::Builder, aws_smithy_xml::decode::XmlError>
+    mut builder: crate::error::delegation_set_already_reusable::Builder,
+) -> Result<crate::error::delegation_set_already_reusable::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("CreateTrafficPolicyResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateTrafficPolicyResponse got {:?}",
-            start_el
-        )));
+    if inp.is_empty() {
+        return Ok(builder);
     }
-    while let Some(mut tag) = decoder.next_tag() {
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("TrafficPolicy") /* TrafficPolicy com.amazonaws.route53.synthetic#CreateTrafficPolicyOutput$TrafficPolicy */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetAlreadyReusable$message */ =>  {
                 let var_51 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_traffic_policy(&mut tag)
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy(var_51);
+                builder = builder.set_message(var_51);
             }
             ,
             _ => {}
@@ -1622,20 +1584,19 @@ pub fn deser_operation_crate_operation_create_traffic_policy(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_traffic_policy_xml_err(
+pub fn deser_structure_crate_error_hosted_zone_not_found_xml_err(
     inp: &[u8],
-    mut builder: crate::error::no_such_traffic_policy::Builder,
-) -> Result<crate::error::no_such_traffic_policy::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::hosted_zone_not_found::Builder,
+) -> Result<crate::error::hosted_zone_not_found::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchTrafficPolicy$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#HostedZoneNotFound$message */ =>  {
                 let var_52 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1655,33 +1616,34 @@ pub fn deser_structure_crate_error_no_such_traffic_policy_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_too_many_traffic_policy_instances_xml_err(
+pub fn deser_operation_crate_operation_create_reusable_delegation_set(
     inp: &[u8],
-    mut builder: crate::error::too_many_traffic_policy_instances::Builder,
+    mut builder: crate::output::create_reusable_delegation_set_output::Builder,
 ) -> Result<
-    crate::error::too_many_traffic_policy_instances::Builder,
+    crate::output::create_reusable_delegation_set_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
     #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("CreateReusableDelegationSetResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected CreateReusableDelegationSetResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TooManyTrafficPolicyInstances$message */ =>  {
+            s if s.matches("DelegationSet") /* DelegationSet com.amazonaws.route53.synthetic#CreateReusableDelegationSetOutput$DelegationSet */ =>  {
                 let var_53 =
                     Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
+                        crate::xml_deser::deser_structure_crate_model_delegation_set(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_message(var_53);
+                builder = builder.set_delegation_set(var_53);
             }
             ,
             _ => {}
@@ -1691,23 +1653,20 @@ pub fn deser_structure_crate_error_too_many_traffic_policy_instances_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_traffic_policy_instance_already_exists_xml_err(
+pub fn deser_structure_crate_error_invalid_traffic_policy_document_xml_err(
     inp: &[u8],
-    mut builder: crate::error::traffic_policy_instance_already_exists::Builder,
-) -> Result<
-    crate::error::traffic_policy_instance_already_exists::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
+    mut builder: crate::error::invalid_traffic_policy_document::Builder,
+) -> Result<crate::error::invalid_traffic_policy_document::Builder, aws_smithy_xml::decode::XmlError>
+{
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TrafficPolicyInstanceAlreadyExists$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#InvalidTrafficPolicyDocument$message */ =>  {
                 let var_54 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1727,35 +1686,29 @@ pub fn deser_structure_crate_error_traffic_policy_instance_already_exists_xml_er
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_traffic_policy_instance(
+pub fn deser_structure_crate_error_too_many_traffic_policies_xml_err(
     inp: &[u8],
-    mut builder: crate::output::create_traffic_policy_instance_output::Builder,
-) -> Result<
-    crate::output::create_traffic_policy_instance_output::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("CreateTrafficPolicyInstanceResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateTrafficPolicyInstanceResponse got {:?}",
-            start_el
-        )));
+    mut builder: crate::error::too_many_traffic_policies::Builder,
+) -> Result<crate::error::too_many_traffic_policies::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
     }
-    while let Some(mut tag) = decoder.next_tag() {
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("TrafficPolicyInstance") /* TrafficPolicyInstance com.amazonaws.route53.synthetic#CreateTrafficPolicyInstanceOutput$TrafficPolicyInstance */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TooManyTrafficPolicies$message */ =>  {
                 let var_55 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_traffic_policy_instance(&mut tag)
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance(var_55);
+                builder = builder.set_message(var_55);
             }
             ,
             _ => {}
@@ -1765,23 +1718,20 @@ pub fn deser_operation_crate_operation_create_traffic_policy_instance(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_too_many_traffic_policy_versions_for_current_policy_xml_err(
+pub fn deser_structure_crate_error_traffic_policy_already_exists_xml_err(
     inp: &[u8],
-    mut builder: crate::error::too_many_traffic_policy_versions_for_current_policy::Builder,
-) -> Result<
-    crate::error::too_many_traffic_policy_versions_for_current_policy::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
+    mut builder: crate::error::traffic_policy_already_exists::Builder,
+) -> Result<crate::error::traffic_policy_already_exists::Builder, aws_smithy_xml::decode::XmlError>
+{
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TooManyTrafficPolicyVersionsForCurrentPolicy$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TrafficPolicyAlreadyExists$message */ =>  {
                 let var_56 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1801,28 +1751,25 @@ pub fn deser_structure_crate_error_too_many_traffic_policy_versions_for_current_
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_traffic_policy_version(
+pub fn deser_operation_crate_operation_create_traffic_policy(
     inp: &[u8],
-    mut builder: crate::output::create_traffic_policy_version_output::Builder,
-) -> Result<
-    crate::output::create_traffic_policy_version_output::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
-    use std::convert::TryFrom;
+    mut builder: crate::output::create_traffic_policy_output::Builder,
+) -> Result<crate::output::create_traffic_policy_output::Builder, aws_smithy_xml::decode::XmlError>
+{
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("CreateTrafficPolicyVersionResponse")) {
+    if !(start_el.matches("CreateTrafficPolicyResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateTrafficPolicyVersionResponse got {:?}",
+            "invalid root, expected CreateTrafficPolicyResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("TrafficPolicy") /* TrafficPolicy com.amazonaws.route53.synthetic#CreateTrafficPolicyVersionOutput$TrafficPolicy */ =>  {
+            s if s.matches("TrafficPolicy") /* TrafficPolicy com.amazonaws.route53.synthetic#CreateTrafficPolicyOutput$TrafficPolicy */ =>  {
                 let var_57 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_traffic_policy(&mut tag)
@@ -1839,23 +1786,19 @@ pub fn deser_operation_crate_operation_create_traffic_policy_version(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_too_many_vpc_association_authorizations_xml_err(
+pub fn deser_structure_crate_error_no_such_traffic_policy_xml_err(
     inp: &[u8],
-    mut builder: crate::error::too_many_vpc_association_authorizations::Builder,
-) -> Result<
-    crate::error::too_many_vpc_association_authorizations::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
+    mut builder: crate::error::no_such_traffic_policy::Builder,
+) -> Result<crate::error::no_such_traffic_policy::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TooManyVPCAssociationAuthorizations$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchTrafficPolicy$message */ =>  {
                 let var_58 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1875,28 +1818,22 @@ pub fn deser_structure_crate_error_too_many_vpc_association_authorizations_xml_e
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_create_vpc_association_authorization(
+pub fn deser_structure_crate_error_too_many_traffic_policy_instances_xml_err(
     inp: &[u8],
-    mut builder: crate::output::create_vpc_association_authorization_output::Builder,
+    mut builder: crate::error::too_many_traffic_policy_instances::Builder,
 ) -> Result<
-    crate::output::create_vpc_association_authorization_output::Builder,
+    crate::error::too_many_traffic_policy_instances::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("CreateVPCAssociationAuthorizationResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected CreateVPCAssociationAuthorizationResponse got {:?}",
-            start_el
-        )));
+    if inp.is_empty() {
+        return Ok(builder);
     }
-    while let Some(mut tag) = decoder.next_tag() {
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53.synthetic#CreateVPCAssociationAuthorizationOutput$HostedZoneId */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TooManyTrafficPolicyInstances$message */ =>  {
                 let var_59 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1906,17 +1843,7 @@ pub fn deser_operation_crate_operation_create_vpc_association_authorization(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id(var_59);
-            }
-            ,
-            s if s.matches("VPC") /* VPC com.amazonaws.route53.synthetic#CreateVPCAssociationAuthorizationOutput$VPC */ =>  {
-                let var_60 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_vpc(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_vpc(var_60);
+                builder = builder.set_message(var_59);
             }
             ,
             _ => {}
@@ -1926,24 +1853,23 @@ pub fn deser_operation_crate_operation_create_vpc_association_authorization(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_key_signing_key_in_parent_ds_record_xml_err(
+pub fn deser_structure_crate_error_traffic_policy_instance_already_exists_xml_err(
     inp: &[u8],
-    mut builder: crate::error::key_signing_key_in_parent_ds_record::Builder,
+    mut builder: crate::error::traffic_policy_instance_already_exists::Builder,
 ) -> Result<
-    crate::error::key_signing_key_in_parent_ds_record::Builder,
+    crate::error::traffic_policy_instance_already_exists::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyInParentDSRecord$message */ =>  {
-                let var_61 =
+            s if s.matches("message") /* message com.amazonaws.route53#TrafficPolicyInstanceAlreadyExists$message */ =>  {
+                let var_60 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -1952,7 +1878,7 @@ pub fn deser_structure_crate_error_key_signing_key_in_parent_ds_record_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_61);
+                builder = builder.set_message(var_60);
             }
             ,
             _ => {}
@@ -1962,20 +1888,59 @@ pub fn deser_structure_crate_error_key_signing_key_in_parent_ds_record_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_key_signing_key_in_use_xml_err(
+pub fn deser_operation_crate_operation_create_traffic_policy_instance(
     inp: &[u8],
-    mut builder: crate::error::key_signing_key_in_use::Builder,
-) -> Result<crate::error::key_signing_key_in_use::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::output::create_traffic_policy_instance_output::Builder,
+) -> Result<
+    crate::output::create_traffic_policy_instance_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("CreateTrafficPolicyInstanceResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected CreateTrafficPolicyInstanceResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("TrafficPolicyInstance") /* TrafficPolicyInstance com.amazonaws.route53.synthetic#CreateTrafficPolicyInstanceOutput$TrafficPolicyInstance */ =>  {
+                let var_61 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_traffic_policy_instance(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_traffic_policy_instance(var_61);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_too_many_traffic_policy_versions_for_current_policy_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::too_many_traffic_policy_versions_for_current_policy::Builder,
+) -> Result<
+    crate::error::too_many_traffic_policy_versions_for_current_policy::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyInUse$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TooManyTrafficPolicyVersionsForCurrentPolicy$message */ =>  {
                 let var_62 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -1995,35 +1960,34 @@ pub fn deser_structure_crate_error_key_signing_key_in_use_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_deactivate_key_signing_key(
+pub fn deser_operation_crate_operation_create_traffic_policy_version(
     inp: &[u8],
-    mut builder: crate::output::deactivate_key_signing_key_output::Builder,
+    mut builder: crate::output::create_traffic_policy_version_output::Builder,
 ) -> Result<
-    crate::output::deactivate_key_signing_key_output::Builder,
+    crate::output::create_traffic_policy_version_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("DeactivateKeySigningKeyResponse")) {
+    if !(start_el.matches("CreateTrafficPolicyVersionResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected DeactivateKeySigningKeyResponse got {:?}",
+            "invalid root, expected CreateTrafficPolicyVersionResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DeactivateKeySigningKeyOutput$ChangeInfo */ =>  {
+            s if s.matches("TrafficPolicy") /* TrafficPolicy com.amazonaws.route53.synthetic#CreateTrafficPolicyVersionOutput$TrafficPolicy */ =>  {
                 let var_63 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
+                        crate::xml_deser::deser_structure_crate_model_traffic_policy(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_change_info(var_63);
+                builder = builder.set_traffic_policy(var_63);
             }
             ,
             _ => {}
@@ -2033,20 +1997,22 @@ pub fn deser_operation_crate_operation_deactivate_key_signing_key(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_health_check_in_use_xml_err(
+pub fn deser_structure_crate_error_too_many_vpc_association_authorizations_xml_err(
     inp: &[u8],
-    mut builder: crate::error::health_check_in_use::Builder,
-) -> Result<crate::error::health_check_in_use::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::too_many_vpc_association_authorizations::Builder,
+) -> Result<
+    crate::error::too_many_vpc_association_authorizations::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#HealthCheckInUse$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TooManyVPCAssociationAuthorizations$message */ =>  {
                 let var_64 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2066,20 +2032,27 @@ pub fn deser_structure_crate_error_health_check_in_use_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_hosted_zone_not_empty_xml_err(
+pub fn deser_operation_crate_operation_create_vpc_association_authorization(
     inp: &[u8],
-    mut builder: crate::error::hosted_zone_not_empty::Builder,
-) -> Result<crate::error::hosted_zone_not_empty::Builder, aws_smithy_xml::decode::XmlError> {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    mut builder: crate::output::create_vpc_association_authorization_output::Builder,
+) -> Result<
+    crate::output::create_vpc_association_authorization_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
     #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("CreateVPCAssociationAuthorizationResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected CreateVPCAssociationAuthorizationResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#HostedZoneNotEmpty$message */ =>  {
+            s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53.synthetic#CreateVPCAssociationAuthorizationOutput$HostedZoneId */ =>  {
                 let var_65 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2089,42 +2062,17 @@ pub fn deser_structure_crate_error_hosted_zone_not_empty_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_65);
+                builder = builder.set_hosted_zone_id(var_65);
             }
             ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_operation_crate_operation_delete_hosted_zone(
-    inp: &[u8],
-    mut builder: crate::output::delete_hosted_zone_output::Builder,
-) -> Result<crate::output::delete_hosted_zone_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("DeleteHostedZoneResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected DeleteHostedZoneResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DeleteHostedZoneOutput$ChangeInfo */ =>  {
+            s if s.matches("VPC") /* VPC com.amazonaws.route53.synthetic#CreateVPCAssociationAuthorizationOutput$VPC */ =>  {
                 let var_66 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
+                        crate::xml_deser::deser_structure_crate_model_vpc(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_change_info(var_66);
+                builder = builder.set_vpc(var_66);
             }
             ,
             _ => {}
@@ -2134,56 +2082,54 @@ pub fn deser_operation_crate_operation_delete_hosted_zone(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_delete_key_signing_key(
+pub fn deser_structure_crate_error_key_signing_key_in_parent_ds_record_xml_err(
     inp: &[u8],
-    mut builder: crate::output::delete_key_signing_key_output::Builder,
-) -> Result<crate::output::delete_key_signing_key_output::Builder, aws_smithy_xml::decode::XmlError>
-{
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("DeleteKeySigningKeyResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected DeleteKeySigningKeyResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DeleteKeySigningKeyOutput$ChangeInfo */ =>  {
-                let var_67 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_change_info(var_67);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_query_logging_config_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::no_such_query_logging_config::Builder,
-) -> Result<crate::error::no_such_query_logging_config::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::key_signing_key_in_parent_ds_record::Builder,
+) -> Result<
+    crate::error::key_signing_key_in_parent_ds_record::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchQueryLoggingConfig$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyInParentDSRecord$message */ =>  {
+                let var_67 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_67);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_key_signing_key_in_use_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::key_signing_key_in_use::Builder,
+) -> Result<crate::error::key_signing_key_in_use::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyInUse$message */ =>  {
                 let var_68 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2203,30 +2149,34 @@ pub fn deser_structure_crate_error_no_such_query_logging_config_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_delegation_set_in_use_xml_err(
+pub fn deser_operation_crate_operation_deactivate_key_signing_key(
     inp: &[u8],
-    mut builder: crate::error::delegation_set_in_use::Builder,
-) -> Result<crate::error::delegation_set_in_use::Builder, aws_smithy_xml::decode::XmlError> {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    mut builder: crate::output::deactivate_key_signing_key_output::Builder,
+) -> Result<
+    crate::output::deactivate_key_signing_key_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
     #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("DeactivateKeySigningKeyResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected DeactivateKeySigningKeyResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetInUse$message */ =>  {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DeactivateKeySigningKeyOutput$ChangeInfo */ =>  {
                 let var_69 =
                     Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
+                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_message(var_69);
+                builder = builder.set_change_info(var_69);
             }
             ,
             _ => {}
@@ -2236,20 +2186,20 @@ pub fn deser_structure_crate_error_delegation_set_in_use_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_traffic_policy_in_use_xml_err(
+pub fn deser_structure_crate_error_cidr_collection_in_use_exception_xml_err(
     inp: &[u8],
-    mut builder: crate::error::traffic_policy_in_use::Builder,
-) -> Result<crate::error::traffic_policy_in_use::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::cidr_collection_in_use_exception::Builder,
+) -> Result<crate::error::cidr_collection_in_use_exception::Builder, aws_smithy_xml::decode::XmlError>
+{
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#TrafficPolicyInUse$message */ =>  {
+            s if s.matches("Message") /* Message com.amazonaws.route53#CidrCollectionInUseException$Message */ =>  {
                 let var_70 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2269,21 +2219,19 @@ pub fn deser_structure_crate_error_traffic_policy_in_use_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_traffic_policy_instance_xml_err(
+pub fn deser_structure_crate_error_health_check_in_use_xml_err(
     inp: &[u8],
-    mut builder: crate::error::no_such_traffic_policy_instance::Builder,
-) -> Result<crate::error::no_such_traffic_policy_instance::Builder, aws_smithy_xml::decode::XmlError>
-{
+    mut builder: crate::error::health_check_in_use::Builder,
+) -> Result<crate::error::health_check_in_use::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchTrafficPolicyInstance$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#HealthCheckInUse$message */ =>  {
                 let var_71 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2303,23 +2251,19 @@ pub fn deser_structure_crate_error_no_such_traffic_policy_instance_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_vpc_association_authorization_not_found_xml_err(
+pub fn deser_structure_crate_error_hosted_zone_not_empty_xml_err(
     inp: &[u8],
-    mut builder: crate::error::vpc_association_authorization_not_found::Builder,
-) -> Result<
-    crate::error::vpc_association_authorization_not_found::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
+    mut builder: crate::error::hosted_zone_not_empty::Builder,
+) -> Result<crate::error::hosted_zone_not_empty::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#VPCAssociationAuthorizationNotFound$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#HostedZoneNotEmpty$message */ =>  {
                 let var_72 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2339,30 +2283,31 @@ pub fn deser_structure_crate_error_vpc_association_authorization_not_found_xml_e
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_dnssec_not_found_xml_err(
+pub fn deser_operation_crate_operation_delete_hosted_zone(
     inp: &[u8],
-    mut builder: crate::error::dnssec_not_found::Builder,
-) -> Result<crate::error::dnssec_not_found::Builder, aws_smithy_xml::decode::XmlError> {
-    if inp.is_empty() {
-        return Ok(builder);
-    }
-    use std::convert::TryFrom;
-    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    mut builder: crate::output::delete_hosted_zone_output::Builder,
+) -> Result<crate::output::delete_hosted_zone_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
     #[allow(unused_mut)]
-    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
-    while let Some(mut tag) = error_decoder.next_tag() {
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("DeleteHostedZoneResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected DeleteHostedZoneResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#DNSSECNotFound$message */ =>  {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DeleteHostedZoneOutput$ChangeInfo */ =>  {
                 let var_73 =
                     Some(
-                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
-                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            .into()
-                        )
+                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_message(var_73);
+                builder = builder.set_change_info(var_73);
             }
             ,
             _ => {}
@@ -2372,28 +2317,25 @@ pub fn deser_structure_crate_error_dnssec_not_found_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_disable_hosted_zone_dnssec(
+pub fn deser_operation_crate_operation_delete_key_signing_key(
     inp: &[u8],
-    mut builder: crate::output::disable_hosted_zone_dnssec_output::Builder,
-) -> Result<
-    crate::output::disable_hosted_zone_dnssec_output::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
-    use std::convert::TryFrom;
+    mut builder: crate::output::delete_key_signing_key_output::Builder,
+) -> Result<crate::output::delete_key_signing_key_output::Builder, aws_smithy_xml::decode::XmlError>
+{
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("DisableHostedZoneDNSSECResponse")) {
+    if !(start_el.matches("DeleteKeySigningKeyResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected DisableHostedZoneDNSSECResponse got {:?}",
+            "invalid root, expected DeleteKeySigningKeyResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DisableHostedZoneDNSSECOutput$ChangeInfo */ =>  {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DeleteKeySigningKeyOutput$ChangeInfo */ =>  {
                 let var_74 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
@@ -2410,20 +2352,19 @@ pub fn deser_operation_crate_operation_disable_hosted_zone_dnssec(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_last_vpc_association_xml_err(
+pub fn deser_structure_crate_error_no_such_query_logging_config_xml_err(
     inp: &[u8],
-    mut builder: crate::error::last_vpc_association::Builder,
-) -> Result<crate::error::last_vpc_association::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::no_such_query_logging_config::Builder,
+) -> Result<crate::error::no_such_query_logging_config::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#LastVPCAssociation$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchQueryLoggingConfig$message */ =>  {
                 let var_75 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2443,20 +2384,19 @@ pub fn deser_structure_crate_error_last_vpc_association_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_vpc_association_not_found_xml_err(
+pub fn deser_structure_crate_error_delegation_set_in_use_xml_err(
     inp: &[u8],
-    mut builder: crate::error::vpc_association_not_found::Builder,
-) -> Result<crate::error::vpc_association_not_found::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::delegation_set_in_use::Builder,
+) -> Result<crate::error::delegation_set_in_use::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#VPCAssociationNotFound$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#DelegationSetInUse$message */ =>  {
                 let var_76 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2476,35 +2416,29 @@ pub fn deser_structure_crate_error_vpc_association_not_found_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_disassociate_vpc_from_hosted_zone(
+pub fn deser_structure_crate_error_traffic_policy_in_use_xml_err(
     inp: &[u8],
-    mut builder: crate::output::disassociate_vpc_from_hosted_zone_output::Builder,
-) -> Result<
-    crate::output::disassociate_vpc_from_hosted_zone_output::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("DisassociateVPCFromHostedZoneResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected DisassociateVPCFromHostedZoneResponse got {:?}",
-            start_el
-        )));
+    mut builder: crate::error::traffic_policy_in_use::Builder,
+) -> Result<crate::error::traffic_policy_in_use::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
     }
-    while let Some(mut tag) = decoder.next_tag() {
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DisassociateVPCFromHostedZoneOutput$ChangeInfo */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#TrafficPolicyInUse$message */ =>  {
                 let var_77 =
                     Some(
-                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
                         ?
                     )
                 ;
-                builder = builder.set_change_info(var_77);
+                builder = builder.set_message(var_77);
             }
             ,
             _ => {}
@@ -2514,21 +2448,20 @@ pub fn deser_operation_crate_operation_disassociate_vpc_from_hosted_zone(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_hosted_zone_partially_delegated_xml_err(
+pub fn deser_structure_crate_error_no_such_traffic_policy_instance_xml_err(
     inp: &[u8],
-    mut builder: crate::error::hosted_zone_partially_delegated::Builder,
-) -> Result<crate::error::hosted_zone_partially_delegated::Builder, aws_smithy_xml::decode::XmlError>
+    mut builder: crate::error::no_such_traffic_policy_instance::Builder,
+) -> Result<crate::error::no_such_traffic_policy_instance::Builder, aws_smithy_xml::decode::XmlError>
 {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#HostedZonePartiallyDelegated$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchTrafficPolicyInstance$message */ =>  {
                 let var_78 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2548,23 +2481,22 @@ pub fn deser_structure_crate_error_hosted_zone_partially_delegated_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_structure_crate_error_key_signing_key_with_active_status_not_found_xml_err(
+pub fn deser_structure_crate_error_vpc_association_authorization_not_found_xml_err(
     inp: &[u8],
-    mut builder: crate::error::key_signing_key_with_active_status_not_found::Builder,
+    mut builder: crate::error::vpc_association_authorization_not_found::Builder,
 ) -> Result<
-    crate::error::key_signing_key_with_active_status_not_found::Builder,
+    crate::error::vpc_association_authorization_not_found::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyWithActiveStatusNotFound$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#VPCAssociationAuthorizationNotFound$message */ =>  {
                 let var_79 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2584,108 +2516,120 @@ pub fn deser_structure_crate_error_key_signing_key_with_active_status_not_found_
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_enable_hosted_zone_dnssec(
+pub fn deser_structure_crate_error_dnssec_not_found_xml_err(
     inp: &[u8],
-    mut builder: crate::output::enable_hosted_zone_dnssec_output::Builder,
-) -> Result<
-    crate::output::enable_hosted_zone_dnssec_output::Builder,
-    aws_smithy_xml::decode::XmlError,
-> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("EnableHostedZoneDNSSECResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected EnableHostedZoneDNSSECResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#EnableHostedZoneDNSSECOutput$ChangeInfo */ =>  {
-                let var_80 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_change_info(var_80);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_operation_crate_operation_get_account_limit(
-    inp: &[u8],
-    mut builder: crate::output::get_account_limit_output::Builder,
-) -> Result<crate::output::get_account_limit_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("GetAccountLimitResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected GetAccountLimitResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("Limit") /* Limit com.amazonaws.route53.synthetic#GetAccountLimitOutput$Limit */ =>  {
-                let var_81 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_account_limit(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_limit(var_81);
-            }
-            ,
-            s if s.matches("Count") /* Count com.amazonaws.route53.synthetic#GetAccountLimitOutput$Count */ =>  {
-                let var_82 =
-                    Some(
-                         {
-                            <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
-                                aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
-                            )
-                            .map_err(|_|aws_smithy_xml::decode::XmlError::custom("expected (long: `com.amazonaws.route53#UsageCount`)"))
-                        }
-                        ?
-                    )
-                ;
-                builder = builder.set_count(var_82);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_change_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::no_such_change::Builder,
-) -> Result<crate::error::no_such_change::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::dnssec_not_found::Builder,
+) -> Result<crate::error::dnssec_not_found::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchChange$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#DNSSECNotFound$message */ =>  {
+                let var_80 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_80);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_disable_hosted_zone_dnssec(
+    inp: &[u8],
+    mut builder: crate::output::disable_hosted_zone_dnssec_output::Builder,
+) -> Result<
+    crate::output::disable_hosted_zone_dnssec_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("DisableHostedZoneDNSSECResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected DisableHostedZoneDNSSECResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DisableHostedZoneDNSSECOutput$ChangeInfo */ =>  {
+                let var_81 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_change_info(var_81);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_last_vpc_association_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::last_vpc_association::Builder,
+) -> Result<crate::error::last_vpc_association::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#LastVPCAssociation$message */ =>  {
+                let var_82 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_82);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_vpc_association_not_found_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::vpc_association_not_found::Builder,
+) -> Result<crate::error::vpc_association_not_found::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#VPCAssociationNotFound$message */ =>  {
                 let var_83 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2705,25 +2649,27 @@ pub fn deser_structure_crate_error_no_such_change_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_get_change(
+pub fn deser_operation_crate_operation_disassociate_vpc_from_hosted_zone(
     inp: &[u8],
-    mut builder: crate::output::get_change_output::Builder,
-) -> Result<crate::output::get_change_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
+    mut builder: crate::output::disassociate_vpc_from_hosted_zone_output::Builder,
+) -> Result<
+    crate::output::disassociate_vpc_from_hosted_zone_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
     let mut decoder = doc.root_element()?;
     let start_el = decoder.start_el();
-    if !(start_el.matches("GetChangeResponse")) {
+    if !(start_el.matches("DisassociateVPCFromHostedZoneResponse")) {
         return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected GetChangeResponse got {:?}",
+            "invalid root, expected DisassociateVPCFromHostedZoneResponse got {:?}",
             start_el
         )));
     }
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#GetChangeOutput$ChangeInfo */ =>  {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#DisassociateVPCFromHostedZoneOutput$ChangeInfo */ =>  {
                 let var_84 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
@@ -2740,102 +2686,21 @@ pub fn deser_operation_crate_operation_get_change(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_get_checker_ip_ranges(
+pub fn deser_structure_crate_error_hosted_zone_partially_delegated_xml_err(
     inp: &[u8],
-    mut builder: crate::output::get_checker_ip_ranges_output::Builder,
-) -> Result<crate::output::get_checker_ip_ranges_output::Builder, aws_smithy_xml::decode::XmlError>
+    mut builder: crate::error::hosted_zone_partially_delegated::Builder,
+) -> Result<crate::error::hosted_zone_partially_delegated::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("GetCheckerIpRangesResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected GetCheckerIpRangesResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("CheckerIpRanges") /* CheckerIpRanges com.amazonaws.route53.synthetic#GetCheckerIpRangesOutput$CheckerIpRanges */ =>  {
-                let var_85 =
-                    Some(
-                        crate::xml_deser::deser_list_com_amazonaws_route53_checker_ip_ranges(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_checker_ip_ranges(var_85);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_operation_crate_operation_get_dnssec(
-    inp: &[u8],
-    mut builder: crate::output::get_dnssec_output::Builder,
-) -> Result<crate::output::get_dnssec_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("GetDNSSECResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected GetDNSSECResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("Status") /* Status com.amazonaws.route53.synthetic#GetDNSSECOutput$Status */ =>  {
-                let var_86 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_dnssec_status(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_status(var_86);
-            }
-            ,
-            s if s.matches("KeySigningKeys") /* KeySigningKeys com.amazonaws.route53.synthetic#GetDNSSECOutput$KeySigningKeys */ =>  {
-                let var_87 =
-                    Some(
-                        crate::xml_deser::deser_list_com_amazonaws_route53_key_signing_keys(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_key_signing_keys(var_87);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_no_such_geo_location_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::no_such_geo_location::Builder,
-) -> Result<crate::error::no_such_geo_location::Builder, aws_smithy_xml::decode::XmlError> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#NoSuchGeoLocation$message */ =>  {
-                let var_88 =
+            s if s.matches("message") /* message com.amazonaws.route53#HostedZonePartiallyDelegated$message */ =>  {
+                let var_85 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -2844,7 +2709,7 @@ pub fn deser_structure_crate_error_no_such_geo_location_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_88);
+                builder = builder.set_message(var_85);
             }
             ,
             _ => {}
@@ -2854,55 +2719,140 @@ pub fn deser_structure_crate_error_no_such_geo_location_xml_err(
 }
 
 #[allow(unused_mut)]
-pub fn deser_operation_crate_operation_get_geo_location(
+pub fn deser_structure_crate_error_key_signing_key_with_active_status_not_found_xml_err(
     inp: &[u8],
-    mut builder: crate::output::get_geo_location_output::Builder,
-) -> Result<crate::output::get_geo_location_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
-    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
-
-    #[allow(unused_mut)]
-    let mut decoder = doc.root_element()?;
-    let start_el = decoder.start_el();
-    if !(start_el.matches("GetGeoLocationResponse")) {
-        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
-            "invalid root, expected GetGeoLocationResponse got {:?}",
-            start_el
-        )));
-    }
-    while let Some(mut tag) = decoder.next_tag() {
-        match tag.start_el() {
-            s if s.matches("GeoLocationDetails") /* GeoLocationDetails com.amazonaws.route53.synthetic#GetGeoLocationOutput$GeoLocationDetails */ =>  {
-                let var_89 =
-                    Some(
-                        crate::xml_deser::deser_structure_crate_model_geo_location_details(&mut tag)
-                        ?
-                    )
-                ;
-                builder = builder.set_geo_location_details(var_89);
-            }
-            ,
-            _ => {}
-        }
-    }
-    Ok(builder)
-}
-
-#[allow(unused_mut)]
-pub fn deser_structure_crate_error_incompatible_version_xml_err(
-    inp: &[u8],
-    mut builder: crate::error::incompatible_version::Builder,
-) -> Result<crate::error::incompatible_version::Builder, aws_smithy_xml::decode::XmlError> {
+    mut builder: crate::error::key_signing_key_with_active_status_not_found::Builder,
+) -> Result<
+    crate::error::key_signing_key_with_active_status_not_found::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
-            s if s.matches("message") /* message com.amazonaws.route53#IncompatibleVersion$message */ =>  {
+            s if s.matches("message") /* message com.amazonaws.route53#KeySigningKeyWithActiveStatusNotFound$message */ =>  {
+                let var_86 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_86);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_enable_hosted_zone_dnssec(
+    inp: &[u8],
+    mut builder: crate::output::enable_hosted_zone_dnssec_output::Builder,
+) -> Result<
+    crate::output::enable_hosted_zone_dnssec_output::Builder,
+    aws_smithy_xml::decode::XmlError,
+> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("EnableHostedZoneDNSSECResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected EnableHostedZoneDNSSECResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#EnableHostedZoneDNSSECOutput$ChangeInfo */ =>  {
+                let var_87 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_change_info(var_87);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_get_account_limit(
+    inp: &[u8],
+    mut builder: crate::output::get_account_limit_output::Builder,
+) -> Result<crate::output::get_account_limit_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("GetAccountLimitResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected GetAccountLimitResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("Limit") /* Limit com.amazonaws.route53.synthetic#GetAccountLimitOutput$Limit */ =>  {
+                let var_88 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_account_limit(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_limit(var_88);
+            }
+            ,
+            s if s.matches("Count") /* Count com.amazonaws.route53.synthetic#GetAccountLimitOutput$Count */ =>  {
+                let var_89 =
+                    Some(
+                         {
+                            <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
+                                aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            )
+                            .map_err(|_|aws_smithy_xml::decode::XmlError::custom("expected (long: `com.amazonaws.route53#UsageCount`)"))
+                        }
+                        ?
+                    )
+                ;
+                builder = builder.set_count(var_89);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_no_such_change_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::no_such_change::Builder,
+) -> Result<crate::error::no_such_change::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchChange$message */ =>  {
                 let var_90 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
@@ -2922,11 +2872,221 @@ pub fn deser_structure_crate_error_incompatible_version_xml_err(
 }
 
 #[allow(unused_mut)]
+pub fn deser_operation_crate_operation_get_change(
+    inp: &[u8],
+    mut builder: crate::output::get_change_output::Builder,
+) -> Result<crate::output::get_change_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("GetChangeResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected GetChangeResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("ChangeInfo") /* ChangeInfo com.amazonaws.route53.synthetic#GetChangeOutput$ChangeInfo */ =>  {
+                let var_91 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_change_info(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_change_info(var_91);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_get_checker_ip_ranges(
+    inp: &[u8],
+    mut builder: crate::output::get_checker_ip_ranges_output::Builder,
+) -> Result<crate::output::get_checker_ip_ranges_output::Builder, aws_smithy_xml::decode::XmlError>
+{
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("GetCheckerIpRangesResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected GetCheckerIpRangesResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("CheckerIpRanges") /* CheckerIpRanges com.amazonaws.route53.synthetic#GetCheckerIpRangesOutput$CheckerIpRanges */ =>  {
+                let var_92 =
+                    Some(
+                        crate::xml_deser::deser_list_com_amazonaws_route53_checker_ip_ranges(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_checker_ip_ranges(var_92);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_get_dnssec(
+    inp: &[u8],
+    mut builder: crate::output::get_dnssec_output::Builder,
+) -> Result<crate::output::get_dnssec_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("GetDNSSECResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected GetDNSSECResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("Status") /* Status com.amazonaws.route53.synthetic#GetDNSSECOutput$Status */ =>  {
+                let var_93 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_dnssec_status(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_status(var_93);
+            }
+            ,
+            s if s.matches("KeySigningKeys") /* KeySigningKeys com.amazonaws.route53.synthetic#GetDNSSECOutput$KeySigningKeys */ =>  {
+                let var_94 =
+                    Some(
+                        crate::xml_deser::deser_list_com_amazonaws_route53_key_signing_keys(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_key_signing_keys(var_94);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_no_such_geo_location_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::no_such_geo_location::Builder,
+) -> Result<crate::error::no_such_geo_location::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#NoSuchGeoLocation$message */ =>  {
+                let var_95 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_95);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_get_geo_location(
+    inp: &[u8],
+    mut builder: crate::output::get_geo_location_output::Builder,
+) -> Result<crate::output::get_geo_location_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("GetGeoLocationResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected GetGeoLocationResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("GeoLocationDetails") /* GeoLocationDetails com.amazonaws.route53.synthetic#GetGeoLocationOutput$GeoLocationDetails */ =>  {
+                let var_96 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_geo_location_details(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_geo_location_details(var_96);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_incompatible_version_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::incompatible_version::Builder,
+) -> Result<crate::error::incompatible_version::Builder, aws_smithy_xml::decode::XmlError> {
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("message") /* message com.amazonaws.route53#IncompatibleVersion$message */ =>  {
+                let var_97 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_97);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
 pub fn deser_operation_crate_operation_get_health_check(
     inp: &[u8],
     mut builder: crate::output::get_health_check_output::Builder,
 ) -> Result<crate::output::get_health_check_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -2941,13 +3101,13 @@ pub fn deser_operation_crate_operation_get_health_check(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HealthCheck") /* HealthCheck com.amazonaws.route53.synthetic#GetHealthCheckOutput$HealthCheck */ =>  {
-                let var_91 =
+                let var_98 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_health_check(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_health_check(var_91);
+                builder = builder.set_health_check(var_98);
             }
             ,
             _ => {}
@@ -2962,7 +3122,6 @@ pub fn deser_operation_crate_operation_get_health_check_count(
     mut builder: crate::output::get_health_check_count_output::Builder,
 ) -> Result<crate::output::get_health_check_count_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -2977,7 +3136,7 @@ pub fn deser_operation_crate_operation_get_health_check_count(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HealthCheckCount") /* HealthCheckCount com.amazonaws.route53.synthetic#GetHealthCheckCountOutput$HealthCheckCount */ =>  {
-                let var_92 =
+                let var_99 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -2988,7 +3147,7 @@ pub fn deser_operation_crate_operation_get_health_check_count(
                         ?
                     )
                 ;
-                builder = builder.set_health_check_count(var_92);
+                builder = builder.set_health_check_count(var_99);
             }
             ,
             _ => {}
@@ -3005,7 +3164,6 @@ pub fn deser_operation_crate_operation_get_health_check_last_failure_reason(
     crate::output::get_health_check_last_failure_reason_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3020,13 +3178,13 @@ pub fn deser_operation_crate_operation_get_health_check_last_failure_reason(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HealthCheckObservations") /* HealthCheckObservations com.amazonaws.route53.synthetic#GetHealthCheckLastFailureReasonOutput$HealthCheckObservations */ =>  {
-                let var_93 =
+                let var_100 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_health_check_observations(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_health_check_observations(var_93);
+                builder = builder.set_health_check_observations(var_100);
             }
             ,
             _ => {}
@@ -3041,7 +3199,6 @@ pub fn deser_operation_crate_operation_get_health_check_status(
     mut builder: crate::output::get_health_check_status_output::Builder,
 ) -> Result<crate::output::get_health_check_status_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3056,13 +3213,13 @@ pub fn deser_operation_crate_operation_get_health_check_status(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HealthCheckObservations") /* HealthCheckObservations com.amazonaws.route53.synthetic#GetHealthCheckStatusOutput$HealthCheckObservations */ =>  {
-                let var_94 =
+                let var_101 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_health_check_observations(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_health_check_observations(var_94);
+                builder = builder.set_health_check_observations(var_101);
             }
             ,
             _ => {}
@@ -3076,7 +3233,6 @@ pub fn deser_operation_crate_operation_get_hosted_zone(
     inp: &[u8],
     mut builder: crate::output::get_hosted_zone_output::Builder,
 ) -> Result<crate::output::get_hosted_zone_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3091,33 +3247,33 @@ pub fn deser_operation_crate_operation_get_hosted_zone(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HostedZone") /* HostedZone com.amazonaws.route53.synthetic#GetHostedZoneOutput$HostedZone */ =>  {
-                let var_95 =
+                let var_102 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_hosted_zone(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone(var_95);
+                builder = builder.set_hosted_zone(var_102);
             }
             ,
             s if s.matches("VPCs") /* VPCs com.amazonaws.route53.synthetic#GetHostedZoneOutput$VPCs */ =>  {
-                let var_96 =
+                let var_103 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_vp_cs(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_vp_cs(var_96);
+                builder = builder.set_vp_cs(var_103);
             }
             ,
             s if s.matches("DelegationSet") /* DelegationSet com.amazonaws.route53.synthetic#GetHostedZoneOutput$DelegationSet */ =>  {
-                let var_97 =
+                let var_104 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_delegation_set(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_delegation_set(var_97);
+                builder = builder.set_delegation_set(var_104);
             }
             ,
             _ => {}
@@ -3132,7 +3288,6 @@ pub fn deser_operation_crate_operation_get_hosted_zone_count(
     mut builder: crate::output::get_hosted_zone_count_output::Builder,
 ) -> Result<crate::output::get_hosted_zone_count_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3147,7 +3302,7 @@ pub fn deser_operation_crate_operation_get_hosted_zone_count(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HostedZoneCount") /* HostedZoneCount com.amazonaws.route53.synthetic#GetHostedZoneCountOutput$HostedZoneCount */ =>  {
-                let var_98 =
+                let var_105 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3158,7 +3313,7 @@ pub fn deser_operation_crate_operation_get_hosted_zone_count(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_count(var_98);
+                builder = builder.set_hosted_zone_count(var_105);
             }
             ,
             _ => {}
@@ -3175,14 +3330,13 @@ pub fn deser_structure_crate_error_hosted_zone_not_private_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("message") /* message com.amazonaws.route53#HostedZoneNotPrivate$message */ =>  {
-                let var_99 =
+                let var_106 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3191,7 +3345,7 @@ pub fn deser_structure_crate_error_hosted_zone_not_private_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_99);
+                builder = builder.set_message(var_106);
             }
             ,
             _ => {}
@@ -3206,7 +3360,6 @@ pub fn deser_operation_crate_operation_get_hosted_zone_limit(
     mut builder: crate::output::get_hosted_zone_limit_output::Builder,
 ) -> Result<crate::output::get_hosted_zone_limit_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3221,17 +3374,17 @@ pub fn deser_operation_crate_operation_get_hosted_zone_limit(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Limit") /* Limit com.amazonaws.route53.synthetic#GetHostedZoneLimitOutput$Limit */ =>  {
-                let var_100 =
+                let var_107 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_hosted_zone_limit(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_limit(var_100);
+                builder = builder.set_limit(var_107);
             }
             ,
             s if s.matches("Count") /* Count com.amazonaws.route53.synthetic#GetHostedZoneLimitOutput$Count */ =>  {
-                let var_101 =
+                let var_108 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3242,7 +3395,7 @@ pub fn deser_operation_crate_operation_get_hosted_zone_limit(
                         ?
                     )
                 ;
-                builder = builder.set_count(var_101);
+                builder = builder.set_count(var_108);
             }
             ,
             _ => {}
@@ -3257,7 +3410,6 @@ pub fn deser_operation_crate_operation_get_query_logging_config(
     mut builder: crate::output::get_query_logging_config_output::Builder,
 ) -> Result<crate::output::get_query_logging_config_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3272,13 +3424,13 @@ pub fn deser_operation_crate_operation_get_query_logging_config(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("QueryLoggingConfig") /* QueryLoggingConfig com.amazonaws.route53.synthetic#GetQueryLoggingConfigOutput$QueryLoggingConfig */ =>  {
-                let var_102 =
+                let var_109 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_query_logging_config(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_query_logging_config(var_102);
+                builder = builder.set_query_logging_config(var_109);
             }
             ,
             _ => {}
@@ -3295,7 +3447,6 @@ pub fn deser_operation_crate_operation_get_reusable_delegation_set(
     crate::output::get_reusable_delegation_set_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3310,13 +3461,13 @@ pub fn deser_operation_crate_operation_get_reusable_delegation_set(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("DelegationSet") /* DelegationSet com.amazonaws.route53.synthetic#GetReusableDelegationSetOutput$DelegationSet */ =>  {
-                let var_103 =
+                let var_110 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_delegation_set(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_delegation_set(var_103);
+                builder = builder.set_delegation_set(var_110);
             }
             ,
             _ => {}
@@ -3333,7 +3484,6 @@ pub fn deser_operation_crate_operation_get_reusable_delegation_set_limit(
     crate::output::get_reusable_delegation_set_limit_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3348,17 +3498,17 @@ pub fn deser_operation_crate_operation_get_reusable_delegation_set_limit(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Limit") /* Limit com.amazonaws.route53.synthetic#GetReusableDelegationSetLimitOutput$Limit */ =>  {
-                let var_104 =
+                let var_111 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_reusable_delegation_set_limit(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_limit(var_104);
+                builder = builder.set_limit(var_111);
             }
             ,
             s if s.matches("Count") /* Count com.amazonaws.route53.synthetic#GetReusableDelegationSetLimitOutput$Count */ =>  {
-                let var_105 =
+                let var_112 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3369,7 +3519,7 @@ pub fn deser_operation_crate_operation_get_reusable_delegation_set_limit(
                         ?
                     )
                 ;
-                builder = builder.set_count(var_105);
+                builder = builder.set_count(var_112);
             }
             ,
             _ => {}
@@ -3383,7 +3533,6 @@ pub fn deser_operation_crate_operation_get_traffic_policy(
     inp: &[u8],
     mut builder: crate::output::get_traffic_policy_output::Builder,
 ) -> Result<crate::output::get_traffic_policy_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3398,13 +3547,13 @@ pub fn deser_operation_crate_operation_get_traffic_policy(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicy") /* TrafficPolicy com.amazonaws.route53.synthetic#GetTrafficPolicyOutput$TrafficPolicy */ =>  {
-                let var_106 =
+                let var_113 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_traffic_policy(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy(var_106);
+                builder = builder.set_traffic_policy(var_113);
             }
             ,
             _ => {}
@@ -3421,7 +3570,6 @@ pub fn deser_operation_crate_operation_get_traffic_policy_instance(
     crate::output::get_traffic_policy_instance_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3436,13 +3584,13 @@ pub fn deser_operation_crate_operation_get_traffic_policy_instance(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicyInstance") /* TrafficPolicyInstance com.amazonaws.route53.synthetic#GetTrafficPolicyInstanceOutput$TrafficPolicyInstance */ =>  {
-                let var_107 =
+                let var_114 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_traffic_policy_instance(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance(var_107);
+                builder = builder.set_traffic_policy_instance(var_114);
             }
             ,
             _ => {}
@@ -3459,7 +3607,6 @@ pub fn deser_operation_crate_operation_get_traffic_policy_instance_count(
     crate::output::get_traffic_policy_instance_count_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3474,7 +3621,7 @@ pub fn deser_operation_crate_operation_get_traffic_policy_instance_count(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicyInstanceCount") /* TrafficPolicyInstanceCount com.amazonaws.route53.synthetic#GetTrafficPolicyInstanceCountOutput$TrafficPolicyInstanceCount */ =>  {
-                let var_108 =
+                let var_115 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3485,7 +3632,182 @@ pub fn deser_operation_crate_operation_get_traffic_policy_instance_count(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_count(var_108);
+                builder = builder.set_traffic_policy_instance_count(var_115);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_structure_crate_error_no_such_cidr_location_exception_xml_err(
+    inp: &[u8],
+    mut builder: crate::error::no_such_cidr_location_exception::Builder,
+) -> Result<crate::error::no_such_cidr_location_exception::Builder, aws_smithy_xml::decode::XmlError>
+{
+    if inp.is_empty() {
+        return Ok(builder);
+    }
+    let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
+    #[allow(unused_mut)]
+    let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
+    while let Some(mut tag) = error_decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("Message") /* Message com.amazonaws.route53#NoSuchCidrLocationException$Message */ =>  {
+                let var_116 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_message(var_116);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_list_cidr_blocks(
+    inp: &[u8],
+    mut builder: crate::output::list_cidr_blocks_output::Builder,
+) -> Result<crate::output::list_cidr_blocks_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("ListCidrBlocksResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected ListCidrBlocksResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("CidrBlocks") /* CidrBlocks com.amazonaws.route53.synthetic#ListCidrBlocksOutput$CidrBlocks */ =>  {
+                let var_117 =
+                    Some(
+                        crate::xml_deser::deser_list_com_amazonaws_route53_cidr_block_summaries(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_cidr_blocks(var_117);
+            }
+            ,
+            s if s.matches("NextToken") /* NextToken com.amazonaws.route53.synthetic#ListCidrBlocksOutput$NextToken */ =>  {
+                let var_118 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_next_token(var_118);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_list_cidr_collections(
+    inp: &[u8],
+    mut builder: crate::output::list_cidr_collections_output::Builder,
+) -> Result<crate::output::list_cidr_collections_output::Builder, aws_smithy_xml::decode::XmlError>
+{
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("ListCidrCollectionsResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected ListCidrCollectionsResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("NextToken") /* NextToken com.amazonaws.route53.synthetic#ListCidrCollectionsOutput$NextToken */ =>  {
+                let var_119 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_next_token(var_119);
+            }
+            ,
+            s if s.matches("CidrCollections") /* CidrCollections com.amazonaws.route53.synthetic#ListCidrCollectionsOutput$CidrCollections */ =>  {
+                let var_120 =
+                    Some(
+                        crate::xml_deser::deser_list_com_amazonaws_route53_collection_summaries(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_cidr_collections(var_120);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder)
+}
+
+#[allow(unused_mut)]
+pub fn deser_operation_crate_operation_list_cidr_locations(
+    inp: &[u8],
+    mut builder: crate::output::list_cidr_locations_output::Builder,
+) -> Result<crate::output::list_cidr_locations_output::Builder, aws_smithy_xml::decode::XmlError> {
+    let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
+
+    #[allow(unused_mut)]
+    let mut decoder = doc.root_element()?;
+    let start_el = decoder.start_el();
+    if !(start_el.matches("ListCidrLocationsResponse")) {
+        return Err(aws_smithy_xml::decode::XmlError::custom(format!(
+            "invalid root, expected ListCidrLocationsResponse got {:?}",
+            start_el
+        )));
+    }
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("CidrLocations") /* CidrLocations com.amazonaws.route53.synthetic#ListCidrLocationsOutput$CidrLocations */ =>  {
+                let var_121 =
+                    Some(
+                        crate::xml_deser::deser_list_com_amazonaws_route53_location_summaries(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_cidr_locations(var_121);
+            }
+            ,
+            s if s.matches("NextToken") /* NextToken com.amazonaws.route53.synthetic#ListCidrLocationsOutput$NextToken */ =>  {
+                let var_122 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_next_token(var_122);
             }
             ,
             _ => {}
@@ -3499,7 +3821,6 @@ pub fn deser_operation_crate_operation_list_geo_locations(
     inp: &[u8],
     mut builder: crate::output::list_geo_locations_output::Builder,
 ) -> Result<crate::output::list_geo_locations_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3514,7 +3835,7 @@ pub fn deser_operation_crate_operation_list_geo_locations(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("NextSubdivisionCode") /* NextSubdivisionCode com.amazonaws.route53.synthetic#ListGeoLocationsOutput$NextSubdivisionCode */ =>  {
-                let var_109 =
+                let var_123 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3523,11 +3844,11 @@ pub fn deser_operation_crate_operation_list_geo_locations(
                         ?
                     )
                 ;
-                builder = builder.set_next_subdivision_code(var_109);
+                builder = builder.set_next_subdivision_code(var_123);
             }
             ,
             s if s.matches("NextCountryCode") /* NextCountryCode com.amazonaws.route53.synthetic#ListGeoLocationsOutput$NextCountryCode */ =>  {
-                let var_110 =
+                let var_124 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3536,21 +3857,21 @@ pub fn deser_operation_crate_operation_list_geo_locations(
                         ?
                     )
                 ;
-                builder = builder.set_next_country_code(var_110);
+                builder = builder.set_next_country_code(var_124);
             }
             ,
             s if s.matches("GeoLocationDetailsList") /* GeoLocationDetailsList com.amazonaws.route53.synthetic#ListGeoLocationsOutput$GeoLocationDetailsList */ =>  {
-                let var_111 =
+                let var_125 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_geo_location_details_list(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_geo_location_details_list(var_111);
+                builder = builder.set_geo_location_details_list(var_125);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListGeoLocationsOutput$IsTruncated */ =>  {
-                let var_112 =
+                let var_126 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3561,11 +3882,11 @@ pub fn deser_operation_crate_operation_list_geo_locations(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_112);
+                builder = builder.set_is_truncated(var_126);
             }
             ,
             s if s.matches("NextContinentCode") /* NextContinentCode com.amazonaws.route53.synthetic#ListGeoLocationsOutput$NextContinentCode */ =>  {
-                let var_113 =
+                let var_127 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3574,11 +3895,11 @@ pub fn deser_operation_crate_operation_list_geo_locations(
                         ?
                     )
                 ;
-                builder = builder.set_next_continent_code(var_113);
+                builder = builder.set_next_continent_code(var_127);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListGeoLocationsOutput$MaxItems */ =>  {
-                let var_114 =
+                let var_128 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3589,7 +3910,7 @@ pub fn deser_operation_crate_operation_list_geo_locations(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_114);
+                builder = builder.set_max_items(var_128);
             }
             ,
             _ => {}
@@ -3603,7 +3924,6 @@ pub fn deser_operation_crate_operation_list_health_checks(
     inp: &[u8],
     mut builder: crate::output::list_health_checks_output::Builder,
 ) -> Result<crate::output::list_health_checks_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3618,17 +3938,17 @@ pub fn deser_operation_crate_operation_list_health_checks(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HealthChecks") /* HealthChecks com.amazonaws.route53.synthetic#ListHealthChecksOutput$HealthChecks */ =>  {
-                let var_115 =
+                let var_129 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_health_checks(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_health_checks(var_115);
+                builder = builder.set_health_checks(var_129);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListHealthChecksOutput$IsTruncated */ =>  {
-                let var_116 =
+                let var_130 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3639,11 +3959,11 @@ pub fn deser_operation_crate_operation_list_health_checks(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_116);
+                builder = builder.set_is_truncated(var_130);
             }
             ,
             s if s.matches("Marker") /* Marker com.amazonaws.route53.synthetic#ListHealthChecksOutput$Marker */ =>  {
-                let var_117 =
+                let var_131 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3652,11 +3972,11 @@ pub fn deser_operation_crate_operation_list_health_checks(
                         ?
                     )
                 ;
-                builder = builder.set_marker(var_117);
+                builder = builder.set_marker(var_131);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListHealthChecksOutput$MaxItems */ =>  {
-                let var_118 =
+                let var_132 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3667,11 +3987,11 @@ pub fn deser_operation_crate_operation_list_health_checks(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_118);
+                builder = builder.set_max_items(var_132);
             }
             ,
             s if s.matches("NextMarker") /* NextMarker com.amazonaws.route53.synthetic#ListHealthChecksOutput$NextMarker */ =>  {
-                let var_119 =
+                let var_133 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3680,7 +4000,7 @@ pub fn deser_operation_crate_operation_list_health_checks(
                         ?
                     )
                 ;
-                builder = builder.set_next_marker(var_119);
+                builder = builder.set_next_marker(var_133);
             }
             ,
             _ => {}
@@ -3694,7 +4014,6 @@ pub fn deser_operation_crate_operation_list_hosted_zones(
     inp: &[u8],
     mut builder: crate::output::list_hosted_zones_output::Builder,
 ) -> Result<crate::output::list_hosted_zones_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3709,17 +4028,17 @@ pub fn deser_operation_crate_operation_list_hosted_zones(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HostedZones") /* HostedZones com.amazonaws.route53.synthetic#ListHostedZonesOutput$HostedZones */ =>  {
-                let var_120 =
+                let var_134 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_hosted_zones(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zones(var_120);
+                builder = builder.set_hosted_zones(var_134);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListHostedZonesOutput$IsTruncated */ =>  {
-                let var_121 =
+                let var_135 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3730,11 +4049,11 @@ pub fn deser_operation_crate_operation_list_hosted_zones(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_121);
+                builder = builder.set_is_truncated(var_135);
             }
             ,
             s if s.matches("Marker") /* Marker com.amazonaws.route53.synthetic#ListHostedZonesOutput$Marker */ =>  {
-                let var_122 =
+                let var_136 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3743,11 +4062,11 @@ pub fn deser_operation_crate_operation_list_hosted_zones(
                         ?
                     )
                 ;
-                builder = builder.set_marker(var_122);
+                builder = builder.set_marker(var_136);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListHostedZonesOutput$MaxItems */ =>  {
-                let var_123 =
+                let var_137 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3758,11 +4077,11 @@ pub fn deser_operation_crate_operation_list_hosted_zones(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_123);
+                builder = builder.set_max_items(var_137);
             }
             ,
             s if s.matches("NextMarker") /* NextMarker com.amazonaws.route53.synthetic#ListHostedZonesOutput$NextMarker */ =>  {
-                let var_124 =
+                let var_138 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3771,7 +4090,7 @@ pub fn deser_operation_crate_operation_list_hosted_zones(
                         ?
                     )
                 ;
-                builder = builder.set_next_marker(var_124);
+                builder = builder.set_next_marker(var_138);
             }
             ,
             _ => {}
@@ -3788,7 +4107,6 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
     crate::output::list_hosted_zones_by_name_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3803,7 +4121,7 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("NextHostedZoneId") /* NextHostedZoneId com.amazonaws.route53.synthetic#ListHostedZonesByNameOutput$NextHostedZoneId */ =>  {
-                let var_125 =
+                let var_139 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3812,21 +4130,21 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
                         ?
                     )
                 ;
-                builder = builder.set_next_hosted_zone_id(var_125);
+                builder = builder.set_next_hosted_zone_id(var_139);
             }
             ,
             s if s.matches("HostedZones") /* HostedZones com.amazonaws.route53.synthetic#ListHostedZonesByNameOutput$HostedZones */ =>  {
-                let var_126 =
+                let var_140 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_hosted_zones(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zones(var_126);
+                builder = builder.set_hosted_zones(var_140);
             }
             ,
             s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53.synthetic#ListHostedZonesByNameOutput$HostedZoneId */ =>  {
-                let var_127 =
+                let var_141 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3835,11 +4153,11 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id(var_127);
+                builder = builder.set_hosted_zone_id(var_141);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListHostedZonesByNameOutput$IsTruncated */ =>  {
-                let var_128 =
+                let var_142 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3850,11 +4168,11 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_128);
+                builder = builder.set_is_truncated(var_142);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListHostedZonesByNameOutput$MaxItems */ =>  {
-                let var_129 =
+                let var_143 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3865,11 +4183,11 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_129);
+                builder = builder.set_max_items(var_143);
             }
             ,
             s if s.matches("DNSName") /* DNSName com.amazonaws.route53.synthetic#ListHostedZonesByNameOutput$DNSName */ =>  {
-                let var_130 =
+                let var_144 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3878,11 +4196,11 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
                         ?
                     )
                 ;
-                builder = builder.set_dns_name(var_130);
+                builder = builder.set_dns_name(var_144);
             }
             ,
             s if s.matches("NextDNSName") /* NextDNSName com.amazonaws.route53.synthetic#ListHostedZonesByNameOutput$NextDNSName */ =>  {
-                let var_131 =
+                let var_145 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3891,7 +4209,7 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_name(
                         ?
                     )
                 ;
-                builder = builder.set_next_dns_name(var_131);
+                builder = builder.set_next_dns_name(var_145);
             }
             ,
             _ => {}
@@ -3908,14 +4226,13 @@ pub fn deser_structure_crate_error_invalid_pagination_token_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("message") /* message com.amazonaws.route53#InvalidPaginationToken$message */ =>  {
-                let var_132 =
+                let var_146 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3924,7 +4241,7 @@ pub fn deser_structure_crate_error_invalid_pagination_token_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_132);
+                builder = builder.set_message(var_146);
             }
             ,
             _ => {}
@@ -3939,7 +4256,6 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_vpc(
     mut builder: crate::output::list_hosted_zones_by_vpc_output::Builder,
 ) -> Result<crate::output::list_hosted_zones_by_vpc_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -3954,7 +4270,7 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_vpc(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("NextToken") /* NextToken com.amazonaws.route53.synthetic#ListHostedZonesByVPCOutput$NextToken */ =>  {
-                let var_133 =
+                let var_147 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -3963,21 +4279,21 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_vpc(
                         ?
                     )
                 ;
-                builder = builder.set_next_token(var_133);
+                builder = builder.set_next_token(var_147);
             }
             ,
             s if s.matches("HostedZoneSummaries") /* HostedZoneSummaries com.amazonaws.route53.synthetic#ListHostedZonesByVPCOutput$HostedZoneSummaries */ =>  {
-                let var_134 =
+                let var_148 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_hosted_zone_summaries(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_summaries(var_134);
+                builder = builder.set_hosted_zone_summaries(var_148);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListHostedZonesByVPCOutput$MaxItems */ =>  {
-                let var_135 =
+                let var_149 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -3988,7 +4304,7 @@ pub fn deser_operation_crate_operation_list_hosted_zones_by_vpc(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_135);
+                builder = builder.set_max_items(var_149);
             }
             ,
             _ => {}
@@ -4005,7 +4321,6 @@ pub fn deser_operation_crate_operation_list_query_logging_configs(
     crate::output::list_query_logging_configs_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4020,7 +4335,7 @@ pub fn deser_operation_crate_operation_list_query_logging_configs(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("NextToken") /* NextToken com.amazonaws.route53.synthetic#ListQueryLoggingConfigsOutput$NextToken */ =>  {
-                let var_136 =
+                let var_150 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4029,17 +4344,17 @@ pub fn deser_operation_crate_operation_list_query_logging_configs(
                         ?
                     )
                 ;
-                builder = builder.set_next_token(var_136);
+                builder = builder.set_next_token(var_150);
             }
             ,
             s if s.matches("QueryLoggingConfigs") /* QueryLoggingConfigs com.amazonaws.route53.synthetic#ListQueryLoggingConfigsOutput$QueryLoggingConfigs */ =>  {
-                let var_137 =
+                let var_151 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_query_logging_configs(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_query_logging_configs(var_137);
+                builder = builder.set_query_logging_configs(var_151);
             }
             ,
             _ => {}
@@ -4056,7 +4371,6 @@ pub fn deser_operation_crate_operation_list_resource_record_sets(
     crate::output::list_resource_record_sets_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4071,7 +4385,7 @@ pub fn deser_operation_crate_operation_list_resource_record_sets(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("NextRecordIdentifier") /* NextRecordIdentifier com.amazonaws.route53.synthetic#ListResourceRecordSetsOutput$NextRecordIdentifier */ =>  {
-                let var_138 =
+                let var_152 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4080,11 +4394,11 @@ pub fn deser_operation_crate_operation_list_resource_record_sets(
                         ?
                     )
                 ;
-                builder = builder.set_next_record_identifier(var_138);
+                builder = builder.set_next_record_identifier(var_152);
             }
             ,
             s if s.matches("NextRecordType") /* NextRecordType com.amazonaws.route53.synthetic#ListResourceRecordSetsOutput$NextRecordType */ =>  {
-                let var_139 =
+                let var_153 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -4094,11 +4408,11 @@ pub fn deser_operation_crate_operation_list_resource_record_sets(
                         ?
                     )
                 ;
-                builder = builder.set_next_record_type(var_139);
+                builder = builder.set_next_record_type(var_153);
             }
             ,
             s if s.matches("NextRecordName") /* NextRecordName com.amazonaws.route53.synthetic#ListResourceRecordSetsOutput$NextRecordName */ =>  {
-                let var_140 =
+                let var_154 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4107,11 +4421,11 @@ pub fn deser_operation_crate_operation_list_resource_record_sets(
                         ?
                     )
                 ;
-                builder = builder.set_next_record_name(var_140);
+                builder = builder.set_next_record_name(var_154);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListResourceRecordSetsOutput$IsTruncated */ =>  {
-                let var_141 =
+                let var_155 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4122,21 +4436,21 @@ pub fn deser_operation_crate_operation_list_resource_record_sets(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_141);
+                builder = builder.set_is_truncated(var_155);
             }
             ,
             s if s.matches("ResourceRecordSets") /* ResourceRecordSets com.amazonaws.route53.synthetic#ListResourceRecordSetsOutput$ResourceRecordSets */ =>  {
-                let var_142 =
+                let var_156 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_resource_record_sets(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_resource_record_sets(var_142);
+                builder = builder.set_resource_record_sets(var_156);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListResourceRecordSetsOutput$MaxItems */ =>  {
-                let var_143 =
+                let var_157 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4147,7 +4461,7 @@ pub fn deser_operation_crate_operation_list_resource_record_sets(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_143);
+                builder = builder.set_max_items(var_157);
             }
             ,
             _ => {}
@@ -4164,7 +4478,6 @@ pub fn deser_operation_crate_operation_list_reusable_delegation_sets(
     crate::output::list_reusable_delegation_sets_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4179,7 +4492,7 @@ pub fn deser_operation_crate_operation_list_reusable_delegation_sets(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListReusableDelegationSetsOutput$IsTruncated */ =>  {
-                let var_144 =
+                let var_158 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4190,11 +4503,11 @@ pub fn deser_operation_crate_operation_list_reusable_delegation_sets(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_144);
+                builder = builder.set_is_truncated(var_158);
             }
             ,
             s if s.matches("Marker") /* Marker com.amazonaws.route53.synthetic#ListReusableDelegationSetsOutput$Marker */ =>  {
-                let var_145 =
+                let var_159 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4203,11 +4516,11 @@ pub fn deser_operation_crate_operation_list_reusable_delegation_sets(
                         ?
                     )
                 ;
-                builder = builder.set_marker(var_145);
+                builder = builder.set_marker(var_159);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListReusableDelegationSetsOutput$MaxItems */ =>  {
-                let var_146 =
+                let var_160 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4218,11 +4531,11 @@ pub fn deser_operation_crate_operation_list_reusable_delegation_sets(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_146);
+                builder = builder.set_max_items(var_160);
             }
             ,
             s if s.matches("NextMarker") /* NextMarker com.amazonaws.route53.synthetic#ListReusableDelegationSetsOutput$NextMarker */ =>  {
-                let var_147 =
+                let var_161 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4231,17 +4544,17 @@ pub fn deser_operation_crate_operation_list_reusable_delegation_sets(
                         ?
                     )
                 ;
-                builder = builder.set_next_marker(var_147);
+                builder = builder.set_next_marker(var_161);
             }
             ,
             s if s.matches("DelegationSets") /* DelegationSets com.amazonaws.route53.synthetic#ListReusableDelegationSetsOutput$DelegationSets */ =>  {
-                let var_148 =
+                let var_162 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_delegation_sets(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_delegation_sets(var_148);
+                builder = builder.set_delegation_sets(var_162);
             }
             ,
             _ => {}
@@ -4256,7 +4569,6 @@ pub fn deser_operation_crate_operation_list_tags_for_resource(
     mut builder: crate::output::list_tags_for_resource_output::Builder,
 ) -> Result<crate::output::list_tags_for_resource_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4271,13 +4583,13 @@ pub fn deser_operation_crate_operation_list_tags_for_resource(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("ResourceTagSet") /* ResourceTagSet com.amazonaws.route53.synthetic#ListTagsForResourceOutput$ResourceTagSet */ =>  {
-                let var_149 =
+                let var_163 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_resource_tag_set(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_resource_tag_set(var_149);
+                builder = builder.set_resource_tag_set(var_163);
             }
             ,
             _ => {}
@@ -4292,7 +4604,6 @@ pub fn deser_operation_crate_operation_list_tags_for_resources(
     mut builder: crate::output::list_tags_for_resources_output::Builder,
 ) -> Result<crate::output::list_tags_for_resources_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4307,13 +4618,13 @@ pub fn deser_operation_crate_operation_list_tags_for_resources(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("ResourceTagSets") /* ResourceTagSets com.amazonaws.route53.synthetic#ListTagsForResourcesOutput$ResourceTagSets */ =>  {
-                let var_150 =
+                let var_164 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_resource_tag_set_list(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_resource_tag_sets(var_150);
+                builder = builder.set_resource_tag_sets(var_164);
             }
             ,
             _ => {}
@@ -4328,7 +4639,6 @@ pub fn deser_operation_crate_operation_list_traffic_policies(
     mut builder: crate::output::list_traffic_policies_output::Builder,
 ) -> Result<crate::output::list_traffic_policies_output::Builder, aws_smithy_xml::decode::XmlError>
 {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4343,7 +4653,7 @@ pub fn deser_operation_crate_operation_list_traffic_policies(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicyIdMarker") /* TrafficPolicyIdMarker com.amazonaws.route53.synthetic#ListTrafficPoliciesOutput$TrafficPolicyIdMarker */ =>  {
-                let var_151 =
+                let var_165 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4352,21 +4662,21 @@ pub fn deser_operation_crate_operation_list_traffic_policies(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_id_marker(var_151);
+                builder = builder.set_traffic_policy_id_marker(var_165);
             }
             ,
             s if s.matches("TrafficPolicySummaries") /* TrafficPolicySummaries com.amazonaws.route53.synthetic#ListTrafficPoliciesOutput$TrafficPolicySummaries */ =>  {
-                let var_152 =
+                let var_166 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_traffic_policy_summaries(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_summaries(var_152);
+                builder = builder.set_traffic_policy_summaries(var_166);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListTrafficPoliciesOutput$IsTruncated */ =>  {
-                let var_153 =
+                let var_167 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4377,11 +4687,11 @@ pub fn deser_operation_crate_operation_list_traffic_policies(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_153);
+                builder = builder.set_is_truncated(var_167);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListTrafficPoliciesOutput$MaxItems */ =>  {
-                let var_154 =
+                let var_168 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4392,7 +4702,7 @@ pub fn deser_operation_crate_operation_list_traffic_policies(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_154);
+                builder = builder.set_max_items(var_168);
             }
             ,
             _ => {}
@@ -4409,7 +4719,6 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances(
     crate::output::list_traffic_policy_instances_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4424,7 +4733,7 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicyInstanceNameMarker") /* TrafficPolicyInstanceNameMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesOutput$TrafficPolicyInstanceNameMarker */ =>  {
-                let var_155 =
+                let var_169 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4433,21 +4742,21 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_name_marker(var_155);
+                builder = builder.set_traffic_policy_instance_name_marker(var_169);
             }
             ,
             s if s.matches("TrafficPolicyInstances") /* TrafficPolicyInstances com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesOutput$TrafficPolicyInstances */ =>  {
-                let var_156 =
+                let var_170 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_traffic_policy_instances(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instances(var_156);
+                builder = builder.set_traffic_policy_instances(var_170);
             }
             ,
             s if s.matches("TrafficPolicyInstanceTypeMarker") /* TrafficPolicyInstanceTypeMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesOutput$TrafficPolicyInstanceTypeMarker */ =>  {
-                let var_157 =
+                let var_171 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -4457,11 +4766,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_type_marker(var_157);
+                builder = builder.set_traffic_policy_instance_type_marker(var_171);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesOutput$IsTruncated */ =>  {
-                let var_158 =
+                let var_172 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4472,11 +4781,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_158);
+                builder = builder.set_is_truncated(var_172);
             }
             ,
             s if s.matches("HostedZoneIdMarker") /* HostedZoneIdMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesOutput$HostedZoneIdMarker */ =>  {
-                let var_159 =
+                let var_173 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4485,11 +4794,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id_marker(var_159);
+                builder = builder.set_hosted_zone_id_marker(var_173);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesOutput$MaxItems */ =>  {
-                let var_160 =
+                let var_174 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4500,7 +4809,7 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_160);
+                builder = builder.set_max_items(var_174);
             }
             ,
             _ => {}
@@ -4517,7 +4826,6 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_hosted_z
     crate::output::list_traffic_policy_instances_by_hosted_zone_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4532,7 +4840,7 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_hosted_z
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicyInstanceNameMarker") /* TrafficPolicyInstanceNameMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByHostedZoneOutput$TrafficPolicyInstanceNameMarker */ =>  {
-                let var_161 =
+                let var_175 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4541,21 +4849,21 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_hosted_z
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_name_marker(var_161);
+                builder = builder.set_traffic_policy_instance_name_marker(var_175);
             }
             ,
             s if s.matches("TrafficPolicyInstances") /* TrafficPolicyInstances com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByHostedZoneOutput$TrafficPolicyInstances */ =>  {
-                let var_162 =
+                let var_176 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_traffic_policy_instances(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instances(var_162);
+                builder = builder.set_traffic_policy_instances(var_176);
             }
             ,
             s if s.matches("TrafficPolicyInstanceTypeMarker") /* TrafficPolicyInstanceTypeMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByHostedZoneOutput$TrafficPolicyInstanceTypeMarker */ =>  {
-                let var_163 =
+                let var_177 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -4565,11 +4873,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_hosted_z
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_type_marker(var_163);
+                builder = builder.set_traffic_policy_instance_type_marker(var_177);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByHostedZoneOutput$IsTruncated */ =>  {
-                let var_164 =
+                let var_178 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4580,11 +4888,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_hosted_z
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_164);
+                builder = builder.set_is_truncated(var_178);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByHostedZoneOutput$MaxItems */ =>  {
-                let var_165 =
+                let var_179 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4595,7 +4903,7 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_hosted_z
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_165);
+                builder = builder.set_max_items(var_179);
             }
             ,
             _ => {}
@@ -4612,7 +4920,6 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_policy(
     crate::output::list_traffic_policy_instances_by_policy_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4627,7 +4934,7 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_policy(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicyInstanceNameMarker") /* TrafficPolicyInstanceNameMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByPolicyOutput$TrafficPolicyInstanceNameMarker */ =>  {
-                let var_166 =
+                let var_180 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4636,21 +4943,21 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_policy(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_name_marker(var_166);
+                builder = builder.set_traffic_policy_instance_name_marker(var_180);
             }
             ,
             s if s.matches("TrafficPolicyInstances") /* TrafficPolicyInstances com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByPolicyOutput$TrafficPolicyInstances */ =>  {
-                let var_167 =
+                let var_181 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_traffic_policy_instances(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instances(var_167);
+                builder = builder.set_traffic_policy_instances(var_181);
             }
             ,
             s if s.matches("TrafficPolicyInstanceTypeMarker") /* TrafficPolicyInstanceTypeMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByPolicyOutput$TrafficPolicyInstanceTypeMarker */ =>  {
-                let var_168 =
+                let var_182 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -4660,11 +4967,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_policy(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_type_marker(var_168);
+                builder = builder.set_traffic_policy_instance_type_marker(var_182);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByPolicyOutput$IsTruncated */ =>  {
-                let var_169 =
+                let var_183 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4675,11 +4982,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_policy(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_169);
+                builder = builder.set_is_truncated(var_183);
             }
             ,
             s if s.matches("HostedZoneIdMarker") /* HostedZoneIdMarker com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByPolicyOutput$HostedZoneIdMarker */ =>  {
-                let var_170 =
+                let var_184 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4688,11 +4995,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_policy(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id_marker(var_170);
+                builder = builder.set_hosted_zone_id_marker(var_184);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListTrafficPolicyInstancesByPolicyOutput$MaxItems */ =>  {
-                let var_171 =
+                let var_185 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4703,7 +5010,7 @@ pub fn deser_operation_crate_operation_list_traffic_policy_instances_by_policy(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_171);
+                builder = builder.set_max_items(var_185);
             }
             ,
             _ => {}
@@ -4720,7 +5027,6 @@ pub fn deser_operation_crate_operation_list_traffic_policy_versions(
     crate::output::list_traffic_policy_versions_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4735,17 +5041,17 @@ pub fn deser_operation_crate_operation_list_traffic_policy_versions(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicies") /* TrafficPolicies com.amazonaws.route53.synthetic#ListTrafficPolicyVersionsOutput$TrafficPolicies */ =>  {
-                let var_172 =
+                let var_186 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_traffic_policies(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policies(var_172);
+                builder = builder.set_traffic_policies(var_186);
             }
             ,
             s if s.matches("TrafficPolicyVersionMarker") /* TrafficPolicyVersionMarker com.amazonaws.route53.synthetic#ListTrafficPolicyVersionsOutput$TrafficPolicyVersionMarker */ =>  {
-                let var_173 =
+                let var_187 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4754,11 +5060,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_versions(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_version_marker(var_173);
+                builder = builder.set_traffic_policy_version_marker(var_187);
             }
             ,
             s if s.matches("IsTruncated") /* IsTruncated com.amazonaws.route53.synthetic#ListTrafficPolicyVersionsOutput$IsTruncated */ =>  {
-                let var_174 =
+                let var_188 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4769,11 +5075,11 @@ pub fn deser_operation_crate_operation_list_traffic_policy_versions(
                         ?
                     )
                 ;
-                builder = builder.set_is_truncated(var_174);
+                builder = builder.set_is_truncated(var_188);
             }
             ,
             s if s.matches("MaxItems") /* MaxItems com.amazonaws.route53.synthetic#ListTrafficPolicyVersionsOutput$MaxItems */ =>  {
-                let var_175 =
+                let var_189 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -4784,7 +5090,7 @@ pub fn deser_operation_crate_operation_list_traffic_policy_versions(
                         ?
                     )
                 ;
-                builder = builder.set_max_items(var_175);
+                builder = builder.set_max_items(var_189);
             }
             ,
             _ => {}
@@ -4801,7 +5107,6 @@ pub fn deser_operation_crate_operation_list_vpc_association_authorizations(
     crate::output::list_vpc_association_authorizations_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4816,17 +5121,17 @@ pub fn deser_operation_crate_operation_list_vpc_association_authorizations(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("VPCs") /* VPCs com.amazonaws.route53.synthetic#ListVPCAssociationAuthorizationsOutput$VPCs */ =>  {
-                let var_176 =
+                let var_190 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_vp_cs(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_vp_cs(var_176);
+                builder = builder.set_vp_cs(var_190);
             }
             ,
             s if s.matches("NextToken") /* NextToken com.amazonaws.route53.synthetic#ListVPCAssociationAuthorizationsOutput$NextToken */ =>  {
-                let var_177 =
+                let var_191 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4835,11 +5140,11 @@ pub fn deser_operation_crate_operation_list_vpc_association_authorizations(
                         ?
                     )
                 ;
-                builder = builder.set_next_token(var_177);
+                builder = builder.set_next_token(var_191);
             }
             ,
             s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53.synthetic#ListVPCAssociationAuthorizationsOutput$HostedZoneId */ =>  {
-                let var_178 =
+                let var_192 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4848,7 +5153,7 @@ pub fn deser_operation_crate_operation_list_vpc_association_authorizations(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id(var_178);
+                builder = builder.set_hosted_zone_id(var_192);
             }
             ,
             _ => {}
@@ -4862,7 +5167,6 @@ pub fn deser_operation_crate_operation_test_dns_answer(
     inp: &[u8],
     mut builder: crate::output::test_dns_answer_output::Builder,
 ) -> Result<crate::output::test_dns_answer_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -4877,7 +5181,7 @@ pub fn deser_operation_crate_operation_test_dns_answer(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("RecordName") /* RecordName com.amazonaws.route53.synthetic#TestDNSAnswerOutput$RecordName */ =>  {
-                let var_179 =
+                let var_193 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4886,11 +5190,11 @@ pub fn deser_operation_crate_operation_test_dns_answer(
                         ?
                     )
                 ;
-                builder = builder.set_record_name(var_179);
+                builder = builder.set_record_name(var_193);
             }
             ,
             s if s.matches("ResponseCode") /* ResponseCode com.amazonaws.route53.synthetic#TestDNSAnswerOutput$ResponseCode */ =>  {
-                let var_180 =
+                let var_194 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4899,21 +5203,21 @@ pub fn deser_operation_crate_operation_test_dns_answer(
                         ?
                     )
                 ;
-                builder = builder.set_response_code(var_180);
+                builder = builder.set_response_code(var_194);
             }
             ,
             s if s.matches("RecordData") /* RecordData com.amazonaws.route53.synthetic#TestDNSAnswerOutput$RecordData */ =>  {
-                let var_181 =
+                let var_195 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_record_data(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_record_data(var_181);
+                builder = builder.set_record_data(var_195);
             }
             ,
             s if s.matches("RecordType") /* RecordType com.amazonaws.route53.synthetic#TestDNSAnswerOutput$RecordType */ =>  {
-                let var_182 =
+                let var_196 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -4923,11 +5227,11 @@ pub fn deser_operation_crate_operation_test_dns_answer(
                         ?
                     )
                 ;
-                builder = builder.set_record_type(var_182);
+                builder = builder.set_record_type(var_196);
             }
             ,
             s if s.matches("Nameserver") /* Nameserver com.amazonaws.route53.synthetic#TestDNSAnswerOutput$Nameserver */ =>  {
-                let var_183 =
+                let var_197 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4936,11 +5240,11 @@ pub fn deser_operation_crate_operation_test_dns_answer(
                         ?
                     )
                 ;
-                builder = builder.set_nameserver(var_183);
+                builder = builder.set_nameserver(var_197);
             }
             ,
             s if s.matches("Protocol") /* Protocol com.amazonaws.route53.synthetic#TestDNSAnswerOutput$Protocol */ =>  {
-                let var_184 =
+                let var_198 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4949,7 +5253,7 @@ pub fn deser_operation_crate_operation_test_dns_answer(
                         ?
                     )
                 ;
-                builder = builder.set_protocol(var_184);
+                builder = builder.set_protocol(var_198);
             }
             ,
             _ => {}
@@ -4967,14 +5271,13 @@ pub fn deser_structure_crate_error_health_check_version_mismatch_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("message") /* message com.amazonaws.route53#HealthCheckVersionMismatch$message */ =>  {
-                let var_185 =
+                let var_199 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -4983,7 +5286,7 @@ pub fn deser_structure_crate_error_health_check_version_mismatch_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_185);
+                builder = builder.set_message(var_199);
             }
             ,
             _ => {}
@@ -4997,7 +5300,6 @@ pub fn deser_operation_crate_operation_update_health_check(
     inp: &[u8],
     mut builder: crate::output::update_health_check_output::Builder,
 ) -> Result<crate::output::update_health_check_output::Builder, aws_smithy_xml::decode::XmlError> {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -5012,13 +5314,13 @@ pub fn deser_operation_crate_operation_update_health_check(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HealthCheck") /* HealthCheck com.amazonaws.route53.synthetic#UpdateHealthCheckOutput$HealthCheck */ =>  {
-                let var_186 =
+                let var_200 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_health_check(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_health_check(var_186);
+                builder = builder.set_health_check(var_200);
             }
             ,
             _ => {}
@@ -5035,7 +5337,6 @@ pub fn deser_operation_crate_operation_update_hosted_zone_comment(
     crate::output::update_hosted_zone_comment_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -5050,13 +5351,13 @@ pub fn deser_operation_crate_operation_update_hosted_zone_comment(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HostedZone") /* HostedZone com.amazonaws.route53.synthetic#UpdateHostedZoneCommentOutput$HostedZone */ =>  {
-                let var_187 =
+                let var_201 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_hosted_zone(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone(var_187);
+                builder = builder.set_hosted_zone(var_201);
             }
             ,
             _ => {}
@@ -5073,7 +5374,6 @@ pub fn deser_operation_crate_operation_update_traffic_policy_comment(
     crate::output::update_traffic_policy_comment_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -5088,13 +5388,13 @@ pub fn deser_operation_crate_operation_update_traffic_policy_comment(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicy") /* TrafficPolicy com.amazonaws.route53.synthetic#UpdateTrafficPolicyCommentOutput$TrafficPolicy */ =>  {
-                let var_188 =
+                let var_202 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_traffic_policy(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy(var_188);
+                builder = builder.set_traffic_policy(var_202);
             }
             ,
             _ => {}
@@ -5111,14 +5411,13 @@ pub fn deser_structure_crate_error_conflicting_types_xml_err(
     if inp.is_empty() {
         return Ok(builder);
     }
-    use std::convert::TryFrom;
     let mut document = aws_smithy_xml::decode::Document::try_from(inp)?;
     #[allow(unused_mut)]
     let mut error_decoder = crate::rest_xml_wrapped_errors::error_scope(&mut document)?;
     while let Some(mut tag) = error_decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("message") /* message com.amazonaws.route53#ConflictingTypes$message */ =>  {
-                let var_189 =
+                let var_203 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5127,7 +5426,7 @@ pub fn deser_structure_crate_error_conflicting_types_xml_err(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_189);
+                builder = builder.set_message(var_203);
             }
             ,
             _ => {}
@@ -5144,7 +5443,6 @@ pub fn deser_operation_crate_operation_update_traffic_policy_instance(
     crate::output::update_traffic_policy_instance_output::Builder,
     aws_smithy_xml::decode::XmlError,
 > {
-    use std::convert::TryFrom;
     let mut doc = aws_smithy_xml::decode::Document::try_from(inp)?;
 
     #[allow(unused_mut)]
@@ -5159,13 +5457,13 @@ pub fn deser_operation_crate_operation_update_traffic_policy_instance(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("TrafficPolicyInstance") /* TrafficPolicyInstance com.amazonaws.route53.synthetic#UpdateTrafficPolicyInstanceOutput$TrafficPolicyInstance */ =>  {
-                let var_190 =
+                let var_204 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_traffic_policy_instance(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance(var_190);
+                builder = builder.set_traffic_policy_instance(var_204);
             }
             ,
             _ => {}
@@ -5182,7 +5480,7 @@ pub fn deser_structure_crate_model_change_info(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#ChangeInfo$Id */ =>  {
-                let var_191 =
+                let var_205 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5191,11 +5489,11 @@ pub fn deser_structure_crate_model_change_info(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_191);
+                builder = builder.set_id(var_205);
             }
             ,
             s if s.matches("Status") /* Status com.amazonaws.route53#ChangeInfo$Status */ =>  {
-                let var_192 =
+                let var_206 =
                     Some(
                         Result::<crate::model::ChangeStatus, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::ChangeStatus::from(
@@ -5205,11 +5503,11 @@ pub fn deser_structure_crate_model_change_info(
                         ?
                     )
                 ;
-                builder = builder.set_status(var_192);
+                builder = builder.set_status(var_206);
             }
             ,
             s if s.matches("SubmittedAt") /* SubmittedAt com.amazonaws.route53#ChangeInfo$SubmittedAt */ =>  {
-                let var_193 =
+                let var_207 =
                     Some(
                         aws_smithy_types::DateTime::from_str(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5219,11 +5517,11 @@ pub fn deser_structure_crate_model_change_info(
                         ?
                     )
                 ;
-                builder = builder.set_submitted_at(var_193);
+                builder = builder.set_submitted_at(var_207);
             }
             ,
             s if s.matches("Comment") /* Comment com.amazonaws.route53#ChangeInfo$Comment */ =>  {
-                let var_194 =
+                let var_208 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5232,7 +5530,7 @@ pub fn deser_structure_crate_model_change_info(
                         ?
                     )
                 ;
-                builder = builder.set_comment(var_194);
+                builder = builder.set_comment(var_208);
             }
             ,
             _ => {}
@@ -5263,6 +5561,73 @@ pub fn deser_list_com_amazonaws_route53_error_messages(
     Ok(out)
 }
 
+pub fn deser_structure_crate_model_cidr_collection(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<crate::model::CidrCollection, aws_smithy_xml::decode::XmlError> {
+    #[allow(unused_mut)]
+    let mut builder = crate::model::CidrCollection::builder();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("Arn") /* Arn com.amazonaws.route53#CidrCollection$Arn */ =>  {
+                let var_209 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_arn(var_209);
+            }
+            ,
+            s if s.matches("Id") /* Id com.amazonaws.route53#CidrCollection$Id */ =>  {
+                let var_210 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_id(var_210);
+            }
+            ,
+            s if s.matches("Name") /* Name com.amazonaws.route53#CidrCollection$Name */ =>  {
+                let var_211 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_name(var_211);
+            }
+            ,
+            s if s.matches("Version") /* Version com.amazonaws.route53#CidrCollection$Version */ =>  {
+                let var_212 =
+                    Some(
+                         {
+                            <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
+                                aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            )
+                            .map_err(|_|aws_smithy_xml::decode::XmlError::custom("expected (long: `com.amazonaws.route53#CollectionVersion`)"))
+                        }
+                        ?
+                    )
+                ;
+                builder = builder.set_version(var_212);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder.build())
+}
+
 pub fn deser_structure_crate_model_health_check(
     decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
 ) -> Result<crate::model::HealthCheck, aws_smithy_xml::decode::XmlError> {
@@ -5271,7 +5636,7 @@ pub fn deser_structure_crate_model_health_check(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#HealthCheck$Id */ =>  {
-                let var_195 =
+                let var_213 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5280,11 +5645,11 @@ pub fn deser_structure_crate_model_health_check(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_195);
+                builder = builder.set_id(var_213);
             }
             ,
             s if s.matches("CallerReference") /* CallerReference com.amazonaws.route53#HealthCheck$CallerReference */ =>  {
-                let var_196 =
+                let var_214 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5293,31 +5658,31 @@ pub fn deser_structure_crate_model_health_check(
                         ?
                     )
                 ;
-                builder = builder.set_caller_reference(var_196);
+                builder = builder.set_caller_reference(var_214);
             }
             ,
             s if s.matches("LinkedService") /* LinkedService com.amazonaws.route53#HealthCheck$LinkedService */ =>  {
-                let var_197 =
+                let var_215 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_linked_service(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_linked_service(var_197);
+                builder = builder.set_linked_service(var_215);
             }
             ,
             s if s.matches("HealthCheckConfig") /* HealthCheckConfig com.amazonaws.route53#HealthCheck$HealthCheckConfig */ =>  {
-                let var_198 =
+                let var_216 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_health_check_config(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_health_check_config(var_198);
+                builder = builder.set_health_check_config(var_216);
             }
             ,
             s if s.matches("HealthCheckVersion") /* HealthCheckVersion com.amazonaws.route53#HealthCheck$HealthCheckVersion */ =>  {
-                let var_199 =
+                let var_217 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5328,17 +5693,17 @@ pub fn deser_structure_crate_model_health_check(
                         ?
                     )
                 ;
-                builder = builder.set_health_check_version(var_199);
+                builder = builder.set_health_check_version(var_217);
             }
             ,
             s if s.matches("CloudWatchAlarmConfiguration") /* CloudWatchAlarmConfiguration com.amazonaws.route53#HealthCheck$CloudWatchAlarmConfiguration */ =>  {
-                let var_200 =
+                let var_218 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_cloud_watch_alarm_configuration(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_cloud_watch_alarm_configuration(var_200);
+                builder = builder.set_cloud_watch_alarm_configuration(var_218);
             }
             ,
             _ => {}
@@ -5355,7 +5720,7 @@ pub fn deser_structure_crate_model_hosted_zone(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#HostedZone$Id */ =>  {
-                let var_201 =
+                let var_219 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5364,11 +5729,11 @@ pub fn deser_structure_crate_model_hosted_zone(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_201);
+                builder = builder.set_id(var_219);
             }
             ,
             s if s.matches("Name") /* Name com.amazonaws.route53#HostedZone$Name */ =>  {
-                let var_202 =
+                let var_220 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5377,11 +5742,11 @@ pub fn deser_structure_crate_model_hosted_zone(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_202);
+                builder = builder.set_name(var_220);
             }
             ,
             s if s.matches("CallerReference") /* CallerReference com.amazonaws.route53#HostedZone$CallerReference */ =>  {
-                let var_203 =
+                let var_221 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5390,21 +5755,21 @@ pub fn deser_structure_crate_model_hosted_zone(
                         ?
                     )
                 ;
-                builder = builder.set_caller_reference(var_203);
+                builder = builder.set_caller_reference(var_221);
             }
             ,
             s if s.matches("Config") /* Config com.amazonaws.route53#HostedZone$Config */ =>  {
-                let var_204 =
+                let var_222 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_hosted_zone_config(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_config(var_204);
+                builder = builder.set_config(var_222);
             }
             ,
             s if s.matches("ResourceRecordSetCount") /* ResourceRecordSetCount com.amazonaws.route53#HostedZone$ResourceRecordSetCount */ =>  {
-                let var_205 =
+                let var_223 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5415,17 +5780,17 @@ pub fn deser_structure_crate_model_hosted_zone(
                         ?
                     )
                 ;
-                builder = builder.set_resource_record_set_count(var_205);
+                builder = builder.set_resource_record_set_count(var_223);
             }
             ,
             s if s.matches("LinkedService") /* LinkedService com.amazonaws.route53#HostedZone$LinkedService */ =>  {
-                let var_206 =
+                let var_224 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_linked_service(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_linked_service(var_206);
+                builder = builder.set_linked_service(var_224);
             }
             ,
             _ => {}
@@ -5442,7 +5807,7 @@ pub fn deser_structure_crate_model_delegation_set(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#DelegationSet$Id */ =>  {
-                let var_207 =
+                let var_225 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5451,11 +5816,11 @@ pub fn deser_structure_crate_model_delegation_set(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_207);
+                builder = builder.set_id(var_225);
             }
             ,
             s if s.matches("CallerReference") /* CallerReference com.amazonaws.route53#DelegationSet$CallerReference */ =>  {
-                let var_208 =
+                let var_226 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5464,17 +5829,17 @@ pub fn deser_structure_crate_model_delegation_set(
                         ?
                     )
                 ;
-                builder = builder.set_caller_reference(var_208);
+                builder = builder.set_caller_reference(var_226);
             }
             ,
             s if s.matches("NameServers") /* NameServers com.amazonaws.route53#DelegationSet$NameServers */ =>  {
-                let var_209 =
+                let var_227 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_delegation_set_name_servers(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_name_servers(var_209);
+                builder = builder.set_name_servers(var_227);
             }
             ,
             _ => {}
@@ -5491,7 +5856,7 @@ pub fn deser_structure_crate_model_vpc(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("VPCRegion") /* VPCRegion com.amazonaws.route53#VPC$VPCRegion */ =>  {
-                let var_210 =
+                let var_228 =
                     Some(
                         Result::<crate::model::VpcRegion, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::VpcRegion::from(
@@ -5501,11 +5866,11 @@ pub fn deser_structure_crate_model_vpc(
                         ?
                     )
                 ;
-                builder = builder.set_vpc_region(var_210);
+                builder = builder.set_vpc_region(var_228);
             }
             ,
             s if s.matches("VPCId") /* VPCId com.amazonaws.route53#VPC$VPCId */ =>  {
-                let var_211 =
+                let var_229 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5514,7 +5879,7 @@ pub fn deser_structure_crate_model_vpc(
                         ?
                     )
                 ;
-                builder = builder.set_vpc_id(var_211);
+                builder = builder.set_vpc_id(var_229);
             }
             ,
             _ => {}
@@ -5531,7 +5896,7 @@ pub fn deser_structure_crate_model_key_signing_key(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Name") /* Name com.amazonaws.route53#KeySigningKey$Name */ =>  {
-                let var_212 =
+                let var_230 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5540,11 +5905,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_212);
+                builder = builder.set_name(var_230);
             }
             ,
             s if s.matches("KmsArn") /* KmsArn com.amazonaws.route53#KeySigningKey$KmsArn */ =>  {
-                let var_213 =
+                let var_231 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5553,11 +5918,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_kms_arn(var_213);
+                builder = builder.set_kms_arn(var_231);
             }
             ,
             s if s.matches("Flag") /* Flag com.amazonaws.route53#KeySigningKey$Flag */ =>  {
-                let var_214 =
+                let var_232 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5568,11 +5933,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_flag(var_214);
+                builder = builder.set_flag(var_232);
             }
             ,
             s if s.matches("SigningAlgorithmMnemonic") /* SigningAlgorithmMnemonic com.amazonaws.route53#KeySigningKey$SigningAlgorithmMnemonic */ =>  {
-                let var_215 =
+                let var_233 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5581,11 +5946,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_signing_algorithm_mnemonic(var_215);
+                builder = builder.set_signing_algorithm_mnemonic(var_233);
             }
             ,
             s if s.matches("SigningAlgorithmType") /* SigningAlgorithmType com.amazonaws.route53#KeySigningKey$SigningAlgorithmType */ =>  {
-                let var_216 =
+                let var_234 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5596,11 +5961,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_signing_algorithm_type(var_216);
+                builder = builder.set_signing_algorithm_type(var_234);
             }
             ,
             s if s.matches("DigestAlgorithmMnemonic") /* DigestAlgorithmMnemonic com.amazonaws.route53#KeySigningKey$DigestAlgorithmMnemonic */ =>  {
-                let var_217 =
+                let var_235 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5609,11 +5974,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_digest_algorithm_mnemonic(var_217);
+                builder = builder.set_digest_algorithm_mnemonic(var_235);
             }
             ,
             s if s.matches("DigestAlgorithmType") /* DigestAlgorithmType com.amazonaws.route53#KeySigningKey$DigestAlgorithmType */ =>  {
-                let var_218 =
+                let var_236 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5624,11 +5989,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_digest_algorithm_type(var_218);
+                builder = builder.set_digest_algorithm_type(var_236);
             }
             ,
             s if s.matches("KeyTag") /* KeyTag com.amazonaws.route53#KeySigningKey$KeyTag */ =>  {
-                let var_219 =
+                let var_237 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5639,11 +6004,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_key_tag(var_219);
+                builder = builder.set_key_tag(var_237);
             }
             ,
             s if s.matches("DigestValue") /* DigestValue com.amazonaws.route53#KeySigningKey$DigestValue */ =>  {
-                let var_220 =
+                let var_238 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5652,11 +6017,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_digest_value(var_220);
+                builder = builder.set_digest_value(var_238);
             }
             ,
             s if s.matches("PublicKey") /* PublicKey com.amazonaws.route53#KeySigningKey$PublicKey */ =>  {
-                let var_221 =
+                let var_239 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5665,11 +6030,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_public_key(var_221);
+                builder = builder.set_public_key(var_239);
             }
             ,
             s if s.matches("DSRecord") /* DSRecord com.amazonaws.route53#KeySigningKey$DSRecord */ =>  {
-                let var_222 =
+                let var_240 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5678,11 +6043,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_ds_record(var_222);
+                builder = builder.set_ds_record(var_240);
             }
             ,
             s if s.matches("DNSKEYRecord") /* DNSKEYRecord com.amazonaws.route53#KeySigningKey$DNSKEYRecord */ =>  {
-                let var_223 =
+                let var_241 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5691,11 +6056,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_dnskey_record(var_223);
+                builder = builder.set_dnskey_record(var_241);
             }
             ,
             s if s.matches("Status") /* Status com.amazonaws.route53#KeySigningKey$Status */ =>  {
-                let var_224 =
+                let var_242 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5704,11 +6069,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_status(var_224);
+                builder = builder.set_status(var_242);
             }
             ,
             s if s.matches("StatusMessage") /* StatusMessage com.amazonaws.route53#KeySigningKey$StatusMessage */ =>  {
-                let var_225 =
+                let var_243 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5717,11 +6082,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_status_message(var_225);
+                builder = builder.set_status_message(var_243);
             }
             ,
             s if s.matches("CreatedDate") /* CreatedDate com.amazonaws.route53#KeySigningKey$CreatedDate */ =>  {
-                let var_226 =
+                let var_244 =
                     Some(
                         aws_smithy_types::DateTime::from_str(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5731,11 +6096,11 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_created_date(var_226);
+                builder = builder.set_created_date(var_244);
             }
             ,
             s if s.matches("LastModifiedDate") /* LastModifiedDate com.amazonaws.route53#KeySigningKey$LastModifiedDate */ =>  {
-                let var_227 =
+                let var_245 =
                     Some(
                         aws_smithy_types::DateTime::from_str(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5745,7 +6110,7 @@ pub fn deser_structure_crate_model_key_signing_key(
                         ?
                     )
                 ;
-                builder = builder.set_last_modified_date(var_227);
+                builder = builder.set_last_modified_date(var_245);
             }
             ,
             _ => {}
@@ -5762,7 +6127,7 @@ pub fn deser_structure_crate_model_query_logging_config(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#QueryLoggingConfig$Id */ =>  {
-                let var_228 =
+                let var_246 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5771,11 +6136,11 @@ pub fn deser_structure_crate_model_query_logging_config(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_228);
+                builder = builder.set_id(var_246);
             }
             ,
             s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53#QueryLoggingConfig$HostedZoneId */ =>  {
-                let var_229 =
+                let var_247 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5784,11 +6149,11 @@ pub fn deser_structure_crate_model_query_logging_config(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id(var_229);
+                builder = builder.set_hosted_zone_id(var_247);
             }
             ,
             s if s.matches("CloudWatchLogsLogGroupArn") /* CloudWatchLogsLogGroupArn com.amazonaws.route53#QueryLoggingConfig$CloudWatchLogsLogGroupArn */ =>  {
-                let var_230 =
+                let var_248 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5797,7 +6162,7 @@ pub fn deser_structure_crate_model_query_logging_config(
                         ?
                     )
                 ;
-                builder = builder.set_cloud_watch_logs_log_group_arn(var_230);
+                builder = builder.set_cloud_watch_logs_log_group_arn(var_248);
             }
             ,
             _ => {}
@@ -5814,7 +6179,7 @@ pub fn deser_structure_crate_model_traffic_policy(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#TrafficPolicy$Id */ =>  {
-                let var_231 =
+                let var_249 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5823,11 +6188,11 @@ pub fn deser_structure_crate_model_traffic_policy(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_231);
+                builder = builder.set_id(var_249);
             }
             ,
             s if s.matches("Version") /* Version com.amazonaws.route53#TrafficPolicy$Version */ =>  {
-                let var_232 =
+                let var_250 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5838,11 +6203,11 @@ pub fn deser_structure_crate_model_traffic_policy(
                         ?
                     )
                 ;
-                builder = builder.set_version(var_232);
+                builder = builder.set_version(var_250);
             }
             ,
             s if s.matches("Name") /* Name com.amazonaws.route53#TrafficPolicy$Name */ =>  {
-                let var_233 =
+                let var_251 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5851,11 +6216,11 @@ pub fn deser_structure_crate_model_traffic_policy(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_233);
+                builder = builder.set_name(var_251);
             }
             ,
             s if s.matches("Type") /* Type com.amazonaws.route53#TrafficPolicy$Type */ =>  {
-                let var_234 =
+                let var_252 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -5865,11 +6230,11 @@ pub fn deser_structure_crate_model_traffic_policy(
                         ?
                     )
                 ;
-                builder = builder.set_type(var_234);
+                builder = builder.set_type(var_252);
             }
             ,
             s if s.matches("Document") /* Document com.amazonaws.route53#TrafficPolicy$Document */ =>  {
-                let var_235 =
+                let var_253 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5878,11 +6243,11 @@ pub fn deser_structure_crate_model_traffic_policy(
                         ?
                     )
                 ;
-                builder = builder.set_document(var_235);
+                builder = builder.set_document(var_253);
             }
             ,
             s if s.matches("Comment") /* Comment com.amazonaws.route53#TrafficPolicy$Comment */ =>  {
-                let var_236 =
+                let var_254 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5891,7 +6256,7 @@ pub fn deser_structure_crate_model_traffic_policy(
                         ?
                     )
                 ;
-                builder = builder.set_comment(var_236);
+                builder = builder.set_comment(var_254);
             }
             ,
             _ => {}
@@ -5908,7 +6273,7 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#TrafficPolicyInstance$Id */ =>  {
-                let var_237 =
+                let var_255 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5917,11 +6282,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_237);
+                builder = builder.set_id(var_255);
             }
             ,
             s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53#TrafficPolicyInstance$HostedZoneId */ =>  {
-                let var_238 =
+                let var_256 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5930,11 +6295,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id(var_238);
+                builder = builder.set_hosted_zone_id(var_256);
             }
             ,
             s if s.matches("Name") /* Name com.amazonaws.route53#TrafficPolicyInstance$Name */ =>  {
-                let var_239 =
+                let var_257 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5943,11 +6308,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_239);
+                builder = builder.set_name(var_257);
             }
             ,
             s if s.matches("TTL") /* TTL com.amazonaws.route53#TrafficPolicyInstance$TTL */ =>  {
-                let var_240 =
+                let var_258 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -5958,11 +6323,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_ttl(var_240);
+                builder = builder.set_ttl(var_258);
             }
             ,
             s if s.matches("State") /* State com.amazonaws.route53#TrafficPolicyInstance$State */ =>  {
-                let var_241 =
+                let var_259 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5971,11 +6336,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_state(var_241);
+                builder = builder.set_state(var_259);
             }
             ,
             s if s.matches("Message") /* Message com.amazonaws.route53#TrafficPolicyInstance$Message */ =>  {
-                let var_242 =
+                let var_260 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5984,11 +6349,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_message(var_242);
+                builder = builder.set_message(var_260);
             }
             ,
             s if s.matches("TrafficPolicyId") /* TrafficPolicyId com.amazonaws.route53#TrafficPolicyInstance$TrafficPolicyId */ =>  {
-                let var_243 =
+                let var_261 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -5997,11 +6362,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_id(var_243);
+                builder = builder.set_traffic_policy_id(var_261);
             }
             ,
             s if s.matches("TrafficPolicyVersion") /* TrafficPolicyVersion com.amazonaws.route53#TrafficPolicyInstance$TrafficPolicyVersion */ =>  {
-                let var_244 =
+                let var_262 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6012,11 +6377,11 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_version(var_244);
+                builder = builder.set_traffic_policy_version(var_262);
             }
             ,
             s if s.matches("TrafficPolicyType") /* TrafficPolicyType com.amazonaws.route53#TrafficPolicyInstance$TrafficPolicyType */ =>  {
-                let var_245 =
+                let var_263 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -6026,7 +6391,7 @@ pub fn deser_structure_crate_model_traffic_policy_instance(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_type(var_245);
+                builder = builder.set_traffic_policy_type(var_263);
             }
             ,
             _ => {}
@@ -6043,7 +6408,7 @@ pub fn deser_structure_crate_model_account_limit(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Type") /* Type com.amazonaws.route53#AccountLimit$Type */ =>  {
-                let var_246 =
+                let var_264 =
                     Some(
                         Result::<crate::model::AccountLimitType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::AccountLimitType::from(
@@ -6053,11 +6418,11 @@ pub fn deser_structure_crate_model_account_limit(
                         ?
                     )
                 ;
-                builder = builder.set_type(var_246);
+                builder = builder.set_type(var_264);
             }
             ,
             s if s.matches("Value") /* Value com.amazonaws.route53#AccountLimit$Value */ =>  {
-                let var_247 =
+                let var_265 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6068,7 +6433,7 @@ pub fn deser_structure_crate_model_account_limit(
                         ?
                     )
                 ;
-                builder = builder.set_value(var_247);
+                builder = builder.set_value(var_265);
             }
             ,
             _ => {}
@@ -6107,7 +6472,7 @@ pub fn deser_structure_crate_model_dnssec_status(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("ServeSignature") /* ServeSignature com.amazonaws.route53#DNSSECStatus$ServeSignature */ =>  {
-                let var_248 =
+                let var_266 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6116,11 +6481,11 @@ pub fn deser_structure_crate_model_dnssec_status(
                         ?
                     )
                 ;
-                builder = builder.set_serve_signature(var_248);
+                builder = builder.set_serve_signature(var_266);
             }
             ,
             s if s.matches("StatusMessage") /* StatusMessage com.amazonaws.route53#DNSSECStatus$StatusMessage */ =>  {
-                let var_249 =
+                let var_267 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6129,7 +6494,7 @@ pub fn deser_structure_crate_model_dnssec_status(
                         ?
                     )
                 ;
-                builder = builder.set_status_message(var_249);
+                builder = builder.set_status_message(var_267);
             }
             ,
             _ => {}
@@ -6165,7 +6530,7 @@ pub fn deser_structure_crate_model_geo_location_details(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("ContinentCode") /* ContinentCode com.amazonaws.route53#GeoLocationDetails$ContinentCode */ =>  {
-                let var_250 =
+                let var_268 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6174,11 +6539,11 @@ pub fn deser_structure_crate_model_geo_location_details(
                         ?
                     )
                 ;
-                builder = builder.set_continent_code(var_250);
+                builder = builder.set_continent_code(var_268);
             }
             ,
             s if s.matches("ContinentName") /* ContinentName com.amazonaws.route53#GeoLocationDetails$ContinentName */ =>  {
-                let var_251 =
+                let var_269 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6187,11 +6552,11 @@ pub fn deser_structure_crate_model_geo_location_details(
                         ?
                     )
                 ;
-                builder = builder.set_continent_name(var_251);
+                builder = builder.set_continent_name(var_269);
             }
             ,
             s if s.matches("CountryCode") /* CountryCode com.amazonaws.route53#GeoLocationDetails$CountryCode */ =>  {
-                let var_252 =
+                let var_270 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6200,11 +6565,11 @@ pub fn deser_structure_crate_model_geo_location_details(
                         ?
                     )
                 ;
-                builder = builder.set_country_code(var_252);
+                builder = builder.set_country_code(var_270);
             }
             ,
             s if s.matches("CountryName") /* CountryName com.amazonaws.route53#GeoLocationDetails$CountryName */ =>  {
-                let var_253 =
+                let var_271 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6213,11 +6578,11 @@ pub fn deser_structure_crate_model_geo_location_details(
                         ?
                     )
                 ;
-                builder = builder.set_country_name(var_253);
+                builder = builder.set_country_name(var_271);
             }
             ,
             s if s.matches("SubdivisionCode") /* SubdivisionCode com.amazonaws.route53#GeoLocationDetails$SubdivisionCode */ =>  {
-                let var_254 =
+                let var_272 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6226,11 +6591,11 @@ pub fn deser_structure_crate_model_geo_location_details(
                         ?
                     )
                 ;
-                builder = builder.set_subdivision_code(var_254);
+                builder = builder.set_subdivision_code(var_272);
             }
             ,
             s if s.matches("SubdivisionName") /* SubdivisionName com.amazonaws.route53#GeoLocationDetails$SubdivisionName */ =>  {
-                let var_255 =
+                let var_273 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6239,7 +6604,7 @@ pub fn deser_structure_crate_model_geo_location_details(
                         ?
                     )
                 ;
-                builder = builder.set_subdivision_name(var_255);
+                builder = builder.set_subdivision_name(var_273);
             }
             ,
             _ => {}
@@ -6294,7 +6659,7 @@ pub fn deser_structure_crate_model_hosted_zone_limit(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Type") /* Type com.amazonaws.route53#HostedZoneLimit$Type */ =>  {
-                let var_256 =
+                let var_274 =
                     Some(
                         Result::<crate::model::HostedZoneLimitType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::HostedZoneLimitType::from(
@@ -6304,11 +6669,11 @@ pub fn deser_structure_crate_model_hosted_zone_limit(
                         ?
                     )
                 ;
-                builder = builder.set_type(var_256);
+                builder = builder.set_type(var_274);
             }
             ,
             s if s.matches("Value") /* Value com.amazonaws.route53#HostedZoneLimit$Value */ =>  {
-                let var_257 =
+                let var_275 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6319,7 +6684,7 @@ pub fn deser_structure_crate_model_hosted_zone_limit(
                         ?
                     )
                 ;
-                builder = builder.set_value(var_257);
+                builder = builder.set_value(var_275);
             }
             ,
             _ => {}
@@ -6336,7 +6701,7 @@ pub fn deser_structure_crate_model_reusable_delegation_set_limit(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Type") /* Type com.amazonaws.route53#ReusableDelegationSetLimit$Type */ =>  {
-                let var_258 =
+                let var_276 =
                     Some(
                         Result::<crate::model::ReusableDelegationSetLimitType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::ReusableDelegationSetLimitType::from(
@@ -6346,11 +6711,11 @@ pub fn deser_structure_crate_model_reusable_delegation_set_limit(
                         ?
                     )
                 ;
-                builder = builder.set_type(var_258);
+                builder = builder.set_type(var_276);
             }
             ,
             s if s.matches("Value") /* Value com.amazonaws.route53#ReusableDelegationSetLimit$Value */ =>  {
-                let var_259 =
+                let var_277 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6361,13 +6726,70 @@ pub fn deser_structure_crate_model_reusable_delegation_set_limit(
                         ?
                     )
                 ;
-                builder = builder.set_value(var_259);
+                builder = builder.set_value(var_277);
             }
             ,
             _ => {}
         }
     }
     Ok(builder.build())
+}
+
+pub fn deser_list_com_amazonaws_route53_cidr_block_summaries(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<std::vec::Vec<crate::model::CidrBlockSummary>, aws_smithy_xml::decode::XmlError> {
+    let mut out = std::vec::Vec::new();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("member") /* member com.amazonaws.route53#CidrBlockSummaries$member */ =>  {
+                out.push(
+                    crate::xml_deser::deser_structure_crate_model_cidr_block_summary(&mut tag)
+                    ?
+                );
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(out)
+}
+
+pub fn deser_list_com_amazonaws_route53_collection_summaries(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<std::vec::Vec<crate::model::CollectionSummary>, aws_smithy_xml::decode::XmlError> {
+    let mut out = std::vec::Vec::new();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("member") /* member com.amazonaws.route53#CollectionSummaries$member */ =>  {
+                out.push(
+                    crate::xml_deser::deser_structure_crate_model_collection_summary(&mut tag)
+                    ?
+                );
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(out)
+}
+
+pub fn deser_list_com_amazonaws_route53_location_summaries(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<std::vec::Vec<crate::model::LocationSummary>, aws_smithy_xml::decode::XmlError> {
+    let mut out = std::vec::Vec::new();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("member") /* member com.amazonaws.route53#LocationSummaries$member */ =>  {
+                out.push(
+                    crate::xml_deser::deser_structure_crate_model_location_summary(&mut tag)
+                    ?
+                );
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(out)
 }
 
 pub fn deser_list_com_amazonaws_route53_geo_location_details_list(
@@ -6511,7 +6933,7 @@ pub fn deser_structure_crate_model_resource_tag_set(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("ResourceType") /* ResourceType com.amazonaws.route53#ResourceTagSet$ResourceType */ =>  {
-                let var_260 =
+                let var_278 =
                     Some(
                         Result::<crate::model::TagResourceType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::TagResourceType::from(
@@ -6521,11 +6943,11 @@ pub fn deser_structure_crate_model_resource_tag_set(
                         ?
                     )
                 ;
-                builder = builder.set_resource_type(var_260);
+                builder = builder.set_resource_type(var_278);
             }
             ,
             s if s.matches("ResourceId") /* ResourceId com.amazonaws.route53#ResourceTagSet$ResourceId */ =>  {
-                let var_261 =
+                let var_279 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6534,17 +6956,17 @@ pub fn deser_structure_crate_model_resource_tag_set(
                         ?
                     )
                 ;
-                builder = builder.set_resource_id(var_261);
+                builder = builder.set_resource_id(var_279);
             }
             ,
             s if s.matches("Tags") /* Tags com.amazonaws.route53#ResourceTagSet$Tags */ =>  {
-                let var_262 =
+                let var_280 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_tag_list(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_tags(var_262);
+                builder = builder.set_tags(var_280);
             }
             ,
             _ => {}
@@ -6659,7 +7081,7 @@ pub fn deser_structure_crate_model_linked_service(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("ServicePrincipal") /* ServicePrincipal com.amazonaws.route53#LinkedService$ServicePrincipal */ =>  {
-                let var_263 =
+                let var_281 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6668,11 +7090,11 @@ pub fn deser_structure_crate_model_linked_service(
                         ?
                     )
                 ;
-                builder = builder.set_service_principal(var_263);
+                builder = builder.set_service_principal(var_281);
             }
             ,
             s if s.matches("Description") /* Description com.amazonaws.route53#LinkedService$Description */ =>  {
-                let var_264 =
+                let var_282 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6681,7 +7103,7 @@ pub fn deser_structure_crate_model_linked_service(
                         ?
                     )
                 ;
-                builder = builder.set_description(var_264);
+                builder = builder.set_description(var_282);
             }
             ,
             _ => {}
@@ -6698,7 +7120,7 @@ pub fn deser_structure_crate_model_health_check_config(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("IPAddress") /* IPAddress com.amazonaws.route53#HealthCheckConfig$IPAddress */ =>  {
-                let var_265 =
+                let var_283 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6707,11 +7129,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_ip_address(var_265);
+                builder = builder.set_ip_address(var_283);
             }
             ,
             s if s.matches("Port") /* Port com.amazonaws.route53#HealthCheckConfig$Port */ =>  {
-                let var_266 =
+                let var_284 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6722,11 +7144,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_port(var_266);
+                builder = builder.set_port(var_284);
             }
             ,
             s if s.matches("Type") /* Type com.amazonaws.route53#HealthCheckConfig$Type */ =>  {
-                let var_267 =
+                let var_285 =
                     Some(
                         Result::<crate::model::HealthCheckType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::HealthCheckType::from(
@@ -6736,11 +7158,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_type(var_267);
+                builder = builder.set_type(var_285);
             }
             ,
             s if s.matches("ResourcePath") /* ResourcePath com.amazonaws.route53#HealthCheckConfig$ResourcePath */ =>  {
-                let var_268 =
+                let var_286 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6749,11 +7171,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_resource_path(var_268);
+                builder = builder.set_resource_path(var_286);
             }
             ,
             s if s.matches("FullyQualifiedDomainName") /* FullyQualifiedDomainName com.amazonaws.route53#HealthCheckConfig$FullyQualifiedDomainName */ =>  {
-                let var_269 =
+                let var_287 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6762,11 +7184,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_fully_qualified_domain_name(var_269);
+                builder = builder.set_fully_qualified_domain_name(var_287);
             }
             ,
             s if s.matches("SearchString") /* SearchString com.amazonaws.route53#HealthCheckConfig$SearchString */ =>  {
-                let var_270 =
+                let var_288 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6775,11 +7197,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_search_string(var_270);
+                builder = builder.set_search_string(var_288);
             }
             ,
             s if s.matches("RequestInterval") /* RequestInterval com.amazonaws.route53#HealthCheckConfig$RequestInterval */ =>  {
-                let var_271 =
+                let var_289 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6790,11 +7212,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_request_interval(var_271);
+                builder = builder.set_request_interval(var_289);
             }
             ,
             s if s.matches("FailureThreshold") /* FailureThreshold com.amazonaws.route53#HealthCheckConfig$FailureThreshold */ =>  {
-                let var_272 =
+                let var_290 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6805,11 +7227,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_failure_threshold(var_272);
+                builder = builder.set_failure_threshold(var_290);
             }
             ,
             s if s.matches("MeasureLatency") /* MeasureLatency com.amazonaws.route53#HealthCheckConfig$MeasureLatency */ =>  {
-                let var_273 =
+                let var_291 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6820,11 +7242,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_measure_latency(var_273);
+                builder = builder.set_measure_latency(var_291);
             }
             ,
             s if s.matches("Inverted") /* Inverted com.amazonaws.route53#HealthCheckConfig$Inverted */ =>  {
-                let var_274 =
+                let var_292 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6835,11 +7257,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_inverted(var_274);
+                builder = builder.set_inverted(var_292);
             }
             ,
             s if s.matches("Disabled") /* Disabled com.amazonaws.route53#HealthCheckConfig$Disabled */ =>  {
-                let var_275 =
+                let var_293 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6850,11 +7272,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_disabled(var_275);
+                builder = builder.set_disabled(var_293);
             }
             ,
             s if s.matches("HealthThreshold") /* HealthThreshold com.amazonaws.route53#HealthCheckConfig$HealthThreshold */ =>  {
-                let var_276 =
+                let var_294 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6865,21 +7287,21 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_health_threshold(var_276);
+                builder = builder.set_health_threshold(var_294);
             }
             ,
             s if s.matches("ChildHealthChecks") /* ChildHealthChecks com.amazonaws.route53#HealthCheckConfig$ChildHealthChecks */ =>  {
-                let var_277 =
+                let var_295 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_child_health_check_list(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_child_health_checks(var_277);
+                builder = builder.set_child_health_checks(var_295);
             }
             ,
             s if s.matches("EnableSNI") /* EnableSNI com.amazonaws.route53#HealthCheckConfig$EnableSNI */ =>  {
-                let var_278 =
+                let var_296 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6890,31 +7312,31 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_enable_sni(var_278);
+                builder = builder.set_enable_sni(var_296);
             }
             ,
             s if s.matches("Regions") /* Regions com.amazonaws.route53#HealthCheckConfig$Regions */ =>  {
-                let var_279 =
+                let var_297 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_health_check_region_list(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_regions(var_279);
+                builder = builder.set_regions(var_297);
             }
             ,
             s if s.matches("AlarmIdentifier") /* AlarmIdentifier com.amazonaws.route53#HealthCheckConfig$AlarmIdentifier */ =>  {
-                let var_280 =
+                let var_298 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_alarm_identifier(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_alarm_identifier(var_280);
+                builder = builder.set_alarm_identifier(var_298);
             }
             ,
             s if s.matches("InsufficientDataHealthStatus") /* InsufficientDataHealthStatus com.amazonaws.route53#HealthCheckConfig$InsufficientDataHealthStatus */ =>  {
-                let var_281 =
+                let var_299 =
                     Some(
                         Result::<crate::model::InsufficientDataHealthStatus, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::InsufficientDataHealthStatus::from(
@@ -6924,11 +7346,11 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_insufficient_data_health_status(var_281);
+                builder = builder.set_insufficient_data_health_status(var_299);
             }
             ,
             s if s.matches("RoutingControlArn") /* RoutingControlArn com.amazonaws.route53#HealthCheckConfig$RoutingControlArn */ =>  {
-                let var_282 =
+                let var_300 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -6937,7 +7359,7 @@ pub fn deser_structure_crate_model_health_check_config(
                         ?
                     )
                 ;
-                builder = builder.set_routing_control_arn(var_282);
+                builder = builder.set_routing_control_arn(var_300);
             }
             ,
             _ => {}
@@ -6954,7 +7376,7 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("EvaluationPeriods") /* EvaluationPeriods com.amazonaws.route53#CloudWatchAlarmConfiguration$EvaluationPeriods */ =>  {
-                let var_283 =
+                let var_301 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6965,11 +7387,11 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
                         ?
                     )
                 ;
-                builder = builder.set_evaluation_periods(var_283);
+                builder = builder.set_evaluation_periods(var_301);
             }
             ,
             s if s.matches("Threshold") /* Threshold com.amazonaws.route53#CloudWatchAlarmConfiguration$Threshold */ =>  {
-                let var_284 =
+                let var_302 =
                     Some(
                          {
                             <f64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -6980,11 +7402,11 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
                         ?
                     )
                 ;
-                builder = builder.set_threshold(var_284);
+                builder = builder.set_threshold(var_302);
             }
             ,
             s if s.matches("ComparisonOperator") /* ComparisonOperator com.amazonaws.route53#CloudWatchAlarmConfiguration$ComparisonOperator */ =>  {
-                let var_285 =
+                let var_303 =
                     Some(
                         Result::<crate::model::ComparisonOperator, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::ComparisonOperator::from(
@@ -6994,11 +7416,11 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
                         ?
                     )
                 ;
-                builder = builder.set_comparison_operator(var_285);
+                builder = builder.set_comparison_operator(var_303);
             }
             ,
             s if s.matches("Period") /* Period com.amazonaws.route53#CloudWatchAlarmConfiguration$Period */ =>  {
-                let var_286 =
+                let var_304 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7009,11 +7431,11 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
                         ?
                     )
                 ;
-                builder = builder.set_period(var_286);
+                builder = builder.set_period(var_304);
             }
             ,
             s if s.matches("MetricName") /* MetricName com.amazonaws.route53#CloudWatchAlarmConfiguration$MetricName */ =>  {
-                let var_287 =
+                let var_305 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7022,11 +7444,11 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
                         ?
                     )
                 ;
-                builder = builder.set_metric_name(var_287);
+                builder = builder.set_metric_name(var_305);
             }
             ,
             s if s.matches("Namespace") /* Namespace com.amazonaws.route53#CloudWatchAlarmConfiguration$Namespace */ =>  {
-                let var_288 =
+                let var_306 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7035,11 +7457,11 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
                         ?
                     )
                 ;
-                builder = builder.set_namespace(var_288);
+                builder = builder.set_namespace(var_306);
             }
             ,
             s if s.matches("Statistic") /* Statistic com.amazonaws.route53#CloudWatchAlarmConfiguration$Statistic */ =>  {
-                let var_289 =
+                let var_307 =
                     Some(
                         Result::<crate::model::Statistic, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::Statistic::from(
@@ -7049,17 +7471,17 @@ pub fn deser_structure_crate_model_cloud_watch_alarm_configuration(
                         ?
                     )
                 ;
-                builder = builder.set_statistic(var_289);
+                builder = builder.set_statistic(var_307);
             }
             ,
             s if s.matches("Dimensions") /* Dimensions com.amazonaws.route53#CloudWatchAlarmConfiguration$Dimensions */ =>  {
-                let var_290 =
+                let var_308 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_dimension_list(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_dimensions(var_290);
+                builder = builder.set_dimensions(var_308);
             }
             ,
             _ => {}
@@ -7076,7 +7498,7 @@ pub fn deser_structure_crate_model_hosted_zone_config(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Comment") /* Comment com.amazonaws.route53#HostedZoneConfig$Comment */ =>  {
-                let var_291 =
+                let var_309 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7085,11 +7507,11 @@ pub fn deser_structure_crate_model_hosted_zone_config(
                         ?
                     )
                 ;
-                builder = builder.set_comment(var_291);
+                builder = builder.set_comment(var_309);
             }
             ,
             s if s.matches("PrivateZone") /* PrivateZone com.amazonaws.route53#HostedZoneConfig$PrivateZone */ =>  {
-                let var_292 =
+                let var_310 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7100,7 +7522,7 @@ pub fn deser_structure_crate_model_hosted_zone_config(
                         ?
                     )
                 ;
-                builder = builder.set_private_zone(var_292);
+                builder = builder.set_private_zone(var_310);
             }
             ,
             _ => {}
@@ -7139,7 +7561,7 @@ pub fn deser_structure_crate_model_health_check_observation(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Region") /* Region com.amazonaws.route53#HealthCheckObservation$Region */ =>  {
-                let var_293 =
+                let var_311 =
                     Some(
                         Result::<crate::model::HealthCheckRegion, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::HealthCheckRegion::from(
@@ -7149,11 +7571,11 @@ pub fn deser_structure_crate_model_health_check_observation(
                         ?
                     )
                 ;
-                builder = builder.set_region(var_293);
+                builder = builder.set_region(var_311);
             }
             ,
             s if s.matches("IPAddress") /* IPAddress com.amazonaws.route53#HealthCheckObservation$IPAddress */ =>  {
-                let var_294 =
+                let var_312 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7162,17 +7584,149 @@ pub fn deser_structure_crate_model_health_check_observation(
                         ?
                     )
                 ;
-                builder = builder.set_ip_address(var_294);
+                builder = builder.set_ip_address(var_312);
             }
             ,
             s if s.matches("StatusReport") /* StatusReport com.amazonaws.route53#HealthCheckObservation$StatusReport */ =>  {
-                let var_295 =
+                let var_313 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_status_report(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_status_report(var_295);
+                builder = builder.set_status_report(var_313);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder.build())
+}
+
+pub fn deser_structure_crate_model_cidr_block_summary(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<crate::model::CidrBlockSummary, aws_smithy_xml::decode::XmlError> {
+    #[allow(unused_mut)]
+    let mut builder = crate::model::CidrBlockSummary::builder();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("CidrBlock") /* CidrBlock com.amazonaws.route53#CidrBlockSummary$CidrBlock */ =>  {
+                let var_314 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_cidr_block(var_314);
+            }
+            ,
+            s if s.matches("LocationName") /* LocationName com.amazonaws.route53#CidrBlockSummary$LocationName */ =>  {
+                let var_315 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_location_name(var_315);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder.build())
+}
+
+pub fn deser_structure_crate_model_collection_summary(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<crate::model::CollectionSummary, aws_smithy_xml::decode::XmlError> {
+    #[allow(unused_mut)]
+    let mut builder = crate::model::CollectionSummary::builder();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("Arn") /* Arn com.amazonaws.route53#CollectionSummary$Arn */ =>  {
+                let var_316 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_arn(var_316);
+            }
+            ,
+            s if s.matches("Id") /* Id com.amazonaws.route53#CollectionSummary$Id */ =>  {
+                let var_317 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_id(var_317);
+            }
+            ,
+            s if s.matches("Name") /* Name com.amazonaws.route53#CollectionSummary$Name */ =>  {
+                let var_318 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_name(var_318);
+            }
+            ,
+            s if s.matches("Version") /* Version com.amazonaws.route53#CollectionSummary$Version */ =>  {
+                let var_319 =
+                    Some(
+                         {
+                            <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
+                                aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            )
+                            .map_err(|_|aws_smithy_xml::decode::XmlError::custom("expected (long: `com.amazonaws.route53#CollectionVersion`)"))
+                        }
+                        ?
+                    )
+                ;
+                builder = builder.set_version(var_319);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder.build())
+}
+
+pub fn deser_structure_crate_model_location_summary(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<crate::model::LocationSummary, aws_smithy_xml::decode::XmlError> {
+    #[allow(unused_mut)]
+    let mut builder = crate::model::LocationSummary::builder();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("LocationName") /* LocationName com.amazonaws.route53#LocationSummary$LocationName */ =>  {
+                let var_320 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_location_name(var_320);
             }
             ,
             _ => {}
@@ -7189,7 +7743,7 @@ pub fn deser_structure_crate_model_hosted_zone_summary(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53#HostedZoneSummary$HostedZoneId */ =>  {
-                let var_296 =
+                let var_321 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7198,11 +7752,11 @@ pub fn deser_structure_crate_model_hosted_zone_summary(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id(var_296);
+                builder = builder.set_hosted_zone_id(var_321);
             }
             ,
             s if s.matches("Name") /* Name com.amazonaws.route53#HostedZoneSummary$Name */ =>  {
-                let var_297 =
+                let var_322 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7211,17 +7765,17 @@ pub fn deser_structure_crate_model_hosted_zone_summary(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_297);
+                builder = builder.set_name(var_322);
             }
             ,
             s if s.matches("Owner") /* Owner com.amazonaws.route53#HostedZoneSummary$Owner */ =>  {
-                let var_298 =
+                let var_323 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_hosted_zone_owner(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_owner(var_298);
+                builder = builder.set_owner(var_323);
             }
             ,
             _ => {}
@@ -7238,7 +7792,7 @@ pub fn deser_structure_crate_model_resource_record_set(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Name") /* Name com.amazonaws.route53#ResourceRecordSet$Name */ =>  {
-                let var_299 =
+                let var_324 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7247,11 +7801,11 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_299);
+                builder = builder.set_name(var_324);
             }
             ,
             s if s.matches("Type") /* Type com.amazonaws.route53#ResourceRecordSet$Type */ =>  {
-                let var_300 =
+                let var_325 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -7261,11 +7815,11 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_type(var_300);
+                builder = builder.set_type(var_325);
             }
             ,
             s if s.matches("SetIdentifier") /* SetIdentifier com.amazonaws.route53#ResourceRecordSet$SetIdentifier */ =>  {
-                let var_301 =
+                let var_326 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7274,11 +7828,11 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_set_identifier(var_301);
+                builder = builder.set_set_identifier(var_326);
             }
             ,
             s if s.matches("Weight") /* Weight com.amazonaws.route53#ResourceRecordSet$Weight */ =>  {
-                let var_302 =
+                let var_327 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7289,11 +7843,11 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_weight(var_302);
+                builder = builder.set_weight(var_327);
             }
             ,
             s if s.matches("Region") /* Region com.amazonaws.route53#ResourceRecordSet$Region */ =>  {
-                let var_303 =
+                let var_328 =
                     Some(
                         Result::<crate::model::ResourceRecordSetRegion, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::ResourceRecordSetRegion::from(
@@ -7303,21 +7857,21 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_region(var_303);
+                builder = builder.set_region(var_328);
             }
             ,
             s if s.matches("GeoLocation") /* GeoLocation com.amazonaws.route53#ResourceRecordSet$GeoLocation */ =>  {
-                let var_304 =
+                let var_329 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_geo_location(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_geo_location(var_304);
+                builder = builder.set_geo_location(var_329);
             }
             ,
             s if s.matches("Failover") /* Failover com.amazonaws.route53#ResourceRecordSet$Failover */ =>  {
-                let var_305 =
+                let var_330 =
                     Some(
                         Result::<crate::model::ResourceRecordSetFailover, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::ResourceRecordSetFailover::from(
@@ -7327,11 +7881,11 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_failover(var_305);
+                builder = builder.set_failover(var_330);
             }
             ,
             s if s.matches("MultiValueAnswer") /* MultiValueAnswer com.amazonaws.route53#ResourceRecordSet$MultiValueAnswer */ =>  {
-                let var_306 =
+                let var_331 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7342,11 +7896,11 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_multi_value_answer(var_306);
+                builder = builder.set_multi_value_answer(var_331);
             }
             ,
             s if s.matches("TTL") /* TTL com.amazonaws.route53#ResourceRecordSet$TTL */ =>  {
-                let var_307 =
+                let var_332 =
                     Some(
                          {
                             <i64 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7357,31 +7911,31 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_ttl(var_307);
+                builder = builder.set_ttl(var_332);
             }
             ,
             s if s.matches("ResourceRecords") /* ResourceRecords com.amazonaws.route53#ResourceRecordSet$ResourceRecords */ =>  {
-                let var_308 =
+                let var_333 =
                     Some(
                         crate::xml_deser::deser_list_com_amazonaws_route53_resource_records(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_resource_records(var_308);
+                builder = builder.set_resource_records(var_333);
             }
             ,
             s if s.matches("AliasTarget") /* AliasTarget com.amazonaws.route53#ResourceRecordSet$AliasTarget */ =>  {
-                let var_309 =
+                let var_334 =
                     Some(
                         crate::xml_deser::deser_structure_crate_model_alias_target(&mut tag)
                         ?
                     )
                 ;
-                builder = builder.set_alias_target(var_309);
+                builder = builder.set_alias_target(var_334);
             }
             ,
             s if s.matches("HealthCheckId") /* HealthCheckId com.amazonaws.route53#ResourceRecordSet$HealthCheckId */ =>  {
-                let var_310 =
+                let var_335 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7390,11 +7944,11 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_health_check_id(var_310);
+                builder = builder.set_health_check_id(var_335);
             }
             ,
             s if s.matches("TrafficPolicyInstanceId") /* TrafficPolicyInstanceId com.amazonaws.route53#ResourceRecordSet$TrafficPolicyInstanceId */ =>  {
-                let var_311 =
+                let var_336 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7403,7 +7957,17 @@ pub fn deser_structure_crate_model_resource_record_set(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_instance_id(var_311);
+                builder = builder.set_traffic_policy_instance_id(var_336);
+            }
+            ,
+            s if s.matches("CidrRoutingConfig") /* CidrRoutingConfig com.amazonaws.route53#ResourceRecordSet$CidrRoutingConfig */ =>  {
+                let var_337 =
+                    Some(
+                        crate::xml_deser::deser_structure_crate_model_cidr_routing_config(&mut tag)
+                        ?
+                    )
+                ;
+                builder = builder.set_cidr_routing_config(var_337);
             }
             ,
             _ => {}
@@ -7439,7 +8003,7 @@ pub fn deser_structure_crate_model_traffic_policy_summary(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Id") /* Id com.amazonaws.route53#TrafficPolicySummary$Id */ =>  {
-                let var_312 =
+                let var_338 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7448,11 +8012,11 @@ pub fn deser_structure_crate_model_traffic_policy_summary(
                         ?
                     )
                 ;
-                builder = builder.set_id(var_312);
+                builder = builder.set_id(var_338);
             }
             ,
             s if s.matches("Name") /* Name com.amazonaws.route53#TrafficPolicySummary$Name */ =>  {
-                let var_313 =
+                let var_339 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7461,11 +8025,11 @@ pub fn deser_structure_crate_model_traffic_policy_summary(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_313);
+                builder = builder.set_name(var_339);
             }
             ,
             s if s.matches("Type") /* Type com.amazonaws.route53#TrafficPolicySummary$Type */ =>  {
-                let var_314 =
+                let var_340 =
                     Some(
                         Result::<crate::model::RrType, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::RrType::from(
@@ -7475,11 +8039,11 @@ pub fn deser_structure_crate_model_traffic_policy_summary(
                         ?
                     )
                 ;
-                builder = builder.set_type(var_314);
+                builder = builder.set_type(var_340);
             }
             ,
             s if s.matches("LatestVersion") /* LatestVersion com.amazonaws.route53#TrafficPolicySummary$LatestVersion */ =>  {
-                let var_315 =
+                let var_341 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7490,11 +8054,11 @@ pub fn deser_structure_crate_model_traffic_policy_summary(
                         ?
                     )
                 ;
-                builder = builder.set_latest_version(var_315);
+                builder = builder.set_latest_version(var_341);
             }
             ,
             s if s.matches("TrafficPolicyCount") /* TrafficPolicyCount com.amazonaws.route53#TrafficPolicySummary$TrafficPolicyCount */ =>  {
-                let var_316 =
+                let var_342 =
                     Some(
                          {
                             <i32 as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7505,7 +8069,7 @@ pub fn deser_structure_crate_model_traffic_policy_summary(
                         ?
                     )
                 ;
-                builder = builder.set_traffic_policy_count(var_316);
+                builder = builder.set_traffic_policy_count(var_342);
             }
             ,
             _ => {}
@@ -7567,7 +8131,7 @@ pub fn deser_structure_crate_model_alarm_identifier(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Region") /* Region com.amazonaws.route53#AlarmIdentifier$Region */ =>  {
-                let var_317 =
+                let var_343 =
                     Some(
                         Result::<crate::model::CloudWatchRegion, aws_smithy_xml::decode::XmlError>::Ok(
                             crate::model::CloudWatchRegion::from(
@@ -7577,11 +8141,11 @@ pub fn deser_structure_crate_model_alarm_identifier(
                         ?
                     )
                 ;
-                builder = builder.set_region(var_317);
+                builder = builder.set_region(var_343);
             }
             ,
             s if s.matches("Name") /* Name com.amazonaws.route53#AlarmIdentifier$Name */ =>  {
-                let var_318 =
+                let var_344 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7590,7 +8154,7 @@ pub fn deser_structure_crate_model_alarm_identifier(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_318);
+                builder = builder.set_name(var_344);
             }
             ,
             _ => {}
@@ -7626,7 +8190,7 @@ pub fn deser_structure_crate_model_status_report(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Status") /* Status com.amazonaws.route53#StatusReport$Status */ =>  {
-                let var_319 =
+                let var_345 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7635,11 +8199,11 @@ pub fn deser_structure_crate_model_status_report(
                         ?
                     )
                 ;
-                builder = builder.set_status(var_319);
+                builder = builder.set_status(var_345);
             }
             ,
             s if s.matches("CheckedTime") /* CheckedTime com.amazonaws.route53#StatusReport$CheckedTime */ =>  {
-                let var_320 =
+                let var_346 =
                     Some(
                         aws_smithy_types::DateTime::from_str(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7649,7 +8213,7 @@ pub fn deser_structure_crate_model_status_report(
                         ?
                     )
                 ;
-                builder = builder.set_checked_time(var_320);
+                builder = builder.set_checked_time(var_346);
             }
             ,
             _ => {}
@@ -7666,7 +8230,7 @@ pub fn deser_structure_crate_model_hosted_zone_owner(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("OwningAccount") /* OwningAccount com.amazonaws.route53#HostedZoneOwner$OwningAccount */ =>  {
-                let var_321 =
+                let var_347 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7675,11 +8239,11 @@ pub fn deser_structure_crate_model_hosted_zone_owner(
                         ?
                     )
                 ;
-                builder = builder.set_owning_account(var_321);
+                builder = builder.set_owning_account(var_347);
             }
             ,
             s if s.matches("OwningService") /* OwningService com.amazonaws.route53#HostedZoneOwner$OwningService */ =>  {
-                let var_322 =
+                let var_348 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7688,7 +8252,7 @@ pub fn deser_structure_crate_model_hosted_zone_owner(
                         ?
                     )
                 ;
-                builder = builder.set_owning_service(var_322);
+                builder = builder.set_owning_service(var_348);
             }
             ,
             _ => {}
@@ -7705,7 +8269,7 @@ pub fn deser_structure_crate_model_geo_location(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("ContinentCode") /* ContinentCode com.amazonaws.route53#GeoLocation$ContinentCode */ =>  {
-                let var_323 =
+                let var_349 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7714,11 +8278,11 @@ pub fn deser_structure_crate_model_geo_location(
                         ?
                     )
                 ;
-                builder = builder.set_continent_code(var_323);
+                builder = builder.set_continent_code(var_349);
             }
             ,
             s if s.matches("CountryCode") /* CountryCode com.amazonaws.route53#GeoLocation$CountryCode */ =>  {
-                let var_324 =
+                let var_350 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7727,11 +8291,11 @@ pub fn deser_structure_crate_model_geo_location(
                         ?
                     )
                 ;
-                builder = builder.set_country_code(var_324);
+                builder = builder.set_country_code(var_350);
             }
             ,
             s if s.matches("SubdivisionCode") /* SubdivisionCode com.amazonaws.route53#GeoLocation$SubdivisionCode */ =>  {
-                let var_325 =
+                let var_351 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7740,7 +8304,7 @@ pub fn deser_structure_crate_model_geo_location(
                         ?
                     )
                 ;
-                builder = builder.set_subdivision_code(var_325);
+                builder = builder.set_subdivision_code(var_351);
             }
             ,
             _ => {}
@@ -7776,7 +8340,7 @@ pub fn deser_structure_crate_model_alias_target(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("HostedZoneId") /* HostedZoneId com.amazonaws.route53#AliasTarget$HostedZoneId */ =>  {
-                let var_326 =
+                let var_352 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7785,11 +8349,11 @@ pub fn deser_structure_crate_model_alias_target(
                         ?
                     )
                 ;
-                builder = builder.set_hosted_zone_id(var_326);
+                builder = builder.set_hosted_zone_id(var_352);
             }
             ,
             s if s.matches("DNSName") /* DNSName com.amazonaws.route53#AliasTarget$DNSName */ =>  {
-                let var_327 =
+                let var_353 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7798,11 +8362,11 @@ pub fn deser_structure_crate_model_alias_target(
                         ?
                     )
                 ;
-                builder = builder.set_dns_name(var_327);
+                builder = builder.set_dns_name(var_353);
             }
             ,
             s if s.matches("EvaluateTargetHealth") /* EvaluateTargetHealth com.amazonaws.route53#AliasTarget$EvaluateTargetHealth */ =>  {
-                let var_328 =
+                let var_354 =
                     Some(
                          {
                             <bool as aws_smithy_types::primitive::Parse>::parse_smithy_primitive(
@@ -7813,7 +8377,46 @@ pub fn deser_structure_crate_model_alias_target(
                         ?
                     )
                 ;
-                builder = builder.set_evaluate_target_health(var_328);
+                builder = builder.set_evaluate_target_health(var_354);
+            }
+            ,
+            _ => {}
+        }
+    }
+    Ok(builder.build())
+}
+
+pub fn deser_structure_crate_model_cidr_routing_config(
+    decoder: &mut aws_smithy_xml::decode::ScopedDecoder,
+) -> Result<crate::model::CidrRoutingConfig, aws_smithy_xml::decode::XmlError> {
+    #[allow(unused_mut)]
+    let mut builder = crate::model::CidrRoutingConfig::builder();
+    while let Some(mut tag) = decoder.next_tag() {
+        match tag.start_el() {
+            s if s.matches("CollectionId") /* CollectionId com.amazonaws.route53#CidrRoutingConfig$CollectionId */ =>  {
+                let var_355 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_collection_id(var_355);
+            }
+            ,
+            s if s.matches("LocationName") /* LocationName com.amazonaws.route53#CidrRoutingConfig$LocationName */ =>  {
+                let var_356 =
+                    Some(
+                        Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
+                            aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
+                            .into()
+                        )
+                        ?
+                    )
+                ;
+                builder = builder.set_location_name(var_356);
             }
             ,
             _ => {}
@@ -7830,7 +8433,7 @@ pub fn deser_structure_crate_model_tag(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Key") /* Key com.amazonaws.route53#Tag$Key */ =>  {
-                let var_329 =
+                let var_357 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7839,11 +8442,11 @@ pub fn deser_structure_crate_model_tag(
                         ?
                     )
                 ;
-                builder = builder.set_key(var_329);
+                builder = builder.set_key(var_357);
             }
             ,
             s if s.matches("Value") /* Value com.amazonaws.route53#Tag$Value */ =>  {
-                let var_330 =
+                let var_358 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7852,7 +8455,7 @@ pub fn deser_structure_crate_model_tag(
                         ?
                     )
                 ;
-                builder = builder.set_value(var_330);
+                builder = builder.set_value(var_358);
             }
             ,
             _ => {}
@@ -7869,7 +8472,7 @@ pub fn deser_structure_crate_model_dimension(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Name") /* Name com.amazonaws.route53#Dimension$Name */ =>  {
-                let var_331 =
+                let var_359 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7878,11 +8481,11 @@ pub fn deser_structure_crate_model_dimension(
                         ?
                     )
                 ;
-                builder = builder.set_name(var_331);
+                builder = builder.set_name(var_359);
             }
             ,
             s if s.matches("Value") /* Value com.amazonaws.route53#Dimension$Value */ =>  {
-                let var_332 =
+                let var_360 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7891,7 +8494,7 @@ pub fn deser_structure_crate_model_dimension(
                         ?
                     )
                 ;
-                builder = builder.set_value(var_332);
+                builder = builder.set_value(var_360);
             }
             ,
             _ => {}
@@ -7908,7 +8511,7 @@ pub fn deser_structure_crate_model_resource_record(
     while let Some(mut tag) = decoder.next_tag() {
         match tag.start_el() {
             s if s.matches("Value") /* Value com.amazonaws.route53#ResourceRecord$Value */ =>  {
-                let var_333 =
+                let var_361 =
                     Some(
                         Result::<std::string::String, aws_smithy_xml::decode::XmlError>::Ok(
                             aws_smithy_xml::decode::try_data(&mut tag)?.as_ref()
@@ -7917,7 +8520,7 @@ pub fn deser_structure_crate_model_resource_record(
                         ?
                     )
                 ;
-                builder = builder.set_value(var_333);
+                builder = builder.set_value(var_361);
             }
             ,
             _ => {}

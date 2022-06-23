@@ -540,6 +540,124 @@ impl std::error::Error for GetHLSStreamingSessionURLError {
     }
 }
 
+/// Error type for the `GetImages` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct GetImagesError {
+    /// Kind of error that occurred.
+    pub kind: GetImagesErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `GetImages` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum GetImagesErrorKind {
+    /// <p>Kinesis Video Streams has throttled the request because you have exceeded a limit. Try making the call later. For information about limits, see <a href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams Limits</a>.</p>
+    ClientLimitExceededException(crate::error::ClientLimitExceededException),
+    /// <p>A specified parameter exceeds its restrictions, is not supported, or can't be used.</p>
+    InvalidArgumentException(crate::error::InvalidArgumentException),
+    /// <p>Status Code: 403, The caller is not authorized to perform an operation on the given stream, or the token has expired.</p>
+    NotAuthorizedException(crate::error::NotAuthorizedException),
+    /// <p> <code>GetMedia</code> throws this error when Kinesis Video Streams can't find the stream that you specified.</p>
+    /// <p> <code>GetHLSStreamingSessionURL</code> and <code>GetDASHStreamingSessionURL</code> throw this error if a session with a <code>PlaybackMode</code> of <code>ON_DEMAND</code> or <code>LIVE_REPLAY</code>is requested for a stream that has no fragments within the requested time range, or if a session with a <code>PlaybackMode</code> of <code>LIVE</code> is requested for a stream that has no fragments within the last 30 seconds.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for GetImagesError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            GetImagesErrorKind::ClientLimitExceededException(_inner) => _inner.fmt(f),
+            GetImagesErrorKind::InvalidArgumentException(_inner) => _inner.fmt(f),
+            GetImagesErrorKind::NotAuthorizedException(_inner) => _inner.fmt(f),
+            GetImagesErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            GetImagesErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for GetImagesError {
+    fn code(&self) -> Option<&str> {
+        GetImagesError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl GetImagesError {
+    /// Creates a new `GetImagesError`.
+    pub fn new(kind: GetImagesErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `GetImagesError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: GetImagesErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `GetImagesError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: GetImagesErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `GetImagesErrorKind::ClientLimitExceededException`.
+    pub fn is_client_limit_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetImagesErrorKind::ClientLimitExceededException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GetImagesErrorKind::InvalidArgumentException`.
+    pub fn is_invalid_argument_exception(&self) -> bool {
+        matches!(&self.kind, GetImagesErrorKind::InvalidArgumentException(_))
+    }
+    /// Returns `true` if the error kind is `GetImagesErrorKind::NotAuthorizedException`.
+    pub fn is_not_authorized_exception(&self) -> bool {
+        matches!(&self.kind, GetImagesErrorKind::NotAuthorizedException(_))
+    }
+    /// Returns `true` if the error kind is `GetImagesErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(&self.kind, GetImagesErrorKind::ResourceNotFoundException(_))
+    }
+}
+impl std::error::Error for GetImagesError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            GetImagesErrorKind::ClientLimitExceededException(_inner) => Some(_inner),
+            GetImagesErrorKind::InvalidArgumentException(_inner) => Some(_inner),
+            GetImagesErrorKind::NotAuthorizedException(_inner) => Some(_inner),
+            GetImagesErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            GetImagesErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `GetMediaForFragmentList` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -827,6 +945,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -891,6 +1010,7 @@ impl std::fmt::Display for NotAuthorizedException {
 impl std::error::Error for NotAuthorizedException {}
 /// See [`NotAuthorizedException`](crate::error::NotAuthorizedException)
 pub mod not_authorized_exception {
+
     /// A builder for [`NotAuthorizedException`](crate::error::NotAuthorizedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -955,6 +1075,7 @@ impl std::fmt::Display for InvalidArgumentException {
 impl std::error::Error for InvalidArgumentException {}
 /// See [`InvalidArgumentException`](crate::error::InvalidArgumentException)
 pub mod invalid_argument_exception {
+
     /// A builder for [`InvalidArgumentException`](crate::error::InvalidArgumentException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1019,6 +1140,7 @@ impl std::fmt::Display for ClientLimitExceededException {
 impl std::error::Error for ClientLimitExceededException {}
 /// See [`ClientLimitExceededException`](crate::error::ClientLimitExceededException)
 pub mod client_limit_exceeded_exception {
+
     /// A builder for [`ClientLimitExceededException`](crate::error::ClientLimitExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1083,6 +1205,7 @@ impl std::fmt::Display for UnsupportedStreamMediaTypeException {
 impl std::error::Error for UnsupportedStreamMediaTypeException {}
 /// See [`UnsupportedStreamMediaTypeException`](crate::error::UnsupportedStreamMediaTypeException)
 pub mod unsupported_stream_media_type_exception {
+
     /// A builder for [`UnsupportedStreamMediaTypeException`](crate::error::UnsupportedStreamMediaTypeException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1147,6 +1270,7 @@ impl std::fmt::Display for NoDataRetentionException {
 impl std::error::Error for NoDataRetentionException {}
 /// See [`NoDataRetentionException`](crate::error::NoDataRetentionException)
 pub mod no_data_retention_exception {
+
     /// A builder for [`NoDataRetentionException`](crate::error::NoDataRetentionException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1211,6 +1335,7 @@ impl std::fmt::Display for MissingCodecPrivateDataException {
 impl std::error::Error for MissingCodecPrivateDataException {}
 /// See [`MissingCodecPrivateDataException`](crate::error::MissingCodecPrivateDataException)
 pub mod missing_codec_private_data_exception {
+
     /// A builder for [`MissingCodecPrivateDataException`](crate::error::MissingCodecPrivateDataException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1275,6 +1400,7 @@ impl std::fmt::Display for InvalidCodecPrivateDataException {
 impl std::error::Error for InvalidCodecPrivateDataException {}
 /// See [`InvalidCodecPrivateDataException`](crate::error::InvalidCodecPrivateDataException)
 pub mod invalid_codec_private_data_exception {
+
     /// A builder for [`InvalidCodecPrivateDataException`](crate::error::InvalidCodecPrivateDataException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1339,6 +1465,7 @@ impl std::fmt::Display for InvalidMediaFrameException {
 impl std::error::Error for InvalidMediaFrameException {}
 /// See [`InvalidMediaFrameException`](crate::error::InvalidMediaFrameException)
 pub mod invalid_media_frame_exception {
+
     /// A builder for [`InvalidMediaFrameException`](crate::error::InvalidMediaFrameException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

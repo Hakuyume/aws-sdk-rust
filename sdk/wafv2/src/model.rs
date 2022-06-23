@@ -22,6 +22,8 @@ pub enum ParameterExceptionField {
     #[allow(missing_docs)] // documentation missing in model
     ChangePropagationStatus,
     #[allow(missing_docs)] // documentation missing in model
+    CookieMatchPattern,
+    #[allow(missing_docs)] // documentation missing in model
     CustomRequestHandling,
     #[allow(missing_docs)] // documentation missing in model
     CustomResponse,
@@ -47,6 +49,8 @@ pub enum ParameterExceptionField {
     ForwardedIpConfig,
     #[allow(missing_docs)] // documentation missing in model
     GeoMatchStatement,
+    #[allow(missing_docs)] // documentation missing in model
+    HeaderMatchPattern,
     #[allow(missing_docs)] // documentation missing in model
     HeaderName,
     #[allow(missing_docs)] // documentation missing in model
@@ -76,6 +80,8 @@ pub enum ParameterExceptionField {
     #[allow(missing_docs)] // documentation missing in model
     ManagedRuleSetStatement,
     #[allow(missing_docs)] // documentation missing in model
+    MapMatchScope,
+    #[allow(missing_docs)] // documentation missing in model
     MetricName,
     #[allow(missing_docs)] // documentation missing in model
     NotStatement,
@@ -83,6 +89,8 @@ pub enum ParameterExceptionField {
     OrStatement,
     #[allow(missing_docs)] // documentation missing in model
     OverrideAction,
+    #[allow(missing_docs)] // documentation missing in model
+    OversizeHandling,
     #[allow(missing_docs)] // documentation missing in model
     PayloadType,
     #[allow(missing_docs)] // documentation missing in model
@@ -142,6 +150,7 @@ impl std::convert::From<&str> for ParameterExceptionField {
             }
             "BYTE_MATCH_STATEMENT" => ParameterExceptionField::ByteMatchStatement,
             "CHANGE_PROPAGATION_STATUS" => ParameterExceptionField::ChangePropagationStatus,
+            "COOKIE_MATCH_PATTERN" => ParameterExceptionField::CookieMatchPattern,
             "CUSTOM_REQUEST_HANDLING" => ParameterExceptionField::CustomRequestHandling,
             "CUSTOM_RESPONSE" => ParameterExceptionField::CustomResponse,
             "CUSTOM_RESPONSE_BODY" => ParameterExceptionField::CustomResponseBody,
@@ -155,6 +164,7 @@ impl std::convert::From<&str> for ParameterExceptionField {
             "FIREWALL_MANAGER_STATEMENT" => ParameterExceptionField::FirewallManagerStatement,
             "FORWARDED_IP_CONFIG" => ParameterExceptionField::ForwardedIpConfig,
             "GEO_MATCH_STATEMENT" => ParameterExceptionField::GeoMatchStatement,
+            "HEADER_MATCH_PATTERN" => ParameterExceptionField::HeaderMatchPattern,
             "HEADER_NAME" => ParameterExceptionField::HeaderName,
             "IP_ADDRESS" => ParameterExceptionField::IpAddress,
             "IP_ADDRESS_VERSION" => ParameterExceptionField::IpAddressVersion,
@@ -169,10 +179,12 @@ impl std::convert::From<&str> for ParameterExceptionField {
             "MANAGED_RULE_GROUP_CONFIG" => ParameterExceptionField::ManagedRuleGroupConfig,
             "MANAGED_RULE_SET" => ParameterExceptionField::ManagedRuleSet,
             "MANAGED_RULE_SET_STATEMENT" => ParameterExceptionField::ManagedRuleSetStatement,
+            "MAP_MATCH_SCOPE" => ParameterExceptionField::MapMatchScope,
             "METRIC_NAME" => ParameterExceptionField::MetricName,
             "NOT_STATEMENT" => ParameterExceptionField::NotStatement,
             "OR_STATEMENT" => ParameterExceptionField::OrStatement,
             "OVERRIDE_ACTION" => ParameterExceptionField::OverrideAction,
+            "OVERSIZE_HANDLING" => ParameterExceptionField::OversizeHandling,
             "PAYLOAD_TYPE" => ParameterExceptionField::PayloadType,
             "POSITION" => ParameterExceptionField::Position,
             "RATE_BASED_STATEMENT" => ParameterExceptionField::RateBasedStatement,
@@ -222,6 +234,7 @@ impl ParameterExceptionField {
             }
             ParameterExceptionField::ByteMatchStatement => "BYTE_MATCH_STATEMENT",
             ParameterExceptionField::ChangePropagationStatus => "CHANGE_PROPAGATION_STATUS",
+            ParameterExceptionField::CookieMatchPattern => "COOKIE_MATCH_PATTERN",
             ParameterExceptionField::CustomRequestHandling => "CUSTOM_REQUEST_HANDLING",
             ParameterExceptionField::CustomResponse => "CUSTOM_RESPONSE",
             ParameterExceptionField::CustomResponseBody => "CUSTOM_RESPONSE_BODY",
@@ -235,6 +248,7 @@ impl ParameterExceptionField {
             ParameterExceptionField::FirewallManagerStatement => "FIREWALL_MANAGER_STATEMENT",
             ParameterExceptionField::ForwardedIpConfig => "FORWARDED_IP_CONFIG",
             ParameterExceptionField::GeoMatchStatement => "GEO_MATCH_STATEMENT",
+            ParameterExceptionField::HeaderMatchPattern => "HEADER_MATCH_PATTERN",
             ParameterExceptionField::HeaderName => "HEADER_NAME",
             ParameterExceptionField::IpAddress => "IP_ADDRESS",
             ParameterExceptionField::IpAddressVersion => "IP_ADDRESS_VERSION",
@@ -249,10 +263,12 @@ impl ParameterExceptionField {
             ParameterExceptionField::ManagedRuleGroupConfig => "MANAGED_RULE_GROUP_CONFIG",
             ParameterExceptionField::ManagedRuleSet => "MANAGED_RULE_SET",
             ParameterExceptionField::ManagedRuleSetStatement => "MANAGED_RULE_SET_STATEMENT",
+            ParameterExceptionField::MapMatchScope => "MAP_MATCH_SCOPE",
             ParameterExceptionField::MetricName => "METRIC_NAME",
             ParameterExceptionField::NotStatement => "NOT_STATEMENT",
             ParameterExceptionField::OrStatement => "OR_STATEMENT",
             ParameterExceptionField::OverrideAction => "OVERRIDE_ACTION",
+            ParameterExceptionField::OversizeHandling => "OVERSIZE_HANDLING",
             ParameterExceptionField::PayloadType => "PAYLOAD_TYPE",
             ParameterExceptionField::Position => "POSITION",
             ParameterExceptionField::RateBasedStatement => "RATE_BASED_STATEMENT",
@@ -291,6 +307,7 @@ impl ParameterExceptionField {
             "BODY_PARSING_FALLBACK_BEHAVIOR",
             "BYTE_MATCH_STATEMENT",
             "CHANGE_PROPAGATION_STATUS",
+            "COOKIE_MATCH_PATTERN",
             "CUSTOM_REQUEST_HANDLING",
             "CUSTOM_RESPONSE",
             "CUSTOM_RESPONSE_BODY",
@@ -304,6 +321,7 @@ impl ParameterExceptionField {
             "FIREWALL_MANAGER_STATEMENT",
             "FORWARDED_IP_CONFIG",
             "GEO_MATCH_STATEMENT",
+            "HEADER_MATCH_PATTERN",
             "HEADER_NAME",
             "IP_ADDRESS",
             "IP_ADDRESS_VERSION",
@@ -318,10 +336,12 @@ impl ParameterExceptionField {
             "MANAGED_RULE_GROUP_CONFIG",
             "MANAGED_RULE_SET",
             "MANAGED_RULE_SET_STATEMENT",
+            "MAP_MATCH_SCOPE",
             "METRIC_NAME",
             "NOT_STATEMENT",
             "OR_STATEMENT",
             "OVERRIDE_ACTION",
+            "OVERSIZE_HANDLING",
             "PAYLOAD_TYPE",
             "POSITION",
             "RATE_BASED_STATEMENT",
@@ -378,6 +398,7 @@ impl std::fmt::Debug for CaptchaConfig {
 }
 /// See [`CaptchaConfig`](crate::model::CaptchaConfig)
 pub mod captcha_config {
+
     /// A builder for [`CaptchaConfig`](crate::model::CaptchaConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -435,6 +456,7 @@ impl std::fmt::Debug for ImmunityTimeProperty {
 }
 /// See [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty)
 pub mod immunity_time_property {
+
     /// A builder for [`ImmunityTimeProperty`](crate::model::ImmunityTimeProperty)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -500,6 +522,7 @@ impl std::fmt::Debug for CustomResponseBody {
 }
 /// See [`CustomResponseBody`](crate::model::CustomResponseBody)
 pub mod custom_response_body {
+
     /// A builder for [`CustomResponseBody`](crate::model::CustomResponseBody)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -649,6 +672,7 @@ impl std::fmt::Debug for VisibilityConfig {
 }
 /// See [`VisibilityConfig`](crate::model::VisibilityConfig)
 pub mod visibility_config {
+
     /// A builder for [`VisibilityConfig`](crate::model::VisibilityConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -812,6 +836,7 @@ impl std::fmt::Debug for Rule {
 }
 /// See [`Rule`](crate::model::Rule)
 pub mod rule {
+
     /// A builder for [`Rule`](crate::model::Rule)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1007,6 +1032,7 @@ impl std::fmt::Debug for Label {
 }
 /// See [`Label`](crate::model::Label)
 pub mod label {
+
     /// A builder for [`Label`](crate::model::Label)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1073,6 +1099,7 @@ impl std::fmt::Debug for OverrideAction {
 }
 /// See [`OverrideAction`](crate::model::OverrideAction)
 pub mod override_action {
+
     /// A builder for [`OverrideAction`](crate::model::OverrideAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1135,6 +1162,7 @@ impl std::fmt::Debug for NoneAction {
 }
 /// See [`NoneAction`](crate::model::NoneAction)
 pub mod none_action {
+
     /// A builder for [`NoneAction`](crate::model::NoneAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1180,6 +1208,7 @@ impl std::fmt::Debug for CountAction {
 }
 /// See [`CountAction`](crate::model::CountAction)
 pub mod count_action {
+
     /// A builder for [`CountAction`](crate::model::CountAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1246,6 +1275,7 @@ impl std::fmt::Debug for CustomRequestHandling {
 }
 /// See [`CustomRequestHandling`](crate::model::CustomRequestHandling)
 pub mod custom_request_handling {
+
     /// A builder for [`CustomRequestHandling`](crate::model::CustomRequestHandling)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1321,6 +1351,7 @@ impl std::fmt::Debug for CustomHttpHeader {
 }
 /// See [`CustomHttpHeader`](crate::model::CustomHttpHeader)
 pub mod custom_http_header {
+
     /// A builder for [`CustomHttpHeader`](crate::model::CustomHttpHeader)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1410,6 +1441,7 @@ impl std::fmt::Debug for RuleAction {
 }
 /// See [`RuleAction`](crate::model::RuleAction)
 pub mod rule_action {
+
     /// A builder for [`RuleAction`](crate::model::RuleAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1519,6 +1551,7 @@ impl std::fmt::Debug for CaptchaAction {
 }
 /// See [`CaptchaAction`](crate::model::CaptchaAction)
 pub mod captcha_action {
+
     /// A builder for [`CaptchaAction`](crate::model::CaptchaAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1587,6 +1620,7 @@ impl std::fmt::Debug for AllowAction {
 }
 /// See [`AllowAction`](crate::model::AllowAction)
 pub mod allow_action {
+
     /// A builder for [`AllowAction`](crate::model::AllowAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1653,6 +1687,7 @@ impl std::fmt::Debug for BlockAction {
 }
 /// See [`BlockAction`](crate::model::BlockAction)
 pub mod block_action {
+
     /// A builder for [`BlockAction`](crate::model::BlockAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1731,6 +1766,7 @@ impl std::fmt::Debug for CustomResponse {
 }
 /// See [`CustomResponse`](crate::model::CustomResponse)
 pub mod custom_response {
+
     /// A builder for [`CustomResponse`](crate::model::CustomResponse)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1980,6 +2016,7 @@ impl std::fmt::Debug for Statement {
 }
 /// See [`Statement`](crate::model::Statement)
 pub mod statement {
+
     /// A builder for [`Statement`](crate::model::Statement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2283,7 +2320,7 @@ impl Statement {
 pub struct RegexMatchStatement {
     /// <p>The string representing the regular expression.</p>
     pub regex_string: std::option::Option<std::string::String>,
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
@@ -2293,7 +2330,7 @@ impl RegexMatchStatement {
     pub fn regex_string(&self) -> std::option::Option<&str> {
         self.regex_string.as_deref()
     }
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -2313,6 +2350,7 @@ impl std::fmt::Debug for RegexMatchStatement {
 }
 /// See [`RegexMatchStatement`](crate::model::RegexMatchStatement)
 pub mod regex_match_statement {
+
     /// A builder for [`RegexMatchStatement`](crate::model::RegexMatchStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2333,12 +2371,12 @@ pub mod regex_match_statement {
             self.regex_string = input;
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -2501,6 +2539,7 @@ impl std::fmt::Debug for TextTransformation {
 }
 /// See [`TextTransformation`](crate::model::TextTransformation)
 pub mod text_transformation {
+
     /// A builder for [`TextTransformation`](crate::model::TextTransformation)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2791,8 +2830,8 @@ impl AsRef<str> for TextTransformationType {
     }
 }
 
-/// <p>The part of a web request that you want WAF to inspect. Include the single <code>FieldToMatch</code> type that you want to inspect, with additional specifications as needed, according to the type. You specify a single request component in <code>FieldToMatch</code> for each rule statement that requires it. To inspect more than one component of a web request, create a separate rule statement for each component.</p>
-/// <p>JSON specification for a <code>QueryString</code> field to match: </p>
+/// <p>The part of the web request that you want WAF to inspect. Include the single <code>FieldToMatch</code> type that you want to inspect, with additional specifications as needed, according to the type. You specify a single request component in <code>FieldToMatch</code> for each rule statement that requires it. To inspect more than one component of the web request, create a separate rule statement for each component.</p>
+/// <p>Example JSON for a <code>QueryString</code> field to match: </p>
 /// <p> <code> "FieldToMatch": { "QueryString": {} }</code> </p>
 /// <p>Example JSON for a <code>Method</code> field to match specification:</p>
 /// <p> <code> "FieldToMatch": { "Method": { "Name": "DELETE" } }</code> </p>
@@ -2801,34 +2840,40 @@ impl AsRef<str> for TextTransformationType {
 pub struct FieldToMatch {
     /// <p>Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code> or <code>Referer</code>. This setting isn't case sensitive.</p>
     /// <p>Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code> </p>
+    /// <p>Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code> setting. </p>
     pub single_header: std::option::Option<crate::model::SingleHeader>,
     /// <p>Inspect a single query argument. Provide the name of the query argument to inspect, such as <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive. </p>
-    /// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
     /// <p>Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code> </p>
     pub single_query_argument: std::option::Option<crate::model::SingleQueryArgument>,
     /// <p>Inspect all query arguments. </p>
     pub all_query_arguments: std::option::Option<crate::model::AllQueryArguments>,
-    /// <p>Inspect the request URI path. This is the part of a web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
+    /// <p>Inspect the request URI path. This is the part of the web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
     pub uri_path: std::option::Option<crate::model::UriPath>,
     /// <p>Inspect the query string. This is the part of a URL that appears after a <code>?</code> character, if any.</p>
     pub query_string: std::option::Option<crate::model::QueryString>,
     /// <p>Inspect the request body as plain text. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-    /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+    /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>Body</code> object configuration. </p>
     pub body: std::option::Option<crate::model::Body>,
     /// <p>Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform. </p>
     pub method: std::option::Option<crate::model::Method>,
     /// <p>Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-    /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+    /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration. </p>
     pub json_body: std::option::Option<crate::model::JsonBody>,
+    /// <p>Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF inspects. </p>
+    /// <p>Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize header content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the underlying host service. </p>
+    pub headers: std::option::Option<crate::model::Headers>,
+    /// <p>Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects. </p>
+    /// <p>Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the underlying host service. </p>
+    pub cookies: std::option::Option<crate::model::Cookies>,
 }
 impl FieldToMatch {
     /// <p>Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code> or <code>Referer</code>. This setting isn't case sensitive.</p>
     /// <p>Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code> </p>
+    /// <p>Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code> setting. </p>
     pub fn single_header(&self) -> std::option::Option<&crate::model::SingleHeader> {
         self.single_header.as_ref()
     }
     /// <p>Inspect a single query argument. Provide the name of the query argument to inspect, such as <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive. </p>
-    /// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
     /// <p>Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code> </p>
     pub fn single_query_argument(&self) -> std::option::Option<&crate::model::SingleQueryArgument> {
         self.single_query_argument.as_ref()
@@ -2837,7 +2882,7 @@ impl FieldToMatch {
     pub fn all_query_arguments(&self) -> std::option::Option<&crate::model::AllQueryArguments> {
         self.all_query_arguments.as_ref()
     }
-    /// <p>Inspect the request URI path. This is the part of a web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
+    /// <p>Inspect the request URI path. This is the part of the web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
     pub fn uri_path(&self) -> std::option::Option<&crate::model::UriPath> {
         self.uri_path.as_ref()
     }
@@ -2846,7 +2891,7 @@ impl FieldToMatch {
         self.query_string.as_ref()
     }
     /// <p>Inspect the request body as plain text. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-    /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+    /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>Body</code> object configuration. </p>
     pub fn body(&self) -> std::option::Option<&crate::model::Body> {
         self.body.as_ref()
     }
@@ -2855,9 +2900,19 @@ impl FieldToMatch {
         self.method.as_ref()
     }
     /// <p>Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-    /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+    /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration. </p>
     pub fn json_body(&self) -> std::option::Option<&crate::model::JsonBody> {
         self.json_body.as_ref()
+    }
+    /// <p>Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF inspects. </p>
+    /// <p>Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize header content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the underlying host service. </p>
+    pub fn headers(&self) -> std::option::Option<&crate::model::Headers> {
+        self.headers.as_ref()
+    }
+    /// <p>Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects. </p>
+    /// <p>Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the underlying host service. </p>
+    pub fn cookies(&self) -> std::option::Option<&crate::model::Cookies> {
+        self.cookies.as_ref()
     }
 }
 impl std::fmt::Debug for FieldToMatch {
@@ -2871,11 +2926,14 @@ impl std::fmt::Debug for FieldToMatch {
         formatter.field("body", &self.body);
         formatter.field("method", &self.method);
         formatter.field("json_body", &self.json_body);
+        formatter.field("headers", &self.headers);
+        formatter.field("cookies", &self.cookies);
         formatter.finish()
     }
 }
 /// See [`FieldToMatch`](crate::model::FieldToMatch)
 pub mod field_to_match {
+
     /// A builder for [`FieldToMatch`](crate::model::FieldToMatch)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2888,16 +2946,20 @@ pub mod field_to_match {
         pub(crate) body: std::option::Option<crate::model::Body>,
         pub(crate) method: std::option::Option<crate::model::Method>,
         pub(crate) json_body: std::option::Option<crate::model::JsonBody>,
+        pub(crate) headers: std::option::Option<crate::model::Headers>,
+        pub(crate) cookies: std::option::Option<crate::model::Cookies>,
     }
     impl Builder {
         /// <p>Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code> or <code>Referer</code>. This setting isn't case sensitive.</p>
         /// <p>Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code> </p>
+        /// <p>Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code> setting. </p>
         pub fn single_header(mut self, input: crate::model::SingleHeader) -> Self {
             self.single_header = Some(input);
             self
         }
         /// <p>Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code> or <code>Referer</code>. This setting isn't case sensitive.</p>
         /// <p>Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code> </p>
+        /// <p>Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code> setting. </p>
         pub fn set_single_header(
             mut self,
             input: std::option::Option<crate::model::SingleHeader>,
@@ -2906,14 +2968,12 @@ pub mod field_to_match {
             self
         }
         /// <p>Inspect a single query argument. Provide the name of the query argument to inspect, such as <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive. </p>
-        /// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
         /// <p>Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code> </p>
         pub fn single_query_argument(mut self, input: crate::model::SingleQueryArgument) -> Self {
             self.single_query_argument = Some(input);
             self
         }
         /// <p>Inspect a single query argument. Provide the name of the query argument to inspect, such as <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive. </p>
-        /// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
         /// <p>Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code> </p>
         pub fn set_single_query_argument(
             mut self,
@@ -2935,12 +2995,12 @@ pub mod field_to_match {
             self.all_query_arguments = input;
             self
         }
-        /// <p>Inspect the request URI path. This is the part of a web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
+        /// <p>Inspect the request URI path. This is the part of the web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
         pub fn uri_path(mut self, input: crate::model::UriPath) -> Self {
             self.uri_path = Some(input);
             self
         }
-        /// <p>Inspect the request URI path. This is the part of a web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
+        /// <p>Inspect the request URI path. This is the part of the web request that identifies a resource, for example, <code>/images/daily-ad.jpg</code>.</p>
         pub fn set_uri_path(mut self, input: std::option::Option<crate::model::UriPath>) -> Self {
             self.uri_path = input;
             self
@@ -2959,13 +3019,13 @@ pub mod field_to_match {
             self
         }
         /// <p>Inspect the request body as plain text. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-        /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+        /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>Body</code> object configuration. </p>
         pub fn body(mut self, input: crate::model::Body) -> Self {
             self.body = Some(input);
             self
         }
         /// <p>Inspect the request body as plain text. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-        /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+        /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>Body</code> object configuration. </p>
         pub fn set_body(mut self, input: std::option::Option<crate::model::Body>) -> Self {
             self.body = input;
             self
@@ -2981,15 +3041,39 @@ pub mod field_to_match {
             self
         }
         /// <p>Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-        /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+        /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration. </p>
         pub fn json_body(mut self, input: crate::model::JsonBody) -> Self {
             self.json_body = Some(input);
             self
         }
         /// <p>Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form. </p>
-        /// <p>Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as <code>ByteMatchStatement</code> or <code>RegexPatternSetReferenceStatement</code>, with a <code>SizeConstraintStatement</code> that enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.</p>
+        /// <p>Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object configuration. </p>
         pub fn set_json_body(mut self, input: std::option::Option<crate::model::JsonBody>) -> Self {
             self.json_body = input;
+            self
+        }
+        /// <p>Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF inspects. </p>
+        /// <p>Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize header content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the underlying host service. </p>
+        pub fn headers(mut self, input: crate::model::Headers) -> Self {
+            self.headers = Some(input);
+            self
+        }
+        /// <p>Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF inspects. </p>
+        /// <p>Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize header content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the underlying host service. </p>
+        pub fn set_headers(mut self, input: std::option::Option<crate::model::Headers>) -> Self {
+            self.headers = input;
+            self
+        }
+        /// <p>Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects. </p>
+        /// <p>Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the underlying host service. </p>
+        pub fn cookies(mut self, input: crate::model::Cookies) -> Self {
+            self.cookies = Some(input);
+            self
+        }
+        /// <p>Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects. </p>
+        /// <p>Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the underlying host service. </p>
+        pub fn set_cookies(mut self, input: std::option::Option<crate::model::Cookies>) -> Self {
+            self.cookies = input;
             self
         }
         /// Consumes the builder and constructs a [`FieldToMatch`](crate::model::FieldToMatch)
@@ -3003,6 +3087,8 @@ pub mod field_to_match {
                 body: self.body,
                 method: self.method,
                 json_body: self.json_body,
+                headers: self.headers,
+                cookies: self.cookies,
             }
         }
     }
@@ -3014,7 +3100,658 @@ impl FieldToMatch {
     }
 }
 
-/// <p>The body of a web request, inspected as JSON. The body immediately follows the request headers. This is used in the <code>FieldToMatch</code> specification.</p>
+/// <p>Inspect the cookies in the web request. You can specify the parts of the cookies to inspect and you can narrow the set of cookies to inspect by including or excluding specific keys.</p>
+/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>Example JSON: <code>"Cookies": { "MatchPattern": { "All": {} }, "MatchScope": "KEY", "OversizeHandling": "MATCH" }</code> </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Cookies {
+    /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
+    /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
+    /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+    pub match_pattern: std::option::Option<crate::model::CookieMatchPattern>,
+    /// <p>The parts of the cookies to inspect with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+    pub match_scope: std::option::Option<crate::model::MapMatchScope>,
+    /// <p>What WAF should do if the cookies of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request cookies when they exceed 8 KB (8192 bytes) or 200 total cookies. The underlying host service forwards a maximum of 200 cookies and at most 8 KB of cookie contents to WAF. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the cookies normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
+}
+impl Cookies {
+    /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
+    /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
+    /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+    pub fn match_pattern(&self) -> std::option::Option<&crate::model::CookieMatchPattern> {
+        self.match_pattern.as_ref()
+    }
+    /// <p>The parts of the cookies to inspect with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+    pub fn match_scope(&self) -> std::option::Option<&crate::model::MapMatchScope> {
+        self.match_scope.as_ref()
+    }
+    /// <p>What WAF should do if the cookies of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request cookies when they exceed 8 KB (8192 bytes) or 200 total cookies. The underlying host service forwards a maximum of 200 cookies and at most 8 KB of cookie contents to WAF. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the cookies normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    pub fn oversize_handling(&self) -> std::option::Option<&crate::model::OversizeHandling> {
+        self.oversize_handling.as_ref()
+    }
+}
+impl std::fmt::Debug for Cookies {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Cookies");
+        formatter.field("match_pattern", &self.match_pattern);
+        formatter.field("match_scope", &self.match_scope);
+        formatter.field("oversize_handling", &self.oversize_handling);
+        formatter.finish()
+    }
+}
+/// See [`Cookies`](crate::model::Cookies)
+pub mod cookies {
+
+    /// A builder for [`Cookies`](crate::model::Cookies)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) match_pattern: std::option::Option<crate::model::CookieMatchPattern>,
+        pub(crate) match_scope: std::option::Option<crate::model::MapMatchScope>,
+        pub(crate) oversize_handling: std::option::Option<crate::model::OversizeHandling>,
+    }
+    impl Builder {
+        /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
+        /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
+        /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+        pub fn match_pattern(mut self, input: crate::model::CookieMatchPattern) -> Self {
+            self.match_pattern = Some(input);
+            self
+        }
+        /// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
+        /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
+        /// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+        pub fn set_match_pattern(
+            mut self,
+            input: std::option::Option<crate::model::CookieMatchPattern>,
+        ) -> Self {
+            self.match_pattern = input;
+            self
+        }
+        /// <p>The parts of the cookies to inspect with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+        pub fn match_scope(mut self, input: crate::model::MapMatchScope) -> Self {
+            self.match_scope = Some(input);
+            self
+        }
+        /// <p>The parts of the cookies to inspect with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+        pub fn set_match_scope(
+            mut self,
+            input: std::option::Option<crate::model::MapMatchScope>,
+        ) -> Self {
+            self.match_scope = input;
+            self
+        }
+        /// <p>What WAF should do if the cookies of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request cookies when they exceed 8 KB (8192 bytes) or 200 total cookies. The underlying host service forwards a maximum of 200 cookies and at most 8 KB of cookie contents to WAF. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the cookies normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        pub fn oversize_handling(mut self, input: crate::model::OversizeHandling) -> Self {
+            self.oversize_handling = Some(input);
+            self
+        }
+        /// <p>What WAF should do if the cookies of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request cookies when they exceed 8 KB (8192 bytes) or 200 total cookies. The underlying host service forwards a maximum of 200 cookies and at most 8 KB of cookie contents to WAF. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the cookies normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        pub fn set_oversize_handling(
+            mut self,
+            input: std::option::Option<crate::model::OversizeHandling>,
+        ) -> Self {
+            self.oversize_handling = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Cookies`](crate::model::Cookies)
+        pub fn build(self) -> crate::model::Cookies {
+            crate::model::Cookies {
+                match_pattern: self.match_pattern,
+                match_scope: self.match_scope,
+                oversize_handling: self.oversize_handling,
+            }
+        }
+    }
+}
+impl Cookies {
+    /// Creates a new builder-style object to manufacture [`Cookies`](crate::model::Cookies)
+    pub fn builder() -> crate::model::cookies::Builder {
+        crate::model::cookies::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum OversizeHandling {
+    #[allow(missing_docs)] // documentation missing in model
+    Continue,
+    #[allow(missing_docs)] // documentation missing in model
+    Match,
+    #[allow(missing_docs)] // documentation missing in model
+    NoMatch,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for OversizeHandling {
+    fn from(s: &str) -> Self {
+        match s {
+            "CONTINUE" => OversizeHandling::Continue,
+            "MATCH" => OversizeHandling::Match,
+            "NO_MATCH" => OversizeHandling::NoMatch,
+            other => OversizeHandling::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for OversizeHandling {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(OversizeHandling::from(s))
+    }
+}
+impl OversizeHandling {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            OversizeHandling::Continue => "CONTINUE",
+            OversizeHandling::Match => "MATCH",
+            OversizeHandling::NoMatch => "NO_MATCH",
+            OversizeHandling::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["CONTINUE", "MATCH", "NO_MATCH"]
+    }
+}
+impl AsRef<str> for OversizeHandling {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum MapMatchScope {
+    #[allow(missing_docs)] // documentation missing in model
+    All,
+    #[allow(missing_docs)] // documentation missing in model
+    Key,
+    #[allow(missing_docs)] // documentation missing in model
+    Value,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for MapMatchScope {
+    fn from(s: &str) -> Self {
+        match s {
+            "ALL" => MapMatchScope::All,
+            "KEY" => MapMatchScope::Key,
+            "VALUE" => MapMatchScope::Value,
+            other => MapMatchScope::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for MapMatchScope {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(MapMatchScope::from(s))
+    }
+}
+impl MapMatchScope {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            MapMatchScope::All => "ALL",
+            MapMatchScope::Key => "KEY",
+            MapMatchScope::Value => "VALUE",
+            MapMatchScope::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["ALL", "KEY", "VALUE"]
+    }
+}
+impl AsRef<str> for MapMatchScope {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>The filter to use to identify the subset of cookies to inspect in a web request. </p>
+/// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedCookies</code>, or <code>ExcludedCookies</code>.</p>
+/// <p>Example JSON: <code>"CookieMatchPattern": { "IncludedCookies": {"KeyToInclude1", "KeyToInclude2", "KeyToInclude3"} }</code> </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CookieMatchPattern {
+    /// <p>Inspect all cookies. </p>
+    pub all: std::option::Option<crate::model::All>,
+    /// <p>Inspect only the cookies that have a key that matches one of the strings specified here. </p>
+    pub included_cookies: std::option::Option<std::vec::Vec<std::string::String>>,
+    /// <p>Inspect only the cookies whose keys don't match any of the strings specified here. </p>
+    pub excluded_cookies: std::option::Option<std::vec::Vec<std::string::String>>,
+}
+impl CookieMatchPattern {
+    /// <p>Inspect all cookies. </p>
+    pub fn all(&self) -> std::option::Option<&crate::model::All> {
+        self.all.as_ref()
+    }
+    /// <p>Inspect only the cookies that have a key that matches one of the strings specified here. </p>
+    pub fn included_cookies(&self) -> std::option::Option<&[std::string::String]> {
+        self.included_cookies.as_deref()
+    }
+    /// <p>Inspect only the cookies whose keys don't match any of the strings specified here. </p>
+    pub fn excluded_cookies(&self) -> std::option::Option<&[std::string::String]> {
+        self.excluded_cookies.as_deref()
+    }
+}
+impl std::fmt::Debug for CookieMatchPattern {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CookieMatchPattern");
+        formatter.field("all", &self.all);
+        formatter.field("included_cookies", &self.included_cookies);
+        formatter.field("excluded_cookies", &self.excluded_cookies);
+        formatter.finish()
+    }
+}
+/// See [`CookieMatchPattern`](crate::model::CookieMatchPattern)
+pub mod cookie_match_pattern {
+
+    /// A builder for [`CookieMatchPattern`](crate::model::CookieMatchPattern)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) all: std::option::Option<crate::model::All>,
+        pub(crate) included_cookies: std::option::Option<std::vec::Vec<std::string::String>>,
+        pub(crate) excluded_cookies: std::option::Option<std::vec::Vec<std::string::String>>,
+    }
+    impl Builder {
+        /// <p>Inspect all cookies. </p>
+        pub fn all(mut self, input: crate::model::All) -> Self {
+            self.all = Some(input);
+            self
+        }
+        /// <p>Inspect all cookies. </p>
+        pub fn set_all(mut self, input: std::option::Option<crate::model::All>) -> Self {
+            self.all = input;
+            self
+        }
+        /// Appends an item to `included_cookies`.
+        ///
+        /// To override the contents of this collection use [`set_included_cookies`](Self::set_included_cookies).
+        ///
+        /// <p>Inspect only the cookies that have a key that matches one of the strings specified here. </p>
+        pub fn included_cookies(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.included_cookies.unwrap_or_default();
+            v.push(input.into());
+            self.included_cookies = Some(v);
+            self
+        }
+        /// <p>Inspect only the cookies that have a key that matches one of the strings specified here. </p>
+        pub fn set_included_cookies(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.included_cookies = input;
+            self
+        }
+        /// Appends an item to `excluded_cookies`.
+        ///
+        /// To override the contents of this collection use [`set_excluded_cookies`](Self::set_excluded_cookies).
+        ///
+        /// <p>Inspect only the cookies whose keys don't match any of the strings specified here. </p>
+        pub fn excluded_cookies(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.excluded_cookies.unwrap_or_default();
+            v.push(input.into());
+            self.excluded_cookies = Some(v);
+            self
+        }
+        /// <p>Inspect only the cookies whose keys don't match any of the strings specified here. </p>
+        pub fn set_excluded_cookies(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.excluded_cookies = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CookieMatchPattern`](crate::model::CookieMatchPattern)
+        pub fn build(self) -> crate::model::CookieMatchPattern {
+            crate::model::CookieMatchPattern {
+                all: self.all,
+                included_cookies: self.included_cookies,
+                excluded_cookies: self.excluded_cookies,
+            }
+        }
+    }
+}
+impl CookieMatchPattern {
+    /// Creates a new builder-style object to manufacture [`CookieMatchPattern`](crate::model::CookieMatchPattern)
+    pub fn builder() -> crate::model::cookie_match_pattern::Builder {
+        crate::model::cookie_match_pattern::Builder::default()
+    }
+}
+
+/// <p>Inspect all of the elements that WAF has parsed and extracted from the web request component that you've identified in your <code>FieldToMatch</code> specifications. </p>
+/// <p>This is used only in the <code>FieldToMatch</code> specification for some web request component types. </p>
+/// <p>JSON specification: <code>"All": {}</code> </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct All {}
+impl std::fmt::Debug for All {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("All");
+        formatter.finish()
+    }
+}
+/// See [`All`](crate::model::All)
+pub mod all {
+
+    /// A builder for [`All`](crate::model::All)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`All`](crate::model::All)
+        pub fn build(self) -> crate::model::All {
+            crate::model::All {}
+        }
+    }
+}
+impl All {
+    /// Creates a new builder-style object to manufacture [`All`](crate::model::All)
+    pub fn builder() -> crate::model::all::Builder {
+        crate::model::all::Builder::default()
+    }
+}
+
+/// <p>Inspect the headers in the web request. You can specify the parts of the headers to inspect and you can narrow the set of headers to inspect by including or excluding specific keys.</p>
+/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>Alternately, you can use the <code>SingleHeader</code> <code>FieldToMatch</code> setting to inspect the value of a single header, identified by its key. </p>
+/// <p>Example JSON: <code>"Headers": { "MatchPattern": { "All": {} }, "MatchScope": "KEY", "OversizeHandling": "MATCH" }</code> </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Headers {
+    /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
+    /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
+    /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+    pub match_pattern: std::option::Option<crate::model::HeaderMatchPattern>,
+    /// <p>The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+    pub match_scope: std::option::Option<crate::model::MapMatchScope>,
+    /// <p>What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
+}
+impl Headers {
+    /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
+    /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
+    /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+    pub fn match_pattern(&self) -> std::option::Option<&crate::model::HeaderMatchPattern> {
+        self.match_pattern.as_ref()
+    }
+    /// <p>The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+    pub fn match_scope(&self) -> std::option::Option<&crate::model::MapMatchScope> {
+        self.match_scope.as_ref()
+    }
+    /// <p>What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    pub fn oversize_handling(&self) -> std::option::Option<&crate::model::OversizeHandling> {
+        self.oversize_handling.as_ref()
+    }
+}
+impl std::fmt::Debug for Headers {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Headers");
+        formatter.field("match_pattern", &self.match_pattern);
+        formatter.field("match_scope", &self.match_scope);
+        formatter.field("oversize_handling", &self.oversize_handling);
+        formatter.finish()
+    }
+}
+/// See [`Headers`](crate::model::Headers)
+pub mod headers {
+
+    /// A builder for [`Headers`](crate::model::Headers)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) match_pattern: std::option::Option<crate::model::HeaderMatchPattern>,
+        pub(crate) match_scope: std::option::Option<crate::model::MapMatchScope>,
+        pub(crate) oversize_handling: std::option::Option<crate::model::OversizeHandling>,
+    }
+    impl Builder {
+        /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
+        /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
+        /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+        pub fn match_pattern(mut self, input: crate::model::HeaderMatchPattern) -> Self {
+            self.match_pattern = Some(input);
+            self
+        }
+        /// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
+        /// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
+        /// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+        pub fn set_match_pattern(
+            mut self,
+            input: std::option::Option<crate::model::HeaderMatchPattern>,
+        ) -> Self {
+            self.match_pattern = input;
+            self
+        }
+        /// <p>The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+        pub fn match_scope(mut self, input: crate::model::MapMatchScope) -> Self {
+            self.match_scope = Some(input);
+            self
+        }
+        /// <p>The parts of the headers to match with the rule inspection criteria. If you specify <code>All</code>, WAF inspects both keys and values. </p>
+        pub fn set_match_scope(
+            mut self,
+            input: std::option::Option<crate::model::MapMatchScope>,
+        ) -> Self {
+            self.match_scope = input;
+            self
+        }
+        /// <p>What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        pub fn oversize_handling(mut self, input: crate::model::OversizeHandling) -> Self {
+            self.oversize_handling = Some(input);
+            self
+        }
+        /// <p>What WAF should do if the headers of the request are larger than WAF can inspect. WAF does not support inspecting the entire contents of request headers when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200 headers and at most 8 KB of header contents to WAF. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the headers normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        pub fn set_oversize_handling(
+            mut self,
+            input: std::option::Option<crate::model::OversizeHandling>,
+        ) -> Self {
+            self.oversize_handling = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Headers`](crate::model::Headers)
+        pub fn build(self) -> crate::model::Headers {
+            crate::model::Headers {
+                match_pattern: self.match_pattern,
+                match_scope: self.match_scope,
+                oversize_handling: self.oversize_handling,
+            }
+        }
+    }
+}
+impl Headers {
+    /// Creates a new builder-style object to manufacture [`Headers`](crate::model::Headers)
+    pub fn builder() -> crate::model::headers::Builder {
+        crate::model::headers::Builder::default()
+    }
+}
+
+/// <p>The filter to use to identify the subset of headers to inspect in a web request. </p>
+/// <p>You must specify exactly one setting: either <code>All</code>, <code>IncludedHeaders</code>, or <code>ExcludedHeaders</code>.</p>
+/// <p>Example JSON: <code>"HeaderMatchPattern": { "ExcludedHeaders": {"KeyToExclude1", "KeyToExclude2"} }</code> </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct HeaderMatchPattern {
+    /// <p>Inspect all headers. </p>
+    pub all: std::option::Option<crate::model::All>,
+    /// <p>Inspect only the headers that have a key that matches one of the strings specified here. </p>
+    pub included_headers: std::option::Option<std::vec::Vec<std::string::String>>,
+    /// <p>Inspect only the headers whose keys don't match any of the strings specified here. </p>
+    pub excluded_headers: std::option::Option<std::vec::Vec<std::string::String>>,
+}
+impl HeaderMatchPattern {
+    /// <p>Inspect all headers. </p>
+    pub fn all(&self) -> std::option::Option<&crate::model::All> {
+        self.all.as_ref()
+    }
+    /// <p>Inspect only the headers that have a key that matches one of the strings specified here. </p>
+    pub fn included_headers(&self) -> std::option::Option<&[std::string::String]> {
+        self.included_headers.as_deref()
+    }
+    /// <p>Inspect only the headers whose keys don't match any of the strings specified here. </p>
+    pub fn excluded_headers(&self) -> std::option::Option<&[std::string::String]> {
+        self.excluded_headers.as_deref()
+    }
+}
+impl std::fmt::Debug for HeaderMatchPattern {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("HeaderMatchPattern");
+        formatter.field("all", &self.all);
+        formatter.field("included_headers", &self.included_headers);
+        formatter.field("excluded_headers", &self.excluded_headers);
+        formatter.finish()
+    }
+}
+/// See [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
+pub mod header_match_pattern {
+
+    /// A builder for [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) all: std::option::Option<crate::model::All>,
+        pub(crate) included_headers: std::option::Option<std::vec::Vec<std::string::String>>,
+        pub(crate) excluded_headers: std::option::Option<std::vec::Vec<std::string::String>>,
+    }
+    impl Builder {
+        /// <p>Inspect all headers. </p>
+        pub fn all(mut self, input: crate::model::All) -> Self {
+            self.all = Some(input);
+            self
+        }
+        /// <p>Inspect all headers. </p>
+        pub fn set_all(mut self, input: std::option::Option<crate::model::All>) -> Self {
+            self.all = input;
+            self
+        }
+        /// Appends an item to `included_headers`.
+        ///
+        /// To override the contents of this collection use [`set_included_headers`](Self::set_included_headers).
+        ///
+        /// <p>Inspect only the headers that have a key that matches one of the strings specified here. </p>
+        pub fn included_headers(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.included_headers.unwrap_or_default();
+            v.push(input.into());
+            self.included_headers = Some(v);
+            self
+        }
+        /// <p>Inspect only the headers that have a key that matches one of the strings specified here. </p>
+        pub fn set_included_headers(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.included_headers = input;
+            self
+        }
+        /// Appends an item to `excluded_headers`.
+        ///
+        /// To override the contents of this collection use [`set_excluded_headers`](Self::set_excluded_headers).
+        ///
+        /// <p>Inspect only the headers whose keys don't match any of the strings specified here. </p>
+        pub fn excluded_headers(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.excluded_headers.unwrap_or_default();
+            v.push(input.into());
+            self.excluded_headers = Some(v);
+            self
+        }
+        /// <p>Inspect only the headers whose keys don't match any of the strings specified here. </p>
+        pub fn set_excluded_headers(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.excluded_headers = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
+        pub fn build(self) -> crate::model::HeaderMatchPattern {
+            crate::model::HeaderMatchPattern {
+                all: self.all,
+                included_headers: self.included_headers,
+                excluded_headers: self.excluded_headers,
+            }
+        }
+    }
+}
+impl HeaderMatchPattern {
+    /// Creates a new builder-style object to manufacture [`HeaderMatchPattern`](crate::model::HeaderMatchPattern)
+    pub fn builder() -> crate::model::header_match_pattern::Builder {
+        crate::model::header_match_pattern::Builder::default()
+    }
+}
+
+/// <p>Inspect the body of the web request as JSON. The body immediately follows the request headers. </p>
+/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
 /// <p>Use the specifications in this object to indicate which parts of the JSON body to inspect using the rule's inspection criteria. WAF inspects only the parts of the JSON that result from the matches that you indicate. </p>
 /// <p>Example JSON: <code>"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }</code> </p>
 #[non_exhaustive]
@@ -3039,6 +3776,16 @@ pub struct JsonBody {
     /// <li> <p>Extra colons: <code>{"key1"::"value1","key2""value2"}</code> </p> </li>
     /// </ul>
     pub invalid_fallback_behavior: std::option::Option<crate::model::BodyParsingFallbackBehavior>,
+    /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+    /// <p>Default: <code>CONTINUE</code> </p>
+    pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
 }
 impl JsonBody {
     /// <p>The patterns to look for in the JSON body. WAF inspects the results of these pattern matches against the rule inspection criteria. </p>
@@ -3068,6 +3815,18 @@ impl JsonBody {
     ) -> std::option::Option<&crate::model::BodyParsingFallbackBehavior> {
         self.invalid_fallback_behavior.as_ref()
     }
+    /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+    /// <p>Default: <code>CONTINUE</code> </p>
+    pub fn oversize_handling(&self) -> std::option::Option<&crate::model::OversizeHandling> {
+        self.oversize_handling.as_ref()
+    }
 }
 impl std::fmt::Debug for JsonBody {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3075,11 +3834,13 @@ impl std::fmt::Debug for JsonBody {
         formatter.field("match_pattern", &self.match_pattern);
         formatter.field("match_scope", &self.match_scope);
         formatter.field("invalid_fallback_behavior", &self.invalid_fallback_behavior);
+        formatter.field("oversize_handling", &self.oversize_handling);
         formatter.finish()
     }
 }
 /// See [`JsonBody`](crate::model::JsonBody)
 pub mod json_body {
+
     /// A builder for [`JsonBody`](crate::model::JsonBody)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3088,6 +3849,7 @@ pub mod json_body {
         pub(crate) match_scope: std::option::Option<crate::model::JsonMatchScope>,
         pub(crate) invalid_fallback_behavior:
             std::option::Option<crate::model::BodyParsingFallbackBehavior>,
+        pub(crate) oversize_handling: std::option::Option<crate::model::OversizeHandling>,
     }
     impl Builder {
         /// <p>The patterns to look for in the JSON body. WAF inspects the results of these pattern matches against the rule inspection criteria. </p>
@@ -3158,12 +3920,42 @@ pub mod json_body {
             self.invalid_fallback_behavior = input;
             self
         }
+        /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+        /// <p>Default: <code>CONTINUE</code> </p>
+        pub fn oversize_handling(mut self, input: crate::model::OversizeHandling) -> Self {
+            self.oversize_handling = Some(input);
+            self
+        }
+        /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+        /// <p>Default: <code>CONTINUE</code> </p>
+        pub fn set_oversize_handling(
+            mut self,
+            input: std::option::Option<crate::model::OversizeHandling>,
+        ) -> Self {
+            self.oversize_handling = input;
+            self
+        }
         /// Consumes the builder and constructs a [`JsonBody`](crate::model::JsonBody)
         pub fn build(self) -> crate::model::JsonBody {
             crate::model::JsonBody {
                 match_pattern: self.match_pattern,
                 match_scope: self.match_scope,
                 invalid_fallback_behavior: self.invalid_fallback_behavior,
+                oversize_handling: self.oversize_handling,
             }
         }
     }
@@ -3332,6 +4124,7 @@ impl std::fmt::Debug for JsonMatchPattern {
 }
 /// See [`JsonMatchPattern`](crate::model::JsonMatchPattern)
 pub mod json_match_pattern {
+
     /// A builder for [`JsonMatchPattern`](crate::model::JsonMatchPattern)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3395,40 +4188,8 @@ impl JsonMatchPattern {
     }
 }
 
-/// <p>Inspect all of the elements that WAF has parsed and extracted from the web request JSON body that are within the <code>JsonBody</code> <code>MatchScope</code>. This is used with the <code>FieldToMatch</code> option <code>JsonBody</code>. </p>
-/// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
-/// <p>JSON specification: <code>"All": {}</code> </p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct All {}
-impl std::fmt::Debug for All {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("All");
-        formatter.finish()
-    }
-}
-/// See [`All`](crate::model::All)
-pub mod all {
-    /// A builder for [`All`](crate::model::All)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {}
-    impl Builder {
-        /// Consumes the builder and constructs a [`All`](crate::model::All)
-        pub fn build(self) -> crate::model::All {
-            crate::model::All {}
-        }
-    }
-}
-impl All {
-    /// Creates a new builder-style object to manufacture [`All`](crate::model::All)
-    pub fn builder() -> crate::model::all::Builder {
-        crate::model::all::Builder::default()
-    }
-}
-
-/// <p>The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform. </p>
-/// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>Inspect the HTTP method of the web request. The method indicates the type of operation that the request is asking the origin to perform. </p>
+/// <p>This is used only in the <code>FieldToMatch</code> specification for some web request component types. </p>
 /// <p>JSON specification: <code>"Method": {}</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3441,6 +4202,7 @@ impl std::fmt::Debug for Method {
 }
 /// See [`Method`](crate::model::Method)
 pub mod method {
+
     /// A builder for [`Method`](crate::model::Method)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3459,28 +4221,87 @@ impl Method {
     }
 }
 
-/// <p>The body of a web request. This immediately follows the request headers.</p>
-/// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
-/// <p>JSON specification: <code>"Body": {}</code> </p>
+/// <p>Inspect the body of the web request. The body immediately follows the request headers.</p>
+/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct Body {}
+pub struct Body {
+    /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+    /// <p>Default: <code>CONTINUE</code> </p>
+    pub oversize_handling: std::option::Option<crate::model::OversizeHandling>,
+}
+impl Body {
+    /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+    /// <p>The options for oversize handling are the following:</p>
+    /// <ul>
+    /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+    /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+    /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+    /// </ul>
+    /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+    /// <p>Default: <code>CONTINUE</code> </p>
+    pub fn oversize_handling(&self) -> std::option::Option<&crate::model::OversizeHandling> {
+        self.oversize_handling.as_ref()
+    }
+}
 impl std::fmt::Debug for Body {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("Body");
+        formatter.field("oversize_handling", &self.oversize_handling);
         formatter.finish()
     }
 }
 /// See [`Body`](crate::model::Body)
 pub mod body {
+
     /// A builder for [`Body`](crate::model::Body)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {}
+    pub struct Builder {
+        pub(crate) oversize_handling: std::option::Option<crate::model::OversizeHandling>,
+    }
     impl Builder {
+        /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+        /// <p>Default: <code>CONTINUE</code> </p>
+        pub fn oversize_handling(mut self, input: crate::model::OversizeHandling) -> Self {
+            self.oversize_handling = Some(input);
+            self
+        }
+        /// <p>What WAF should do if the body is larger than WAF can inspect. WAF does not support inspecting the entire contents of the body of a web request when the body exceeds 8 KB (8192 bytes). Only the first 8 KB of the request body are forwarded to WAF by the underlying host service. </p>
+        /// <p>The options for oversize handling are the following:</p>
+        /// <ul>
+        /// <li> <p> <code>CONTINUE</code> - Inspect the body normally, according to the rule inspection criteria. </p> </li>
+        /// <li> <p> <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p> </li>
+        /// <li> <p> <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p> </li>
+        /// </ul>
+        /// <p>You can combine the <code>MATCH</code> or <code>NO_MATCH</code> settings for oversize handling with your rule and web ACL action settings, so that you block any request whose body is over 8 KB. </p>
+        /// <p>Default: <code>CONTINUE</code> </p>
+        pub fn set_oversize_handling(
+            mut self,
+            input: std::option::Option<crate::model::OversizeHandling>,
+        ) -> Self {
+            self.oversize_handling = input;
+            self
+        }
         /// Consumes the builder and constructs a [`Body`](crate::model::Body)
         pub fn build(self) -> crate::model::Body {
-            crate::model::Body {}
+            crate::model::Body {
+                oversize_handling: self.oversize_handling,
+            }
         }
     }
 }
@@ -3491,8 +4312,8 @@ impl Body {
     }
 }
 
-/// <p>The query string of a web request. This is the part of a URL that appears after a <code>?</code> character, if any.</p>
-/// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>Inspect the query string of the web request. This is the part of a URL that appears after a <code>?</code> character, if any.</p>
+/// <p>This is used only in the <code>FieldToMatch</code> specification for some web request component types. </p>
 /// <p>JSON specification: <code>"QueryString": {}</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3505,6 +4326,7 @@ impl std::fmt::Debug for QueryString {
 }
 /// See [`QueryString`](crate::model::QueryString)
 pub mod query_string {
+
     /// A builder for [`QueryString`](crate::model::QueryString)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3523,8 +4345,8 @@ impl QueryString {
     }
 }
 
-/// <p>The path component of the URI of a web request. This is the part of a web request that identifies a resource. For example, <code>/images/daily-ad.jpg</code>.</p>
-/// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>Inspect the path component of the URI of the web request. This is the part of the web request that identifies a resource. For example, <code>/images/daily-ad.jpg</code>.</p>
+/// <p>This is used only in the <code>FieldToMatch</code> specification for some web request component types. </p>
 /// <p>JSON specification: <code>"UriPath": {}</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3537,6 +4359,7 @@ impl std::fmt::Debug for UriPath {
 }
 /// See [`UriPath`](crate::model::UriPath)
 pub mod uri_path {
+
     /// A builder for [`UriPath`](crate::model::UriPath)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3555,8 +4378,8 @@ impl UriPath {
     }
 }
 
-/// <p>All query arguments of a web request. </p>
-/// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>Inspect all query arguments of the web request. </p>
+/// <p>This is used only in the <code>FieldToMatch</code> specification for some web request component types. </p>
 /// <p>JSON specification: <code>"AllQueryArguments": {}</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3569,6 +4392,7 @@ impl std::fmt::Debug for AllQueryArguments {
 }
 /// See [`AllQueryArguments`](crate::model::AllQueryArguments)
 pub mod all_query_arguments {
+
     /// A builder for [`AllQueryArguments`](crate::model::AllQueryArguments)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3587,7 +4411,8 @@ impl AllQueryArguments {
     }
 }
 
-/// <p>One query argument in a web request, identified by name, for example <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive. </p>
+/// <p>Inspect one query argument in the web request, identified by name, for example <i>UserName</i> or <i>SalesRegion</i>. The name isn't case sensitive. </p>
+/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
 /// <p>Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3610,6 +4435,7 @@ impl std::fmt::Debug for SingleQueryArgument {
 }
 /// See [`SingleQueryArgument`](crate::model::SingleQueryArgument)
 pub mod single_query_argument {
+
     /// A builder for [`SingleQueryArgument`](crate::model::SingleQueryArgument)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3640,8 +4466,9 @@ impl SingleQueryArgument {
     }
 }
 
-/// <p>One of the headers in a web request, identified by name, for example, <code>User-Agent</code> or <code>Referer</code>. This setting isn't case sensitive.</p>
-/// <p>This is used only to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
+/// <p>Inspect one of the headers in the web request, identified by name, for example, <code>User-Agent</code> or <code>Referer</code>. The name isn't case sensitive.</p>
+/// <p>You can filter and inspect all headers with the <code>FieldToMatch</code> setting <code>Headers</code>.</p>
+/// <p>This is used to indicate the web request component for WAF to inspect, in the <code>FieldToMatch</code> specification. </p>
 /// <p>Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code> </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3664,6 +4491,7 @@ impl std::fmt::Debug for SingleHeader {
 }
 /// See [`SingleHeader`](crate::model::SingleHeader)
 pub mod single_header {
+
     /// A builder for [`SingleHeader`](crate::model::SingleHeader)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3734,6 +4562,7 @@ impl std::fmt::Debug for LabelMatchStatement {
 }
 /// See [`LabelMatchStatement`](crate::model::LabelMatchStatement)
 pub mod label_match_statement {
+
     /// A builder for [`LabelMatchStatement`](crate::model::LabelMatchStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3914,6 +4743,7 @@ impl std::fmt::Debug for ManagedRuleGroupStatement {
 }
 /// See [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement)
 pub mod managed_rule_group_statement {
+
     /// A builder for [`ManagedRuleGroupStatement`](crate::model::ManagedRuleGroupStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4084,6 +4914,7 @@ impl std::fmt::Debug for ManagedRuleGroupConfig {
 }
 /// See [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig)
 pub mod managed_rule_group_config {
+
     /// A builder for [`ManagedRuleGroupConfig`](crate::model::ManagedRuleGroupConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4183,6 +5014,7 @@ impl std::fmt::Debug for PasswordField {
 }
 /// See [`PasswordField`](crate::model::PasswordField)
 pub mod password_field {
+
     /// A builder for [`PasswordField`](crate::model::PasswordField)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4237,6 +5069,7 @@ impl std::fmt::Debug for UsernameField {
 }
 /// See [`UsernameField`](crate::model::UsernameField)
 pub mod username_field {
+
     /// A builder for [`UsernameField`](crate::model::UsernameField)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4346,6 +5179,7 @@ impl std::fmt::Debug for ExcludedRule {
 }
 /// See [`ExcludedRule`](crate::model::ExcludedRule)
 pub mod excluded_rule {
+
     /// A builder for [`ExcludedRule`](crate::model::ExcludedRule)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4398,6 +5232,7 @@ impl std::fmt::Debug for NotStatement {
 }
 /// See [`NotStatement`](crate::model::NotStatement)
 pub mod not_statement {
+
     /// A builder for [`NotStatement`](crate::model::NotStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4458,6 +5293,7 @@ impl std::fmt::Debug for OrStatement {
 }
 /// See [`OrStatement`](crate::model::OrStatement)
 pub mod or_statement {
+
     /// A builder for [`OrStatement`](crate::model::OrStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4521,6 +5357,7 @@ impl std::fmt::Debug for AndStatement {
 }
 /// See [`AndStatement`](crate::model::AndStatement)
 pub mod and_statement {
+
     /// A builder for [`AndStatement`](crate::model::AndStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4630,6 +5467,7 @@ impl std::fmt::Debug for RateBasedStatement {
 }
 /// See [`RateBasedStatement`](crate::model::RateBasedStatement)
 pub mod rate_based_statement {
+
     /// A builder for [`RateBasedStatement`](crate::model::RateBasedStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4780,6 +5618,7 @@ impl std::fmt::Debug for ForwardedIpConfig {
 }
 /// See [`ForwardedIpConfig`](crate::model::ForwardedIpConfig)
 pub mod forwarded_ip_config {
+
     /// A builder for [`ForwardedIpConfig`](crate::model::ForwardedIpConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4962,7 +5801,7 @@ impl AsRef<str> for RateBasedStatementAggregateKeyType {
 pub struct RegexPatternSetReferenceStatement {
     /// <p>The Amazon Resource Name (ARN) of the <code>RegexPatternSet</code> that this statement references.</p>
     pub arn: std::option::Option<std::string::String>,
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
@@ -4972,7 +5811,7 @@ impl RegexPatternSetReferenceStatement {
     pub fn arn(&self) -> std::option::Option<&str> {
         self.arn.as_deref()
     }
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -4992,6 +5831,7 @@ impl std::fmt::Debug for RegexPatternSetReferenceStatement {
 }
 /// See [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement)
 pub mod regex_pattern_set_reference_statement {
+
     /// A builder for [`RegexPatternSetReferenceStatement`](crate::model::RegexPatternSetReferenceStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5012,12 +5852,12 @@ pub mod regex_pattern_set_reference_statement {
             self.arn = input;
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -5100,6 +5940,7 @@ impl std::fmt::Debug for IpSetReferenceStatement {
 }
 /// See [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement)
 pub mod ip_set_reference_statement {
+
     /// A builder for [`IpSetReferenceStatement`](crate::model::IpSetReferenceStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5224,6 +6065,7 @@ impl std::fmt::Debug for IpSetForwardedIpConfig {
 }
 /// See [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig)
 pub mod ip_set_forwarded_ip_config {
+
     /// A builder for [`IpSetForwardedIpConfig`](crate::model::IpSetForwardedIpConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5405,6 +6247,7 @@ impl std::fmt::Debug for RuleGroupReferenceStatement {
 }
 /// See [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement)
 pub mod rule_group_reference_statement {
+
     /// A builder for [`RuleGroupReferenceStatement`](crate::model::RuleGroupReferenceStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5491,6 +6334,7 @@ impl std::fmt::Debug for GeoMatchStatement {
 }
 /// See [`GeoMatchStatement`](crate::model::GeoMatchStatement)
 pub mod geo_match_statement {
+
     /// A builder for [`GeoMatchStatement`](crate::model::GeoMatchStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6052,6 +6896,8 @@ pub enum CountryCode {
     #[allow(missing_docs)] // documentation missing in model
     Ws,
     #[allow(missing_docs)] // documentation missing in model
+    Xk,
+    #[allow(missing_docs)] // documentation missing in model
     Ye,
     #[allow(missing_docs)] // documentation missing in model
     Yt,
@@ -6311,6 +7157,7 @@ impl std::convert::From<&str> for CountryCode {
             "VU" => CountryCode::Vu,
             "WF" => CountryCode::Wf,
             "WS" => CountryCode::Ws,
+            "XK" => CountryCode::Xk,
             "YE" => CountryCode::Ye,
             "YT" => CountryCode::Yt,
             "ZA" => CountryCode::Za,
@@ -6575,6 +7422,7 @@ impl CountryCode {
             CountryCode::Vu => "VU",
             CountryCode::Wf => "WF",
             CountryCode::Ws => "WS",
+            CountryCode::Xk => "XK",
             CountryCode::Ye => "YE",
             CountryCode::Yt => "YT",
             CountryCode::Za => "ZA",
@@ -6603,7 +7451,7 @@ impl CountryCode {
             "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV",
             "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO",
             "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE",
-            "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW",
+            "VG", "VI", "VN", "VU", "WF", "WS", "XK", "YE", "YT", "ZA", "ZM", "ZW",
         ]
     }
 }
@@ -6619,7 +7467,7 @@ impl AsRef<str> for CountryCode {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SizeConstraintStatement {
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>The operator to use to compare the request part to the size setting. </p>
     pub comparison_operator: std::option::Option<crate::model::ComparisonOperator>,
@@ -6629,7 +7477,7 @@ pub struct SizeConstraintStatement {
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
 }
 impl SizeConstraintStatement {
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -6658,6 +7506,7 @@ impl std::fmt::Debug for SizeConstraintStatement {
 }
 /// See [`SizeConstraintStatement`](crate::model::SizeConstraintStatement)
 pub mod size_constraint_statement {
+
     /// A builder for [`SizeConstraintStatement`](crate::model::SizeConstraintStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6669,12 +7518,12 @@ pub mod size_constraint_statement {
             std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
     }
     impl Builder {
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -6817,13 +7666,13 @@ impl AsRef<str> for ComparisonOperator {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct XssMatchStatement {
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
 }
 impl XssMatchStatement {
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -6842,6 +7691,7 @@ impl std::fmt::Debug for XssMatchStatement {
 }
 /// See [`XssMatchStatement`](crate::model::XssMatchStatement)
 pub mod xss_match_statement {
+
     /// A builder for [`XssMatchStatement`](crate::model::XssMatchStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6851,12 +7701,12 @@ pub mod xss_match_statement {
             std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
     }
     impl Builder {
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -6903,13 +7753,13 @@ impl XssMatchStatement {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct SqliMatchStatement {
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
 }
 impl SqliMatchStatement {
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -6928,6 +7778,7 @@ impl std::fmt::Debug for SqliMatchStatement {
 }
 /// See [`SqliMatchStatement`](crate::model::SqliMatchStatement)
 pub mod sqli_match_statement {
+
     /// A builder for [`SqliMatchStatement`](crate::model::SqliMatchStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6937,12 +7788,12 @@ pub mod sqli_match_statement {
             std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
     }
     impl Builder {
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -7002,11 +7853,11 @@ pub struct ByteMatchStatement {
     /// <p> <b>If you're using the CLI or one of the Amazon Web Services SDKs</b> </p>
     /// <p>The value that you want WAF to search for. The SDK automatically base64 encodes the value.</p>
     pub search_string: std::option::Option<aws_smithy_types::Blob>,
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub field_to_match: std::option::Option<crate::model::FieldToMatch>,
     /// <p>Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection. If you specify one or more transformations in a rule statement, WAF performs all transformations on the content of the request component identified by <code>FieldToMatch</code>, starting from the lowest priority setting, before inspecting the content for a match.</p>
     pub text_transformations: std::option::Option<std::vec::Vec<crate::model::TextTransformation>>,
-    /// <p>The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
+    /// <p>The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
     /// <p> <b>CONTAINS</b> </p>
     /// <p>The specified part of the web request must include the value of <code>SearchString</code>, but the location doesn't matter.</p>
     /// <p> <b>CONTAINS_WORD</b> </p>
@@ -7039,7 +7890,7 @@ impl ByteMatchStatement {
     pub fn search_string(&self) -> std::option::Option<&aws_smithy_types::Blob> {
         self.search_string.as_ref()
     }
-    /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+    /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
     pub fn field_to_match(&self) -> std::option::Option<&crate::model::FieldToMatch> {
         self.field_to_match.as_ref()
     }
@@ -7047,7 +7898,7 @@ impl ByteMatchStatement {
     pub fn text_transformations(&self) -> std::option::Option<&[crate::model::TextTransformation]> {
         self.text_transformations.as_deref()
     }
-    /// <p>The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
+    /// <p>The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
     /// <p> <b>CONTAINS</b> </p>
     /// <p>The specified part of the web request must include the value of <code>SearchString</code>, but the location doesn't matter.</p>
     /// <p> <b>CONTAINS_WORD</b> </p>
@@ -7080,6 +7931,7 @@ impl std::fmt::Debug for ByteMatchStatement {
 }
 /// See [`ByteMatchStatement`](crate::model::ByteMatchStatement)
 pub mod byte_match_statement {
+
     /// A builder for [`ByteMatchStatement`](crate::model::ByteMatchStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7126,12 +7978,12 @@ pub mod byte_match_statement {
             self.search_string = input;
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn field_to_match(mut self, input: crate::model::FieldToMatch) -> Self {
             self.field_to_match = Some(input);
             self
         }
-        /// <p>The part of a web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
+        /// <p>The part of the web request that you want WAF to inspect. For more information, see <code>FieldToMatch</code>. </p>
         pub fn set_field_to_match(
             mut self,
             input: std::option::Option<crate::model::FieldToMatch>,
@@ -7158,7 +8010,7 @@ pub mod byte_match_statement {
             self.text_transformations = input;
             self
         }
-        /// <p>The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
+        /// <p>The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
         /// <p> <b>CONTAINS</b> </p>
         /// <p>The specified part of the web request must include the value of <code>SearchString</code>, but the location doesn't matter.</p>
         /// <p> <b>CONTAINS_WORD</b> </p>
@@ -7177,7 +8029,7 @@ pub mod byte_match_statement {
             self.positional_constraint = Some(input);
             self
         }
-        /// <p>The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
+        /// <p>The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid values include the following:</p>
         /// <p> <b>CONTAINS</b> </p>
         /// <p>The specified part of the web request must include the value of <code>SearchString</code>, but the location doesn't matter.</p>
         /// <p> <b>CONTAINS_WORD</b> </p>
@@ -7319,6 +8171,7 @@ impl std::fmt::Debug for DefaultAction {
 }
 /// See [`DefaultAction`](crate::model::DefaultAction)
 pub mod default_action {
+
     /// A builder for [`DefaultAction`](crate::model::DefaultAction)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7440,6 +8293,7 @@ impl std::fmt::Debug for Regex {
 }
 /// See [`Regex`](crate::model::Regex)
 pub mod regex {
+
     /// A builder for [`Regex`](crate::model::Regex)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7502,6 +8356,7 @@ impl std::fmt::Debug for Tag {
 }
 /// See [`Tag`](crate::model::Tag)
 pub mod tag {
+
     /// A builder for [`Tag`](crate::model::Tag)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7578,6 +8433,7 @@ impl std::fmt::Debug for VersionToPublish {
 }
 /// See [`VersionToPublish`](crate::model::VersionToPublish)
 pub mod version_to_publish {
+
     /// A builder for [`VersionToPublish`](crate::model::VersionToPublish)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7695,6 +8551,7 @@ impl std::fmt::Debug for LoggingConfiguration {
 }
 /// See [`LoggingConfiguration`](crate::model::LoggingConfiguration)
 pub mod logging_configuration {
+
     /// A builder for [`LoggingConfiguration`](crate::model::LoggingConfiguration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7834,6 +8691,7 @@ impl std::fmt::Debug for LoggingFilter {
 }
 /// See [`LoggingFilter`](crate::model::LoggingFilter)
 pub mod logging_filter {
+
     /// A builder for [`LoggingFilter`](crate::model::LoggingFilter)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7981,6 +8839,7 @@ impl std::fmt::Debug for Filter {
 }
 /// See [`Filter`](crate::model::Filter)
 pub mod filter {
+
     /// A builder for [`Filter`](crate::model::Filter)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8081,6 +8940,7 @@ impl std::fmt::Debug for Condition {
 }
 /// See [`Condition`](crate::model::Condition)
 pub mod condition {
+
     /// A builder for [`Condition`](crate::model::Condition)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8153,6 +9013,7 @@ impl std::fmt::Debug for LabelNameCondition {
 }
 /// See [`LabelNameCondition`](crate::model::LabelNameCondition)
 pub mod label_name_condition {
+
     /// A builder for [`LabelNameCondition`](crate::model::LabelNameCondition)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8207,6 +9068,7 @@ impl std::fmt::Debug for ActionCondition {
 }
 /// See [`ActionCondition`](crate::model::ActionCondition)
 pub mod action_condition {
+
     /// A builder for [`ActionCondition`](crate::model::ActionCondition)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8411,6 +9273,7 @@ impl std::fmt::Debug for WebAclSummary {
 }
 /// See [`WebAclSummary`](crate::model::WebAclSummary)
 pub mod web_acl_summary {
+
     /// A builder for [`WebAclSummary`](crate::model::WebAclSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8521,6 +9384,7 @@ impl std::fmt::Debug for TagInfoForResource {
 }
 /// See [`TagInfoForResource`](crate::model::TagInfoForResource)
 pub mod tag_info_for_resource {
+
     /// A builder for [`TagInfoForResource`](crate::model::TagInfoForResource)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8624,6 +9488,7 @@ impl std::fmt::Debug for RuleGroupSummary {
 }
 /// See [`RuleGroupSummary`](crate::model::RuleGroupSummary)
 pub mod rule_group_summary {
+
     /// A builder for [`RuleGroupSummary`](crate::model::RuleGroupSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8813,6 +9678,7 @@ impl std::fmt::Debug for RegexPatternSetSummary {
 }
 /// See [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
 pub mod regex_pattern_set_summary {
+
     /// A builder for [`RegexPatternSetSummary`](crate::model::RegexPatternSetSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8922,6 +9788,7 @@ impl std::fmt::Debug for ReleaseSummary {
 }
 /// See [`ReleaseSummary`](crate::model::ReleaseSummary)
 pub mod release_summary {
+
     /// A builder for [`ReleaseSummary`](crate::model::ReleaseSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9105,6 +9972,7 @@ impl std::fmt::Debug for ManagedRuleSetSummary {
 }
 /// See [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary)
 pub mod managed_rule_set_summary {
+
     /// A builder for [`ManagedRuleSetSummary`](crate::model::ManagedRuleSetSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9268,6 +10136,7 @@ impl std::fmt::Debug for IpSetSummary {
 }
 /// See [`IpSetSummary`](crate::model::IpSetSummary)
 pub mod ip_set_summary {
+
     /// A builder for [`IpSetSummary`](crate::model::IpSetSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9377,6 +10246,7 @@ impl std::fmt::Debug for ManagedRuleGroupVersion {
 }
 /// See [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion)
 pub mod managed_rule_group_version {
+
     /// A builder for [`ManagedRuleGroupVersion`](crate::model::ManagedRuleGroupVersion)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9467,6 +10337,7 @@ impl std::fmt::Debug for ManagedRuleGroupSummary {
 }
 /// See [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary)
 pub mod managed_rule_group_summary {
+
     /// A builder for [`ManagedRuleGroupSummary`](crate::model::ManagedRuleGroupSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9699,6 +10570,7 @@ impl std::fmt::Debug for WebAcl {
 }
 /// See [`WebAcl`](crate::model::WebAcl)
 pub mod web_acl {
+
     /// A builder for [`WebAcl`](crate::model::WebAcl)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10048,6 +10920,7 @@ impl std::fmt::Debug for FirewallManagerRuleGroup {
 }
 /// See [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup)
 pub mod firewall_manager_rule_group {
+
     /// A builder for [`FirewallManagerRuleGroup`](crate::model::FirewallManagerRuleGroup)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10191,6 +11064,7 @@ impl std::fmt::Debug for FirewallManagerStatement {
 }
 /// See [`FirewallManagerStatement`](crate::model::FirewallManagerStatement)
 pub mod firewall_manager_statement {
+
     /// A builder for [`FirewallManagerStatement`](crate::model::FirewallManagerStatement)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10284,6 +11158,7 @@ impl std::fmt::Debug for TimeWindow {
 }
 /// See [`TimeWindow`](crate::model::TimeWindow)
 pub mod time_window {
+
     /// A builder for [`TimeWindow`](crate::model::TimeWindow)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10439,6 +11314,7 @@ impl std::fmt::Debug for SampledHttpRequest {
 }
 /// See [`SampledHttpRequest`](crate::model::SampledHttpRequest)
 pub mod sampled_http_request {
+
     /// A builder for [`SampledHttpRequest`](crate::model::SampledHttpRequest)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10661,6 +11537,7 @@ impl std::fmt::Debug for CaptchaResponse {
 }
 /// See [`CaptchaResponse`](crate::model::CaptchaResponse)
 pub mod captcha_response {
+
     /// A builder for [`CaptchaResponse`](crate::model::CaptchaResponse)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10804,6 +11681,7 @@ impl std::fmt::Debug for HttpHeader {
 }
 /// See [`HttpHeader`](crate::model::HttpHeader)
 pub mod http_header {
+
     /// A builder for [`HttpHeader`](crate::model::HttpHeader)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10913,6 +11791,7 @@ impl std::fmt::Debug for HttpRequest {
 }
 /// See [`HttpRequest`](crate::model::HttpRequest)
 pub mod http_request {
+
     /// A builder for [`HttpRequest`](crate::model::HttpRequest)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11148,6 +12027,7 @@ impl std::fmt::Debug for RuleGroup {
 }
 /// See [`RuleGroup`](crate::model::RuleGroup)
 pub mod rule_group {
+
     /// A builder for [`RuleGroup`](crate::model::RuleGroup)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11404,6 +12284,7 @@ impl std::fmt::Debug for LabelSummary {
 }
 /// See [`LabelSummary`](crate::model::LabelSummary)
 pub mod label_summary {
+
     /// A builder for [`LabelSummary`](crate::model::LabelSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11485,6 +12366,7 @@ impl std::fmt::Debug for RegexPatternSet {
 }
 /// See [`RegexPatternSet`](crate::model::RegexPatternSet)
 pub mod regex_pattern_set {
+
     /// A builder for [`RegexPatternSet`](crate::model::RegexPatternSet)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11603,6 +12485,7 @@ impl std::fmt::Debug for RateBasedStatementManagedKeysIpSet {
 }
 /// See [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet)
 pub mod rate_based_statement_managed_keys_ip_set {
+
     /// A builder for [`RateBasedStatementManagedKeysIpSet`](crate::model::RateBasedStatementManagedKeysIpSet)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11758,6 +12641,7 @@ impl std::fmt::Debug for MobileSdkRelease {
 }
 /// See [`MobileSdkRelease`](crate::model::MobileSdkRelease)
 pub mod mobile_sdk_release {
+
     /// A builder for [`MobileSdkRelease`](crate::model::MobileSdkRelease)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11935,6 +12819,7 @@ impl std::fmt::Debug for ManagedRuleSet {
 }
 /// See [`ManagedRuleSet`](crate::model::ManagedRuleSet)
 pub mod managed_rule_set {
+
     /// A builder for [`ManagedRuleSet`](crate::model::ManagedRuleSet)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12148,6 +13033,7 @@ impl std::fmt::Debug for ManagedRuleSetVersion {
 }
 /// See [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion)
 pub mod managed_rule_set_version {
+
     /// A builder for [`ManagedRuleSetVersion`](crate::model::ManagedRuleSetVersion)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12348,6 +13234,7 @@ impl std::fmt::Debug for IpSet {
 }
 /// See [`IpSet`](crate::model::IpSet)
 pub mod ip_set {
+
     /// A builder for [`IpSet`](crate::model::IpSet)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12511,6 +13398,7 @@ impl std::fmt::Debug for RuleSummary {
 }
 /// See [`RuleSummary`](crate::model::RuleSummary)
 pub mod rule_summary {
+
     /// A builder for [`RuleSummary`](crate::model::RuleSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

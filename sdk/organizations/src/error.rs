@@ -277,11 +277,15 @@ pub enum AttachPolicyErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -760,11 +764,15 @@ pub enum CloseAccountErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -1010,11 +1018,15 @@ pub enum CreateAccountErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -1247,11 +1259,15 @@ pub enum CreateGovCloudAccountErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -1505,11 +1521,15 @@ pub enum CreateOrganizationErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -1737,11 +1757,15 @@ pub enum CreateOrganizationalUnitErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -1997,11 +2021,15 @@ pub enum CreatePolicyErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -3060,11 +3088,15 @@ pub enum DeregisterDelegatedAdministratorErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -3724,11 +3756,15 @@ pub enum DescribeEffectivePolicyErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -4670,11 +4706,15 @@ pub enum DetachPolicyErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -4940,11 +4980,15 @@ pub enum DisableAWSServiceAccessErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -5187,11 +5231,15 @@ pub enum DisablePolicyTypeErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -5656,11 +5704,15 @@ pub enum EnableAWSServiceAccessErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -5903,11 +5955,15 @@ pub enum EnablePolicyTypeErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -6187,11 +6243,15 @@ pub enum InviteAccountToOrganizationErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -6498,11 +6558,15 @@ pub enum LeaveOrganizationErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -7079,11 +7143,15 @@ pub enum ListAWSServiceAccessForOrganizationErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -7685,11 +7753,15 @@ pub enum ListDelegatedAdministratorsErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -7925,11 +7997,15 @@ pub enum ListDelegatedServicesForAccountErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -10030,11 +10106,15 @@ pub enum RegisterDelegatedAdministratorErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -10316,11 +10396,15 @@ pub enum RemoveAccountFromOrganizationErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -10587,11 +10671,15 @@ pub enum TagResourceErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -10810,11 +10898,15 @@ pub enum UntagResourceErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -11251,11 +11343,15 @@ pub enum UpdatePolicyErrorKind {
     /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
     /// </important> </li>
     /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+    /// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
     /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+    /// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
     /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
     /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
     /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
     /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
     /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -11524,6 +11620,7 @@ impl std::fmt::Display for UnsupportedApiEndpointException {
 impl std::error::Error for UnsupportedApiEndpointException {}
 /// See [`UnsupportedApiEndpointException`](crate::error::UnsupportedApiEndpointException)
 pub mod unsupported_api_endpoint_exception {
+
     /// A builder for [`UnsupportedApiEndpointException`](crate::error::UnsupportedApiEndpointException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11598,6 +11695,7 @@ impl std::fmt::Display for TooManyRequestsException {
 impl std::error::Error for TooManyRequestsException {}
 /// See [`TooManyRequestsException`](crate::error::TooManyRequestsException)
 pub mod too_many_requests_exception {
+
     /// A builder for [`TooManyRequestsException`](crate::error::TooManyRequestsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11674,6 +11772,7 @@ impl std::fmt::Display for ServiceException {
 impl std::error::Error for ServiceException {}
 /// See [`ServiceException`](crate::error::ServiceException)
 pub mod service_exception {
+
     /// A builder for [`ServiceException`](crate::error::ServiceException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11738,6 +11837,7 @@ impl std::fmt::Display for PolicyNotFoundException {
 impl std::error::Error for PolicyNotFoundException {}
 /// See [`PolicyNotFoundException`](crate::error::PolicyNotFoundException)
 pub mod policy_not_found_exception {
+
     /// A builder for [`PolicyNotFoundException`](crate::error::PolicyNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11802,6 +11902,7 @@ impl std::fmt::Display for PolicyChangesInProgressException {
 impl std::error::Error for PolicyChangesInProgressException {}
 /// See [`PolicyChangesInProgressException`](crate::error::PolicyChangesInProgressException)
 pub mod policy_changes_in_progress_exception {
+
     /// A builder for [`PolicyChangesInProgressException`](crate::error::PolicyChangesInProgressException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11866,6 +11967,7 @@ impl std::fmt::Display for MalformedPolicyDocumentException {
 impl std::error::Error for MalformedPolicyDocumentException {}
 /// See [`MalformedPolicyDocumentException`](crate::error::MalformedPolicyDocumentException)
 pub mod malformed_policy_document_exception {
+
     /// A builder for [`MalformedPolicyDocumentException`](crate::error::MalformedPolicyDocumentException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11967,6 +12069,7 @@ impl std::fmt::Display for InvalidInputException {
 impl std::error::Error for InvalidInputException {}
 /// See [`InvalidInputException`](crate::error::InvalidInputException)
 pub mod invalid_input_exception {
+
     /// A builder for [`InvalidInputException`](crate::error::InvalidInputException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12046,6 +12149,7 @@ impl std::fmt::Display for DuplicatePolicyException {
 impl std::error::Error for DuplicatePolicyException {}
 /// See [`DuplicatePolicyException`](crate::error::DuplicatePolicyException)
 pub mod duplicate_policy_exception {
+
     /// A builder for [`DuplicatePolicyException`](crate::error::DuplicatePolicyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12091,11 +12195,15 @@ impl DuplicatePolicyException {
 /// <p>If you get this exception when running a command immediately after creating the organization, wait one hour and try again. After an hour, if the command continues to fail with this error, contact <a href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.</p>
 /// </important> </li>
 /// <li> <p>CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of the organization as a delegated administrator for an Amazon Web Services service integrated with Organizations. You can designate only a member account as a delegated administrator.</p> </li>
+/// <li> <p>CANNOT_CLOSE_MANAGEMENT_ACCOUNT: You attempted to close the management account. To close the management account for the organization, you must first either remove or close all member accounts in the organization. Follow standard account closure process using root credentials.​ </p> </li>
 /// <li> <p>CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as a delegated administrator for a service integrated with your organization. To complete this operation, you must first deregister this account as a delegated administrator. </p> </li>
+/// <li> <p>CLOSE_ACCOUNT_QUOTA_EXCEEDED: You have exceeded close account quota for the past 30 days. </p> </li>
+/// <li> <p>CLOSE_ACCOUNT_REQUESTS_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can close at a time. ​ </p> </li>
 /// <li> <p>CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified region, you must enable all features mode.</p> </li>
 /// <li> <p>DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account as a delegated administrator for an Amazon Web Services service that already has a delegated administrator. To complete this operation, you must first deregister any existing delegated administrators for this service.</p> </li>
 /// <li> <p>EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time. You must resubmit the request and generate a new verfication code.</p> </li>
 /// <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one day.</p> </li>
+/// <li> <p>INVALID_PAYMENT_INSTRUMENT: You cannot remove an account because no supported payment method is associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
 /// <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's management account to the marketplace that corresponds to the management account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li>
 /// <li> <p>MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China. To create an organization, the master must have a valid business license. For more information, contact customer support.</p> </li>
 /// <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact address and phone number for the management account. Then try the operation again.</p> </li>
@@ -12155,6 +12263,7 @@ impl std::fmt::Display for ConstraintViolationException {
 impl std::error::Error for ConstraintViolationException {}
 /// See [`ConstraintViolationException`](crate::error::ConstraintViolationException)
 pub mod constraint_violation_exception {
+
     /// A builder for [`ConstraintViolationException`](crate::error::ConstraintViolationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12234,6 +12343,7 @@ impl std::fmt::Display for ConcurrentModificationException {
 impl std::error::Error for ConcurrentModificationException {}
 /// See [`ConcurrentModificationException`](crate::error::ConcurrentModificationException)
 pub mod concurrent_modification_exception {
+
     /// A builder for [`ConcurrentModificationException`](crate::error::ConcurrentModificationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12301,6 +12411,7 @@ impl std::fmt::Display for AwsOrganizationsNotInUseException {
 impl std::error::Error for AwsOrganizationsNotInUseException {}
 /// See [`AwsOrganizationsNotInUseException`](crate::error::AwsOrganizationsNotInUseException)
 pub mod aws_organizations_not_in_use_exception {
+
     /// A builder for [`AwsOrganizationsNotInUseException`](crate::error::AwsOrganizationsNotInUseException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12365,6 +12476,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12429,6 +12541,7 @@ impl std::fmt::Display for OrganizationalUnitNotFoundException {
 impl std::error::Error for OrganizationalUnitNotFoundException {}
 /// See [`OrganizationalUnitNotFoundException`](crate::error::OrganizationalUnitNotFoundException)
 pub mod organizational_unit_not_found_exception {
+
     /// A builder for [`OrganizationalUnitNotFoundException`](crate::error::OrganizationalUnitNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12493,6 +12606,7 @@ impl std::fmt::Display for DuplicateOrganizationalUnitException {
 impl std::error::Error for DuplicateOrganizationalUnitException {}
 /// See [`DuplicateOrganizationalUnitException`](crate::error::DuplicateOrganizationalUnitException)
 pub mod duplicate_organizational_unit_exception {
+
     /// A builder for [`DuplicateOrganizationalUnitException`](crate::error::DuplicateOrganizationalUnitException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12557,6 +12671,7 @@ impl std::fmt::Display for TargetNotFoundException {
 impl std::error::Error for TargetNotFoundException {}
 /// See [`TargetNotFoundException`](crate::error::TargetNotFoundException)
 pub mod target_not_found_exception {
+
     /// A builder for [`TargetNotFoundException`](crate::error::TargetNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12621,6 +12736,7 @@ impl std::fmt::Display for MasterCannotLeaveOrganizationException {
 impl std::error::Error for MasterCannotLeaveOrganizationException {}
 /// See [`MasterCannotLeaveOrganizationException`](crate::error::MasterCannotLeaveOrganizationException)
 pub mod master_cannot_leave_organization_exception {
+
     /// A builder for [`MasterCannotLeaveOrganizationException`](crate::error::MasterCannotLeaveOrganizationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12685,6 +12801,7 @@ impl std::fmt::Display for AccountNotFoundException {
 impl std::error::Error for AccountNotFoundException {}
 /// See [`AccountNotFoundException`](crate::error::AccountNotFoundException)
 pub mod account_not_found_exception {
+
     /// A builder for [`AccountNotFoundException`](crate::error::AccountNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12749,6 +12866,7 @@ impl std::fmt::Display for AccountAlreadyRegisteredException {
 impl std::error::Error for AccountAlreadyRegisteredException {}
 /// See [`AccountAlreadyRegisteredException`](crate::error::AccountAlreadyRegisteredException)
 pub mod account_already_registered_exception {
+
     /// A builder for [`AccountAlreadyRegisteredException`](crate::error::AccountAlreadyRegisteredException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12813,6 +12931,7 @@ impl std::fmt::Display for SourceParentNotFoundException {
 impl std::error::Error for SourceParentNotFoundException {}
 /// See [`SourceParentNotFoundException`](crate::error::SourceParentNotFoundException)
 pub mod source_parent_not_found_exception {
+
     /// A builder for [`SourceParentNotFoundException`](crate::error::SourceParentNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12877,6 +12996,7 @@ impl std::fmt::Display for DuplicateAccountException {
 impl std::error::Error for DuplicateAccountException {}
 /// See [`DuplicateAccountException`](crate::error::DuplicateAccountException)
 pub mod duplicate_account_exception {
+
     /// A builder for [`DuplicateAccountException`](crate::error::DuplicateAccountException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12941,6 +13061,7 @@ impl std::fmt::Display for DestinationParentNotFoundException {
 impl std::error::Error for DestinationParentNotFoundException {}
 /// See [`DestinationParentNotFoundException`](crate::error::DestinationParentNotFoundException)
 pub mod destination_parent_not_found_exception {
+
     /// A builder for [`DestinationParentNotFoundException`](crate::error::DestinationParentNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13005,6 +13126,7 @@ impl std::fmt::Display for ChildNotFoundException {
 impl std::error::Error for ChildNotFoundException {}
 /// See [`ChildNotFoundException`](crate::error::ChildNotFoundException)
 pub mod child_not_found_exception {
+
     /// A builder for [`ChildNotFoundException`](crate::error::ChildNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13069,6 +13191,7 @@ impl std::fmt::Display for ParentNotFoundException {
 impl std::error::Error for ParentNotFoundException {}
 /// See [`ParentNotFoundException`](crate::error::ParentNotFoundException)
 pub mod parent_not_found_exception {
+
     /// A builder for [`ParentNotFoundException`](crate::error::ParentNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13133,6 +13256,7 @@ impl std::fmt::Display for AccountNotRegisteredException {
 impl std::error::Error for AccountNotRegisteredException {}
 /// See [`AccountNotRegisteredException`](crate::error::AccountNotRegisteredException)
 pub mod account_not_registered_exception {
+
     /// A builder for [`AccountNotRegisteredException`](crate::error::AccountNotRegisteredException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13223,6 +13347,7 @@ impl std::fmt::Display for HandshakeConstraintViolationException {
 impl std::error::Error for HandshakeConstraintViolationException {}
 /// See [`HandshakeConstraintViolationException`](crate::error::HandshakeConstraintViolationException)
 pub mod handshake_constraint_violation_exception {
+
     /// A builder for [`HandshakeConstraintViolationException`](crate::error::HandshakeConstraintViolationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13306,6 +13431,7 @@ impl std::fmt::Display for FinalizingOrganizationException {
 impl std::error::Error for FinalizingOrganizationException {}
 /// See [`FinalizingOrganizationException`](crate::error::FinalizingOrganizationException)
 pub mod finalizing_organization_exception {
+
     /// A builder for [`FinalizingOrganizationException`](crate::error::FinalizingOrganizationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13370,6 +13496,7 @@ impl std::fmt::Display for DuplicateHandshakeException {
 impl std::error::Error for DuplicateHandshakeException {}
 /// See [`DuplicateHandshakeException`](crate::error::DuplicateHandshakeException)
 pub mod duplicate_handshake_exception {
+
     /// A builder for [`DuplicateHandshakeException`](crate::error::DuplicateHandshakeException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13434,6 +13561,7 @@ impl std::fmt::Display for AccountOwnerNotVerifiedException {
 impl std::error::Error for AccountOwnerNotVerifiedException {}
 /// See [`AccountOwnerNotVerifiedException`](crate::error::AccountOwnerNotVerifiedException)
 pub mod account_owner_not_verified_exception {
+
     /// A builder for [`AccountOwnerNotVerifiedException`](crate::error::AccountOwnerNotVerifiedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13498,6 +13626,7 @@ impl std::fmt::Display for RootNotFoundException {
 impl std::error::Error for RootNotFoundException {}
 /// See [`RootNotFoundException`](crate::error::RootNotFoundException)
 pub mod root_not_found_exception {
+
     /// A builder for [`RootNotFoundException`](crate::error::RootNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13562,6 +13691,7 @@ impl std::fmt::Display for PolicyTypeNotAvailableForOrganizationException {
 impl std::error::Error for PolicyTypeNotAvailableForOrganizationException {}
 /// See [`PolicyTypeNotAvailableForOrganizationException`](crate::error::PolicyTypeNotAvailableForOrganizationException)
 pub mod policy_type_not_available_for_organization_exception {
+
     /// A builder for [`PolicyTypeNotAvailableForOrganizationException`](crate::error::PolicyTypeNotAvailableForOrganizationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13627,6 +13757,7 @@ impl std::fmt::Display for PolicyTypeAlreadyEnabledException {
 impl std::error::Error for PolicyTypeAlreadyEnabledException {}
 /// See [`PolicyTypeAlreadyEnabledException`](crate::error::PolicyTypeAlreadyEnabledException)
 pub mod policy_type_already_enabled_exception {
+
     /// A builder for [`PolicyTypeAlreadyEnabledException`](crate::error::PolicyTypeAlreadyEnabledException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13691,6 +13822,7 @@ impl std::fmt::Display for PolicyTypeNotEnabledException {
 impl std::error::Error for PolicyTypeNotEnabledException {}
 /// See [`PolicyTypeNotEnabledException`](crate::error::PolicyTypeNotEnabledException)
 pub mod policy_type_not_enabled_exception {
+
     /// A builder for [`PolicyTypeNotEnabledException`](crate::error::PolicyTypeNotEnabledException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13755,6 +13887,7 @@ impl std::fmt::Display for PolicyNotAttachedException {
 impl std::error::Error for PolicyNotAttachedException {}
 /// See [`PolicyNotAttachedException`](crate::error::PolicyNotAttachedException)
 pub mod policy_not_attached_exception {
+
     /// A builder for [`PolicyNotAttachedException`](crate::error::PolicyNotAttachedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13819,6 +13952,7 @@ impl std::fmt::Display for HandshakeNotFoundException {
 impl std::error::Error for HandshakeNotFoundException {}
 /// See [`HandshakeNotFoundException`](crate::error::HandshakeNotFoundException)
 pub mod handshake_not_found_exception {
+
     /// A builder for [`HandshakeNotFoundException`](crate::error::HandshakeNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13883,6 +14017,7 @@ impl std::fmt::Display for EffectivePolicyNotFoundException {
 impl std::error::Error for EffectivePolicyNotFoundException {}
 /// See [`EffectivePolicyNotFoundException`](crate::error::EffectivePolicyNotFoundException)
 pub mod effective_policy_not_found_exception {
+
     /// A builder for [`EffectivePolicyNotFoundException`](crate::error::EffectivePolicyNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13947,6 +14082,7 @@ impl std::fmt::Display for CreateAccountStatusNotFoundException {
 impl std::error::Error for CreateAccountStatusNotFoundException {}
 /// See [`CreateAccountStatusNotFoundException`](crate::error::CreateAccountStatusNotFoundException)
 pub mod create_account_status_not_found_exception {
+
     /// A builder for [`CreateAccountStatusNotFoundException`](crate::error::CreateAccountStatusNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14011,6 +14147,7 @@ impl std::fmt::Display for PolicyInUseException {
 impl std::error::Error for PolicyInUseException {}
 /// See [`PolicyInUseException`](crate::error::PolicyInUseException)
 pub mod policy_in_use_exception {
+
     /// A builder for [`PolicyInUseException`](crate::error::PolicyInUseException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14075,6 +14212,7 @@ impl std::fmt::Display for OrganizationalUnitNotEmptyException {
 impl std::error::Error for OrganizationalUnitNotEmptyException {}
 /// See [`OrganizationalUnitNotEmptyException`](crate::error::OrganizationalUnitNotEmptyException)
 pub mod organizational_unit_not_empty_exception {
+
     /// A builder for [`OrganizationalUnitNotEmptyException`](crate::error::OrganizationalUnitNotEmptyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14139,6 +14277,7 @@ impl std::fmt::Display for OrganizationNotEmptyException {
 impl std::error::Error for OrganizationNotEmptyException {}
 /// See [`OrganizationNotEmptyException`](crate::error::OrganizationNotEmptyException)
 pub mod organization_not_empty_exception {
+
     /// A builder for [`OrganizationNotEmptyException`](crate::error::OrganizationNotEmptyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14203,6 +14342,7 @@ impl std::fmt::Display for InvalidHandshakeTransitionException {
 impl std::error::Error for InvalidHandshakeTransitionException {}
 /// See [`InvalidHandshakeTransitionException`](crate::error::InvalidHandshakeTransitionException)
 pub mod invalid_handshake_transition_exception {
+
     /// A builder for [`InvalidHandshakeTransitionException`](crate::error::InvalidHandshakeTransitionException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14267,6 +14407,7 @@ impl std::fmt::Display for HandshakeAlreadyInStateException {
 impl std::error::Error for HandshakeAlreadyInStateException {}
 /// See [`HandshakeAlreadyInStateException`](crate::error::HandshakeAlreadyInStateException)
 pub mod handshake_already_in_state_exception {
+
     /// A builder for [`HandshakeAlreadyInStateException`](crate::error::HandshakeAlreadyInStateException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14331,6 +14472,7 @@ impl std::fmt::Display for AlreadyInOrganizationException {
 impl std::error::Error for AlreadyInOrganizationException {}
 /// See [`AlreadyInOrganizationException`](crate::error::AlreadyInOrganizationException)
 pub mod already_in_organization_exception {
+
     /// A builder for [`AlreadyInOrganizationException`](crate::error::AlreadyInOrganizationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14406,6 +14548,7 @@ impl std::fmt::Display for AccessDeniedForDependencyException {
 impl std::error::Error for AccessDeniedForDependencyException {}
 /// See [`AccessDeniedForDependencyException`](crate::error::AccessDeniedForDependencyException)
 pub mod access_denied_for_dependency_exception {
+
     /// A builder for [`AccessDeniedForDependencyException`](crate::error::AccessDeniedForDependencyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14489,6 +14632,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14553,6 +14697,7 @@ impl std::fmt::Display for AccountAlreadyClosedException {
 impl std::error::Error for AccountAlreadyClosedException {}
 /// See [`AccountAlreadyClosedException`](crate::error::AccountAlreadyClosedException)
 pub mod account_already_closed_exception {
+
     /// A builder for [`AccountAlreadyClosedException`](crate::error::AccountAlreadyClosedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14617,6 +14762,7 @@ impl std::fmt::Display for DuplicatePolicyAttachmentException {
 impl std::error::Error for DuplicatePolicyAttachmentException {}
 /// See [`DuplicatePolicyAttachmentException`](crate::error::DuplicatePolicyAttachmentException)
 pub mod duplicate_policy_attachment_exception {
+
     /// A builder for [`DuplicatePolicyAttachmentException`](crate::error::DuplicatePolicyAttachmentException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

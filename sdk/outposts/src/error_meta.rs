@@ -227,6 +227,31 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::GetConnectionError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::GetConnectionError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::GetConnectionErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::GetConnectionErrorKind::InternalServerException(inner) => {
+                    Error::InternalServerException(inner)
+                }
+                crate::error::GetConnectionErrorKind::NotFoundException(inner) => {
+                    Error::NotFoundException(inner)
+                }
+                crate::error::GetConnectionErrorKind::ValidationException(inner) => {
+                    Error::ValidationException(inner)
+                }
+                crate::error::GetConnectionErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::GetOrderError, R>> for Error
 where
     R: Send + Sync + std::fmt::Debug + 'static,
@@ -354,6 +379,31 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::ListAssetsError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::ListAssetsError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::ListAssetsErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::ListAssetsErrorKind::InternalServerException(inner) => {
+                    Error::InternalServerException(inner)
+                }
+                crate::error::ListAssetsErrorKind::NotFoundException(inner) => {
+                    Error::NotFoundException(inner)
+                }
+                crate::error::ListAssetsErrorKind::ValidationException(inner) => {
+                    Error::ValidationException(inner)
+                }
+                crate::error::ListAssetsErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::ListCatalogItemsError, R>> for Error
 where
     R: Send + Sync + std::fmt::Debug + 'static,
@@ -470,6 +520,31 @@ where
                 crate::error::ListTagsForResourceErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::StartConnectionError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::StartConnectionError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::StartConnectionErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::StartConnectionErrorKind::InternalServerException(inner) => {
+                    Error::InternalServerException(inner)
+                }
+                crate::error::StartConnectionErrorKind::NotFoundException(inner) => {
+                    Error::NotFoundException(inner)
+                }
+                crate::error::StartConnectionErrorKind::ValidationException(inner) => {
+                    Error::ValidationException(inner)
+                }
+                crate::error::StartConnectionErrorKind::Unhandled(inner) => Error::Unhandled(inner),
             },
             _ => Error::Unhandled(err.into()),
         }

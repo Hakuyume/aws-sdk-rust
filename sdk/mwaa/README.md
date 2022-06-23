@@ -38,8 +38,8 @@ your project, add the following to your **Cargo.toml** file:
 
 ```toml
 [dependencies]
-aws-config = "0.10.1"
-aws-sdk-mwaa = "0.10.1"
+aws-config = "0.14.0"
+aws-sdk-mwaa = "0.14.0"
 tokio = { version = "1", features = ["full"] }
 ```
 

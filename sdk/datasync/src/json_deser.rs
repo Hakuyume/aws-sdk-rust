@@ -88,6 +88,15 @@ pub fn deser_structure_crate_error_invalid_request_exception_json_err(
                             .transpose()?,
                         );
                     }
+                    "datasyncErrorCode" => {
+                        builder = builder.set_datasync_error_code(
+                            aws_smithy_json::deserialize::token::expect_string_or_null(
+                                tokens.next(),
+                            )?
+                            .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                            .transpose()?,
+                        );
+                    }
                     _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
                 }
             }
@@ -728,6 +737,36 @@ pub fn deser_operation_crate_operation_describe_location_efs(
                                 tokens.next(),
                                 aws_smithy_types::date_time::Format::EpochSeconds,
                             )?,
+                        );
+                    }
+                    "AccessPointArn" => {
+                        builder = builder.set_access_point_arn(
+                            aws_smithy_json::deserialize::token::expect_string_or_null(
+                                tokens.next(),
+                            )?
+                            .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                            .transpose()?,
+                        );
+                    }
+                    "FileSystemAccessRoleArn" => {
+                        builder = builder.set_file_system_access_role_arn(
+                            aws_smithy_json::deserialize::token::expect_string_or_null(
+                                tokens.next(),
+                            )?
+                            .map(|s| s.to_unescaped().map(|u| u.into_owned()))
+                            .transpose()?,
+                        );
+                    }
+                    "InTransitEncryption" => {
+                        builder = builder.set_in_transit_encryption(
+                            aws_smithy_json::deserialize::token::expect_string_or_null(
+                                tokens.next(),
+                            )?
+                            .map(|s| {
+                                s.to_unescaped()
+                                    .map(|u| crate::model::EfsInTransitEncryption::from(u.as_ref()))
+                            })
+                            .transpose()?,
                         );
                     }
                     _ => aws_smithy_json::deserialize::token::skip_value(tokens)?,
@@ -2825,6 +2864,18 @@ where
                                                 u.as_ref(),
                                             )
                                         })
+                                    })
+                                    .transpose()?,
+                                );
+                            }
+                            "ObjectTags" => {
+                                builder = builder.set_object_tags(
+                                    aws_smithy_json::deserialize::token::expect_string_or_null(
+                                        tokens.next(),
+                                    )?
+                                    .map(|s| {
+                                        s.to_unescaped()
+                                            .map(|u| crate::model::ObjectTags::from(u.as_ref()))
                                     })
                                     .transpose()?,
                                 );

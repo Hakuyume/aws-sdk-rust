@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateTaskExecutionOutput {
 }
 /// See [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput)
 pub mod update_task_execution_output {
+
     /// A builder for [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +42,7 @@ impl std::fmt::Debug for UpdateTaskOutput {
 }
 /// See [`UpdateTaskOutput`](crate::output::UpdateTaskOutput)
 pub mod update_task_output {
+
     /// A builder for [`UpdateTaskOutput`](crate::output::UpdateTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -71,6 +73,7 @@ impl std::fmt::Debug for UpdateLocationSmbOutput {
 }
 /// See [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput)
 pub mod update_location_smb_output {
+
     /// A builder for [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -101,6 +104,7 @@ impl std::fmt::Debug for UpdateLocationObjectStorageOutput {
 }
 /// See [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput)
 pub mod update_location_object_storage_output {
+
     /// A builder for [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -131,6 +135,7 @@ impl std::fmt::Debug for UpdateLocationNfsOutput {
 }
 /// See [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput)
 pub mod update_location_nfs_output {
+
     /// A builder for [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -161,6 +166,7 @@ impl std::fmt::Debug for UpdateLocationHdfsOutput {
 }
 /// See [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput)
 pub mod update_location_hdfs_output {
+
     /// A builder for [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -191,6 +197,7 @@ impl std::fmt::Debug for UpdateAgentOutput {
 }
 /// See [`UpdateAgentOutput`](crate::output::UpdateAgentOutput)
 pub mod update_agent_output {
+
     /// A builder for [`UpdateAgentOutput`](crate::output::UpdateAgentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -221,6 +228,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -251,6 +259,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -291,6 +300,7 @@ impl std::fmt::Debug for StartTaskExecutionOutput {
 }
 /// See [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput)
 pub mod start_task_execution_output {
+
     /// A builder for [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -355,6 +365,7 @@ impl std::fmt::Debug for ListTasksOutput {
 }
 /// See [`ListTasksOutput`](crate::output::ListTasksOutput)
 pub mod list_tasks_output {
+
     /// A builder for [`ListTasksOutput`](crate::output::ListTasksOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -437,6 +448,7 @@ impl std::fmt::Debug for ListTaskExecutionsOutput {
 }
 /// See [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput)
 pub mod list_task_executions_output {
+
     /// A builder for [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -520,6 +532,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -602,6 +615,7 @@ impl std::fmt::Debug for ListLocationsOutput {
 }
 /// See [`ListLocationsOutput`](crate::output::ListLocationsOutput)
 pub mod list_locations_output {
+
     /// A builder for [`ListLocationsOutput`](crate::output::ListLocationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -684,6 +698,7 @@ impl std::fmt::Debug for ListAgentsOutput {
 }
 /// See [`ListAgentsOutput`](crate::output::ListAgentsOutput)
 pub mod list_agents_output {
+
     /// A builder for [`ListAgentsOutput`](crate::output::ListAgentsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -854,6 +869,7 @@ impl std::fmt::Debug for DescribeTaskExecutionOutput {
 }
 /// See [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput)
 pub mod describe_task_execution_output {
+
     /// A builder for [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1206,6 +1222,7 @@ impl std::fmt::Debug for DescribeTaskOutput {
 }
 /// See [`DescribeTaskOutput`](crate::output::DescribeTaskOutput)
 pub mod describe_task_output {
+
     /// A builder for [`DescribeTaskOutput`](crate::output::DescribeTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1552,6 +1569,7 @@ impl std::fmt::Debug for DescribeLocationSmbOutput {
 }
 /// See [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput)
 pub mod describe_location_smb_output {
+
     /// A builder for [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1730,6 +1748,7 @@ impl std::fmt::Debug for DescribeLocationS3Output {
 }
 /// See [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output)
 pub mod describe_location_s3_output {
+
     /// A builder for [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1905,6 +1924,7 @@ impl std::fmt::Debug for DescribeLocationObjectStorageOutput {
 }
 /// See [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput)
 pub mod describe_location_object_storage_output {
+
     /// A builder for [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2074,6 +2094,7 @@ impl std::fmt::Debug for DescribeLocationNfsOutput {
 }
 /// See [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput)
 pub mod describe_location_nfs_output {
+
     /// A builder for [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2264,6 +2285,7 @@ impl std::fmt::Debug for DescribeLocationHdfsOutput {
 }
 /// See [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput)
 pub mod describe_location_hdfs_output {
+
     /// A builder for [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2518,6 +2540,7 @@ impl std::fmt::Debug for DescribeLocationFsxWindowsOutput {
 }
 /// See [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput)
 pub mod describe_location_fsx_windows_output {
+
     /// A builder for [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2674,6 +2697,7 @@ impl std::fmt::Debug for DescribeLocationFsxOpenZfsOutput {
 }
 /// See [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput)
 pub mod describe_location_fsx_open_zfs_output {
+
     /// A builder for [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2814,6 +2838,7 @@ impl std::fmt::Debug for DescribeLocationFsxLustreOutput {
 }
 /// See [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput)
 pub mod describe_location_fsx_lustre_output {
+
     /// A builder for [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2898,31 +2923,51 @@ impl DescribeLocationFsxLustreOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+    /// <p>The ARN of the Amazon EFS file system location.</p>
     pub location_arn: std::option::Option<std::string::String>,
-    /// <p>The URL of the EFS location that was described.</p>
+    /// <p>The URL of the Amazon EFS file system location.</p>
     pub location_uri: std::option::Option<std::string::String>,
-    /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+    /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
     pub ec2_config: std::option::Option<crate::model::Ec2Config>,
-    /// <p>The time that the EFS location was created.</p>
+    /// <p>The time that the location was created.</p>
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+    pub access_point_arn: std::option::Option<std::string::String>,
+    /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+    pub file_system_access_role_arn: std::option::Option<std::string::String>,
+    /// <p>Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.</p>
+    pub in_transit_encryption: std::option::Option<crate::model::EfsInTransitEncryption>,
 }
 impl DescribeLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+    /// <p>The ARN of the Amazon EFS file system location.</p>
     pub fn location_arn(&self) -> std::option::Option<&str> {
         self.location_arn.as_deref()
     }
-    /// <p>The URL of the EFS location that was described.</p>
+    /// <p>The URL of the Amazon EFS file system location.</p>
     pub fn location_uri(&self) -> std::option::Option<&str> {
         self.location_uri.as_deref()
     }
-    /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+    /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
     pub fn ec2_config(&self) -> std::option::Option<&crate::model::Ec2Config> {
         self.ec2_config.as_ref()
     }
-    /// <p>The time that the EFS location was created.</p>
+    /// <p>The time that the location was created.</p>
     pub fn creation_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.creation_time.as_ref()
+    }
+    /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+    pub fn access_point_arn(&self) -> std::option::Option<&str> {
+        self.access_point_arn.as_deref()
+    }
+    /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+    pub fn file_system_access_role_arn(&self) -> std::option::Option<&str> {
+        self.file_system_access_role_arn.as_deref()
+    }
+    /// <p>Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.</p>
+    pub fn in_transit_encryption(
+        &self,
+    ) -> std::option::Option<&crate::model::EfsInTransitEncryption> {
+        self.in_transit_encryption.as_ref()
     }
 }
 impl std::fmt::Debug for DescribeLocationEfsOutput {
@@ -2932,11 +2977,18 @@ impl std::fmt::Debug for DescribeLocationEfsOutput {
         formatter.field("location_uri", &self.location_uri);
         formatter.field("ec2_config", &self.ec2_config);
         formatter.field("creation_time", &self.creation_time);
+        formatter.field("access_point_arn", &self.access_point_arn);
+        formatter.field(
+            "file_system_access_role_arn",
+            &self.file_system_access_role_arn,
+        );
+        formatter.field("in_transit_encryption", &self.in_transit_encryption);
         formatter.finish()
     }
 }
 /// See [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput)
 pub mod describe_location_efs_output {
+
     /// A builder for [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2945,34 +2997,37 @@ pub mod describe_location_efs_output {
         pub(crate) location_uri: std::option::Option<std::string::String>,
         pub(crate) ec2_config: std::option::Option<crate::model::Ec2Config>,
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) access_point_arn: std::option::Option<std::string::String>,
+        pub(crate) file_system_access_role_arn: std::option::Option<std::string::String>,
+        pub(crate) in_transit_encryption: std::option::Option<crate::model::EfsInTransitEncryption>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+        /// <p>The ARN of the Amazon EFS file system location.</p>
         pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+        /// <p>The ARN of the Amazon EFS file system location.</p>
         pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_arn = input;
             self
         }
-        /// <p>The URL of the EFS location that was described.</p>
+        /// <p>The URL of the Amazon EFS file system location.</p>
         pub fn location_uri(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_uri = Some(input.into());
             self
         }
-        /// <p>The URL of the EFS location that was described.</p>
+        /// <p>The URL of the Amazon EFS file system location.</p>
         pub fn set_location_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_uri = input;
             self
         }
-        /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+        /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
         pub fn ec2_config(mut self, input: crate::model::Ec2Config) -> Self {
             self.ec2_config = Some(input);
             self
         }
-        /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+        /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
         pub fn set_ec2_config(
             mut self,
             input: std::option::Option<crate::model::Ec2Config>,
@@ -2980,17 +3035,62 @@ pub mod describe_location_efs_output {
             self.ec2_config = input;
             self
         }
-        /// <p>The time that the EFS location was created.</p>
+        /// <p>The time that the location was created.</p>
         pub fn creation_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.creation_time = Some(input);
             self
         }
-        /// <p>The time that the EFS location was created.</p>
+        /// <p>The time that the location was created.</p>
         pub fn set_creation_time(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
         ) -> Self {
             self.creation_time = input;
+            self
+        }
+        /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+        pub fn access_point_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.access_point_arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+        pub fn set_access_point_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.access_point_arn = input;
+            self
+        }
+        /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+        pub fn file_system_access_role_arn(
+            mut self,
+            input: impl Into<std::string::String>,
+        ) -> Self {
+            self.file_system_access_role_arn = Some(input.into());
+            self
+        }
+        /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+        pub fn set_file_system_access_role_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.file_system_access_role_arn = input;
+            self
+        }
+        /// <p>Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.</p>
+        pub fn in_transit_encryption(
+            mut self,
+            input: crate::model::EfsInTransitEncryption,
+        ) -> Self {
+            self.in_transit_encryption = Some(input);
+            self
+        }
+        /// <p>Whether DataSync uses TLS encryption when transferring data to or from your Amazon EFS file system.</p>
+        pub fn set_in_transit_encryption(
+            mut self,
+            input: std::option::Option<crate::model::EfsInTransitEncryption>,
+        ) -> Self {
+            self.in_transit_encryption = input;
             self
         }
         /// Consumes the builder and constructs a [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput)
@@ -3000,6 +3100,9 @@ pub mod describe_location_efs_output {
                 location_uri: self.location_uri,
                 ec2_config: self.ec2_config,
                 creation_time: self.creation_time,
+                access_point_arn: self.access_point_arn,
+                file_system_access_role_arn: self.file_system_access_role_arn,
+                in_transit_encryption: self.in_transit_encryption,
             }
         }
     }
@@ -3075,6 +3178,7 @@ impl std::fmt::Debug for DescribeAgentOutput {
 }
 /// See [`DescribeAgentOutput`](crate::output::DescribeAgentOutput)
 pub mod describe_agent_output {
+
     /// A builder for [`DescribeAgentOutput`](crate::output::DescribeAgentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3203,6 +3307,7 @@ impl std::fmt::Debug for DeleteTaskOutput {
 }
 /// See [`DeleteTaskOutput`](crate::output::DeleteTaskOutput)
 pub mod delete_task_output {
+
     /// A builder for [`DeleteTaskOutput`](crate::output::DeleteTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3233,6 +3338,7 @@ impl std::fmt::Debug for DeleteLocationOutput {
 }
 /// See [`DeleteLocationOutput`](crate::output::DeleteLocationOutput)
 pub mod delete_location_output {
+
     /// A builder for [`DeleteLocationOutput`](crate::output::DeleteLocationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3263,6 +3369,7 @@ impl std::fmt::Debug for DeleteAgentOutput {
 }
 /// See [`DeleteAgentOutput`](crate::output::DeleteAgentOutput)
 pub mod delete_agent_output {
+
     /// A builder for [`DeleteAgentOutput`](crate::output::DeleteAgentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3303,6 +3410,7 @@ impl std::fmt::Debug for CreateTaskOutput {
 }
 /// See [`CreateTaskOutput`](crate::output::CreateTaskOutput)
 pub mod create_task_output {
+
     /// A builder for [`CreateTaskOutput`](crate::output::CreateTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3357,6 +3465,7 @@ impl std::fmt::Debug for CreateLocationSmbOutput {
 }
 /// See [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput)
 pub mod create_location_smb_output {
+
     /// A builder for [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3411,6 +3520,7 @@ impl std::fmt::Debug for CreateLocationS3Output {
 }
 /// See [`CreateLocationS3Output`](crate::output::CreateLocationS3Output)
 pub mod create_location_s3_output {
+
     /// A builder for [`CreateLocationS3Output`](crate::output::CreateLocationS3Output)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3465,6 +3575,7 @@ impl std::fmt::Debug for CreateLocationObjectStorageOutput {
 }
 /// See [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput)
 pub mod create_location_object_storage_output {
+
     /// A builder for [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3519,6 +3630,7 @@ impl std::fmt::Debug for CreateLocationNfsOutput {
 }
 /// See [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput)
 pub mod create_location_nfs_output {
+
     /// A builder for [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3573,6 +3685,7 @@ impl std::fmt::Debug for CreateLocationHdfsOutput {
 }
 /// See [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput)
 pub mod create_location_hdfs_output {
+
     /// A builder for [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3627,6 +3740,7 @@ impl std::fmt::Debug for CreateLocationFsxWindowsOutput {
 }
 /// See [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput)
 pub mod create_location_fsx_windows_output {
+
     /// A builder for [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3681,6 +3795,7 @@ impl std::fmt::Debug for CreateLocationFsxOpenZfsOutput {
 }
 /// See [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput)
 pub mod create_location_fsx_open_zfs_output {
+
     /// A builder for [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3735,6 +3850,7 @@ impl std::fmt::Debug for CreateLocationFsxLustreOutput {
 }
 /// See [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput)
 pub mod create_location_fsx_lustre_output {
+
     /// A builder for [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3771,11 +3887,11 @@ impl CreateLocationFsxLustreOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
     pub location_arn: std::option::Option<std::string::String>,
 }
 impl CreateLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
     pub fn location_arn(&self) -> std::option::Option<&str> {
         self.location_arn.as_deref()
     }
@@ -3789,6 +3905,7 @@ impl std::fmt::Debug for CreateLocationEfsOutput {
 }
 /// See [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput)
 pub mod create_location_efs_output {
+
     /// A builder for [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3796,12 +3913,12 @@ pub mod create_location_efs_output {
         pub(crate) location_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
         pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
         pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_arn = input;
             self
@@ -3843,6 +3960,7 @@ impl std::fmt::Debug for CreateAgentOutput {
 }
 /// See [`CreateAgentOutput`](crate::output::CreateAgentOutput)
 pub mod create_agent_output {
+
     /// A builder for [`CreateAgentOutput`](crate::output::CreateAgentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3887,6 +4005,7 @@ impl std::fmt::Debug for CancelTaskExecutionOutput {
 }
 /// See [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput)
 pub mod cancel_task_execution_output {
+
     /// A builder for [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

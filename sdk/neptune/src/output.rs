@@ -23,6 +23,7 @@ impl std::fmt::Debug for StopDbClusterOutput {
 }
 /// See [`StopDbClusterOutput`](crate::output::StopDbClusterOutput)
 pub mod stop_db_cluster_output {
+
     /// A builder for [`StopDbClusterOutput`](crate::output::StopDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -84,6 +85,7 @@ impl std::fmt::Debug for StartDbClusterOutput {
 }
 /// See [`StartDbClusterOutput`](crate::output::StartDbClusterOutput)
 pub mod start_db_cluster_output {
+
     /// A builder for [`StartDbClusterOutput`](crate::output::StartDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -145,6 +147,7 @@ impl std::fmt::Debug for RestoreDbClusterToPointInTimeOutput {
 }
 /// See [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput)
 pub mod restore_db_cluster_to_point_in_time_output {
+
     /// A builder for [`RestoreDbClusterToPointInTimeOutput`](crate::output::RestoreDbClusterToPointInTimeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -206,6 +209,7 @@ impl std::fmt::Debug for RestoreDbClusterFromSnapshotOutput {
 }
 /// See [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput)
 pub mod restore_db_cluster_from_snapshot_output {
+
     /// A builder for [`RestoreDbClusterFromSnapshotOutput`](crate::output::RestoreDbClusterFromSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -265,6 +269,7 @@ impl std::fmt::Debug for ResetDbParameterGroupOutput {
 }
 /// See [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput)
 pub mod reset_db_parameter_group_output {
+
     /// A builder for [`ResetDbParameterGroupOutput`](crate::output::ResetDbParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -341,6 +346,7 @@ impl std::fmt::Debug for ResetDbClusterParameterGroupOutput {
 }
 /// See [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput)
 pub mod reset_db_cluster_parameter_group_output {
+
     /// A builder for [`ResetDbClusterParameterGroupOutput`](crate::output::ResetDbClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -407,6 +413,7 @@ impl std::fmt::Debug for RemoveTagsFromResourceOutput {
 }
 /// See [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
 pub mod remove_tags_from_resource_output {
+
     /// A builder for [`RemoveTagsFromResourceOutput`](crate::output::RemoveTagsFromResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -447,6 +454,7 @@ impl std::fmt::Debug for RemoveSourceIdentifierFromSubscriptionOutput {
 }
 /// See [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput)
 pub mod remove_source_identifier_from_subscription_output {
+
     /// A builder for [`RemoveSourceIdentifierFromSubscriptionOutput`](crate::output::RemoveSourceIdentifierFromSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -494,6 +502,7 @@ impl std::fmt::Debug for RemoveRoleFromDbClusterOutput {
 }
 /// See [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput)
 pub mod remove_role_from_db_cluster_output {
+
     /// A builder for [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -509,6 +518,68 @@ impl RemoveRoleFromDbClusterOutput {
     /// Creates a new builder-style object to manufacture [`RemoveRoleFromDbClusterOutput`](crate::output::RemoveRoleFromDbClusterOutput)
     pub fn builder() -> crate::output::remove_role_from_db_cluster_output::Builder {
         crate::output::remove_role_from_db_cluster_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct RemoveFromGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
+}
+impl RemoveFromGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub fn global_cluster(&self) -> std::option::Option<&crate::model::GlobalCluster> {
+        self.global_cluster.as_ref()
+    }
+}
+impl std::fmt::Debug for RemoveFromGlobalClusterOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("RemoveFromGlobalClusterOutput");
+        formatter.field("global_cluster", &self.global_cluster);
+        formatter.finish()
+    }
+}
+/// See [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
+pub mod remove_from_global_cluster_output {
+
+    /// A builder for [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
+    }
+    impl Builder {
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn global_cluster(mut self, input: crate::model::GlobalCluster) -> Self {
+            self.global_cluster = Some(input);
+            self
+        }
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn set_global_cluster(
+            mut self,
+            input: std::option::Option<crate::model::GlobalCluster>,
+        ) -> Self {
+            self.global_cluster = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
+        pub fn build(self) -> crate::output::RemoveFromGlobalClusterOutput {
+            crate::output::RemoveFromGlobalClusterOutput {
+                global_cluster: self.global_cluster,
+            }
+        }
+    }
+}
+impl RemoveFromGlobalClusterOutput {
+    /// Creates a new builder-style object to manufacture [`RemoveFromGlobalClusterOutput`](crate::output::RemoveFromGlobalClusterOutput)
+    pub fn builder() -> crate::output::remove_from_global_cluster_output::Builder {
+        crate::output::remove_from_global_cluster_output::Builder::default()
     }
 }
 
@@ -536,6 +607,7 @@ impl std::fmt::Debug for RebootDbInstanceOutput {
 }
 /// See [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput)
 pub mod reboot_db_instance_output {
+
     /// A builder for [`RebootDbInstanceOutput`](crate::output::RebootDbInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -597,6 +669,7 @@ impl std::fmt::Debug for PromoteReadReplicaDbClusterOutput {
 }
 /// See [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput)
 pub mod promote_read_replica_db_cluster_output {
+
     /// A builder for [`PromoteReadReplicaDbClusterOutput`](crate::output::PromoteReadReplicaDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -637,6 +710,68 @@ impl PromoteReadReplicaDbClusterOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ModifyGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
+}
+impl ModifyGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub fn global_cluster(&self) -> std::option::Option<&crate::model::GlobalCluster> {
+        self.global_cluster.as_ref()
+    }
+}
+impl std::fmt::Debug for ModifyGlobalClusterOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ModifyGlobalClusterOutput");
+        formatter.field("global_cluster", &self.global_cluster);
+        formatter.finish()
+    }
+}
+/// See [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
+pub mod modify_global_cluster_output {
+
+    /// A builder for [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
+    }
+    impl Builder {
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn global_cluster(mut self, input: crate::model::GlobalCluster) -> Self {
+            self.global_cluster = Some(input);
+            self
+        }
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn set_global_cluster(
+            mut self,
+            input: std::option::Option<crate::model::GlobalCluster>,
+        ) -> Self {
+            self.global_cluster = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
+        pub fn build(self) -> crate::output::ModifyGlobalClusterOutput {
+            crate::output::ModifyGlobalClusterOutput {
+                global_cluster: self.global_cluster,
+            }
+        }
+    }
+}
+impl ModifyGlobalClusterOutput {
+    /// Creates a new builder-style object to manufacture [`ModifyGlobalClusterOutput`](crate::output::ModifyGlobalClusterOutput)
+    pub fn builder() -> crate::output::modify_global_cluster_output::Builder {
+        crate::output::modify_global_cluster_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModifyEventSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -656,6 +791,7 @@ impl std::fmt::Debug for ModifyEventSubscriptionOutput {
 }
 /// See [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
 pub mod modify_event_subscription_output {
+
     /// A builder for [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -715,6 +851,7 @@ impl std::fmt::Debug for ModifyDbSubnetGroupOutput {
 }
 /// See [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput)
 pub mod modify_db_subnet_group_output {
+
     /// A builder for [`ModifyDbSubnetGroupOutput`](crate::output::ModifyDbSubnetGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -774,6 +911,7 @@ impl std::fmt::Debug for ModifyDbParameterGroupOutput {
 }
 /// See [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput)
 pub mod modify_db_parameter_group_output {
+
     /// A builder for [`ModifyDbParameterGroupOutput`](crate::output::ModifyDbParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -833,6 +971,7 @@ impl std::fmt::Debug for ModifyDbInstanceOutput {
 }
 /// See [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput)
 pub mod modify_db_instance_output {
+
     /// A builder for [`ModifyDbInstanceOutput`](crate::output::ModifyDbInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -900,6 +1039,7 @@ impl std::fmt::Debug for ModifyDbClusterSnapshotAttributeOutput {
 }
 /// See [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput)
 pub mod modify_db_cluster_snapshot_attribute_output {
+
     /// A builder for [`ModifyDbClusterSnapshotAttributeOutput`](crate::output::ModifyDbClusterSnapshotAttributeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -982,6 +1122,7 @@ impl std::fmt::Debug for ModifyDbClusterParameterGroupOutput {
 }
 /// See [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput)
 pub mod modify_db_cluster_parameter_group_output {
+
     /// A builder for [`ModifyDbClusterParameterGroupOutput`](crate::output::ModifyDbClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1036,7 +1177,7 @@ impl ModifyDbClusterParameterGroupOutput {
     }
 }
 
-/// <p>This data type represents the information you need to connect to an Amazon Aurora DB cluster. This data type is used as a response element in the following actions:</p>
+/// <p>This data type represents the information you need to connect to an Amazon Neptune DB cluster. This data type is used as a response element in the following actions:</p>
 /// <ul>
 /// <li> <p> <code>CreateDBClusterEndpoint</code> </p> </li>
 /// <li> <p> <code>DescribeDBClusterEndpoints</code> </p> </li>
@@ -1134,6 +1275,7 @@ impl std::fmt::Debug for ModifyDbClusterEndpointOutput {
 }
 /// See [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput)
 pub mod modify_db_cluster_endpoint_output {
+
     /// A builder for [`ModifyDbClusterEndpointOutput`](crate::output::ModifyDbClusterEndpointOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1342,6 +1484,7 @@ impl std::fmt::Debug for ModifyDbClusterOutput {
 }
 /// See [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput)
 pub mod modify_db_cluster_output {
+
     /// A builder for [`ModifyDbClusterOutput`](crate::output::ModifyDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1401,6 +1544,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1445,6 +1589,68 @@ impl ListTagsForResourceOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct FailoverGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
+}
+impl FailoverGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub fn global_cluster(&self) -> std::option::Option<&crate::model::GlobalCluster> {
+        self.global_cluster.as_ref()
+    }
+}
+impl std::fmt::Debug for FailoverGlobalClusterOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("FailoverGlobalClusterOutput");
+        formatter.field("global_cluster", &self.global_cluster);
+        formatter.finish()
+    }
+}
+/// See [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
+pub mod failover_global_cluster_output {
+
+    /// A builder for [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
+    }
+    impl Builder {
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn global_cluster(mut self, input: crate::model::GlobalCluster) -> Self {
+            self.global_cluster = Some(input);
+            self
+        }
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn set_global_cluster(
+            mut self,
+            input: std::option::Option<crate::model::GlobalCluster>,
+        ) -> Self {
+            self.global_cluster = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
+        pub fn build(self) -> crate::output::FailoverGlobalClusterOutput {
+            crate::output::FailoverGlobalClusterOutput {
+                global_cluster: self.global_cluster,
+            }
+        }
+    }
+}
+impl FailoverGlobalClusterOutput {
+    /// Creates a new builder-style object to manufacture [`FailoverGlobalClusterOutput`](crate::output::FailoverGlobalClusterOutput)
+    pub fn builder() -> crate::output::failover_global_cluster_output::Builder {
+        crate::output::failover_global_cluster_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FailoverDbClusterOutput {
     /// <p>Contains the details of an Amazon Neptune DB cluster.</p>
     /// <p>This data type is used as a response element in the <code>DescribeDBClusters</code> action.</p>
@@ -1466,6 +1672,7 @@ impl std::fmt::Debug for FailoverDbClusterOutput {
 }
 /// See [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput)
 pub mod failover_db_cluster_output {
+
     /// A builder for [`FailoverDbClusterOutput`](crate::output::FailoverDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1531,6 +1738,7 @@ impl std::fmt::Debug for DescribeValidDbInstanceModificationsOutput {
 }
 /// See [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput)
 pub mod describe_valid_db_instance_modifications_output {
+
     /// A builder for [`DescribeValidDbInstanceModificationsOutput`](crate::output::DescribeValidDbInstanceModificationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1606,6 +1814,7 @@ impl std::fmt::Debug for DescribePendingMaintenanceActionsOutput {
 }
 /// See [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
 pub mod describe_pending_maintenance_actions_output {
+
     /// A builder for [`DescribePendingMaintenanceActionsOutput`](crate::output::DescribePendingMaintenanceActionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1700,6 +1909,7 @@ impl std::fmt::Debug for DescribeOrderableDbInstanceOptionsOutput {
 }
 /// See [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput)
 pub mod describe_orderable_db_instance_options_output {
+
     /// A builder for [`DescribeOrderableDbInstanceOptionsOutput`](crate::output::DescribeOrderableDbInstanceOptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1760,6 +1970,89 @@ impl DescribeOrderableDbInstanceOptionsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DescribeGlobalClustersOutput {
+    /// <p>A pagination token. If this parameter is returned in the response, more records are available, which can be retrieved by one or more additional calls to <code>DescribeGlobalClusters</code>.</p>
+    pub marker: std::option::Option<std::string::String>,
+    /// <p>The list of global clusters and instances returned by this request.</p>
+    pub global_clusters: std::option::Option<std::vec::Vec<crate::model::GlobalCluster>>,
+}
+impl DescribeGlobalClustersOutput {
+    /// <p>A pagination token. If this parameter is returned in the response, more records are available, which can be retrieved by one or more additional calls to <code>DescribeGlobalClusters</code>.</p>
+    pub fn marker(&self) -> std::option::Option<&str> {
+        self.marker.as_deref()
+    }
+    /// <p>The list of global clusters and instances returned by this request.</p>
+    pub fn global_clusters(&self) -> std::option::Option<&[crate::model::GlobalCluster]> {
+        self.global_clusters.as_deref()
+    }
+}
+impl std::fmt::Debug for DescribeGlobalClustersOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DescribeGlobalClustersOutput");
+        formatter.field("marker", &self.marker);
+        formatter.field("global_clusters", &self.global_clusters);
+        formatter.finish()
+    }
+}
+/// See [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
+pub mod describe_global_clusters_output {
+
+    /// A builder for [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) marker: std::option::Option<std::string::String>,
+        pub(crate) global_clusters: std::option::Option<std::vec::Vec<crate::model::GlobalCluster>>,
+    }
+    impl Builder {
+        /// <p>A pagination token. If this parameter is returned in the response, more records are available, which can be retrieved by one or more additional calls to <code>DescribeGlobalClusters</code>.</p>
+        pub fn marker(mut self, input: impl Into<std::string::String>) -> Self {
+            self.marker = Some(input.into());
+            self
+        }
+        /// <p>A pagination token. If this parameter is returned in the response, more records are available, which can be retrieved by one or more additional calls to <code>DescribeGlobalClusters</code>.</p>
+        pub fn set_marker(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.marker = input;
+            self
+        }
+        /// Appends an item to `global_clusters`.
+        ///
+        /// To override the contents of this collection use [`set_global_clusters`](Self::set_global_clusters).
+        ///
+        /// <p>The list of global clusters and instances returned by this request.</p>
+        pub fn global_clusters(mut self, input: crate::model::GlobalCluster) -> Self {
+            let mut v = self.global_clusters.unwrap_or_default();
+            v.push(input);
+            self.global_clusters = Some(v);
+            self
+        }
+        /// <p>The list of global clusters and instances returned by this request.</p>
+        pub fn set_global_clusters(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::GlobalCluster>>,
+        ) -> Self {
+            self.global_clusters = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
+        pub fn build(self) -> crate::output::DescribeGlobalClustersOutput {
+            crate::output::DescribeGlobalClustersOutput {
+                marker: self.marker,
+                global_clusters: self.global_clusters,
+            }
+        }
+    }
+}
+impl DescribeGlobalClustersOutput {
+    /// Creates a new builder-style object to manufacture [`DescribeGlobalClustersOutput`](crate::output::DescribeGlobalClustersOutput)
+    pub fn builder() -> crate::output::describe_global_clusters_output::Builder {
+        crate::output::describe_global_clusters_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeEventSubscriptionsOutput {
     /// <p> An optional pagination token provided by a previous DescribeOrderableDBInstanceOptions request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>.</p>
     pub marker: std::option::Option<std::string::String>,
@@ -1789,6 +2082,7 @@ impl std::fmt::Debug for DescribeEventSubscriptionsOutput {
 }
 /// See [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
 pub mod describe_event_subscriptions_output {
+
     /// A builder for [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1872,6 +2166,7 @@ impl std::fmt::Debug for DescribeEventsOutput {
 }
 /// See [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
 pub mod describe_events_output {
+
     /// A builder for [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1950,6 +2245,7 @@ impl std::fmt::Debug for DescribeEventCategoriesOutput {
 }
 /// See [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
 pub mod describe_event_categories_output {
+
     /// A builder for [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2017,6 +2313,7 @@ impl std::fmt::Debug for DescribeEngineDefaultParametersOutput {
 }
 /// See [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput)
 pub mod describe_engine_default_parameters_output {
+
     /// A builder for [`DescribeEngineDefaultParametersOutput`](crate::output::DescribeEngineDefaultParametersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2074,6 +2371,7 @@ impl std::fmt::Debug for DescribeEngineDefaultClusterParametersOutput {
 }
 /// See [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput)
 pub mod describe_engine_default_cluster_parameters_output {
+
     /// A builder for [`DescribeEngineDefaultClusterParametersOutput`](crate::output::DescribeEngineDefaultClusterParametersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2138,6 +2436,7 @@ impl std::fmt::Debug for DescribeDbSubnetGroupsOutput {
 }
 /// See [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput)
 pub mod describe_db_subnet_groups_output {
+
     /// A builder for [`DescribeDbSubnetGroupsOutput`](crate::output::DescribeDbSubnetGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2221,6 +2520,7 @@ impl std::fmt::Debug for DescribeDbParametersOutput {
 }
 /// See [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput)
 pub mod describe_db_parameters_output {
+
     /// A builder for [`DescribeDbParametersOutput`](crate::output::DescribeDbParametersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2303,6 +2603,7 @@ impl std::fmt::Debug for DescribeDbParameterGroupsOutput {
 }
 /// See [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput)
 pub mod describe_db_parameter_groups_output {
+
     /// A builder for [`DescribeDbParameterGroupsOutput`](crate::output::DescribeDbParameterGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2386,6 +2687,7 @@ impl std::fmt::Debug for DescribeDbInstancesOutput {
 }
 /// See [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput)
 pub mod describe_db_instances_output {
+
     /// A builder for [`DescribeDbInstancesOutput`](crate::output::DescribeDbInstancesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2468,6 +2770,7 @@ impl std::fmt::Debug for DescribeDbEngineVersionsOutput {
 }
 /// See [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput)
 pub mod describe_db_engine_versions_output {
+
     /// A builder for [`DescribeDbEngineVersionsOutput`](crate::output::DescribeDbEngineVersionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2551,6 +2854,7 @@ impl std::fmt::Debug for DescribeDbClusterSnapshotsOutput {
 }
 /// See [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput)
 pub mod describe_db_cluster_snapshots_output {
+
     /// A builder for [`DescribeDbClusterSnapshotsOutput`](crate::output::DescribeDbClusterSnapshotsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2635,6 +2939,7 @@ impl std::fmt::Debug for DescribeDbClusterSnapshotAttributesOutput {
 }
 /// See [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput)
 pub mod describe_db_cluster_snapshot_attributes_output {
+
     /// A builder for [`DescribeDbClusterSnapshotAttributesOutput`](crate::output::DescribeDbClusterSnapshotAttributesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2705,6 +3010,7 @@ impl std::fmt::Debug for DescribeDbClustersOutput {
 }
 /// See [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput)
 pub mod describe_db_clusters_output {
+
     /// A builder for [`DescribeDbClustersOutput`](crate::output::DescribeDbClustersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2787,6 +3093,7 @@ impl std::fmt::Debug for DescribeDbClusterParametersOutput {
 }
 /// See [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput)
 pub mod describe_db_cluster_parameters_output {
+
     /// A builder for [`DescribeDbClusterParametersOutput`](crate::output::DescribeDbClusterParametersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2875,6 +3182,7 @@ impl std::fmt::Debug for DescribeDbClusterParameterGroupsOutput {
 }
 /// See [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput)
 pub mod describe_db_cluster_parameter_groups_output {
+
     /// A builder for [`DescribeDbClusterParameterGroupsOutput`](crate::output::DescribeDbClusterParameterGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2961,6 +3269,7 @@ impl std::fmt::Debug for DescribeDbClusterEndpointsOutput {
 }
 /// See [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput)
 pub mod describe_db_cluster_endpoints_output {
+
     /// A builder for [`DescribeDbClusterEndpointsOutput`](crate::output::DescribeDbClusterEndpointsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3018,6 +3327,68 @@ impl DescribeDbClusterEndpointsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeleteGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
+}
+impl DeleteGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub fn global_cluster(&self) -> std::option::Option<&crate::model::GlobalCluster> {
+        self.global_cluster.as_ref()
+    }
+}
+impl std::fmt::Debug for DeleteGlobalClusterOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeleteGlobalClusterOutput");
+        formatter.field("global_cluster", &self.global_cluster);
+        formatter.finish()
+    }
+}
+/// See [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
+pub mod delete_global_cluster_output {
+
+    /// A builder for [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
+    }
+    impl Builder {
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn global_cluster(mut self, input: crate::model::GlobalCluster) -> Self {
+            self.global_cluster = Some(input);
+            self
+        }
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn set_global_cluster(
+            mut self,
+            input: std::option::Option<crate::model::GlobalCluster>,
+        ) -> Self {
+            self.global_cluster = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
+        pub fn build(self) -> crate::output::DeleteGlobalClusterOutput {
+            crate::output::DeleteGlobalClusterOutput {
+                global_cluster: self.global_cluster,
+            }
+        }
+    }
+}
+impl DeleteGlobalClusterOutput {
+    /// Creates a new builder-style object to manufacture [`DeleteGlobalClusterOutput`](crate::output::DeleteGlobalClusterOutput)
+    pub fn builder() -> crate::output::delete_global_cluster_output::Builder {
+        crate::output::delete_global_cluster_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEventSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -3037,6 +3408,7 @@ impl std::fmt::Debug for DeleteEventSubscriptionOutput {
 }
 /// See [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
 pub mod delete_event_subscription_output {
+
     /// A builder for [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3084,6 +3456,7 @@ impl std::fmt::Debug for DeleteDbSubnetGroupOutput {
 }
 /// See [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput)
 pub mod delete_db_subnet_group_output {
+
     /// A builder for [`DeleteDbSubnetGroupOutput`](crate::output::DeleteDbSubnetGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3114,6 +3487,7 @@ impl std::fmt::Debug for DeleteDbParameterGroupOutput {
 }
 /// See [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput)
 pub mod delete_db_parameter_group_output {
+
     /// A builder for [`DeleteDbParameterGroupOutput`](crate::output::DeleteDbParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3156,6 +3530,7 @@ impl std::fmt::Debug for DeleteDbInstanceOutput {
 }
 /// See [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput)
 pub mod delete_db_instance_output {
+
     /// A builder for [`DeleteDbInstanceOutput`](crate::output::DeleteDbInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3217,6 +3592,7 @@ impl std::fmt::Debug for DeleteDbClusterSnapshotOutput {
 }
 /// See [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput)
 pub mod delete_db_cluster_snapshot_output {
+
     /// A builder for [`DeleteDbClusterSnapshotOutput`](crate::output::DeleteDbClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3266,6 +3642,7 @@ impl std::fmt::Debug for DeleteDbClusterParameterGroupOutput {
 }
 /// See [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput)
 pub mod delete_db_cluster_parameter_group_output {
+
     /// A builder for [`DeleteDbClusterParameterGroupOutput`](crate::output::DeleteDbClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3382,6 +3759,7 @@ impl std::fmt::Debug for DeleteDbClusterEndpointOutput {
 }
 /// See [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput)
 pub mod delete_db_cluster_endpoint_output {
+
     /// A builder for [`DeleteDbClusterEndpointOutput`](crate::output::DeleteDbClusterEndpointOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3590,6 +3968,7 @@ impl std::fmt::Debug for DeleteDbClusterOutput {
 }
 /// See [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput)
 pub mod delete_db_cluster_output {
+
     /// A builder for [`DeleteDbClusterOutput`](crate::output::DeleteDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3630,6 +4009,68 @@ impl DeleteDbClusterOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub global_cluster: std::option::Option<crate::model::GlobalCluster>,
+}
+impl CreateGlobalClusterOutput {
+    /// <p>Contains the details of an Amazon Neptune global database.</p>
+    /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+    pub fn global_cluster(&self) -> std::option::Option<&crate::model::GlobalCluster> {
+        self.global_cluster.as_ref()
+    }
+}
+impl std::fmt::Debug for CreateGlobalClusterOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateGlobalClusterOutput");
+        formatter.field("global_cluster", &self.global_cluster);
+        formatter.finish()
+    }
+}
+/// See [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
+pub mod create_global_cluster_output {
+
+    /// A builder for [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) global_cluster: std::option::Option<crate::model::GlobalCluster>,
+    }
+    impl Builder {
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn global_cluster(mut self, input: crate::model::GlobalCluster) -> Self {
+            self.global_cluster = Some(input);
+            self
+        }
+        /// <p>Contains the details of an Amazon Neptune global database.</p>
+        /// <p>This data type is used as a response element for the <code>CreateGlobalCluster</code>, <code>DescribeGlobalClusters</code>, <code>ModifyGlobalCluster</code>, <code>DeleteGlobalCluster</code>, <code>FailoverGlobalCluster</code>, and <code>RemoveFromGlobalCluster</code> actions.</p>
+        pub fn set_global_cluster(
+            mut self,
+            input: std::option::Option<crate::model::GlobalCluster>,
+        ) -> Self {
+            self.global_cluster = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
+        pub fn build(self) -> crate::output::CreateGlobalClusterOutput {
+            crate::output::CreateGlobalClusterOutput {
+                global_cluster: self.global_cluster,
+            }
+        }
+    }
+}
+impl CreateGlobalClusterOutput {
+    /// Creates a new builder-style object to manufacture [`CreateGlobalClusterOutput`](crate::output::CreateGlobalClusterOutput)
+    pub fn builder() -> crate::output::create_global_cluster_output::Builder {
+        crate::output::create_global_cluster_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateEventSubscriptionOutput {
     /// <p>Contains the results of a successful invocation of the <code>DescribeEventSubscriptions</code> action.</p>
     pub event_subscription: std::option::Option<crate::model::EventSubscription>,
@@ -3649,6 +4090,7 @@ impl std::fmt::Debug for CreateEventSubscriptionOutput {
 }
 /// See [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
 pub mod create_event_subscription_output {
+
     /// A builder for [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3708,6 +4150,7 @@ impl std::fmt::Debug for CreateDbSubnetGroupOutput {
 }
 /// See [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput)
 pub mod create_db_subnet_group_output {
+
     /// A builder for [`CreateDbSubnetGroupOutput`](crate::output::CreateDbSubnetGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3769,6 +4212,7 @@ impl std::fmt::Debug for CreateDbParameterGroupOutput {
 }
 /// See [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput)
 pub mod create_db_parameter_group_output {
+
     /// A builder for [`CreateDbParameterGroupOutput`](crate::output::CreateDbParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3830,6 +4274,7 @@ impl std::fmt::Debug for CreateDbInstanceOutput {
 }
 /// See [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput)
 pub mod create_db_instance_output {
+
     /// A builder for [`CreateDbInstanceOutput`](crate::output::CreateDbInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3891,6 +4336,7 @@ impl std::fmt::Debug for CreateDbClusterSnapshotOutput {
 }
 /// See [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput)
 pub mod create_db_cluster_snapshot_output {
+
     /// A builder for [`CreateDbClusterSnapshotOutput`](crate::output::CreateDbClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3957,6 +4403,7 @@ impl std::fmt::Debug for CreateDbClusterParameterGroupOutput {
 }
 /// See [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput)
 pub mod create_db_cluster_parameter_group_output {
+
     /// A builder for [`CreateDbClusterParameterGroupOutput`](crate::output::CreateDbClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4096,6 +4543,7 @@ impl std::fmt::Debug for CreateDbClusterEndpointOutput {
 }
 /// See [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput)
 pub mod create_db_cluster_endpoint_output {
+
     /// A builder for [`CreateDbClusterEndpointOutput`](crate::output::CreateDbClusterEndpointOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4304,6 +4752,7 @@ impl std::fmt::Debug for CreateDbClusterOutput {
 }
 /// See [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput)
 pub mod create_db_cluster_output {
+
     /// A builder for [`CreateDbClusterOutput`](crate::output::CreateDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4365,6 +4814,7 @@ impl std::fmt::Debug for CopyDbParameterGroupOutput {
 }
 /// See [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput)
 pub mod copy_db_parameter_group_output {
+
     /// A builder for [`CopyDbParameterGroupOutput`](crate::output::CopyDbParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4426,6 +4876,7 @@ impl std::fmt::Debug for CopyDbClusterSnapshotOutput {
 }
 /// See [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput)
 pub mod copy_db_cluster_snapshot_output {
+
     /// A builder for [`CopyDbClusterSnapshotOutput`](crate::output::CopyDbClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4492,6 +4943,7 @@ impl std::fmt::Debug for CopyDbClusterParameterGroupOutput {
 }
 /// See [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput)
 pub mod copy_db_cluster_parameter_group_output {
+
     /// A builder for [`CopyDbClusterParameterGroupOutput`](crate::output::CopyDbClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4561,6 +5013,7 @@ impl std::fmt::Debug for ApplyPendingMaintenanceActionOutput {
 }
 /// See [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
 pub mod apply_pending_maintenance_action_output {
+
     /// A builder for [`ApplyPendingMaintenanceActionOutput`](crate::output::ApplyPendingMaintenanceActionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4612,6 +5065,7 @@ impl std::fmt::Debug for AddTagsToResourceOutput {
 }
 /// See [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
 pub mod add_tags_to_resource_output {
+
     /// A builder for [`AddTagsToResourceOutput`](crate::output::AddTagsToResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4652,6 +5106,7 @@ impl std::fmt::Debug for AddSourceIdentifierToSubscriptionOutput {
 }
 /// See [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput)
 pub mod add_source_identifier_to_subscription_output {
+
     /// A builder for [`AddSourceIdentifierToSubscriptionOutput`](crate::output::AddSourceIdentifierToSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4699,6 +5154,7 @@ impl std::fmt::Debug for AddRoleToDbClusterOutput {
 }
 /// See [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput)
 pub mod add_role_to_db_cluster_output {
+
     /// A builder for [`AddRoleToDbClusterOutput`](crate::output::AddRoleToDbClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

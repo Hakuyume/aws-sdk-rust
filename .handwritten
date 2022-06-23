@@ -12,14 +12,16 @@
 /.github/
 /.git/
 /tools/
+/aws-models/
 
 # Files
 
 /_config.yml
 /.gitignore
 /.handwritten
-/CODE_OF_CONDUCT.md
+/CHANGELOG.md
 /CODEOWNERS
+/CODE_OF_CONDUCT.md
 /CONTRIBUTING.md
 /LICENSE
 /NOTICE

@@ -8446,6 +8446,93 @@ impl std::error::Error for ListCoreNetworksError {
     }
 }
 
+/// Error type for the `ListOrganizationServiceAccessStatus` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListOrganizationServiceAccessStatusError {
+    /// Kind of error that occurred.
+    pub kind: ListOrganizationServiceAccessStatusErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListOrganizationServiceAccessStatus` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListOrganizationServiceAccessStatusErrorKind {
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListOrganizationServiceAccessStatusError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListOrganizationServiceAccessStatusErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListOrganizationServiceAccessStatusError {
+    fn code(&self) -> Option<&str> {
+        ListOrganizationServiceAccessStatusError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListOrganizationServiceAccessStatusError {
+    /// Creates a new `ListOrganizationServiceAccessStatusError`.
+    pub fn new(
+        kind: ListOrganizationServiceAccessStatusErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListOrganizationServiceAccessStatusError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListOrganizationServiceAccessStatusErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListOrganizationServiceAccessStatusError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListOrganizationServiceAccessStatusErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+}
+impl std::error::Error for ListOrganizationServiceAccessStatusError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListOrganizationServiceAccessStatusErrorKind::Unhandled(_inner) => {
+                Some(_inner.as_ref())
+            }
+        }
+    }
+}
+
 /// Error type for the `ListTagsForResource` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -9337,6 +9424,183 @@ impl std::error::Error for RestoreCoreNetworkPolicyVersionError {
             RestoreCoreNetworkPolicyVersionErrorKind::ThrottlingException(_inner) => Some(_inner),
             RestoreCoreNetworkPolicyVersionErrorKind::ValidationException(_inner) => Some(_inner),
             RestoreCoreNetworkPolicyVersionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `StartOrganizationServiceAccessUpdate` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct StartOrganizationServiceAccessUpdateError {
+    /// Kind of error that occurred.
+    pub kind: StartOrganizationServiceAccessUpdateErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `StartOrganizationServiceAccessUpdate` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum StartOrganizationServiceAccessUpdateErrorKind {
+    /// <p>You do not have sufficient access to perform this action.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent state.</p>
+    ConflictException(crate::error::ConflictException),
+    /// <p>The request has failed due to an internal error.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>A service limit was exceeded.</p>
+    ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
+    /// <p>The request was denied due to request throttling.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The input fails to satisfy the constraints.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for StartOrganizationServiceAccessUpdateError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            StartOrganizationServiceAccessUpdateErrorKind::AccessDeniedException(_inner) => {
+                _inner.fmt(f)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::ConflictException(_inner) => {
+                _inner.fmt(f)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::InternalServerException(_inner) => {
+                _inner.fmt(f)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::ServiceQuotaExceededException(
+                _inner,
+            ) => _inner.fmt(f),
+            StartOrganizationServiceAccessUpdateErrorKind::ThrottlingException(_inner) => {
+                _inner.fmt(f)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::ValidationException(_inner) => {
+                _inner.fmt(f)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for StartOrganizationServiceAccessUpdateError {
+    fn code(&self) -> Option<&str> {
+        StartOrganizationServiceAccessUpdateError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl StartOrganizationServiceAccessUpdateError {
+    /// Creates a new `StartOrganizationServiceAccessUpdateError`.
+    pub fn new(
+        kind: StartOrganizationServiceAccessUpdateErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `StartOrganizationServiceAccessUpdateError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: StartOrganizationServiceAccessUpdateErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `StartOrganizationServiceAccessUpdateError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: StartOrganizationServiceAccessUpdateErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `StartOrganizationServiceAccessUpdateErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartOrganizationServiceAccessUpdateErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `StartOrganizationServiceAccessUpdateErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartOrganizationServiceAccessUpdateErrorKind::ConflictException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `StartOrganizationServiceAccessUpdateErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartOrganizationServiceAccessUpdateErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `StartOrganizationServiceAccessUpdateErrorKind::ServiceQuotaExceededException`.
+    pub fn is_service_quota_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartOrganizationServiceAccessUpdateErrorKind::ServiceQuotaExceededException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `StartOrganizationServiceAccessUpdateErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartOrganizationServiceAccessUpdateErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `StartOrganizationServiceAccessUpdateErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartOrganizationServiceAccessUpdateErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for StartOrganizationServiceAccessUpdateError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            StartOrganizationServiceAccessUpdateErrorKind::AccessDeniedException(_inner) => {
+                Some(_inner)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::ConflictException(_inner) => {
+                Some(_inner)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::InternalServerException(_inner) => {
+                Some(_inner)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::ServiceQuotaExceededException(
+                _inner,
+            ) => Some(_inner),
+            StartOrganizationServiceAccessUpdateErrorKind::ThrottlingException(_inner) => {
+                Some(_inner)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::ValidationException(_inner) => {
+                Some(_inner)
+            }
+            StartOrganizationServiceAccessUpdateErrorKind::Unhandled(_inner) => {
+                Some(_inner.as_ref())
+            }
         }
     }
 }
@@ -10973,6 +11237,7 @@ impl std::fmt::Display for ValidationException {
 impl std::error::Error for ValidationException {}
 /// See [`ValidationException`](crate::error::ValidationException)
 pub mod validation_exception {
+
     /// A builder for [`ValidationException`](crate::error::ValidationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11083,6 +11348,7 @@ impl std::fmt::Display for ThrottlingException {
 impl std::error::Error for ThrottlingException {}
 /// See [`ThrottlingException`](crate::error::ThrottlingException)
 pub mod throttling_exception {
+
     /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11186,6 +11452,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11315,6 +11582,7 @@ impl std::fmt::Display for InternalServerException {
 impl std::error::Error for InternalServerException {}
 /// See [`InternalServerException`](crate::error::InternalServerException)
 pub mod internal_server_exception {
+
     /// A builder for [`InternalServerException`](crate::error::InternalServerException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11407,6 +11675,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11498,6 +11767,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11592,6 +11862,7 @@ impl std::fmt::Display for ServiceQuotaExceededException {
 impl std::error::Error for ServiceQuotaExceededException {}
 /// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
 pub mod service_quota_exceeded_exception {
+
     /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11716,6 +11987,7 @@ impl std::fmt::Display for CoreNetworkPolicyException {
 impl std::error::Error for CoreNetworkPolicyException {}
 /// See [`CoreNetworkPolicyException`](crate::error::CoreNetworkPolicyException)
 pub mod core_network_policy_exception {
+
     /// A builder for [`CoreNetworkPolicyException`](crate::error::CoreNetworkPolicyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

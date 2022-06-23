@@ -3542,6 +3542,8 @@ pub struct UpdateReplicationSetError {
 pub enum UpdateReplicationSetErrorKind {
     /// <p>You don't have sufficient access to perform this operation.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>Updating or deleting a resource causes an inconsistent state.</p>
+    ConflictException(crate::error::ConflictException),
     /// <p>The request processing has failed because of an unknown error, exception or failure.</p>
     InternalServerException(crate::error::InternalServerException),
     /// <p>Request references a resource which doesn't exist. </p>
@@ -3557,6 +3559,7 @@ impl std::fmt::Display for UpdateReplicationSetError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match &self.kind {
             UpdateReplicationSetErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            UpdateReplicationSetErrorKind::ConflictException(_inner) => _inner.fmt(f),
             UpdateReplicationSetErrorKind::InternalServerException(_inner) => _inner.fmt(f),
             UpdateReplicationSetErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
             UpdateReplicationSetErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
@@ -3622,6 +3625,13 @@ impl UpdateReplicationSetError {
             UpdateReplicationSetErrorKind::AccessDeniedException(_)
         )
     }
+    /// Returns `true` if the error kind is `UpdateReplicationSetErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateReplicationSetErrorKind::ConflictException(_)
+        )
+    }
     /// Returns `true` if the error kind is `UpdateReplicationSetErrorKind::InternalServerException`.
     pub fn is_internal_server_exception(&self) -> bool {
         matches!(
@@ -3655,6 +3665,7 @@ impl std::error::Error for UpdateReplicationSetError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match &self.kind {
             UpdateReplicationSetErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            UpdateReplicationSetErrorKind::ConflictException(_inner) => Some(_inner),
             UpdateReplicationSetErrorKind::InternalServerException(_inner) => Some(_inner),
             UpdateReplicationSetErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
             UpdateReplicationSetErrorKind::ThrottlingException(_inner) => Some(_inner),
@@ -3992,6 +4003,7 @@ impl std::fmt::Display for ValidationException {
 impl std::error::Error for ValidationException {}
 /// See [`ValidationException`](crate::error::ValidationException)
 pub mod validation_exception {
+
     /// A builder for [`ValidationException`](crate::error::ValidationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4072,6 +4084,7 @@ impl std::fmt::Display for ThrottlingException {
 impl std::error::Error for ThrottlingException {}
 /// See [`ThrottlingException`](crate::error::ThrottlingException)
 pub mod throttling_exception {
+
     /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4179,6 +4192,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4273,6 +4287,7 @@ impl std::fmt::Display for InternalServerException {
 impl std::error::Error for InternalServerException {}
 /// See [`InternalServerException`](crate::error::InternalServerException)
 pub mod internal_server_exception {
+
     /// A builder for [`InternalServerException`](crate::error::InternalServerException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4360,6 +4375,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4469,6 +4485,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4563,6 +4580,7 @@ impl std::fmt::Display for ServiceQuotaExceededException {
 impl std::error::Error for ServiceQuotaExceededException {}
 /// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
 pub mod service_quota_exceeded_exception {
+
     /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

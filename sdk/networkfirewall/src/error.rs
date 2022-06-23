@@ -165,7 +165,7 @@ pub struct AssociateSubnetsError {
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
 pub enum AssociateSubnetsErrorKind {
-    /// <p>AWS doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
+    /// <p>Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
     InsufficientCapacityException(crate::error::InsufficientCapacityException),
     /// <p>Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem. Retry your request. </p>
     InternalServerError(crate::error::InternalServerError),
@@ -329,7 +329,7 @@ pub struct CreateFirewallError {
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
 pub enum CreateFirewallErrorKind {
-    /// <p>AWS doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
+    /// <p>Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
     InsufficientCapacityException(crate::error::InsufficientCapacityException),
     /// <p>Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem. Retry your request. </p>
     InternalServerError(crate::error::InternalServerError),
@@ -476,7 +476,7 @@ pub struct CreateFirewallPolicyError {
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
 pub enum CreateFirewallPolicyErrorKind {
-    /// <p>AWS doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
+    /// <p>Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
     InsufficientCapacityException(crate::error::InsufficientCapacityException),
     /// <p>Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem. Retry your request. </p>
     InternalServerError(crate::error::InternalServerError),
@@ -618,7 +618,7 @@ pub struct CreateRuleGroupError {
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
 pub enum CreateRuleGroupErrorKind {
-    /// <p>AWS doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
+    /// <p>Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
     InsufficientCapacityException(crate::error::InsufficientCapacityException),
     /// <p>Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem. Retry your request. </p>
     InternalServerError(crate::error::InternalServerError),
@@ -3451,6 +3451,188 @@ impl std::error::Error for UpdateFirewallDescriptionError {
     }
 }
 
+/// Error type for the `UpdateFirewallEncryptionConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct UpdateFirewallEncryptionConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: UpdateFirewallEncryptionConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `UpdateFirewallEncryptionConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdateFirewallEncryptionConfigurationErrorKind {
+    /// <p>Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem. Retry your request. </p>
+    InternalServerError(crate::error::InternalServerError),
+    /// <p>The operation failed because of a problem with your request. Examples include: </p>
+    /// <ul>
+    /// <li> <p>You specified an unsupported parameter name or value.</p> </li>
+    /// <li> <p>You tried to update a property with a value that isn't among the available types.</p> </li>
+    /// <li> <p>Your request references an ARN that is malformed, or corresponds to a resource that isn't valid in the context of the request.</p> </li>
+    /// </ul>
+    InvalidRequestException(crate::error::InvalidRequestException),
+    /// <p>The token you provided is stale or isn't valid for the operation. </p>
+    InvalidTokenException(crate::error::InvalidTokenException),
+    /// <p>Unable to locate a resource using the parameters that you provided.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>Unable to change the resource because your account doesn't own it. </p>
+    ResourceOwnerCheckException(crate::error::ResourceOwnerCheckException),
+    /// <p>Unable to process the request due to throttling limitations.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdateFirewallEncryptionConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            UpdateFirewallEncryptionConfigurationErrorKind::InternalServerError(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::InvalidRequestException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::InvalidTokenException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::ResourceOwnerCheckException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::ThrottlingException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for UpdateFirewallEncryptionConfigurationError {
+    fn code(&self) -> Option<&str> {
+        UpdateFirewallEncryptionConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl UpdateFirewallEncryptionConfigurationError {
+    /// Creates a new `UpdateFirewallEncryptionConfigurationError`.
+    pub fn new(
+        kind: UpdateFirewallEncryptionConfigurationErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `UpdateFirewallEncryptionConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdateFirewallEncryptionConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `UpdateFirewallEncryptionConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdateFirewallEncryptionConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdateFirewallEncryptionConfigurationErrorKind::InternalServerError`.
+    pub fn is_internal_server_error(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateFirewallEncryptionConfigurationErrorKind::InternalServerError(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateFirewallEncryptionConfigurationErrorKind::InvalidRequestException`.
+    pub fn is_invalid_request_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateFirewallEncryptionConfigurationErrorKind::InvalidRequestException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateFirewallEncryptionConfigurationErrorKind::InvalidTokenException`.
+    pub fn is_invalid_token_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateFirewallEncryptionConfigurationErrorKind::InvalidTokenException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateFirewallEncryptionConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateFirewallEncryptionConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateFirewallEncryptionConfigurationErrorKind::ResourceOwnerCheckException`.
+    pub fn is_resource_owner_check_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateFirewallEncryptionConfigurationErrorKind::ResourceOwnerCheckException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateFirewallEncryptionConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateFirewallEncryptionConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+}
+impl std::error::Error for UpdateFirewallEncryptionConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdateFirewallEncryptionConfigurationErrorKind::InternalServerError(_inner) => {
+                Some(_inner)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::InvalidRequestException(_inner) => {
+                Some(_inner)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::InvalidTokenException(_inner) => {
+                Some(_inner)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                Some(_inner)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::ResourceOwnerCheckException(_inner) => {
+                Some(_inner)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::ThrottlingException(_inner) => {
+                Some(_inner)
+            }
+            UpdateFirewallEncryptionConfigurationErrorKind::Unhandled(_inner) => {
+                Some(_inner.as_ref())
+            }
+        }
+    }
+}
+
 /// Error type for the `UpdateFirewallPolicy` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -4261,6 +4443,7 @@ impl std::fmt::Display for ThrottlingException {
 impl std::error::Error for ThrottlingException {}
 /// See [`ThrottlingException`](crate::error::ThrottlingException)
 pub mod throttling_exception {
+
     /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4325,6 +4508,7 @@ impl std::fmt::Display for ResourceOwnerCheckException {
 impl std::error::Error for ResourceOwnerCheckException {}
 /// See [`ResourceOwnerCheckException`](crate::error::ResourceOwnerCheckException)
 pub mod resource_owner_check_exception {
+
     /// A builder for [`ResourceOwnerCheckException`](crate::error::ResourceOwnerCheckException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4389,6 +4573,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4453,6 +4638,7 @@ impl std::fmt::Display for InvalidTokenException {
 impl std::error::Error for InvalidTokenException {}
 /// See [`InvalidTokenException`](crate::error::InvalidTokenException)
 pub mod invalid_token_exception {
+
     /// A builder for [`InvalidTokenException`](crate::error::InvalidTokenException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4522,6 +4708,7 @@ impl std::fmt::Display for InvalidRequestException {
 impl std::error::Error for InvalidRequestException {}
 /// See [`InvalidRequestException`](crate::error::InvalidRequestException)
 pub mod invalid_request_exception {
+
     /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4586,6 +4773,7 @@ impl std::fmt::Display for InternalServerError {
 impl std::error::Error for InternalServerError {}
 /// See [`InternalServerError`](crate::error::InternalServerError)
 pub mod internal_server_error {
+
     /// A builder for [`InternalServerError`](crate::error::InternalServerError)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4650,6 +4838,7 @@ impl std::fmt::Display for LogDestinationPermissionException {
 impl std::error::Error for LogDestinationPermissionException {}
 /// See [`LogDestinationPermissionException`](crate::error::LogDestinationPermissionException)
 pub mod log_destination_permission_exception {
+
     /// A builder for [`LogDestinationPermissionException`](crate::error::LogDestinationPermissionException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4714,6 +4903,7 @@ impl std::fmt::Display for InvalidResourcePolicyException {
 impl std::error::Error for InvalidResourcePolicyException {}
 /// See [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException)
 pub mod invalid_resource_policy_exception {
+
     /// A builder for [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4778,6 +4968,7 @@ impl std::fmt::Display for InvalidOperationException {
 impl std::error::Error for InvalidOperationException {}
 /// See [`InvalidOperationException`](crate::error::InvalidOperationException)
 pub mod invalid_operation_exception {
+
     /// A builder for [`InvalidOperationException`](crate::error::InvalidOperationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4842,6 +5033,7 @@ impl std::fmt::Display for UnsupportedOperationException {
 impl std::error::Error for UnsupportedOperationException {}
 /// See [`UnsupportedOperationException`](crate::error::UnsupportedOperationException)
 pub mod unsupported_operation_exception {
+
     /// A builder for [`UnsupportedOperationException`](crate::error::UnsupportedOperationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4906,6 +5098,7 @@ impl std::fmt::Display for LimitExceededException {
 impl std::error::Error for LimitExceededException {}
 /// See [`LimitExceededException`](crate::error::LimitExceededException)
 pub mod limit_exceeded_exception {
+
     /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4938,7 +5131,7 @@ impl LimitExceededException {
     }
 }
 
-/// <p>AWS doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
+/// <p>Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your request later. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InsufficientCapacityException {
@@ -4970,6 +5163,7 @@ impl std::fmt::Display for InsufficientCapacityException {
 impl std::error::Error for InsufficientCapacityException {}
 /// See [`InsufficientCapacityException`](crate::error::InsufficientCapacityException)
 pub mod insufficient_capacity_exception {
+
     /// A builder for [`InsufficientCapacityException`](crate::error::InsufficientCapacityException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

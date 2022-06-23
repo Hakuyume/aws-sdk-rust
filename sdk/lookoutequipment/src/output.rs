@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateInferenceSchedulerOutput {
 }
 /// See [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput)
 pub mod update_inference_scheduler_output {
+
     /// A builder for [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +42,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -71,6 +73,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -139,6 +142,7 @@ impl std::fmt::Debug for StopInferenceSchedulerOutput {
 }
 /// See [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput)
 pub mod stop_inference_scheduler_output {
+
     /// A builder for [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -278,6 +282,7 @@ impl std::fmt::Debug for StartInferenceSchedulerOutput {
 }
 /// See [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput)
 pub mod start_inference_scheduler_output {
+
     /// A builder for [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -396,6 +401,7 @@ impl std::fmt::Debug for StartDataIngestionJobOutput {
 }
 /// See [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput)
 pub mod start_data_ingestion_job_output {
+
     /// A builder for [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -465,6 +471,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -507,6 +514,99 @@ impl ListTagsForResourceOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListSensorStatisticsOutput {
+    /// <p> Provides ingestion-based statistics regarding the specified sensor with respect to various validation types, such as whether data exists, the number and percentage of missing values, and the number and percentage of duplicate timestamps. </p>
+    pub sensor_statistics_summaries:
+        std::option::Option<std::vec::Vec<crate::model::SensorStatisticsSummary>>,
+    /// <p> An opaque pagination token indicating where to continue the listing of sensor statistics. </p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListSensorStatisticsOutput {
+    /// <p> Provides ingestion-based statistics regarding the specified sensor with respect to various validation types, such as whether data exists, the number and percentage of missing values, and the number and percentage of duplicate timestamps. </p>
+    pub fn sensor_statistics_summaries(
+        &self,
+    ) -> std::option::Option<&[crate::model::SensorStatisticsSummary]> {
+        self.sensor_statistics_summaries.as_deref()
+    }
+    /// <p> An opaque pagination token indicating where to continue the listing of sensor statistics. </p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListSensorStatisticsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListSensorStatisticsOutput");
+        formatter.field(
+            "sensor_statistics_summaries",
+            &self.sensor_statistics_summaries,
+        );
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
+pub mod list_sensor_statistics_output {
+
+    /// A builder for [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) sensor_statistics_summaries:
+            std::option::Option<std::vec::Vec<crate::model::SensorStatisticsSummary>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `sensor_statistics_summaries`.
+        ///
+        /// To override the contents of this collection use [`set_sensor_statistics_summaries`](Self::set_sensor_statistics_summaries).
+        ///
+        /// <p> Provides ingestion-based statistics regarding the specified sensor with respect to various validation types, such as whether data exists, the number and percentage of missing values, and the number and percentage of duplicate timestamps. </p>
+        pub fn sensor_statistics_summaries(
+            mut self,
+            input: crate::model::SensorStatisticsSummary,
+        ) -> Self {
+            let mut v = self.sensor_statistics_summaries.unwrap_or_default();
+            v.push(input);
+            self.sensor_statistics_summaries = Some(v);
+            self
+        }
+        /// <p> Provides ingestion-based statistics regarding the specified sensor with respect to various validation types, such as whether data exists, the number and percentage of missing values, and the number and percentage of duplicate timestamps. </p>
+        pub fn set_sensor_statistics_summaries(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::SensorStatisticsSummary>>,
+        ) -> Self {
+            self.sensor_statistics_summaries = input;
+            self
+        }
+        /// <p> An opaque pagination token indicating where to continue the listing of sensor statistics. </p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p> An opaque pagination token indicating where to continue the listing of sensor statistics. </p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
+        pub fn build(self) -> crate::output::ListSensorStatisticsOutput {
+            crate::output::ListSensorStatisticsOutput {
+                sensor_statistics_summaries: self.sensor_statistics_summaries,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListSensorStatisticsOutput {
+    /// Creates a new builder-style object to manufacture [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
+    pub fn builder() -> crate::output::list_sensor_statistics_output::Builder {
+        crate::output::list_sensor_statistics_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListModelsOutput {
     /// <p> An opaque pagination token indicating where to continue the listing of ML models. </p>
     pub next_token: std::option::Option<std::string::String>,
@@ -533,6 +633,7 @@ impl std::fmt::Debug for ListModelsOutput {
 }
 /// See [`ListModelsOutput`](crate::output::ListModelsOutput)
 pub mod list_models_output {
+
     /// A builder for [`ListModelsOutput`](crate::output::ListModelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -621,6 +722,7 @@ impl std::fmt::Debug for ListInferenceSchedulersOutput {
 }
 /// See [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput)
 pub mod list_inference_schedulers_output {
+
     /// A builder for [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -713,6 +815,7 @@ impl std::fmt::Debug for ListInferenceExecutionsOutput {
 }
 /// See [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput)
 pub mod list_inference_executions_output {
+
     /// A builder for [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -799,6 +902,7 @@ impl std::fmt::Debug for ListDatasetsOutput {
 }
 /// See [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
 pub mod list_datasets_output {
+
     /// A builder for [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -888,6 +992,7 @@ impl std::fmt::Debug for ListDataIngestionJobsOutput {
 }
 /// See [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput)
 pub mod list_data_ingestion_jobs_output {
+
     /// A builder for [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1131,6 +1236,7 @@ impl std::fmt::Debug for DescribeModelOutput {
 }
 /// See [`DescribeModelOutput`](crate::output::DescribeModelOutput)
 pub mod describe_model_output {
+
     /// A builder for [`DescribeModelOutput`](crate::output::DescribeModelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1568,6 +1674,7 @@ impl std::fmt::Debug for DescribeInferenceSchedulerOutput {
 }
 /// See [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput)
 pub mod describe_inference_scheduler_output {
+
     /// A builder for [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1800,6 +1907,16 @@ pub struct DescribeDatasetOutput {
     /// <p>Specifies the S3 location configuration for the data input for the data ingestion job. </p>
     pub ingestion_input_configuration:
         std::option::Option<crate::model::IngestionInputConfiguration>,
+    /// <p> Gives statistics associated with the given dataset for the latest successful associated ingestion job id. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+    pub data_quality_summary: std::option::Option<crate::model::DataQualitySummary>,
+    /// <p> IngestedFilesSummary associated with the given dataset for the latest successful associated ingestion job id. </p>
+    pub ingested_files_summary: std::option::Option<crate::model::IngestedFilesSummary>,
+    /// <p> The Amazon Resource Name (ARN) of the IAM role that you are using for this the data ingestion job. </p>
+    pub role_arn: std::option::Option<std::string::String>,
+    /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+    pub data_start_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+    pub data_end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeDatasetOutput {
     /// <p>The name of the dataset being described. </p>
@@ -1836,6 +1953,28 @@ impl DescribeDatasetOutput {
     ) -> std::option::Option<&crate::model::IngestionInputConfiguration> {
         self.ingestion_input_configuration.as_ref()
     }
+    /// <p> Gives statistics associated with the given dataset for the latest successful associated ingestion job id. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+    pub fn data_quality_summary(&self) -> std::option::Option<&crate::model::DataQualitySummary> {
+        self.data_quality_summary.as_ref()
+    }
+    /// <p> IngestedFilesSummary associated with the given dataset for the latest successful associated ingestion job id. </p>
+    pub fn ingested_files_summary(
+        &self,
+    ) -> std::option::Option<&crate::model::IngestedFilesSummary> {
+        self.ingested_files_summary.as_ref()
+    }
+    /// <p> The Amazon Resource Name (ARN) of the IAM role that you are using for this the data ingestion job. </p>
+    pub fn role_arn(&self) -> std::option::Option<&str> {
+        self.role_arn.as_deref()
+    }
+    /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+    pub fn data_start_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.data_start_time.as_ref()
+    }
+    /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+    pub fn data_end_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.data_end_time.as_ref()
+    }
 }
 impl std::fmt::Debug for DescribeDatasetOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1851,11 +1990,17 @@ impl std::fmt::Debug for DescribeDatasetOutput {
             "ingestion_input_configuration",
             &self.ingestion_input_configuration,
         );
+        formatter.field("data_quality_summary", &self.data_quality_summary);
+        formatter.field("ingested_files_summary", &self.ingested_files_summary);
+        formatter.field("role_arn", &self.role_arn);
+        formatter.field("data_start_time", &self.data_start_time);
+        formatter.field("data_end_time", &self.data_end_time);
         formatter.finish()
     }
 }
 /// See [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
 pub mod describe_dataset_output {
+
     /// A builder for [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1869,6 +2014,11 @@ pub mod describe_dataset_output {
         pub(crate) server_side_kms_key_id: std::option::Option<std::string::String>,
         pub(crate) ingestion_input_configuration:
             std::option::Option<crate::model::IngestionInputConfiguration>,
+        pub(crate) data_quality_summary: std::option::Option<crate::model::DataQualitySummary>,
+        pub(crate) ingested_files_summary: std::option::Option<crate::model::IngestedFilesSummary>,
+        pub(crate) role_arn: std::option::Option<std::string::String>,
+        pub(crate) data_start_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) data_end_time: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
         /// <p>The name of the dataset being described. </p>
@@ -1969,6 +2119,68 @@ pub mod describe_dataset_output {
             self.ingestion_input_configuration = input;
             self
         }
+        /// <p> Gives statistics associated with the given dataset for the latest successful associated ingestion job id. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+        pub fn data_quality_summary(mut self, input: crate::model::DataQualitySummary) -> Self {
+            self.data_quality_summary = Some(input);
+            self
+        }
+        /// <p> Gives statistics associated with the given dataset for the latest successful associated ingestion job id. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+        pub fn set_data_quality_summary(
+            mut self,
+            input: std::option::Option<crate::model::DataQualitySummary>,
+        ) -> Self {
+            self.data_quality_summary = input;
+            self
+        }
+        /// <p> IngestedFilesSummary associated with the given dataset for the latest successful associated ingestion job id. </p>
+        pub fn ingested_files_summary(mut self, input: crate::model::IngestedFilesSummary) -> Self {
+            self.ingested_files_summary = Some(input);
+            self
+        }
+        /// <p> IngestedFilesSummary associated with the given dataset for the latest successful associated ingestion job id. </p>
+        pub fn set_ingested_files_summary(
+            mut self,
+            input: std::option::Option<crate::model::IngestedFilesSummary>,
+        ) -> Self {
+            self.ingested_files_summary = input;
+            self
+        }
+        /// <p> The Amazon Resource Name (ARN) of the IAM role that you are using for this the data ingestion job. </p>
+        pub fn role_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.role_arn = Some(input.into());
+            self
+        }
+        /// <p> The Amazon Resource Name (ARN) of the IAM role that you are using for this the data ingestion job. </p>
+        pub fn set_role_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.role_arn = input;
+            self
+        }
+        /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+        pub fn data_start_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.data_start_time = Some(input);
+            self
+        }
+        /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+        pub fn set_data_start_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.data_start_time = input;
+            self
+        }
+        /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+        pub fn data_end_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.data_end_time = Some(input);
+            self
+        }
+        /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during the most recent ingestion of this particular dataset. </p>
+        pub fn set_data_end_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.data_end_time = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
         pub fn build(self) -> crate::output::DescribeDatasetOutput {
             crate::output::DescribeDatasetOutput {
@@ -1980,6 +2192,11 @@ pub mod describe_dataset_output {
                 schema: self.schema,
                 server_side_kms_key_id: self.server_side_kms_key_id,
                 ingestion_input_configuration: self.ingestion_input_configuration,
+                data_quality_summary: self.data_quality_summary,
+                ingested_files_summary: self.ingested_files_summary,
+                role_arn: self.role_arn,
+                data_start_time: self.data_start_time,
+                data_end_time: self.data_end_time,
             }
         }
     }
@@ -2010,6 +2227,18 @@ pub struct DescribeDataIngestionJobOutput {
     pub status: std::option::Option<crate::model::IngestionJobStatus>,
     /// <p>Specifies the reason for failure when a data ingestion job has failed. </p>
     pub failed_reason: std::option::Option<std::string::String>,
+    /// <p> Gives statistics about a completed ingestion job. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+    pub data_quality_summary: std::option::Option<crate::model::DataQualitySummary>,
+    /// <p>Gives statistics about how many files have been ingested, and which files have not been ingested, for a particular ingestion job.</p>
+    pub ingested_files_summary: std::option::Option<crate::model::IngestedFilesSummary>,
+    /// <p> Provides details about status of the ingestion job that is currently in progress. </p>
+    pub status_detail: std::option::Option<std::string::String>,
+    /// <p> Indicates the size of the ingested dataset. </p>
+    pub ingested_data_size: std::option::Option<i64>,
+    /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+    pub data_start_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+    pub data_end_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeDataIngestionJobOutput {
     /// <p>Indicates the job ID of the data ingestion job. </p>
@@ -2042,6 +2271,32 @@ impl DescribeDataIngestionJobOutput {
     pub fn failed_reason(&self) -> std::option::Option<&str> {
         self.failed_reason.as_deref()
     }
+    /// <p> Gives statistics about a completed ingestion job. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+    pub fn data_quality_summary(&self) -> std::option::Option<&crate::model::DataQualitySummary> {
+        self.data_quality_summary.as_ref()
+    }
+    /// <p>Gives statistics about how many files have been ingested, and which files have not been ingested, for a particular ingestion job.</p>
+    pub fn ingested_files_summary(
+        &self,
+    ) -> std::option::Option<&crate::model::IngestedFilesSummary> {
+        self.ingested_files_summary.as_ref()
+    }
+    /// <p> Provides details about status of the ingestion job that is currently in progress. </p>
+    pub fn status_detail(&self) -> std::option::Option<&str> {
+        self.status_detail.as_deref()
+    }
+    /// <p> Indicates the size of the ingested dataset. </p>
+    pub fn ingested_data_size(&self) -> std::option::Option<i64> {
+        self.ingested_data_size
+    }
+    /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+    pub fn data_start_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.data_start_time.as_ref()
+    }
+    /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+    pub fn data_end_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.data_end_time.as_ref()
+    }
 }
 impl std::fmt::Debug for DescribeDataIngestionJobOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -2056,11 +2311,18 @@ impl std::fmt::Debug for DescribeDataIngestionJobOutput {
         formatter.field("created_at", &self.created_at);
         formatter.field("status", &self.status);
         formatter.field("failed_reason", &self.failed_reason);
+        formatter.field("data_quality_summary", &self.data_quality_summary);
+        formatter.field("ingested_files_summary", &self.ingested_files_summary);
+        formatter.field("status_detail", &self.status_detail);
+        formatter.field("ingested_data_size", &self.ingested_data_size);
+        formatter.field("data_start_time", &self.data_start_time);
+        formatter.field("data_end_time", &self.data_end_time);
         formatter.finish()
     }
 }
 /// See [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput)
 pub mod describe_data_ingestion_job_output {
+
     /// A builder for [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2073,6 +2335,12 @@ pub mod describe_data_ingestion_job_output {
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) status: std::option::Option<crate::model::IngestionJobStatus>,
         pub(crate) failed_reason: std::option::Option<std::string::String>,
+        pub(crate) data_quality_summary: std::option::Option<crate::model::DataQualitySummary>,
+        pub(crate) ingested_files_summary: std::option::Option<crate::model::IngestedFilesSummary>,
+        pub(crate) status_detail: std::option::Option<std::string::String>,
+        pub(crate) ingested_data_size: std::option::Option<i64>,
+        pub(crate) data_start_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) data_end_time: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
         /// <p>Indicates the job ID of the data ingestion job. </p>
@@ -2160,6 +2428,81 @@ pub mod describe_data_ingestion_job_output {
             self.failed_reason = input;
             self
         }
+        /// <p> Gives statistics about a completed ingestion job. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+        pub fn data_quality_summary(mut self, input: crate::model::DataQualitySummary) -> Self {
+            self.data_quality_summary = Some(input);
+            self
+        }
+        /// <p> Gives statistics about a completed ingestion job. These statistics primarily relate to quantifying incorrect data such as MissingCompleteSensorData, MissingSensorData, UnsupportedDateFormats, InsufficientSensorData, and DuplicateTimeStamps. </p>
+        pub fn set_data_quality_summary(
+            mut self,
+            input: std::option::Option<crate::model::DataQualitySummary>,
+        ) -> Self {
+            self.data_quality_summary = input;
+            self
+        }
+        /// <p>Gives statistics about how many files have been ingested, and which files have not been ingested, for a particular ingestion job.</p>
+        pub fn ingested_files_summary(mut self, input: crate::model::IngestedFilesSummary) -> Self {
+            self.ingested_files_summary = Some(input);
+            self
+        }
+        /// <p>Gives statistics about how many files have been ingested, and which files have not been ingested, for a particular ingestion job.</p>
+        pub fn set_ingested_files_summary(
+            mut self,
+            input: std::option::Option<crate::model::IngestedFilesSummary>,
+        ) -> Self {
+            self.ingested_files_summary = input;
+            self
+        }
+        /// <p> Provides details about status of the ingestion job that is currently in progress. </p>
+        pub fn status_detail(mut self, input: impl Into<std::string::String>) -> Self {
+            self.status_detail = Some(input.into());
+            self
+        }
+        /// <p> Provides details about status of the ingestion job that is currently in progress. </p>
+        pub fn set_status_detail(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.status_detail = input;
+            self
+        }
+        /// <p> Indicates the size of the ingested dataset. </p>
+        pub fn ingested_data_size(mut self, input: i64) -> Self {
+            self.ingested_data_size = Some(input);
+            self
+        }
+        /// <p> Indicates the size of the ingested dataset. </p>
+        pub fn set_ingested_data_size(mut self, input: std::option::Option<i64>) -> Self {
+            self.ingested_data_size = input;
+            self
+        }
+        /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+        pub fn data_start_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.data_start_time = Some(input);
+            self
+        }
+        /// <p> Indicates the earliest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+        pub fn set_data_start_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.data_start_time = input;
+            self
+        }
+        /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+        pub fn data_end_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.data_end_time = Some(input);
+            self
+        }
+        /// <p> Indicates the latest timestamp corresponding to data that was successfully ingested during this specific ingestion job. </p>
+        pub fn set_data_end_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.data_end_time = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput)
         pub fn build(self) -> crate::output::DescribeDataIngestionJobOutput {
             crate::output::DescribeDataIngestionJobOutput {
@@ -2170,6 +2513,12 @@ pub mod describe_data_ingestion_job_output {
                 created_at: self.created_at,
                 status: self.status,
                 failed_reason: self.failed_reason,
+                data_quality_summary: self.data_quality_summary,
+                ingested_files_summary: self.ingested_files_summary,
+                status_detail: self.status_detail,
+                ingested_data_size: self.ingested_data_size,
+                data_start_time: self.data_start_time,
+                data_end_time: self.data_end_time,
             }
         }
     }
@@ -2193,6 +2542,7 @@ impl std::fmt::Debug for DeleteModelOutput {
 }
 /// See [`DeleteModelOutput`](crate::output::DeleteModelOutput)
 pub mod delete_model_output {
+
     /// A builder for [`DeleteModelOutput`](crate::output::DeleteModelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2223,6 +2573,7 @@ impl std::fmt::Debug for DeleteInferenceSchedulerOutput {
 }
 /// See [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput)
 pub mod delete_inference_scheduler_output {
+
     /// A builder for [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2253,6 +2604,7 @@ impl std::fmt::Debug for DeleteDatasetOutput {
 }
 /// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
 pub mod delete_dataset_output {
+
     /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2300,6 +2652,7 @@ impl std::fmt::Debug for CreateModelOutput {
 }
 /// See [`CreateModelOutput`](crate::output::CreateModelOutput)
 pub mod create_model_output {
+
     /// A builder for [`CreateModelOutput`](crate::output::CreateModelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2380,6 +2733,7 @@ impl std::fmt::Debug for CreateInferenceSchedulerOutput {
 }
 /// See [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput)
 pub mod create_inference_scheduler_output {
+
     /// A builder for [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2481,6 +2835,7 @@ impl std::fmt::Debug for CreateDatasetOutput {
 }
 /// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
 pub mod create_dataset_output {
+
     /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

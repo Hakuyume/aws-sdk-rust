@@ -71,6 +71,19 @@ pub fn serialize_operation_crate_operation_associate_lex_bot(
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
 
+pub fn serialize_operation_crate_operation_associate_phone_number_contact_flow(
+    input: &crate::input::AssociatePhoneNumberContactFlowInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_associate_phone_number_contact_flow_input(
+        &mut object,
+        input,
+    )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
 pub fn serialize_operation_crate_operation_associate_queue_quick_connects(
     input: &crate::input::AssociateQueueQuickConnectsInput,
 ) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
@@ -106,6 +119,16 @@ pub fn serialize_operation_crate_operation_associate_security_key(
         &mut object,
         input,
     )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
+pub fn serialize_operation_crate_operation_claim_phone_number(
+    input: &crate::input::ClaimPhoneNumberInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_claim_phone_number_input(&mut object, input)?;
     object.finish();
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
@@ -228,6 +251,19 @@ pub fn serialize_operation_crate_operation_create_security_profile(
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
 
+pub fn serialize_operation_crate_operation_create_task_template(
+    input: &crate::input::CreateTaskTemplateInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_create_task_template_input(
+        &mut object,
+        input,
+    )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
 pub fn serialize_operation_crate_operation_create_use_case(
     input: &crate::input::CreateUseCaseInput,
 ) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
@@ -320,6 +356,19 @@ pub fn serialize_operation_crate_operation_get_current_metric_data(
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
 
+pub fn serialize_operation_crate_operation_get_current_user_data(
+    input: &crate::input::GetCurrentUserDataInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_get_current_user_data_input(
+        &mut object,
+        input,
+    )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
 pub fn serialize_operation_crate_operation_get_metric_data(
     input: &crate::input::GetMetricDataInput,
 ) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
@@ -343,6 +392,29 @@ pub fn serialize_operation_crate_operation_list_default_vocabularies(
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
 
+pub fn serialize_operation_crate_operation_list_phone_numbers_v2(
+    input: &crate::input::ListPhoneNumbersV2Input,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_list_phone_numbers_v2_input(
+        &mut object,
+        input,
+    )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
+pub fn serialize_operation_crate_operation_put_user_status(
+    input: &crate::input::PutUserStatusInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_put_user_status_input(&mut object, input)?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
 pub fn serialize_operation_crate_operation_resume_contact_recording(
     input: &crate::input::ResumeContactRecordingInput,
 ) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
@@ -352,6 +424,29 @@ pub fn serialize_operation_crate_operation_resume_contact_recording(
         &mut object,
         input,
     )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
+pub fn serialize_operation_crate_operation_search_available_phone_numbers(
+    input: &crate::input::SearchAvailablePhoneNumbersInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_search_available_phone_numbers_input(
+        &mut object,
+        input,
+    )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
+pub fn serialize_operation_crate_operation_search_users(
+    input: &crate::input::SearchUsersInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_search_users_input(&mut object, input)?;
     object.finish();
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
@@ -480,6 +575,16 @@ pub fn serialize_operation_crate_operation_tag_resource(
     let mut out = String::new();
     let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
     crate::json_ser::serialize_structure_crate_input_tag_resource_input(&mut object, input)?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
+pub fn serialize_operation_crate_operation_transfer_contact(
+    input: &crate::input::TransferContactInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_transfer_contact_input(&mut object, input)?;
     object.finish();
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
@@ -634,6 +739,16 @@ pub fn serialize_operation_crate_operation_update_instance_storage_config(
     Ok(aws_smithy_http::body::SdkBody::from(out))
 }
 
+pub fn serialize_operation_crate_operation_update_phone_number(
+    input: &crate::input::UpdatePhoneNumberInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_update_phone_number_input(&mut object, input)?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
 pub fn serialize_operation_crate_operation_update_queue_hours_of_operation(
     input: &crate::input::UpdateQueueHoursOfOperationInput,
 ) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
@@ -774,6 +889,19 @@ pub fn serialize_operation_crate_operation_update_security_profile(
     let mut out = String::new();
     let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
     crate::json_ser::serialize_structure_crate_input_update_security_profile_input(
+        &mut object,
+        input,
+    )?;
+    object.finish();
+    Ok(aws_smithy_http::body::SdkBody::from(out))
+}
+
+pub fn serialize_operation_crate_operation_update_task_template(
+    input: &crate::input::UpdateTaskTemplateInput,
+) -> Result<aws_smithy_http::body::SdkBody, aws_smithy_http::operation::SerializationError> {
+    let mut out = String::new();
+    let mut object = aws_smithy_json::serialize::JsonObjectWriter::new(&mut out);
+    crate::json_ser::serialize_structure_crate_input_update_task_template_input(
         &mut object,
         input,
     )?;

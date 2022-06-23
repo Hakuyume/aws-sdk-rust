@@ -116,6 +116,7 @@ impl Client {
     ///
     /// - The fluent builder is configurable:
     ///   - [`name(impl Into<String>)`](crate::client::fluent_builders::DeleteCanary::name) / [`set_name(Option<String>)`](crate::client::fluent_builders::DeleteCanary::set_name): <p>The name of the canary that you want to delete. To find the names of your canaries, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.</p>
+    ///   - [`delete_lambda(bool)`](crate::client::fluent_builders::DeleteCanary::delete_lambda) / [`set_delete_lambda(bool)`](crate::client::fluent_builders::DeleteCanary::set_delete_lambda): <p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p>  <p>Type: Boolean</p>
     /// - On success, responds with [`DeleteCanaryOutput`](crate::output::DeleteCanaryOutput)
 
     /// - On failure, responds with [`SdkError<DeleteCanaryError>`](crate::error::DeleteCanaryError)
@@ -262,13 +263,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `CreateCanary`.
     ///
     /// <p>Creates a canary. Canaries are scripts that monitor your endpoints and APIs from the outside-in. Canaries help you check the availability and latency of your web services and troubleshoot anomalies by investigating load time data, screenshots of the UI, logs, and metrics. You can set up a canary to run continuously or just once. </p>
@@ -503,9 +503,9 @@ pub mod fluent_builders {
     /// Fluent builder constructing a request to `DeleteCanary`.
     ///
     /// <p>Permanently deletes the specified canary.</p>
-    /// <p>When you delete a canary, resources used and created by the canary are not automatically deleted. After you delete a canary that you do not intend to use again, you should also delete the following:</p>
+    /// <p>If you specify <code>DeleteLambda</code> to <code>true</code>, CloudWatch Synthetics also deletes the Lambda functions and layers that are used by the canary.</p>
+    /// <p>Other esources used and created by the canary are not automatically deleted. After you delete a canary that you do not intend to use again, you should also delete the following:</p>
     /// <ul>
-    /// <li> <p>The Lambda functions and layers used by this canary. These have the prefix <code>cwsyn-<i>MyCanaryName</i> </code>.</p> </li>
     /// <li> <p>The CloudWatch alarms created for this canary. These alarms have a name of <code>Synthetics-SharpDrop-Alarm-<i>MyCanaryName</i> </code>.</p> </li>
     /// <li> <p>Amazon S3 objects and buckets, such as the canary's artifact location.</p> </li>
     /// <li> <p>IAM roles created for the canary. If they were created in the console, these roles have the name <code> role/service-role/CloudWatchSyntheticsRole-<i>MyCanaryName</i> </code>.</p> </li>
@@ -559,6 +559,18 @@ pub mod fluent_builders {
         /// <p>The name of the canary that you want to delete. To find the names of your canaries, use <a href="https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DescribeCanaries.html">DescribeCanaries</a>.</p>
         pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_name(input);
+            self
+        }
+        /// <p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p>
+        /// <p>Type: Boolean</p>
+        pub fn delete_lambda(mut self, input: bool) -> Self {
+            self.inner = self.inner.delete_lambda(input);
+            self
+        }
+        /// <p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p>
+        /// <p>Type: Boolean</p>
+        pub fn set_delete_lambda(mut self, input: std::option::Option<bool>) -> Self {
+            self.inner = self.inner.set_delete_lambda(input);
             self
         }
     }

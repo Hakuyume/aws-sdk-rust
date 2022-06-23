@@ -1315,92 +1315,6 @@ pub fn parse_copy_option_group_response(
 }
 
 #[allow(clippy::unnecessary_wraps)]
-pub fn parse_create_custom_availability_zone_error(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::CreateCustomAvailabilityZoneOutput,
-    crate::error::CreateCustomAvailabilityZoneError,
-> {
-    let generic = crate::xml_deser::parse_http_generic_error(response)
-        .map_err(crate::error::CreateCustomAvailabilityZoneError::unhandled)?;
-    let error_code = match generic.code() {
-        Some(code) => code,
-        None => {
-            return Err(crate::error::CreateCustomAvailabilityZoneError::unhandled(
-                generic,
-            ))
-        }
-    };
-
-    let _error_message = generic.message().map(|msg| msg.to_owned());
-    Err(match error_code {
-        "CustomAvailabilityZoneAlreadyExists" => crate::error::CreateCustomAvailabilityZoneError { meta: generic, kind: crate::error::CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneAlreadyExistsFault({
-            #[allow(unused_mut)]let mut tmp =
-                 {
-                    #[allow(unused_mut)]let mut output = crate::error::custom_availability_zone_already_exists_fault::Builder::default();
-                    let _ = response;
-                    output = crate::xml_deser::deser_structure_crate_error_custom_availability_zone_already_exists_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::CreateCustomAvailabilityZoneError::unhandled)?;
-                    output.build()
-                }
-            ;
-            if (&tmp.message).is_none() {
-                                                        tmp.message = _error_message;
-                                                    }
-            tmp
-        })},
-        "CustomAvailabilityZoneQuotaExceeded" => crate::error::CreateCustomAvailabilityZoneError { meta: generic, kind: crate::error::CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneQuotaExceededFault({
-            #[allow(unused_mut)]let mut tmp =
-                 {
-                    #[allow(unused_mut)]let mut output = crate::error::custom_availability_zone_quota_exceeded_fault::Builder::default();
-                    let _ = response;
-                    output = crate::xml_deser::deser_structure_crate_error_custom_availability_zone_quota_exceeded_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::CreateCustomAvailabilityZoneError::unhandled)?;
-                    output.build()
-                }
-            ;
-            if (&tmp.message).is_none() {
-                                                        tmp.message = _error_message;
-                                                    }
-            tmp
-        })},
-        "KMSKeyNotAccessibleFault" => crate::error::CreateCustomAvailabilityZoneError { meta: generic, kind: crate::error::CreateCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault({
-            #[allow(unused_mut)]let mut tmp =
-                 {
-                    #[allow(unused_mut)]let mut output = crate::error::kms_key_not_accessible_fault::Builder::default();
-                    let _ = response;
-                    output = crate::xml_deser::deser_structure_crate_error_kms_key_not_accessible_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::CreateCustomAvailabilityZoneError::unhandled)?;
-                    output.build()
-                }
-            ;
-            if (&tmp.message).is_none() {
-                                                        tmp.message = _error_message;
-                                                    }
-            tmp
-        })},
-        _ => crate::error::CreateCustomAvailabilityZoneError::generic(generic)
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_create_custom_availability_zone_response(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::CreateCustomAvailabilityZoneOutput,
-    crate::error::CreateCustomAvailabilityZoneError,
-> {
-    Ok({
-        #[allow(unused_mut)]
-        let mut output = crate::output::create_custom_availability_zone_output::Builder::default();
-        let _ = response;
-        output = crate::xml_deser::deser_operation_crate_operation_create_custom_availability_zone(
-            response.body().as_ref(),
-            output,
-        )
-        .map_err(crate::error::CreateCustomAvailabilityZoneError::unhandled)?;
-        output.build()
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
 pub fn parse_create_custom_db_engine_version_error(
     response: &http::Response<bytes::Bytes>,
 ) -> std::result::Result<
@@ -2489,6 +2403,23 @@ pub fn parse_create_db_instance_error(
                 tmp
             }),
         },
+        "NetworkTypeNotSupported" => crate::error::CreateDBInstanceError {
+            meta: generic,
+            kind: crate::error::CreateDBInstanceErrorKind::NetworkTypeNotSupported({
+                #[allow(unused_mut)]
+                let mut tmp = {
+                    #[allow(unused_mut)]
+                    let mut output = crate::error::network_type_not_supported::Builder::default();
+                    let _ = response;
+                    output = crate::xml_deser::deser_structure_crate_error_network_type_not_supported_xml_err(response.body().as_ref(), output).map_err(crate::error::CreateDBInstanceError::unhandled)?;
+                    output.build()
+                };
+                if (&tmp.message).is_none() {
+                    tmp.message = _error_message;
+                }
+                tmp
+            }),
+        },
         "OptionGroupNotFoundFault" => crate::error::CreateDBInstanceError {
             meta: generic,
             kind: crate::error::CreateDBInstanceErrorKind::OptionGroupNotFoundFault({
@@ -2804,6 +2735,20 @@ pub fn parse_create_db_instance_read_replica_error(
                     #[allow(unused_mut)]let mut output = crate::error::kms_key_not_accessible_fault::Builder::default();
                     let _ = response;
                     output = crate::xml_deser::deser_structure_crate_error_kms_key_not_accessible_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::CreateDBInstanceReadReplicaError::unhandled)?;
+                    output.build()
+                }
+            ;
+            if (&tmp.message).is_none() {
+                                                        tmp.message = _error_message;
+                                                    }
+            tmp
+        })},
+        "NetworkTypeNotSupported" => crate::error::CreateDBInstanceReadReplicaError { meta: generic, kind: crate::error::CreateDBInstanceReadReplicaErrorKind::NetworkTypeNotSupported({
+            #[allow(unused_mut)]let mut tmp =
+                 {
+                    #[allow(unused_mut)]let mut output = crate::error::network_type_not_supported::Builder::default();
+                    let _ = response;
+                    output = crate::xml_deser::deser_structure_crate_error_network_type_not_supported_xml_err(response.body().as_ref(), output).map_err(crate::error::CreateDBInstanceReadReplicaError::unhandled)?;
                     output.build()
                 }
             ;
@@ -3896,78 +3841,6 @@ pub fn parse_create_option_group_response(
             output,
         )
         .map_err(crate::error::CreateOptionGroupError::unhandled)?;
-        output.build()
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_delete_custom_availability_zone_error(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DeleteCustomAvailabilityZoneOutput,
-    crate::error::DeleteCustomAvailabilityZoneError,
-> {
-    let generic = crate::xml_deser::parse_http_generic_error(response)
-        .map_err(crate::error::DeleteCustomAvailabilityZoneError::unhandled)?;
-    let error_code = match generic.code() {
-        Some(code) => code,
-        None => {
-            return Err(crate::error::DeleteCustomAvailabilityZoneError::unhandled(
-                generic,
-            ))
-        }
-    };
-
-    let _error_message = generic.message().map(|msg| msg.to_owned());
-    Err(match error_code {
-        "CustomAvailabilityZoneNotFound" => crate::error::DeleteCustomAvailabilityZoneError { meta: generic, kind: crate::error::DeleteCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneNotFoundFault({
-            #[allow(unused_mut)]let mut tmp =
-                 {
-                    #[allow(unused_mut)]let mut output = crate::error::custom_availability_zone_not_found_fault::Builder::default();
-                    let _ = response;
-                    output = crate::xml_deser::deser_structure_crate_error_custom_availability_zone_not_found_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::DeleteCustomAvailabilityZoneError::unhandled)?;
-                    output.build()
-                }
-            ;
-            if (&tmp.message).is_none() {
-                                                        tmp.message = _error_message;
-                                                    }
-            tmp
-        })},
-        "KMSKeyNotAccessibleFault" => crate::error::DeleteCustomAvailabilityZoneError { meta: generic, kind: crate::error::DeleteCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault({
-            #[allow(unused_mut)]let mut tmp =
-                 {
-                    #[allow(unused_mut)]let mut output = crate::error::kms_key_not_accessible_fault::Builder::default();
-                    let _ = response;
-                    output = crate::xml_deser::deser_structure_crate_error_kms_key_not_accessible_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::DeleteCustomAvailabilityZoneError::unhandled)?;
-                    output.build()
-                }
-            ;
-            if (&tmp.message).is_none() {
-                                                        tmp.message = _error_message;
-                                                    }
-            tmp
-        })},
-        _ => crate::error::DeleteCustomAvailabilityZoneError::generic(generic)
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_delete_custom_availability_zone_response(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DeleteCustomAvailabilityZoneOutput,
-    crate::error::DeleteCustomAvailabilityZoneError,
-> {
-    Ok({
-        #[allow(unused_mut)]
-        let mut output = crate::output::delete_custom_availability_zone_output::Builder::default();
-        let _ = response;
-        output = crate::xml_deser::deser_operation_crate_operation_delete_custom_availability_zone(
-            response.body().as_ref(),
-            output,
-        )
-        .map_err(crate::error::DeleteCustomAvailabilityZoneError::unhandled)?;
         output.build()
     })
 }
@@ -5239,68 +5112,6 @@ pub fn parse_delete_global_cluster_response(
 }
 
 #[allow(clippy::unnecessary_wraps)]
-pub fn parse_delete_installation_media_error(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DeleteInstallationMediaOutput,
-    crate::error::DeleteInstallationMediaError,
-> {
-    let generic = crate::xml_deser::parse_http_generic_error(response)
-        .map_err(crate::error::DeleteInstallationMediaError::unhandled)?;
-    let error_code = match generic.code() {
-        Some(code) => code,
-        None => {
-            return Err(crate::error::DeleteInstallationMediaError::unhandled(
-                generic,
-            ))
-        }
-    };
-
-    let _error_message = generic.message().map(|msg| msg.to_owned());
-    Err(match error_code {
-        "InstallationMediaNotFound" => crate::error::DeleteInstallationMediaError {
-            meta: generic,
-            kind: crate::error::DeleteInstallationMediaErrorKind::InstallationMediaNotFoundFault({
-                #[allow(unused_mut)]
-                let mut tmp = {
-                    #[allow(unused_mut)]
-                    let mut output =
-                        crate::error::installation_media_not_found_fault::Builder::default();
-                    let _ = response;
-                    output = crate::xml_deser::deser_structure_crate_error_installation_media_not_found_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::DeleteInstallationMediaError::unhandled)?;
-                    output.build()
-                };
-                if (&tmp.message).is_none() {
-                    tmp.message = _error_message;
-                }
-                tmp
-            }),
-        },
-        _ => crate::error::DeleteInstallationMediaError::generic(generic),
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_delete_installation_media_response(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DeleteInstallationMediaOutput,
-    crate::error::DeleteInstallationMediaError,
-> {
-    Ok({
-        #[allow(unused_mut)]
-        let mut output = crate::output::delete_installation_media_output::Builder::default();
-        let _ = response;
-        output = crate::xml_deser::deser_operation_crate_operation_delete_installation_media(
-            response.body().as_ref(),
-            output,
-        )
-        .map_err(crate::error::DeleteInstallationMediaError::unhandled)?;
-        output.build()
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
 pub fn parse_delete_option_group_error(
     response: &http::Response<bytes::Bytes>,
 ) -> std::result::Result<crate::output::DeleteOptionGroupOutput, crate::error::DeleteOptionGroupError>
@@ -5564,62 +5375,6 @@ pub fn parse_describe_certificates_response(
             output,
         )
         .map_err(crate::error::DescribeCertificatesError::unhandled)?;
-        output.build()
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_describe_custom_availability_zones_error(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DescribeCustomAvailabilityZonesOutput,
-    crate::error::DescribeCustomAvailabilityZonesError,
-> {
-    let generic = crate::xml_deser::parse_http_generic_error(response)
-        .map_err(crate::error::DescribeCustomAvailabilityZonesError::unhandled)?;
-    let error_code = match generic.code() {
-        Some(code) => code,
-        None => return Err(crate::error::DescribeCustomAvailabilityZonesError::unhandled(generic)),
-    };
-
-    let _error_message = generic.message().map(|msg| msg.to_owned());
-    Err(match error_code {
-        "CustomAvailabilityZoneNotFound" => crate::error::DescribeCustomAvailabilityZonesError { meta: generic, kind: crate::error::DescribeCustomAvailabilityZonesErrorKind::CustomAvailabilityZoneNotFoundFault({
-            #[allow(unused_mut)]let mut tmp =
-                 {
-                    #[allow(unused_mut)]let mut output = crate::error::custom_availability_zone_not_found_fault::Builder::default();
-                    let _ = response;
-                    output = crate::xml_deser::deser_structure_crate_error_custom_availability_zone_not_found_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::DescribeCustomAvailabilityZonesError::unhandled)?;
-                    output.build()
-                }
-            ;
-            if (&tmp.message).is_none() {
-                                                        tmp.message = _error_message;
-                                                    }
-            tmp
-        })},
-        _ => crate::error::DescribeCustomAvailabilityZonesError::generic(generic)
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_describe_custom_availability_zones_response(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DescribeCustomAvailabilityZonesOutput,
-    crate::error::DescribeCustomAvailabilityZonesError,
-> {
-    Ok({
-        #[allow(unused_mut)]
-        let mut output =
-            crate::output::describe_custom_availability_zones_output::Builder::default();
-        let _ = response;
-        output =
-            crate::xml_deser::deser_operation_crate_operation_describe_custom_availability_zones(
-                response.body().as_ref(),
-                output,
-            )
-            .map_err(crate::error::DescribeCustomAvailabilityZonesError::unhandled)?;
         output.build()
     })
 }
@@ -7273,70 +7028,6 @@ pub fn parse_describe_global_clusters_response(
 }
 
 #[allow(clippy::unnecessary_wraps)]
-pub fn parse_describe_installation_media_error(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DescribeInstallationMediaOutput,
-    crate::error::DescribeInstallationMediaError,
-> {
-    let generic = crate::xml_deser::parse_http_generic_error(response)
-        .map_err(crate::error::DescribeInstallationMediaError::unhandled)?;
-    let error_code = match generic.code() {
-        Some(code) => code,
-        None => {
-            return Err(crate::error::DescribeInstallationMediaError::unhandled(
-                generic,
-            ))
-        }
-    };
-
-    let _error_message = generic.message().map(|msg| msg.to_owned());
-    Err(match error_code {
-        "InstallationMediaNotFound" => crate::error::DescribeInstallationMediaError {
-            meta: generic,
-            kind: crate::error::DescribeInstallationMediaErrorKind::InstallationMediaNotFoundFault(
-                {
-                    #[allow(unused_mut)]
-                    let mut tmp = {
-                        #[allow(unused_mut)]
-                        let mut output =
-                            crate::error::installation_media_not_found_fault::Builder::default();
-                        let _ = response;
-                        output = crate::xml_deser::deser_structure_crate_error_installation_media_not_found_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::DescribeInstallationMediaError::unhandled)?;
-                        output.build()
-                    };
-                    if (&tmp.message).is_none() {
-                        tmp.message = _error_message;
-                    }
-                    tmp
-                },
-            ),
-        },
-        _ => crate::error::DescribeInstallationMediaError::generic(generic),
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_describe_installation_media_response(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::DescribeInstallationMediaOutput,
-    crate::error::DescribeInstallationMediaError,
-> {
-    Ok({
-        #[allow(unused_mut)]
-        let mut output = crate::output::describe_installation_media_output::Builder::default();
-        let _ = response;
-        output = crate::xml_deser::deser_operation_crate_operation_describe_installation_media(
-            response.body().as_ref(),
-            output,
-        )
-        .map_err(crate::error::DescribeInstallationMediaError::unhandled)?;
-        output.build()
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
 pub fn parse_describe_option_group_options_error(
     response: &http::Response<bytes::Bytes>,
 ) -> std::result::Result<
@@ -8008,88 +7699,6 @@ pub fn parse_failover_global_cluster_response(
             output,
         )
         .map_err(crate::error::FailoverGlobalClusterError::unhandled)?;
-        output.build()
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_import_installation_media_error(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::ImportInstallationMediaOutput,
-    crate::error::ImportInstallationMediaError,
-> {
-    let generic = crate::xml_deser::parse_http_generic_error(response)
-        .map_err(crate::error::ImportInstallationMediaError::unhandled)?;
-    let error_code = match generic.code() {
-        Some(code) => code,
-        None => {
-            return Err(crate::error::ImportInstallationMediaError::unhandled(
-                generic,
-            ))
-        }
-    };
-
-    let _error_message = generic.message().map(|msg| msg.to_owned());
-    Err(match error_code {
-        "CustomAvailabilityZoneNotFound" => crate::error::ImportInstallationMediaError {
-            meta: generic,
-            kind:
-                crate::error::ImportInstallationMediaErrorKind::CustomAvailabilityZoneNotFoundFault(
-                    {
-                        #[allow(unused_mut)]
-                        let mut tmp = {
-                            #[allow(unused_mut)]let mut output = crate::error::custom_availability_zone_not_found_fault::Builder::default();
-                            let _ = response;
-                            output = crate::xml_deser::deser_structure_crate_error_custom_availability_zone_not_found_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::ImportInstallationMediaError::unhandled)?;
-                            output.build()
-                        };
-                        if (&tmp.message).is_none() {
-                            tmp.message = _error_message;
-                        }
-                        tmp
-                    },
-                ),
-        },
-        "InstallationMediaAlreadyExists" => crate::error::ImportInstallationMediaError {
-            meta: generic,
-            kind:
-                crate::error::ImportInstallationMediaErrorKind::InstallationMediaAlreadyExistsFault(
-                    {
-                        #[allow(unused_mut)]
-                        let mut tmp = {
-                            #[allow(unused_mut)]let mut output = crate::error::installation_media_already_exists_fault::Builder::default();
-                            let _ = response;
-                            output = crate::xml_deser::deser_structure_crate_error_installation_media_already_exists_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::ImportInstallationMediaError::unhandled)?;
-                            output.build()
-                        };
-                        if (&tmp.message).is_none() {
-                            tmp.message = _error_message;
-                        }
-                        tmp
-                    },
-                ),
-        },
-        _ => crate::error::ImportInstallationMediaError::generic(generic),
-    })
-}
-
-#[allow(clippy::unnecessary_wraps)]
-pub fn parse_import_installation_media_response(
-    response: &http::Response<bytes::Bytes>,
-) -> std::result::Result<
-    crate::output::ImportInstallationMediaOutput,
-    crate::error::ImportInstallationMediaError,
-> {
-    Ok({
-        #[allow(unused_mut)]
-        let mut output = crate::output::import_installation_media_output::Builder::default();
-        let _ = response;
-        output = crate::xml_deser::deser_operation_crate_operation_import_installation_media(
-            response.body().as_ref(),
-            output,
-        )
-        .map_err(crate::error::ImportInstallationMediaError::unhandled)?;
         output.build()
     })
 }
@@ -9266,6 +8875,23 @@ pub fn parse_modify_db_instance_error(
                     let mut output = crate::error::kms_key_not_accessible_fault::Builder::default();
                     let _ = response;
                     output = crate::xml_deser::deser_structure_crate_error_kms_key_not_accessible_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::ModifyDBInstanceError::unhandled)?;
+                    output.build()
+                };
+                if (&tmp.message).is_none() {
+                    tmp.message = _error_message;
+                }
+                tmp
+            }),
+        },
+        "NetworkTypeNotSupported" => crate::error::ModifyDBInstanceError {
+            meta: generic,
+            kind: crate::error::ModifyDBInstanceErrorKind::NetworkTypeNotSupported({
+                #[allow(unused_mut)]
+                let mut tmp = {
+                    #[allow(unused_mut)]
+                    let mut output = crate::error::network_type_not_supported::Builder::default();
+                    let _ = response;
+                    output = crate::xml_deser::deser_structure_crate_error_network_type_not_supported_xml_err(response.body().as_ref(), output).map_err(crate::error::ModifyDBInstanceError::unhandled)?;
                     output.build()
                 };
                 if (&tmp.message).is_none() {
@@ -12652,6 +12278,20 @@ pub fn parse_restore_db_instance_from_db_snapshot_error(
                                                     }
             tmp
         })},
+        "NetworkTypeNotSupported" => crate::error::RestoreDBInstanceFromDBSnapshotError { meta: generic, kind: crate::error::RestoreDBInstanceFromDBSnapshotErrorKind::NetworkTypeNotSupported({
+            #[allow(unused_mut)]let mut tmp =
+                 {
+                    #[allow(unused_mut)]let mut output = crate::error::network_type_not_supported::Builder::default();
+                    let _ = response;
+                    output = crate::xml_deser::deser_structure_crate_error_network_type_not_supported_xml_err(response.body().as_ref(), output).map_err(crate::error::RestoreDBInstanceFromDBSnapshotError::unhandled)?;
+                    output.build()
+                }
+            ;
+            if (&tmp.message).is_none() {
+                                                        tmp.message = _error_message;
+                                                    }
+            tmp
+        })},
         "OptionGroupNotFoundFault" => crate::error::RestoreDBInstanceFromDBSnapshotError { meta: generic, kind: crate::error::RestoreDBInstanceFromDBSnapshotErrorKind::OptionGroupNotFoundFault({
             #[allow(unused_mut)]let mut tmp =
                  {
@@ -12983,6 +12623,23 @@ pub fn parse_restore_db_instance_from_s3_error(
                     let mut output = crate::error::kms_key_not_accessible_fault::Builder::default();
                     let _ = response;
                     output = crate::xml_deser::deser_structure_crate_error_kms_key_not_accessible_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::RestoreDBInstanceFromS3Error::unhandled)?;
+                    output.build()
+                };
+                if (&tmp.message).is_none() {
+                    tmp.message = _error_message;
+                }
+                tmp
+            }),
+        },
+        "NetworkTypeNotSupported" => crate::error::RestoreDBInstanceFromS3Error {
+            meta: generic,
+            kind: crate::error::RestoreDBInstanceFromS3ErrorKind::NetworkTypeNotSupported({
+                #[allow(unused_mut)]
+                let mut tmp = {
+                    #[allow(unused_mut)]
+                    let mut output = crate::error::network_type_not_supported::Builder::default();
+                    let _ = response;
+                    output = crate::xml_deser::deser_structure_crate_error_network_type_not_supported_xml_err(response.body().as_ref(), output).map_err(crate::error::RestoreDBInstanceFromS3Error::unhandled)?;
                     output.build()
                 };
                 if (&tmp.message).is_none() {
@@ -13332,6 +12989,20 @@ pub fn parse_restore_db_instance_to_point_in_time_error(
                     #[allow(unused_mut)]let mut output = crate::error::kms_key_not_accessible_fault::Builder::default();
                     let _ = response;
                     output = crate::xml_deser::deser_structure_crate_error_kms_key_not_accessible_fault_xml_err(response.body().as_ref(), output).map_err(crate::error::RestoreDBInstanceToPointInTimeError::unhandled)?;
+                    output.build()
+                }
+            ;
+            if (&tmp.message).is_none() {
+                                                        tmp.message = _error_message;
+                                                    }
+            tmp
+        })},
+        "NetworkTypeNotSupported" => crate::error::RestoreDBInstanceToPointInTimeError { meta: generic, kind: crate::error::RestoreDBInstanceToPointInTimeErrorKind::NetworkTypeNotSupported({
+            #[allow(unused_mut)]let mut tmp =
+                 {
+                    #[allow(unused_mut)]let mut output = crate::error::network_type_not_supported::Builder::default();
+                    let _ = response;
+                    output = crate::xml_deser::deser_structure_crate_error_network_type_not_supported_xml_err(response.body().as_ref(), output).map_err(crate::error::RestoreDBInstanceToPointInTimeError::unhandled)?;
                     output.build()
                 }
             ;

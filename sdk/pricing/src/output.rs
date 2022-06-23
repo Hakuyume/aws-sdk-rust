@@ -35,6 +35,7 @@ impl std::fmt::Debug for GetProductsOutput {
 }
 /// See [`GetProductsOutput`](crate::output::GetProductsOutput)
 pub mod get_products_output {
+
     /// A builder for [`GetProductsOutput`](crate::output::GetProductsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -132,6 +133,7 @@ impl std::fmt::Debug for GetAttributeValuesOutput {
 }
 /// See [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput)
 pub mod get_attribute_values_output {
+
     /// A builder for [`GetAttributeValuesOutput`](crate::output::GetAttributeValuesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -194,7 +196,7 @@ pub struct DescribeServicesOutput {
     pub services: std::option::Option<std::vec::Vec<crate::model::Service>>,
     /// <p>The format version of the response. For example, <code>aws_v1</code>.</p>
     pub format_version: std::option::Option<std::string::String>,
-    /// <p>The pagination token for the next set of retreivable results.</p>
+    /// <p>The pagination token for the next set of retrievable results.</p>
     pub next_token: std::option::Option<std::string::String>,
 }
 impl DescribeServicesOutput {
@@ -206,7 +208,7 @@ impl DescribeServicesOutput {
     pub fn format_version(&self) -> std::option::Option<&str> {
         self.format_version.as_deref()
     }
-    /// <p>The pagination token for the next set of retreivable results.</p>
+    /// <p>The pagination token for the next set of retrievable results.</p>
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
@@ -222,6 +224,7 @@ impl std::fmt::Debug for DescribeServicesOutput {
 }
 /// See [`DescribeServicesOutput`](crate::output::DescribeServicesOutput)
 pub mod describe_services_output {
+
     /// A builder for [`DescribeServicesOutput`](crate::output::DescribeServicesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -263,12 +266,12 @@ pub mod describe_services_output {
             self.format_version = input;
             self
         }
-        /// <p>The pagination token for the next set of retreivable results.</p>
+        /// <p>The pagination token for the next set of retrievable results.</p>
         pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
             self.next_token = Some(input.into());
             self
         }
-        /// <p>The pagination token for the next set of retreivable results.</p>
+        /// <p>The pagination token for the next set of retrievable results.</p>
         pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.next_token = input;
             self

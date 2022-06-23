@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateWirelessGatewayOutput {
 }
 /// See [`UpdateWirelessGatewayOutput`](crate::output::UpdateWirelessGatewayOutput)
 pub mod update_wireless_gateway_output {
+
     /// A builder for [`UpdateWirelessGatewayOutput`](crate::output::UpdateWirelessGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +42,7 @@ impl std::fmt::Debug for UpdateWirelessDeviceOutput {
 }
 /// See [`UpdateWirelessDeviceOutput`](crate::output::UpdateWirelessDeviceOutput)
 pub mod update_wireless_device_output {
+
     /// A builder for [`UpdateWirelessDeviceOutput`](crate::output::UpdateWirelessDeviceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -71,6 +73,7 @@ impl std::fmt::Debug for UpdateResourceEventConfigurationOutput {
 }
 /// See [`UpdateResourceEventConfigurationOutput`](crate::output::UpdateResourceEventConfigurationOutput)
 pub mod update_resource_event_configuration_output {
+
     /// A builder for [`UpdateResourceEventConfigurationOutput`](crate::output::UpdateResourceEventConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -101,6 +104,7 @@ impl std::fmt::Debug for UpdatePartnerAccountOutput {
 }
 /// See [`UpdatePartnerAccountOutput`](crate::output::UpdatePartnerAccountOutput)
 pub mod update_partner_account_output {
+
     /// A builder for [`UpdatePartnerAccountOutput`](crate::output::UpdatePartnerAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -131,6 +135,7 @@ impl std::fmt::Debug for UpdateNetworkAnalyzerConfigurationOutput {
 }
 /// See [`UpdateNetworkAnalyzerConfigurationOutput`](crate::output::UpdateNetworkAnalyzerConfigurationOutput)
 pub mod update_network_analyzer_configuration_output {
+
     /// A builder for [`UpdateNetworkAnalyzerConfigurationOutput`](crate::output::UpdateNetworkAnalyzerConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -161,6 +166,7 @@ impl std::fmt::Debug for UpdateMulticastGroupOutput {
 }
 /// See [`UpdateMulticastGroupOutput`](crate::output::UpdateMulticastGroupOutput)
 pub mod update_multicast_group_output {
+
     /// A builder for [`UpdateMulticastGroupOutput`](crate::output::UpdateMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -191,6 +197,7 @@ impl std::fmt::Debug for UpdateLogLevelsByResourceTypesOutput {
 }
 /// See [`UpdateLogLevelsByResourceTypesOutput`](crate::output::UpdateLogLevelsByResourceTypesOutput)
 pub mod update_log_levels_by_resource_types_output {
+
     /// A builder for [`UpdateLogLevelsByResourceTypesOutput`](crate::output::UpdateLogLevelsByResourceTypesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -221,6 +228,7 @@ impl std::fmt::Debug for UpdateFuotaTaskOutput {
 }
 /// See [`UpdateFuotaTaskOutput`](crate::output::UpdateFuotaTaskOutput)
 pub mod update_fuota_task_output {
+
     /// A builder for [`UpdateFuotaTaskOutput`](crate::output::UpdateFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -242,6 +250,38 @@ impl UpdateFuotaTaskOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateEventConfigurationByResourceTypesOutput {}
+impl std::fmt::Debug for UpdateEventConfigurationByResourceTypesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateEventConfigurationByResourceTypesOutput");
+        formatter.finish()
+    }
+}
+/// See [`UpdateEventConfigurationByResourceTypesOutput`](crate::output::UpdateEventConfigurationByResourceTypesOutput)
+pub mod update_event_configuration_by_resource_types_output {
+
+    /// A builder for [`UpdateEventConfigurationByResourceTypesOutput`](crate::output::UpdateEventConfigurationByResourceTypesOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`UpdateEventConfigurationByResourceTypesOutput`](crate::output::UpdateEventConfigurationByResourceTypesOutput)
+        pub fn build(self) -> crate::output::UpdateEventConfigurationByResourceTypesOutput {
+            crate::output::UpdateEventConfigurationByResourceTypesOutput {}
+        }
+    }
+}
+impl UpdateEventConfigurationByResourceTypesOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateEventConfigurationByResourceTypesOutput`](crate::output::UpdateEventConfigurationByResourceTypesOutput)
+    pub fn builder() -> crate::output::update_event_configuration_by_resource_types_output::Builder
+    {
+        crate::output::update_event_configuration_by_resource_types_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDestinationOutput {}
 impl std::fmt::Debug for UpdateDestinationOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -251,6 +291,7 @@ impl std::fmt::Debug for UpdateDestinationOutput {
 }
 /// See [`UpdateDestinationOutput`](crate::output::UpdateDestinationOutput)
 pub mod update_destination_output {
+
     /// A builder for [`UpdateDestinationOutput`](crate::output::UpdateDestinationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -281,6 +322,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -321,6 +363,7 @@ impl std::fmt::Debug for TestWirelessDeviceOutput {
 }
 /// See [`TestWirelessDeviceOutput`](crate::output::TestWirelessDeviceOutput)
 pub mod test_wireless_device_output {
+
     /// A builder for [`TestWirelessDeviceOutput`](crate::output::TestWirelessDeviceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -365,6 +408,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -395,6 +439,7 @@ impl std::fmt::Debug for StartMulticastGroupSessionOutput {
 }
 /// See [`StartMulticastGroupSessionOutput`](crate::output::StartMulticastGroupSessionOutput)
 pub mod start_multicast_group_session_output {
+
     /// A builder for [`StartMulticastGroupSessionOutput`](crate::output::StartMulticastGroupSessionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -425,6 +470,7 @@ impl std::fmt::Debug for StartFuotaTaskOutput {
 }
 /// See [`StartFuotaTaskOutput`](crate::output::StartFuotaTaskOutput)
 pub mod start_fuota_task_output {
+
     /// A builder for [`StartFuotaTaskOutput`](crate::output::StartFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -456,6 +502,7 @@ impl std::fmt::Debug for StartBulkDisassociateWirelessDeviceFromMulticastGroupOu
 }
 /// See [`StartBulkDisassociateWirelessDeviceFromMulticastGroupOutput`](crate::output::StartBulkDisassociateWirelessDeviceFromMulticastGroupOutput)
 pub mod start_bulk_disassociate_wireless_device_from_multicast_group_output {
+
     /// A builder for [`StartBulkDisassociateWirelessDeviceFromMulticastGroupOutput`](crate::output::StartBulkDisassociateWirelessDeviceFromMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -491,6 +538,7 @@ impl std::fmt::Debug for StartBulkAssociateWirelessDeviceWithMulticastGroupOutpu
 }
 /// See [`StartBulkAssociateWirelessDeviceWithMulticastGroupOutput`](crate::output::StartBulkAssociateWirelessDeviceWithMulticastGroupOutput)
 pub mod start_bulk_associate_wireless_device_with_multicast_group_output {
+
     /// A builder for [`StartBulkAssociateWirelessDeviceWithMulticastGroupOutput`](crate::output::StartBulkAssociateWirelessDeviceWithMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -535,6 +583,7 @@ impl std::fmt::Debug for SendDataToWirelessDeviceOutput {
 }
 /// See [`SendDataToWirelessDeviceOutput`](crate::output::SendDataToWirelessDeviceOutput)
 pub mod send_data_to_wireless_device_output {
+
     /// A builder for [`SendDataToWirelessDeviceOutput`](crate::output::SendDataToWirelessDeviceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -589,6 +638,7 @@ impl std::fmt::Debug for SendDataToMulticastGroupOutput {
 }
 /// See [`SendDataToMulticastGroupOutput`](crate::output::SendDataToMulticastGroupOutput)
 pub mod send_data_to_multicast_group_output {
+
     /// A builder for [`SendDataToMulticastGroupOutput`](crate::output::SendDataToMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -633,6 +683,7 @@ impl std::fmt::Debug for ResetResourceLogLevelOutput {
 }
 /// See [`ResetResourceLogLevelOutput`](crate::output::ResetResourceLogLevelOutput)
 pub mod reset_resource_log_level_output {
+
     /// A builder for [`ResetResourceLogLevelOutput`](crate::output::ResetResourceLogLevelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -663,6 +714,7 @@ impl std::fmt::Debug for ResetAllResourceLogLevelsOutput {
 }
 /// See [`ResetAllResourceLogLevelsOutput`](crate::output::ResetAllResourceLogLevelsOutput)
 pub mod reset_all_resource_log_levels_output {
+
     /// A builder for [`ResetAllResourceLogLevelsOutput`](crate::output::ResetAllResourceLogLevelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -693,6 +745,7 @@ impl std::fmt::Debug for PutResourceLogLevelOutput {
 }
 /// See [`PutResourceLogLevelOutput`](crate::output::PutResourceLogLevelOutput)
 pub mod put_resource_log_level_output {
+
     /// A builder for [`PutResourceLogLevelOutput`](crate::output::PutResourceLogLevelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -743,6 +796,7 @@ impl std::fmt::Debug for ListWirelessGatewayTaskDefinitionsOutput {
 }
 /// See [`ListWirelessGatewayTaskDefinitionsOutput`](crate::output::ListWirelessGatewayTaskDefinitionsOutput)
 pub mod list_wireless_gateway_task_definitions_output {
+
     /// A builder for [`ListWirelessGatewayTaskDefinitionsOutput`](crate::output::ListWirelessGatewayTaskDefinitionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -832,6 +886,7 @@ impl std::fmt::Debug for ListWirelessGatewaysOutput {
 }
 /// See [`ListWirelessGatewaysOutput`](crate::output::ListWirelessGatewaysOutput)
 pub mod list_wireless_gateways_output {
+
     /// A builder for [`ListWirelessGatewaysOutput`](crate::output::ListWirelessGatewaysOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -921,6 +976,7 @@ impl std::fmt::Debug for ListWirelessDevicesOutput {
 }
 /// See [`ListWirelessDevicesOutput`](crate::output::ListWirelessDevicesOutput)
 pub mod list_wireless_devices_output {
+
     /// A builder for [`ListWirelessDevicesOutput`](crate::output::ListWirelessDevicesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1000,6 +1056,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1068,6 +1125,7 @@ impl std::fmt::Debug for ListServiceProfilesOutput {
 }
 /// See [`ListServiceProfilesOutput`](crate::output::ListServiceProfilesOutput)
 pub mod list_service_profiles_output {
+
     /// A builder for [`ListServiceProfilesOutput`](crate::output::ListServiceProfilesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1128,7 +1186,7 @@ impl ListServiceProfilesOutput {
 pub struct ListQueuedMessagesOutput {
     /// <p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>
     pub next_token: std::option::Option<std::string::String>,
-    /// <p>The messages in downlink queue.</p>
+    /// <p>The messages in the downlink queue.</p>
     pub downlink_queue_messages_list:
         std::option::Option<std::vec::Vec<crate::model::DownlinkQueueMessage>>,
 }
@@ -1137,7 +1195,7 @@ impl ListQueuedMessagesOutput {
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
-    /// <p>The messages in downlink queue.</p>
+    /// <p>The messages in the downlink queue.</p>
     pub fn downlink_queue_messages_list(
         &self,
     ) -> std::option::Option<&[crate::model::DownlinkQueueMessage]> {
@@ -1157,6 +1215,7 @@ impl std::fmt::Debug for ListQueuedMessagesOutput {
 }
 /// See [`ListQueuedMessagesOutput`](crate::output::ListQueuedMessagesOutput)
 pub mod list_queued_messages_output {
+
     /// A builder for [`ListQueuedMessagesOutput`](crate::output::ListQueuedMessagesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1180,7 +1239,7 @@ pub mod list_queued_messages_output {
         ///
         /// To override the contents of this collection use [`set_downlink_queue_messages_list`](Self::set_downlink_queue_messages_list).
         ///
-        /// <p>The messages in downlink queue.</p>
+        /// <p>The messages in the downlink queue.</p>
         pub fn downlink_queue_messages_list(
             mut self,
             input: crate::model::DownlinkQueueMessage,
@@ -1190,7 +1249,7 @@ pub mod list_queued_messages_output {
             self.downlink_queue_messages_list = Some(v);
             self
         }
-        /// <p>The messages in downlink queue.</p>
+        /// <p>The messages in the downlink queue.</p>
         pub fn set_downlink_queue_messages_list(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::DownlinkQueueMessage>>,
@@ -1246,6 +1305,7 @@ impl std::fmt::Debug for ListPartnerAccountsOutput {
 }
 /// See [`ListPartnerAccountsOutput`](crate::output::ListPartnerAccountsOutput)
 pub mod list_partner_accounts_output {
+
     /// A builder for [`ListPartnerAccountsOutput`](crate::output::ListPartnerAccountsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1305,6 +1365,99 @@ impl ListPartnerAccountsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListNetworkAnalyzerConfigurationsOutput {
+    /// <p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>The list of network analyzer configurations.</p>
+    pub network_analyzer_configuration_list:
+        std::option::Option<std::vec::Vec<crate::model::NetworkAnalyzerConfigurations>>,
+}
+impl ListNetworkAnalyzerConfigurationsOutput {
+    /// <p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>The list of network analyzer configurations.</p>
+    pub fn network_analyzer_configuration_list(
+        &self,
+    ) -> std::option::Option<&[crate::model::NetworkAnalyzerConfigurations]> {
+        self.network_analyzer_configuration_list.as_deref()
+    }
+}
+impl std::fmt::Debug for ListNetworkAnalyzerConfigurationsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListNetworkAnalyzerConfigurationsOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field(
+            "network_analyzer_configuration_list",
+            &self.network_analyzer_configuration_list,
+        );
+        formatter.finish()
+    }
+}
+/// See [`ListNetworkAnalyzerConfigurationsOutput`](crate::output::ListNetworkAnalyzerConfigurationsOutput)
+pub mod list_network_analyzer_configurations_output {
+
+    /// A builder for [`ListNetworkAnalyzerConfigurationsOutput`](crate::output::ListNetworkAnalyzerConfigurationsOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) network_analyzer_configuration_list:
+            std::option::Option<std::vec::Vec<crate::model::NetworkAnalyzerConfigurations>>,
+    }
+    impl Builder {
+        /// <p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `network_analyzer_configuration_list`.
+        ///
+        /// To override the contents of this collection use [`set_network_analyzer_configuration_list`](Self::set_network_analyzer_configuration_list).
+        ///
+        /// <p>The list of network analyzer configurations.</p>
+        pub fn network_analyzer_configuration_list(
+            mut self,
+            input: crate::model::NetworkAnalyzerConfigurations,
+        ) -> Self {
+            let mut v = self.network_analyzer_configuration_list.unwrap_or_default();
+            v.push(input);
+            self.network_analyzer_configuration_list = Some(v);
+            self
+        }
+        /// <p>The list of network analyzer configurations.</p>
+        pub fn set_network_analyzer_configuration_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::NetworkAnalyzerConfigurations>>,
+        ) -> Self {
+            self.network_analyzer_configuration_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListNetworkAnalyzerConfigurationsOutput`](crate::output::ListNetworkAnalyzerConfigurationsOutput)
+        pub fn build(self) -> crate::output::ListNetworkAnalyzerConfigurationsOutput {
+            crate::output::ListNetworkAnalyzerConfigurationsOutput {
+                next_token: self.next_token,
+                network_analyzer_configuration_list: self.network_analyzer_configuration_list,
+            }
+        }
+    }
+}
+impl ListNetworkAnalyzerConfigurationsOutput {
+    /// Creates a new builder-style object to manufacture [`ListNetworkAnalyzerConfigurationsOutput`](crate::output::ListNetworkAnalyzerConfigurationsOutput)
+    pub fn builder() -> crate::output::list_network_analyzer_configurations_output::Builder {
+        crate::output::list_network_analyzer_configurations_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListMulticastGroupsByFuotaTaskOutput {
     /// <p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>
     pub next_token: std::option::Option<std::string::String>,
@@ -1334,6 +1487,7 @@ impl std::fmt::Debug for ListMulticastGroupsByFuotaTaskOutput {
 }
 /// See [`ListMulticastGroupsByFuotaTaskOutput`](crate::output::ListMulticastGroupsByFuotaTaskOutput)
 pub mod list_multicast_groups_by_fuota_task_output {
+
     /// A builder for [`ListMulticastGroupsByFuotaTaskOutput`](crate::output::ListMulticastGroupsByFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1420,6 +1574,7 @@ impl std::fmt::Debug for ListMulticastGroupsOutput {
 }
 /// See [`ListMulticastGroupsOutput`](crate::output::ListMulticastGroupsOutput)
 pub mod list_multicast_groups_output {
+
     /// A builder for [`ListMulticastGroupsOutput`](crate::output::ListMulticastGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1503,6 +1658,7 @@ impl std::fmt::Debug for ListFuotaTasksOutput {
 }
 /// See [`ListFuotaTasksOutput`](crate::output::ListFuotaTasksOutput)
 pub mod list_fuota_tasks_output {
+
     /// A builder for [`ListFuotaTasksOutput`](crate::output::ListFuotaTasksOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1559,6 +1715,96 @@ impl ListFuotaTasksOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListEventConfigurationsOutput {
+    /// <p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>Event configurations of all events for a single resource.</p>
+    pub event_configurations_list:
+        std::option::Option<std::vec::Vec<crate::model::EventConfigurationItem>>,
+}
+impl ListEventConfigurationsOutput {
+    /// <p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>Event configurations of all events for a single resource.</p>
+    pub fn event_configurations_list(
+        &self,
+    ) -> std::option::Option<&[crate::model::EventConfigurationItem]> {
+        self.event_configurations_list.as_deref()
+    }
+}
+impl std::fmt::Debug for ListEventConfigurationsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListEventConfigurationsOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field("event_configurations_list", &self.event_configurations_list);
+        formatter.finish()
+    }
+}
+/// See [`ListEventConfigurationsOutput`](crate::output::ListEventConfigurationsOutput)
+pub mod list_event_configurations_output {
+
+    /// A builder for [`ListEventConfigurationsOutput`](crate::output::ListEventConfigurationsOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) event_configurations_list:
+            std::option::Option<std::vec::Vec<crate::model::EventConfigurationItem>>,
+    }
+    impl Builder {
+        /// <p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>To retrieve the next set of results, the <code>nextToken</code> value from a previous response; otherwise <b>null</b> to receive the first set of results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `event_configurations_list`.
+        ///
+        /// To override the contents of this collection use [`set_event_configurations_list`](Self::set_event_configurations_list).
+        ///
+        /// <p>Event configurations of all events for a single resource.</p>
+        pub fn event_configurations_list(
+            mut self,
+            input: crate::model::EventConfigurationItem,
+        ) -> Self {
+            let mut v = self.event_configurations_list.unwrap_or_default();
+            v.push(input);
+            self.event_configurations_list = Some(v);
+            self
+        }
+        /// <p>Event configurations of all events for a single resource.</p>
+        pub fn set_event_configurations_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::EventConfigurationItem>>,
+        ) -> Self {
+            self.event_configurations_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListEventConfigurationsOutput`](crate::output::ListEventConfigurationsOutput)
+        pub fn build(self) -> crate::output::ListEventConfigurationsOutput {
+            crate::output::ListEventConfigurationsOutput {
+                next_token: self.next_token,
+                event_configurations_list: self.event_configurations_list,
+            }
+        }
+    }
+}
+impl ListEventConfigurationsOutput {
+    /// Creates a new builder-style object to manufacture [`ListEventConfigurationsOutput`](crate::output::ListEventConfigurationsOutput)
+    pub fn builder() -> crate::output::list_event_configurations_output::Builder {
+        crate::output::list_event_configurations_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListDeviceProfilesOutput {
     /// <p>The token to use to get the next set of results, or <b>null</b> if there are no additional results.</p>
     pub next_token: std::option::Option<std::string::String>,
@@ -1585,6 +1831,7 @@ impl std::fmt::Debug for ListDeviceProfilesOutput {
 }
 /// See [`ListDeviceProfilesOutput`](crate::output::ListDeviceProfilesOutput)
 pub mod list_device_profiles_output {
+
     /// A builder for [`ListDeviceProfilesOutput`](crate::output::ListDeviceProfilesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1668,6 +1915,7 @@ impl std::fmt::Debug for ListDestinationsOutput {
 }
 /// See [`ListDestinationsOutput`](crate::output::ListDestinationsOutput)
 pub mod list_destinations_output {
+
     /// A builder for [`ListDestinationsOutput`](crate::output::ListDestinationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1764,6 +2012,7 @@ impl std::fmt::Debug for GetWirelessGatewayTaskDefinitionOutput {
 }
 /// See [`GetWirelessGatewayTaskDefinitionOutput`](crate::output::GetWirelessGatewayTaskDefinitionOutput)
 pub mod get_wireless_gateway_task_definition_output {
+
     /// A builder for [`GetWirelessGatewayTaskDefinitionOutput`](crate::output::GetWirelessGatewayTaskDefinitionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1888,6 +2137,7 @@ impl std::fmt::Debug for GetWirelessGatewayTaskOutput {
 }
 /// See [`GetWirelessGatewayTaskOutput`](crate::output::GetWirelessGatewayTaskOutput)
 pub mod get_wireless_gateway_task_output {
+
     /// A builder for [`GetWirelessGatewayTaskOutput`](crate::output::GetWirelessGatewayTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2022,6 +2272,7 @@ impl std::fmt::Debug for GetWirelessGatewayStatisticsOutput {
 }
 /// See [`GetWirelessGatewayStatisticsOutput`](crate::output::GetWirelessGatewayStatisticsOutput)
 pub mod get_wireless_gateway_statistics_output {
+
     /// A builder for [`GetWirelessGatewayStatisticsOutput`](crate::output::GetWirelessGatewayStatisticsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2109,6 +2360,7 @@ impl std::fmt::Debug for GetWirelessGatewayFirmwareInformationOutput {
 }
 /// See [`GetWirelessGatewayFirmwareInformationOutput`](crate::output::GetWirelessGatewayFirmwareInformationOutput)
 pub mod get_wireless_gateway_firmware_information_output {
+
     /// A builder for [`GetWirelessGatewayFirmwareInformationOutput`](crate::output::GetWirelessGatewayFirmwareInformationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2176,6 +2428,7 @@ impl std::fmt::Debug for GetWirelessGatewayCertificateOutput {
 }
 /// See [`GetWirelessGatewayCertificateOutput`](crate::output::GetWirelessGatewayCertificateOutput)
 pub mod get_wireless_gateway_certificate_output {
+
     /// A builder for [`GetWirelessGatewayCertificateOutput`](crate::output::GetWirelessGatewayCertificateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2295,6 +2548,7 @@ impl std::fmt::Debug for GetWirelessGatewayOutput {
 }
 /// See [`GetWirelessGatewayOutput`](crate::output::GetWirelessGatewayOutput)
 pub mod get_wireless_gateway_output {
+
     /// A builder for [`GetWirelessGatewayOutput`](crate::output::GetWirelessGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2445,6 +2699,7 @@ impl std::fmt::Debug for GetWirelessDeviceStatisticsOutput {
 }
 /// See [`GetWirelessDeviceStatisticsOutput`](crate::output::GetWirelessDeviceStatisticsOutput)
 pub mod get_wireless_device_statistics_output {
+
     /// A builder for [`GetWirelessDeviceStatisticsOutput`](crate::output::GetWirelessDeviceStatisticsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2610,6 +2865,7 @@ impl std::fmt::Debug for GetWirelessDeviceOutput {
 }
 /// See [`GetWirelessDeviceOutput`](crate::output::GetWirelessDeviceOutput)
 pub mod get_wireless_device_output {
+
     /// A builder for [`GetWirelessDeviceOutput`](crate::output::GetWirelessDeviceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2805,6 +3061,7 @@ impl std::fmt::Debug for GetServiceProfileOutput {
 }
 /// See [`GetServiceProfileOutput`](crate::output::GetServiceProfileOutput)
 pub mod get_service_profile_output {
+
     /// A builder for [`GetServiceProfileOutput`](crate::output::GetServiceProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2912,6 +3169,7 @@ impl std::fmt::Debug for GetServiceEndpointOutput {
 }
 /// See [`GetServiceEndpointOutput`](crate::output::GetServiceEndpointOutput)
 pub mod get_service_endpoint_output {
+
     /// A builder for [`GetServiceEndpointOutput`](crate::output::GetServiceEndpointOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2978,11 +3236,11 @@ impl GetServiceEndpointOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetResourceLogLevelOutput {
-    /// <p>The log level for a log message.</p>
+    /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
     pub log_level: std::option::Option<crate::model::LogLevel>,
 }
 impl GetResourceLogLevelOutput {
-    /// <p>The log level for a log message.</p>
+    /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
     pub fn log_level(&self) -> std::option::Option<&crate::model::LogLevel> {
         self.log_level.as_ref()
     }
@@ -2996,6 +3254,7 @@ impl std::fmt::Debug for GetResourceLogLevelOutput {
 }
 /// See [`GetResourceLogLevelOutput`](crate::output::GetResourceLogLevelOutput)
 pub mod get_resource_log_level_output {
+
     /// A builder for [`GetResourceLogLevelOutput`](crate::output::GetResourceLogLevelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3003,12 +3262,12 @@ pub mod get_resource_log_level_output {
         pub(crate) log_level: std::option::Option<crate::model::LogLevel>,
     }
     impl Builder {
-        /// <p>The log level for a log message.</p>
+        /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
         pub fn log_level(mut self, input: crate::model::LogLevel) -> Self {
             self.log_level = Some(input);
             self
         }
-        /// <p>The log level for a log message.</p>
+        /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
         pub fn set_log_level(mut self, input: std::option::Option<crate::model::LogLevel>) -> Self {
             self.log_level = input;
             self
@@ -3037,6 +3296,10 @@ pub struct GetResourceEventConfigurationOutput {
         std::option::Option<crate::model::DeviceRegistrationStateEventConfiguration>,
     /// <p>Event configuration for the Proximity event</p>
     pub proximity: std::option::Option<crate::model::ProximityEventConfiguration>,
+    /// <p>Event configuration for the join event.</p>
+    pub join: std::option::Option<crate::model::JoinEventConfiguration>,
+    /// <p>Event configuration for the connection status event.</p>
+    pub connection_status: std::option::Option<crate::model::ConnectionStatusEventConfiguration>,
 }
 impl GetResourceEventConfigurationOutput {
     /// <p>Event configuration for the device registration state event</p>
@@ -3049,17 +3312,30 @@ impl GetResourceEventConfigurationOutput {
     pub fn proximity(&self) -> std::option::Option<&crate::model::ProximityEventConfiguration> {
         self.proximity.as_ref()
     }
+    /// <p>Event configuration for the join event.</p>
+    pub fn join(&self) -> std::option::Option<&crate::model::JoinEventConfiguration> {
+        self.join.as_ref()
+    }
+    /// <p>Event configuration for the connection status event.</p>
+    pub fn connection_status(
+        &self,
+    ) -> std::option::Option<&crate::model::ConnectionStatusEventConfiguration> {
+        self.connection_status.as_ref()
+    }
 }
 impl std::fmt::Debug for GetResourceEventConfigurationOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("GetResourceEventConfigurationOutput");
         formatter.field("device_registration_state", &self.device_registration_state);
         formatter.field("proximity", &self.proximity);
+        formatter.field("join", &self.join);
+        formatter.field("connection_status", &self.connection_status);
         formatter.finish()
     }
 }
 /// See [`GetResourceEventConfigurationOutput`](crate::output::GetResourceEventConfigurationOutput)
 pub mod get_resource_event_configuration_output {
+
     /// A builder for [`GetResourceEventConfigurationOutput`](crate::output::GetResourceEventConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3067,6 +3343,9 @@ pub mod get_resource_event_configuration_output {
         pub(crate) device_registration_state:
             std::option::Option<crate::model::DeviceRegistrationStateEventConfiguration>,
         pub(crate) proximity: std::option::Option<crate::model::ProximityEventConfiguration>,
+        pub(crate) join: std::option::Option<crate::model::JoinEventConfiguration>,
+        pub(crate) connection_status:
+            std::option::Option<crate::model::ConnectionStatusEventConfiguration>,
     }
     impl Builder {
         /// <p>Event configuration for the device registration state event</p>
@@ -3098,11 +3377,42 @@ pub mod get_resource_event_configuration_output {
             self.proximity = input;
             self
         }
+        /// <p>Event configuration for the join event.</p>
+        pub fn join(mut self, input: crate::model::JoinEventConfiguration) -> Self {
+            self.join = Some(input);
+            self
+        }
+        /// <p>Event configuration for the join event.</p>
+        pub fn set_join(
+            mut self,
+            input: std::option::Option<crate::model::JoinEventConfiguration>,
+        ) -> Self {
+            self.join = input;
+            self
+        }
+        /// <p>Event configuration for the connection status event.</p>
+        pub fn connection_status(
+            mut self,
+            input: crate::model::ConnectionStatusEventConfiguration,
+        ) -> Self {
+            self.connection_status = Some(input);
+            self
+        }
+        /// <p>Event configuration for the connection status event.</p>
+        pub fn set_connection_status(
+            mut self,
+            input: std::option::Option<crate::model::ConnectionStatusEventConfiguration>,
+        ) -> Self {
+            self.connection_status = input;
+            self
+        }
         /// Consumes the builder and constructs a [`GetResourceEventConfigurationOutput`](crate::output::GetResourceEventConfigurationOutput)
         pub fn build(self) -> crate::output::GetResourceEventConfigurationOutput {
             crate::output::GetResourceEventConfigurationOutput {
                 device_registration_state: self.device_registration_state,
                 proximity: self.proximity,
+                join: self.join,
+                connection_status: self.connection_status,
             }
         }
     }
@@ -3145,6 +3455,7 @@ impl std::fmt::Debug for GetPartnerAccountOutput {
 }
 /// See [`GetPartnerAccountOutput`](crate::output::GetPartnerAccountOutput)
 pub mod get_partner_account_output {
+
     /// A builder for [`GetPartnerAccountOutput`](crate::output::GetPartnerAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3196,25 +3507,43 @@ impl GetPartnerAccountOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetNetworkAnalyzerConfigurationOutput {
-    /// <p>Trace Content for resources.</p>
+    /// <p>Trace content for your wireless gateway and wireless device resources.</p>
     pub trace_content: std::option::Option<crate::model::TraceContent>,
-    /// <p>List of WirelessDevices in the NetworkAnalyzerConfiguration.</p>
+    /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
     pub wireless_devices: std::option::Option<std::vec::Vec<std::string::String>>,
-    /// <p>List of WirelessGateways in the NetworkAnalyzerConfiguration.</p>
+    /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
     pub wireless_gateways: std::option::Option<std::vec::Vec<std::string::String>>,
+    /// <p>The description of the new resource.</p>
+    pub description: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name of the new resource.</p>
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>Name of the network analyzer configuration.</p>
+    pub name: std::option::Option<std::string::String>,
 }
 impl GetNetworkAnalyzerConfigurationOutput {
-    /// <p>Trace Content for resources.</p>
+    /// <p>Trace content for your wireless gateway and wireless device resources.</p>
     pub fn trace_content(&self) -> std::option::Option<&crate::model::TraceContent> {
         self.trace_content.as_ref()
     }
-    /// <p>List of WirelessDevices in the NetworkAnalyzerConfiguration.</p>
+    /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
     pub fn wireless_devices(&self) -> std::option::Option<&[std::string::String]> {
         self.wireless_devices.as_deref()
     }
-    /// <p>List of WirelessGateways in the NetworkAnalyzerConfiguration.</p>
+    /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
     pub fn wireless_gateways(&self) -> std::option::Option<&[std::string::String]> {
         self.wireless_gateways.as_deref()
+    }
+    /// <p>The description of the new resource.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>The Amazon Resource Name of the new resource.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>Name of the network analyzer configuration.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
     }
 }
 impl std::fmt::Debug for GetNetworkAnalyzerConfigurationOutput {
@@ -3223,11 +3552,15 @@ impl std::fmt::Debug for GetNetworkAnalyzerConfigurationOutput {
         formatter.field("trace_content", &self.trace_content);
         formatter.field("wireless_devices", &self.wireless_devices);
         formatter.field("wireless_gateways", &self.wireless_gateways);
+        formatter.field("description", &self.description);
+        formatter.field("arn", &self.arn);
+        formatter.field("name", &self.name);
         formatter.finish()
     }
 }
 /// See [`GetNetworkAnalyzerConfigurationOutput`](crate::output::GetNetworkAnalyzerConfigurationOutput)
 pub mod get_network_analyzer_configuration_output {
+
     /// A builder for [`GetNetworkAnalyzerConfigurationOutput`](crate::output::GetNetworkAnalyzerConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3235,14 +3568,17 @@ pub mod get_network_analyzer_configuration_output {
         pub(crate) trace_content: std::option::Option<crate::model::TraceContent>,
         pub(crate) wireless_devices: std::option::Option<std::vec::Vec<std::string::String>>,
         pub(crate) wireless_gateways: std::option::Option<std::vec::Vec<std::string::String>>,
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) name: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>Trace Content for resources.</p>
+        /// <p>Trace content for your wireless gateway and wireless device resources.</p>
         pub fn trace_content(mut self, input: crate::model::TraceContent) -> Self {
             self.trace_content = Some(input);
             self
         }
-        /// <p>Trace Content for resources.</p>
+        /// <p>Trace content for your wireless gateway and wireless device resources.</p>
         pub fn set_trace_content(
             mut self,
             input: std::option::Option<crate::model::TraceContent>,
@@ -3254,14 +3590,14 @@ pub mod get_network_analyzer_configuration_output {
         ///
         /// To override the contents of this collection use [`set_wireless_devices`](Self::set_wireless_devices).
         ///
-        /// <p>List of WirelessDevices in the NetworkAnalyzerConfiguration.</p>
+        /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
         pub fn wireless_devices(mut self, input: impl Into<std::string::String>) -> Self {
             let mut v = self.wireless_devices.unwrap_or_default();
             v.push(input.into());
             self.wireless_devices = Some(v);
             self
         }
-        /// <p>List of WirelessDevices in the NetworkAnalyzerConfiguration.</p>
+        /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
         pub fn set_wireless_devices(
             mut self,
             input: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -3273,19 +3609,49 @@ pub mod get_network_analyzer_configuration_output {
         ///
         /// To override the contents of this collection use [`set_wireless_gateways`](Self::set_wireless_gateways).
         ///
-        /// <p>List of WirelessGateways in the NetworkAnalyzerConfiguration.</p>
+        /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
         pub fn wireless_gateways(mut self, input: impl Into<std::string::String>) -> Self {
             let mut v = self.wireless_gateways.unwrap_or_default();
             v.push(input.into());
             self.wireless_gateways = Some(v);
             self
         }
-        /// <p>List of WirelessGateways in the NetworkAnalyzerConfiguration.</p>
+        /// <p>List of wireless gateway resources that have been added to the network analyzer configuration.</p>
         pub fn set_wireless_gateways(
             mut self,
             input: std::option::Option<std::vec::Vec<std::string::String>>,
         ) -> Self {
             self.wireless_gateways = input;
+            self
+        }
+        /// <p>The description of the new resource.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>The description of the new resource.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>The Amazon Resource Name of the new resource.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name of the new resource.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>Name of the network analyzer configuration.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>Name of the network analyzer configuration.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
             self
         }
         /// Consumes the builder and constructs a [`GetNetworkAnalyzerConfigurationOutput`](crate::output::GetNetworkAnalyzerConfigurationOutput)
@@ -3294,6 +3660,9 @@ pub mod get_network_analyzer_configuration_output {
                 trace_content: self.trace_content,
                 wireless_devices: self.wireless_devices,
                 wireless_gateways: self.wireless_gateways,
+                description: self.description,
+                arn: self.arn,
+                name: self.name,
             }
         }
     }
@@ -3327,6 +3696,7 @@ impl std::fmt::Debug for GetMulticastGroupSessionOutput {
 }
 /// See [`GetMulticastGroupSessionOutput`](crate::output::GetMulticastGroupSessionOutput)
 pub mod get_multicast_group_session_output {
+
     /// A builder for [`GetMulticastGroupSessionOutput`](crate::output::GetMulticastGroupSessionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3426,6 +3796,7 @@ impl std::fmt::Debug for GetMulticastGroupOutput {
 }
 /// See [`GetMulticastGroupOutput`](crate::output::GetMulticastGroupOutput)
 pub mod get_multicast_group_output {
+
     /// A builder for [`GetMulticastGroupOutput`](crate::output::GetMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3540,7 +3911,7 @@ impl GetMulticastGroupOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetLogLevelsByResourceTypesOutput {
-    /// <p>The log level for a log message.</p>
+    /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
     pub default_log_level: std::option::Option<crate::model::LogLevel>,
     /// <p>The list of wireless gateway log options.</p>
     pub wireless_gateway_log_options:
@@ -3550,7 +3921,7 @@ pub struct GetLogLevelsByResourceTypesOutput {
         std::option::Option<std::vec::Vec<crate::model::WirelessDeviceLogOption>>,
 }
 impl GetLogLevelsByResourceTypesOutput {
-    /// <p>The log level for a log message.</p>
+    /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
     pub fn default_log_level(&self) -> std::option::Option<&crate::model::LogLevel> {
         self.default_log_level.as_ref()
     }
@@ -3584,6 +3955,7 @@ impl std::fmt::Debug for GetLogLevelsByResourceTypesOutput {
 }
 /// See [`GetLogLevelsByResourceTypesOutput`](crate::output::GetLogLevelsByResourceTypesOutput)
 pub mod get_log_levels_by_resource_types_output {
+
     /// A builder for [`GetLogLevelsByResourceTypesOutput`](crate::output::GetLogLevelsByResourceTypesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3595,12 +3967,12 @@ pub mod get_log_levels_by_resource_types_output {
             std::option::Option<std::vec::Vec<crate::model::WirelessDeviceLogOption>>,
     }
     impl Builder {
-        /// <p>The log level for a log message.</p>
+        /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
         pub fn default_log_level(mut self, input: crate::model::LogLevel) -> Self {
             self.default_log_level = Some(input);
             self
         }
-        /// <p>The log level for a log message.</p>
+        /// <p>The log level for a log message. The log levels can be disabled, or set to <code>ERROR</code> to display less verbose logs containing only error information, or to <code>INFO</code> for more detailed logs.</p>
         pub fn set_default_log_level(
             mut self,
             input: std::option::Option<crate::model::LogLevel>,
@@ -3747,6 +4119,7 @@ impl std::fmt::Debug for GetFuotaTaskOutput {
 }
 /// See [`GetFuotaTaskOutput`](crate::output::GetFuotaTaskOutput)
 pub mod get_fuota_task_output {
+
     /// A builder for [`GetFuotaTaskOutput`](crate::output::GetFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3893,6 +4266,156 @@ impl GetFuotaTaskOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetEventConfigurationByResourceTypesOutput {
+    /// <p>Resource type event configuration for the device registration state event</p>
+    pub device_registration_state:
+        std::option::Option<crate::model::DeviceRegistrationStateResourceTypeEventConfiguration>,
+    /// <p>Resource type event configuration for the proximity event</p>
+    pub proximity: std::option::Option<crate::model::ProximityResourceTypeEventConfiguration>,
+    /// <p>Resource type event configuration for the join event</p>
+    pub join: std::option::Option<crate::model::JoinResourceTypeEventConfiguration>,
+    /// <p>Resource type event configuration for the connection status event</p>
+    pub connection_status:
+        std::option::Option<crate::model::ConnectionStatusResourceTypeEventConfiguration>,
+}
+impl GetEventConfigurationByResourceTypesOutput {
+    /// <p>Resource type event configuration for the device registration state event</p>
+    pub fn device_registration_state(
+        &self,
+    ) -> std::option::Option<&crate::model::DeviceRegistrationStateResourceTypeEventConfiguration>
+    {
+        self.device_registration_state.as_ref()
+    }
+    /// <p>Resource type event configuration for the proximity event</p>
+    pub fn proximity(
+        &self,
+    ) -> std::option::Option<&crate::model::ProximityResourceTypeEventConfiguration> {
+        self.proximity.as_ref()
+    }
+    /// <p>Resource type event configuration for the join event</p>
+    pub fn join(&self) -> std::option::Option<&crate::model::JoinResourceTypeEventConfiguration> {
+        self.join.as_ref()
+    }
+    /// <p>Resource type event configuration for the connection status event</p>
+    pub fn connection_status(
+        &self,
+    ) -> std::option::Option<&crate::model::ConnectionStatusResourceTypeEventConfiguration> {
+        self.connection_status.as_ref()
+    }
+}
+impl std::fmt::Debug for GetEventConfigurationByResourceTypesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetEventConfigurationByResourceTypesOutput");
+        formatter.field("device_registration_state", &self.device_registration_state);
+        formatter.field("proximity", &self.proximity);
+        formatter.field("join", &self.join);
+        formatter.field("connection_status", &self.connection_status);
+        formatter.finish()
+    }
+}
+/// See [`GetEventConfigurationByResourceTypesOutput`](crate::output::GetEventConfigurationByResourceTypesOutput)
+pub mod get_event_configuration_by_resource_types_output {
+
+    /// A builder for [`GetEventConfigurationByResourceTypesOutput`](crate::output::GetEventConfigurationByResourceTypesOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) device_registration_state: std::option::Option<
+            crate::model::DeviceRegistrationStateResourceTypeEventConfiguration,
+        >,
+        pub(crate) proximity:
+            std::option::Option<crate::model::ProximityResourceTypeEventConfiguration>,
+        pub(crate) join: std::option::Option<crate::model::JoinResourceTypeEventConfiguration>,
+        pub(crate) connection_status:
+            std::option::Option<crate::model::ConnectionStatusResourceTypeEventConfiguration>,
+    }
+    impl Builder {
+        /// <p>Resource type event configuration for the device registration state event</p>
+        pub fn device_registration_state(
+            mut self,
+            input: crate::model::DeviceRegistrationStateResourceTypeEventConfiguration,
+        ) -> Self {
+            self.device_registration_state = Some(input);
+            self
+        }
+        /// <p>Resource type event configuration for the device registration state event</p>
+        pub fn set_device_registration_state(
+            mut self,
+            input: std::option::Option<
+                crate::model::DeviceRegistrationStateResourceTypeEventConfiguration,
+            >,
+        ) -> Self {
+            self.device_registration_state = input;
+            self
+        }
+        /// <p>Resource type event configuration for the proximity event</p>
+        pub fn proximity(
+            mut self,
+            input: crate::model::ProximityResourceTypeEventConfiguration,
+        ) -> Self {
+            self.proximity = Some(input);
+            self
+        }
+        /// <p>Resource type event configuration for the proximity event</p>
+        pub fn set_proximity(
+            mut self,
+            input: std::option::Option<crate::model::ProximityResourceTypeEventConfiguration>,
+        ) -> Self {
+            self.proximity = input;
+            self
+        }
+        /// <p>Resource type event configuration for the join event</p>
+        pub fn join(mut self, input: crate::model::JoinResourceTypeEventConfiguration) -> Self {
+            self.join = Some(input);
+            self
+        }
+        /// <p>Resource type event configuration for the join event</p>
+        pub fn set_join(
+            mut self,
+            input: std::option::Option<crate::model::JoinResourceTypeEventConfiguration>,
+        ) -> Self {
+            self.join = input;
+            self
+        }
+        /// <p>Resource type event configuration for the connection status event</p>
+        pub fn connection_status(
+            mut self,
+            input: crate::model::ConnectionStatusResourceTypeEventConfiguration,
+        ) -> Self {
+            self.connection_status = Some(input);
+            self
+        }
+        /// <p>Resource type event configuration for the connection status event</p>
+        pub fn set_connection_status(
+            mut self,
+            input: std::option::Option<
+                crate::model::ConnectionStatusResourceTypeEventConfiguration,
+            >,
+        ) -> Self {
+            self.connection_status = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetEventConfigurationByResourceTypesOutput`](crate::output::GetEventConfigurationByResourceTypesOutput)
+        pub fn build(self) -> crate::output::GetEventConfigurationByResourceTypesOutput {
+            crate::output::GetEventConfigurationByResourceTypesOutput {
+                device_registration_state: self.device_registration_state,
+                proximity: self.proximity,
+                join: self.join,
+                connection_status: self.connection_status,
+            }
+        }
+    }
+}
+impl GetEventConfigurationByResourceTypesOutput {
+    /// Creates a new builder-style object to manufacture [`GetEventConfigurationByResourceTypesOutput`](crate::output::GetEventConfigurationByResourceTypesOutput)
+    pub fn builder() -> crate::output::get_event_configuration_by_resource_types_output::Builder {
+        crate::output::get_event_configuration_by_resource_types_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetDeviceProfileOutput {
     /// <p>The Amazon Resource Name of the resource.</p>
     pub arn: std::option::Option<std::string::String>,
@@ -3933,6 +4456,7 @@ impl std::fmt::Debug for GetDeviceProfileOutput {
 }
 /// See [`GetDeviceProfileOutput`](crate::output::GetDeviceProfileOutput)
 pub mod get_device_profile_output {
+
     /// A builder for [`GetDeviceProfileOutput`](crate::output::GetDeviceProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4061,6 +4585,7 @@ impl std::fmt::Debug for GetDestinationOutput {
 }
 /// See [`GetDestinationOutput`](crate::output::GetDestinationOutput)
 pub mod get_destination_output {
+
     /// A builder for [`GetDestinationOutput`](crate::output::GetDestinationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4168,6 +4693,7 @@ impl std::fmt::Debug for DisassociateWirelessGatewayFromThingOutput {
 }
 /// See [`DisassociateWirelessGatewayFromThingOutput`](crate::output::DisassociateWirelessGatewayFromThingOutput)
 pub mod disassociate_wireless_gateway_from_thing_output {
+
     /// A builder for [`DisassociateWirelessGatewayFromThingOutput`](crate::output::DisassociateWirelessGatewayFromThingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4198,6 +4724,7 @@ impl std::fmt::Debug for DisassociateWirelessGatewayFromCertificateOutput {
 }
 /// See [`DisassociateWirelessGatewayFromCertificateOutput`](crate::output::DisassociateWirelessGatewayFromCertificateOutput)
 pub mod disassociate_wireless_gateway_from_certificate_output {
+
     /// A builder for [`DisassociateWirelessGatewayFromCertificateOutput`](crate::output::DisassociateWirelessGatewayFromCertificateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4229,6 +4756,7 @@ impl std::fmt::Debug for DisassociateWirelessDeviceFromThingOutput {
 }
 /// See [`DisassociateWirelessDeviceFromThingOutput`](crate::output::DisassociateWirelessDeviceFromThingOutput)
 pub mod disassociate_wireless_device_from_thing_output {
+
     /// A builder for [`DisassociateWirelessDeviceFromThingOutput`](crate::output::DisassociateWirelessDeviceFromThingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4259,6 +4787,7 @@ impl std::fmt::Debug for DisassociateWirelessDeviceFromMulticastGroupOutput {
 }
 /// See [`DisassociateWirelessDeviceFromMulticastGroupOutput`](crate::output::DisassociateWirelessDeviceFromMulticastGroupOutput)
 pub mod disassociate_wireless_device_from_multicast_group_output {
+
     /// A builder for [`DisassociateWirelessDeviceFromMulticastGroupOutput`](crate::output::DisassociateWirelessDeviceFromMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4290,6 +4819,7 @@ impl std::fmt::Debug for DisassociateWirelessDeviceFromFuotaTaskOutput {
 }
 /// See [`DisassociateWirelessDeviceFromFuotaTaskOutput`](crate::output::DisassociateWirelessDeviceFromFuotaTaskOutput)
 pub mod disassociate_wireless_device_from_fuota_task_output {
+
     /// A builder for [`DisassociateWirelessDeviceFromFuotaTaskOutput`](crate::output::DisassociateWirelessDeviceFromFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4321,6 +4851,7 @@ impl std::fmt::Debug for DisassociateMulticastGroupFromFuotaTaskOutput {
 }
 /// See [`DisassociateMulticastGroupFromFuotaTaskOutput`](crate::output::DisassociateMulticastGroupFromFuotaTaskOutput)
 pub mod disassociate_multicast_group_from_fuota_task_output {
+
     /// A builder for [`DisassociateMulticastGroupFromFuotaTaskOutput`](crate::output::DisassociateMulticastGroupFromFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4352,6 +4883,7 @@ impl std::fmt::Debug for DisassociateAwsAccountFromPartnerAccountOutput {
 }
 /// See [`DisassociateAwsAccountFromPartnerAccountOutput`](crate::output::DisassociateAwsAccountFromPartnerAccountOutput)
 pub mod disassociate_aws_account_from_partner_account_output {
+
     /// A builder for [`DisassociateAwsAccountFromPartnerAccountOutput`](crate::output::DisassociateAwsAccountFromPartnerAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4383,6 +4915,7 @@ impl std::fmt::Debug for DeleteWirelessGatewayTaskDefinitionOutput {
 }
 /// See [`DeleteWirelessGatewayTaskDefinitionOutput`](crate::output::DeleteWirelessGatewayTaskDefinitionOutput)
 pub mod delete_wireless_gateway_task_definition_output {
+
     /// A builder for [`DeleteWirelessGatewayTaskDefinitionOutput`](crate::output::DeleteWirelessGatewayTaskDefinitionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4413,6 +4946,7 @@ impl std::fmt::Debug for DeleteWirelessGatewayTaskOutput {
 }
 /// See [`DeleteWirelessGatewayTaskOutput`](crate::output::DeleteWirelessGatewayTaskOutput)
 pub mod delete_wireless_gateway_task_output {
+
     /// A builder for [`DeleteWirelessGatewayTaskOutput`](crate::output::DeleteWirelessGatewayTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4443,6 +4977,7 @@ impl std::fmt::Debug for DeleteWirelessGatewayOutput {
 }
 /// See [`DeleteWirelessGatewayOutput`](crate::output::DeleteWirelessGatewayOutput)
 pub mod delete_wireless_gateway_output {
+
     /// A builder for [`DeleteWirelessGatewayOutput`](crate::output::DeleteWirelessGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4473,6 +5008,7 @@ impl std::fmt::Debug for DeleteWirelessDeviceOutput {
 }
 /// See [`DeleteWirelessDeviceOutput`](crate::output::DeleteWirelessDeviceOutput)
 pub mod delete_wireless_device_output {
+
     /// A builder for [`DeleteWirelessDeviceOutput`](crate::output::DeleteWirelessDeviceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4503,6 +5039,7 @@ impl std::fmt::Debug for DeleteServiceProfileOutput {
 }
 /// See [`DeleteServiceProfileOutput`](crate::output::DeleteServiceProfileOutput)
 pub mod delete_service_profile_output {
+
     /// A builder for [`DeleteServiceProfileOutput`](crate::output::DeleteServiceProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4533,6 +5070,7 @@ impl std::fmt::Debug for DeleteQueuedMessagesOutput {
 }
 /// See [`DeleteQueuedMessagesOutput`](crate::output::DeleteQueuedMessagesOutput)
 pub mod delete_queued_messages_output {
+
     /// A builder for [`DeleteQueuedMessagesOutput`](crate::output::DeleteQueuedMessagesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4554,6 +5092,37 @@ impl DeleteQueuedMessagesOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeleteNetworkAnalyzerConfigurationOutput {}
+impl std::fmt::Debug for DeleteNetworkAnalyzerConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeleteNetworkAnalyzerConfigurationOutput");
+        formatter.finish()
+    }
+}
+/// See [`DeleteNetworkAnalyzerConfigurationOutput`](crate::output::DeleteNetworkAnalyzerConfigurationOutput)
+pub mod delete_network_analyzer_configuration_output {
+
+    /// A builder for [`DeleteNetworkAnalyzerConfigurationOutput`](crate::output::DeleteNetworkAnalyzerConfigurationOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`DeleteNetworkAnalyzerConfigurationOutput`](crate::output::DeleteNetworkAnalyzerConfigurationOutput)
+        pub fn build(self) -> crate::output::DeleteNetworkAnalyzerConfigurationOutput {
+            crate::output::DeleteNetworkAnalyzerConfigurationOutput {}
+        }
+    }
+}
+impl DeleteNetworkAnalyzerConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`DeleteNetworkAnalyzerConfigurationOutput`](crate::output::DeleteNetworkAnalyzerConfigurationOutput)
+    pub fn builder() -> crate::output::delete_network_analyzer_configuration_output::Builder {
+        crate::output::delete_network_analyzer_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteMulticastGroupOutput {}
 impl std::fmt::Debug for DeleteMulticastGroupOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -4563,6 +5132,7 @@ impl std::fmt::Debug for DeleteMulticastGroupOutput {
 }
 /// See [`DeleteMulticastGroupOutput`](crate::output::DeleteMulticastGroupOutput)
 pub mod delete_multicast_group_output {
+
     /// A builder for [`DeleteMulticastGroupOutput`](crate::output::DeleteMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4593,6 +5163,7 @@ impl std::fmt::Debug for DeleteFuotaTaskOutput {
 }
 /// See [`DeleteFuotaTaskOutput`](crate::output::DeleteFuotaTaskOutput)
 pub mod delete_fuota_task_output {
+
     /// A builder for [`DeleteFuotaTaskOutput`](crate::output::DeleteFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4623,6 +5194,7 @@ impl std::fmt::Debug for DeleteDeviceProfileOutput {
 }
 /// See [`DeleteDeviceProfileOutput`](crate::output::DeleteDeviceProfileOutput)
 pub mod delete_device_profile_output {
+
     /// A builder for [`DeleteDeviceProfileOutput`](crate::output::DeleteDeviceProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4653,6 +5225,7 @@ impl std::fmt::Debug for DeleteDestinationOutput {
 }
 /// See [`DeleteDestinationOutput`](crate::output::DeleteDestinationOutput)
 pub mod delete_destination_output {
+
     /// A builder for [`DeleteDestinationOutput`](crate::output::DeleteDestinationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4700,6 +5273,7 @@ impl std::fmt::Debug for CreateWirelessGatewayTaskDefinitionOutput {
 }
 /// See [`CreateWirelessGatewayTaskDefinitionOutput`](crate::output::CreateWirelessGatewayTaskDefinitionOutput)
 pub mod create_wireless_gateway_task_definition_output {
+
     /// A builder for [`CreateWirelessGatewayTaskDefinitionOutput`](crate::output::CreateWirelessGatewayTaskDefinitionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4776,6 +5350,7 @@ impl std::fmt::Debug for CreateWirelessGatewayTaskOutput {
 }
 /// See [`CreateWirelessGatewayTaskOutput`](crate::output::CreateWirelessGatewayTaskOutput)
 pub mod create_wireless_gateway_task_output {
+
     /// A builder for [`CreateWirelessGatewayTaskOutput`](crate::output::CreateWirelessGatewayTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4858,6 +5433,7 @@ impl std::fmt::Debug for CreateWirelessGatewayOutput {
 }
 /// See [`CreateWirelessGatewayOutput`](crate::output::CreateWirelessGatewayOutput)
 pub mod create_wireless_gateway_output {
+
     /// A builder for [`CreateWirelessGatewayOutput`](crate::output::CreateWirelessGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4931,6 +5507,7 @@ impl std::fmt::Debug for CreateWirelessDeviceOutput {
 }
 /// See [`CreateWirelessDeviceOutput`](crate::output::CreateWirelessDeviceOutput)
 pub mod create_wireless_device_output {
+
     /// A builder for [`CreateWirelessDeviceOutput`](crate::output::CreateWirelessDeviceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5004,6 +5581,7 @@ impl std::fmt::Debug for CreateServiceProfileOutput {
 }
 /// See [`CreateServiceProfileOutput`](crate::output::CreateServiceProfileOutput)
 pub mod create_service_profile_output {
+
     /// A builder for [`CreateServiceProfileOutput`](crate::output::CreateServiceProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5051,6 +5629,80 @@ impl CreateServiceProfileOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateNetworkAnalyzerConfigurationOutput {
+    /// <p>The Amazon Resource Name of the new resource.</p>
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>Name of the network analyzer configuration.</p>
+    pub name: std::option::Option<std::string::String>,
+}
+impl CreateNetworkAnalyzerConfigurationOutput {
+    /// <p>The Amazon Resource Name of the new resource.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>Name of the network analyzer configuration.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+}
+impl std::fmt::Debug for CreateNetworkAnalyzerConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateNetworkAnalyzerConfigurationOutput");
+        formatter.field("arn", &self.arn);
+        formatter.field("name", &self.name);
+        formatter.finish()
+    }
+}
+/// See [`CreateNetworkAnalyzerConfigurationOutput`](crate::output::CreateNetworkAnalyzerConfigurationOutput)
+pub mod create_network_analyzer_configuration_output {
+
+    /// A builder for [`CreateNetworkAnalyzerConfigurationOutput`](crate::output::CreateNetworkAnalyzerConfigurationOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) name: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The Amazon Resource Name of the new resource.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name of the new resource.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>Name of the network analyzer configuration.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>Name of the network analyzer configuration.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateNetworkAnalyzerConfigurationOutput`](crate::output::CreateNetworkAnalyzerConfigurationOutput)
+        pub fn build(self) -> crate::output::CreateNetworkAnalyzerConfigurationOutput {
+            crate::output::CreateNetworkAnalyzerConfigurationOutput {
+                arn: self.arn,
+                name: self.name,
+            }
+        }
+    }
+}
+impl CreateNetworkAnalyzerConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`CreateNetworkAnalyzerConfigurationOutput`](crate::output::CreateNetworkAnalyzerConfigurationOutput)
+    pub fn builder() -> crate::output::create_network_analyzer_configuration_output::Builder {
+        crate::output::create_network_analyzer_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateMulticastGroupOutput {
     /// <p>The arn of the multicast group.</p>
     pub arn: std::option::Option<std::string::String>,
@@ -5077,6 +5729,7 @@ impl std::fmt::Debug for CreateMulticastGroupOutput {
 }
 /// See [`CreateMulticastGroupOutput`](crate::output::CreateMulticastGroupOutput)
 pub mod create_multicast_group_output {
+
     /// A builder for [`CreateMulticastGroupOutput`](crate::output::CreateMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5150,6 +5803,7 @@ impl std::fmt::Debug for CreateFuotaTaskOutput {
 }
 /// See [`CreateFuotaTaskOutput`](crate::output::CreateFuotaTaskOutput)
 pub mod create_fuota_task_output {
+
     /// A builder for [`CreateFuotaTaskOutput`](crate::output::CreateFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5223,6 +5877,7 @@ impl std::fmt::Debug for CreateDeviceProfileOutput {
 }
 /// See [`CreateDeviceProfileOutput`](crate::output::CreateDeviceProfileOutput)
 pub mod create_device_profile_output {
+
     /// A builder for [`CreateDeviceProfileOutput`](crate::output::CreateDeviceProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5296,6 +5951,7 @@ impl std::fmt::Debug for CreateDestinationOutput {
 }
 /// See [`CreateDestinationOutput`](crate::output::CreateDestinationOutput)
 pub mod create_destination_output {
+
     /// A builder for [`CreateDestinationOutput`](crate::output::CreateDestinationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5352,6 +6008,7 @@ impl std::fmt::Debug for CancelMulticastGroupSessionOutput {
 }
 /// See [`CancelMulticastGroupSessionOutput`](crate::output::CancelMulticastGroupSessionOutput)
 pub mod cancel_multicast_group_session_output {
+
     /// A builder for [`CancelMulticastGroupSessionOutput`](crate::output::CancelMulticastGroupSessionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5382,6 +6039,7 @@ impl std::fmt::Debug for AssociateWirelessGatewayWithThingOutput {
 }
 /// See [`AssociateWirelessGatewayWithThingOutput`](crate::output::AssociateWirelessGatewayWithThingOutput)
 pub mod associate_wireless_gateway_with_thing_output {
+
     /// A builder for [`AssociateWirelessGatewayWithThingOutput`](crate::output::AssociateWirelessGatewayWithThingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5422,6 +6080,7 @@ impl std::fmt::Debug for AssociateWirelessGatewayWithCertificateOutput {
 }
 /// See [`AssociateWirelessGatewayWithCertificateOutput`](crate::output::AssociateWirelessGatewayWithCertificateOutput)
 pub mod associate_wireless_gateway_with_certificate_output {
+
     /// A builder for [`AssociateWirelessGatewayWithCertificateOutput`](crate::output::AssociateWirelessGatewayWithCertificateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5469,6 +6128,7 @@ impl std::fmt::Debug for AssociateWirelessDeviceWithThingOutput {
 }
 /// See [`AssociateWirelessDeviceWithThingOutput`](crate::output::AssociateWirelessDeviceWithThingOutput)
 pub mod associate_wireless_device_with_thing_output {
+
     /// A builder for [`AssociateWirelessDeviceWithThingOutput`](crate::output::AssociateWirelessDeviceWithThingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5499,6 +6159,7 @@ impl std::fmt::Debug for AssociateWirelessDeviceWithMulticastGroupOutput {
 }
 /// See [`AssociateWirelessDeviceWithMulticastGroupOutput`](crate::output::AssociateWirelessDeviceWithMulticastGroupOutput)
 pub mod associate_wireless_device_with_multicast_group_output {
+
     /// A builder for [`AssociateWirelessDeviceWithMulticastGroupOutput`](crate::output::AssociateWirelessDeviceWithMulticastGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5530,6 +6191,7 @@ impl std::fmt::Debug for AssociateWirelessDeviceWithFuotaTaskOutput {
 }
 /// See [`AssociateWirelessDeviceWithFuotaTaskOutput`](crate::output::AssociateWirelessDeviceWithFuotaTaskOutput)
 pub mod associate_wireless_device_with_fuota_task_output {
+
     /// A builder for [`AssociateWirelessDeviceWithFuotaTaskOutput`](crate::output::AssociateWirelessDeviceWithFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5560,6 +6222,7 @@ impl std::fmt::Debug for AssociateMulticastGroupWithFuotaTaskOutput {
 }
 /// See [`AssociateMulticastGroupWithFuotaTaskOutput`](crate::output::AssociateMulticastGroupWithFuotaTaskOutput)
 pub mod associate_multicast_group_with_fuota_task_output {
+
     /// A builder for [`AssociateMulticastGroupWithFuotaTaskOutput`](crate::output::AssociateMulticastGroupWithFuotaTaskOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5607,6 +6270,7 @@ impl std::fmt::Debug for AssociateAwsAccountWithPartnerAccountOutput {
 }
 /// See [`AssociateAwsAccountWithPartnerAccountOutput`](crate::output::AssociateAwsAccountWithPartnerAccountOutput)
 pub mod associate_aws_account_with_partner_account_output {
+
     /// A builder for [`AssociateAwsAccountWithPartnerAccountOutput`](crate::output::AssociateAwsAccountWithPartnerAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

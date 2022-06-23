@@ -2899,6 +2899,110 @@ impl std::error::Error for GetUsageForecastError {
     }
 }
 
+/// Error type for the `ListCostAllocationTags` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListCostAllocationTagsError {
+    /// Kind of error that occurred.
+    pub kind: ListCostAllocationTagsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListCostAllocationTags` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListCostAllocationTagsErrorKind {
+    /// <p>The pagination token is invalid. Try again without a pagination token.</p>
+    InvalidNextTokenException(crate::error::InvalidNextTokenException),
+    /// <p>You made too many calls in a short period of time. Try again later.</p>
+    LimitExceededException(crate::error::LimitExceededException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListCostAllocationTagsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListCostAllocationTagsErrorKind::InvalidNextTokenException(_inner) => _inner.fmt(f),
+            ListCostAllocationTagsErrorKind::LimitExceededException(_inner) => _inner.fmt(f),
+            ListCostAllocationTagsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListCostAllocationTagsError {
+    fn code(&self) -> Option<&str> {
+        ListCostAllocationTagsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListCostAllocationTagsError {
+    /// Creates a new `ListCostAllocationTagsError`.
+    pub fn new(kind: ListCostAllocationTagsErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListCostAllocationTagsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListCostAllocationTagsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListCostAllocationTagsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListCostAllocationTagsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ListCostAllocationTagsErrorKind::InvalidNextTokenException`.
+    pub fn is_invalid_next_token_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListCostAllocationTagsErrorKind::InvalidNextTokenException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListCostAllocationTagsErrorKind::LimitExceededException`.
+    pub fn is_limit_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListCostAllocationTagsErrorKind::LimitExceededException(_)
+        )
+    }
+}
+impl std::error::Error for ListCostAllocationTagsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListCostAllocationTagsErrorKind::InvalidNextTokenException(_inner) => Some(_inner),
+            ListCostAllocationTagsErrorKind::LimitExceededException(_inner) => Some(_inner),
+            ListCostAllocationTagsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `ListCostCategoryDefinitions` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -3625,6 +3729,104 @@ impl std::error::Error for UpdateAnomalySubscriptionError {
     }
 }
 
+/// Error type for the `UpdateCostAllocationTagsStatus` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct UpdateCostAllocationTagsStatusError {
+    /// Kind of error that occurred.
+    pub kind: UpdateCostAllocationTagsStatusErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `UpdateCostAllocationTagsStatus` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdateCostAllocationTagsStatusErrorKind {
+    /// <p>You made too many calls in a short period of time. Try again later.</p>
+    LimitExceededException(crate::error::LimitExceededException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdateCostAllocationTagsStatusError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            UpdateCostAllocationTagsStatusErrorKind::LimitExceededException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateCostAllocationTagsStatusErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for UpdateCostAllocationTagsStatusError {
+    fn code(&self) -> Option<&str> {
+        UpdateCostAllocationTagsStatusError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl UpdateCostAllocationTagsStatusError {
+    /// Creates a new `UpdateCostAllocationTagsStatusError`.
+    pub fn new(
+        kind: UpdateCostAllocationTagsStatusErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `UpdateCostAllocationTagsStatusError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdateCostAllocationTagsStatusErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `UpdateCostAllocationTagsStatusError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdateCostAllocationTagsStatusErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdateCostAllocationTagsStatusErrorKind::LimitExceededException`.
+    pub fn is_limit_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateCostAllocationTagsStatusErrorKind::LimitExceededException(_)
+        )
+    }
+}
+impl std::error::Error for UpdateCostAllocationTagsStatusError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdateCostAllocationTagsStatusErrorKind::LimitExceededException(_inner) => Some(_inner),
+            UpdateCostAllocationTagsStatusErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `UpdateCostCategoryDefinition` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -3780,6 +3982,7 @@ impl std::fmt::Display for ServiceQuotaExceededException {
 impl std::error::Error for ServiceQuotaExceededException {}
 /// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
 pub mod service_quota_exceeded_exception {
+
     /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3853,6 +4056,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3932,6 +4136,7 @@ impl std::fmt::Display for LimitExceededException {
 impl std::error::Error for LimitExceededException {}
 /// See [`LimitExceededException`](crate::error::LimitExceededException)
 pub mod limit_exceeded_exception {
+
     /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3996,6 +4201,7 @@ impl std::fmt::Display for UnknownSubscriptionException {
 impl std::error::Error for UnknownSubscriptionException {}
 /// See [`UnknownSubscriptionException`](crate::error::UnknownSubscriptionException)
 pub mod unknown_subscription_exception {
+
     /// A builder for [`UnknownSubscriptionException`](crate::error::UnknownSubscriptionException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4060,6 +4266,7 @@ impl std::fmt::Display for UnknownMonitorException {
 impl std::error::Error for UnknownMonitorException {}
 /// See [`UnknownMonitorException`](crate::error::UnknownMonitorException)
 pub mod unknown_monitor_exception {
+
     /// A builder for [`UnknownMonitorException`](crate::error::UnknownMonitorException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4133,6 +4340,7 @@ impl std::fmt::Display for TooManyTagsException {
 impl std::error::Error for TooManyTagsException {}
 /// See [`TooManyTagsException`](crate::error::TooManyTagsException)
 pub mod too_many_tags_exception {
+
     /// A builder for [`TooManyTagsException`](crate::error::TooManyTagsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4180,6 +4388,71 @@ impl TooManyTagsException {
     }
 }
 
+/// <p>The pagination token is invalid. Try again without a pagination token.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct InvalidNextTokenException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for InvalidNextTokenException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("InvalidNextTokenException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl InvalidNextTokenException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for InvalidNextTokenException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "InvalidNextTokenException")?;
+        if let Some(inner_7) = &self.message {
+            write!(f, ": {}", inner_7)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for InvalidNextTokenException {}
+/// See [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+pub mod invalid_next_token_exception {
+
+    /// A builder for [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+        pub fn build(self) -> crate::error::InvalidNextTokenException {
+            crate::error::InvalidNextTokenException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl InvalidNextTokenException {
+    /// Creates a new builder-style object to manufacture [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+    pub fn builder() -> crate::error::invalid_next_token_exception::Builder {
+        crate::error::invalid_next_token_exception::Builder::default()
+    }
+}
+
 /// <p>Cost Explorer was unable to identify the usage unit. Provide <code>UsageType/UsageTypeGroup</code> filter selections that contain matching units, for example: <code>hours</code>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -4203,8 +4476,8 @@ impl UnresolvableUsageUnitException {
 impl std::fmt::Display for UnresolvableUsageUnitException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "UnresolvableUsageUnitException")?;
-        if let Some(inner_7) = &self.message {
-            write!(f, ": {}", inner_7)?;
+        if let Some(inner_8) = &self.message {
+            write!(f, ": {}", inner_8)?;
         }
         Ok(())
     }
@@ -4212,6 +4485,7 @@ impl std::fmt::Display for UnresolvableUsageUnitException {
 impl std::error::Error for UnresolvableUsageUnitException {}
 /// See [`UnresolvableUsageUnitException`](crate::error::UnresolvableUsageUnitException)
 pub mod unresolvable_usage_unit_exception {
+
     /// A builder for [`UnresolvableUsageUnitException`](crate::error::UnresolvableUsageUnitException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4267,8 +4541,8 @@ impl DataUnavailableException {
 impl std::fmt::Display for DataUnavailableException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DataUnavailableException")?;
-        if let Some(inner_8) = &self.message {
-            write!(f, ": {}", inner_8)?;
+        if let Some(inner_9) = &self.message {
+            write!(f, ": {}", inner_9)?;
         }
         Ok(())
     }
@@ -4276,6 +4550,7 @@ impl std::fmt::Display for DataUnavailableException {
 impl std::error::Error for DataUnavailableException {}
 /// See [`DataUnavailableException`](crate::error::DataUnavailableException)
 pub mod data_unavailable_exception {
+
     /// A builder for [`DataUnavailableException`](crate::error::DataUnavailableException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4331,8 +4606,8 @@ impl RequestChangedException {
 impl std::fmt::Display for RequestChangedException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "RequestChangedException")?;
-        if let Some(inner_9) = &self.message {
-            write!(f, ": {}", inner_9)?;
+        if let Some(inner_10) = &self.message {
+            write!(f, ": {}", inner_10)?;
         }
         Ok(())
     }
@@ -4340,6 +4615,7 @@ impl std::fmt::Display for RequestChangedException {
 impl std::error::Error for RequestChangedException {}
 /// See [`RequestChangedException`](crate::error::RequestChangedException)
 pub mod request_changed_exception {
+
     /// A builder for [`RequestChangedException`](crate::error::RequestChangedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4369,70 +4645,6 @@ impl RequestChangedException {
     /// Creates a new builder-style object to manufacture [`RequestChangedException`](crate::error::RequestChangedException)
     pub fn builder() -> crate::error::request_changed_exception::Builder {
         crate::error::request_changed_exception::Builder::default()
-    }
-}
-
-/// <p>The pagination token is invalid. Try again without a pagination token.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct InvalidNextTokenException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for InvalidNextTokenException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("InvalidNextTokenException");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl InvalidNextTokenException {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for InvalidNextTokenException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "InvalidNextTokenException")?;
-        if let Some(inner_10) = &self.message {
-            write!(f, ": {}", inner_10)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for InvalidNextTokenException {}
-/// See [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
-pub mod invalid_next_token_exception {
-    /// A builder for [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
-        pub fn build(self) -> crate::error::InvalidNextTokenException {
-            crate::error::InvalidNextTokenException {
-                message: self.message,
-            }
-        }
-    }
-}
-impl InvalidNextTokenException {
-    /// Creates a new builder-style object to manufacture [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
-    pub fn builder() -> crate::error::invalid_next_token_exception::Builder {
-        crate::error::invalid_next_token_exception::Builder::default()
     }
 }
 
@@ -4468,6 +4680,7 @@ impl std::fmt::Display for BillExpirationException {
 impl std::error::Error for BillExpirationException {}
 /// See [`BillExpirationException`](crate::error::BillExpirationException)
 pub mod bill_expiration_exception {
+
     /// A builder for [`BillExpirationException`](crate::error::BillExpirationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

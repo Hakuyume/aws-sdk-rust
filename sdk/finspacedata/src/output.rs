@@ -21,6 +21,7 @@ impl std::fmt::Debug for UpdateUserOutput {
 }
 /// See [`UpdateUserOutput`](crate::output::UpdateUserOutput)
 pub mod update_user_output {
+
     /// A builder for [`UpdateUserOutput`](crate::output::UpdateUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -75,6 +76,7 @@ impl std::fmt::Debug for UpdatePermissionGroupOutput {
 }
 /// See [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput)
 pub mod update_permission_group_output {
+
     /// A builder for [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -132,6 +134,7 @@ impl std::fmt::Debug for UpdateDatasetOutput {
 }
 /// See [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput)
 pub mod update_dataset_output {
+
     /// A builder for [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -193,6 +196,7 @@ impl std::fmt::Debug for UpdateChangesetOutput {
 }
 /// See [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput)
 pub mod update_changeset_output {
+
     /// A builder for [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -266,6 +270,7 @@ impl std::fmt::Debug for ResetUserPasswordOutput {
 }
 /// See [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput)
 pub mod reset_user_password_output {
+
     /// A builder for [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -316,6 +321,89 @@ impl ResetUserPasswordOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListUsersByPermissionGroupOutput {
+    /// <p>Lists details of all users in a specific permission group.</p>
+    pub users: std::option::Option<std::vec::Vec<crate::model::UserByPermissionGroup>>,
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListUsersByPermissionGroupOutput {
+    /// <p>Lists details of all users in a specific permission group.</p>
+    pub fn users(&self) -> std::option::Option<&[crate::model::UserByPermissionGroup]> {
+        self.users.as_deref()
+    }
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListUsersByPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListUsersByPermissionGroupOutput");
+        formatter.field("users", &self.users);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput)
+pub mod list_users_by_permission_group_output {
+
+    /// A builder for [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) users: std::option::Option<std::vec::Vec<crate::model::UserByPermissionGroup>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `users`.
+        ///
+        /// To override the contents of this collection use [`set_users`](Self::set_users).
+        ///
+        /// <p>Lists details of all users in a specific permission group.</p>
+        pub fn users(mut self, input: crate::model::UserByPermissionGroup) -> Self {
+            let mut v = self.users.unwrap_or_default();
+            v.push(input);
+            self.users = Some(v);
+            self
+        }
+        /// <p>Lists details of all users in a specific permission group.</p>
+        pub fn set_users(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::UserByPermissionGroup>>,
+        ) -> Self {
+            self.users = input;
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput)
+        pub fn build(self) -> crate::output::ListUsersByPermissionGroupOutput {
+            crate::output::ListUsersByPermissionGroupOutput {
+                users: self.users,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListUsersByPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput)
+    pub fn builder() -> crate::output::list_users_by_permission_group_output::Builder {
+        crate::output::list_users_by_permission_group_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListUsersOutput {
     /// <p>A list of all the user accounts.</p>
     pub users: std::option::Option<std::vec::Vec<crate::model::User>>,
@@ -342,6 +430,7 @@ impl std::fmt::Debug for ListUsersOutput {
 }
 /// See [`ListUsersOutput`](crate::output::ListUsersOutput)
 pub mod list_users_output {
+
     /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -398,6 +487,90 @@ impl ListUsersOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListPermissionGroupsByUserOutput {
+    /// <p>A list of returned permission groups.</p>
+    pub permission_groups: std::option::Option<std::vec::Vec<crate::model::PermissionGroupByUser>>,
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListPermissionGroupsByUserOutput {
+    /// <p>A list of returned permission groups.</p>
+    pub fn permission_groups(&self) -> std::option::Option<&[crate::model::PermissionGroupByUser]> {
+        self.permission_groups.as_deref()
+    }
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListPermissionGroupsByUserOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListPermissionGroupsByUserOutput");
+        formatter.field("permission_groups", &self.permission_groups);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput)
+pub mod list_permission_groups_by_user_output {
+
+    /// A builder for [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) permission_groups:
+            std::option::Option<std::vec::Vec<crate::model::PermissionGroupByUser>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `permission_groups`.
+        ///
+        /// To override the contents of this collection use [`set_permission_groups`](Self::set_permission_groups).
+        ///
+        /// <p>A list of returned permission groups.</p>
+        pub fn permission_groups(mut self, input: crate::model::PermissionGroupByUser) -> Self {
+            let mut v = self.permission_groups.unwrap_or_default();
+            v.push(input);
+            self.permission_groups = Some(v);
+            self
+        }
+        /// <p>A list of returned permission groups.</p>
+        pub fn set_permission_groups(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::PermissionGroupByUser>>,
+        ) -> Self {
+            self.permission_groups = input;
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput)
+        pub fn build(self) -> crate::output::ListPermissionGroupsByUserOutput {
+            crate::output::ListPermissionGroupsByUserOutput {
+                permission_groups: self.permission_groups,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListPermissionGroupsByUserOutput {
+    /// Creates a new builder-style object to manufacture [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput)
+    pub fn builder() -> crate::output::list_permission_groups_by_user_output::Builder {
+        crate::output::list_permission_groups_by_user_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPermissionGroupsOutput {
     /// <p>A list of all the permission groups.</p>
     pub permission_groups: std::option::Option<std::vec::Vec<crate::model::PermissionGroup>>,
@@ -424,6 +597,7 @@ impl std::fmt::Debug for ListPermissionGroupsOutput {
 }
 /// See [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput)
 pub mod list_permission_groups_output {
+
     /// A builder for [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -507,6 +681,7 @@ impl std::fmt::Debug for ListDataViewsOutput {
 }
 /// See [`ListDataViewsOutput`](crate::output::ListDataViewsOutput)
 pub mod list_data_views_output {
+
     /// A builder for [`ListDataViewsOutput`](crate::output::ListDataViewsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -589,6 +764,7 @@ impl std::fmt::Debug for ListDatasetsOutput {
 }
 /// See [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
 pub mod list_datasets_output {
+
     /// A builder for [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -671,6 +847,7 @@ impl std::fmt::Debug for ListChangesetsOutput {
 }
 /// See [`ListChangesetsOutput`](crate::output::ListChangesetsOutput)
 pub mod list_changesets_output {
+
     /// A builder for [`ListChangesetsOutput`](crate::output::ListChangesetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -760,6 +937,7 @@ impl std::fmt::Debug for GetWorkingLocationOutput {
 }
 /// See [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput)
 pub mod get_working_location_output {
+
     /// A builder for [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -840,7 +1018,7 @@ pub struct GetUserOutput {
     /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
     /// </ul>
     /// <ul>
-    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
     /// </ul>
     pub r#type: std::option::Option<crate::model::UserType>,
     /// <p>Indicates whether the user can use the <code>GetProgrammaticAccessCredentials</code> API to obtain credentials that can then be used to access other FinSpace Data API operations. </p>
@@ -893,7 +1071,7 @@ impl GetUserOutput {
     /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
     /// </ul>
     /// <ul>
-    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
     /// </ul>
     pub fn r#type(&self) -> std::option::Option<&crate::model::UserType> {
         self.r#type.as_ref()
@@ -952,6 +1130,7 @@ impl std::fmt::Debug for GetUserOutput {
 }
 /// See [`GetUserOutput`](crate::output::GetUserOutput)
 pub mod get_user_output {
+
     /// A builder for [`GetUserOutput`](crate::output::GetUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1039,7 +1218,7 @@ pub mod get_user_output {
         /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
         /// </ul>
         /// <ul>
-        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
         /// </ul>
         pub fn r#type(mut self, input: crate::model::UserType) -> Self {
             self.r#type = Some(input);
@@ -1050,7 +1229,7 @@ pub mod get_user_output {
         /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
         /// </ul>
         /// <ul>
-        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
         /// </ul>
         pub fn set_type(mut self, input: std::option::Option<crate::model::UserType>) -> Self {
             self.r#type = input;
@@ -1196,6 +1375,7 @@ impl std::fmt::Debug for GetProgrammaticAccessCredentialsOutput {
 }
 /// See [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput)
 pub mod get_programmatic_access_credentials_output {
+
     /// A builder for [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1240,6 +1420,64 @@ impl GetProgrammaticAccessCredentialsOutput {
     /// Creates a new builder-style object to manufacture [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput)
     pub fn builder() -> crate::output::get_programmatic_access_credentials_output::Builder {
         crate::output::get_programmatic_access_credentials_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetPermissionGroupOutput {
+    /// <p>The structure for a permission group.</p>
+    pub permission_group: std::option::Option<crate::model::PermissionGroup>,
+}
+impl GetPermissionGroupOutput {
+    /// <p>The structure for a permission group.</p>
+    pub fn permission_group(&self) -> std::option::Option<&crate::model::PermissionGroup> {
+        self.permission_group.as_ref()
+    }
+}
+impl std::fmt::Debug for GetPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetPermissionGroupOutput");
+        formatter.field("permission_group", &self.permission_group);
+        formatter.finish()
+    }
+}
+/// See [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput)
+pub mod get_permission_group_output {
+
+    /// A builder for [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) permission_group: std::option::Option<crate::model::PermissionGroup>,
+    }
+    impl Builder {
+        /// <p>The structure for a permission group.</p>
+        pub fn permission_group(mut self, input: crate::model::PermissionGroup) -> Self {
+            self.permission_group = Some(input);
+            self
+        }
+        /// <p>The structure for a permission group.</p>
+        pub fn set_permission_group(
+            mut self,
+            input: std::option::Option<crate::model::PermissionGroup>,
+        ) -> Self {
+            self.permission_group = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput)
+        pub fn build(self) -> crate::output::GetPermissionGroupOutput {
+            crate::output::GetPermissionGroupOutput {
+                permission_group: self.permission_group,
+            }
+        }
+    }
+}
+impl GetPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput)
+    pub fn builder() -> crate::output::get_permission_group_output::Builder {
+        crate::output::get_permission_group_output::Builder::default()
     }
 }
 
@@ -1364,6 +1602,7 @@ impl std::fmt::Debug for GetDataViewOutput {
 }
 /// See [`GetDataViewOutput`](crate::output::GetDataViewOutput)
 pub mod get_data_view_output {
+
     /// A builder for [`GetDataViewOutput`](crate::output::GetDataViewOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1687,6 +1926,7 @@ impl std::fmt::Debug for GetDatasetOutput {
 }
 /// See [`GetDatasetOutput`](crate::output::GetDatasetOutput)
 pub mod get_dataset_output {
+
     /// A builder for [`GetDatasetOutput`](crate::output::GetDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1983,6 +2223,7 @@ impl std::fmt::Debug for GetChangesetOutput {
 }
 /// See [`GetChangesetOutput`](crate::output::GetChangesetOutput)
 pub mod get_changeset_output {
+
     /// A builder for [`GetChangesetOutput`](crate::output::GetChangesetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2243,6 +2484,7 @@ impl std::fmt::Debug for EnableUserOutput {
 }
 /// See [`EnableUserOutput`](crate::output::EnableUserOutput)
 pub mod enable_user_output {
+
     /// A builder for [`EnableUserOutput`](crate::output::EnableUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2278,6 +2520,61 @@ impl EnableUserOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DisassociateUserFromPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub status_code: i32,
+}
+impl DisassociateUserFromPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub fn status_code(&self) -> i32 {
+        self.status_code
+    }
+}
+impl std::fmt::Debug for DisassociateUserFromPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DisassociateUserFromPermissionGroupOutput");
+        formatter.field("status_code", &self.status_code);
+        formatter.finish()
+    }
+}
+/// See [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput)
+pub mod disassociate_user_from_permission_group_output {
+
+    /// A builder for [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) status_code: std::option::Option<i32>,
+    }
+    impl Builder {
+        /// <p>The returned status code of the response.</p>
+        pub fn status_code(mut self, input: i32) -> Self {
+            self.status_code = Some(input);
+            self
+        }
+        /// <p>The returned status code of the response.</p>
+        pub fn set_status_code(mut self, input: std::option::Option<i32>) -> Self {
+            self.status_code = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput)
+        pub fn build(self) -> crate::output::DisassociateUserFromPermissionGroupOutput {
+            crate::output::DisassociateUserFromPermissionGroupOutput {
+                status_code: self.status_code.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl DisassociateUserFromPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput)
+    pub fn builder() -> crate::output::disassociate_user_from_permission_group_output::Builder {
+        crate::output::disassociate_user_from_permission_group_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisableUserOutput {
     /// <p>The unique identifier for the disabled user account.</p>
     pub user_id: std::option::Option<std::string::String>,
@@ -2297,6 +2594,7 @@ impl std::fmt::Debug for DisableUserOutput {
 }
 /// See [`DisableUserOutput`](crate::output::DisableUserOutput)
 pub mod disable_user_output {
+
     /// A builder for [`DisableUserOutput`](crate::output::DisableUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2351,6 +2649,7 @@ impl std::fmt::Debug for DeletePermissionGroupOutput {
 }
 /// See [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput)
 pub mod delete_permission_group_output {
+
     /// A builder for [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2408,6 +2707,7 @@ impl std::fmt::Debug for DeleteDatasetOutput {
 }
 /// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
 pub mod delete_dataset_output {
+
     /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2462,6 +2762,7 @@ impl std::fmt::Debug for CreateUserOutput {
 }
 /// See [`CreateUserOutput`](crate::output::CreateUserOutput)
 pub mod create_user_output {
+
     /// A builder for [`CreateUserOutput`](crate::output::CreateUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2516,6 +2817,7 @@ impl std::fmt::Debug for CreatePermissionGroupOutput {
 }
 /// See [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput)
 pub mod create_permission_group_output {
+
     /// A builder for [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2580,6 +2882,7 @@ impl std::fmt::Debug for CreateDataViewOutput {
 }
 /// See [`CreateDataViewOutput`](crate::output::CreateDataViewOutput)
 pub mod create_data_view_output {
+
     /// A builder for [`CreateDataViewOutput`](crate::output::CreateDataViewOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2646,6 +2949,7 @@ impl std::fmt::Debug for CreateDatasetOutput {
 }
 /// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
 pub mod create_dataset_output {
+
     /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2707,6 +3011,7 @@ impl std::fmt::Debug for CreateChangesetOutput {
 }
 /// See [`CreateChangesetOutput`](crate::output::CreateChangesetOutput)
 pub mod create_changeset_output {
+
     /// A builder for [`CreateChangesetOutput`](crate::output::CreateChangesetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2748,5 +3053,60 @@ impl CreateChangesetOutput {
     /// Creates a new builder-style object to manufacture [`CreateChangesetOutput`](crate::output::CreateChangesetOutput)
     pub fn builder() -> crate::output::create_changeset_output::Builder {
         crate::output::create_changeset_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AssociateUserToPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub status_code: i32,
+}
+impl AssociateUserToPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub fn status_code(&self) -> i32 {
+        self.status_code
+    }
+}
+impl std::fmt::Debug for AssociateUserToPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AssociateUserToPermissionGroupOutput");
+        formatter.field("status_code", &self.status_code);
+        formatter.finish()
+    }
+}
+/// See [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput)
+pub mod associate_user_to_permission_group_output {
+
+    /// A builder for [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) status_code: std::option::Option<i32>,
+    }
+    impl Builder {
+        /// <p>The returned status code of the response.</p>
+        pub fn status_code(mut self, input: i32) -> Self {
+            self.status_code = Some(input);
+            self
+        }
+        /// <p>The returned status code of the response.</p>
+        pub fn set_status_code(mut self, input: std::option::Option<i32>) -> Self {
+            self.status_code = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput)
+        pub fn build(self) -> crate::output::AssociateUserToPermissionGroupOutput {
+            crate::output::AssociateUserToPermissionGroupOutput {
+                status_code: self.status_code.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl AssociateUserToPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput)
+    pub fn builder() -> crate::output::associate_user_to_permission_group_output::Builder {
+        crate::output::associate_user_to_permission_group_output::Builder::default()
     }
 }

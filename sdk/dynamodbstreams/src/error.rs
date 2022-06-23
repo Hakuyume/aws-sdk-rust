@@ -117,10 +117,10 @@ pub enum GetRecordsErrorKind {
     ExpiredIteratorException(crate::error::ExpiredIteratorException),
     /// <p>An error occurred on the server side.</p>
     InternalServerError(crate::error::InternalServerError),
-    /// <p>There is no limit to the number of daily on-demand backups that can be taken.</p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>.</p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation tried to access a nonexistent table or index. The resource might not be specified correctly, or its status might not be <code>ACTIVE</code>.</p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -489,6 +489,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -553,6 +554,7 @@ impl std::fmt::Display for InternalServerError {
 impl std::error::Error for InternalServerError {}
 /// See [`InternalServerError`](crate::error::InternalServerError)
 pub mod internal_server_error {
+
     /// A builder for [`InternalServerError`](crate::error::InternalServerError)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -622,6 +624,7 @@ impl std::fmt::Display for TrimmedDataAccessException {
 impl std::error::Error for TrimmedDataAccessException {}
 /// See [`TrimmedDataAccessException`](crate::error::TrimmedDataAccessException)
 pub mod trimmed_data_access_exception {
+
     /// A builder for [`TrimmedDataAccessException`](crate::error::TrimmedDataAccessException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -654,10 +657,10 @@ impl TrimmedDataAccessException {
     }
 }
 
-/// <p>There is no limit to the number of daily on-demand backups that can be taken.</p>
-/// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>.</p>
-/// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-/// <p>There is a soft account quota of 256 tables.</p>
+/// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
+/// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+/// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+/// <p>There is a soft account quota of 2,500 tables.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LimitExceededException {
@@ -689,6 +692,7 @@ impl std::fmt::Display for LimitExceededException {
 impl std::error::Error for LimitExceededException {}
 /// See [`LimitExceededException`](crate::error::LimitExceededException)
 pub mod limit_exceeded_exception {
+
     /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -753,6 +757,7 @@ impl std::fmt::Display for ExpiredIteratorException {
 impl std::error::Error for ExpiredIteratorException {}
 /// See [`ExpiredIteratorException`](crate::error::ExpiredIteratorException)
 pub mod expired_iterator_exception {
+
     /// A builder for [`ExpiredIteratorException`](crate::error::ExpiredIteratorException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

@@ -871,6 +871,123 @@ impl std::error::Error for GetCatalogItemError {
     }
 }
 
+/// Error type for the `GetConnection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct GetConnectionError {
+    /// Kind of error that occurred.
+    pub kind: GetConnectionErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `GetConnection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum GetConnectionErrorKind {
+    /// <p>You do not have permission to perform this operation.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An internal error has occurred.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>The specified request is not valid.</p>
+    NotFoundException(crate::error::NotFoundException),
+    /// <p>A parameter is not valid.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for GetConnectionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            GetConnectionErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            GetConnectionErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            GetConnectionErrorKind::NotFoundException(_inner) => _inner.fmt(f),
+            GetConnectionErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            GetConnectionErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for GetConnectionError {
+    fn code(&self) -> Option<&str> {
+        GetConnectionError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl GetConnectionError {
+    /// Creates a new `GetConnectionError`.
+    pub fn new(kind: GetConnectionErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `GetConnectionError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: GetConnectionErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `GetConnectionError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: GetConnectionErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `GetConnectionErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(&self.kind, GetConnectionErrorKind::AccessDeniedException(_))
+    }
+    /// Returns `true` if the error kind is `GetConnectionErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetConnectionErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GetConnectionErrorKind::NotFoundException`.
+    pub fn is_not_found_exception(&self) -> bool {
+        matches!(&self.kind, GetConnectionErrorKind::NotFoundException(_))
+    }
+    /// Returns `true` if the error kind is `GetConnectionErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(&self.kind, GetConnectionErrorKind::ValidationException(_))
+    }
+}
+impl std::error::Error for GetConnectionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            GetConnectionErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            GetConnectionErrorKind::InternalServerException(_inner) => Some(_inner),
+            GetConnectionErrorKind::NotFoundException(_inner) => Some(_inner),
+            GetConnectionErrorKind::ValidationException(_inner) => Some(_inner),
+            GetConnectionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `GetOrder` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -1451,6 +1568,120 @@ impl std::error::Error for GetSiteAddressError {
     }
 }
 
+/// Error type for the `ListAssets` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListAssetsError {
+    /// Kind of error that occurred.
+    pub kind: ListAssetsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListAssets` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListAssetsErrorKind {
+    /// <p>You do not have permission to perform this operation.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An internal error has occurred.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>The specified request is not valid.</p>
+    NotFoundException(crate::error::NotFoundException),
+    /// <p>A parameter is not valid.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListAssetsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListAssetsErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            ListAssetsErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            ListAssetsErrorKind::NotFoundException(_inner) => _inner.fmt(f),
+            ListAssetsErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            ListAssetsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListAssetsError {
+    fn code(&self) -> Option<&str> {
+        ListAssetsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListAssetsError {
+    /// Creates a new `ListAssetsError`.
+    pub fn new(kind: ListAssetsErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListAssetsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListAssetsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListAssetsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListAssetsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ListAssetsErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(&self.kind, ListAssetsErrorKind::AccessDeniedException(_))
+    }
+    /// Returns `true` if the error kind is `ListAssetsErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(&self.kind, ListAssetsErrorKind::InternalServerException(_))
+    }
+    /// Returns `true` if the error kind is `ListAssetsErrorKind::NotFoundException`.
+    pub fn is_not_found_exception(&self) -> bool {
+        matches!(&self.kind, ListAssetsErrorKind::NotFoundException(_))
+    }
+    /// Returns `true` if the error kind is `ListAssetsErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(&self.kind, ListAssetsErrorKind::ValidationException(_))
+    }
+}
+impl std::error::Error for ListAssetsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListAssetsErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            ListAssetsErrorKind::InternalServerException(_inner) => Some(_inner),
+            ListAssetsErrorKind::NotFoundException(_inner) => Some(_inner),
+            ListAssetsErrorKind::ValidationException(_inner) => Some(_inner),
+            ListAssetsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `ListCatalogItems` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -2003,6 +2234,126 @@ impl std::error::Error for ListTagsForResourceError {
             ListTagsForResourceErrorKind::NotFoundException(_inner) => Some(_inner),
             ListTagsForResourceErrorKind::ValidationException(_inner) => Some(_inner),
             ListTagsForResourceErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `StartConnection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct StartConnectionError {
+    /// Kind of error that occurred.
+    pub kind: StartConnectionErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `StartConnection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum StartConnectionErrorKind {
+    /// <p>You do not have permission to perform this operation.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An internal error has occurred.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>The specified request is not valid.</p>
+    NotFoundException(crate::error::NotFoundException),
+    /// <p>A parameter is not valid.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for StartConnectionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            StartConnectionErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            StartConnectionErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            StartConnectionErrorKind::NotFoundException(_inner) => _inner.fmt(f),
+            StartConnectionErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            StartConnectionErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for StartConnectionError {
+    fn code(&self) -> Option<&str> {
+        StartConnectionError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl StartConnectionError {
+    /// Creates a new `StartConnectionError`.
+    pub fn new(kind: StartConnectionErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `StartConnectionError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: StartConnectionErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `StartConnectionError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: StartConnectionErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `StartConnectionErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartConnectionErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `StartConnectionErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            StartConnectionErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `StartConnectionErrorKind::NotFoundException`.
+    pub fn is_not_found_exception(&self) -> bool {
+        matches!(&self.kind, StartConnectionErrorKind::NotFoundException(_))
+    }
+    /// Returns `true` if the error kind is `StartConnectionErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(&self.kind, StartConnectionErrorKind::ValidationException(_))
+    }
+}
+impl std::error::Error for StartConnectionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            StartConnectionErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            StartConnectionErrorKind::InternalServerException(_inner) => Some(_inner),
+            StartConnectionErrorKind::NotFoundException(_inner) => Some(_inner),
+            StartConnectionErrorKind::ValidationException(_inner) => Some(_inner),
+            StartConnectionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -2780,6 +3131,7 @@ impl std::fmt::Display for ValidationException {
 impl std::error::Error for ValidationException {}
 /// See [`ValidationException`](crate::error::ValidationException)
 pub mod validation_exception {
+
     /// A builder for [`ValidationException`](crate::error::ValidationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2844,6 +3196,7 @@ impl std::fmt::Display for NotFoundException {
 impl std::error::Error for NotFoundException {}
 /// See [`NotFoundException`](crate::error::NotFoundException)
 pub mod not_found_exception {
+
     /// A builder for [`NotFoundException`](crate::error::NotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2908,6 +3261,7 @@ impl std::fmt::Display for InternalServerException {
 impl std::error::Error for InternalServerException {}
 /// See [`InternalServerException`](crate::error::InternalServerException)
 pub mod internal_server_exception {
+
     /// A builder for [`InternalServerException`](crate::error::InternalServerException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2988,6 +3342,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3079,6 +3434,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3143,6 +3499,7 @@ impl std::fmt::Display for ServiceQuotaExceededException {
 impl std::error::Error for ServiceQuotaExceededException {}
 /// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
 pub mod service_quota_exceeded_exception {
+
     /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

@@ -14,7 +14,7 @@ pub struct CompareFacesError {
 pub enum CompareFacesErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -181,7 +181,7 @@ pub enum CreateCollectionErrorKind {
     /// <p>A resource with the specified ID already exists.</p>
     ResourceAlreadyExistsException(crate::error::ResourceAlreadyExistsException),
     /// <p></p>
-    /// <p>The size of the collection exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
     /// <p>Amazon Rekognition is temporarily unable to process the request. Try your call again.</p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -671,7 +671,7 @@ pub enum CreateProjectVersionErrorKind {
     /// <p>The resource specified in the request cannot be found.</p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
     /// <p></p>
-    /// <p>The size of the collection exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
     /// <p>Amazon Rekognition is temporarily unable to process the request. Try your call again.</p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -855,7 +855,7 @@ pub enum CreateStreamProcessorErrorKind {
     /// <p>The specified resource is already being used.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
     /// <p></p>
-    /// <p>The size of the collection exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
     /// <p>Amazon Rekognition is temporarily unable to process the request. Try your call again.</p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -2716,7 +2716,7 @@ pub struct DetectCustomLabelsError {
 pub enum DetectCustomLabelsErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -2923,7 +2923,7 @@ pub struct DetectFacesError {
 pub enum DetectFacesErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -3081,7 +3081,7 @@ pub struct DetectLabelsError {
 pub enum DetectLabelsErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -3241,7 +3241,7 @@ pub enum DetectModerationLabelsErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p>The number of in-progress human reviews you have has exceeded the number allowed.</p>
     HumanLoopQuotaExceededException(crate::error::HumanLoopQuotaExceededException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -3428,7 +3428,7 @@ pub struct DetectProtectiveEquipmentError {
 pub enum DetectProtectiveEquipmentErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -3604,7 +3604,7 @@ pub struct DetectTextError {
 pub enum DetectTextErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -5369,7 +5369,7 @@ pub struct IndexFacesError {
 pub enum IndexFacesErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -5384,7 +5384,7 @@ pub enum IndexFacesErrorKind {
     /// <p>The resource specified in the request cannot be found.</p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
     /// <p></p>
-    /// <p>The size of the collection exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
     /// <p>Amazon Rekognition is temporarily unable to process the request. Try your call again.</p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -6522,7 +6522,7 @@ pub struct RecognizeCelebritiesError {
 pub enum RecognizeCelebritiesErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -6835,7 +6835,7 @@ pub struct SearchFacesByImageError {
 pub enum SearchFacesByImageErrorKind {
     /// <p>You are not authorized to perform the action.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ImageTooLargeException(crate::error::ImageTooLargeException),
     /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
     InternalServerError(crate::error::InternalServerError),
@@ -9205,7 +9205,7 @@ pub enum TagResourceErrorKind {
     /// <p>The resource specified in the request cannot be found.</p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
     /// <p></p>
-    /// <p>The size of the collection exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+    /// <p>The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
     ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
     /// <p>Amazon Rekognition is temporarily unable to process the request. Try your call again.</p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -9645,6 +9645,158 @@ impl std::error::Error for UpdateDatasetEntriesError {
     }
 }
 
+/// Error type for the `UpdateStreamProcessor` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct UpdateStreamProcessorError {
+    /// Kind of error that occurred.
+    pub kind: UpdateStreamProcessorErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `UpdateStreamProcessor` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdateStreamProcessorErrorKind {
+    /// <p>You are not authorized to perform the action.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>Amazon Rekognition experienced a service issue. Try your call again.</p>
+    InternalServerError(crate::error::InternalServerError),
+    /// <p>Input parameter violated a constraint. Validate your parameter before calling the API operation again.</p>
+    InvalidParameterException(crate::error::InvalidParameterException),
+    /// <p>The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon Rekognition.</p>
+    ProvisionedThroughputExceededException(crate::error::ProvisionedThroughputExceededException),
+    /// <p>The resource specified in the request cannot be found.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>Amazon Rekognition is temporarily unable to process the request. Try your call again.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdateStreamProcessorError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            UpdateStreamProcessorErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            UpdateStreamProcessorErrorKind::InternalServerError(_inner) => _inner.fmt(f),
+            UpdateStreamProcessorErrorKind::InvalidParameterException(_inner) => _inner.fmt(f),
+            UpdateStreamProcessorErrorKind::ProvisionedThroughputExceededException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateStreamProcessorErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            UpdateStreamProcessorErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            UpdateStreamProcessorErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for UpdateStreamProcessorError {
+    fn code(&self) -> Option<&str> {
+        UpdateStreamProcessorError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl UpdateStreamProcessorError {
+    /// Creates a new `UpdateStreamProcessorError`.
+    pub fn new(kind: UpdateStreamProcessorErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `UpdateStreamProcessorError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdateStreamProcessorErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `UpdateStreamProcessorError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdateStreamProcessorErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdateStreamProcessorErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateStreamProcessorErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateStreamProcessorErrorKind::InternalServerError`.
+    pub fn is_internal_server_error(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateStreamProcessorErrorKind::InternalServerError(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateStreamProcessorErrorKind::InvalidParameterException`.
+    pub fn is_invalid_parameter_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateStreamProcessorErrorKind::InvalidParameterException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateStreamProcessorErrorKind::ProvisionedThroughputExceededException`.
+    pub fn is_provisioned_throughput_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateStreamProcessorErrorKind::ProvisionedThroughputExceededException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateStreamProcessorErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateStreamProcessorErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateStreamProcessorErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateStreamProcessorErrorKind::ThrottlingException(_)
+        )
+    }
+}
+impl std::error::Error for UpdateStreamProcessorError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdateStreamProcessorErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            UpdateStreamProcessorErrorKind::InternalServerError(_inner) => Some(_inner),
+            UpdateStreamProcessorErrorKind::InvalidParameterException(_inner) => Some(_inner),
+            UpdateStreamProcessorErrorKind::ProvisionedThroughputExceededException(_inner) => {
+                Some(_inner)
+            }
+            UpdateStreamProcessorErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            UpdateStreamProcessorErrorKind::ThrottlingException(_inner) => Some(_inner),
+            UpdateStreamProcessorErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// <p>Amazon Rekognition is temporarily unable to process the request. Try your call again.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -9693,6 +9845,7 @@ impl std::fmt::Display for ThrottlingException {
 impl std::error::Error for ThrottlingException {}
 /// See [`ThrottlingException`](crate::error::ThrottlingException)
 pub mod throttling_exception {
+
     /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9797,6 +9950,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9853,110 +10007,6 @@ impl ResourceNotFoundException {
     }
 }
 
-/// <p>The specified resource is already being used.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct ResourceInUseException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-    #[allow(missing_docs)] // documentation missing in model
-    pub code: std::option::Option<std::string::String>,
-    /// <p>A universally unique identifier (UUID) for the request.</p>
-    pub logref: std::option::Option<std::string::String>,
-}
-impl ResourceInUseException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub fn code(&self) -> std::option::Option<&str> {
-        self.code.as_deref()
-    }
-    /// <p>A universally unique identifier (UUID) for the request.</p>
-    pub fn logref(&self) -> std::option::Option<&str> {
-        self.logref.as_deref()
-    }
-}
-impl std::fmt::Debug for ResourceInUseException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("ResourceInUseException");
-        formatter.field("message", &self.message);
-        formatter.field("code", &self.code);
-        formatter.field("logref", &self.logref);
-        formatter.finish()
-    }
-}
-impl ResourceInUseException {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for ResourceInUseException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "ResourceInUseException")?;
-        if let Some(inner_3) = &self.message {
-            write!(f, ": {}", inner_3)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for ResourceInUseException {}
-/// See [`ResourceInUseException`](crate::error::ResourceInUseException)
-pub mod resource_in_use_exception {
-    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-        pub(crate) code: std::option::Option<std::string::String>,
-        pub(crate) logref: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn code(mut self, input: impl Into<std::string::String>) -> Self {
-            self.code = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_code(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.code = input;
-            self
-        }
-        /// <p>A universally unique identifier (UUID) for the request.</p>
-        pub fn logref(mut self, input: impl Into<std::string::String>) -> Self {
-            self.logref = Some(input.into());
-            self
-        }
-        /// <p>A universally unique identifier (UUID) for the request.</p>
-        pub fn set_logref(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.logref = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException)
-        pub fn build(self) -> crate::error::ResourceInUseException {
-            crate::error::ResourceInUseException {
-                message: self.message,
-                code: self.code,
-                logref: self.logref,
-            }
-        }
-    }
-}
-impl ResourceInUseException {
-    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException)
-    pub fn builder() -> crate::error::resource_in_use_exception::Builder {
-        crate::error::resource_in_use_exception::Builder::default()
-    }
-}
-
 /// <p>The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon Rekognition.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -9996,8 +10046,8 @@ impl ProvisionedThroughputExceededException {
 impl std::fmt::Display for ProvisionedThroughputExceededException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "ProvisionedThroughputExceededException")?;
-        if let Some(inner_4) = &self.message {
-            write!(f, ": {}", inner_4)?;
+        if let Some(inner_3) = &self.message {
+            write!(f, ": {}", inner_3)?;
         }
         Ok(())
     }
@@ -10005,6 +10055,7 @@ impl std::fmt::Display for ProvisionedThroughputExceededException {
 impl std::error::Error for ProvisionedThroughputExceededException {}
 /// See [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException)
 pub mod provisioned_throughput_exceeded_exception {
+
     /// A builder for [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10061,110 +10112,6 @@ impl ProvisionedThroughputExceededException {
     }
 }
 
-/// <p>An Amazon Rekognition service limit was exceeded. For example, if you start too many Amazon Rekognition Video jobs concurrently, calls to start operations (<code>StartLabelDetection</code>, for example) will raise a <code>LimitExceededException</code> exception (HTTP status code: 400) until the number of concurrently running jobs is below the Amazon Rekognition service limit. </p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct LimitExceededException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-    #[allow(missing_docs)] // documentation missing in model
-    pub code: std::option::Option<std::string::String>,
-    /// <p>A universally unique identifier (UUID) for the request.</p>
-    pub logref: std::option::Option<std::string::String>,
-}
-impl LimitExceededException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub fn code(&self) -> std::option::Option<&str> {
-        self.code.as_deref()
-    }
-    /// <p>A universally unique identifier (UUID) for the request.</p>
-    pub fn logref(&self) -> std::option::Option<&str> {
-        self.logref.as_deref()
-    }
-}
-impl std::fmt::Debug for LimitExceededException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("LimitExceededException");
-        formatter.field("message", &self.message);
-        formatter.field("code", &self.code);
-        formatter.field("logref", &self.logref);
-        formatter.finish()
-    }
-}
-impl LimitExceededException {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for LimitExceededException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "LimitExceededException")?;
-        if let Some(inner_5) = &self.message {
-            write!(f, ": {}", inner_5)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for LimitExceededException {}
-/// See [`LimitExceededException`](crate::error::LimitExceededException)
-pub mod limit_exceeded_exception {
-    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-        pub(crate) code: std::option::Option<std::string::String>,
-        pub(crate) logref: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn code(mut self, input: impl Into<std::string::String>) -> Self {
-            self.code = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_code(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.code = input;
-            self
-        }
-        /// <p>A universally unique identifier (UUID) for the request.</p>
-        pub fn logref(mut self, input: impl Into<std::string::String>) -> Self {
-            self.logref = Some(input.into());
-            self
-        }
-        /// <p>A universally unique identifier (UUID) for the request.</p>
-        pub fn set_logref(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.logref = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException)
-        pub fn build(self) -> crate::error::LimitExceededException {
-            crate::error::LimitExceededException {
-                message: self.message,
-                code: self.code,
-                logref: self.logref,
-            }
-        }
-    }
-}
-impl LimitExceededException {
-    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException)
-    pub fn builder() -> crate::error::limit_exceeded_exception::Builder {
-        crate::error::limit_exceeded_exception::Builder::default()
-    }
-}
-
 /// <p>Input parameter violated a constraint. Validate your parameter before calling the API operation again.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -10204,8 +10151,8 @@ impl InvalidParameterException {
 impl std::fmt::Display for InvalidParameterException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidParameterException")?;
-        if let Some(inner_6) = &self.message {
-            write!(f, ": {}", inner_6)?;
+        if let Some(inner_4) = &self.message {
+            write!(f, ": {}", inner_4)?;
         }
         Ok(())
     }
@@ -10213,6 +10160,7 @@ impl std::fmt::Display for InvalidParameterException {
 impl std::error::Error for InvalidParameterException {}
 /// See [`InvalidParameterException`](crate::error::InvalidParameterException)
 pub mod invalid_parameter_exception {
+
     /// A builder for [`InvalidParameterException`](crate::error::InvalidParameterException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10308,8 +10256,8 @@ impl InternalServerError {
 impl std::fmt::Display for InternalServerError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InternalServerError")?;
-        if let Some(inner_7) = &self.message {
-            write!(f, ": {}", inner_7)?;
+        if let Some(inner_5) = &self.message {
+            write!(f, ": {}", inner_5)?;
         }
         Ok(())
     }
@@ -10317,6 +10265,7 @@ impl std::fmt::Display for InternalServerError {
 impl std::error::Error for InternalServerError {}
 /// See [`InternalServerError`](crate::error::InternalServerError)
 pub mod internal_server_error {
+
     /// A builder for [`InternalServerError`](crate::error::InternalServerError)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10412,8 +10361,8 @@ impl AccessDeniedException {
 impl std::fmt::Display for AccessDeniedException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "AccessDeniedException")?;
-        if let Some(inner_8) = &self.message {
-            write!(f, ": {}", inner_8)?;
+        if let Some(inner_6) = &self.message {
+            write!(f, ": {}", inner_6)?;
         }
         Ok(())
     }
@@ -10421,6 +10370,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10477,8 +10427,218 @@ impl AccessDeniedException {
     }
 }
 
+/// <p>The specified resource is already being used.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ResourceInUseException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+    #[allow(missing_docs)] // documentation missing in model
+    pub code: std::option::Option<std::string::String>,
+    /// <p>A universally unique identifier (UUID) for the request.</p>
+    pub logref: std::option::Option<std::string::String>,
+}
+impl ResourceInUseException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn code(&self) -> std::option::Option<&str> {
+        self.code.as_deref()
+    }
+    /// <p>A universally unique identifier (UUID) for the request.</p>
+    pub fn logref(&self) -> std::option::Option<&str> {
+        self.logref.as_deref()
+    }
+}
+impl std::fmt::Debug for ResourceInUseException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ResourceInUseException");
+        formatter.field("message", &self.message);
+        formatter.field("code", &self.code);
+        formatter.field("logref", &self.logref);
+        formatter.finish()
+    }
+}
+impl ResourceInUseException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for ResourceInUseException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "ResourceInUseException")?;
+        if let Some(inner_7) = &self.message {
+            write!(f, ": {}", inner_7)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for ResourceInUseException {}
+/// See [`ResourceInUseException`](crate::error::ResourceInUseException)
+pub mod resource_in_use_exception {
+
+    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+        pub(crate) code: std::option::Option<std::string::String>,
+        pub(crate) logref: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn code(mut self, input: impl Into<std::string::String>) -> Self {
+            self.code = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_code(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.code = input;
+            self
+        }
+        /// <p>A universally unique identifier (UUID) for the request.</p>
+        pub fn logref(mut self, input: impl Into<std::string::String>) -> Self {
+            self.logref = Some(input.into());
+            self
+        }
+        /// <p>A universally unique identifier (UUID) for the request.</p>
+        pub fn set_logref(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.logref = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException)
+        pub fn build(self) -> crate::error::ResourceInUseException {
+            crate::error::ResourceInUseException {
+                message: self.message,
+                code: self.code,
+                logref: self.logref,
+            }
+        }
+    }
+}
+impl ResourceInUseException {
+    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException)
+    pub fn builder() -> crate::error::resource_in_use_exception::Builder {
+        crate::error::resource_in_use_exception::Builder::default()
+    }
+}
+
+/// <p>An Amazon Rekognition service limit was exceeded. For example, if you start too many Amazon Rekognition Video jobs concurrently, calls to start operations (<code>StartLabelDetection</code>, for example) will raise a <code>LimitExceededException</code> exception (HTTP status code: 400) until the number of concurrently running jobs is below the Amazon Rekognition service limit. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct LimitExceededException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+    #[allow(missing_docs)] // documentation missing in model
+    pub code: std::option::Option<std::string::String>,
+    /// <p>A universally unique identifier (UUID) for the request.</p>
+    pub logref: std::option::Option<std::string::String>,
+}
+impl LimitExceededException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn code(&self) -> std::option::Option<&str> {
+        self.code.as_deref()
+    }
+    /// <p>A universally unique identifier (UUID) for the request.</p>
+    pub fn logref(&self) -> std::option::Option<&str> {
+        self.logref.as_deref()
+    }
+}
+impl std::fmt::Debug for LimitExceededException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("LimitExceededException");
+        formatter.field("message", &self.message);
+        formatter.field("code", &self.code);
+        formatter.field("logref", &self.logref);
+        formatter.finish()
+    }
+}
+impl LimitExceededException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for LimitExceededException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "LimitExceededException")?;
+        if let Some(inner_8) = &self.message {
+            write!(f, ": {}", inner_8)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for LimitExceededException {}
+/// See [`LimitExceededException`](crate::error::LimitExceededException)
+pub mod limit_exceeded_exception {
+
+    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+        pub(crate) code: std::option::Option<std::string::String>,
+        pub(crate) logref: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn code(mut self, input: impl Into<std::string::String>) -> Self {
+            self.code = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_code(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.code = input;
+            self
+        }
+        /// <p>A universally unique identifier (UUID) for the request.</p>
+        pub fn logref(mut self, input: impl Into<std::string::String>) -> Self {
+            self.logref = Some(input.into());
+            self
+        }
+        /// <p>A universally unique identifier (UUID) for the request.</p>
+        pub fn set_logref(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.logref = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException)
+        pub fn build(self) -> crate::error::LimitExceededException {
+            crate::error::LimitExceededException {
+                message: self.message,
+                code: self.code,
+                logref: self.logref,
+            }
+        }
+    }
+}
+impl LimitExceededException {
+    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException)
+    pub fn builder() -> crate::error::limit_exceeded_exception::Builder {
+        crate::error::limit_exceeded_exception::Builder::default()
+    }
+}
+
 /// <p></p>
-/// <p>The size of the collection exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+/// <p>The size of the collection exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServiceQuotaExceededException {
@@ -10526,6 +10686,7 @@ impl std::fmt::Display for ServiceQuotaExceededException {
 impl std::error::Error for ServiceQuotaExceededException {}
 /// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
 pub mod service_quota_exceeded_exception {
+
     /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10630,6 +10791,7 @@ impl std::fmt::Display for VideoTooLargeException {
 impl std::error::Error for VideoTooLargeException {}
 /// See [`VideoTooLargeException`](crate::error::VideoTooLargeException)
 pub mod video_too_large_exception {
+
     /// A builder for [`VideoTooLargeException`](crate::error::VideoTooLargeException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10734,6 +10896,7 @@ impl std::fmt::Display for InvalidS3ObjectException {
 impl std::error::Error for InvalidS3ObjectException {}
 /// See [`InvalidS3ObjectException`](crate::error::InvalidS3ObjectException)
 pub mod invalid_s3_object_exception {
+
     /// A builder for [`InvalidS3ObjectException`](crate::error::InvalidS3ObjectException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10838,6 +11001,7 @@ impl std::fmt::Display for IdempotentParameterMismatchException {
 impl std::error::Error for IdempotentParameterMismatchException {}
 /// See [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException)
 pub mod idempotent_parameter_mismatch_exception {
+
     /// A builder for [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10942,6 +11106,7 @@ impl std::fmt::Display for InvalidImageFormatException {
 impl std::error::Error for InvalidImageFormatException {}
 /// See [`InvalidImageFormatException`](crate::error::InvalidImageFormatException)
 pub mod invalid_image_format_exception {
+
     /// A builder for [`InvalidImageFormatException`](crate::error::InvalidImageFormatException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10998,7 +11163,7 @@ impl InvalidImageFormatException {
     }
 }
 
-/// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Limits in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
+/// <p>The input image size exceeds the allowed limit. If you are calling DetectProtectiveEquipment, the image size or resolution exceeds the allowed limit. For more information, see Guidelines and quotas in Amazon Rekognition in the Amazon Rekognition Developer Guide. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImageTooLargeException {
@@ -11046,6 +11211,7 @@ impl std::fmt::Display for ImageTooLargeException {
 impl std::error::Error for ImageTooLargeException {}
 /// See [`ImageTooLargeException`](crate::error::ImageTooLargeException)
 pub mod image_too_large_exception {
+
     /// A builder for [`ImageTooLargeException`](crate::error::ImageTooLargeException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11150,6 +11316,7 @@ impl std::fmt::Display for InvalidPaginationTokenException {
 impl std::error::Error for InvalidPaginationTokenException {}
 /// See [`InvalidPaginationTokenException`](crate::error::InvalidPaginationTokenException)
 pub mod invalid_pagination_token_exception {
+
     /// A builder for [`InvalidPaginationTokenException`](crate::error::InvalidPaginationTokenException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11254,6 +11421,7 @@ impl std::fmt::Display for ResourceNotReadyException {
 impl std::error::Error for ResourceNotReadyException {}
 /// See [`ResourceNotReadyException`](crate::error::ResourceNotReadyException)
 pub mod resource_not_ready_exception {
+
     /// A builder for [`ResourceNotReadyException`](crate::error::ResourceNotReadyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11379,6 +11547,7 @@ impl std::fmt::Display for HumanLoopQuotaExceededException {
 impl std::error::Error for HumanLoopQuotaExceededException {}
 /// See [`HumanLoopQuotaExceededException`](crate::error::HumanLoopQuotaExceededException)
 pub mod human_loop_quota_exceeded_exception {
+
     /// A builder for [`HumanLoopQuotaExceededException`](crate::error::HumanLoopQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11522,6 +11691,7 @@ impl std::fmt::Display for ResourceAlreadyExistsException {
 impl std::error::Error for ResourceAlreadyExistsException {}
 /// See [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException)
 pub mod resource_already_exists_exception {
+
     /// A builder for [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

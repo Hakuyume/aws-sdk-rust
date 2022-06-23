@@ -5,9 +5,11 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service.</p>
+//! <p>Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web
+//! service.</p>
 //!
 //! # Crate Organization
 //!
@@ -38,12 +40,11 @@ pub mod config;
 /// Errors that can occur when calling the service.
 pub mod error;
 mod error_meta;
-mod hosted_zone_preprocessor;
 mod http_serde;
 /// Input structures for operations.
 pub mod input;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;
@@ -57,6 +58,7 @@ pub mod output;
 /// Paginators for the service
 pub mod paginator;
 mod rest_xml_wrapped_errors;
+mod route53_resource_id_preprocessor;
 mod xml_deser;
 mod xml_ser;
 /// Crate version number.

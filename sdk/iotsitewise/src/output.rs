@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateProjectOutput {
 }
 /// See [`UpdateProjectOutput`](crate::output::UpdateProjectOutput)
 pub mod update_project_output {
+
     /// A builder for [`UpdateProjectOutput`](crate::output::UpdateProjectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -51,6 +52,7 @@ impl std::fmt::Debug for UpdatePortalOutput {
 }
 /// See [`UpdatePortalOutput`](crate::output::UpdatePortalOutput)
 pub mod update_portal_output {
+
     /// A builder for [`UpdatePortalOutput`](crate::output::UpdatePortalOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -129,6 +131,7 @@ impl std::fmt::Debug for UpdateGatewayCapabilityConfigurationOutput {
 }
 /// See [`UpdateGatewayCapabilityConfigurationOutput`](crate::output::UpdateGatewayCapabilityConfigurationOutput)
 pub mod update_gateway_capability_configuration_output {
+
     /// A builder for [`UpdateGatewayCapabilityConfigurationOutput`](crate::output::UpdateGatewayCapabilityConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -203,6 +206,7 @@ impl std::fmt::Debug for UpdateGatewayOutput {
 }
 /// See [`UpdateGatewayOutput`](crate::output::UpdateGatewayOutput)
 pub mod update_gateway_output {
+
     /// A builder for [`UpdateGatewayOutput`](crate::output::UpdateGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -233,6 +237,7 @@ impl std::fmt::Debug for UpdateDashboardOutput {
 }
 /// See [`UpdateDashboardOutput`](crate::output::UpdateDashboardOutput)
 pub mod update_dashboard_output {
+
     /// A builder for [`UpdateDashboardOutput`](crate::output::UpdateDashboardOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -263,6 +268,7 @@ impl std::fmt::Debug for UpdateAssetPropertyOutput {
 }
 /// See [`UpdateAssetPropertyOutput`](crate::output::UpdateAssetPropertyOutput)
 pub mod update_asset_property_output {
+
     /// A builder for [`UpdateAssetPropertyOutput`](crate::output::UpdateAssetPropertyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -303,6 +309,7 @@ impl std::fmt::Debug for UpdateAssetModelOutput {
 }
 /// See [`UpdateAssetModelOutput`](crate::output::UpdateAssetModelOutput)
 pub mod update_asset_model_output {
+
     /// A builder for [`UpdateAssetModelOutput`](crate::output::UpdateAssetModelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -360,6 +367,7 @@ impl std::fmt::Debug for UpdateAssetOutput {
 }
 /// See [`UpdateAssetOutput`](crate::output::UpdateAssetOutput)
 pub mod update_asset_output {
+
     /// A builder for [`UpdateAssetOutput`](crate::output::UpdateAssetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -407,6 +415,7 @@ impl std::fmt::Debug for UpdateAccessPolicyOutput {
 }
 /// See [`UpdateAccessPolicyOutput`](crate::output::UpdateAccessPolicyOutput)
 pub mod update_access_policy_output {
+
     /// A builder for [`UpdateAccessPolicyOutput`](crate::output::UpdateAccessPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -437,6 +446,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -467,6 +477,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -492,7 +503,7 @@ pub struct PutStorageConfigurationOutput {
     /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
     /// <ul>
     /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
     /// </ul>
     pub storage_type: std::option::Option<crate::model::StorageType>,
     /// <p>Contains information about the storage destination.</p>
@@ -516,7 +527,7 @@ impl PutStorageConfigurationOutput {
     /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
     /// <ul>
     /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
     /// </ul>
     pub fn storage_type(&self) -> std::option::Option<&crate::model::StorageType> {
         self.storage_type.as_ref()
@@ -563,6 +574,7 @@ impl std::fmt::Debug for PutStorageConfigurationOutput {
 }
 /// See [`PutStorageConfigurationOutput`](crate::output::PutStorageConfigurationOutput)
 pub mod put_storage_configuration_output {
+
     /// A builder for [`PutStorageConfigurationOutput`](crate::output::PutStorageConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -578,7 +590,7 @@ pub mod put_storage_configuration_output {
         /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
         /// <ul>
         /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
         /// </ul>
         pub fn storage_type(mut self, input: crate::model::StorageType) -> Self {
             self.storage_type = Some(input);
@@ -587,7 +599,7 @@ pub mod put_storage_configuration_output {
         /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
         /// <ul>
         /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
         /// </ul>
         pub fn set_storage_type(
             mut self,
@@ -696,6 +708,7 @@ impl std::fmt::Debug for PutLoggingOptionsOutput {
 }
 /// See [`PutLoggingOptionsOutput`](crate::output::PutLoggingOptionsOutput)
 pub mod put_logging_options_output {
+
     /// A builder for [`PutLoggingOptionsOutput`](crate::output::PutLoggingOptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -750,6 +763,7 @@ impl std::fmt::Debug for PutDefaultEncryptionConfigurationOutput {
 }
 /// See [`PutDefaultEncryptionConfigurationOutput`](crate::output::PutDefaultEncryptionConfigurationOutput)
 pub mod put_default_encryption_configuration_output {
+
     /// A builder for [`PutDefaultEncryptionConfigurationOutput`](crate::output::PutDefaultEncryptionConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -841,6 +855,7 @@ impl std::fmt::Debug for ListTimeSeriesOutput {
 }
 /// See [`ListTimeSeriesOutput`](crate::output::ListTimeSeriesOutput)
 pub mod list_time_series_output {
+
     /// A builder for [`ListTimeSeriesOutput`](crate::output::ListTimeSeriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -921,6 +936,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -997,6 +1013,7 @@ impl std::fmt::Debug for ListProjectsOutput {
 }
 /// See [`ListProjectsOutput`](crate::output::ListProjectsOutput)
 pub mod list_projects_output {
+
     /// A builder for [`ListProjectsOutput`](crate::output::ListProjectsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1080,6 +1097,7 @@ impl std::fmt::Debug for ListProjectAssetsOutput {
 }
 /// See [`ListProjectAssetsOutput`](crate::output::ListProjectAssetsOutput)
 pub mod list_project_assets_output {
+
     /// A builder for [`ListProjectAssetsOutput`](crate::output::ListProjectAssetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1162,6 +1180,7 @@ impl std::fmt::Debug for ListPortalsOutput {
 }
 /// See [`ListPortalsOutput`](crate::output::ListPortalsOutput)
 pub mod list_portals_output {
+
     /// A builder for [`ListPortalsOutput`](crate::output::ListPortalsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1245,6 +1264,7 @@ impl std::fmt::Debug for ListGatewaysOutput {
 }
 /// See [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
 pub mod list_gateways_output {
+
     /// A builder for [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1328,6 +1348,7 @@ impl std::fmt::Debug for ListDashboardsOutput {
 }
 /// See [`ListDashboardsOutput`](crate::output::ListDashboardsOutput)
 pub mod list_dashboards_output {
+
     /// A builder for [`ListDashboardsOutput`](crate::output::ListDashboardsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1411,6 +1432,7 @@ impl std::fmt::Debug for ListAssociatedAssetsOutput {
 }
 /// See [`ListAssociatedAssetsOutput`](crate::output::ListAssociatedAssetsOutput)
 pub mod list_associated_assets_output {
+
     /// A builder for [`ListAssociatedAssetsOutput`](crate::output::ListAssociatedAssetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1494,6 +1516,7 @@ impl std::fmt::Debug for ListAssetsOutput {
 }
 /// See [`ListAssetsOutput`](crate::output::ListAssetsOutput)
 pub mod list_assets_output {
+
     /// A builder for [`ListAssetsOutput`](crate::output::ListAssetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1582,6 +1605,7 @@ impl std::fmt::Debug for ListAssetRelationshipsOutput {
 }
 /// See [`ListAssetRelationshipsOutput`](crate::output::ListAssetRelationshipsOutput)
 pub mod list_asset_relationships_output {
+
     /// A builder for [`ListAssetRelationshipsOutput`](crate::output::ListAssetRelationshipsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1668,6 +1692,7 @@ impl std::fmt::Debug for ListAssetModelsOutput {
 }
 /// See [`ListAssetModelsOutput`](crate::output::ListAssetModelsOutput)
 pub mod list_asset_models_output {
+
     /// A builder for [`ListAssetModelsOutput`](crate::output::ListAssetModelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1754,6 +1779,7 @@ impl std::fmt::Debug for ListAccessPoliciesOutput {
 }
 /// See [`ListAccessPoliciesOutput`](crate::output::ListAccessPoliciesOutput)
 pub mod list_access_policies_output {
+
     /// A builder for [`ListAccessPoliciesOutput`](crate::output::ListAccessPoliciesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1843,6 +1869,7 @@ impl std::fmt::Debug for GetInterpolatedAssetPropertyValuesOutput {
 }
 /// See [`GetInterpolatedAssetPropertyValuesOutput`](crate::output::GetInterpolatedAssetPropertyValuesOutput)
 pub mod get_interpolated_asset_property_values_output {
+
     /// A builder for [`GetInterpolatedAssetPropertyValuesOutput`](crate::output::GetInterpolatedAssetPropertyValuesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1935,6 +1962,7 @@ impl std::fmt::Debug for GetAssetPropertyValueHistoryOutput {
 }
 /// See [`GetAssetPropertyValueHistoryOutput`](crate::output::GetAssetPropertyValueHistoryOutput)
 pub mod get_asset_property_value_history_output {
+
     /// A builder for [`GetAssetPropertyValueHistoryOutput`](crate::output::GetAssetPropertyValueHistoryOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2014,6 +2042,7 @@ impl std::fmt::Debug for GetAssetPropertyValueOutput {
 }
 /// See [`GetAssetPropertyValueOutput`](crate::output::GetAssetPropertyValueOutput)
 pub mod get_asset_property_value_output {
+
     /// A builder for [`GetAssetPropertyValueOutput`](crate::output::GetAssetPropertyValueOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2078,6 +2107,7 @@ impl std::fmt::Debug for GetAssetPropertyAggregatesOutput {
 }
 /// See [`GetAssetPropertyAggregatesOutput`](crate::output::GetAssetPropertyAggregatesOutput)
 pub mod get_asset_property_aggregates_output {
+
     /// A builder for [`GetAssetPropertyAggregatesOutput`](crate::output::GetAssetPropertyAggregatesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2144,6 +2174,7 @@ impl std::fmt::Debug for DisassociateTimeSeriesFromAssetPropertyOutput {
 }
 /// See [`DisassociateTimeSeriesFromAssetPropertyOutput`](crate::output::DisassociateTimeSeriesFromAssetPropertyOutput)
 pub mod disassociate_time_series_from_asset_property_output {
+
     /// A builder for [`DisassociateTimeSeriesFromAssetPropertyOutput`](crate::output::DisassociateTimeSeriesFromAssetPropertyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2175,6 +2206,7 @@ impl std::fmt::Debug for DisassociateAssetsOutput {
 }
 /// See [`DisassociateAssetsOutput`](crate::output::DisassociateAssetsOutput)
 pub mod disassociate_assets_output {
+
     /// A builder for [`DisassociateAssetsOutput`](crate::output::DisassociateAssetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2271,6 +2303,7 @@ impl std::fmt::Debug for DescribeTimeSeriesOutput {
 }
 /// See [`DescribeTimeSeriesOutput`](crate::output::DescribeTimeSeriesOutput)
 pub mod describe_time_series_output {
+
     /// A builder for [`DescribeTimeSeriesOutput`](crate::output::DescribeTimeSeriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2413,7 +2446,7 @@ pub struct DescribeStorageConfigurationOutput {
     /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
     /// <ul>
     /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
     /// </ul>
     pub storage_type: std::option::Option<crate::model::StorageType>,
     /// <p>Contains information about the storage destination.</p>
@@ -2439,7 +2472,7 @@ impl DescribeStorageConfigurationOutput {
     /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
     /// <ul>
     /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+    /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
     /// </ul>
     pub fn storage_type(&self) -> std::option::Option<&crate::model::StorageType> {
         self.storage_type.as_ref()
@@ -2491,6 +2524,7 @@ impl std::fmt::Debug for DescribeStorageConfigurationOutput {
 }
 /// See [`DescribeStorageConfigurationOutput`](crate::output::DescribeStorageConfigurationOutput)
 pub mod describe_storage_configuration_output {
+
     /// A builder for [`DescribeStorageConfigurationOutput`](crate::output::DescribeStorageConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2507,7 +2541,7 @@ pub mod describe_storage_configuration_output {
         /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
         /// <ul>
         /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
         /// </ul>
         pub fn storage_type(mut self, input: crate::model::StorageType) -> Self {
             self.storage_type = Some(input);
@@ -2516,7 +2550,7 @@ pub mod describe_storage_configuration_output {
         /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
         /// <ul>
         /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
         /// </ul>
         pub fn set_storage_type(
             mut self,
@@ -2693,6 +2727,7 @@ impl std::fmt::Debug for DescribeProjectOutput {
 }
 /// See [`DescribeProjectOutput`](crate::output::DescribeProjectOutput)
 pub mod describe_project_output {
+
     /// A builder for [`DescribeProjectOutput`](crate::output::DescribeProjectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2933,6 +2968,7 @@ impl std::fmt::Debug for DescribePortalOutput {
 }
 /// See [`DescribePortalOutput`](crate::output::DescribePortalOutput)
 pub mod describe_portal_output {
+
     /// A builder for [`DescribePortalOutput`](crate::output::DescribePortalOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3187,6 +3223,7 @@ impl std::fmt::Debug for DescribeLoggingOptionsOutput {
 }
 /// See [`DescribeLoggingOptionsOutput`](crate::output::DescribeLoggingOptionsOutput)
 pub mod describe_logging_options_output {
+
     /// A builder for [`DescribeLoggingOptionsOutput`](crate::output::DescribeLoggingOptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3277,6 +3314,7 @@ impl std::fmt::Debug for DescribeGatewayCapabilityConfigurationOutput {
 }
 /// See [`DescribeGatewayCapabilityConfigurationOutput`](crate::output::DescribeGatewayCapabilityConfigurationOutput)
 pub mod describe_gateway_capability_configuration_output {
+
     /// A builder for [`DescribeGatewayCapabilityConfigurationOutput`](crate::output::DescribeGatewayCapabilityConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3436,6 +3474,7 @@ impl std::fmt::Debug for DescribeGatewayOutput {
 }
 /// See [`DescribeGatewayOutput`](crate::output::DescribeGatewayOutput)
 pub mod describe_gateway_output {
+
     /// A builder for [`DescribeGatewayOutput`](crate::output::DescribeGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3600,6 +3639,7 @@ impl std::fmt::Debug for DescribeDefaultEncryptionConfigurationOutput {
 }
 /// See [`DescribeDefaultEncryptionConfigurationOutput`](crate::output::DescribeDefaultEncryptionConfigurationOutput)
 pub mod describe_default_encryption_configuration_output {
+
     /// A builder for [`DescribeDefaultEncryptionConfigurationOutput`](crate::output::DescribeDefaultEncryptionConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3738,6 +3778,7 @@ impl std::fmt::Debug for DescribeDashboardOutput {
 }
 /// See [`DescribeDashboardOutput`](crate::output::DescribeDashboardOutput)
 pub mod describe_dashboard_output {
+
     /// A builder for [`DescribeDashboardOutput`](crate::output::DescribeDashboardOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3926,6 +3967,7 @@ impl std::fmt::Debug for DescribeAssetPropertyOutput {
 }
 /// See [`DescribeAssetPropertyOutput`](crate::output::DescribeAssetPropertyOutput)
 pub mod describe_asset_property_output {
+
     /// A builder for [`DescribeAssetPropertyOutput`](crate::output::DescribeAssetPropertyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4121,6 +4163,7 @@ impl std::fmt::Debug for DescribeAssetModelOutput {
 }
 /// See [`DescribeAssetModelOutput`](crate::output::DescribeAssetModelOutput)
 pub mod describe_asset_model_output {
+
     /// A builder for [`DescribeAssetModelOutput`](crate::output::DescribeAssetModelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4346,6 +4389,8 @@ pub struct DescribeAssetOutput {
     pub asset_last_update_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of the asset, which contains a state and any error message.</p>
     pub asset_status: std::option::Option<crate::model::AssetStatus>,
+    /// <p>A description for the asset.</p>
+    pub asset_description: std::option::Option<std::string::String>,
 }
 impl DescribeAssetOutput {
     /// <p>The ID of the asset.</p>
@@ -4392,6 +4437,10 @@ impl DescribeAssetOutput {
     pub fn asset_status(&self) -> std::option::Option<&crate::model::AssetStatus> {
         self.asset_status.as_ref()
     }
+    /// <p>A description for the asset.</p>
+    pub fn asset_description(&self) -> std::option::Option<&str> {
+        self.asset_description.as_deref()
+    }
 }
 impl std::fmt::Debug for DescribeAssetOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -4406,11 +4455,13 @@ impl std::fmt::Debug for DescribeAssetOutput {
         formatter.field("asset_creation_date", &self.asset_creation_date);
         formatter.field("asset_last_update_date", &self.asset_last_update_date);
         formatter.field("asset_status", &self.asset_status);
+        formatter.field("asset_description", &self.asset_description);
         formatter.finish()
     }
 }
 /// See [`DescribeAssetOutput`](crate::output::DescribeAssetOutput)
 pub mod describe_asset_output {
+
     /// A builder for [`DescribeAssetOutput`](crate::output::DescribeAssetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4428,6 +4479,7 @@ pub mod describe_asset_output {
         pub(crate) asset_creation_date: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) asset_last_update_date: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) asset_status: std::option::Option<crate::model::AssetStatus>,
+        pub(crate) asset_description: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The ID of the asset.</p>
@@ -4573,6 +4625,19 @@ pub mod describe_asset_output {
             self.asset_status = input;
             self
         }
+        /// <p>A description for the asset.</p>
+        pub fn asset_description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.asset_description = Some(input.into());
+            self
+        }
+        /// <p>A description for the asset.</p>
+        pub fn set_asset_description(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.asset_description = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DescribeAssetOutput`](crate::output::DescribeAssetOutput)
         pub fn build(self) -> crate::output::DescribeAssetOutput {
             crate::output::DescribeAssetOutput {
@@ -4586,6 +4651,7 @@ pub mod describe_asset_output {
                 asset_creation_date: self.asset_creation_date,
                 asset_last_update_date: self.asset_last_update_date,
                 asset_status: self.asset_status,
+                asset_description: self.asset_description,
             }
         }
     }
@@ -4671,6 +4737,7 @@ impl std::fmt::Debug for DescribeAccessPolicyOutput {
 }
 /// See [`DescribeAccessPolicyOutput`](crate::output::DescribeAccessPolicyOutput)
 pub mod describe_access_policy_output {
+
     /// A builder for [`DescribeAccessPolicyOutput`](crate::output::DescribeAccessPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4810,6 +4877,7 @@ impl std::fmt::Debug for DeleteTimeSeriesOutput {
 }
 /// See [`DeleteTimeSeriesOutput`](crate::output::DeleteTimeSeriesOutput)
 pub mod delete_time_series_output {
+
     /// A builder for [`DeleteTimeSeriesOutput`](crate::output::DeleteTimeSeriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4840,6 +4908,7 @@ impl std::fmt::Debug for DeleteProjectOutput {
 }
 /// See [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
 pub mod delete_project_output {
+
     /// A builder for [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4880,6 +4949,7 @@ impl std::fmt::Debug for DeletePortalOutput {
 }
 /// See [`DeletePortalOutput`](crate::output::DeletePortalOutput)
 pub mod delete_portal_output {
+
     /// A builder for [`DeletePortalOutput`](crate::output::DeletePortalOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4927,6 +4997,7 @@ impl std::fmt::Debug for DeleteGatewayOutput {
 }
 /// See [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
 pub mod delete_gateway_output {
+
     /// A builder for [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4957,6 +5028,7 @@ impl std::fmt::Debug for DeleteDashboardOutput {
 }
 /// See [`DeleteDashboardOutput`](crate::output::DeleteDashboardOutput)
 pub mod delete_dashboard_output {
+
     /// A builder for [`DeleteDashboardOutput`](crate::output::DeleteDashboardOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4997,6 +5069,7 @@ impl std::fmt::Debug for DeleteAssetModelOutput {
 }
 /// See [`DeleteAssetModelOutput`](crate::output::DeleteAssetModelOutput)
 pub mod delete_asset_model_output {
+
     /// A builder for [`DeleteAssetModelOutput`](crate::output::DeleteAssetModelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5054,6 +5127,7 @@ impl std::fmt::Debug for DeleteAssetOutput {
 }
 /// See [`DeleteAssetOutput`](crate::output::DeleteAssetOutput)
 pub mod delete_asset_output {
+
     /// A builder for [`DeleteAssetOutput`](crate::output::DeleteAssetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5101,6 +5175,7 @@ impl std::fmt::Debug for DeleteAccessPolicyOutput {
 }
 /// See [`DeleteAccessPolicyOutput`](crate::output::DeleteAccessPolicyOutput)
 pub mod delete_access_policy_output {
+
     /// A builder for [`DeleteAccessPolicyOutput`](crate::output::DeleteAccessPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5150,6 +5225,7 @@ impl std::fmt::Debug for CreateProjectOutput {
 }
 /// See [`CreateProjectOutput`](crate::output::CreateProjectOutput)
 pub mod create_project_output {
+
     /// A builder for [`CreateProjectOutput`](crate::output::CreateProjectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5248,6 +5324,7 @@ impl std::fmt::Debug for CreatePortalOutput {
 }
 /// See [`CreatePortalOutput`](crate::output::CreatePortalOutput)
 pub mod create_portal_output {
+
     /// A builder for [`CreatePortalOutput`](crate::output::CreatePortalOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5370,6 +5447,7 @@ impl std::fmt::Debug for CreateGatewayOutput {
 }
 /// See [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
 pub mod create_gateway_output {
+
     /// A builder for [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5447,6 +5525,7 @@ impl std::fmt::Debug for CreateDashboardOutput {
 }
 /// See [`CreateDashboardOutput`](crate::output::CreateDashboardOutput)
 pub mod create_dashboard_output {
+
     /// A builder for [`CreateDashboardOutput`](crate::output::CreateDashboardOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5534,6 +5613,7 @@ impl std::fmt::Debug for CreateAssetModelOutput {
 }
 /// See [`CreateAssetModelOutput`](crate::output::CreateAssetModelOutput)
 pub mod create_asset_model_output {
+
     /// A builder for [`CreateAssetModelOutput`](crate::output::CreateAssetModelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5639,6 +5719,7 @@ impl std::fmt::Debug for CreateAssetOutput {
 }
 /// See [`CreateAssetOutput`](crate::output::CreateAssetOutput)
 pub mod create_asset_output {
+
     /// A builder for [`CreateAssetOutput`](crate::output::CreateAssetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5731,6 +5812,7 @@ impl std::fmt::Debug for CreateAccessPolicyOutput {
 }
 /// See [`CreateAccessPolicyOutput`](crate::output::CreateAccessPolicyOutput)
 pub mod create_access_policy_output {
+
     /// A builder for [`CreateAccessPolicyOutput`](crate::output::CreateAccessPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5808,6 +5890,7 @@ impl std::fmt::Debug for BatchPutAssetPropertyValueOutput {
 }
 /// See [`BatchPutAssetPropertyValueOutput`](crate::output::BatchPutAssetPropertyValueOutput)
 pub mod batch_put_asset_property_value_output {
+
     /// A builder for [`BatchPutAssetPropertyValueOutput`](crate::output::BatchPutAssetPropertyValueOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5858,6 +5941,517 @@ impl BatchPutAssetPropertyValueOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct BatchGetAssetPropertyValueHistoryOutput {
+    /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    pub error_entries: std::option::Option<
+        std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistoryErrorEntry>,
+    >,
+    /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    pub success_entries: std::option::Option<
+        std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistorySuccessEntry>,
+    >,
+    /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    pub skipped_entries: std::option::Option<
+        std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistorySkippedEntry>,
+    >,
+    /// <p>The token for the next set of results, or null if there are no additional results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl BatchGetAssetPropertyValueHistoryOutput {
+    /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    pub fn error_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyValueHistoryErrorEntry]> {
+        self.error_entries.as_deref()
+    }
+    /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    pub fn success_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyValueHistorySuccessEntry]> {
+        self.success_entries.as_deref()
+    }
+    /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    pub fn skipped_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyValueHistorySkippedEntry]> {
+        self.skipped_entries.as_deref()
+    }
+    /// <p>The token for the next set of results, or null if there are no additional results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for BatchGetAssetPropertyValueHistoryOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("BatchGetAssetPropertyValueHistoryOutput");
+        formatter.field("error_entries", &self.error_entries);
+        formatter.field("success_entries", &self.success_entries);
+        formatter.field("skipped_entries", &self.skipped_entries);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`BatchGetAssetPropertyValueHistoryOutput`](crate::output::BatchGetAssetPropertyValueHistoryOutput)
+pub mod batch_get_asset_property_value_history_output {
+
+    /// A builder for [`BatchGetAssetPropertyValueHistoryOutput`](crate::output::BatchGetAssetPropertyValueHistoryOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) error_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistoryErrorEntry>,
+        >,
+        pub(crate) success_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistorySuccessEntry>,
+        >,
+        pub(crate) skipped_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistorySkippedEntry>,
+        >,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `error_entries`.
+        ///
+        /// To override the contents of this collection use [`set_error_entries`](Self::set_error_entries).
+        ///
+        /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+        pub fn error_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyValueHistoryErrorEntry,
+        ) -> Self {
+            let mut v = self.error_entries.unwrap_or_default();
+            v.push(input);
+            self.error_entries = Some(v);
+            self
+        }
+        /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+        pub fn set_error_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistoryErrorEntry>,
+            >,
+        ) -> Self {
+            self.error_entries = input;
+            self
+        }
+        /// Appends an item to `success_entries`.
+        ///
+        /// To override the contents of this collection use [`set_success_entries`](Self::set_success_entries).
+        ///
+        /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+        pub fn success_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyValueHistorySuccessEntry,
+        ) -> Self {
+            let mut v = self.success_entries.unwrap_or_default();
+            v.push(input);
+            self.success_entries = Some(v);
+            self
+        }
+        /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+        pub fn set_success_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistorySuccessEntry>,
+            >,
+        ) -> Self {
+            self.success_entries = input;
+            self
+        }
+        /// Appends an item to `skipped_entries`.
+        ///
+        /// To override the contents of this collection use [`set_skipped_entries`](Self::set_skipped_entries).
+        ///
+        /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+        pub fn skipped_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyValueHistorySkippedEntry,
+        ) -> Self {
+            let mut v = self.skipped_entries.unwrap_or_default();
+            v.push(input);
+            self.skipped_entries = Some(v);
+            self
+        }
+        /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+        pub fn set_skipped_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistorySkippedEntry>,
+            >,
+        ) -> Self {
+            self.skipped_entries = input;
+            self
+        }
+        /// <p>The token for the next set of results, or null if there are no additional results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The token for the next set of results, or null if there are no additional results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`BatchGetAssetPropertyValueHistoryOutput`](crate::output::BatchGetAssetPropertyValueHistoryOutput)
+        pub fn build(self) -> crate::output::BatchGetAssetPropertyValueHistoryOutput {
+            crate::output::BatchGetAssetPropertyValueHistoryOutput {
+                error_entries: self.error_entries,
+                success_entries: self.success_entries,
+                skipped_entries: self.skipped_entries,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl BatchGetAssetPropertyValueHistoryOutput {
+    /// Creates a new builder-style object to manufacture [`BatchGetAssetPropertyValueHistoryOutput`](crate::output::BatchGetAssetPropertyValueHistoryOutput)
+    pub fn builder() -> crate::output::batch_get_asset_property_value_history_output::Builder {
+        crate::output::batch_get_asset_property_value_history_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct BatchGetAssetPropertyValueOutput {
+    /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    pub error_entries:
+        std::option::Option<std::vec::Vec<crate::model::BatchGetAssetPropertyValueErrorEntry>>,
+    /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    pub success_entries:
+        std::option::Option<std::vec::Vec<crate::model::BatchGetAssetPropertyValueSuccessEntry>>,
+    /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    pub skipped_entries:
+        std::option::Option<std::vec::Vec<crate::model::BatchGetAssetPropertyValueSkippedEntry>>,
+    /// <p>The token for the next set of results, or null if there are no additional results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl BatchGetAssetPropertyValueOutput {
+    /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    pub fn error_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyValueErrorEntry]> {
+        self.error_entries.as_deref()
+    }
+    /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    pub fn success_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyValueSuccessEntry]> {
+        self.success_entries.as_deref()
+    }
+    /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    pub fn skipped_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyValueSkippedEntry]> {
+        self.skipped_entries.as_deref()
+    }
+    /// <p>The token for the next set of results, or null if there are no additional results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for BatchGetAssetPropertyValueOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("BatchGetAssetPropertyValueOutput");
+        formatter.field("error_entries", &self.error_entries);
+        formatter.field("success_entries", &self.success_entries);
+        formatter.field("skipped_entries", &self.skipped_entries);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`BatchGetAssetPropertyValueOutput`](crate::output::BatchGetAssetPropertyValueOutput)
+pub mod batch_get_asset_property_value_output {
+
+    /// A builder for [`BatchGetAssetPropertyValueOutput`](crate::output::BatchGetAssetPropertyValueOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) error_entries:
+            std::option::Option<std::vec::Vec<crate::model::BatchGetAssetPropertyValueErrorEntry>>,
+        pub(crate) success_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyValueSuccessEntry>,
+        >,
+        pub(crate) skipped_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyValueSkippedEntry>,
+        >,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `error_entries`.
+        ///
+        /// To override the contents of this collection use [`set_error_entries`](Self::set_error_entries).
+        ///
+        /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+        pub fn error_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyValueErrorEntry,
+        ) -> Self {
+            let mut v = self.error_entries.unwrap_or_default();
+            v.push(input);
+            self.error_entries = Some(v);
+            self
+        }
+        /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+        pub fn set_error_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueErrorEntry>,
+            >,
+        ) -> Self {
+            self.error_entries = input;
+            self
+        }
+        /// Appends an item to `success_entries`.
+        ///
+        /// To override the contents of this collection use [`set_success_entries`](Self::set_success_entries).
+        ///
+        /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+        pub fn success_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyValueSuccessEntry,
+        ) -> Self {
+            let mut v = self.success_entries.unwrap_or_default();
+            v.push(input);
+            self.success_entries = Some(v);
+            self
+        }
+        /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+        pub fn set_success_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueSuccessEntry>,
+            >,
+        ) -> Self {
+            self.success_entries = input;
+            self
+        }
+        /// Appends an item to `skipped_entries`.
+        ///
+        /// To override the contents of this collection use [`set_skipped_entries`](Self::set_skipped_entries).
+        ///
+        /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+        pub fn skipped_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyValueSkippedEntry,
+        ) -> Self {
+            let mut v = self.skipped_entries.unwrap_or_default();
+            v.push(input);
+            self.skipped_entries = Some(v);
+            self
+        }
+        /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+        pub fn set_skipped_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueSkippedEntry>,
+            >,
+        ) -> Self {
+            self.skipped_entries = input;
+            self
+        }
+        /// <p>The token for the next set of results, or null if there are no additional results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The token for the next set of results, or null if there are no additional results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`BatchGetAssetPropertyValueOutput`](crate::output::BatchGetAssetPropertyValueOutput)
+        pub fn build(self) -> crate::output::BatchGetAssetPropertyValueOutput {
+            crate::output::BatchGetAssetPropertyValueOutput {
+                error_entries: self.error_entries,
+                success_entries: self.success_entries,
+                skipped_entries: self.skipped_entries,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl BatchGetAssetPropertyValueOutput {
+    /// Creates a new builder-style object to manufacture [`BatchGetAssetPropertyValueOutput`](crate::output::BatchGetAssetPropertyValueOutput)
+    pub fn builder() -> crate::output::batch_get_asset_property_value_output::Builder {
+        crate::output::batch_get_asset_property_value_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct BatchGetAssetPropertyAggregatesOutput {
+    /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    pub error_entries:
+        std::option::Option<std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesErrorEntry>>,
+    /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    pub success_entries: std::option::Option<
+        std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesSuccessEntry>,
+    >,
+    /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    pub skipped_entries: std::option::Option<
+        std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesSkippedEntry>,
+    >,
+    /// <p>The token for the next set of results, or null if there are no additional results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl BatchGetAssetPropertyAggregatesOutput {
+    /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    pub fn error_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyAggregatesErrorEntry]> {
+        self.error_entries.as_deref()
+    }
+    /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    pub fn success_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyAggregatesSuccessEntry]> {
+        self.success_entries.as_deref()
+    }
+    /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    pub fn skipped_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchGetAssetPropertyAggregatesSkippedEntry]> {
+        self.skipped_entries.as_deref()
+    }
+    /// <p>The token for the next set of results, or null if there are no additional results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for BatchGetAssetPropertyAggregatesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("BatchGetAssetPropertyAggregatesOutput");
+        formatter.field("error_entries", &self.error_entries);
+        formatter.field("success_entries", &self.success_entries);
+        formatter.field("skipped_entries", &self.skipped_entries);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`BatchGetAssetPropertyAggregatesOutput`](crate::output::BatchGetAssetPropertyAggregatesOutput)
+pub mod batch_get_asset_property_aggregates_output {
+
+    /// A builder for [`BatchGetAssetPropertyAggregatesOutput`](crate::output::BatchGetAssetPropertyAggregatesOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) error_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesErrorEntry>,
+        >,
+        pub(crate) success_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesSuccessEntry>,
+        >,
+        pub(crate) skipped_entries: std::option::Option<
+            std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesSkippedEntry>,
+        >,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `error_entries`.
+        ///
+        /// To override the contents of this collection use [`set_error_entries`](Self::set_error_entries).
+        ///
+        /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+        pub fn error_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyAggregatesErrorEntry,
+        ) -> Self {
+            let mut v = self.error_entries.unwrap_or_default();
+            v.push(input);
+            self.error_entries = Some(v);
+            self
+        }
+        /// <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+        pub fn set_error_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesErrorEntry>,
+            >,
+        ) -> Self {
+            self.error_entries = input;
+            self
+        }
+        /// Appends an item to `success_entries`.
+        ///
+        /// To override the contents of this collection use [`set_success_entries`](Self::set_success_entries).
+        ///
+        /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+        pub fn success_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyAggregatesSuccessEntry,
+        ) -> Self {
+            let mut v = self.success_entries.unwrap_or_default();
+            v.push(input);
+            self.success_entries = Some(v);
+            self
+        }
+        /// <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+        pub fn set_success_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesSuccessEntry>,
+            >,
+        ) -> Self {
+            self.success_entries = input;
+            self
+        }
+        /// Appends an item to `skipped_entries`.
+        ///
+        /// To override the contents of this collection use [`set_skipped_entries`](Self::set_skipped_entries).
+        ///
+        /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+        pub fn skipped_entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyAggregatesSkippedEntry,
+        ) -> Self {
+            let mut v = self.skipped_entries.unwrap_or_default();
+            v.push(input);
+            self.skipped_entries = Some(v);
+            self
+        }
+        /// <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+        pub fn set_skipped_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesSkippedEntry>,
+            >,
+        ) -> Self {
+            self.skipped_entries = input;
+            self
+        }
+        /// <p>The token for the next set of results, or null if there are no additional results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The token for the next set of results, or null if there are no additional results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`BatchGetAssetPropertyAggregatesOutput`](crate::output::BatchGetAssetPropertyAggregatesOutput)
+        pub fn build(self) -> crate::output::BatchGetAssetPropertyAggregatesOutput {
+            crate::output::BatchGetAssetPropertyAggregatesOutput {
+                error_entries: self.error_entries,
+                success_entries: self.success_entries,
+                skipped_entries: self.skipped_entries,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl BatchGetAssetPropertyAggregatesOutput {
+    /// Creates a new builder-style object to manufacture [`BatchGetAssetPropertyAggregatesOutput`](crate::output::BatchGetAssetPropertyAggregatesOutput)
+    pub fn builder() -> crate::output::batch_get_asset_property_aggregates_output::Builder {
+        crate::output::batch_get_asset_property_aggregates_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchDisassociateProjectAssetsOutput {
     /// <p>A list of associated error information, if any.</p>
     pub errors: std::option::Option<std::vec::Vec<crate::model::AssetErrorDetails>>,
@@ -5877,6 +6471,7 @@ impl std::fmt::Debug for BatchDisassociateProjectAssetsOutput {
 }
 /// See [`BatchDisassociateProjectAssetsOutput`](crate::output::BatchDisassociateProjectAssetsOutput)
 pub mod batch_disassociate_project_assets_output {
+
     /// A builder for [`BatchDisassociateProjectAssetsOutput`](crate::output::BatchDisassociateProjectAssetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5940,6 +6535,7 @@ impl std::fmt::Debug for BatchAssociateProjectAssetsOutput {
 }
 /// See [`BatchAssociateProjectAssetsOutput`](crate::output::BatchAssociateProjectAssetsOutput)
 pub mod batch_associate_project_assets_output {
+
     /// A builder for [`BatchAssociateProjectAssetsOutput`](crate::output::BatchAssociateProjectAssetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5993,6 +6589,7 @@ impl std::fmt::Debug for AssociateTimeSeriesToAssetPropertyOutput {
 }
 /// See [`AssociateTimeSeriesToAssetPropertyOutput`](crate::output::AssociateTimeSeriesToAssetPropertyOutput)
 pub mod associate_time_series_to_asset_property_output {
+
     /// A builder for [`AssociateTimeSeriesToAssetPropertyOutput`](crate::output::AssociateTimeSeriesToAssetPropertyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6023,6 +6620,7 @@ impl std::fmt::Debug for AssociateAssetsOutput {
 }
 /// See [`AssociateAssetsOutput`](crate::output::AssociateAssetsOutput)
 pub mod associate_assets_output {
+
     /// A builder for [`AssociateAssetsOutput`](crate::output::AssociateAssetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

@@ -4293,11 +4293,17 @@ pub struct InvalidRequestException {
     pub message: std::option::Option<std::string::String>,
     #[allow(missing_docs)] // documentation missing in model
     pub error_code: std::option::Option<std::string::String>,
+    #[allow(missing_docs)] // documentation missing in model
+    pub datasync_error_code: std::option::Option<std::string::String>,
 }
 impl InvalidRequestException {
     #[allow(missing_docs)] // documentation missing in model
     pub fn error_code(&self) -> std::option::Option<&str> {
         self.error_code.as_deref()
+    }
+    #[allow(missing_docs)] // documentation missing in model
+    pub fn datasync_error_code(&self) -> std::option::Option<&str> {
+        self.datasync_error_code.as_deref()
     }
 }
 impl std::fmt::Debug for InvalidRequestException {
@@ -4305,6 +4311,7 @@ impl std::fmt::Debug for InvalidRequestException {
         let mut formatter = f.debug_struct("InvalidRequestException");
         formatter.field("message", &self.message);
         formatter.field("error_code", &self.error_code);
+        formatter.field("datasync_error_code", &self.datasync_error_code);
         formatter.finish()
     }
 }
@@ -4326,12 +4333,14 @@ impl std::fmt::Display for InvalidRequestException {
 impl std::error::Error for InvalidRequestException {}
 /// See [`InvalidRequestException`](crate::error::InvalidRequestException)
 pub mod invalid_request_exception {
+
     /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
         pub(crate) error_code: std::option::Option<std::string::String>,
+        pub(crate) datasync_error_code: std::option::Option<std::string::String>,
     }
     impl Builder {
         #[allow(missing_docs)] // documentation missing in model
@@ -4354,11 +4363,25 @@ pub mod invalid_request_exception {
             self.error_code = input;
             self
         }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn datasync_error_code(mut self, input: impl Into<std::string::String>) -> Self {
+            self.datasync_error_code = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_datasync_error_code(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.datasync_error_code = input;
+            self
+        }
         /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException)
         pub fn build(self) -> crate::error::InvalidRequestException {
             crate::error::InvalidRequestException {
                 message: self.message,
                 error_code: self.error_code,
+                datasync_error_code: self.datasync_error_code,
             }
         }
     }
@@ -4411,6 +4434,7 @@ impl std::fmt::Display for InternalException {
 impl std::error::Error for InternalException {}
 /// See [`InternalException`](crate::error::InternalException)
 pub mod internal_exception {
+
     /// A builder for [`InternalException`](crate::error::InternalException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

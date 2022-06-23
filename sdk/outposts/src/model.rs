@@ -158,6 +158,7 @@ impl std::fmt::Debug for Site {
 }
 /// See [`Site`](crate::model::Site)
 pub mod site {
+
     /// A builder for [`Site`](crate::model::Site)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -434,6 +435,7 @@ impl std::fmt::Debug for RackPhysicalProperties {
 }
 /// See [`RackPhysicalProperties`](crate::model::RackPhysicalProperties)
 pub mod rack_physical_properties {
+
     /// A builder for [`RackPhysicalProperties`](crate::model::RackPhysicalProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1319,6 +1321,7 @@ impl std::fmt::Debug for Address {
 }
 /// See [`Address`](crate::model::Address)
 pub mod address {
+
     /// A builder for [`Address`](crate::model::Address)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1649,6 +1652,7 @@ impl std::fmt::Debug for Outpost {
 }
 /// See [`Outpost`](crate::model::Outpost)
 pub mod outpost {
+
     /// A builder for [`Outpost`](crate::model::Outpost)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1989,6 +1993,7 @@ impl std::fmt::Debug for OrderSummary {
 }
 /// See [`OrderSummary`](crate::model::OrderSummary)
 pub mod order_summary {
+
     /// A builder for [`OrderSummary`](crate::model::OrderSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2441,6 +2446,7 @@ impl std::fmt::Debug for CatalogItem {
 }
 /// See [`CatalogItem`](crate::model::CatalogItem)
 pub mod catalog_item {
+
     /// A builder for [`CatalogItem`](crate::model::CatalogItem)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2670,6 +2676,7 @@ impl std::fmt::Debug for Ec2Capacity {
 }
 /// See [`Ec2Capacity`](crate::model::Ec2Capacity)
 pub mod ec2_capacity {
+
     /// A builder for [`Ec2Capacity`](crate::model::Ec2Capacity)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2836,6 +2843,307 @@ impl AsRef<str> for CatalogItemClass {
     }
 }
 
+/// <p> Information about hardware assets. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AssetInfo {
+    /// <p> The ID of the asset. </p>
+    pub asset_id: std::option::Option<std::string::String>,
+    /// <p> The rack ID of the asset. </p>
+    pub rack_id: std::option::Option<std::string::String>,
+    /// <p> The type of the asset. </p>
+    pub asset_type: std::option::Option<crate::model::AssetType>,
+    /// <p> Information about compute hardware assets. </p>
+    pub compute_attributes: std::option::Option<crate::model::ComputeAttributes>,
+    /// <p> The position of an asset in a rack. </p>
+    pub asset_location: std::option::Option<crate::model::AssetLocation>,
+}
+impl AssetInfo {
+    /// <p> The ID of the asset. </p>
+    pub fn asset_id(&self) -> std::option::Option<&str> {
+        self.asset_id.as_deref()
+    }
+    /// <p> The rack ID of the asset. </p>
+    pub fn rack_id(&self) -> std::option::Option<&str> {
+        self.rack_id.as_deref()
+    }
+    /// <p> The type of the asset. </p>
+    pub fn asset_type(&self) -> std::option::Option<&crate::model::AssetType> {
+        self.asset_type.as_ref()
+    }
+    /// <p> Information about compute hardware assets. </p>
+    pub fn compute_attributes(&self) -> std::option::Option<&crate::model::ComputeAttributes> {
+        self.compute_attributes.as_ref()
+    }
+    /// <p> The position of an asset in a rack. </p>
+    pub fn asset_location(&self) -> std::option::Option<&crate::model::AssetLocation> {
+        self.asset_location.as_ref()
+    }
+}
+impl std::fmt::Debug for AssetInfo {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AssetInfo");
+        formatter.field("asset_id", &self.asset_id);
+        formatter.field("rack_id", &self.rack_id);
+        formatter.field("asset_type", &self.asset_type);
+        formatter.field("compute_attributes", &self.compute_attributes);
+        formatter.field("asset_location", &self.asset_location);
+        formatter.finish()
+    }
+}
+/// See [`AssetInfo`](crate::model::AssetInfo)
+pub mod asset_info {
+
+    /// A builder for [`AssetInfo`](crate::model::AssetInfo)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) asset_id: std::option::Option<std::string::String>,
+        pub(crate) rack_id: std::option::Option<std::string::String>,
+        pub(crate) asset_type: std::option::Option<crate::model::AssetType>,
+        pub(crate) compute_attributes: std::option::Option<crate::model::ComputeAttributes>,
+        pub(crate) asset_location: std::option::Option<crate::model::AssetLocation>,
+    }
+    impl Builder {
+        /// <p> The ID of the asset. </p>
+        pub fn asset_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.asset_id = Some(input.into());
+            self
+        }
+        /// <p> The ID of the asset. </p>
+        pub fn set_asset_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.asset_id = input;
+            self
+        }
+        /// <p> The rack ID of the asset. </p>
+        pub fn rack_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.rack_id = Some(input.into());
+            self
+        }
+        /// <p> The rack ID of the asset. </p>
+        pub fn set_rack_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.rack_id = input;
+            self
+        }
+        /// <p> The type of the asset. </p>
+        pub fn asset_type(mut self, input: crate::model::AssetType) -> Self {
+            self.asset_type = Some(input);
+            self
+        }
+        /// <p> The type of the asset. </p>
+        pub fn set_asset_type(
+            mut self,
+            input: std::option::Option<crate::model::AssetType>,
+        ) -> Self {
+            self.asset_type = input;
+            self
+        }
+        /// <p> Information about compute hardware assets. </p>
+        pub fn compute_attributes(mut self, input: crate::model::ComputeAttributes) -> Self {
+            self.compute_attributes = Some(input);
+            self
+        }
+        /// <p> Information about compute hardware assets. </p>
+        pub fn set_compute_attributes(
+            mut self,
+            input: std::option::Option<crate::model::ComputeAttributes>,
+        ) -> Self {
+            self.compute_attributes = input;
+            self
+        }
+        /// <p> The position of an asset in a rack. </p>
+        pub fn asset_location(mut self, input: crate::model::AssetLocation) -> Self {
+            self.asset_location = Some(input);
+            self
+        }
+        /// <p> The position of an asset in a rack. </p>
+        pub fn set_asset_location(
+            mut self,
+            input: std::option::Option<crate::model::AssetLocation>,
+        ) -> Self {
+            self.asset_location = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`AssetInfo`](crate::model::AssetInfo)
+        pub fn build(self) -> crate::model::AssetInfo {
+            crate::model::AssetInfo {
+                asset_id: self.asset_id,
+                rack_id: self.rack_id,
+                asset_type: self.asset_type,
+                compute_attributes: self.compute_attributes,
+                asset_location: self.asset_location,
+            }
+        }
+    }
+}
+impl AssetInfo {
+    /// Creates a new builder-style object to manufacture [`AssetInfo`](crate::model::AssetInfo)
+    pub fn builder() -> crate::model::asset_info::Builder {
+        crate::model::asset_info::Builder::default()
+    }
+}
+
+/// <p> Information about the position of the asset in a rack. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AssetLocation {
+    /// <p> The position of an asset in a rack measured in rack units. </p>
+    pub rack_elevation: std::option::Option<f32>,
+}
+impl AssetLocation {
+    /// <p> The position of an asset in a rack measured in rack units. </p>
+    pub fn rack_elevation(&self) -> std::option::Option<f32> {
+        self.rack_elevation
+    }
+}
+impl std::fmt::Debug for AssetLocation {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AssetLocation");
+        formatter.field("rack_elevation", &self.rack_elevation);
+        formatter.finish()
+    }
+}
+/// See [`AssetLocation`](crate::model::AssetLocation)
+pub mod asset_location {
+
+    /// A builder for [`AssetLocation`](crate::model::AssetLocation)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) rack_elevation: std::option::Option<f32>,
+    }
+    impl Builder {
+        /// <p> The position of an asset in a rack measured in rack units. </p>
+        pub fn rack_elevation(mut self, input: f32) -> Self {
+            self.rack_elevation = Some(input);
+            self
+        }
+        /// <p> The position of an asset in a rack measured in rack units. </p>
+        pub fn set_rack_elevation(mut self, input: std::option::Option<f32>) -> Self {
+            self.rack_elevation = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`AssetLocation`](crate::model::AssetLocation)
+        pub fn build(self) -> crate::model::AssetLocation {
+            crate::model::AssetLocation {
+                rack_elevation: self.rack_elevation,
+            }
+        }
+    }
+}
+impl AssetLocation {
+    /// Creates a new builder-style object to manufacture [`AssetLocation`](crate::model::AssetLocation)
+    pub fn builder() -> crate::model::asset_location::Builder {
+        crate::model::asset_location::Builder::default()
+    }
+}
+
+/// <p> Information about compute hardware assets. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ComputeAttributes {
+    /// <p> The host ID of any Dedicated Hosts on the asset. </p>
+    pub host_id: std::option::Option<std::string::String>,
+}
+impl ComputeAttributes {
+    /// <p> The host ID of any Dedicated Hosts on the asset. </p>
+    pub fn host_id(&self) -> std::option::Option<&str> {
+        self.host_id.as_deref()
+    }
+}
+impl std::fmt::Debug for ComputeAttributes {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ComputeAttributes");
+        formatter.field("host_id", &self.host_id);
+        formatter.finish()
+    }
+}
+/// See [`ComputeAttributes`](crate::model::ComputeAttributes)
+pub mod compute_attributes {
+
+    /// A builder for [`ComputeAttributes`](crate::model::ComputeAttributes)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) host_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p> The host ID of any Dedicated Hosts on the asset. </p>
+        pub fn host_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.host_id = Some(input.into());
+            self
+        }
+        /// <p> The host ID of any Dedicated Hosts on the asset. </p>
+        pub fn set_host_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.host_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ComputeAttributes`](crate::model::ComputeAttributes)
+        pub fn build(self) -> crate::model::ComputeAttributes {
+            crate::model::ComputeAttributes {
+                host_id: self.host_id,
+            }
+        }
+    }
+}
+impl ComputeAttributes {
+    /// Creates a new builder-style object to manufacture [`ComputeAttributes`](crate::model::ComputeAttributes)
+    pub fn builder() -> crate::model::compute_attributes::Builder {
+        crate::model::compute_attributes::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum AssetType {
+    #[allow(missing_docs)] // documentation missing in model
+    Compute,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for AssetType {
+    fn from(s: &str) -> Self {
+        match s {
+            "COMPUTE" => AssetType::Compute,
+            other => AssetType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for AssetType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(AssetType::from(s))
+    }
+}
+impl AssetType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            AssetType::Compute => "COMPUTE",
+            AssetType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["COMPUTE"]
+    }
+}
+impl AsRef<str> for AssetType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
 /// <p>Information about an instance type.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -2858,6 +3166,7 @@ impl std::fmt::Debug for InstanceTypeItem {
 }
 /// See [`InstanceTypeItem`](crate::model::InstanceTypeItem)
 pub mod instance_type_item {
+
     /// A builder for [`InstanceTypeItem`](crate::model::InstanceTypeItem)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2975,6 +3284,7 @@ impl std::fmt::Debug for Order {
 }
 /// See [`Order`](crate::model::Order)
 pub mod order {
+
     /// A builder for [`Order`](crate::model::Order)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3217,6 +3527,7 @@ impl std::fmt::Debug for LineItem {
 }
 /// See [`LineItem`](crate::model::LineItem)
 pub mod line_item {
+
     /// A builder for [`LineItem`](crate::model::LineItem)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3288,6 +3599,180 @@ impl LineItem {
     /// Creates a new builder-style object to manufacture [`LineItem`](crate::model::LineItem)
     pub fn builder() -> crate::model::line_item::Builder {
         crate::model::line_item::Builder::default()
+    }
+}
+
+/// <p> Information about a connection. </p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ConnectionDetails {
+    /// <p> The public key of the client. </p>
+    pub client_public_key: std::option::Option<std::string::String>,
+    /// <p> The public key of the server. </p>
+    pub server_public_key: std::option::Option<std::string::String>,
+    /// <p> The endpoint for the server. </p>
+    pub server_endpoint: std::option::Option<std::string::String>,
+    /// <p> The client tunnel address. </p>
+    pub client_tunnel_address: std::option::Option<std::string::String>,
+    /// <p> The server tunnel address. </p>
+    pub server_tunnel_address: std::option::Option<std::string::String>,
+    /// <p> The allowed IP addresses. </p>
+    pub allowed_ips: std::option::Option<std::vec::Vec<std::string::String>>,
+}
+impl ConnectionDetails {
+    /// <p> The public key of the client. </p>
+    pub fn client_public_key(&self) -> std::option::Option<&str> {
+        self.client_public_key.as_deref()
+    }
+    /// <p> The public key of the server. </p>
+    pub fn server_public_key(&self) -> std::option::Option<&str> {
+        self.server_public_key.as_deref()
+    }
+    /// <p> The endpoint for the server. </p>
+    pub fn server_endpoint(&self) -> std::option::Option<&str> {
+        self.server_endpoint.as_deref()
+    }
+    /// <p> The client tunnel address. </p>
+    pub fn client_tunnel_address(&self) -> std::option::Option<&str> {
+        self.client_tunnel_address.as_deref()
+    }
+    /// <p> The server tunnel address. </p>
+    pub fn server_tunnel_address(&self) -> std::option::Option<&str> {
+        self.server_tunnel_address.as_deref()
+    }
+    /// <p> The allowed IP addresses. </p>
+    pub fn allowed_ips(&self) -> std::option::Option<&[std::string::String]> {
+        self.allowed_ips.as_deref()
+    }
+}
+impl std::fmt::Debug for ConnectionDetails {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ConnectionDetails");
+        formatter.field("client_public_key", &self.client_public_key);
+        formatter.field("server_public_key", &self.server_public_key);
+        formatter.field("server_endpoint", &self.server_endpoint);
+        formatter.field("client_tunnel_address", &self.client_tunnel_address);
+        formatter.field("server_tunnel_address", &self.server_tunnel_address);
+        formatter.field("allowed_ips", &self.allowed_ips);
+        formatter.finish()
+    }
+}
+/// See [`ConnectionDetails`](crate::model::ConnectionDetails)
+pub mod connection_details {
+
+    /// A builder for [`ConnectionDetails`](crate::model::ConnectionDetails)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) client_public_key: std::option::Option<std::string::String>,
+        pub(crate) server_public_key: std::option::Option<std::string::String>,
+        pub(crate) server_endpoint: std::option::Option<std::string::String>,
+        pub(crate) client_tunnel_address: std::option::Option<std::string::String>,
+        pub(crate) server_tunnel_address: std::option::Option<std::string::String>,
+        pub(crate) allowed_ips: std::option::Option<std::vec::Vec<std::string::String>>,
+    }
+    impl Builder {
+        /// <p> The public key of the client. </p>
+        pub fn client_public_key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.client_public_key = Some(input.into());
+            self
+        }
+        /// <p> The public key of the client. </p>
+        pub fn set_client_public_key(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.client_public_key = input;
+            self
+        }
+        /// <p> The public key of the server. </p>
+        pub fn server_public_key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.server_public_key = Some(input.into());
+            self
+        }
+        /// <p> The public key of the server. </p>
+        pub fn set_server_public_key(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.server_public_key = input;
+            self
+        }
+        /// <p> The endpoint for the server. </p>
+        pub fn server_endpoint(mut self, input: impl Into<std::string::String>) -> Self {
+            self.server_endpoint = Some(input.into());
+            self
+        }
+        /// <p> The endpoint for the server. </p>
+        pub fn set_server_endpoint(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.server_endpoint = input;
+            self
+        }
+        /// <p> The client tunnel address. </p>
+        pub fn client_tunnel_address(mut self, input: impl Into<std::string::String>) -> Self {
+            self.client_tunnel_address = Some(input.into());
+            self
+        }
+        /// <p> The client tunnel address. </p>
+        pub fn set_client_tunnel_address(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.client_tunnel_address = input;
+            self
+        }
+        /// <p> The server tunnel address. </p>
+        pub fn server_tunnel_address(mut self, input: impl Into<std::string::String>) -> Self {
+            self.server_tunnel_address = Some(input.into());
+            self
+        }
+        /// <p> The server tunnel address. </p>
+        pub fn set_server_tunnel_address(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.server_tunnel_address = input;
+            self
+        }
+        /// Appends an item to `allowed_ips`.
+        ///
+        /// To override the contents of this collection use [`set_allowed_ips`](Self::set_allowed_ips).
+        ///
+        /// <p> The allowed IP addresses. </p>
+        pub fn allowed_ips(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.allowed_ips.unwrap_or_default();
+            v.push(input.into());
+            self.allowed_ips = Some(v);
+            self
+        }
+        /// <p> The allowed IP addresses. </p>
+        pub fn set_allowed_ips(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.allowed_ips = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ConnectionDetails`](crate::model::ConnectionDetails)
+        pub fn build(self) -> crate::model::ConnectionDetails {
+            crate::model::ConnectionDetails {
+                client_public_key: self.client_public_key,
+                server_public_key: self.server_public_key,
+                server_endpoint: self.server_endpoint,
+                client_tunnel_address: self.client_tunnel_address,
+                server_tunnel_address: self.server_tunnel_address,
+                allowed_ips: self.allowed_ips,
+            }
+        }
+    }
+}
+impl ConnectionDetails {
+    /// Creates a new builder-style object to manufacture [`ConnectionDetails`](crate::model::ConnectionDetails)
+    pub fn builder() -> crate::model::connection_details::Builder {
+        crate::model::connection_details::Builder::default()
     }
 }
 
@@ -3371,6 +3856,7 @@ impl std::fmt::Debug for LineItemRequest {
 }
 /// See [`LineItemRequest`](crate::model::LineItemRequest)
 pub mod line_item_request {
+
     /// A builder for [`LineItemRequest`](crate::model::LineItemRequest)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

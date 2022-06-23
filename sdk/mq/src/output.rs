@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateUserOutput {
 }
 /// See [`UpdateUserOutput`](crate::output::UpdateUserOutput)
 pub mod update_user_output {
+
     /// A builder for [`UpdateUserOutput`](crate::output::UpdateUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -86,6 +87,7 @@ impl std::fmt::Debug for UpdateConfigurationOutput {
 }
 /// See [`UpdateConfigurationOutput`](crate::output::UpdateConfigurationOutput)
 pub mod update_configuration_output {
+
     /// A builder for [`UpdateConfigurationOutput`](crate::output::UpdateConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -290,6 +292,7 @@ impl std::fmt::Debug for UpdateBrokerOutput {
 }
 /// See [`UpdateBrokerOutput`](crate::output::UpdateBrokerOutput)
 pub mod update_broker_output {
+
     /// A builder for [`UpdateBrokerOutput`](crate::output::UpdateBrokerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -481,6 +484,7 @@ impl std::fmt::Debug for RebootBrokerOutput {
 }
 /// See [`RebootBrokerOutput`](crate::output::RebootBrokerOutput)
 pub mod reboot_broker_output {
+
     /// A builder for [`RebootBrokerOutput`](crate::output::RebootBrokerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -542,6 +546,7 @@ impl std::fmt::Debug for ListUsersOutput {
 }
 /// See [`ListUsersOutput`](crate::output::ListUsersOutput)
 pub mod list_users_output {
+
     /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -645,6 +650,7 @@ impl std::fmt::Debug for ListTagsOutput {
 }
 /// See [`ListTagsOutput`](crate::output::ListTagsOutput)
 pub mod list_tags_output {
+
     /// A builder for [`ListTagsOutput`](crate::output::ListTagsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -728,6 +734,7 @@ impl std::fmt::Debug for ListConfigurationsOutput {
 }
 /// See [`ListConfigurationsOutput`](crate::output::ListConfigurationsOutput)
 pub mod list_configurations_output {
+
     /// A builder for [`ListConfigurationsOutput`](crate::output::ListConfigurationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -836,6 +843,7 @@ impl std::fmt::Debug for ListConfigurationRevisionsOutput {
 }
 /// See [`ListConfigurationRevisionsOutput`](crate::output::ListConfigurationRevisionsOutput)
 pub mod list_configuration_revisions_output {
+
     /// A builder for [`ListConfigurationRevisionsOutput`](crate::output::ListConfigurationRevisionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -946,6 +954,7 @@ impl std::fmt::Debug for ListBrokersOutput {
 }
 /// See [`ListBrokersOutput`](crate::output::ListBrokersOutput)
 pub mod list_brokers_output {
+
     /// A builder for [`ListBrokersOutput`](crate::output::ListBrokersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1050,6 +1059,7 @@ impl std::fmt::Debug for DescribeUserOutput {
 }
 /// See [`DescribeUserOutput`](crate::output::DescribeUserOutput)
 pub mod describe_user_output {
+
     /// A builder for [`DescribeUserOutput`](crate::output::DescribeUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1185,6 +1195,7 @@ impl std::fmt::Debug for DescribeConfigurationRevisionOutput {
 }
 /// See [`DescribeConfigurationRevisionOutput`](crate::output::DescribeConfigurationRevisionOutput)
 pub mod describe_configuration_revision_output {
+
     /// A builder for [`DescribeConfigurationRevisionOutput`](crate::output::DescribeConfigurationRevisionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1350,6 +1361,7 @@ impl std::fmt::Debug for DescribeConfigurationOutput {
 }
 /// See [`DescribeConfigurationOutput`](crate::output::DescribeConfigurationOutput)
 pub mod describe_configuration_output {
+
     /// A builder for [`DescribeConfigurationOutput`](crate::output::DescribeConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1565,6 +1577,7 @@ impl std::fmt::Debug for DescribeBrokerInstanceOptionsOutput {
 }
 /// See [`DescribeBrokerInstanceOptionsOutput`](crate::output::DescribeBrokerInstanceOptionsOutput)
 pub mod describe_broker_instance_options_output {
+
     /// A builder for [`DescribeBrokerInstanceOptionsOutput`](crate::output::DescribeBrokerInstanceOptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1670,6 +1683,7 @@ impl std::fmt::Debug for DescribeBrokerEngineTypesOutput {
 }
 /// See [`DescribeBrokerEngineTypesOutput`](crate::output::DescribeBrokerEngineTypesOutput)
 pub mod describe_broker_engine_types_output {
+
     /// A builder for [`DescribeBrokerEngineTypesOutput`](crate::output::DescribeBrokerEngineTypesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1740,6 +1754,8 @@ impl DescribeBrokerEngineTypesOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeBrokerOutput {
+    /// <p>A list of actions required for a broker.</p>
+    pub actions_required: std::option::Option<std::vec::Vec<crate::model::ActionRequired>>,
     /// <p>The authentication strategy used to secure the broker. The default is SIMPLE.</p>
     pub authentication_strategy: std::option::Option<crate::model::AuthenticationStrategy>,
     /// <p>Enables automatic upgrades to new minor versions for brokers, as new versions are released and supported by Amazon MQ. Automatic upgrades occur during the scheduled maintenance window of the broker or after a manual broker reboot.</p>
@@ -1799,6 +1815,10 @@ pub struct DescribeBrokerOutput {
     pub users: std::option::Option<std::vec::Vec<crate::model::UserSummary>>,
 }
 impl DescribeBrokerOutput {
+    /// <p>A list of actions required for a broker.</p>
+    pub fn actions_required(&self) -> std::option::Option<&[crate::model::ActionRequired]> {
+        self.actions_required.as_deref()
+    }
     /// <p>The authentication strategy used to secure the broker. The default is SIMPLE.</p>
     pub fn authentication_strategy(
         &self,
@@ -1928,6 +1948,7 @@ impl DescribeBrokerOutput {
 impl std::fmt::Debug for DescribeBrokerOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("DescribeBrokerOutput");
+        formatter.field("actions_required", &self.actions_required);
         formatter.field("authentication_strategy", &self.authentication_strategy);
         formatter.field(
             "auto_minor_version_upgrade",
@@ -1976,10 +1997,13 @@ impl std::fmt::Debug for DescribeBrokerOutput {
 }
 /// See [`DescribeBrokerOutput`](crate::output::DescribeBrokerOutput)
 pub mod describe_broker_output {
+
     /// A builder for [`DescribeBrokerOutput`](crate::output::DescribeBrokerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
+        pub(crate) actions_required:
+            std::option::Option<std::vec::Vec<crate::model::ActionRequired>>,
         pub(crate) authentication_strategy:
             std::option::Option<crate::model::AuthenticationStrategy>,
         pub(crate) auto_minor_version_upgrade: std::option::Option<bool>,
@@ -2018,6 +2042,25 @@ pub mod describe_broker_output {
         pub(crate) users: std::option::Option<std::vec::Vec<crate::model::UserSummary>>,
     }
     impl Builder {
+        /// Appends an item to `actions_required`.
+        ///
+        /// To override the contents of this collection use [`set_actions_required`](Self::set_actions_required).
+        ///
+        /// <p>A list of actions required for a broker.</p>
+        pub fn actions_required(mut self, input: crate::model::ActionRequired) -> Self {
+            let mut v = self.actions_required.unwrap_or_default();
+            v.push(input);
+            self.actions_required = Some(v);
+            self
+        }
+        /// <p>A list of actions required for a broker.</p>
+        pub fn set_actions_required(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ActionRequired>>,
+        ) -> Self {
+            self.actions_required = input;
+            self
+        }
         /// <p>The authentication strategy used to secure the broker. The default is SIMPLE.</p>
         pub fn authentication_strategy(
             mut self,
@@ -2424,6 +2467,7 @@ pub mod describe_broker_output {
         /// Consumes the builder and constructs a [`DescribeBrokerOutput`](crate::output::DescribeBrokerOutput)
         pub fn build(self) -> crate::output::DescribeBrokerOutput {
             crate::output::DescribeBrokerOutput {
+                actions_required: self.actions_required,
                 authentication_strategy: self.authentication_strategy,
                 auto_minor_version_upgrade: self.auto_minor_version_upgrade.unwrap_or_default(),
                 broker_arn: self.broker_arn,
@@ -2475,6 +2519,7 @@ impl std::fmt::Debug for DeleteUserOutput {
 }
 /// See [`DeleteUserOutput`](crate::output::DeleteUserOutput)
 pub mod delete_user_output {
+
     /// A builder for [`DeleteUserOutput`](crate::output::DeleteUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2505,6 +2550,7 @@ impl std::fmt::Debug for DeleteTagsOutput {
 }
 /// See [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
 pub mod delete_tags_output {
+
     /// A builder for [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2545,6 +2591,7 @@ impl std::fmt::Debug for DeleteBrokerOutput {
 }
 /// See [`DeleteBrokerOutput`](crate::output::DeleteBrokerOutput)
 pub mod delete_broker_output {
+
     /// A builder for [`DeleteBrokerOutput`](crate::output::DeleteBrokerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2589,6 +2636,7 @@ impl std::fmt::Debug for CreateUserOutput {
 }
 /// See [`CreateUserOutput`](crate::output::CreateUserOutput)
 pub mod create_user_output {
+
     /// A builder for [`CreateUserOutput`](crate::output::CreateUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2619,6 +2667,7 @@ impl std::fmt::Debug for CreateTagsOutput {
 }
 /// See [`CreateTagsOutput`](crate::output::CreateTagsOutput)
 pub mod create_tags_output {
+
     /// A builder for [`CreateTagsOutput`](crate::output::CreateTagsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2696,6 +2745,7 @@ impl std::fmt::Debug for CreateConfigurationOutput {
 }
 /// See [`CreateConfigurationOutput`](crate::output::CreateConfigurationOutput)
 pub mod create_configuration_output {
+
     /// A builder for [`CreateConfigurationOutput`](crate::output::CreateConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2830,6 +2880,7 @@ impl std::fmt::Debug for CreateBrokerOutput {
 }
 /// See [`CreateBrokerOutput`](crate::output::CreateBrokerOutput)
 pub mod create_broker_output {
+
     /// A builder for [`CreateBrokerOutput`](crate::output::CreateBrokerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

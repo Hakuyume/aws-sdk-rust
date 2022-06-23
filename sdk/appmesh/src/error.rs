@@ -20,7 +20,7 @@ pub enum CreateGatewayRouteErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -201,7 +201,7 @@ pub enum CreateMeshErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -364,7 +364,7 @@ pub enum CreateRouteErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -530,7 +530,7 @@ pub enum CreateVirtualGatewayErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -711,7 +711,7 @@ pub enum CreateVirtualNodeErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -886,7 +886,7 @@ pub enum CreateVirtualRouterErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -1067,7 +1067,7 @@ pub enum CreateVirtualServiceErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5050,7 +5050,7 @@ pub enum UpdateGatewayRouteErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5386,7 +5386,7 @@ pub enum UpdateRouteErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5552,7 +5552,7 @@ pub enum UpdateVirtualGatewayErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5733,7 +5733,7 @@ pub enum UpdateVirtualNodeErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5908,7 +5908,7 @@ pub enum UpdateVirtualRouterErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -6089,7 +6089,7 @@ pub enum UpdateVirtualServiceErrorKind {
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The request processing has failed because of an unknown error, exception, or failure.</p>
     InternalServerErrorException(crate::error::InternalServerErrorException),
-    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+    /// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource doesn't exist. Check your request syntax and try again.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -6285,6 +6285,7 @@ impl std::fmt::Display for TooManyRequestsException {
 impl std::error::Error for TooManyRequestsException {}
 /// See [`TooManyRequestsException`](crate::error::TooManyRequestsException)
 pub mod too_many_requests_exception {
+
     /// A builder for [`TooManyRequestsException`](crate::error::TooManyRequestsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6353,6 +6354,7 @@ impl std::fmt::Display for ServiceUnavailableException {
 impl std::error::Error for ServiceUnavailableException {}
 /// See [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
 pub mod service_unavailable_exception {
+
     /// A builder for [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6417,6 +6419,7 @@ impl std::fmt::Display for NotFoundException {
 impl std::error::Error for NotFoundException {}
 /// See [`NotFoundException`](crate::error::NotFoundException)
 pub mod not_found_exception {
+
     /// A builder for [`NotFoundException`](crate::error::NotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6485,6 +6488,7 @@ impl std::fmt::Display for InternalServerErrorException {
 impl std::error::Error for InternalServerErrorException {}
 /// See [`InternalServerErrorException`](crate::error::InternalServerErrorException)
 pub mod internal_server_error_exception {
+
     /// A builder for [`InternalServerErrorException`](crate::error::InternalServerErrorException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6549,6 +6553,7 @@ impl std::fmt::Display for ForbiddenException {
 impl std::error::Error for ForbiddenException {}
 /// See [`ForbiddenException`](crate::error::ForbiddenException)
 pub mod forbidden_exception {
+
     /// A builder for [`ForbiddenException`](crate::error::ForbiddenException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6613,6 +6618,7 @@ impl std::fmt::Display for BadRequestException {
 impl std::error::Error for BadRequestException {}
 /// See [`BadRequestException`](crate::error::BadRequestException)
 pub mod bad_request_exception {
+
     /// A builder for [`BadRequestException`](crate::error::BadRequestException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6645,7 +6651,7 @@ impl BadRequestException {
     }
 }
 
-/// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>AWS App Mesh User Guide</i>.</p>
+/// <p>You have exceeded a service limit for your account. For more information, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/service-quotas.html">Service Limits</a> in the <i>App Mesh User Guide</i>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LimitExceededException {
@@ -6677,6 +6683,7 @@ impl std::fmt::Display for LimitExceededException {
 impl std::error::Error for LimitExceededException {}
 /// See [`LimitExceededException`](crate::error::LimitExceededException)
 pub mod limit_exceeded_exception {
+
     /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6741,6 +6748,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6805,6 +6813,7 @@ impl std::fmt::Display for ResourceInUseException {
 impl std::error::Error for ResourceInUseException {}
 /// See [`ResourceInUseException`](crate::error::ResourceInUseException)
 pub mod resource_in_use_exception {
+
     /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6869,6 +6878,7 @@ impl std::fmt::Display for TooManyTagsException {
 impl std::error::Error for TooManyTagsException {}
 /// See [`TooManyTagsException`](crate::error::TooManyTagsException)
 pub mod too_many_tags_exception {
+
     /// A builder for [`TooManyTagsException`](crate::error::TooManyTagsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

@@ -2,6 +2,106 @@
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct VerifyMacOutput {
+    /// <p>The HMAC KMS key used in the verification.</p>
+    pub key_id: std::option::Option<std::string::String>,
+    /// <p>A Boolean value that indicates whether the HMAC was verified. A value of <code>True</code> indicates that the HMAC (<code>Mac</code>) was generated with the specified <code>Message</code>, HMAC KMS key (<code>KeyID</code>) and <code>MacAlgorithm.</code>.</p>
+    /// <p>If the HMAC is not verified, the <code>VerifyMac</code> operation fails with a <code>KMSInvalidMacException</code> exception. This exception indicates that one or more of the inputs changed since the HMAC was computed.</p>
+    pub mac_valid: bool,
+    /// <p>The MAC algorithm used in the verification.</p>
+    pub mac_algorithm: std::option::Option<crate::model::MacAlgorithmSpec>,
+}
+impl VerifyMacOutput {
+    /// <p>The HMAC KMS key used in the verification.</p>
+    pub fn key_id(&self) -> std::option::Option<&str> {
+        self.key_id.as_deref()
+    }
+    /// <p>A Boolean value that indicates whether the HMAC was verified. A value of <code>True</code> indicates that the HMAC (<code>Mac</code>) was generated with the specified <code>Message</code>, HMAC KMS key (<code>KeyID</code>) and <code>MacAlgorithm.</code>.</p>
+    /// <p>If the HMAC is not verified, the <code>VerifyMac</code> operation fails with a <code>KMSInvalidMacException</code> exception. This exception indicates that one or more of the inputs changed since the HMAC was computed.</p>
+    pub fn mac_valid(&self) -> bool {
+        self.mac_valid
+    }
+    /// <p>The MAC algorithm used in the verification.</p>
+    pub fn mac_algorithm(&self) -> std::option::Option<&crate::model::MacAlgorithmSpec> {
+        self.mac_algorithm.as_ref()
+    }
+}
+impl std::fmt::Debug for VerifyMacOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("VerifyMacOutput");
+        formatter.field("key_id", &self.key_id);
+        formatter.field("mac_valid", &self.mac_valid);
+        formatter.field("mac_algorithm", &self.mac_algorithm);
+        formatter.finish()
+    }
+}
+/// See [`VerifyMacOutput`](crate::output::VerifyMacOutput)
+pub mod verify_mac_output {
+
+    /// A builder for [`VerifyMacOutput`](crate::output::VerifyMacOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) key_id: std::option::Option<std::string::String>,
+        pub(crate) mac_valid: std::option::Option<bool>,
+        pub(crate) mac_algorithm: std::option::Option<crate::model::MacAlgorithmSpec>,
+    }
+    impl Builder {
+        /// <p>The HMAC KMS key used in the verification.</p>
+        pub fn key_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key_id = Some(input.into());
+            self
+        }
+        /// <p>The HMAC KMS key used in the verification.</p>
+        pub fn set_key_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key_id = input;
+            self
+        }
+        /// <p>A Boolean value that indicates whether the HMAC was verified. A value of <code>True</code> indicates that the HMAC (<code>Mac</code>) was generated with the specified <code>Message</code>, HMAC KMS key (<code>KeyID</code>) and <code>MacAlgorithm.</code>.</p>
+        /// <p>If the HMAC is not verified, the <code>VerifyMac</code> operation fails with a <code>KMSInvalidMacException</code> exception. This exception indicates that one or more of the inputs changed since the HMAC was computed.</p>
+        pub fn mac_valid(mut self, input: bool) -> Self {
+            self.mac_valid = Some(input);
+            self
+        }
+        /// <p>A Boolean value that indicates whether the HMAC was verified. A value of <code>True</code> indicates that the HMAC (<code>Mac</code>) was generated with the specified <code>Message</code>, HMAC KMS key (<code>KeyID</code>) and <code>MacAlgorithm.</code>.</p>
+        /// <p>If the HMAC is not verified, the <code>VerifyMac</code> operation fails with a <code>KMSInvalidMacException</code> exception. This exception indicates that one or more of the inputs changed since the HMAC was computed.</p>
+        pub fn set_mac_valid(mut self, input: std::option::Option<bool>) -> Self {
+            self.mac_valid = input;
+            self
+        }
+        /// <p>The MAC algorithm used in the verification.</p>
+        pub fn mac_algorithm(mut self, input: crate::model::MacAlgorithmSpec) -> Self {
+            self.mac_algorithm = Some(input);
+            self
+        }
+        /// <p>The MAC algorithm used in the verification.</p>
+        pub fn set_mac_algorithm(
+            mut self,
+            input: std::option::Option<crate::model::MacAlgorithmSpec>,
+        ) -> Self {
+            self.mac_algorithm = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`VerifyMacOutput`](crate::output::VerifyMacOutput)
+        pub fn build(self) -> crate::output::VerifyMacOutput {
+            crate::output::VerifyMacOutput {
+                key_id: self.key_id,
+                mac_valid: self.mac_valid.unwrap_or_default(),
+                mac_algorithm: self.mac_algorithm,
+            }
+        }
+    }
+}
+impl VerifyMacOutput {
+    /// Creates a new builder-style object to manufacture [`VerifyMacOutput`](crate::output::VerifyMacOutput)
+    pub fn builder() -> crate::output::verify_mac_output::Builder {
+        crate::output::verify_mac_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct VerifyOutput {
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the asymmetric KMS key that was used to verify the signature.</p>
     pub key_id: std::option::Option<std::string::String>,
@@ -35,6 +135,7 @@ impl std::fmt::Debug for VerifyOutput {
 }
 /// See [`VerifyOutput`](crate::output::VerifyOutput)
 pub mod verify_output {
+
     /// A builder for [`VerifyOutput`](crate::output::VerifyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -106,6 +207,7 @@ impl std::fmt::Debug for UpdatePrimaryRegionOutput {
 }
 /// See [`UpdatePrimaryRegionOutput`](crate::output::UpdatePrimaryRegionOutput)
 pub mod update_primary_region_output {
+
     /// A builder for [`UpdatePrimaryRegionOutput`](crate::output::UpdatePrimaryRegionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -136,6 +238,7 @@ impl std::fmt::Debug for UpdateKeyDescriptionOutput {
 }
 /// See [`UpdateKeyDescriptionOutput`](crate::output::UpdateKeyDescriptionOutput)
 pub mod update_key_description_output {
+
     /// A builder for [`UpdateKeyDescriptionOutput`](crate::output::UpdateKeyDescriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -166,6 +269,7 @@ impl std::fmt::Debug for UpdateCustomKeyStoreOutput {
 }
 /// See [`UpdateCustomKeyStoreOutput`](crate::output::UpdateCustomKeyStoreOutput)
 pub mod update_custom_key_store_output {
+
     /// A builder for [`UpdateCustomKeyStoreOutput`](crate::output::UpdateCustomKeyStoreOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -196,6 +300,7 @@ impl std::fmt::Debug for UpdateAliasOutput {
 }
 /// See [`UpdateAliasOutput`](crate::output::UpdateAliasOutput)
 pub mod update_alias_output {
+
     /// A builder for [`UpdateAliasOutput`](crate::output::UpdateAliasOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -226,6 +331,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -256,6 +362,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -320,6 +427,7 @@ impl std::fmt::Debug for SignOutput {
 }
 /// See [`SignOutput`](crate::output::SignOutput)
 pub mod sign_output {
+
     /// A builder for [`SignOutput`](crate::output::SignOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -399,7 +507,7 @@ pub struct ScheduleKeyDeletionOutput {
     /// <p>If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion date for the primary key isn't known until its last replica key is deleted.</p>
     pub deletion_date: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The current status of the KMS key.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>Key Management Service Developer Guide</i>.</p>
     pub key_state: std::option::Option<crate::model::KeyState>,
     /// <p>The waiting period before the KMS key is deleted. </p>
     /// <p>If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its replica keys is deleted. Otherwise, the waiting period begins immediately.</p>
@@ -416,7 +524,7 @@ impl ScheduleKeyDeletionOutput {
         self.deletion_date.as_ref()
     }
     /// <p>The current status of the KMS key.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>Key Management Service Developer Guide</i>.</p>
     pub fn key_state(&self) -> std::option::Option<&crate::model::KeyState> {
         self.key_state.as_ref()
     }
@@ -438,6 +546,7 @@ impl std::fmt::Debug for ScheduleKeyDeletionOutput {
 }
 /// See [`ScheduleKeyDeletionOutput`](crate::output::ScheduleKeyDeletionOutput)
 pub mod schedule_key_deletion_output {
+
     /// A builder for [`ScheduleKeyDeletionOutput`](crate::output::ScheduleKeyDeletionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -474,13 +583,13 @@ pub mod schedule_key_deletion_output {
             self
         }
         /// <p>The current status of the KMS key.</p>
-        /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management Service Developer Guide</i>.</p>
+        /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>Key Management Service Developer Guide</i>.</p>
         pub fn key_state(mut self, input: crate::model::KeyState) -> Self {
             self.key_state = Some(input);
             self
         }
         /// <p>The current status of the KMS key.</p>
-        /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i>Key Management Service Developer Guide</i>.</p>
+        /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i>Key Management Service Developer Guide</i>.</p>
         pub fn set_key_state(mut self, input: std::option::Option<crate::model::KeyState>) -> Self {
             self.key_state = input;
             self
@@ -527,6 +636,7 @@ impl std::fmt::Debug for RevokeGrantOutput {
 }
 /// See [`RevokeGrantOutput`](crate::output::RevokeGrantOutput)
 pub mod revoke_grant_output {
+
     /// A builder for [`RevokeGrantOutput`](crate::output::RevokeGrantOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -557,6 +667,7 @@ impl std::fmt::Debug for RetireGrantOutput {
 }
 /// See [`RetireGrantOutput`](crate::output::RetireGrantOutput)
 pub mod retire_grant_output {
+
     /// A builder for [`RetireGrantOutput`](crate::output::RetireGrantOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -579,7 +690,7 @@ impl RetireGrantOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ReplicateKeyOutput {
-    /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
+    /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
     pub replica_key_metadata: std::option::Option<crate::model::KeyMetadata>,
     /// <p>The key policy of the new replica key. The value is a key policy document in JSON format.</p>
     pub replica_policy: std::option::Option<std::string::String>,
@@ -587,7 +698,7 @@ pub struct ReplicateKeyOutput {
     pub replica_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
 }
 impl ReplicateKeyOutput {
-    /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
+    /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
     pub fn replica_key_metadata(&self) -> std::option::Option<&crate::model::KeyMetadata> {
         self.replica_key_metadata.as_ref()
     }
@@ -611,6 +722,7 @@ impl std::fmt::Debug for ReplicateKeyOutput {
 }
 /// See [`ReplicateKeyOutput`](crate::output::ReplicateKeyOutput)
 pub mod replicate_key_output {
+
     /// A builder for [`ReplicateKeyOutput`](crate::output::ReplicateKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -620,12 +732,12 @@ pub mod replicate_key_output {
         pub(crate) replica_tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     }
     impl Builder {
-        /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
+        /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
         pub fn replica_key_metadata(mut self, input: crate::model::KeyMetadata) -> Self {
             self.replica_key_metadata = Some(input);
             self
         }
-        /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">key state</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
+        /// <p>Displays details about the new replica key, including its Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) and <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a>. It also includes the ARN and Amazon Web Services Region of its primary key and other replica keys.</p>
         pub fn set_replica_key_metadata(
             mut self,
             input: std::option::Option<crate::model::KeyMetadata>,
@@ -743,6 +855,7 @@ impl std::fmt::Debug for ReEncryptOutput {
 }
 /// See [`ReEncryptOutput`](crate::output::ReEncryptOutput)
 pub mod re_encrypt_output {
+
     /// A builder for [`ReEncryptOutput`](crate::output::ReEncryptOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -855,6 +968,7 @@ impl std::fmt::Debug for PutKeyPolicyOutput {
 }
 /// See [`PutKeyPolicyOutput`](crate::output::PutKeyPolicyOutput)
 pub mod put_key_policy_output {
+
     /// A builder for [`PutKeyPolicyOutput`](crate::output::PutKeyPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -909,6 +1023,7 @@ impl std::fmt::Debug for ListRetirableGrantsOutput {
 }
 /// See [`ListRetirableGrantsOutput`](crate::output::ListRetirableGrantsOutput)
 pub mod list_retirable_grants_output {
+
     /// A builder for [`ListRetirableGrantsOutput`](crate::output::ListRetirableGrantsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -979,7 +1094,7 @@ impl ListRetirableGrantsOutput {
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListResourceTagsOutput {
     /// <p>A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
-    /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
     /// </note>
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>When <code>Truncated</code> is true, this element is present and contains the value to use for the <code>Marker</code> parameter in a subsequent request.</p>
@@ -990,7 +1105,7 @@ pub struct ListResourceTagsOutput {
 }
 impl ListResourceTagsOutput {
     /// <p>A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
-    /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
+    /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
     /// </note>
     pub fn tags(&self) -> std::option::Option<&[crate::model::Tag]> {
         self.tags.as_deref()
@@ -1016,6 +1131,7 @@ impl std::fmt::Debug for ListResourceTagsOutput {
 }
 /// See [`ListResourceTagsOutput`](crate::output::ListResourceTagsOutput)
 pub mod list_resource_tags_output {
+
     /// A builder for [`ListResourceTagsOutput`](crate::output::ListResourceTagsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1030,7 +1146,7 @@ pub mod list_resource_tags_output {
         /// To override the contents of this collection use [`set_tags`](Self::set_tags).
         ///
         /// <p>A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
-        /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
+        /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
         /// </note>
         pub fn tags(mut self, input: crate::model::Tag) -> Self {
             let mut v = self.tags.unwrap_or_default();
@@ -1039,7 +1155,7 @@ pub mod list_resource_tags_output {
             self
         }
         /// <p>A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
-        /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
+        /// <p>Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">ABAC in KMS</a> in the <i>Key Management Service Developer Guide</i>.</p>
         /// </note>
         pub fn set_tags(
             mut self,
@@ -1123,6 +1239,7 @@ impl std::fmt::Debug for ListKeysOutput {
 }
 /// See [`ListKeysOutput`](crate::output::ListKeysOutput)
 pub mod list_keys_output {
+
     /// A builder for [`ListKeysOutput`](crate::output::ListKeysOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1224,6 +1341,7 @@ impl std::fmt::Debug for ListKeyPoliciesOutput {
 }
 /// See [`ListKeyPoliciesOutput`](crate::output::ListKeyPoliciesOutput)
 pub mod list_key_policies_output {
+
     /// A builder for [`ListKeyPoliciesOutput`](crate::output::ListKeyPoliciesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1325,6 +1443,7 @@ impl std::fmt::Debug for ListGrantsOutput {
 }
 /// See [`ListGrantsOutput`](crate::output::ListGrantsOutput)
 pub mod list_grants_output {
+
     /// A builder for [`ListGrantsOutput`](crate::output::ListGrantsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1426,6 +1545,7 @@ impl std::fmt::Debug for ListAliasesOutput {
 }
 /// See [`ListAliasesOutput`](crate::output::ListAliasesOutput)
 pub mod list_aliases_output {
+
     /// A builder for [`ListAliasesOutput`](crate::output::ListAliasesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1503,6 +1623,7 @@ impl std::fmt::Debug for ImportKeyMaterialOutput {
 }
 /// See [`ImportKeyMaterialOutput`](crate::output::ImportKeyMaterialOutput)
 pub mod import_key_material_output {
+
     /// A builder for [`ImportKeyMaterialOutput`](crate::output::ImportKeyMaterialOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1604,6 +1725,7 @@ impl std::fmt::Debug for GetPublicKeyOutput {
 }
 /// See [`GetPublicKeyOutput`](crate::output::GetPublicKeyOutput)
 pub mod get_public_key_output {
+
     /// A builder for [`GetPublicKeyOutput`](crate::output::GetPublicKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1801,6 +1923,7 @@ impl std::fmt::Debug for GetParametersForImportOutput {
 }
 /// See [`GetParametersForImportOutput`](crate::output::GetParametersForImportOutput)
 pub mod get_parameters_for_import_output {
+
     /// A builder for [`GetParametersForImportOutput`](crate::output::GetParametersForImportOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1900,6 +2023,7 @@ impl std::fmt::Debug for GetKeyRotationStatusOutput {
 }
 /// See [`GetKeyRotationStatusOutput`](crate::output::GetKeyRotationStatusOutput)
 pub mod get_key_rotation_status_output {
+
     /// A builder for [`GetKeyRotationStatusOutput`](crate::output::GetKeyRotationStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1954,6 +2078,7 @@ impl std::fmt::Debug for GetKeyPolicyOutput {
 }
 /// See [`GetKeyPolicyOutput`](crate::output::GetKeyPolicyOutput)
 pub mod get_key_policy_output {
+
     /// A builder for [`GetKeyPolicyOutput`](crate::output::GetKeyPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2008,6 +2133,7 @@ impl std::fmt::Debug for GenerateRandomOutput {
 }
 /// See [`GenerateRandomOutput`](crate::output::GenerateRandomOutput)
 pub mod generate_random_output {
+
     /// A builder for [`GenerateRandomOutput`](crate::output::GenerateRandomOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2043,6 +2169,102 @@ impl GenerateRandomOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GenerateMacOutput {
+    /// <p>The hash-based message authentication code (HMAC) for the given message, key, and MAC algorithm.</p>
+    pub mac: std::option::Option<aws_smithy_types::Blob>,
+    /// <p>The MAC algorithm that was used to generate the HMAC.</p>
+    pub mac_algorithm: std::option::Option<crate::model::MacAlgorithmSpec>,
+    /// <p>The HMAC KMS key used in the operation.</p>
+    pub key_id: std::option::Option<std::string::String>,
+}
+impl GenerateMacOutput {
+    /// <p>The hash-based message authentication code (HMAC) for the given message, key, and MAC algorithm.</p>
+    pub fn mac(&self) -> std::option::Option<&aws_smithy_types::Blob> {
+        self.mac.as_ref()
+    }
+    /// <p>The MAC algorithm that was used to generate the HMAC.</p>
+    pub fn mac_algorithm(&self) -> std::option::Option<&crate::model::MacAlgorithmSpec> {
+        self.mac_algorithm.as_ref()
+    }
+    /// <p>The HMAC KMS key used in the operation.</p>
+    pub fn key_id(&self) -> std::option::Option<&str> {
+        self.key_id.as_deref()
+    }
+}
+impl std::fmt::Debug for GenerateMacOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GenerateMacOutput");
+        formatter.field("mac", &self.mac);
+        formatter.field("mac_algorithm", &self.mac_algorithm);
+        formatter.field("key_id", &self.key_id);
+        formatter.finish()
+    }
+}
+/// See [`GenerateMacOutput`](crate::output::GenerateMacOutput)
+pub mod generate_mac_output {
+
+    /// A builder for [`GenerateMacOutput`](crate::output::GenerateMacOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) mac: std::option::Option<aws_smithy_types::Blob>,
+        pub(crate) mac_algorithm: std::option::Option<crate::model::MacAlgorithmSpec>,
+        pub(crate) key_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The hash-based message authentication code (HMAC) for the given message, key, and MAC algorithm.</p>
+        pub fn mac(mut self, input: aws_smithy_types::Blob) -> Self {
+            self.mac = Some(input);
+            self
+        }
+        /// <p>The hash-based message authentication code (HMAC) for the given message, key, and MAC algorithm.</p>
+        pub fn set_mac(mut self, input: std::option::Option<aws_smithy_types::Blob>) -> Self {
+            self.mac = input;
+            self
+        }
+        /// <p>The MAC algorithm that was used to generate the HMAC.</p>
+        pub fn mac_algorithm(mut self, input: crate::model::MacAlgorithmSpec) -> Self {
+            self.mac_algorithm = Some(input);
+            self
+        }
+        /// <p>The MAC algorithm that was used to generate the HMAC.</p>
+        pub fn set_mac_algorithm(
+            mut self,
+            input: std::option::Option<crate::model::MacAlgorithmSpec>,
+        ) -> Self {
+            self.mac_algorithm = input;
+            self
+        }
+        /// <p>The HMAC KMS key used in the operation.</p>
+        pub fn key_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key_id = Some(input.into());
+            self
+        }
+        /// <p>The HMAC KMS key used in the operation.</p>
+        pub fn set_key_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GenerateMacOutput`](crate::output::GenerateMacOutput)
+        pub fn build(self) -> crate::output::GenerateMacOutput {
+            crate::output::GenerateMacOutput {
+                mac: self.mac,
+                mac_algorithm: self.mac_algorithm,
+                key_id: self.key_id,
+            }
+        }
+    }
+}
+impl GenerateMacOutput {
+    /// Creates a new builder-style object to manufacture [`GenerateMacOutput`](crate::output::GenerateMacOutput)
+    pub fn builder() -> crate::output::generate_mac_output::Builder {
+        crate::output::generate_mac_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GenerateDataKeyWithoutPlaintextOutput {
     /// <p>The encrypted data key. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
     pub ciphertext_blob: std::option::Option<aws_smithy_types::Blob>,
@@ -2069,6 +2291,7 @@ impl std::fmt::Debug for GenerateDataKeyWithoutPlaintextOutput {
 }
 /// See [`GenerateDataKeyWithoutPlaintextOutput`](crate::output::GenerateDataKeyWithoutPlaintextOutput)
 pub mod generate_data_key_without_plaintext_output {
+
     /// A builder for [`GenerateDataKeyWithoutPlaintextOutput`](crate::output::GenerateDataKeyWithoutPlaintextOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2122,7 +2345,7 @@ impl GenerateDataKeyWithoutPlaintextOutput {
 pub struct GenerateDataKeyPairWithoutPlaintextOutput {
     /// <p>The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
     pub private_key_ciphertext_blob: std::option::Option<aws_smithy_types::Blob>,
-    /// <p>The public key (in plaintext).</p>
+    /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
     pub public_key: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS key that encrypted the private key.</p>
     pub key_id: std::option::Option<std::string::String>,
@@ -2134,7 +2357,7 @@ impl GenerateDataKeyPairWithoutPlaintextOutput {
     pub fn private_key_ciphertext_blob(&self) -> std::option::Option<&aws_smithy_types::Blob> {
         self.private_key_ciphertext_blob.as_ref()
     }
-    /// <p>The public key (in plaintext).</p>
+    /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
     pub fn public_key(&self) -> std::option::Option<&aws_smithy_types::Blob> {
         self.public_key.as_ref()
     }
@@ -2162,6 +2385,7 @@ impl std::fmt::Debug for GenerateDataKeyPairWithoutPlaintextOutput {
 }
 /// See [`GenerateDataKeyPairWithoutPlaintextOutput`](crate::output::GenerateDataKeyPairWithoutPlaintextOutput)
 pub mod generate_data_key_pair_without_plaintext_output {
+
     /// A builder for [`GenerateDataKeyPairWithoutPlaintextOutput`](crate::output::GenerateDataKeyPairWithoutPlaintextOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2185,12 +2409,12 @@ pub mod generate_data_key_pair_without_plaintext_output {
             self.private_key_ciphertext_blob = input;
             self
         }
-        /// <p>The public key (in plaintext).</p>
+        /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
         pub fn public_key(mut self, input: aws_smithy_types::Blob) -> Self {
             self.public_key = Some(input);
             self
         }
-        /// <p>The public key (in plaintext).</p>
+        /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
         pub fn set_public_key(
             mut self,
             input: std::option::Option<aws_smithy_types::Blob>,
@@ -2247,7 +2471,7 @@ pub struct GenerateDataKeyPairOutput {
     pub private_key_ciphertext_blob: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The plaintext copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
     pub private_key_plaintext: std::option::Option<aws_smithy_types::Blob>,
-    /// <p>The public key (in plaintext).</p>
+    /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
     pub public_key: std::option::Option<aws_smithy_types::Blob>,
     /// <p>The Amazon Resource Name (<a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS key that encrypted the private key.</p>
     pub key_id: std::option::Option<std::string::String>,
@@ -2263,7 +2487,7 @@ impl GenerateDataKeyPairOutput {
     pub fn private_key_plaintext(&self) -> std::option::Option<&aws_smithy_types::Blob> {
         self.private_key_plaintext.as_ref()
     }
-    /// <p>The public key (in plaintext).</p>
+    /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
     pub fn public_key(&self) -> std::option::Option<&aws_smithy_types::Blob> {
         self.public_key.as_ref()
     }
@@ -2292,6 +2516,7 @@ impl std::fmt::Debug for GenerateDataKeyPairOutput {
 }
 /// See [`GenerateDataKeyPairOutput`](crate::output::GenerateDataKeyPairOutput)
 pub mod generate_data_key_pair_output {
+
     /// A builder for [`GenerateDataKeyPairOutput`](crate::output::GenerateDataKeyPairOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2329,12 +2554,12 @@ pub mod generate_data_key_pair_output {
             self.private_key_plaintext = input;
             self
         }
-        /// <p>The public key (in plaintext).</p>
+        /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
         pub fn public_key(mut self, input: aws_smithy_types::Blob) -> Self {
             self.public_key = Some(input);
             self
         }
-        /// <p>The public key (in plaintext).</p>
+        /// <p>The public key (in plaintext). When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.</p>
         pub fn set_public_key(
             mut self,
             input: std::option::Option<aws_smithy_types::Blob>,
@@ -2420,6 +2645,7 @@ impl std::fmt::Debug for GenerateDataKeyOutput {
 }
 /// See [`GenerateDataKeyOutput`](crate::output::GenerateDataKeyOutput)
 pub mod generate_data_key_output {
+
     /// A builder for [`GenerateDataKeyOutput`](crate::output::GenerateDataKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2517,6 +2743,7 @@ impl std::fmt::Debug for EncryptOutput {
 }
 /// See [`EncryptOutput`](crate::output::EncryptOutput)
 pub mod encrypt_output {
+
     /// A builder for [`EncryptOutput`](crate::output::EncryptOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2594,6 +2821,7 @@ impl std::fmt::Debug for EnableKeyRotationOutput {
 }
 /// See [`EnableKeyRotationOutput`](crate::output::EnableKeyRotationOutput)
 pub mod enable_key_rotation_output {
+
     /// A builder for [`EnableKeyRotationOutput`](crate::output::EnableKeyRotationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2624,6 +2852,7 @@ impl std::fmt::Debug for EnableKeyOutput {
 }
 /// See [`EnableKeyOutput`](crate::output::EnableKeyOutput)
 pub mod enable_key_output {
+
     /// A builder for [`EnableKeyOutput`](crate::output::EnableKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2654,6 +2883,7 @@ impl std::fmt::Debug for DisconnectCustomKeyStoreOutput {
 }
 /// See [`DisconnectCustomKeyStoreOutput`](crate::output::DisconnectCustomKeyStoreOutput)
 pub mod disconnect_custom_key_store_output {
+
     /// A builder for [`DisconnectCustomKeyStoreOutput`](crate::output::DisconnectCustomKeyStoreOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2684,6 +2914,7 @@ impl std::fmt::Debug for DisableKeyRotationOutput {
 }
 /// See [`DisableKeyRotationOutput`](crate::output::DisableKeyRotationOutput)
 pub mod disable_key_rotation_output {
+
     /// A builder for [`DisableKeyRotationOutput`](crate::output::DisableKeyRotationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2714,6 +2945,7 @@ impl std::fmt::Debug for DisableKeyOutput {
 }
 /// See [`DisableKeyOutput`](crate::output::DisableKeyOutput)
 pub mod disable_key_output {
+
     /// A builder for [`DisableKeyOutput`](crate::output::DisableKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2754,6 +2986,7 @@ impl std::fmt::Debug for DescribeKeyOutput {
 }
 /// See [`DescribeKeyOutput`](crate::output::DescribeKeyOutput)
 pub mod describe_key_output {
+
     /// A builder for [`DescribeKeyOutput`](crate::output::DescribeKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2828,6 +3061,7 @@ impl std::fmt::Debug for DescribeCustomKeyStoresOutput {
 }
 /// See [`DescribeCustomKeyStoresOutput`](crate::output::DescribeCustomKeyStoresOutput)
 pub mod describe_custom_key_stores_output {
+
     /// A builder for [`DescribeCustomKeyStoresOutput`](crate::output::DescribeCustomKeyStoresOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2906,6 +3140,7 @@ impl std::fmt::Debug for DeleteImportedKeyMaterialOutput {
 }
 /// See [`DeleteImportedKeyMaterialOutput`](crate::output::DeleteImportedKeyMaterialOutput)
 pub mod delete_imported_key_material_output {
+
     /// A builder for [`DeleteImportedKeyMaterialOutput`](crate::output::DeleteImportedKeyMaterialOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2936,6 +3171,7 @@ impl std::fmt::Debug for DeleteCustomKeyStoreOutput {
 }
 /// See [`DeleteCustomKeyStoreOutput`](crate::output::DeleteCustomKeyStoreOutput)
 pub mod delete_custom_key_store_output {
+
     /// A builder for [`DeleteCustomKeyStoreOutput`](crate::output::DeleteCustomKeyStoreOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2966,6 +3202,7 @@ impl std::fmt::Debug for DeleteAliasOutput {
 }
 /// See [`DeleteAliasOutput`](crate::output::DeleteAliasOutput)
 pub mod delete_alias_output {
+
     /// A builder for [`DeleteAliasOutput`](crate::output::DeleteAliasOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3022,6 +3259,7 @@ impl std::fmt::Debug for DecryptOutput {
 }
 /// See [`DecryptOutput`](crate::output::DecryptOutput)
 pub mod decrypt_output {
+
     /// A builder for [`DecryptOutput`](crate::output::DecryptOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3106,6 +3344,7 @@ impl std::fmt::Debug for CreateKeyOutput {
 }
 /// See [`CreateKeyOutput`](crate::output::CreateKeyOutput)
 pub mod create_key_output {
+
     /// A builder for [`CreateKeyOutput`](crate::output::CreateKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3174,6 +3413,7 @@ impl std::fmt::Debug for CreateGrantOutput {
 }
 /// See [`CreateGrantOutput`](crate::output::CreateGrantOutput)
 pub mod create_grant_output {
+
     /// A builder for [`CreateGrantOutput`](crate::output::CreateGrantOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3244,6 +3484,7 @@ impl std::fmt::Debug for CreateCustomKeyStoreOutput {
 }
 /// See [`CreateCustomKeyStoreOutput`](crate::output::CreateCustomKeyStoreOutput)
 pub mod create_custom_key_store_output {
+
     /// A builder for [`CreateCustomKeyStoreOutput`](crate::output::CreateCustomKeyStoreOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3291,6 +3532,7 @@ impl std::fmt::Debug for CreateAliasOutput {
 }
 /// See [`CreateAliasOutput`](crate::output::CreateAliasOutput)
 pub mod create_alias_output {
+
     /// A builder for [`CreateAliasOutput`](crate::output::CreateAliasOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3321,6 +3563,7 @@ impl std::fmt::Debug for ConnectCustomKeyStoreOutput {
 }
 /// See [`ConnectCustomKeyStoreOutput`](crate::output::ConnectCustomKeyStoreOutput)
 pub mod connect_custom_key_store_output {
+
     /// A builder for [`ConnectCustomKeyStoreOutput`](crate::output::ConnectCustomKeyStoreOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3361,6 +3604,7 @@ impl std::fmt::Debug for CancelKeyDeletionOutput {
 }
 /// See [`CancelKeyDeletionOutput`](crate::output::CancelKeyDeletionOutput)
 pub mod cancel_key_deletion_output {
+
     /// A builder for [`CancelKeyDeletionOutput`](crate::output::CancelKeyDeletionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

@@ -120,6 +120,7 @@ impl Client {
     ///   - [`anomaly_detector_arn(impl Into<String>)`](crate::client::fluent_builders::CreateAlert::anomaly_detector_arn) / [`set_anomaly_detector_arn(Option<String>)`](crate::client::fluent_builders::CreateAlert::set_anomaly_detector_arn): <p>The ARN of the detector to which the alert is attached.</p>
     ///   - [`action(Action)`](crate::client::fluent_builders::CreateAlert::action) / [`set_action(Option<Action>)`](crate::client::fluent_builders::CreateAlert::set_action): <p>Action that will be triggered when there is an alert.</p>
     ///   - [`tags(HashMap<String, String>)`](crate::client::fluent_builders::CreateAlert::tags) / [`set_tags(Option<HashMap<String, String>>)`](crate::client::fluent_builders::CreateAlert::set_tags): <p>A list of <a href="https://docs.aws.amazon.com/lookoutmetrics/latest/dev/detectors-tags.html">tags</a> to apply to the alert.</p>
+    ///   - [`alert_filters(AlertFilters)`](crate::client::fluent_builders::CreateAlert::alert_filters) / [`set_alert_filters(Option<AlertFilters>)`](crate::client::fluent_builders::CreateAlert::set_alert_filters): <p>The configuration of the alert filters, containing MetricList and DimensionFilterList.</p>
     /// - On success, responds with [`CreateAlertOutput`](crate::output::CreateAlertOutput) with field(s):
     ///   - [`alert_arn(Option<String>)`](crate::output::CreateAlertOutput::alert_arn): <p>The ARN of the alert.</p>
     /// - On failure, responds with [`SdkError<CreateAlertError>`](crate::error::CreateAlertError)
@@ -257,6 +258,17 @@ impl Client {
     /// - On failure, responds with [`SdkError<DescribeMetricSetError>`](crate::error::DescribeMetricSetError)
     pub fn describe_metric_set(&self) -> fluent_builders::DescribeMetricSet {
         fluent_builders::DescribeMetricSet::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`DetectMetricSetConfig`](crate::client::fluent_builders::DetectMetricSetConfig) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`anomaly_detector_arn(impl Into<String>)`](crate::client::fluent_builders::DetectMetricSetConfig::anomaly_detector_arn) / [`set_anomaly_detector_arn(Option<String>)`](crate::client::fluent_builders::DetectMetricSetConfig::set_anomaly_detector_arn): <p>An anomaly detector ARN.</p>
+    ///   - [`auto_detection_metric_source(AutoDetectionMetricSource)`](crate::client::fluent_builders::DetectMetricSetConfig::auto_detection_metric_source) / [`set_auto_detection_metric_source(Option<AutoDetectionMetricSource>)`](crate::client::fluent_builders::DetectMetricSetConfig::set_auto_detection_metric_source): <p>A data source.</p>
+    /// - On success, responds with [`DetectMetricSetConfigOutput`](crate::output::DetectMetricSetConfigOutput) with field(s):
+    ///   - [`detected_metric_set_config(Option<DetectedMetricSetConfig>)`](crate::output::DetectMetricSetConfigOutput::detected_metric_set_config): <p>The inferred dataset configuration for the datasource.</p>
+    /// - On failure, responds with [`SdkError<DetectMetricSetConfigError>`](crate::error::DetectMetricSetConfigError)
+    pub fn detect_metric_set_config(&self) -> fluent_builders::DetectMetricSetConfig {
+        fluent_builders::DetectMetricSetConfig::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`GetAnomalyGroup`](crate::client::fluent_builders::GetAnomalyGroup) operation.
     ///
@@ -432,6 +444,20 @@ impl Client {
     pub fn untag_resource(&self) -> fluent_builders::UntagResource {
         fluent_builders::UntagResource::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`UpdateAlert`](crate::client::fluent_builders::UpdateAlert) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`alert_arn(impl Into<String>)`](crate::client::fluent_builders::UpdateAlert::alert_arn) / [`set_alert_arn(Option<String>)`](crate::client::fluent_builders::UpdateAlert::set_alert_arn): <p>The ARN of the alert to update.</p>
+    ///   - [`alert_description(impl Into<String>)`](crate::client::fluent_builders::UpdateAlert::alert_description) / [`set_alert_description(Option<String>)`](crate::client::fluent_builders::UpdateAlert::set_alert_description): <p>A description of the alert.</p>
+    ///   - [`alert_sensitivity_threshold(i32)`](crate::client::fluent_builders::UpdateAlert::alert_sensitivity_threshold) / [`set_alert_sensitivity_threshold(i32)`](crate::client::fluent_builders::UpdateAlert::set_alert_sensitivity_threshold): <p>An integer from 0 to 100 specifying the alert sensitivity threshold.</p>
+    ///   - [`action(Action)`](crate::client::fluent_builders::UpdateAlert::action) / [`set_action(Option<Action>)`](crate::client::fluent_builders::UpdateAlert::set_action): <p>Action that will be triggered when there is an alert.</p>
+    ///   - [`alert_filters(AlertFilters)`](crate::client::fluent_builders::UpdateAlert::alert_filters) / [`set_alert_filters(Option<AlertFilters>)`](crate::client::fluent_builders::UpdateAlert::set_alert_filters): <p>The configuration of the alert filters, containing MetricList and DimensionFilterList.</p>
+    /// - On success, responds with [`UpdateAlertOutput`](crate::output::UpdateAlertOutput) with field(s):
+    ///   - [`alert_arn(Option<String>)`](crate::output::UpdateAlertOutput::alert_arn): <p>The ARN of the updated alert.</p>
+    /// - On failure, responds with [`SdkError<UpdateAlertError>`](crate::error::UpdateAlertError)
+    pub fn update_alert(&self) -> fluent_builders::UpdateAlert {
+        fluent_builders::UpdateAlert::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`UpdateAnomalyDetector`](crate::client::fluent_builders::UpdateAnomalyDetector) operation.
     ///
     /// - The fluent builder is configurable:
@@ -455,7 +481,7 @@ impl Client {
     ///   - [`timestamp_column(TimestampColumn)`](crate::client::fluent_builders::UpdateMetricSet::timestamp_column) / [`set_timestamp_column(Option<TimestampColumn>)`](crate::client::fluent_builders::UpdateMetricSet::set_timestamp_column): <p>The timestamp column.</p>
     ///   - [`dimension_list(Vec<String>)`](crate::client::fluent_builders::UpdateMetricSet::dimension_list) / [`set_dimension_list(Option<Vec<String>>)`](crate::client::fluent_builders::UpdateMetricSet::set_dimension_list): <p>The dimension list.</p>
     ///   - [`metric_set_frequency(Frequency)`](crate::client::fluent_builders::UpdateMetricSet::metric_set_frequency) / [`set_metric_set_frequency(Option<Frequency>)`](crate::client::fluent_builders::UpdateMetricSet::set_metric_set_frequency): <p>The dataset's interval.</p>
-    ///   - [`metric_source(MetricSource)`](crate::client::fluent_builders::UpdateMetricSet::metric_source) / [`set_metric_source(Option<MetricSource>)`](crate::client::fluent_builders::UpdateMetricSet::set_metric_source): <p>Contains information about source data used to generate a metric.</p>
+    ///   - [`metric_source(MetricSource)`](crate::client::fluent_builders::UpdateMetricSet::metric_source) / [`set_metric_source(Option<MetricSource>)`](crate::client::fluent_builders::UpdateMetricSet::set_metric_source): <p>Contains information about source data used to generate metrics.</p>
     /// - On success, responds with [`UpdateMetricSetOutput`](crate::output::UpdateMetricSetOutput) with field(s):
     ///   - [`metric_set_arn(Option<String>)`](crate::output::UpdateMetricSetOutput::metric_set_arn): <p>The ARN of the dataset.</p>
     /// - On failure, responds with [`SdkError<UpdateMetricSetError>`](crate::error::UpdateMetricSetError)
@@ -464,13 +490,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `ActivateAnomalyDetector`.
     ///
     /// <p>Activates an anomaly detector.</p>
@@ -702,6 +727,19 @@ pub mod fluent_builders {
             >,
         ) -> Self {
             self.inner = self.inner.set_tags(input);
+            self
+        }
+        /// <p>The configuration of the alert filters, containing MetricList and DimensionFilterList.</p>
+        pub fn alert_filters(mut self, input: crate::model::AlertFilters) -> Self {
+            self.inner = self.inner.alert_filters(input);
+            self
+        }
+        /// <p>The configuration of the alert filters, containing MetricList and DimensionFilterList.</p>
+        pub fn set_alert_filters(
+            mut self,
+            input: std::option::Option<crate::model::AlertFilters>,
+        ) -> Self {
+            self.inner = self.inner.set_alert_filters(input);
             self
         }
     }
@@ -1453,6 +1491,78 @@ pub mod fluent_builders {
             input: std::option::Option<std::string::String>,
         ) -> Self {
             self.inner = self.inner.set_metric_set_arn(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `DetectMetricSetConfig`.
+    ///
+    /// <p>Detects an Amazon S3 dataset's file format, interval, and offset.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct DetectMetricSetConfig {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::detect_metric_set_config_input::Builder,
+    }
+    impl DetectMetricSetConfig {
+        /// Creates a new `DetectMetricSetConfig`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::DetectMetricSetConfigOutput,
+            aws_smithy_http::result::SdkError<crate::error::DetectMetricSetConfigError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>An anomaly detector ARN.</p>
+        pub fn anomaly_detector_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.anomaly_detector_arn(input.into());
+            self
+        }
+        /// <p>An anomaly detector ARN.</p>
+        pub fn set_anomaly_detector_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_anomaly_detector_arn(input);
+            self
+        }
+        /// <p>A data source.</p>
+        pub fn auto_detection_metric_source(
+            mut self,
+            input: crate::model::AutoDetectionMetricSource,
+        ) -> Self {
+            self.inner = self.inner.auto_detection_metric_source(input);
+            self
+        }
+        /// <p>A data source.</p>
+        pub fn set_auto_detection_metric_source(
+            mut self,
+            input: std::option::Option<crate::model::AutoDetectionMetricSource>,
+        ) -> Self {
+            self.inner = self.inner.set_auto_detection_metric_source(input);
             self
         }
     }
@@ -2491,6 +2601,105 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `UpdateAlert`.
+    ///
+    /// <p>Make changes to an existing alert.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct UpdateAlert {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::update_alert_input::Builder,
+    }
+    impl UpdateAlert {
+        /// Creates a new `UpdateAlert`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::UpdateAlertOutput,
+            aws_smithy_http::result::SdkError<crate::error::UpdateAlertError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The ARN of the alert to update.</p>
+        pub fn alert_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.alert_arn(input.into());
+            self
+        }
+        /// <p>The ARN of the alert to update.</p>
+        pub fn set_alert_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_alert_arn(input);
+            self
+        }
+        /// <p>A description of the alert.</p>
+        pub fn alert_description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.alert_description(input.into());
+            self
+        }
+        /// <p>A description of the alert.</p>
+        pub fn set_alert_description(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_alert_description(input);
+            self
+        }
+        /// <p>An integer from 0 to 100 specifying the alert sensitivity threshold.</p>
+        pub fn alert_sensitivity_threshold(mut self, input: i32) -> Self {
+            self.inner = self.inner.alert_sensitivity_threshold(input);
+            self
+        }
+        /// <p>An integer from 0 to 100 specifying the alert sensitivity threshold.</p>
+        pub fn set_alert_sensitivity_threshold(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_alert_sensitivity_threshold(input);
+            self
+        }
+        /// <p>Action that will be triggered when there is an alert.</p>
+        pub fn action(mut self, input: crate::model::Action) -> Self {
+            self.inner = self.inner.action(input);
+            self
+        }
+        /// <p>Action that will be triggered when there is an alert.</p>
+        pub fn set_action(mut self, input: std::option::Option<crate::model::Action>) -> Self {
+            self.inner = self.inner.set_action(input);
+            self
+        }
+        /// <p>The configuration of the alert filters, containing MetricList and DimensionFilterList.</p>
+        pub fn alert_filters(mut self, input: crate::model::AlertFilters) -> Self {
+            self.inner = self.inner.alert_filters(input);
+            self
+        }
+        /// <p>The configuration of the alert filters, containing MetricList and DimensionFilterList.</p>
+        pub fn set_alert_filters(
+            mut self,
+            input: std::option::Option<crate::model::AlertFilters>,
+        ) -> Self {
+            self.inner = self.inner.set_alert_filters(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `UpdateAnomalyDetector`.
     ///
     /// <p>Updates a detector. After activation, you can only change a detector's ingestion delay and description.</p>
@@ -2727,12 +2936,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_metric_set_frequency(input);
             self
         }
-        /// <p>Contains information about source data used to generate a metric.</p>
+        /// <p>Contains information about source data used to generate metrics.</p>
         pub fn metric_source(mut self, input: crate::model::MetricSource) -> Self {
             self.inner = self.inner.metric_source(input);
             self
         }
-        /// <p>Contains information about source data used to generate a metric.</p>
+        /// <p>Contains information about source data used to generate metrics.</p>
         pub fn set_metric_source(
             mut self,
             input: std::option::Option<crate::model::MetricSource>,

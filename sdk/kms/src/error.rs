@@ -19,7 +19,7 @@ pub enum CancelKeyDeletionErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -322,7 +322,7 @@ pub enum CreateAliasErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because a quota was exceeded. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html">Quotas</a> in the <i>Key Management Service Developer Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
@@ -654,7 +654,7 @@ pub enum CreateGrantErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because a quota was exceeded. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html">Quotas</a> in the <i>Key Management Service Developer Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
@@ -1014,7 +1014,7 @@ pub enum DecryptErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -1022,7 +1022,7 @@ pub enum DecryptErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -1173,7 +1173,7 @@ pub enum DeleteAliasErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -1432,7 +1432,7 @@ pub enum DeleteImportedKeyMaterialErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -1821,7 +1821,7 @@ pub enum DisableKeyErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -1949,7 +1949,7 @@ pub enum DisableKeyRotationErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -2236,7 +2236,7 @@ pub enum EnableKeyErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because a quota was exceeded. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html">Quotas</a> in the <i>Key Management Service Developer Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
@@ -2372,7 +2372,7 @@ pub enum EnableKeyRotationErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -2528,7 +2528,7 @@ pub enum EncryptErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -2536,7 +2536,7 @@ pub enum EncryptErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -2681,7 +2681,7 @@ pub enum GenerateDataKeyErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -2689,7 +2689,7 @@ pub enum GenerateDataKeyErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -2852,7 +2852,7 @@ pub enum GenerateDataKeyPairErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -2860,7 +2860,7 @@ pub enum GenerateDataKeyPairErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -3040,7 +3040,7 @@ pub enum GenerateDataKeyPairWithoutPlaintextErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -3048,7 +3048,7 @@ pub enum GenerateDataKeyPairWithoutPlaintextErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -3265,7 +3265,7 @@ pub enum GenerateDataKeyWithoutPlaintextErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -3273,7 +3273,7 @@ pub enum GenerateDataKeyWithoutPlaintextErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -3441,6 +3441,160 @@ impl std::error::Error for GenerateDataKeyWithoutPlaintextError {
     }
 }
 
+/// Error type for the `GenerateMac` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct GenerateMacError {
+    /// Kind of error that occurred.
+    pub kind: GenerateMacErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `GenerateMac` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum GenerateMacErrorKind {
+    /// <p>The request was rejected because the specified KMS key is not enabled.</p>
+    DisabledException(crate::error::DisabledException),
+    /// <p>The request was rejected because the specified grant token is not valid.</p>
+    InvalidGrantTokenException(crate::error::InvalidGrantTokenException),
+    /// <p>The request was rejected for one of the following reasons: </p>
+    /// <ul>
+    /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
+    /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
+    /// </ul>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
+    InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
+    /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
+    KeyUnavailableException(crate::error::KeyUnavailableException),
+    /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
+    KmsInternalException(crate::error::KmsInternalException),
+    /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    KmsInvalidStateException(crate::error::KmsInvalidStateException),
+    /// <p>The request was rejected because the specified entity or resource could not be found.</p>
+    NotFoundException(crate::error::NotFoundException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for GenerateMacError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            GenerateMacErrorKind::DisabledException(_inner) => _inner.fmt(f),
+            GenerateMacErrorKind::InvalidGrantTokenException(_inner) => _inner.fmt(f),
+            GenerateMacErrorKind::InvalidKeyUsageException(_inner) => _inner.fmt(f),
+            GenerateMacErrorKind::KeyUnavailableException(_inner) => _inner.fmt(f),
+            GenerateMacErrorKind::KmsInternalException(_inner) => _inner.fmt(f),
+            GenerateMacErrorKind::KmsInvalidStateException(_inner) => _inner.fmt(f),
+            GenerateMacErrorKind::NotFoundException(_inner) => _inner.fmt(f),
+            GenerateMacErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for GenerateMacError {
+    fn code(&self) -> Option<&str> {
+        GenerateMacError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl GenerateMacError {
+    /// Creates a new `GenerateMacError`.
+    pub fn new(kind: GenerateMacErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `GenerateMacError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: GenerateMacErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `GenerateMacError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: GenerateMacErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `GenerateMacErrorKind::DisabledException`.
+    pub fn is_disabled_exception(&self) -> bool {
+        matches!(&self.kind, GenerateMacErrorKind::DisabledException(_))
+    }
+    /// Returns `true` if the error kind is `GenerateMacErrorKind::InvalidGrantTokenException`.
+    pub fn is_invalid_grant_token_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GenerateMacErrorKind::InvalidGrantTokenException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GenerateMacErrorKind::InvalidKeyUsageException`.
+    pub fn is_invalid_key_usage_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GenerateMacErrorKind::InvalidKeyUsageException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GenerateMacErrorKind::KeyUnavailableException`.
+    pub fn is_key_unavailable_exception(&self) -> bool {
+        matches!(&self.kind, GenerateMacErrorKind::KeyUnavailableException(_))
+    }
+    /// Returns `true` if the error kind is `GenerateMacErrorKind::KmsInternalException`.
+    pub fn is_kms_internal_exception(&self) -> bool {
+        matches!(&self.kind, GenerateMacErrorKind::KmsInternalException(_))
+    }
+    /// Returns `true` if the error kind is `GenerateMacErrorKind::KmsInvalidStateException`.
+    pub fn is_kms_invalid_state_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GenerateMacErrorKind::KmsInvalidStateException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GenerateMacErrorKind::NotFoundException`.
+    pub fn is_not_found_exception(&self) -> bool {
+        matches!(&self.kind, GenerateMacErrorKind::NotFoundException(_))
+    }
+}
+impl std::error::Error for GenerateMacError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            GenerateMacErrorKind::DisabledException(_inner) => Some(_inner),
+            GenerateMacErrorKind::InvalidGrantTokenException(_inner) => Some(_inner),
+            GenerateMacErrorKind::InvalidKeyUsageException(_inner) => Some(_inner),
+            GenerateMacErrorKind::KeyUnavailableException(_inner) => Some(_inner),
+            GenerateMacErrorKind::KmsInternalException(_inner) => Some(_inner),
+            GenerateMacErrorKind::KmsInvalidStateException(_inner) => Some(_inner),
+            GenerateMacErrorKind::NotFoundException(_inner) => Some(_inner),
+            GenerateMacErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `GenerateRandom` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -3590,7 +3744,7 @@ pub enum GetKeyPolicyErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -3719,7 +3873,7 @@ pub enum GetKeyRotationStatusErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -3868,7 +4022,7 @@ pub enum GetParametersForImportErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -4023,7 +4177,7 @@ pub enum GetPublicKeyErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -4031,7 +4185,7 @@ pub enum GetPublicKeyErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -4213,7 +4367,7 @@ pub enum ImportKeyMaterialErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -4524,7 +4678,7 @@ pub enum ListGrantsErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -4662,7 +4816,7 @@ pub enum ListKeyPoliciesErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5160,7 +5314,7 @@ pub enum PutKeyPolicyErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because a quota was exceeded. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html">Quotas</a> in the <i>Key Management Service Developer Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
@@ -5328,7 +5482,7 @@ pub enum ReEncryptErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -5336,7 +5490,7 @@ pub enum ReEncryptErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5500,7 +5654,7 @@ pub enum ReplicateKeyErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because a quota was exceeded. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html">Quotas</a> in the <i>Key Management Service Developer Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
@@ -5674,7 +5828,7 @@ pub enum RetireGrantErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5820,7 +5974,7 @@ pub enum RevokeGrantErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -5955,7 +6109,7 @@ pub enum ScheduleKeyDeletionErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -6097,7 +6251,7 @@ pub enum SignErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -6105,7 +6259,7 @@ pub enum SignErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -6244,7 +6398,7 @@ pub enum TagResourceErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because a quota was exceeded. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html">Quotas</a> in the <i>Key Management Service Developer Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
@@ -6378,7 +6532,7 @@ pub enum UntagResourceErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -6504,7 +6658,7 @@ pub enum UpdateAliasErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because a quota was exceeded. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html">Quotas</a> in the <i>Key Management Service Developer Guide</i>.</p>
     LimitExceededException(crate::error::LimitExceededException),
@@ -6842,7 +6996,7 @@ pub enum UpdateKeyDescriptionErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -6980,7 +7134,7 @@ pub enum UpdatePrimaryRegionErrorKind {
     /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
     KmsInternalException(crate::error::KmsInternalException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -7133,7 +7287,7 @@ pub enum VerifyErrorKind {
     /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
     /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
     /// </ul>
-    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
     /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
     InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
     /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
@@ -7143,7 +7297,7 @@ pub enum VerifyErrorKind {
     /// <p>The request was rejected because the signature verification failed. Signature verification fails when it cannot confirm that signature was produced by signing the specified message with the specified KMS key and signing algorithm.</p>
     KmsInvalidSignatureException(crate::error::KmsInvalidSignatureException),
     /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
     KmsInvalidStateException(crate::error::KmsInvalidStateException),
     /// <p>The request was rejected because the specified entity or resource could not be found.</p>
     NotFoundException(crate::error::NotFoundException),
@@ -7270,6 +7424,162 @@ impl std::error::Error for VerifyError {
     }
 }
 
+/// Error type for the `VerifyMac` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct VerifyMacError {
+    /// Kind of error that occurred.
+    pub kind: VerifyMacErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `VerifyMac` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum VerifyMacErrorKind {
+    /// <p>The request was rejected because the specified KMS key is not enabled.</p>
+    DisabledException(crate::error::DisabledException),
+    /// <p>The request was rejected because the specified grant token is not valid.</p>
+    InvalidGrantTokenException(crate::error::InvalidGrantTokenException),
+    /// <p>The request was rejected for one of the following reasons: </p>
+    /// <ul>
+    /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
+    /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
+    /// </ul>
+    /// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+    /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
+    InvalidKeyUsageException(crate::error::InvalidKeyUsageException),
+    /// <p>The request was rejected because the specified KMS key was not available. You can retry the request.</p>
+    KeyUnavailableException(crate::error::KeyUnavailableException),
+    /// <p>The request was rejected because an internal exception occurred. The request can be retried.</p>
+    KmsInternalException(crate::error::KmsInternalException),
+    /// <p>The request was rejected because the HMAC verification failed. HMAC verification fails when the HMAC computed by using the specified message, HMAC KMS key, and MAC algorithm does not match the HMAC specified in the request.</p>
+    KmsInvalidMacException(crate::error::KmsInvalidMacException),
+    /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
+    /// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+    KmsInvalidStateException(crate::error::KmsInvalidStateException),
+    /// <p>The request was rejected because the specified entity or resource could not be found.</p>
+    NotFoundException(crate::error::NotFoundException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for VerifyMacError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            VerifyMacErrorKind::DisabledException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::InvalidGrantTokenException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::InvalidKeyUsageException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::KeyUnavailableException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::KmsInternalException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::KmsInvalidMacException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::KmsInvalidStateException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::NotFoundException(_inner) => _inner.fmt(f),
+            VerifyMacErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for VerifyMacError {
+    fn code(&self) -> Option<&str> {
+        VerifyMacError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl VerifyMacError {
+    /// Creates a new `VerifyMacError`.
+    pub fn new(kind: VerifyMacErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `VerifyMacError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: VerifyMacErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `VerifyMacError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: VerifyMacErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::DisabledException`.
+    pub fn is_disabled_exception(&self) -> bool {
+        matches!(&self.kind, VerifyMacErrorKind::DisabledException(_))
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::InvalidGrantTokenException`.
+    pub fn is_invalid_grant_token_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            VerifyMacErrorKind::InvalidGrantTokenException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::InvalidKeyUsageException`.
+    pub fn is_invalid_key_usage_exception(&self) -> bool {
+        matches!(&self.kind, VerifyMacErrorKind::InvalidKeyUsageException(_))
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::KeyUnavailableException`.
+    pub fn is_key_unavailable_exception(&self) -> bool {
+        matches!(&self.kind, VerifyMacErrorKind::KeyUnavailableException(_))
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::KmsInternalException`.
+    pub fn is_kms_internal_exception(&self) -> bool {
+        matches!(&self.kind, VerifyMacErrorKind::KmsInternalException(_))
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::KmsInvalidMacException`.
+    pub fn is_kms_invalid_mac_exception(&self) -> bool {
+        matches!(&self.kind, VerifyMacErrorKind::KmsInvalidMacException(_))
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::KmsInvalidStateException`.
+    pub fn is_kms_invalid_state_exception(&self) -> bool {
+        matches!(&self.kind, VerifyMacErrorKind::KmsInvalidStateException(_))
+    }
+    /// Returns `true` if the error kind is `VerifyMacErrorKind::NotFoundException`.
+    pub fn is_not_found_exception(&self) -> bool {
+        matches!(&self.kind, VerifyMacErrorKind::NotFoundException(_))
+    }
+}
+impl std::error::Error for VerifyMacError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            VerifyMacErrorKind::DisabledException(_inner) => Some(_inner),
+            VerifyMacErrorKind::InvalidGrantTokenException(_inner) => Some(_inner),
+            VerifyMacErrorKind::InvalidKeyUsageException(_inner) => Some(_inner),
+            VerifyMacErrorKind::KeyUnavailableException(_inner) => Some(_inner),
+            VerifyMacErrorKind::KmsInternalException(_inner) => Some(_inner),
+            VerifyMacErrorKind::KmsInvalidMacException(_inner) => Some(_inner),
+            VerifyMacErrorKind::KmsInvalidStateException(_inner) => Some(_inner),
+            VerifyMacErrorKind::NotFoundException(_inner) => Some(_inner),
+            VerifyMacErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// <p>The request was rejected because the specified entity or resource could not be found.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -7302,6 +7612,7 @@ impl std::fmt::Display for NotFoundException {
 impl std::error::Error for NotFoundException {}
 /// See [`NotFoundException`](crate::error::NotFoundException)
 pub mod not_found_exception {
+
     /// A builder for [`NotFoundException`](crate::error::NotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7335,7 +7646,7 @@ impl NotFoundException {
 }
 
 /// <p>The request was rejected because the state of the specified resource is not valid for this request.</p>
-/// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
+/// <p>For more information about how key state affects the use of a KMS key, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key states of KMS keys</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct KmsInvalidStateException {
@@ -7367,6 +7678,7 @@ impl std::fmt::Display for KmsInvalidStateException {
 impl std::error::Error for KmsInvalidStateException {}
 /// See [`KmsInvalidStateException`](crate::error::KmsInvalidStateException)
 pub mod kms_invalid_state_exception {
+
     /// A builder for [`KmsInvalidStateException`](crate::error::KmsInvalidStateException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7399,42 +7711,40 @@ impl KmsInvalidStateException {
     }
 }
 
-/// <p>The request was rejected because the signature verification failed. Signature verification fails when it cannot confirm that signature was produced by signing the specified message with the specified KMS key and signing algorithm.</p>
+/// <p>The request was rejected because the HMAC verification failed. HMAC verification fails when the HMAC computed by using the specified message, HMAC KMS key, and MAC algorithm does not match the HMAC specified in the request.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct KmsInvalidSignatureException {
+pub struct KmsInvalidMacException {
     #[allow(missing_docs)] // documentation missing in model
     pub message: std::option::Option<std::string::String>,
 }
-impl std::fmt::Debug for KmsInvalidSignatureException {
+impl std::fmt::Debug for KmsInvalidMacException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("KmsInvalidSignatureException");
+        let mut formatter = f.debug_struct("KmsInvalidMacException");
         formatter.field("message", &self.message);
         formatter.finish()
     }
 }
-impl KmsInvalidSignatureException {
+impl KmsInvalidMacException {
     /// Returns the error message.
     pub fn message(&self) -> Option<&str> {
         self.message.as_deref()
     }
 }
-impl std::fmt::Display for KmsInvalidSignatureException {
+impl std::fmt::Display for KmsInvalidMacException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(
-            f,
-            "KmsInvalidSignatureException [KMSInvalidSignatureException]"
-        )?;
+        write!(f, "KmsInvalidMacException [KMSInvalidMacException]")?;
         if let Some(inner_3) = &self.message {
             write!(f, ": {}", inner_3)?;
         }
         Ok(())
     }
 }
-impl std::error::Error for KmsInvalidSignatureException {}
-/// See [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
-pub mod kms_invalid_signature_exception {
-    /// A builder for [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
+impl std::error::Error for KmsInvalidMacException {}
+/// See [`KmsInvalidMacException`](crate::error::KmsInvalidMacException)
+pub mod kms_invalid_mac_exception {
+
+    /// A builder for [`KmsInvalidMacException`](crate::error::KmsInvalidMacException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
@@ -7451,18 +7761,18 @@ pub mod kms_invalid_signature_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
-        pub fn build(self) -> crate::error::KmsInvalidSignatureException {
-            crate::error::KmsInvalidSignatureException {
+        /// Consumes the builder and constructs a [`KmsInvalidMacException`](crate::error::KmsInvalidMacException)
+        pub fn build(self) -> crate::error::KmsInvalidMacException {
+            crate::error::KmsInvalidMacException {
                 message: self.message,
             }
         }
     }
 }
-impl KmsInvalidSignatureException {
-    /// Creates a new builder-style object to manufacture [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
-    pub fn builder() -> crate::error::kms_invalid_signature_exception::Builder {
-        crate::error::kms_invalid_signature_exception::Builder::default()
+impl KmsInvalidMacException {
+    /// Creates a new builder-style object to manufacture [`KmsInvalidMacException`](crate::error::KmsInvalidMacException)
+    pub fn builder() -> crate::error::kms_invalid_mac_exception::Builder {
+        crate::error::kms_invalid_mac_exception::Builder::default()
     }
 }
 
@@ -7498,6 +7808,7 @@ impl std::fmt::Display for KmsInternalException {
 impl std::error::Error for KmsInternalException {}
 /// See [`KmsInternalException`](crate::error::KmsInternalException)
 pub mod kms_internal_exception {
+
     /// A builder for [`KmsInternalException`](crate::error::KmsInternalException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7562,6 +7873,7 @@ impl std::fmt::Display for KeyUnavailableException {
 impl std::error::Error for KeyUnavailableException {}
 /// See [`KeyUnavailableException`](crate::error::KeyUnavailableException)
 pub mod key_unavailable_exception {
+
     /// A builder for [`KeyUnavailableException`](crate::error::KeyUnavailableException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7599,7 +7911,7 @@ impl KeyUnavailableException {
 /// <li> <p>The <code>KeyUsage</code> value of the KMS key is incompatible with the API operation.</p> </li>
 /// <li> <p>The encryption algorithm or signing algorithm specified for the operation is incompatible with the type of key material in the KMS key <code>(KeySpec</code>).</p> </li>
 /// </ul>
-/// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
+/// <p>For encrypting, decrypting, re-encrypting, and generating data keys, the <code>KeyUsage</code> must be <code>ENCRYPT_DECRYPT</code>. For signing and verifying messages, the <code>KeyUsage</code> must be <code>SIGN_VERIFY</code>. For generating and verifying message authentication codes (MACs), the <code>KeyUsage</code> must be <code>GENERATE_VERIFY_MAC</code>. To find the <code>KeyUsage</code> of a KMS key, use the <code>DescribeKey</code> operation.</p>
 /// <p>To find the encryption or signing algorithms supported for a particular KMS key, use the <code>DescribeKey</code> operation.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -7632,6 +7944,7 @@ impl std::fmt::Display for InvalidKeyUsageException {
 impl std::error::Error for InvalidKeyUsageException {}
 /// See [`InvalidKeyUsageException`](crate::error::InvalidKeyUsageException)
 pub mod invalid_key_usage_exception {
+
     /// A builder for [`InvalidKeyUsageException`](crate::error::InvalidKeyUsageException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7696,6 +8009,7 @@ impl std::fmt::Display for InvalidGrantTokenException {
 impl std::error::Error for InvalidGrantTokenException {}
 /// See [`InvalidGrantTokenException`](crate::error::InvalidGrantTokenException)
 pub mod invalid_grant_token_exception {
+
     /// A builder for [`InvalidGrantTokenException`](crate::error::InvalidGrantTokenException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7760,6 +8074,7 @@ impl std::fmt::Display for DisabledException {
 impl std::error::Error for DisabledException {}
 /// See [`DisabledException`](crate::error::DisabledException)
 pub mod disabled_exception {
+
     /// A builder for [`DisabledException`](crate::error::DisabledException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7792,6 +8107,74 @@ impl DisabledException {
     }
 }
 
+/// <p>The request was rejected because the signature verification failed. Signature verification fails when it cannot confirm that signature was produced by signing the specified message with the specified KMS key and signing algorithm.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct KmsInvalidSignatureException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for KmsInvalidSignatureException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("KmsInvalidSignatureException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl KmsInvalidSignatureException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for KmsInvalidSignatureException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "KmsInvalidSignatureException [KMSInvalidSignatureException]"
+        )?;
+        if let Some(inner_9) = &self.message {
+            write!(f, ": {}", inner_9)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for KmsInvalidSignatureException {}
+/// See [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
+pub mod kms_invalid_signature_exception {
+
+    /// A builder for [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
+        pub fn build(self) -> crate::error::KmsInvalidSignatureException {
+            crate::error::KmsInvalidSignatureException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl KmsInvalidSignatureException {
+    /// Creates a new builder-style object to manufacture [`KmsInvalidSignatureException`](crate::error::KmsInvalidSignatureException)
+    pub fn builder() -> crate::error::kms_invalid_signature_exception::Builder {
+        crate::error::kms_invalid_signature_exception::Builder::default()
+    }
+}
+
 /// <p>The system timed out while trying to fulfill the request. The request can be retried.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -7815,8 +8198,8 @@ impl DependencyTimeoutException {
 impl std::fmt::Display for DependencyTimeoutException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DependencyTimeoutException")?;
-        if let Some(inner_9) = &self.message {
-            write!(f, ": {}", inner_9)?;
+        if let Some(inner_10) = &self.message {
+            write!(f, ": {}", inner_10)?;
         }
         Ok(())
     }
@@ -7824,6 +8207,7 @@ impl std::fmt::Display for DependencyTimeoutException {
 impl std::error::Error for DependencyTimeoutException {}
 /// See [`DependencyTimeoutException`](crate::error::DependencyTimeoutException)
 pub mod dependency_timeout_exception {
+
     /// A builder for [`DependencyTimeoutException`](crate::error::DependencyTimeoutException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7879,8 +8263,8 @@ impl UnsupportedOperationException {
 impl std::fmt::Display for UnsupportedOperationException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "UnsupportedOperationException")?;
-        if let Some(inner_10) = &self.message {
-            write!(f, ": {}", inner_10)?;
+        if let Some(inner_11) = &self.message {
+            write!(f, ": {}", inner_11)?;
         }
         Ok(())
     }
@@ -7888,6 +8272,7 @@ impl std::fmt::Display for UnsupportedOperationException {
 impl std::error::Error for UnsupportedOperationException {}
 /// See [`UnsupportedOperationException`](crate::error::UnsupportedOperationException)
 pub mod unsupported_operation_exception {
+
     /// A builder for [`UnsupportedOperationException`](crate::error::UnsupportedOperationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7943,8 +8328,8 @@ impl InvalidArnException {
 impl std::fmt::Display for InvalidArnException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidArnException")?;
-        if let Some(inner_11) = &self.message {
-            write!(f, ": {}", inner_11)?;
+        if let Some(inner_12) = &self.message {
+            write!(f, ": {}", inner_12)?;
         }
         Ok(())
     }
@@ -7952,6 +8337,7 @@ impl std::fmt::Display for InvalidArnException {
 impl std::error::Error for InvalidArnException {}
 /// See [`InvalidArnException`](crate::error::InvalidArnException)
 pub mod invalid_arn_exception {
+
     /// A builder for [`InvalidArnException`](crate::error::InvalidArnException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8007,8 +8393,8 @@ impl CustomKeyStoreNotFoundException {
 impl std::fmt::Display for CustomKeyStoreNotFoundException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CustomKeyStoreNotFoundException")?;
-        if let Some(inner_12) = &self.message {
-            write!(f, ": {}", inner_12)?;
+        if let Some(inner_13) = &self.message {
+            write!(f, ": {}", inner_13)?;
         }
         Ok(())
     }
@@ -8016,6 +8402,7 @@ impl std::fmt::Display for CustomKeyStoreNotFoundException {
 impl std::error::Error for CustomKeyStoreNotFoundException {}
 /// See [`CustomKeyStoreNotFoundException`](crate::error::CustomKeyStoreNotFoundException)
 pub mod custom_key_store_not_found_exception {
+
     /// A builder for [`CustomKeyStoreNotFoundException`](crate::error::CustomKeyStoreNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8071,8 +8458,8 @@ impl CustomKeyStoreNameInUseException {
 impl std::fmt::Display for CustomKeyStoreNameInUseException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CustomKeyStoreNameInUseException")?;
-        if let Some(inner_13) = &self.message {
-            write!(f, ": {}", inner_13)?;
+        if let Some(inner_14) = &self.message {
+            write!(f, ": {}", inner_14)?;
         }
         Ok(())
     }
@@ -8080,6 +8467,7 @@ impl std::fmt::Display for CustomKeyStoreNameInUseException {
 impl std::error::Error for CustomKeyStoreNameInUseException {}
 /// See [`CustomKeyStoreNameInUseException`](crate::error::CustomKeyStoreNameInUseException)
 pub mod custom_key_store_name_in_use_exception {
+
     /// A builder for [`CustomKeyStoreNameInUseException`](crate::error::CustomKeyStoreNameInUseException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8141,8 +8529,8 @@ impl CustomKeyStoreInvalidStateException {
 impl std::fmt::Display for CustomKeyStoreInvalidStateException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CustomKeyStoreInvalidStateException")?;
-        if let Some(inner_14) = &self.message {
-            write!(f, ": {}", inner_14)?;
+        if let Some(inner_15) = &self.message {
+            write!(f, ": {}", inner_15)?;
         }
         Ok(())
     }
@@ -8150,6 +8538,7 @@ impl std::fmt::Display for CustomKeyStoreInvalidStateException {
 impl std::error::Error for CustomKeyStoreInvalidStateException {}
 /// See [`CustomKeyStoreInvalidStateException`](crate::error::CustomKeyStoreInvalidStateException)
 pub mod custom_key_store_invalid_state_exception {
+
     /// A builder for [`CustomKeyStoreInvalidStateException`](crate::error::CustomKeyStoreInvalidStateException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8207,8 +8596,8 @@ impl CloudHsmClusterNotRelatedException {
 impl std::fmt::Display for CloudHsmClusterNotRelatedException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CloudHsmClusterNotRelatedException")?;
-        if let Some(inner_15) = &self.message {
-            write!(f, ": {}", inner_15)?;
+        if let Some(inner_16) = &self.message {
+            write!(f, ": {}", inner_16)?;
         }
         Ok(())
     }
@@ -8216,6 +8605,7 @@ impl std::fmt::Display for CloudHsmClusterNotRelatedException {
 impl std::error::Error for CloudHsmClusterNotRelatedException {}
 /// See [`CloudHsmClusterNotRelatedException`](crate::error::CloudHsmClusterNotRelatedException)
 pub mod cloud_hsm_cluster_not_related_exception {
+
     /// A builder for [`CloudHsmClusterNotRelatedException`](crate::error::CloudHsmClusterNotRelatedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8271,8 +8661,8 @@ impl CloudHsmClusterNotFoundException {
 impl std::fmt::Display for CloudHsmClusterNotFoundException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CloudHsmClusterNotFoundException")?;
-        if let Some(inner_16) = &self.message {
-            write!(f, ": {}", inner_16)?;
+        if let Some(inner_17) = &self.message {
+            write!(f, ": {}", inner_17)?;
         }
         Ok(())
     }
@@ -8280,6 +8670,7 @@ impl std::fmt::Display for CloudHsmClusterNotFoundException {
 impl std::error::Error for CloudHsmClusterNotFoundException {}
 /// See [`CloudHsmClusterNotFoundException`](crate::error::CloudHsmClusterNotFoundException)
 pub mod cloud_hsm_cluster_not_found_exception {
+
     /// A builder for [`CloudHsmClusterNotFoundException`](crate::error::CloudHsmClusterNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8335,8 +8726,8 @@ impl CloudHsmClusterNotActiveException {
 impl std::fmt::Display for CloudHsmClusterNotActiveException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CloudHsmClusterNotActiveException")?;
-        if let Some(inner_17) = &self.message {
-            write!(f, ": {}", inner_17)?;
+        if let Some(inner_18) = &self.message {
+            write!(f, ": {}", inner_18)?;
         }
         Ok(())
     }
@@ -8344,6 +8735,7 @@ impl std::fmt::Display for CloudHsmClusterNotActiveException {
 impl std::error::Error for CloudHsmClusterNotActiveException {}
 /// See [`CloudHsmClusterNotActiveException`](crate::error::CloudHsmClusterNotActiveException)
 pub mod cloud_hsm_cluster_not_active_exception {
+
     /// A builder for [`CloudHsmClusterNotActiveException`](crate::error::CloudHsmClusterNotActiveException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8406,8 +8798,8 @@ impl CloudHsmClusterInvalidConfigurationException {
 impl std::fmt::Display for CloudHsmClusterInvalidConfigurationException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CloudHsmClusterInvalidConfigurationException")?;
-        if let Some(inner_18) = &self.message {
-            write!(f, ": {}", inner_18)?;
+        if let Some(inner_19) = &self.message {
+            write!(f, ": {}", inner_19)?;
         }
         Ok(())
     }
@@ -8415,6 +8807,7 @@ impl std::fmt::Display for CloudHsmClusterInvalidConfigurationException {
 impl std::error::Error for CloudHsmClusterInvalidConfigurationException {}
 /// See [`CloudHsmClusterInvalidConfigurationException`](crate::error::CloudHsmClusterInvalidConfigurationException)
 pub mod cloud_hsm_cluster_invalid_configuration_exception {
+
     /// A builder for [`CloudHsmClusterInvalidConfigurationException`](crate::error::CloudHsmClusterInvalidConfigurationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8470,8 +8863,8 @@ impl LimitExceededException {
 impl std::fmt::Display for LimitExceededException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "LimitExceededException")?;
-        if let Some(inner_19) = &self.message {
-            write!(f, ": {}", inner_19)?;
+        if let Some(inner_20) = &self.message {
+            write!(f, ": {}", inner_20)?;
         }
         Ok(())
     }
@@ -8479,6 +8872,7 @@ impl std::fmt::Display for LimitExceededException {
 impl std::error::Error for LimitExceededException {}
 /// See [`LimitExceededException`](crate::error::LimitExceededException)
 pub mod limit_exceeded_exception {
+
     /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8534,8 +8928,8 @@ impl TagException {
 impl std::fmt::Display for TagException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TagException")?;
-        if let Some(inner_20) = &self.message {
-            write!(f, ": {}", inner_20)?;
+        if let Some(inner_21) = &self.message {
+            write!(f, ": {}", inner_21)?;
         }
         Ok(())
     }
@@ -8543,6 +8937,7 @@ impl std::fmt::Display for TagException {
 impl std::error::Error for TagException {}
 /// See [`TagException`](crate::error::TagException)
 pub mod tag_exception {
+
     /// A builder for [`TagException`](crate::error::TagException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8598,8 +8993,8 @@ impl InvalidGrantIdException {
 impl std::fmt::Display for InvalidGrantIdException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidGrantIdException")?;
-        if let Some(inner_21) = &self.message {
-            write!(f, ": {}", inner_21)?;
+        if let Some(inner_22) = &self.message {
+            write!(f, ": {}", inner_22)?;
         }
         Ok(())
     }
@@ -8607,6 +9002,7 @@ impl std::fmt::Display for InvalidGrantIdException {
 impl std::error::Error for InvalidGrantIdException {}
 /// See [`InvalidGrantIdException`](crate::error::InvalidGrantIdException)
 pub mod invalid_grant_id_exception {
+
     /// A builder for [`InvalidGrantIdException`](crate::error::InvalidGrantIdException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8662,8 +9058,8 @@ impl MalformedPolicyDocumentException {
 impl std::fmt::Display for MalformedPolicyDocumentException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "MalformedPolicyDocumentException")?;
-        if let Some(inner_22) = &self.message {
-            write!(f, ": {}", inner_22)?;
+        if let Some(inner_23) = &self.message {
+            write!(f, ": {}", inner_23)?;
         }
         Ok(())
     }
@@ -8671,6 +9067,7 @@ impl std::fmt::Display for MalformedPolicyDocumentException {
 impl std::error::Error for MalformedPolicyDocumentException {}
 /// See [`MalformedPolicyDocumentException`](crate::error::MalformedPolicyDocumentException)
 pub mod malformed_policy_document_exception {
+
     /// A builder for [`MalformedPolicyDocumentException`](crate::error::MalformedPolicyDocumentException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8726,8 +9123,8 @@ impl AlreadyExistsException {
 impl std::fmt::Display for AlreadyExistsException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "AlreadyExistsException")?;
-        if let Some(inner_23) = &self.message {
-            write!(f, ": {}", inner_23)?;
+        if let Some(inner_24) = &self.message {
+            write!(f, ": {}", inner_24)?;
         }
         Ok(())
     }
@@ -8735,6 +9132,7 @@ impl std::fmt::Display for AlreadyExistsException {
 impl std::error::Error for AlreadyExistsException {}
 /// See [`AlreadyExistsException`](crate::error::AlreadyExistsException)
 pub mod already_exists_exception {
+
     /// A builder for [`AlreadyExistsException`](crate::error::AlreadyExistsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8791,8 +9189,8 @@ impl InvalidCiphertextException {
 impl std::fmt::Display for InvalidCiphertextException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidCiphertextException")?;
-        if let Some(inner_24) = &self.message {
-            write!(f, ": {}", inner_24)?;
+        if let Some(inner_25) = &self.message {
+            write!(f, ": {}", inner_25)?;
         }
         Ok(())
     }
@@ -8800,6 +9198,7 @@ impl std::fmt::Display for InvalidCiphertextException {
 impl std::error::Error for InvalidCiphertextException {}
 /// See [`InvalidCiphertextException`](crate::error::InvalidCiphertextException)
 pub mod invalid_ciphertext_exception {
+
     /// A builder for [`InvalidCiphertextException`](crate::error::InvalidCiphertextException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8855,8 +9254,8 @@ impl IncorrectKeyException {
 impl std::fmt::Display for IncorrectKeyException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "IncorrectKeyException")?;
-        if let Some(inner_25) = &self.message {
-            write!(f, ": {}", inner_25)?;
+        if let Some(inner_26) = &self.message {
+            write!(f, ": {}", inner_26)?;
         }
         Ok(())
     }
@@ -8864,6 +9263,7 @@ impl std::fmt::Display for IncorrectKeyException {
 impl std::error::Error for IncorrectKeyException {}
 /// See [`IncorrectKeyException`](crate::error::IncorrectKeyException)
 pub mod incorrect_key_exception {
+
     /// A builder for [`IncorrectKeyException`](crate::error::IncorrectKeyException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8919,8 +9319,8 @@ impl InvalidMarkerException {
 impl std::fmt::Display for InvalidMarkerException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidMarkerException")?;
-        if let Some(inner_26) = &self.message {
-            write!(f, ": {}", inner_26)?;
+        if let Some(inner_27) = &self.message {
+            write!(f, ": {}", inner_27)?;
         }
         Ok(())
     }
@@ -8928,6 +9328,7 @@ impl std::fmt::Display for InvalidMarkerException {
 impl std::error::Error for InvalidMarkerException {}
 /// See [`InvalidMarkerException`](crate::error::InvalidMarkerException)
 pub mod invalid_marker_exception {
+
     /// A builder for [`InvalidMarkerException`](crate::error::InvalidMarkerException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8983,8 +9384,8 @@ impl InvalidImportTokenException {
 impl std::fmt::Display for InvalidImportTokenException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidImportTokenException")?;
-        if let Some(inner_27) = &self.message {
-            write!(f, ": {}", inner_27)?;
+        if let Some(inner_28) = &self.message {
+            write!(f, ": {}", inner_28)?;
         }
         Ok(())
     }
@@ -8992,6 +9393,7 @@ impl std::fmt::Display for InvalidImportTokenException {
 impl std::error::Error for InvalidImportTokenException {}
 /// See [`InvalidImportTokenException`](crate::error::InvalidImportTokenException)
 pub mod invalid_import_token_exception {
+
     /// A builder for [`InvalidImportTokenException`](crate::error::InvalidImportTokenException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9047,8 +9449,8 @@ impl IncorrectKeyMaterialException {
 impl std::fmt::Display for IncorrectKeyMaterialException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "IncorrectKeyMaterialException")?;
-        if let Some(inner_28) = &self.message {
-            write!(f, ": {}", inner_28)?;
+        if let Some(inner_29) = &self.message {
+            write!(f, ": {}", inner_29)?;
         }
         Ok(())
     }
@@ -9056,6 +9458,7 @@ impl std::fmt::Display for IncorrectKeyMaterialException {
 impl std::error::Error for IncorrectKeyMaterialException {}
 /// See [`IncorrectKeyMaterialException`](crate::error::IncorrectKeyMaterialException)
 pub mod incorrect_key_material_exception {
+
     /// A builder for [`IncorrectKeyMaterialException`](crate::error::IncorrectKeyMaterialException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9111,8 +9514,8 @@ impl ExpiredImportTokenException {
 impl std::fmt::Display for ExpiredImportTokenException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "ExpiredImportTokenException")?;
-        if let Some(inner_29) = &self.message {
-            write!(f, ": {}", inner_29)?;
+        if let Some(inner_30) = &self.message {
+            write!(f, ": {}", inner_30)?;
         }
         Ok(())
     }
@@ -9120,6 +9523,7 @@ impl std::fmt::Display for ExpiredImportTokenException {
 impl std::error::Error for ExpiredImportTokenException {}
 /// See [`ExpiredImportTokenException`](crate::error::ExpiredImportTokenException)
 pub mod expired_import_token_exception {
+
     /// A builder for [`ExpiredImportTokenException`](crate::error::ExpiredImportTokenException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9178,8 +9582,8 @@ impl std::fmt::Display for CustomKeyStoreHasCmKsException {
             f,
             "CustomKeyStoreHasCmKsException [CustomKeyStoreHasCMKsException]"
         )?;
-        if let Some(inner_30) = &self.message {
-            write!(f, ": {}", inner_30)?;
+        if let Some(inner_31) = &self.message {
+            write!(f, ": {}", inner_31)?;
         }
         Ok(())
     }
@@ -9187,6 +9591,7 @@ impl std::fmt::Display for CustomKeyStoreHasCmKsException {
 impl std::error::Error for CustomKeyStoreHasCmKsException {}
 /// See [`CustomKeyStoreHasCmKsException`](crate::error::CustomKeyStoreHasCmKsException)
 pub mod custom_key_store_has_cm_ks_exception {
+
     /// A builder for [`CustomKeyStoreHasCmKsException`](crate::error::CustomKeyStoreHasCmKsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9243,8 +9648,8 @@ impl IncorrectTrustAnchorException {
 impl std::fmt::Display for IncorrectTrustAnchorException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "IncorrectTrustAnchorException")?;
-        if let Some(inner_31) = &self.message {
-            write!(f, ": {}", inner_31)?;
+        if let Some(inner_32) = &self.message {
+            write!(f, ": {}", inner_32)?;
         }
         Ok(())
     }
@@ -9252,6 +9657,7 @@ impl std::fmt::Display for IncorrectTrustAnchorException {
 impl std::error::Error for IncorrectTrustAnchorException {}
 /// See [`IncorrectTrustAnchorException`](crate::error::IncorrectTrustAnchorException)
 pub mod incorrect_trust_anchor_exception {
+
     /// A builder for [`IncorrectTrustAnchorException`](crate::error::IncorrectTrustAnchorException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9308,8 +9714,8 @@ impl CloudHsmClusterInUseException {
 impl std::fmt::Display for CloudHsmClusterInUseException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CloudHsmClusterInUseException")?;
-        if let Some(inner_32) = &self.message {
-            write!(f, ": {}", inner_32)?;
+        if let Some(inner_33) = &self.message {
+            write!(f, ": {}", inner_33)?;
         }
         Ok(())
     }
@@ -9317,6 +9723,7 @@ impl std::fmt::Display for CloudHsmClusterInUseException {
 impl std::error::Error for CloudHsmClusterInUseException {}
 /// See [`CloudHsmClusterInUseException`](crate::error::CloudHsmClusterInUseException)
 pub mod cloud_hsm_cluster_in_use_exception {
+
     /// A builder for [`CloudHsmClusterInUseException`](crate::error::CloudHsmClusterInUseException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9372,8 +9779,8 @@ impl InvalidAliasNameException {
 impl std::fmt::Display for InvalidAliasNameException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidAliasNameException")?;
-        if let Some(inner_33) = &self.message {
-            write!(f, ": {}", inner_33)?;
+        if let Some(inner_34) = &self.message {
+            write!(f, ": {}", inner_34)?;
         }
         Ok(())
     }
@@ -9381,6 +9788,7 @@ impl std::fmt::Display for InvalidAliasNameException {
 impl std::error::Error for InvalidAliasNameException {}
 /// See [`InvalidAliasNameException`](crate::error::InvalidAliasNameException)
 pub mod invalid_alias_name_exception {
+
     /// A builder for [`InvalidAliasNameException`](crate::error::InvalidAliasNameException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

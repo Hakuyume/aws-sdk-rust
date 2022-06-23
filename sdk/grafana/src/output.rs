@@ -28,6 +28,7 @@ impl std::fmt::Debug for ListWorkspacesOutput {
 }
 /// See [`ListWorkspacesOutput`](crate::output::ListWorkspacesOutput)
 pub mod list_workspaces_output {
+
     /// A builder for [`ListWorkspacesOutput`](crate::output::ListWorkspacesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -103,6 +104,7 @@ impl std::fmt::Debug for CreateWorkspaceOutput {
 }
 /// See [`CreateWorkspaceOutput`](crate::output::CreateWorkspaceOutput)
 pub mod create_workspace_output {
+
     /// A builder for [`CreateWorkspaceOutput`](crate::output::CreateWorkspaceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -160,6 +162,7 @@ impl std::fmt::Debug for DeleteWorkspaceOutput {
 }
 /// See [`DeleteWorkspaceOutput`](crate::output::DeleteWorkspaceOutput)
 pub mod delete_workspace_output {
+
     /// A builder for [`DeleteWorkspaceOutput`](crate::output::DeleteWorkspaceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -217,6 +220,7 @@ impl std::fmt::Debug for UpdateWorkspaceOutput {
 }
 /// See [`UpdateWorkspaceOutput`](crate::output::UpdateWorkspaceOutput)
 pub mod update_workspace_output {
+
     /// A builder for [`UpdateWorkspaceOutput`](crate::output::UpdateWorkspaceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -274,6 +278,7 @@ impl std::fmt::Debug for DescribeWorkspaceOutput {
 }
 /// See [`DescribeWorkspaceOutput`](crate::output::DescribeWorkspaceOutput)
 pub mod describe_workspace_output {
+
     /// A builder for [`DescribeWorkspaceOutput`](crate::output::DescribeWorkspaceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -331,6 +336,7 @@ impl std::fmt::Debug for UpdatePermissionsOutput {
 }
 /// See [`UpdatePermissionsOutput`](crate::output::UpdatePermissionsOutput)
 pub mod update_permissions_output {
+
     /// A builder for [`UpdatePermissionsOutput`](crate::output::UpdatePermissionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -401,6 +407,7 @@ impl std::fmt::Debug for ListPermissionsOutput {
 }
 /// See [`ListPermissionsOutput`](crate::output::ListPermissionsOutput)
 pub mod list_permissions_output {
+
     /// A builder for [`ListPermissionsOutput`](crate::output::ListPermissionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -476,6 +483,7 @@ impl std::fmt::Debug for DisassociateLicenseOutput {
 }
 /// See [`DisassociateLicenseOutput`](crate::output::DisassociateLicenseOutput)
 pub mod disassociate_license_output {
+
     /// A builder for [`DisassociateLicenseOutput`](crate::output::DisassociateLicenseOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -533,6 +541,7 @@ impl std::fmt::Debug for AssociateLicenseOutput {
 }
 /// See [`AssociateLicenseOutput`](crate::output::AssociateLicenseOutput)
 pub mod associate_license_output {
+
     /// A builder for [`AssociateLicenseOutput`](crate::output::AssociateLicenseOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -590,6 +599,7 @@ impl std::fmt::Debug for UpdateWorkspaceAuthenticationOutput {
 }
 /// See [`UpdateWorkspaceAuthenticationOutput`](crate::output::UpdateWorkspaceAuthenticationOutput)
 pub mod update_workspace_authentication_output {
+
     /// A builder for [`UpdateWorkspaceAuthenticationOutput`](crate::output::UpdateWorkspaceAuthenticationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -647,6 +657,7 @@ impl std::fmt::Debug for DescribeWorkspaceAuthenticationOutput {
 }
 /// See [`DescribeWorkspaceAuthenticationOutput`](crate::output::DescribeWorkspaceAuthenticationOutput)
 pub mod describe_workspace_authentication_output {
+
     /// A builder for [`DescribeWorkspaceAuthenticationOutput`](crate::output::DescribeWorkspaceAuthenticationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -685,6 +696,173 @@ impl DescribeWorkspaceAuthenticationOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeleteWorkspaceApiKeyOutput {
+    /// <p>The name of the API key that was deleted.</p>
+    pub key_name: std::option::Option<std::string::String>,
+    /// <p>The ID of the workspace where the key was deleted.</p>
+    pub workspace_id: std::option::Option<std::string::String>,
+}
+impl DeleteWorkspaceApiKeyOutput {
+    /// <p>The name of the API key that was deleted.</p>
+    pub fn key_name(&self) -> std::option::Option<&str> {
+        self.key_name.as_deref()
+    }
+    /// <p>The ID of the workspace where the key was deleted.</p>
+    pub fn workspace_id(&self) -> std::option::Option<&str> {
+        self.workspace_id.as_deref()
+    }
+}
+impl std::fmt::Debug for DeleteWorkspaceApiKeyOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeleteWorkspaceApiKeyOutput");
+        formatter.field("key_name", &self.key_name);
+        formatter.field("workspace_id", &self.workspace_id);
+        formatter.finish()
+    }
+}
+/// See [`DeleteWorkspaceApiKeyOutput`](crate::output::DeleteWorkspaceApiKeyOutput)
+pub mod delete_workspace_api_key_output {
+
+    /// A builder for [`DeleteWorkspaceApiKeyOutput`](crate::output::DeleteWorkspaceApiKeyOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) key_name: std::option::Option<std::string::String>,
+        pub(crate) workspace_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The name of the API key that was deleted.</p>
+        pub fn key_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key_name = Some(input.into());
+            self
+        }
+        /// <p>The name of the API key that was deleted.</p>
+        pub fn set_key_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key_name = input;
+            self
+        }
+        /// <p>The ID of the workspace where the key was deleted.</p>
+        pub fn workspace_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.workspace_id = Some(input.into());
+            self
+        }
+        /// <p>The ID of the workspace where the key was deleted.</p>
+        pub fn set_workspace_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.workspace_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DeleteWorkspaceApiKeyOutput`](crate::output::DeleteWorkspaceApiKeyOutput)
+        pub fn build(self) -> crate::output::DeleteWorkspaceApiKeyOutput {
+            crate::output::DeleteWorkspaceApiKeyOutput {
+                key_name: self.key_name,
+                workspace_id: self.workspace_id,
+            }
+        }
+    }
+}
+impl DeleteWorkspaceApiKeyOutput {
+    /// Creates a new builder-style object to manufacture [`DeleteWorkspaceApiKeyOutput`](crate::output::DeleteWorkspaceApiKeyOutput)
+    pub fn builder() -> crate::output::delete_workspace_api_key_output::Builder {
+        crate::output::delete_workspace_api_key_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateWorkspaceApiKeyOutput {
+    /// <p>The name of the key that was created.</p>
+    pub key_name: std::option::Option<std::string::String>,
+    /// <p>The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.</p>
+    pub key: std::option::Option<std::string::String>,
+    /// <p>The ID of the workspace that the key is valid for.</p>
+    pub workspace_id: std::option::Option<std::string::String>,
+}
+impl CreateWorkspaceApiKeyOutput {
+    /// <p>The name of the key that was created.</p>
+    pub fn key_name(&self) -> std::option::Option<&str> {
+        self.key_name.as_deref()
+    }
+    /// <p>The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.</p>
+    pub fn key(&self) -> std::option::Option<&str> {
+        self.key.as_deref()
+    }
+    /// <p>The ID of the workspace that the key is valid for.</p>
+    pub fn workspace_id(&self) -> std::option::Option<&str> {
+        self.workspace_id.as_deref()
+    }
+}
+impl std::fmt::Debug for CreateWorkspaceApiKeyOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateWorkspaceApiKeyOutput");
+        formatter.field("key_name", &self.key_name);
+        formatter.field("key", &"*** Sensitive Data Redacted ***");
+        formatter.field("workspace_id", &self.workspace_id);
+        formatter.finish()
+    }
+}
+/// See [`CreateWorkspaceApiKeyOutput`](crate::output::CreateWorkspaceApiKeyOutput)
+pub mod create_workspace_api_key_output {
+
+    /// A builder for [`CreateWorkspaceApiKeyOutput`](crate::output::CreateWorkspaceApiKeyOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) key_name: std::option::Option<std::string::String>,
+        pub(crate) key: std::option::Option<std::string::String>,
+        pub(crate) workspace_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The name of the key that was created.</p>
+        pub fn key_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key_name = Some(input.into());
+            self
+        }
+        /// <p>The name of the key that was created.</p>
+        pub fn set_key_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key_name = input;
+            self
+        }
+        /// <p>The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.</p>
+        pub fn key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key = Some(input.into());
+            self
+        }
+        /// <p>The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.</p>
+        pub fn set_key(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key = input;
+            self
+        }
+        /// <p>The ID of the workspace that the key is valid for.</p>
+        pub fn workspace_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.workspace_id = Some(input.into());
+            self
+        }
+        /// <p>The ID of the workspace that the key is valid for.</p>
+        pub fn set_workspace_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.workspace_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateWorkspaceApiKeyOutput`](crate::output::CreateWorkspaceApiKeyOutput)
+        pub fn build(self) -> crate::output::CreateWorkspaceApiKeyOutput {
+            crate::output::CreateWorkspaceApiKeyOutput {
+                key_name: self.key_name,
+                key: self.key,
+                workspace_id: self.workspace_id,
+            }
+        }
+    }
+}
+impl CreateWorkspaceApiKeyOutput {
+    /// Creates a new builder-style object to manufacture [`CreateWorkspaceApiKeyOutput`](crate::output::CreateWorkspaceApiKeyOutput)
+    pub fn builder() -> crate::output::create_workspace_api_key_output::Builder {
+        crate::output::create_workspace_api_key_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UntagResourceOutput {}
 impl std::fmt::Debug for UntagResourceOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -694,6 +872,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -724,6 +903,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -768,6 +948,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

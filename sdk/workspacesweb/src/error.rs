@@ -760,6 +760,8 @@ pub enum CreateIdentityProviderErrorKind {
     InternalServerException(crate::error::InternalServerException),
     /// <p>The resource cannot be found.</p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>The service quota has been exceeded.</p>
+    ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
     /// <p>There is a throttling error.</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// <p>There is a validation error.</p>
@@ -774,6 +776,7 @@ impl std::fmt::Display for CreateIdentityProviderError {
             CreateIdentityProviderErrorKind::ConflictException(_inner) => _inner.fmt(f),
             CreateIdentityProviderErrorKind::InternalServerException(_inner) => _inner.fmt(f),
             CreateIdentityProviderErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            CreateIdentityProviderErrorKind::ServiceQuotaExceededException(_inner) => _inner.fmt(f),
             CreateIdentityProviderErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
             CreateIdentityProviderErrorKind::ValidationException(_inner) => _inner.fmt(f),
             CreateIdentityProviderErrorKind::Unhandled(_inner) => _inner.fmt(f),
@@ -858,6 +861,13 @@ impl CreateIdentityProviderError {
             CreateIdentityProviderErrorKind::ResourceNotFoundException(_)
         )
     }
+    /// Returns `true` if the error kind is `CreateIdentityProviderErrorKind::ServiceQuotaExceededException`.
+    pub fn is_service_quota_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateIdentityProviderErrorKind::ServiceQuotaExceededException(_)
+        )
+    }
     /// Returns `true` if the error kind is `CreateIdentityProviderErrorKind::ThrottlingException`.
     pub fn is_throttling_exception(&self) -> bool {
         matches!(
@@ -880,6 +890,7 @@ impl std::error::Error for CreateIdentityProviderError {
             CreateIdentityProviderErrorKind::ConflictException(_inner) => Some(_inner),
             CreateIdentityProviderErrorKind::InternalServerException(_inner) => Some(_inner),
             CreateIdentityProviderErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            CreateIdentityProviderErrorKind::ServiceQuotaExceededException(_inner) => Some(_inner),
             CreateIdentityProviderErrorKind::ThrottlingException(_inner) => Some(_inner),
             CreateIdentityProviderErrorKind::ValidationException(_inner) => Some(_inner),
             CreateIdentityProviderErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
@@ -6060,6 +6071,7 @@ impl std::fmt::Display for ValidationException {
 impl std::error::Error for ValidationException {}
 /// See [`ValidationException`](crate::error::ValidationException)
 pub mod validation_exception {
+
     /// A builder for [`ValidationException`](crate::error::ValidationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6184,6 +6196,7 @@ impl std::fmt::Display for ThrottlingException {
 impl std::error::Error for ThrottlingException {}
 /// See [`ThrottlingException`](crate::error::ThrottlingException)
 pub mod throttling_exception {
+
     /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6300,6 +6313,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6400,6 +6414,7 @@ impl std::fmt::Display for InternalServerException {
 impl std::error::Error for InternalServerException {}
 /// See [`InternalServerException`](crate::error::InternalServerException)
 pub mod internal_server_exception {
+
     /// A builder for [`InternalServerException`](crate::error::InternalServerException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6476,6 +6491,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6570,6 +6586,7 @@ impl std::fmt::Display for ServiceQuotaExceededException {
 impl std::error::Error for ServiceQuotaExceededException {}
 /// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
 pub mod service_quota_exceeded_exception {
+
     /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6694,6 +6711,7 @@ impl std::fmt::Display for TooManyTagsException {
 impl std::error::Error for TooManyTagsException {}
 /// See [`TooManyTagsException`](crate::error::TooManyTagsException)
 pub mod too_many_tags_exception {
+
     /// A builder for [`TooManyTagsException`](crate::error::TooManyTagsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6789,6 +6807,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

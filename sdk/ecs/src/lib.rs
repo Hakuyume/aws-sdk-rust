@@ -5,14 +5,15 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
 //! <fullname>Amazon Elastic Container Service</fullname>
 //! <p>Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service. It makes
-//! it easy to run, stop, and manage Docker containers on a cluster. You can host your
-//! cluster on a serverless infrastructure that's managed by Amazon ECS by launching your
-//! services or tasks on Fargate. For more control, you can host your tasks on a cluster
-//! of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage.</p>
+//! it easy to run, stop, and manage Docker containers. You can host your cluster on a
+//! serverless infrastructure that's managed by Amazon ECS by launching your services or tasks on
+//! Fargate. For more control, you can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2)
+//! or External (on-premises) instances that you manage.</p>
 //! <p>Amazon ECS makes it easy to launch and stop container-based applications with simple API
 //! calls. This makes it easy to get the state of your cluster from a centralized service,
 //! and gives you access to many familiar Amazon EC2 features.</p>
@@ -56,7 +57,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

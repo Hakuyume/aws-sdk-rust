@@ -133,6 +133,7 @@ impl std::fmt::Debug for Task {
 }
 /// See [`Task`](crate::model::Task)
 pub mod task {
+
     /// A builder for [`Task`](crate::model::Task)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -593,6 +594,7 @@ impl std::fmt::Debug for ConnectorOperator {
 }
 /// See [`ConnectorOperator`](crate::model::ConnectorOperator)
 pub mod connector_operator {
+
     /// A builder for [`ConnectorOperator`](crate::model::ConnectorOperator)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2919,6 +2921,7 @@ impl std::fmt::Debug for DestinationFlowConfig {
 }
 /// See [`DestinationFlowConfig`](crate::model::DestinationFlowConfig)
 pub mod destination_flow_config {
+
     /// A builder for [`DestinationFlowConfig`](crate::model::DestinationFlowConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3116,6 +3119,7 @@ impl std::fmt::Debug for DestinationConnectorProperties {
 }
 /// See [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties)
 pub mod destination_connector_properties {
+
     /// A builder for [`DestinationConnectorProperties`](crate::model::DestinationConnectorProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3405,6 +3409,7 @@ impl std::fmt::Debug for SapoDataDestinationProperties {
 }
 /// See [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties)
 pub mod sapo_data_destination_properties {
+
     /// A builder for [`SapoDataDestinationProperties`](crate::model::SapoDataDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3612,6 +3617,7 @@ impl std::fmt::Debug for ErrorHandlingConfig {
 }
 /// See [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig)
 pub mod error_handling_config {
+
     /// A builder for [`ErrorHandlingConfig`](crate::model::ErrorHandlingConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3706,6 +3712,7 @@ impl std::fmt::Debug for SuccessResponseHandlingConfig {
 }
 /// See [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig)
 pub mod success_response_handling_config {
+
     /// A builder for [`SuccessResponseHandlingConfig`](crate::model::SuccessResponseHandlingConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3807,6 +3814,7 @@ impl std::fmt::Debug for CustomConnectorDestinationProperties {
 }
 /// See [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties)
 pub mod custom_connector_destination_properties {
+
     /// A builder for [`CustomConnectorDestinationProperties`](crate::model::CustomConnectorDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3948,6 +3956,7 @@ impl std::fmt::Debug for MarketoDestinationProperties {
 }
 /// See [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties)
 pub mod marketo_destination_properties {
+
     /// A builder for [`MarketoDestinationProperties`](crate::model::MarketoDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4038,6 +4047,7 @@ impl std::fmt::Debug for ZendeskDestinationProperties {
 }
 /// See [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties)
 pub mod zendesk_destination_properties {
+
     /// A builder for [`ZendeskDestinationProperties`](crate::model::ZendeskDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4150,6 +4160,7 @@ impl std::fmt::Debug for CustomerProfilesDestinationProperties {
 }
 /// See [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties)
 pub mod customer_profiles_destination_properties {
+
     /// A builder for [`CustomerProfilesDestinationProperties`](crate::model::CustomerProfilesDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4226,6 +4237,7 @@ impl std::fmt::Debug for HoneycodeDestinationProperties {
 }
 /// See [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties)
 pub mod honeycode_destination_properties {
+
     /// A builder for [`HoneycodeDestinationProperties`](crate::model::HoneycodeDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4311,6 +4323,7 @@ impl std::fmt::Debug for UpsolverDestinationProperties {
 }
 /// See [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties)
 pub mod upsolver_destination_properties {
+
     /// A builder for [`UpsolverDestinationProperties`](crate::model::UpsolverDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4413,6 +4426,7 @@ impl std::fmt::Debug for UpsolverS3OutputFormatConfig {
 }
 /// See [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig)
 pub mod upsolver_s3_output_format_config {
+
     /// A builder for [`UpsolverS3OutputFormatConfig`](crate::model::UpsolverS3OutputFormatConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4497,6 +4511,7 @@ impl std::fmt::Debug for AggregationConfig {
 }
 /// See [`AggregationConfig`](crate::model::AggregationConfig)
 pub mod aggregation_config {
+
     /// A builder for [`AggregationConfig`](crate::model::AggregationConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4616,6 +4631,7 @@ impl std::fmt::Debug for PrefixConfig {
 }
 /// See [`PrefixConfig`](crate::model::PrefixConfig)
 pub mod prefix_config {
+
     /// A builder for [`PrefixConfig`](crate::model::PrefixConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4863,6 +4879,7 @@ impl std::fmt::Debug for LookoutMetricsDestinationProperties {
 }
 /// See [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties)
 pub mod lookout_metrics_destination_properties {
+
     /// A builder for [`LookoutMetricsDestinationProperties`](crate::model::LookoutMetricsDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4910,6 +4927,7 @@ impl std::fmt::Debug for EventBridgeDestinationProperties {
 }
 /// See [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties)
 pub mod event_bridge_destination_properties {
+
     /// A builder for [`EventBridgeDestinationProperties`](crate::model::EventBridgeDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5000,6 +5018,7 @@ impl std::fmt::Debug for SnowflakeDestinationProperties {
 }
 /// See [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties)
 pub mod snowflake_destination_properties {
+
     /// A builder for [`SnowflakeDestinationProperties`](crate::model::SnowflakeDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5120,6 +5139,7 @@ impl std::fmt::Debug for SalesforceDestinationProperties {
 }
 /// See [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties)
 pub mod salesforce_destination_properties {
+
     /// A builder for [`SalesforceDestinationProperties`](crate::model::SalesforceDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5241,6 +5261,7 @@ impl std::fmt::Debug for S3DestinationProperties {
 }
 /// See [`S3DestinationProperties`](crate::model::S3DestinationProperties)
 pub mod s3_destination_properties {
+
     /// A builder for [`S3DestinationProperties`](crate::model::S3DestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5316,6 +5337,12 @@ pub struct S3OutputFormatConfig {
     pub prefix_config: std::option::Option<crate::model::PrefixConfig>,
     /// <p> The aggregation settings that you can use to customize the output format of your flow data. </p>
     pub aggregation_config: std::option::Option<crate::model::AggregationConfig>,
+    /// <p>If your file output format is Parquet, use this parameter to set whether Amazon AppFlow preserves the data types in your source data when it writes the output to Amazon S3. </p>
+    /// <ul>
+    /// <li> <p> <code>true</code>: Amazon AppFlow preserves the data types when it writes to Amazon S3. For example, an integer or <code>1</code> in your source data is still an integer in your output.</p> </li>
+    /// <li> <p> <code>false</code>: Amazon AppFlow converts all of the source data into strings when it writes to Amazon S3. For example, an integer of <code>1</code> in your source data becomes the string <code>"1"</code> in the output.</p> </li>
+    /// </ul>
+    pub preserve_source_data_typing: std::option::Option<bool>,
 }
 impl S3OutputFormatConfig {
     /// <p> Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket. </p>
@@ -5330,6 +5357,14 @@ impl S3OutputFormatConfig {
     pub fn aggregation_config(&self) -> std::option::Option<&crate::model::AggregationConfig> {
         self.aggregation_config.as_ref()
     }
+    /// <p>If your file output format is Parquet, use this parameter to set whether Amazon AppFlow preserves the data types in your source data when it writes the output to Amazon S3. </p>
+    /// <ul>
+    /// <li> <p> <code>true</code>: Amazon AppFlow preserves the data types when it writes to Amazon S3. For example, an integer or <code>1</code> in your source data is still an integer in your output.</p> </li>
+    /// <li> <p> <code>false</code>: Amazon AppFlow converts all of the source data into strings when it writes to Amazon S3. For example, an integer of <code>1</code> in your source data becomes the string <code>"1"</code> in the output.</p> </li>
+    /// </ul>
+    pub fn preserve_source_data_typing(&self) -> std::option::Option<bool> {
+        self.preserve_source_data_typing
+    }
 }
 impl std::fmt::Debug for S3OutputFormatConfig {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -5337,11 +5372,16 @@ impl std::fmt::Debug for S3OutputFormatConfig {
         formatter.field("file_type", &self.file_type);
         formatter.field("prefix_config", &self.prefix_config);
         formatter.field("aggregation_config", &self.aggregation_config);
+        formatter.field(
+            "preserve_source_data_typing",
+            &self.preserve_source_data_typing,
+        );
         formatter.finish()
     }
 }
 /// See [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig)
 pub mod s3_output_format_config {
+
     /// A builder for [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5349,6 +5389,7 @@ pub mod s3_output_format_config {
         pub(crate) file_type: std::option::Option<crate::model::FileType>,
         pub(crate) prefix_config: std::option::Option<crate::model::PrefixConfig>,
         pub(crate) aggregation_config: std::option::Option<crate::model::AggregationConfig>,
+        pub(crate) preserve_source_data_typing: std::option::Option<bool>,
     }
     impl Builder {
         /// <p> Indicates the file type that Amazon AppFlow places in the Amazon S3 bucket. </p>
@@ -5387,12 +5428,31 @@ pub mod s3_output_format_config {
             self.aggregation_config = input;
             self
         }
+        /// <p>If your file output format is Parquet, use this parameter to set whether Amazon AppFlow preserves the data types in your source data when it writes the output to Amazon S3. </p>
+        /// <ul>
+        /// <li> <p> <code>true</code>: Amazon AppFlow preserves the data types when it writes to Amazon S3. For example, an integer or <code>1</code> in your source data is still an integer in your output.</p> </li>
+        /// <li> <p> <code>false</code>: Amazon AppFlow converts all of the source data into strings when it writes to Amazon S3. For example, an integer of <code>1</code> in your source data becomes the string <code>"1"</code> in the output.</p> </li>
+        /// </ul>
+        pub fn preserve_source_data_typing(mut self, input: bool) -> Self {
+            self.preserve_source_data_typing = Some(input);
+            self
+        }
+        /// <p>If your file output format is Parquet, use this parameter to set whether Amazon AppFlow preserves the data types in your source data when it writes the output to Amazon S3. </p>
+        /// <ul>
+        /// <li> <p> <code>true</code>: Amazon AppFlow preserves the data types when it writes to Amazon S3. For example, an integer or <code>1</code> in your source data is still an integer in your output.</p> </li>
+        /// <li> <p> <code>false</code>: Amazon AppFlow converts all of the source data into strings when it writes to Amazon S3. For example, an integer of <code>1</code> in your source data becomes the string <code>"1"</code> in the output.</p> </li>
+        /// </ul>
+        pub fn set_preserve_source_data_typing(mut self, input: std::option::Option<bool>) -> Self {
+            self.preserve_source_data_typing = input;
+            self
+        }
         /// Consumes the builder and constructs a [`S3OutputFormatConfig`](crate::model::S3OutputFormatConfig)
         pub fn build(self) -> crate::model::S3OutputFormatConfig {
             crate::model::S3OutputFormatConfig {
                 file_type: self.file_type,
                 prefix_config: self.prefix_config,
                 aggregation_config: self.aggregation_config,
+                preserve_source_data_typing: self.preserve_source_data_typing,
             }
         }
     }
@@ -5447,6 +5507,7 @@ impl std::fmt::Debug for RedshiftDestinationProperties {
 }
 /// See [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties)
 pub mod redshift_destination_properties {
+
     /// A builder for [`RedshiftDestinationProperties`](crate::model::RedshiftDestinationProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5744,6 +5805,7 @@ impl std::fmt::Debug for SourceFlowConfig {
 }
 /// See [`SourceFlowConfig`](crate::model::SourceFlowConfig)
 pub mod source_flow_config {
+
     /// A builder for [`SourceFlowConfig`](crate::model::SourceFlowConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5866,6 +5928,7 @@ impl std::fmt::Debug for IncrementalPullConfig {
 }
 /// See [`IncrementalPullConfig`](crate::model::IncrementalPullConfig)
 pub mod incremental_pull_config {
+
     /// A builder for [`IncrementalPullConfig`](crate::model::IncrementalPullConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6032,6 +6095,7 @@ impl std::fmt::Debug for SourceConnectorProperties {
 }
 /// See [`SourceConnectorProperties`](crate::model::SourceConnectorProperties)
 pub mod source_connector_properties {
+
     /// A builder for [`SourceConnectorProperties`](crate::model::SourceConnectorProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6333,6 +6397,7 @@ impl std::fmt::Debug for CustomConnectorSourceProperties {
 }
 /// See [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties)
 pub mod custom_connector_source_properties {
+
     /// A builder for [`CustomConnectorSourceProperties`](crate::model::CustomConnectorSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6416,6 +6481,7 @@ impl std::fmt::Debug for SapoDataSourceProperties {
 }
 /// See [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties)
 pub mod sapo_data_source_properties {
+
     /// A builder for [`SapoDataSourceProperties`](crate::model::SapoDataSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6470,6 +6536,7 @@ impl std::fmt::Debug for ZendeskSourceProperties {
 }
 /// See [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties)
 pub mod zendesk_source_properties {
+
     /// A builder for [`ZendeskSourceProperties`](crate::model::ZendeskSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6552,6 +6619,7 @@ impl std::fmt::Debug for VeevaSourceProperties {
 }
 /// See [`VeevaSourceProperties`](crate::model::VeevaSourceProperties)
 pub mod veeva_source_properties {
+
     /// A builder for [`VeevaSourceProperties`](crate::model::VeevaSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6657,6 +6725,7 @@ impl std::fmt::Debug for TrendmicroSourceProperties {
 }
 /// See [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties)
 pub mod trendmicro_source_properties {
+
     /// A builder for [`TrendmicroSourceProperties`](crate::model::TrendmicroSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6711,6 +6780,7 @@ impl std::fmt::Debug for SlackSourceProperties {
 }
 /// See [`SlackSourceProperties`](crate::model::SlackSourceProperties)
 pub mod slack_source_properties {
+
     /// A builder for [`SlackSourceProperties`](crate::model::SlackSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6765,6 +6835,7 @@ impl std::fmt::Debug for SingularSourceProperties {
 }
 /// See [`SingularSourceProperties`](crate::model::SingularSourceProperties)
 pub mod singular_source_properties {
+
     /// A builder for [`SingularSourceProperties`](crate::model::SingularSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6819,6 +6890,7 @@ impl std::fmt::Debug for ServiceNowSourceProperties {
 }
 /// See [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties)
 pub mod service_now_source_properties {
+
     /// A builder for [`ServiceNowSourceProperties`](crate::model::ServiceNowSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6890,6 +6962,7 @@ impl std::fmt::Debug for SalesforceSourceProperties {
 }
 /// See [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties)
 pub mod salesforce_source_properties {
+
     /// A builder for [`SalesforceSourceProperties`](crate::model::SalesforceSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6984,6 +7057,7 @@ impl std::fmt::Debug for S3SourceProperties {
 }
 /// See [`S3SourceProperties`](crate::model::S3SourceProperties)
 pub mod s3_source_properties {
+
     /// A builder for [`S3SourceProperties`](crate::model::S3SourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7068,6 +7142,7 @@ impl std::fmt::Debug for S3InputFormatConfig {
 }
 /// See [`S3InputFormatConfig`](crate::model::S3InputFormatConfig)
 pub mod s3_input_format_config {
+
     /// A builder for [`S3InputFormatConfig`](crate::model::S3InputFormatConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7180,6 +7255,7 @@ impl std::fmt::Debug for MarketoSourceProperties {
 }
 /// See [`MarketoSourceProperties`](crate::model::MarketoSourceProperties)
 pub mod marketo_source_properties {
+
     /// A builder for [`MarketoSourceProperties`](crate::model::MarketoSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7234,6 +7310,7 @@ impl std::fmt::Debug for InforNexusSourceProperties {
 }
 /// See [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties)
 pub mod infor_nexus_source_properties {
+
     /// A builder for [`InforNexusSourceProperties`](crate::model::InforNexusSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7288,6 +7365,7 @@ impl std::fmt::Debug for GoogleAnalyticsSourceProperties {
 }
 /// See [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties)
 pub mod google_analytics_source_properties {
+
     /// A builder for [`GoogleAnalyticsSourceProperties`](crate::model::GoogleAnalyticsSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7342,6 +7420,7 @@ impl std::fmt::Debug for DynatraceSourceProperties {
 }
 /// See [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties)
 pub mod dynatrace_source_properties {
+
     /// A builder for [`DynatraceSourceProperties`](crate::model::DynatraceSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7396,6 +7475,7 @@ impl std::fmt::Debug for DatadogSourceProperties {
 }
 /// See [`DatadogSourceProperties`](crate::model::DatadogSourceProperties)
 pub mod datadog_source_properties {
+
     /// A builder for [`DatadogSourceProperties`](crate::model::DatadogSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7450,6 +7530,7 @@ impl std::fmt::Debug for AmplitudeSourceProperties {
 }
 /// See [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties)
 pub mod amplitude_source_properties {
+
     /// A builder for [`AmplitudeSourceProperties`](crate::model::AmplitudeSourceProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7511,6 +7592,7 @@ impl std::fmt::Debug for TriggerConfig {
 }
 /// See [`TriggerConfig`](crate::model::TriggerConfig)
 pub mod trigger_config {
+
     /// A builder for [`TriggerConfig`](crate::model::TriggerConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7583,6 +7665,7 @@ impl std::fmt::Debug for TriggerProperties {
 }
 /// See [`TriggerProperties`](crate::model::TriggerProperties)
 pub mod trigger_properties {
+
     /// A builder for [`TriggerProperties`](crate::model::TriggerProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7626,16 +7709,19 @@ pub struct ScheduledTriggerProperties {
     pub schedule_expression: std::option::Option<std::string::String>,
     /// <p> Specifies whether a scheduled flow has an incremental data transfer or a complete data transfer for each flow run. </p>
     pub data_pull_mode: std::option::Option<crate::model::DataPullMode>,
-    /// <p> Specifies the scheduled start time for a schedule-triggered flow. </p>
+    /// <p>The time at which the scheduled flow starts. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-26T13:00:00-07:00</code>.</p>
     pub schedule_start_time: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p> Specifies the scheduled end time for a schedule-triggered flow. </p>
+    /// <p>The time at which the scheduled flow ends. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-27T13:00:00-07:00</code>.</p>
     pub schedule_end_time: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p> Specifies the time zone used when referring to the date and time of a scheduled-triggered flow, such as <code>America/New_York</code>. </p>
+    /// <p>Specifies the time zone used when referring to the dates and times of a scheduled flow, such as <code>America/New_York</code>. This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets the timestamps that you specify to schedule the flow.</p>
+    /// <p>If you want to schedule a flow by using times in a particular time zone, indicate the time zone as a UTC offset in your timestamps. For example, the UTC offsets for the <code>America/New_York</code> timezone are <code>-04:00</code> EDT and <code>-05:00 EST</code>.</p>
     pub timezone: std::option::Option<std::string::String>,
     /// <p> Specifies the optional offset that is added to the time interval for a schedule-triggered flow. </p>
     pub schedule_offset: std::option::Option<i64>,
     /// <p> Specifies the date range for the records to import from the connector in the first flow run. </p>
     pub first_execution_from: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>Defines how many times a scheduled flow fails consecutively before Amazon AppFlow deactivates it.</p>
+    pub flow_error_deactivation_threshold: std::option::Option<i32>,
 }
 impl ScheduledTriggerProperties {
     /// <p> The scheduling expression that determines the rate at which the schedule will run, for example <code>rate(5minutes)</code>. </p>
@@ -7646,15 +7732,16 @@ impl ScheduledTriggerProperties {
     pub fn data_pull_mode(&self) -> std::option::Option<&crate::model::DataPullMode> {
         self.data_pull_mode.as_ref()
     }
-    /// <p> Specifies the scheduled start time for a schedule-triggered flow. </p>
+    /// <p>The time at which the scheduled flow starts. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-26T13:00:00-07:00</code>.</p>
     pub fn schedule_start_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.schedule_start_time.as_ref()
     }
-    /// <p> Specifies the scheduled end time for a schedule-triggered flow. </p>
+    /// <p>The time at which the scheduled flow ends. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-27T13:00:00-07:00</code>.</p>
     pub fn schedule_end_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.schedule_end_time.as_ref()
     }
-    /// <p> Specifies the time zone used when referring to the date and time of a scheduled-triggered flow, such as <code>America/New_York</code>. </p>
+    /// <p>Specifies the time zone used when referring to the dates and times of a scheduled flow, such as <code>America/New_York</code>. This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets the timestamps that you specify to schedule the flow.</p>
+    /// <p>If you want to schedule a flow by using times in a particular time zone, indicate the time zone as a UTC offset in your timestamps. For example, the UTC offsets for the <code>America/New_York</code> timezone are <code>-04:00</code> EDT and <code>-05:00 EST</code>.</p>
     pub fn timezone(&self) -> std::option::Option<&str> {
         self.timezone.as_deref()
     }
@@ -7665,6 +7752,10 @@ impl ScheduledTriggerProperties {
     /// <p> Specifies the date range for the records to import from the connector in the first flow run. </p>
     pub fn first_execution_from(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.first_execution_from.as_ref()
+    }
+    /// <p>Defines how many times a scheduled flow fails consecutively before Amazon AppFlow deactivates it.</p>
+    pub fn flow_error_deactivation_threshold(&self) -> std::option::Option<i32> {
+        self.flow_error_deactivation_threshold
     }
 }
 impl std::fmt::Debug for ScheduledTriggerProperties {
@@ -7677,11 +7768,16 @@ impl std::fmt::Debug for ScheduledTriggerProperties {
         formatter.field("timezone", &self.timezone);
         formatter.field("schedule_offset", &self.schedule_offset);
         formatter.field("first_execution_from", &self.first_execution_from);
+        formatter.field(
+            "flow_error_deactivation_threshold",
+            &self.flow_error_deactivation_threshold,
+        );
         formatter.finish()
     }
 }
 /// See [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties)
 pub mod scheduled_trigger_properties {
+
     /// A builder for [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7693,6 +7789,7 @@ pub mod scheduled_trigger_properties {
         pub(crate) timezone: std::option::Option<std::string::String>,
         pub(crate) schedule_offset: std::option::Option<i64>,
         pub(crate) first_execution_from: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) flow_error_deactivation_threshold: std::option::Option<i32>,
     }
     impl Builder {
         /// <p> The scheduling expression that determines the rate at which the schedule will run, for example <code>rate(5minutes)</code>. </p>
@@ -7721,12 +7818,12 @@ pub mod scheduled_trigger_properties {
             self.data_pull_mode = input;
             self
         }
-        /// <p> Specifies the scheduled start time for a schedule-triggered flow. </p>
+        /// <p>The time at which the scheduled flow starts. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-26T13:00:00-07:00</code>.</p>
         pub fn schedule_start_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.schedule_start_time = Some(input);
             self
         }
-        /// <p> Specifies the scheduled start time for a schedule-triggered flow. </p>
+        /// <p>The time at which the scheduled flow starts. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-26T13:00:00-07:00</code>.</p>
         pub fn set_schedule_start_time(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -7734,12 +7831,12 @@ pub mod scheduled_trigger_properties {
             self.schedule_start_time = input;
             self
         }
-        /// <p> Specifies the scheduled end time for a schedule-triggered flow. </p>
+        /// <p>The time at which the scheduled flow ends. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-27T13:00:00-07:00</code>.</p>
         pub fn schedule_end_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.schedule_end_time = Some(input);
             self
         }
-        /// <p> Specifies the scheduled end time for a schedule-triggered flow. </p>
+        /// <p>The time at which the scheduled flow ends. The time is formatted as a timestamp that follows the ISO 8601 standard, such as <code>2022-04-27T13:00:00-07:00</code>.</p>
         pub fn set_schedule_end_time(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -7747,12 +7844,14 @@ pub mod scheduled_trigger_properties {
             self.schedule_end_time = input;
             self
         }
-        /// <p> Specifies the time zone used when referring to the date and time of a scheduled-triggered flow, such as <code>America/New_York</code>. </p>
+        /// <p>Specifies the time zone used when referring to the dates and times of a scheduled flow, such as <code>America/New_York</code>. This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets the timestamps that you specify to schedule the flow.</p>
+        /// <p>If you want to schedule a flow by using times in a particular time zone, indicate the time zone as a UTC offset in your timestamps. For example, the UTC offsets for the <code>America/New_York</code> timezone are <code>-04:00</code> EDT and <code>-05:00 EST</code>.</p>
         pub fn timezone(mut self, input: impl Into<std::string::String>) -> Self {
             self.timezone = Some(input.into());
             self
         }
-        /// <p> Specifies the time zone used when referring to the date and time of a scheduled-triggered flow, such as <code>America/New_York</code>. </p>
+        /// <p>Specifies the time zone used when referring to the dates and times of a scheduled flow, such as <code>America/New_York</code>. This time zone is only a descriptive label. It doesn't affect how Amazon AppFlow interprets the timestamps that you specify to schedule the flow.</p>
+        /// <p>If you want to schedule a flow by using times in a particular time zone, indicate the time zone as a UTC offset in your timestamps. For example, the UTC offsets for the <code>America/New_York</code> timezone are <code>-04:00</code> EDT and <code>-05:00 EST</code>.</p>
         pub fn set_timezone(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.timezone = input;
             self
@@ -7780,6 +7879,19 @@ pub mod scheduled_trigger_properties {
             self.first_execution_from = input;
             self
         }
+        /// <p>Defines how many times a scheduled flow fails consecutively before Amazon AppFlow deactivates it.</p>
+        pub fn flow_error_deactivation_threshold(mut self, input: i32) -> Self {
+            self.flow_error_deactivation_threshold = Some(input);
+            self
+        }
+        /// <p>Defines how many times a scheduled flow fails consecutively before Amazon AppFlow deactivates it.</p>
+        pub fn set_flow_error_deactivation_threshold(
+            mut self,
+            input: std::option::Option<i32>,
+        ) -> Self {
+            self.flow_error_deactivation_threshold = input;
+            self
+        }
         /// Consumes the builder and constructs a [`ScheduledTriggerProperties`](crate::model::ScheduledTriggerProperties)
         pub fn build(self) -> crate::model::ScheduledTriggerProperties {
             crate::model::ScheduledTriggerProperties {
@@ -7790,6 +7902,7 @@ pub mod scheduled_trigger_properties {
                 timezone: self.timezone,
                 schedule_offset: self.schedule_offset,
                 first_execution_from: self.first_execution_from,
+                flow_error_deactivation_threshold: self.flow_error_deactivation_threshold,
             }
         }
     }
@@ -7955,6 +8068,7 @@ impl std::fmt::Debug for ConnectorProfileConfig {
 }
 /// See [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig)
 pub mod connector_profile_config {
+
     /// A builder for [`ConnectorProfileConfig`](crate::model::ConnectorProfileConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8187,6 +8301,7 @@ impl std::fmt::Debug for ConnectorProfileCredentials {
 }
 /// See [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials)
 pub mod connector_profile_credentials {
+
     /// A builder for [`ConnectorProfileCredentials`](crate::model::ConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8577,6 +8692,7 @@ impl std::fmt::Debug for CustomConnectorProfileCredentials {
 }
 /// See [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials)
 pub mod custom_connector_profile_credentials {
+
     /// A builder for [`CustomConnectorProfileCredentials`](crate::model::CustomConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8708,6 +8824,7 @@ impl std::fmt::Debug for CustomAuthCredentials {
 }
 /// See [`CustomAuthCredentials`](crate::model::CustomAuthCredentials)
 pub mod custom_auth_credentials {
+
     /// A builder for [`CustomAuthCredentials`](crate::model::CustomAuthCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8801,6 +8918,7 @@ impl std::fmt::Debug for ApiKeyCredentials {
 }
 /// See [`ApiKeyCredentials`](crate::model::ApiKeyCredentials)
 pub mod api_key_credentials {
+
     /// A builder for [`ApiKeyCredentials`](crate::model::ApiKeyCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8898,6 +9016,7 @@ impl std::fmt::Debug for OAuth2Credentials {
 }
 /// See [`OAuth2Credentials`](crate::model::OAuth2Credentials)
 pub mod o_auth2_credentials {
+
     /// A builder for [`OAuth2Credentials`](crate::model::OAuth2Credentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9016,6 +9135,7 @@ impl std::fmt::Debug for ConnectorOAuthRequest {
 }
 /// See [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest)
 pub mod connector_o_auth_request {
+
     /// A builder for [`ConnectorOAuthRequest`](crate::model::ConnectorOAuthRequest)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9089,6 +9209,7 @@ impl std::fmt::Debug for BasicAuthCredentials {
 }
 /// See [`BasicAuthCredentials`](crate::model::BasicAuthCredentials)
 pub mod basic_auth_credentials {
+
     /// A builder for [`BasicAuthCredentials`](crate::model::BasicAuthCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9227,6 +9348,7 @@ impl std::fmt::Debug for SapoDataConnectorProfileCredentials {
 }
 /// See [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials)
 pub mod sapo_data_connector_profile_credentials {
+
     /// A builder for [`SapoDataConnectorProfileCredentials`](crate::model::SapoDataConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9327,6 +9449,7 @@ impl std::fmt::Debug for OAuthCredentials {
 }
 /// See [`OAuthCredentials`](crate::model::OAuthCredentials)
 pub mod o_auth_credentials {
+
     /// A builder for [`OAuthCredentials`](crate::model::OAuthCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9459,6 +9582,7 @@ impl std::fmt::Debug for ZendeskConnectorProfileCredentials {
 }
 /// See [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials)
 pub mod zendesk_connector_profile_credentials {
+
     /// A builder for [`ZendeskConnectorProfileCredentials`](crate::model::ZendeskConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9562,6 +9686,7 @@ impl std::fmt::Debug for VeevaConnectorProfileCredentials {
 }
 /// See [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials)
 pub mod veeva_connector_profile_credentials {
+
     /// A builder for [`VeevaConnectorProfileCredentials`](crate::model::VeevaConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9628,6 +9753,7 @@ impl std::fmt::Debug for TrendmicroConnectorProfileCredentials {
 }
 /// See [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials)
 pub mod trendmicro_connector_profile_credentials {
+
     /// A builder for [`TrendmicroConnectorProfileCredentials`](crate::model::TrendmicroConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9692,6 +9818,7 @@ impl std::fmt::Debug for SnowflakeConnectorProfileCredentials {
 }
 /// See [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials)
 pub mod snowflake_connector_profile_credentials {
+
     /// A builder for [`SnowflakeConnectorProfileCredentials`](crate::model::SnowflakeConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9779,6 +9906,7 @@ impl std::fmt::Debug for SlackConnectorProfileCredentials {
 }
 /// See [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials)
 pub mod slack_connector_profile_credentials {
+
     /// A builder for [`SlackConnectorProfileCredentials`](crate::model::SlackConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9875,6 +10003,7 @@ impl std::fmt::Debug for SingularConnectorProfileCredentials {
 }
 /// See [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials)
 pub mod singular_connector_profile_credentials {
+
     /// A builder for [`SingularConnectorProfileCredentials`](crate::model::SingularConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9936,6 +10065,7 @@ impl std::fmt::Debug for ServiceNowConnectorProfileCredentials {
 }
 /// See [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials)
 pub mod service_now_connector_profile_credentials {
+
     /// A builder for [`ServiceNowConnectorProfileCredentials`](crate::model::ServiceNowConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10023,6 +10153,7 @@ impl std::fmt::Debug for SalesforceConnectorProfileCredentials {
 }
 /// See [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials)
 pub mod salesforce_connector_profile_credentials {
+
     /// A builder for [`SalesforceConnectorProfileCredentials`](crate::model::SalesforceConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10129,6 +10260,7 @@ impl std::fmt::Debug for RedshiftConnectorProfileCredentials {
 }
 /// See [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials)
 pub mod redshift_connector_profile_credentials {
+
     /// A builder for [`RedshiftConnectorProfileCredentials`](crate::model::RedshiftConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10216,6 +10348,7 @@ impl std::fmt::Debug for MarketoConnectorProfileCredentials {
 }
 /// See [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials)
 pub mod marketo_connector_profile_credentials {
+
     /// A builder for [`MarketoConnectorProfileCredentials`](crate::model::MarketoConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10333,6 +10466,7 @@ impl std::fmt::Debug for InforNexusConnectorProfileCredentials {
 }
 /// See [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials)
 pub mod infor_nexus_connector_profile_credentials {
+
     /// A builder for [`InforNexusConnectorProfileCredentials`](crate::model::InforNexusConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10443,6 +10577,7 @@ impl std::fmt::Debug for HoneycodeConnectorProfileCredentials {
 }
 /// See [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials)
 pub mod honeycode_connector_profile_credentials {
+
     /// A builder for [`HoneycodeConnectorProfileCredentials`](crate::model::HoneycodeConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10555,6 +10690,7 @@ impl std::fmt::Debug for GoogleAnalyticsConnectorProfileCredentials {
 }
 /// See [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials)
 pub mod google_analytics_connector_profile_credentials {
+
     /// A builder for [`GoogleAnalyticsConnectorProfileCredentials`](crate::model::GoogleAnalyticsConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10666,6 +10802,7 @@ impl std::fmt::Debug for DynatraceConnectorProfileCredentials {
 }
 /// See [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials)
 pub mod dynatrace_connector_profile_credentials {
+
     /// A builder for [`DynatraceConnectorProfileCredentials`](crate::model::DynatraceConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10727,6 +10864,7 @@ impl std::fmt::Debug for DatadogConnectorProfileCredentials {
 }
 /// See [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials)
 pub mod datadog_connector_profile_credentials {
+
     /// A builder for [`DatadogConnectorProfileCredentials`](crate::model::DatadogConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10803,6 +10941,7 @@ impl std::fmt::Debug for AmplitudeConnectorProfileCredentials {
 }
 /// See [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials)
 pub mod amplitude_connector_profile_credentials {
+
     /// A builder for [`AmplitudeConnectorProfileCredentials`](crate::model::AmplitudeConnectorProfileCredentials)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11015,6 +11154,7 @@ impl std::fmt::Debug for ConnectorProfileProperties {
 }
 /// See [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties)
 pub mod connector_profile_properties {
+
     /// A builder for [`ConnectorProfileProperties`](crate::model::ConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11381,6 +11521,7 @@ impl std::fmt::Debug for CustomConnectorProfileProperties {
 }
 /// See [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties)
 pub mod custom_connector_profile_properties {
+
     /// A builder for [`CustomConnectorProfileProperties`](crate::model::CustomConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11453,6 +11594,9 @@ pub struct OAuth2Properties {
     pub token_url: std::option::Option<std::string::String>,
     /// <p>The OAuth 2.0 grant type used by connector for OAuth 2.0 authentication.</p>
     pub o_auth2_grant_type: std::option::Option<crate::model::OAuth2GrantType>,
+    /// <p>Associates your token URL with a map of properties that you define. Use this parameter to provide any additional details that the connector requires to authenticate your request.</p>
+    pub token_url_custom_properties:
+        std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
 }
 impl OAuth2Properties {
     /// <p>The token URL required for OAuth 2.0 authentication.</p>
@@ -11463,23 +11607,38 @@ impl OAuth2Properties {
     pub fn o_auth2_grant_type(&self) -> std::option::Option<&crate::model::OAuth2GrantType> {
         self.o_auth2_grant_type.as_ref()
     }
+    /// <p>Associates your token URL with a map of properties that you define. Use this parameter to provide any additional details that the connector requires to authenticate your request.</p>
+    pub fn token_url_custom_properties(
+        &self,
+    ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
+    {
+        self.token_url_custom_properties.as_ref()
+    }
 }
 impl std::fmt::Debug for OAuth2Properties {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("OAuth2Properties");
         formatter.field("token_url", &self.token_url);
         formatter.field("o_auth2_grant_type", &self.o_auth2_grant_type);
+        formatter.field(
+            "token_url_custom_properties",
+            &self.token_url_custom_properties,
+        );
         formatter.finish()
     }
 }
 /// See [`OAuth2Properties`](crate::model::OAuth2Properties)
 pub mod o_auth2_properties {
+
     /// A builder for [`OAuth2Properties`](crate::model::OAuth2Properties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) token_url: std::option::Option<std::string::String>,
         pub(crate) o_auth2_grant_type: std::option::Option<crate::model::OAuth2GrantType>,
+        pub(crate) token_url_custom_properties: std::option::Option<
+            std::collections::HashMap<std::string::String, std::string::String>,
+        >,
     }
     impl Builder {
         /// <p>The token URL required for OAuth 2.0 authentication.</p>
@@ -11505,11 +11664,37 @@ pub mod o_auth2_properties {
             self.o_auth2_grant_type = input;
             self
         }
+        /// Adds a key-value pair to `token_url_custom_properties`.
+        ///
+        /// To override the contents of this collection use [`set_token_url_custom_properties`](Self::set_token_url_custom_properties).
+        ///
+        /// <p>Associates your token URL with a map of properties that you define. Use this parameter to provide any additional details that the connector requires to authenticate your request.</p>
+        pub fn token_url_custom_properties(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: impl Into<std::string::String>,
+        ) -> Self {
+            let mut hash_map = self.token_url_custom_properties.unwrap_or_default();
+            hash_map.insert(k.into(), v.into());
+            self.token_url_custom_properties = Some(hash_map);
+            self
+        }
+        /// <p>Associates your token URL with a map of properties that you define. Use this parameter to provide any additional details that the connector requires to authenticate your request.</p>
+        pub fn set_token_url_custom_properties(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, std::string::String>,
+            >,
+        ) -> Self {
+            self.token_url_custom_properties = input;
+            self
+        }
         /// Consumes the builder and constructs a [`OAuth2Properties`](crate::model::OAuth2Properties)
         pub fn build(self) -> crate::model::OAuth2Properties {
             crate::model::OAuth2Properties {
                 token_url: self.token_url,
                 o_auth2_grant_type: self.o_auth2_grant_type,
+                token_url_custom_properties: self.token_url_custom_properties,
             }
         }
     }
@@ -11640,6 +11825,7 @@ impl std::fmt::Debug for SapoDataConnectorProfileProperties {
 }
 /// See [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties)
 pub mod sapo_data_connector_profile_properties {
+
     /// A builder for [`SapoDataConnectorProfileProperties`](crate::model::SapoDataConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11798,6 +11984,7 @@ impl std::fmt::Debug for OAuthProperties {
 }
 /// See [`OAuthProperties`](crate::model::OAuthProperties)
 pub mod o_auth_properties {
+
     /// A builder for [`OAuthProperties`](crate::model::OAuthProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11888,6 +12075,7 @@ impl std::fmt::Debug for ZendeskConnectorProfileProperties {
 }
 /// See [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties)
 pub mod zendesk_connector_profile_properties {
+
     /// A builder for [`ZendeskConnectorProfileProperties`](crate::model::ZendeskConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11942,6 +12130,7 @@ impl std::fmt::Debug for VeevaConnectorProfileProperties {
 }
 /// See [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties)
 pub mod veeva_connector_profile_properties {
+
     /// A builder for [`VeevaConnectorProfileProperties`](crate::model::VeevaConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11986,6 +12175,7 @@ impl std::fmt::Debug for TrendmicroConnectorProfileProperties {
 }
 /// See [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties)
 pub mod trendmicro_connector_profile_properties {
+
     /// A builder for [`TrendmicroConnectorProfileProperties`](crate::model::TrendmicroConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12072,6 +12262,7 @@ impl std::fmt::Debug for SnowflakeConnectorProfileProperties {
 }
 /// See [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties)
 pub mod snowflake_connector_profile_properties {
+
     /// A builder for [`SnowflakeConnectorProfileProperties`](crate::model::SnowflakeConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12208,6 +12399,7 @@ impl std::fmt::Debug for SlackConnectorProfileProperties {
 }
 /// See [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties)
 pub mod slack_connector_profile_properties {
+
     /// A builder for [`SlackConnectorProfileProperties`](crate::model::SlackConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12252,6 +12444,7 @@ impl std::fmt::Debug for SingularConnectorProfileProperties {
 }
 /// See [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties)
 pub mod singular_connector_profile_properties {
+
     /// A builder for [`SingularConnectorProfileProperties`](crate::model::SingularConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12292,6 +12485,7 @@ impl std::fmt::Debug for ServiceNowConnectorProfileProperties {
 }
 /// See [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties)
 pub mod service_now_connector_profile_properties {
+
     /// A builder for [`ServiceNowConnectorProfileProperties`](crate::model::ServiceNowConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12353,6 +12547,7 @@ impl std::fmt::Debug for SalesforceConnectorProfileProperties {
 }
 /// See [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties)
 pub mod salesforce_connector_profile_properties {
+
     /// A builder for [`SalesforceConnectorProfileProperties`](crate::model::SalesforceConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12440,6 +12635,7 @@ impl std::fmt::Debug for RedshiftConnectorProfileProperties {
 }
 /// See [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties)
 pub mod redshift_connector_profile_properties {
+
     /// A builder for [`RedshiftConnectorProfileProperties`](crate::model::RedshiftConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12533,6 +12729,7 @@ impl std::fmt::Debug for MarketoConnectorProfileProperties {
 }
 /// See [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties)
 pub mod marketo_connector_profile_properties {
+
     /// A builder for [`MarketoConnectorProfileProperties`](crate::model::MarketoConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12587,6 +12784,7 @@ impl std::fmt::Debug for InforNexusConnectorProfileProperties {
 }
 /// See [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties)
 pub mod infor_nexus_connector_profile_properties {
+
     /// A builder for [`InforNexusConnectorProfileProperties`](crate::model::InforNexusConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12631,6 +12829,7 @@ impl std::fmt::Debug for HoneycodeConnectorProfileProperties {
 }
 /// See [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties)
 pub mod honeycode_connector_profile_properties {
+
     /// A builder for [`HoneycodeConnectorProfileProperties`](crate::model::HoneycodeConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12661,6 +12860,7 @@ impl std::fmt::Debug for GoogleAnalyticsConnectorProfileProperties {
 }
 /// See [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties)
 pub mod google_analytics_connector_profile_properties {
+
     /// A builder for [`GoogleAnalyticsConnectorProfileProperties`](crate::model::GoogleAnalyticsConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12701,6 +12901,7 @@ impl std::fmt::Debug for DynatraceConnectorProfileProperties {
 }
 /// See [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties)
 pub mod dynatrace_connector_profile_properties {
+
     /// A builder for [`DynatraceConnectorProfileProperties`](crate::model::DynatraceConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12755,6 +12956,7 @@ impl std::fmt::Debug for DatadogConnectorProfileProperties {
 }
 /// See [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties)
 pub mod datadog_connector_profile_properties {
+
     /// A builder for [`DatadogConnectorProfileProperties`](crate::model::DatadogConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12799,6 +13001,7 @@ impl std::fmt::Debug for AmplitudeConnectorProfileProperties {
 }
 /// See [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties)
 pub mod amplitude_connector_profile_properties {
+
     /// A builder for [`AmplitudeConnectorProfileProperties`](crate::model::AmplitudeConnectorProfileProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12894,6 +13097,7 @@ impl std::fmt::Debug for ConnectorProvisioningConfig {
 }
 /// See [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig)
 pub mod connector_provisioning_config {
+
     /// A builder for [`ConnectorProvisioningConfig`](crate::model::ConnectorProvisioningConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12951,6 +13155,7 @@ impl std::fmt::Debug for LambdaConnectorProvisioningConfig {
 }
 /// See [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig)
 pub mod lambda_connector_provisioning_config {
+
     /// A builder for [`LambdaConnectorProvisioningConfig`](crate::model::LambdaConnectorProvisioningConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13169,6 +13374,7 @@ impl std::fmt::Debug for FlowDefinition {
 }
 /// See [`FlowDefinition`](crate::model::FlowDefinition)
 pub mod flow_definition {
+
     /// A builder for [`FlowDefinition`](crate::model::FlowDefinition)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13466,6 +13672,7 @@ impl std::fmt::Debug for ExecutionDetails {
 }
 /// See [`ExecutionDetails`](crate::model::ExecutionDetails)
 pub mod execution_details {
+
     /// A builder for [`ExecutionDetails`](crate::model::ExecutionDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13693,6 +13900,7 @@ impl std::fmt::Debug for ConnectorDetail {
 }
 /// See [`ConnectorDetail`](crate::model::ConnectorDetail)
 pub mod connector_detail {
+
     /// A builder for [`ConnectorDetail`](crate::model::ConnectorDetail)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13924,6 +14132,7 @@ impl std::fmt::Debug for ConnectorEntity {
 }
 /// See [`ConnectorEntity`](crate::model::ConnectorEntity)
 pub mod connector_entity {
+
     /// A builder for [`ConnectorEntity`](crate::model::ConnectorEntity)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14044,6 +14253,7 @@ impl std::fmt::Debug for ExecutionRecord {
 }
 /// See [`ExecutionRecord`](crate::model::ExecutionRecord)
 pub mod execution_record {
+
     /// A builder for [`ExecutionRecord`](crate::model::ExecutionRecord)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14209,6 +14419,7 @@ impl std::fmt::Debug for ExecutionResult {
 }
 /// See [`ExecutionResult`](crate::model::ExecutionResult)
 pub mod execution_result {
+
     /// A builder for [`ExecutionResult`](crate::model::ExecutionResult)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14309,6 +14520,7 @@ impl std::fmt::Debug for ErrorInfo {
 }
 /// See [`ErrorInfo`](crate::model::ErrorInfo)
 pub mod error_info {
+
     /// A builder for [`ErrorInfo`](crate::model::ErrorInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -14593,6 +14805,7 @@ impl std::fmt::Debug for ConnectorConfiguration {
 }
 /// See [`ConnectorConfiguration`](crate::model::ConnectorConfiguration)
 pub mod connector_configuration {
+
     /// A builder for [`ConnectorConfiguration`](crate::model::ConnectorConfiguration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -15286,6 +15499,7 @@ impl std::fmt::Debug for ConnectorRuntimeSetting {
 }
 /// See [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting)
 pub mod connector_runtime_setting {
+
     /// A builder for [`ConnectorRuntimeSetting`](crate::model::ConnectorRuntimeSetting)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -15460,6 +15674,7 @@ impl std::fmt::Debug for AuthenticationConfig {
 }
 /// See [`AuthenticationConfig`](crate::model::AuthenticationConfig)
 pub mod authentication_config {
+
     /// A builder for [`AuthenticationConfig`](crate::model::AuthenticationConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -15597,6 +15812,7 @@ impl std::fmt::Debug for CustomAuthConfig {
 }
 /// See [`CustomAuthConfig`](crate::model::CustomAuthConfig)
 pub mod custom_auth_config {
+
     /// A builder for [`CustomAuthConfig`](crate::model::CustomAuthConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -15710,6 +15926,7 @@ impl std::fmt::Debug for AuthParameter {
 }
 /// See [`AuthParameter`](crate::model::AuthParameter)
 pub mod auth_parameter {
+
     /// A builder for [`AuthParameter`](crate::model::AuthParameter)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -15825,6 +16042,9 @@ pub struct OAuth2Defaults {
     /// <p>OAuth 2.0 grant types supported by the connector.</p>
     pub oauth2_grant_types_supported:
         std::option::Option<std::vec::Vec<crate::model::OAuth2GrantType>>,
+    /// <p>List of custom parameters required for OAuth 2.0 authentication.</p>
+    pub oauth2_custom_properties:
+        std::option::Option<std::vec::Vec<crate::model::OAuth2CustomParameter>>,
 }
 impl OAuth2Defaults {
     /// <p>OAuth 2.0 scopes that the connector supports.</p>
@@ -15845,6 +16065,12 @@ impl OAuth2Defaults {
     ) -> std::option::Option<&[crate::model::OAuth2GrantType]> {
         self.oauth2_grant_types_supported.as_deref()
     }
+    /// <p>List of custom parameters required for OAuth 2.0 authentication.</p>
+    pub fn oauth2_custom_properties(
+        &self,
+    ) -> std::option::Option<&[crate::model::OAuth2CustomParameter]> {
+        self.oauth2_custom_properties.as_deref()
+    }
 }
 impl std::fmt::Debug for OAuth2Defaults {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -15856,11 +16082,13 @@ impl std::fmt::Debug for OAuth2Defaults {
             "oauth2_grant_types_supported",
             &self.oauth2_grant_types_supported,
         );
+        formatter.field("oauth2_custom_properties", &self.oauth2_custom_properties);
         formatter.finish()
     }
 }
 /// See [`OAuth2Defaults`](crate::model::OAuth2Defaults)
 pub mod o_auth2_defaults {
+
     /// A builder for [`OAuth2Defaults`](crate::model::OAuth2Defaults)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -15870,6 +16098,8 @@ pub mod o_auth2_defaults {
         pub(crate) auth_code_urls: std::option::Option<std::vec::Vec<std::string::String>>,
         pub(crate) oauth2_grant_types_supported:
             std::option::Option<std::vec::Vec<crate::model::OAuth2GrantType>>,
+        pub(crate) oauth2_custom_properties:
+            std::option::Option<std::vec::Vec<crate::model::OAuth2CustomParameter>>,
     }
     impl Builder {
         /// Appends an item to `oauth_scopes`.
@@ -15951,6 +16181,28 @@ pub mod o_auth2_defaults {
             self.oauth2_grant_types_supported = input;
             self
         }
+        /// Appends an item to `oauth2_custom_properties`.
+        ///
+        /// To override the contents of this collection use [`set_oauth2_custom_properties`](Self::set_oauth2_custom_properties).
+        ///
+        /// <p>List of custom parameters required for OAuth 2.0 authentication.</p>
+        pub fn oauth2_custom_properties(
+            mut self,
+            input: crate::model::OAuth2CustomParameter,
+        ) -> Self {
+            let mut v = self.oauth2_custom_properties.unwrap_or_default();
+            v.push(input);
+            self.oauth2_custom_properties = Some(v);
+            self
+        }
+        /// <p>List of custom parameters required for OAuth 2.0 authentication.</p>
+        pub fn set_oauth2_custom_properties(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::OAuth2CustomParameter>>,
+        ) -> Self {
+            self.oauth2_custom_properties = input;
+            self
+        }
         /// Consumes the builder and constructs a [`OAuth2Defaults`](crate::model::OAuth2Defaults)
         pub fn build(self) -> crate::model::OAuth2Defaults {
             crate::model::OAuth2Defaults {
@@ -15958,6 +16210,7 @@ pub mod o_auth2_defaults {
                 token_urls: self.token_urls,
                 auth_code_urls: self.auth_code_urls,
                 oauth2_grant_types_supported: self.oauth2_grant_types_supported,
+                oauth2_custom_properties: self.oauth2_custom_properties,
             }
         }
     }
@@ -15966,6 +16219,243 @@ impl OAuth2Defaults {
     /// Creates a new builder-style object to manufacture [`OAuth2Defaults`](crate::model::OAuth2Defaults)
     pub fn builder() -> crate::model::o_auth2_defaults::Builder {
         crate::model::o_auth2_defaults::Builder::default()
+    }
+}
+
+/// <p>Custom parameter required for OAuth 2.0 authentication.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct OAuth2CustomParameter {
+    /// <p>The key of the custom parameter required for OAuth 2.0 authentication.</p>
+    pub key: std::option::Option<std::string::String>,
+    /// <p>Indicates whether the custom parameter for OAuth 2.0 authentication is required.</p>
+    pub is_required: bool,
+    /// <p>The label of the custom parameter used for OAuth 2.0 authentication.</p>
+    pub label: std::option::Option<std::string::String>,
+    /// <p>A description about the custom parameter used for OAuth 2.0 authentication.</p>
+    pub description: std::option::Option<std::string::String>,
+    /// <p>Indicates whether this authentication custom parameter is a sensitive field.</p>
+    pub is_sensitive_field: bool,
+    /// <p>Contains default values for this authentication parameter that are supplied by the connector.</p>
+    pub connector_supplied_values: std::option::Option<std::vec::Vec<std::string::String>>,
+    /// <p>Indicates whether custom parameter is used with TokenUrl or AuthUrl.</p>
+    pub r#type: std::option::Option<crate::model::OAuth2CustomPropType>,
+}
+impl OAuth2CustomParameter {
+    /// <p>The key of the custom parameter required for OAuth 2.0 authentication.</p>
+    pub fn key(&self) -> std::option::Option<&str> {
+        self.key.as_deref()
+    }
+    /// <p>Indicates whether the custom parameter for OAuth 2.0 authentication is required.</p>
+    pub fn is_required(&self) -> bool {
+        self.is_required
+    }
+    /// <p>The label of the custom parameter used for OAuth 2.0 authentication.</p>
+    pub fn label(&self) -> std::option::Option<&str> {
+        self.label.as_deref()
+    }
+    /// <p>A description about the custom parameter used for OAuth 2.0 authentication.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>Indicates whether this authentication custom parameter is a sensitive field.</p>
+    pub fn is_sensitive_field(&self) -> bool {
+        self.is_sensitive_field
+    }
+    /// <p>Contains default values for this authentication parameter that are supplied by the connector.</p>
+    pub fn connector_supplied_values(&self) -> std::option::Option<&[std::string::String]> {
+        self.connector_supplied_values.as_deref()
+    }
+    /// <p>Indicates whether custom parameter is used with TokenUrl or AuthUrl.</p>
+    pub fn r#type(&self) -> std::option::Option<&crate::model::OAuth2CustomPropType> {
+        self.r#type.as_ref()
+    }
+}
+impl std::fmt::Debug for OAuth2CustomParameter {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("OAuth2CustomParameter");
+        formatter.field("key", &self.key);
+        formatter.field("is_required", &self.is_required);
+        formatter.field("label", &self.label);
+        formatter.field("description", &self.description);
+        formatter.field("is_sensitive_field", &self.is_sensitive_field);
+        formatter.field("connector_supplied_values", &self.connector_supplied_values);
+        formatter.field("r#type", &self.r#type);
+        formatter.finish()
+    }
+}
+/// See [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
+pub mod o_auth2_custom_parameter {
+
+    /// A builder for [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) key: std::option::Option<std::string::String>,
+        pub(crate) is_required: std::option::Option<bool>,
+        pub(crate) label: std::option::Option<std::string::String>,
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) is_sensitive_field: std::option::Option<bool>,
+        pub(crate) connector_supplied_values:
+            std::option::Option<std::vec::Vec<std::string::String>>,
+        pub(crate) r#type: std::option::Option<crate::model::OAuth2CustomPropType>,
+    }
+    impl Builder {
+        /// <p>The key of the custom parameter required for OAuth 2.0 authentication.</p>
+        pub fn key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.key = Some(input.into());
+            self
+        }
+        /// <p>The key of the custom parameter required for OAuth 2.0 authentication.</p>
+        pub fn set_key(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.key = input;
+            self
+        }
+        /// <p>Indicates whether the custom parameter for OAuth 2.0 authentication is required.</p>
+        pub fn is_required(mut self, input: bool) -> Self {
+            self.is_required = Some(input);
+            self
+        }
+        /// <p>Indicates whether the custom parameter for OAuth 2.0 authentication is required.</p>
+        pub fn set_is_required(mut self, input: std::option::Option<bool>) -> Self {
+            self.is_required = input;
+            self
+        }
+        /// <p>The label of the custom parameter used for OAuth 2.0 authentication.</p>
+        pub fn label(mut self, input: impl Into<std::string::String>) -> Self {
+            self.label = Some(input.into());
+            self
+        }
+        /// <p>The label of the custom parameter used for OAuth 2.0 authentication.</p>
+        pub fn set_label(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.label = input;
+            self
+        }
+        /// <p>A description about the custom parameter used for OAuth 2.0 authentication.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>A description about the custom parameter used for OAuth 2.0 authentication.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>Indicates whether this authentication custom parameter is a sensitive field.</p>
+        pub fn is_sensitive_field(mut self, input: bool) -> Self {
+            self.is_sensitive_field = Some(input);
+            self
+        }
+        /// <p>Indicates whether this authentication custom parameter is a sensitive field.</p>
+        pub fn set_is_sensitive_field(mut self, input: std::option::Option<bool>) -> Self {
+            self.is_sensitive_field = input;
+            self
+        }
+        /// Appends an item to `connector_supplied_values`.
+        ///
+        /// To override the contents of this collection use [`set_connector_supplied_values`](Self::set_connector_supplied_values).
+        ///
+        /// <p>Contains default values for this authentication parameter that are supplied by the connector.</p>
+        pub fn connector_supplied_values(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.connector_supplied_values.unwrap_or_default();
+            v.push(input.into());
+            self.connector_supplied_values = Some(v);
+            self
+        }
+        /// <p>Contains default values for this authentication parameter that are supplied by the connector.</p>
+        pub fn set_connector_supplied_values(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.connector_supplied_values = input;
+            self
+        }
+        /// <p>Indicates whether custom parameter is used with TokenUrl or AuthUrl.</p>
+        pub fn r#type(mut self, input: crate::model::OAuth2CustomPropType) -> Self {
+            self.r#type = Some(input);
+            self
+        }
+        /// <p>Indicates whether custom parameter is used with TokenUrl or AuthUrl.</p>
+        pub fn set_type(
+            mut self,
+            input: std::option::Option<crate::model::OAuth2CustomPropType>,
+        ) -> Self {
+            self.r#type = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
+        pub fn build(self) -> crate::model::OAuth2CustomParameter {
+            crate::model::OAuth2CustomParameter {
+                key: self.key,
+                is_required: self.is_required.unwrap_or_default(),
+                label: self.label,
+                description: self.description,
+                is_sensitive_field: self.is_sensitive_field.unwrap_or_default(),
+                connector_supplied_values: self.connector_supplied_values,
+                r#type: self.r#type,
+            }
+        }
+    }
+}
+impl OAuth2CustomParameter {
+    /// Creates a new builder-style object to manufacture [`OAuth2CustomParameter`](crate::model::OAuth2CustomParameter)
+    pub fn builder() -> crate::model::o_auth2_custom_parameter::Builder {
+        crate::model::o_auth2_custom_parameter::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum OAuth2CustomPropType {
+    #[allow(missing_docs)] // documentation missing in model
+    AuthUrl,
+    #[allow(missing_docs)] // documentation missing in model
+    TokenUrl,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for OAuth2CustomPropType {
+    fn from(s: &str) -> Self {
+        match s {
+            "AUTH_URL" => OAuth2CustomPropType::AuthUrl,
+            "TOKEN_URL" => OAuth2CustomPropType::TokenUrl,
+            other => OAuth2CustomPropType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for OAuth2CustomPropType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(OAuth2CustomPropType::from(s))
+    }
+}
+impl OAuth2CustomPropType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            OAuth2CustomPropType::AuthUrl => "AUTH_URL",
+            OAuth2CustomPropType::TokenUrl => "TOKEN_URL",
+            OAuth2CustomPropType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["AUTH_URL", "TOKEN_URL"]
+    }
+}
+impl AsRef<str> for OAuth2CustomPropType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
     }
 }
 
@@ -16133,6 +16623,7 @@ impl std::fmt::Debug for ConnectorMetadata {
 }
 /// See [`ConnectorMetadata`](crate::model::ConnectorMetadata)
 pub mod connector_metadata {
+
     /// A builder for [`ConnectorMetadata`](crate::model::ConnectorMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16477,6 +16968,7 @@ impl std::fmt::Debug for SapoDataMetadata {
 }
 /// See [`SapoDataMetadata`](crate::model::SapoDataMetadata)
 pub mod sapo_data_metadata {
+
     /// A builder for [`SapoDataMetadata`](crate::model::SapoDataMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16517,6 +17009,7 @@ impl std::fmt::Debug for HoneycodeMetadata {
 }
 /// See [`HoneycodeMetadata`](crate::model::HoneycodeMetadata)
 pub mod honeycode_metadata {
+
     /// A builder for [`HoneycodeMetadata`](crate::model::HoneycodeMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16570,6 +17063,7 @@ impl std::fmt::Debug for CustomerProfilesMetadata {
 }
 /// See [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata)
 pub mod customer_profiles_metadata {
+
     /// A builder for [`CustomerProfilesMetadata`](crate::model::CustomerProfilesMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16600,6 +17094,7 @@ impl std::fmt::Debug for UpsolverMetadata {
 }
 /// See [`UpsolverMetadata`](crate::model::UpsolverMetadata)
 pub mod upsolver_metadata {
+
     /// A builder for [`UpsolverMetadata`](crate::model::UpsolverMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16630,6 +17125,7 @@ impl std::fmt::Debug for EventBridgeMetadata {
 }
 /// See [`EventBridgeMetadata`](crate::model::EventBridgeMetadata)
 pub mod event_bridge_metadata {
+
     /// A builder for [`EventBridgeMetadata`](crate::model::EventBridgeMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16670,6 +17166,7 @@ impl std::fmt::Debug for ZendeskMetadata {
 }
 /// See [`ZendeskMetadata`](crate::model::ZendeskMetadata)
 pub mod zendesk_metadata {
+
     /// A builder for [`ZendeskMetadata`](crate::model::ZendeskMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16723,6 +17220,7 @@ impl std::fmt::Debug for VeevaMetadata {
 }
 /// See [`VeevaMetadata`](crate::model::VeevaMetadata)
 pub mod veeva_metadata {
+
     /// A builder for [`VeevaMetadata`](crate::model::VeevaMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16753,6 +17251,7 @@ impl std::fmt::Debug for TrendmicroMetadata {
 }
 /// See [`TrendmicroMetadata`](crate::model::TrendmicroMetadata)
 pub mod trendmicro_metadata {
+
     /// A builder for [`TrendmicroMetadata`](crate::model::TrendmicroMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16793,6 +17292,7 @@ impl std::fmt::Debug for SnowflakeMetadata {
 }
 /// See [`SnowflakeMetadata`](crate::model::SnowflakeMetadata)
 pub mod snowflake_metadata {
+
     /// A builder for [`SnowflakeMetadata`](crate::model::SnowflakeMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16856,6 +17356,7 @@ impl std::fmt::Debug for SlackMetadata {
 }
 /// See [`SlackMetadata`](crate::model::SlackMetadata)
 pub mod slack_metadata {
+
     /// A builder for [`SlackMetadata`](crate::model::SlackMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16909,6 +17410,7 @@ impl std::fmt::Debug for SingularMetadata {
 }
 /// See [`SingularMetadata`](crate::model::SingularMetadata)
 pub mod singular_metadata {
+
     /// A builder for [`SingularMetadata`](crate::model::SingularMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16939,6 +17441,7 @@ impl std::fmt::Debug for ServiceNowMetadata {
 }
 /// See [`ServiceNowMetadata`](crate::model::ServiceNowMetadata)
 pub mod service_now_metadata {
+
     /// A builder for [`ServiceNowMetadata`](crate::model::ServiceNowMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -16979,6 +17482,7 @@ impl std::fmt::Debug for SalesforceMetadata {
 }
 /// See [`SalesforceMetadata`](crate::model::SalesforceMetadata)
 pub mod salesforce_metadata {
+
     /// A builder for [`SalesforceMetadata`](crate::model::SalesforceMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17032,6 +17536,7 @@ impl std::fmt::Debug for S3Metadata {
 }
 /// See [`S3Metadata`](crate::model::S3Metadata)
 pub mod s3_metadata {
+
     /// A builder for [`S3Metadata`](crate::model::S3Metadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17062,6 +17567,7 @@ impl std::fmt::Debug for RedshiftMetadata {
 }
 /// See [`RedshiftMetadata`](crate::model::RedshiftMetadata)
 pub mod redshift_metadata {
+
     /// A builder for [`RedshiftMetadata`](crate::model::RedshiftMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17092,6 +17598,7 @@ impl std::fmt::Debug for MarketoMetadata {
 }
 /// See [`MarketoMetadata`](crate::model::MarketoMetadata)
 pub mod marketo_metadata {
+
     /// A builder for [`MarketoMetadata`](crate::model::MarketoMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17122,6 +17629,7 @@ impl std::fmt::Debug for InforNexusMetadata {
 }
 /// See [`InforNexusMetadata`](crate::model::InforNexusMetadata)
 pub mod infor_nexus_metadata {
+
     /// A builder for [`InforNexusMetadata`](crate::model::InforNexusMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17162,6 +17670,7 @@ impl std::fmt::Debug for GoogleAnalyticsMetadata {
 }
 /// See [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata)
 pub mod google_analytics_metadata {
+
     /// A builder for [`GoogleAnalyticsMetadata`](crate::model::GoogleAnalyticsMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17215,6 +17724,7 @@ impl std::fmt::Debug for DynatraceMetadata {
 }
 /// See [`DynatraceMetadata`](crate::model::DynatraceMetadata)
 pub mod dynatrace_metadata {
+
     /// A builder for [`DynatraceMetadata`](crate::model::DynatraceMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17245,6 +17755,7 @@ impl std::fmt::Debug for DatadogMetadata {
 }
 /// See [`DatadogMetadata`](crate::model::DatadogMetadata)
 pub mod datadog_metadata {
+
     /// A builder for [`DatadogMetadata`](crate::model::DatadogMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17275,6 +17786,7 @@ impl std::fmt::Debug for AmplitudeMetadata {
 }
 /// See [`AmplitudeMetadata`](crate::model::AmplitudeMetadata)
 pub mod amplitude_metadata {
+
     /// A builder for [`AmplitudeMetadata`](crate::model::AmplitudeMetadata)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17460,6 +17972,7 @@ impl std::fmt::Debug for ConnectorProfile {
 }
 /// See [`ConnectorProfile`](crate::model::ConnectorProfile)
 pub mod connector_profile {
+
     /// A builder for [`ConnectorProfile`](crate::model::ConnectorProfile)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17678,6 +18191,7 @@ impl std::fmt::Debug for PrivateConnectionProvisioningState {
 }
 /// See [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState)
 pub mod private_connection_provisioning_state {
+
     /// A builder for [`PrivateConnectionProvisioningState`](crate::model::PrivateConnectionProvisioningState)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -17986,6 +18500,7 @@ impl std::fmt::Debug for ConnectorEntityField {
 }
 /// See [`ConnectorEntityField`](crate::model::ConnectorEntityField)
 pub mod connector_entity_field {
+
     /// A builder for [`ConnectorEntityField`](crate::model::ConnectorEntityField)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18241,6 +18756,7 @@ impl std::fmt::Debug for DestinationFieldProperties {
 }
 /// See [`DestinationFieldProperties`](crate::model::DestinationFieldProperties)
 pub mod destination_field_properties {
+
     /// A builder for [`DestinationFieldProperties`](crate::model::DestinationFieldProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18385,6 +18901,7 @@ impl std::fmt::Debug for SourceFieldProperties {
 }
 /// See [`SourceFieldProperties`](crate::model::SourceFieldProperties)
 pub mod source_field_properties {
+
     /// A builder for [`SourceFieldProperties`](crate::model::SourceFieldProperties)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18468,6 +18985,7 @@ impl std::fmt::Debug for SupportedFieldTypeDetails {
 }
 /// See [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails)
 pub mod supported_field_type_details {
+
     /// A builder for [`SupportedFieldTypeDetails`](crate::model::SupportedFieldTypeDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18565,6 +19083,7 @@ impl std::fmt::Debug for FieldTypeDetails {
 }
 /// See [`FieldTypeDetails`](crate::model::FieldTypeDetails)
 pub mod field_type_details {
+
     /// A builder for [`FieldTypeDetails`](crate::model::FieldTypeDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18728,6 +19247,7 @@ impl std::fmt::Debug for Range {
 }
 /// See [`Range`](crate::model::Range)
 pub mod range {
+
     /// A builder for [`Range`](crate::model::Range)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

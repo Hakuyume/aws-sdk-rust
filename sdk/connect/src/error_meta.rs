@@ -29,6 +29,8 @@ pub enum Error {
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The contact is not permitted.</p>
     OutboundContactNotPermittedException(crate::error::OutboundContactNotPermittedException),
+    /// <p></p>
+    PropertyValidationException(crate::error::PropertyValidationException),
     /// <p>A resource already has that name.</p>
     ResourceConflictException(crate::error::ResourceConflictException),
     /// <p>That resource is already in use. Please try another.</p>
@@ -60,6 +62,7 @@ impl std::fmt::Display for Error {
             Error::InvalidRequestException(inner) => inner.fmt(f),
             Error::LimitExceededException(inner) => inner.fmt(f),
             Error::OutboundContactNotPermittedException(inner) => inner.fmt(f),
+            Error::PropertyValidationException(inner) => inner.fmt(f),
             Error::ResourceConflictException(inner) => inner.fmt(f),
             Error::ResourceInUseException(inner) => inner.fmt(f),
             Error::ResourceNotFoundException(inner) => inner.fmt(f),
@@ -275,6 +278,31 @@ where
         }
     }
 }
+impl<R>
+    From<aws_smithy_http::result::SdkError<crate::error::AssociatePhoneNumberContactFlowError, R>>
+    for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<
+            crate::error::AssociatePhoneNumberContactFlowError,
+            R,
+        >,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, ..} => match err.kind {
+                crate::error::AssociatePhoneNumberContactFlowErrorKind::AccessDeniedException(inner) => Error::AccessDeniedException(inner),
+                crate::error::AssociatePhoneNumberContactFlowErrorKind::InternalServiceException(inner) => Error::InternalServiceException(inner),
+                crate::error::AssociatePhoneNumberContactFlowErrorKind::InvalidParameterException(inner) => Error::InvalidParameterException(inner),
+                crate::error::AssociatePhoneNumberContactFlowErrorKind::ResourceNotFoundException(inner) => Error::ResourceNotFoundException(inner),
+                crate::error::AssociatePhoneNumberContactFlowErrorKind::ThrottlingException(inner) => Error::ThrottlingException(inner),
+                crate::error::AssociatePhoneNumberContactFlowErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            }
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::AssociateQueueQuickConnectsError, R>>
     for Error
 where
@@ -376,6 +404,41 @@ where
                     Error::ThrottlingException(inner)
                 }
                 crate::error::AssociateSecurityKeyErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::ClaimPhoneNumberError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::ClaimPhoneNumberError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::ClaimPhoneNumberErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::ClaimPhoneNumberErrorKind::IdempotencyException(inner) => {
+                    Error::IdempotencyException(inner)
+                }
+                crate::error::ClaimPhoneNumberErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::ClaimPhoneNumberErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::ClaimPhoneNumberErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::ClaimPhoneNumberErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::ClaimPhoneNumberErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
             },
@@ -731,6 +794,41 @@ where
                     Error::ThrottlingException(inner)
                 }
                 crate::error::CreateSecurityProfileErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::CreateTaskTemplateError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::CreateTaskTemplateError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::CreateTaskTemplateErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::CreateTaskTemplateErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::CreateTaskTemplateErrorKind::PropertyValidationException(inner) => {
+                    Error::PropertyValidationException(inner)
+                }
+                crate::error::CreateTaskTemplateErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::CreateTaskTemplateErrorKind::ServiceQuotaExceededException(inner) => {
+                    Error::ServiceQuotaExceededException(inner)
+                }
+                crate::error::CreateTaskTemplateErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::CreateTaskTemplateErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
             },
@@ -1097,6 +1195,38 @@ where
                     Error::ThrottlingException(inner)
                 }
                 crate::error::DeleteSecurityProfileErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::DeleteTaskTemplateError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::DeleteTaskTemplateError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::DeleteTaskTemplateErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::DeleteTaskTemplateErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::DeleteTaskTemplateErrorKind::InvalidRequestException(inner) => {
+                    Error::InvalidRequestException(inner)
+                }
+                crate::error::DeleteTaskTemplateErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::DeleteTaskTemplateErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::DeleteTaskTemplateErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
             },
@@ -1477,6 +1607,38 @@ where
                     inner,
                 ) => Error::ThrottlingException(inner),
                 crate::error::DescribeInstanceStorageConfigErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::DescribePhoneNumberError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::DescribePhoneNumberError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::DescribePhoneNumberErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::DescribePhoneNumberErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::DescribePhoneNumberErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::DescribePhoneNumberErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::DescribePhoneNumberErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::DescribePhoneNumberErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
             },
@@ -1878,6 +2040,32 @@ where
     }
 }
 impl<R>
+    From<
+        aws_smithy_http::result::SdkError<crate::error::DisassociatePhoneNumberContactFlowError, R>,
+    > for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<
+            crate::error::DisassociatePhoneNumberContactFlowError,
+            R,
+        >,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, ..} => match err.kind {
+                crate::error::DisassociatePhoneNumberContactFlowErrorKind::AccessDeniedException(inner) => Error::AccessDeniedException(inner),
+                crate::error::DisassociatePhoneNumberContactFlowErrorKind::InternalServiceException(inner) => Error::InternalServiceException(inner),
+                crate::error::DisassociatePhoneNumberContactFlowErrorKind::InvalidParameterException(inner) => Error::InvalidParameterException(inner),
+                crate::error::DisassociatePhoneNumberContactFlowErrorKind::ResourceNotFoundException(inner) => Error::ResourceNotFoundException(inner),
+                crate::error::DisassociatePhoneNumberContactFlowErrorKind::ThrottlingException(inner) => Error::ThrottlingException(inner),
+                crate::error::DisassociatePhoneNumberContactFlowErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            }
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R>
     From<aws_smithy_http::result::SdkError<crate::error::DisassociateQueueQuickConnectsError, R>>
     for Error
 where
@@ -2020,6 +2208,38 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::GetCurrentUserDataError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::GetCurrentUserDataError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::GetCurrentUserDataErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::GetCurrentUserDataErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::GetCurrentUserDataErrorKind::InvalidRequestException(inner) => {
+                    Error::InvalidRequestException(inner)
+                }
+                crate::error::GetCurrentUserDataErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::GetCurrentUserDataErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::GetCurrentUserDataErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::GetFederationTokenError, R>> for Error
 where
     R: Send + Sync + std::fmt::Debug + 'static,
@@ -2078,6 +2298,34 @@ where
                     Error::ThrottlingException(inner)
                 }
                 crate::error::GetMetricDataErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::GetTaskTemplateError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::GetTaskTemplateError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::GetTaskTemplateErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::GetTaskTemplateErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::GetTaskTemplateErrorKind::InvalidRequestException(inner) => {
+                    Error::InvalidRequestException(inner)
+                }
+                crate::error::GetTaskTemplateErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::GetTaskTemplateErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::GetTaskTemplateErrorKind::Unhandled(inner) => Error::Unhandled(inner),
             },
             _ => Error::Unhandled(err.into()),
         }
@@ -2543,6 +2791,38 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::ListPhoneNumbersV2Error, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::ListPhoneNumbersV2Error, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::ListPhoneNumbersV2ErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::ListPhoneNumbersV2ErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::ListPhoneNumbersV2ErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::ListPhoneNumbersV2ErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::ListPhoneNumbersV2ErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::ListPhoneNumbersV2ErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::ListPromptsError, R>> for Error
 where
     R: Send + Sync + std::fmt::Debug + 'static,
@@ -2851,6 +3131,38 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::ListTaskTemplatesError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::ListTaskTemplatesError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::ListTaskTemplatesErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::ListTaskTemplatesErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::ListTaskTemplatesErrorKind::InvalidRequestException(inner) => {
+                    Error::InvalidRequestException(inner)
+                }
+                crate::error::ListTaskTemplatesErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::ListTaskTemplatesErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::ListTaskTemplatesErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::ListUseCasesError, R>> for Error
 where
     R: Send + Sync + std::fmt::Debug + 'static,
@@ -2937,6 +3249,75 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::PutUserStatusError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::PutUserStatusError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::PutUserStatusErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::PutUserStatusErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::PutUserStatusErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::PutUserStatusErrorKind::InvalidRequestException(inner) => {
+                    Error::InvalidRequestException(inner)
+                }
+                crate::error::PutUserStatusErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::PutUserStatusErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::PutUserStatusErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::ReleasePhoneNumberError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::ReleasePhoneNumberError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::ReleasePhoneNumberErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::ReleasePhoneNumberErrorKind::IdempotencyException(inner) => {
+                    Error::IdempotencyException(inner)
+                }
+                crate::error::ReleasePhoneNumberErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::ReleasePhoneNumberErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::ReleasePhoneNumberErrorKind::ResourceInUseException(inner) => {
+                    Error::ResourceInUseException(inner)
+                }
+                crate::error::ReleasePhoneNumberErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::ReleasePhoneNumberErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::ReleasePhoneNumberErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::ResumeContactRecordingError, R>>
     for Error
 where
@@ -2959,6 +3340,64 @@ where
                 crate::error::ResumeContactRecordingErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::SearchAvailablePhoneNumbersError, R>>
+    for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::SearchAvailablePhoneNumbersError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::SearchAvailablePhoneNumbersErrorKind::AccessDeniedException(
+                    inner,
+                ) => Error::AccessDeniedException(inner),
+                crate::error::SearchAvailablePhoneNumbersErrorKind::InternalServiceException(
+                    inner,
+                ) => Error::InternalServiceException(inner),
+                crate::error::SearchAvailablePhoneNumbersErrorKind::InvalidParameterException(
+                    inner,
+                ) => Error::InvalidParameterException(inner),
+                crate::error::SearchAvailablePhoneNumbersErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::SearchAvailablePhoneNumbersErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::SearchUsersError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::SearchUsersError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::SearchUsersErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::SearchUsersErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::SearchUsersErrorKind::InvalidRequestException(inner) => {
+                    Error::InvalidRequestException(inner)
+                }
+                crate::error::SearchUsersErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::SearchUsersErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::SearchUsersErrorKind::Unhandled(inner) => Error::Unhandled(inner),
             },
             _ => Error::Unhandled(err.into()),
         }
@@ -3281,6 +3720,40 @@ where
                     Error::ThrottlingException(inner)
                 }
                 crate::error::TagResourceErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::TransferContactError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::TransferContactError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::TransferContactErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::TransferContactErrorKind::IdempotencyException(inner) => {
+                    Error::IdempotencyException(inner)
+                }
+                crate::error::TransferContactErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::TransferContactErrorKind::InvalidRequestException(inner) => {
+                    Error::InvalidRequestException(inner)
+                }
+                crate::error::TransferContactErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::TransferContactErrorKind::ServiceQuotaExceededException(inner) => {
+                    Error::ServiceQuotaExceededException(inner)
+                }
+                crate::error::TransferContactErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::TransferContactErrorKind::Unhandled(inner) => Error::Unhandled(inner),
             },
             _ => Error::Unhandled(err.into()),
         }
@@ -3709,6 +4182,44 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::UpdatePhoneNumberError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::UpdatePhoneNumberError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::UpdatePhoneNumberErrorKind::AccessDeniedException(inner) => {
+                    Error::AccessDeniedException(inner)
+                }
+                crate::error::UpdatePhoneNumberErrorKind::IdempotencyException(inner) => {
+                    Error::IdempotencyException(inner)
+                }
+                crate::error::UpdatePhoneNumberErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::UpdatePhoneNumberErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::UpdatePhoneNumberErrorKind::ResourceInUseException(inner) => {
+                    Error::ResourceInUseException(inner)
+                }
+                crate::error::UpdatePhoneNumberErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::UpdatePhoneNumberErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::UpdatePhoneNumberErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::UpdateQueueHoursOfOperationError, R>>
     for Error
 where
@@ -4078,6 +4589,41 @@ where
                     Error::ThrottlingException(inner)
                 }
                 crate::error::UpdateSecurityProfileErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::UpdateTaskTemplateError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::UpdateTaskTemplateError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::UpdateTaskTemplateErrorKind::InternalServiceException(inner) => {
+                    Error::InternalServiceException(inner)
+                }
+                crate::error::UpdateTaskTemplateErrorKind::InvalidParameterException(inner) => {
+                    Error::InvalidParameterException(inner)
+                }
+                crate::error::UpdateTaskTemplateErrorKind::PropertyValidationException(inner) => {
+                    Error::PropertyValidationException(inner)
+                }
+                crate::error::UpdateTaskTemplateErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::UpdateTaskTemplateErrorKind::ServiceQuotaExceededException(inner) => {
+                    Error::ServiceQuotaExceededException(inner)
+                }
+                crate::error::UpdateTaskTemplateErrorKind::ThrottlingException(inner) => {
+                    Error::ThrottlingException(inner)
+                }
+                crate::error::UpdateTaskTemplateErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
             },

@@ -160,6 +160,7 @@ impl std::fmt::Debug for UpdateReplicationConfigurationOutput {
 }
 /// See [`UpdateReplicationConfigurationOutput`](crate::output::UpdateReplicationConfigurationOutput)
 pub mod update_replication_configuration_output {
+
     /// A builder for [`UpdateReplicationConfigurationOutput`](crate::output::UpdateReplicationConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -551,6 +552,7 @@ impl std::fmt::Debug for UpdateLaunchConfigurationOutput {
 }
 /// See [`UpdateLaunchConfigurationOutput`](crate::output::UpdateLaunchConfigurationOutput)
 pub mod update_launch_configuration_output {
+
     /// A builder for [`UpdateLaunchConfigurationOutput`](crate::output::UpdateLaunchConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -708,6 +710,8 @@ pub struct RetryDataReplicationOutput {
     pub life_cycle: std::option::Option<crate::model::LifeCycle>,
     /// <p>The source properties of the Source Server.</p>
     pub source_properties: std::option::Option<crate::model::SourceProperties>,
+    /// <p>The staging area of the source server.</p>
+    pub staging_area: std::option::Option<crate::model::StagingArea>,
 }
 impl RetryDataReplicationOutput {
     /// <p>The ID of the Source Server.</p>
@@ -745,6 +749,10 @@ impl RetryDataReplicationOutput {
     pub fn source_properties(&self) -> std::option::Option<&crate::model::SourceProperties> {
         self.source_properties.as_ref()
     }
+    /// <p>The staging area of the source server.</p>
+    pub fn staging_area(&self) -> std::option::Option<&crate::model::StagingArea> {
+        self.staging_area.as_ref()
+    }
 }
 impl std::fmt::Debug for RetryDataReplicationOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -757,11 +765,13 @@ impl std::fmt::Debug for RetryDataReplicationOutput {
         formatter.field("data_replication_info", &self.data_replication_info);
         formatter.field("life_cycle", &self.life_cycle);
         formatter.field("source_properties", &self.source_properties);
+        formatter.field("staging_area", &self.staging_area);
         formatter.finish()
     }
 }
 /// See [`RetryDataReplicationOutput`](crate::output::RetryDataReplicationOutput)
 pub mod retry_data_replication_output {
+
     /// A builder for [`RetryDataReplicationOutput`](crate::output::RetryDataReplicationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -776,6 +786,7 @@ pub mod retry_data_replication_output {
         pub(crate) data_replication_info: std::option::Option<crate::model::DataReplicationInfo>,
         pub(crate) life_cycle: std::option::Option<crate::model::LifeCycle>,
         pub(crate) source_properties: std::option::Option<crate::model::SourceProperties>,
+        pub(crate) staging_area: std::option::Option<crate::model::StagingArea>,
     }
     impl Builder {
         /// <p>The ID of the Source Server.</p>
@@ -891,6 +902,19 @@ pub mod retry_data_replication_output {
             self.source_properties = input;
             self
         }
+        /// <p>The staging area of the source server.</p>
+        pub fn staging_area(mut self, input: crate::model::StagingArea) -> Self {
+            self.staging_area = Some(input);
+            self
+        }
+        /// <p>The staging area of the source server.</p>
+        pub fn set_staging_area(
+            mut self,
+            input: std::option::Option<crate::model::StagingArea>,
+        ) -> Self {
+            self.staging_area = input;
+            self
+        }
         /// Consumes the builder and constructs a [`RetryDataReplicationOutput`](crate::output::RetryDataReplicationOutput)
         pub fn build(self) -> crate::output::RetryDataReplicationOutput {
             crate::output::RetryDataReplicationOutput {
@@ -902,6 +926,7 @@ pub mod retry_data_replication_output {
                 data_replication_info: self.data_replication_info,
                 life_cycle: self.life_cycle,
                 source_properties: self.source_properties,
+                staging_area: self.staging_area,
             }
         }
     }
@@ -1074,6 +1099,7 @@ impl std::fmt::Debug for GetReplicationConfigurationOutput {
 }
 /// See [`GetReplicationConfigurationOutput`](crate::output::GetReplicationConfigurationOutput)
 pub mod get_replication_configuration_output {
+
     /// A builder for [`GetReplicationConfigurationOutput`](crate::output::GetReplicationConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1465,6 +1491,7 @@ impl std::fmt::Debug for GetLaunchConfigurationOutput {
 }
 /// See [`GetLaunchConfigurationOutput`](crate::output::GetLaunchConfigurationOutput)
 pub mod get_launch_configuration_output {
+
     /// A builder for [`GetLaunchConfigurationOutput`](crate::output::GetLaunchConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1622,6 +1649,8 @@ pub struct DisconnectSourceServerOutput {
     pub life_cycle: std::option::Option<crate::model::LifeCycle>,
     /// <p>The source properties of the Source Server.</p>
     pub source_properties: std::option::Option<crate::model::SourceProperties>,
+    /// <p>The staging area of the source server.</p>
+    pub staging_area: std::option::Option<crate::model::StagingArea>,
 }
 impl DisconnectSourceServerOutput {
     /// <p>The ID of the Source Server.</p>
@@ -1659,6 +1688,10 @@ impl DisconnectSourceServerOutput {
     pub fn source_properties(&self) -> std::option::Option<&crate::model::SourceProperties> {
         self.source_properties.as_ref()
     }
+    /// <p>The staging area of the source server.</p>
+    pub fn staging_area(&self) -> std::option::Option<&crate::model::StagingArea> {
+        self.staging_area.as_ref()
+    }
 }
 impl std::fmt::Debug for DisconnectSourceServerOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1671,11 +1704,13 @@ impl std::fmt::Debug for DisconnectSourceServerOutput {
         formatter.field("data_replication_info", &self.data_replication_info);
         formatter.field("life_cycle", &self.life_cycle);
         formatter.field("source_properties", &self.source_properties);
+        formatter.field("staging_area", &self.staging_area);
         formatter.finish()
     }
 }
 /// See [`DisconnectSourceServerOutput`](crate::output::DisconnectSourceServerOutput)
 pub mod disconnect_source_server_output {
+
     /// A builder for [`DisconnectSourceServerOutput`](crate::output::DisconnectSourceServerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1690,6 +1725,7 @@ pub mod disconnect_source_server_output {
         pub(crate) data_replication_info: std::option::Option<crate::model::DataReplicationInfo>,
         pub(crate) life_cycle: std::option::Option<crate::model::LifeCycle>,
         pub(crate) source_properties: std::option::Option<crate::model::SourceProperties>,
+        pub(crate) staging_area: std::option::Option<crate::model::StagingArea>,
     }
     impl Builder {
         /// <p>The ID of the Source Server.</p>
@@ -1805,6 +1841,19 @@ pub mod disconnect_source_server_output {
             self.source_properties = input;
             self
         }
+        /// <p>The staging area of the source server.</p>
+        pub fn staging_area(mut self, input: crate::model::StagingArea) -> Self {
+            self.staging_area = Some(input);
+            self
+        }
+        /// <p>The staging area of the source server.</p>
+        pub fn set_staging_area(
+            mut self,
+            input: std::option::Option<crate::model::StagingArea>,
+        ) -> Self {
+            self.staging_area = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DisconnectSourceServerOutput`](crate::output::DisconnectSourceServerOutput)
         pub fn build(self) -> crate::output::DisconnectSourceServerOutput {
             crate::output::DisconnectSourceServerOutput {
@@ -1816,6 +1865,7 @@ pub mod disconnect_source_server_output {
                 data_replication_info: self.data_replication_info,
                 life_cycle: self.life_cycle,
                 source_properties: self.source_properties,
+                staging_area: self.staging_area,
             }
         }
     }
@@ -1856,6 +1906,7 @@ impl std::fmt::Debug for DescribeRecoverySnapshotsOutput {
 }
 /// See [`DescribeRecoverySnapshotsOutput`](crate::output::DescribeRecoverySnapshotsOutput)
 pub mod describe_recovery_snapshots_output {
+
     /// A builder for [`DescribeRecoverySnapshotsOutput`](crate::output::DescribeRecoverySnapshotsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1931,6 +1982,7 @@ impl std::fmt::Debug for StartRecoveryOutput {
 }
 /// See [`StartRecoveryOutput`](crate::output::StartRecoveryOutput)
 pub mod start_recovery_output {
+
     /// A builder for [`StartRecoveryOutput`](crate::output::StartRecoveryOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1990,6 +2042,7 @@ impl std::fmt::Debug for DescribeSourceServersOutput {
 }
 /// See [`DescribeSourceServersOutput`](crate::output::DescribeSourceServersOutput)
 pub mod describe_source_servers_output {
+
     /// A builder for [`DescribeSourceServersOutput`](crate::output::DescribeSourceServersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2055,6 +2108,7 @@ impl std::fmt::Debug for DeleteSourceServerOutput {
 }
 /// See [`DeleteSourceServerOutput`](crate::output::DeleteSourceServerOutput)
 pub mod delete_source_server_output {
+
     /// A builder for [`DeleteSourceServerOutput`](crate::output::DeleteSourceServerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2102,6 +2156,7 @@ impl std::fmt::Debug for DescribeReplicationConfigurationTemplatesOutput {
 }
 /// See [`DescribeReplicationConfigurationTemplatesOutput`](crate::output::DescribeReplicationConfigurationTemplatesOutput)
 pub mod describe_replication_configuration_templates_output {
+
     /// A builder for [`DescribeReplicationConfigurationTemplatesOutput`](crate::output::DescribeReplicationConfigurationTemplatesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2324,6 +2379,7 @@ impl std::fmt::Debug for CreateReplicationConfigurationTemplateOutput {
 }
 /// See [`CreateReplicationConfigurationTemplateOutput`](crate::output::CreateReplicationConfigurationTemplateOutput)
 pub mod create_replication_configuration_template_output {
+
     /// A builder for [`CreateReplicationConfigurationTemplateOutput`](crate::output::CreateReplicationConfigurationTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2654,6 +2710,7 @@ impl std::fmt::Debug for DeleteReplicationConfigurationTemplateOutput {
 }
 /// See [`DeleteReplicationConfigurationTemplateOutput`](crate::output::DeleteReplicationConfigurationTemplateOutput)
 pub mod delete_replication_configuration_template_output {
+
     /// A builder for [`DeleteReplicationConfigurationTemplateOutput`](crate::output::DeleteReplicationConfigurationTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2837,6 +2894,7 @@ impl std::fmt::Debug for UpdateReplicationConfigurationTemplateOutput {
 }
 /// See [`UpdateReplicationConfigurationTemplateOutput`](crate::output::UpdateReplicationConfigurationTemplateOutput)
 pub mod update_replication_configuration_template_output {
+
     /// A builder for [`UpdateReplicationConfigurationTemplateOutput`](crate::output::UpdateReplicationConfigurationTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3167,6 +3225,7 @@ impl std::fmt::Debug for UpdateFailbackReplicationConfigurationOutput {
 }
 /// See [`UpdateFailbackReplicationConfigurationOutput`](crate::output::UpdateFailbackReplicationConfigurationOutput)
 pub mod update_failback_replication_configuration_output {
+
     /// A builder for [`UpdateFailbackReplicationConfigurationOutput`](crate::output::UpdateFailbackReplicationConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3197,6 +3256,7 @@ impl std::fmt::Debug for StopFailbackOutput {
 }
 /// See [`StopFailbackOutput`](crate::output::StopFailbackOutput)
 pub mod stop_failback_output {
+
     /// A builder for [`StopFailbackOutput`](crate::output::StopFailbackOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3258,6 +3318,7 @@ impl std::fmt::Debug for GetFailbackReplicationConfigurationOutput {
 }
 /// See [`GetFailbackReplicationConfigurationOutput`](crate::output::GetFailbackReplicationConfigurationOutput)
 pub mod get_failback_replication_configuration_output {
+
     /// A builder for [`GetFailbackReplicationConfigurationOutput`](crate::output::GetFailbackReplicationConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3341,6 +3402,7 @@ impl std::fmt::Debug for DisconnectRecoveryInstanceOutput {
 }
 /// See [`DisconnectRecoveryInstanceOutput`](crate::output::DisconnectRecoveryInstanceOutput)
 pub mod disconnect_recovery_instance_output {
+
     /// A builder for [`DisconnectRecoveryInstanceOutput`](crate::output::DisconnectRecoveryInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3371,6 +3433,7 @@ impl std::fmt::Debug for DeleteRecoveryInstanceOutput {
 }
 /// See [`DeleteRecoveryInstanceOutput`](crate::output::DeleteRecoveryInstanceOutput)
 pub mod delete_recovery_instance_output {
+
     /// A builder for [`DeleteRecoveryInstanceOutput`](crate::output::DeleteRecoveryInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3411,6 +3474,7 @@ impl std::fmt::Debug for TerminateRecoveryInstancesOutput {
 }
 /// See [`TerminateRecoveryInstancesOutput`](crate::output::TerminateRecoveryInstancesOutput)
 pub mod terminate_recovery_instances_output {
+
     /// A builder for [`TerminateRecoveryInstancesOutput`](crate::output::TerminateRecoveryInstancesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3463,6 +3527,7 @@ impl std::fmt::Debug for StartFailbackLaunchOutput {
 }
 /// See [`StartFailbackLaunchOutput`](crate::output::StartFailbackLaunchOutput)
 pub mod start_failback_launch_output {
+
     /// A builder for [`StartFailbackLaunchOutput`](crate::output::StartFailbackLaunchOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3522,6 +3587,7 @@ impl std::fmt::Debug for DescribeRecoveryInstancesOutput {
 }
 /// See [`DescribeRecoveryInstancesOutput`](crate::output::DescribeRecoveryInstancesOutput)
 pub mod describe_recovery_instances_output {
+
     /// A builder for [`DescribeRecoveryInstancesOutput`](crate::output::DescribeRecoveryInstancesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3604,6 +3670,7 @@ impl std::fmt::Debug for DescribeJobLogItemsOutput {
 }
 /// See [`DescribeJobLogItemsOutput`](crate::output::DescribeJobLogItemsOutput)
 pub mod describe_job_log_items_output {
+
     /// A builder for [`DescribeJobLogItemsOutput`](crate::output::DescribeJobLogItemsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3686,6 +3753,7 @@ impl std::fmt::Debug for DescribeJobsOutput {
 }
 /// See [`DescribeJobsOutput`](crate::output::DescribeJobsOutput)
 pub mod describe_jobs_output {
+
     /// A builder for [`DescribeJobsOutput`](crate::output::DescribeJobsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3751,6 +3819,7 @@ impl std::fmt::Debug for DeleteJobOutput {
 }
 /// See [`DeleteJobOutput`](crate::output::DeleteJobOutput)
 pub mod delete_job_output {
+
     /// A builder for [`DeleteJobOutput`](crate::output::DeleteJobOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3781,6 +3850,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3811,6 +3881,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3855,6 +3926,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3905,6 +3977,172 @@ impl ListTagsForResourceOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListStagingAccountsOutput {
+    /// <p>An array of staging AWS Accounts.</p>
+    pub accounts: std::option::Option<std::vec::Vec<crate::model::Account>>,
+    /// <p>The token of the next staging Account to retrieve.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListStagingAccountsOutput {
+    /// <p>An array of staging AWS Accounts.</p>
+    pub fn accounts(&self) -> std::option::Option<&[crate::model::Account]> {
+        self.accounts.as_deref()
+    }
+    /// <p>The token of the next staging Account to retrieve.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListStagingAccountsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListStagingAccountsOutput");
+        formatter.field("accounts", &self.accounts);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListStagingAccountsOutput`](crate::output::ListStagingAccountsOutput)
+pub mod list_staging_accounts_output {
+
+    /// A builder for [`ListStagingAccountsOutput`](crate::output::ListStagingAccountsOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) accounts: std::option::Option<std::vec::Vec<crate::model::Account>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `accounts`.
+        ///
+        /// To override the contents of this collection use [`set_accounts`](Self::set_accounts).
+        ///
+        /// <p>An array of staging AWS Accounts.</p>
+        pub fn accounts(mut self, input: crate::model::Account) -> Self {
+            let mut v = self.accounts.unwrap_or_default();
+            v.push(input);
+            self.accounts = Some(v);
+            self
+        }
+        /// <p>An array of staging AWS Accounts.</p>
+        pub fn set_accounts(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::Account>>,
+        ) -> Self {
+            self.accounts = input;
+            self
+        }
+        /// <p>The token of the next staging Account to retrieve.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The token of the next staging Account to retrieve.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListStagingAccountsOutput`](crate::output::ListStagingAccountsOutput)
+        pub fn build(self) -> crate::output::ListStagingAccountsOutput {
+            crate::output::ListStagingAccountsOutput {
+                accounts: self.accounts,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListStagingAccountsOutput {
+    /// Creates a new builder-style object to manufacture [`ListStagingAccountsOutput`](crate::output::ListStagingAccountsOutput)
+    pub fn builder() -> crate::output::list_staging_accounts_output::Builder {
+        crate::output::list_staging_accounts_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListExtensibleSourceServersOutput {
+    /// <p>A list of source servers on a staging Account that are extensible.</p>
+    pub items: std::option::Option<std::vec::Vec<crate::model::StagingSourceServer>>,
+    /// <p>The token of the next extensible source server to retrieve.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListExtensibleSourceServersOutput {
+    /// <p>A list of source servers on a staging Account that are extensible.</p>
+    pub fn items(&self) -> std::option::Option<&[crate::model::StagingSourceServer]> {
+        self.items.as_deref()
+    }
+    /// <p>The token of the next extensible source server to retrieve.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListExtensibleSourceServersOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListExtensibleSourceServersOutput");
+        formatter.field("items", &self.items);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListExtensibleSourceServersOutput`](crate::output::ListExtensibleSourceServersOutput)
+pub mod list_extensible_source_servers_output {
+
+    /// A builder for [`ListExtensibleSourceServersOutput`](crate::output::ListExtensibleSourceServersOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) items: std::option::Option<std::vec::Vec<crate::model::StagingSourceServer>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `items`.
+        ///
+        /// To override the contents of this collection use [`set_items`](Self::set_items).
+        ///
+        /// <p>A list of source servers on a staging Account that are extensible.</p>
+        pub fn items(mut self, input: crate::model::StagingSourceServer) -> Self {
+            let mut v = self.items.unwrap_or_default();
+            v.push(input);
+            self.items = Some(v);
+            self
+        }
+        /// <p>A list of source servers on a staging Account that are extensible.</p>
+        pub fn set_items(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::StagingSourceServer>>,
+        ) -> Self {
+            self.items = input;
+            self
+        }
+        /// <p>The token of the next extensible source server to retrieve.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The token of the next extensible source server to retrieve.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListExtensibleSourceServersOutput`](crate::output::ListExtensibleSourceServersOutput)
+        pub fn build(self) -> crate::output::ListExtensibleSourceServersOutput {
+            crate::output::ListExtensibleSourceServersOutput {
+                items: self.items,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListExtensibleSourceServersOutput {
+    /// Creates a new builder-style object to manufacture [`ListExtensibleSourceServersOutput`](crate::output::ListExtensibleSourceServersOutput)
+    pub fn builder() -> crate::output::list_extensible_source_servers_output::Builder {
+        crate::output::list_extensible_source_servers_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InitializeServiceOutput {}
 impl std::fmt::Debug for InitializeServiceOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3914,6 +4152,7 @@ impl std::fmt::Debug for InitializeServiceOutput {
 }
 /// See [`InitializeServiceOutput`](crate::output::InitializeServiceOutput)
 pub mod initialize_service_output {
+
     /// A builder for [`InitializeServiceOutput`](crate::output::InitializeServiceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3929,5 +4168,63 @@ impl InitializeServiceOutput {
     /// Creates a new builder-style object to manufacture [`InitializeServiceOutput`](crate::output::InitializeServiceOutput)
     pub fn builder() -> crate::output::initialize_service_output::Builder {
         crate::output::initialize_service_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateExtendedSourceServerOutput {
+    /// <p>Created extended source server.</p>
+    pub source_server: std::option::Option<crate::model::SourceServer>,
+}
+impl CreateExtendedSourceServerOutput {
+    /// <p>Created extended source server.</p>
+    pub fn source_server(&self) -> std::option::Option<&crate::model::SourceServer> {
+        self.source_server.as_ref()
+    }
+}
+impl std::fmt::Debug for CreateExtendedSourceServerOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateExtendedSourceServerOutput");
+        formatter.field("source_server", &self.source_server);
+        formatter.finish()
+    }
+}
+/// See [`CreateExtendedSourceServerOutput`](crate::output::CreateExtendedSourceServerOutput)
+pub mod create_extended_source_server_output {
+
+    /// A builder for [`CreateExtendedSourceServerOutput`](crate::output::CreateExtendedSourceServerOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) source_server: std::option::Option<crate::model::SourceServer>,
+    }
+    impl Builder {
+        /// <p>Created extended source server.</p>
+        pub fn source_server(mut self, input: crate::model::SourceServer) -> Self {
+            self.source_server = Some(input);
+            self
+        }
+        /// <p>Created extended source server.</p>
+        pub fn set_source_server(
+            mut self,
+            input: std::option::Option<crate::model::SourceServer>,
+        ) -> Self {
+            self.source_server = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateExtendedSourceServerOutput`](crate::output::CreateExtendedSourceServerOutput)
+        pub fn build(self) -> crate::output::CreateExtendedSourceServerOutput {
+            crate::output::CreateExtendedSourceServerOutput {
+                source_server: self.source_server,
+            }
+        }
+    }
+}
+impl CreateExtendedSourceServerOutput {
+    /// Creates a new builder-style object to manufacture [`CreateExtendedSourceServerOutput`](crate::output::CreateExtendedSourceServerOutput)
+    pub fn builder() -> crate::output::create_extended_source_server_output::Builder {
+        crate::output::create_extended_source_server_output::Builder::default()
     }
 }

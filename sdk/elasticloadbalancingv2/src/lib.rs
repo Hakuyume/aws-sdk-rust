@@ -5,6 +5,7 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
 //! <fullname>Elastic Load Balancing</fullname>
@@ -76,7 +77,7 @@ mod error_meta;
 /// Input structures for operations.
 pub mod input;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

@@ -5,10 +5,10 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>Transit Gateway Network Manager (Network Manager) enables you to create a global network, in which you can monitor your
-//! Amazon Web Services and on-premises networks that are built around transit gateways.</p>
+//! <p>Amazon Web Services enables you to centrally manage your Amazon Web Services Cloud WAN core network and your Transit Gateway network across Amazon Web Services accounts, Regions, and on-premises locations.</p>
 //!
 //! # Crate Organization
 //!
@@ -44,7 +44,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

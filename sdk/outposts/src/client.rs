@@ -119,7 +119,7 @@ impl Client {
     /// - The fluent builder is configurable:
     ///   - [`name(impl Into<String>)`](crate::client::fluent_builders::CreateOutpost::name) / [`set_name(Option<String>)`](crate::client::fluent_builders::CreateOutpost::set_name): <p>The name of the Outpost.</p>
     ///   - [`description(impl Into<String>)`](crate::client::fluent_builders::CreateOutpost::description) / [`set_description(Option<String>)`](crate::client::fluent_builders::CreateOutpost::set_description): <p>The description of the Outpost.</p>
-    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::CreateOutpost::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::CreateOutpost::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::CreateOutpost::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::CreateOutpost::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`availability_zone(impl Into<String>)`](crate::client::fluent_builders::CreateOutpost::availability_zone) / [`set_availability_zone(Option<String>)`](crate::client::fluent_builders::CreateOutpost::set_availability_zone): <p>The Availability Zone.</p>
     ///   - [`availability_zone_id(impl Into<String>)`](crate::client::fluent_builders::CreateOutpost::availability_zone_id) / [`set_availability_zone_id(Option<String>)`](crate::client::fluent_builders::CreateOutpost::set_availability_zone_id): <p>The ID of the Availability Zone.</p>
     ///   - [`tags(HashMap<String, String>)`](crate::client::fluent_builders::CreateOutpost::tags) / [`set_tags(Option<HashMap<String, String>>)`](crate::client::fluent_builders::CreateOutpost::set_tags): <p>The tags to apply to the Outpost.</p>
@@ -149,7 +149,7 @@ impl Client {
     /// Constructs a fluent builder for the [`DeleteOutpost`](crate::client::fluent_builders::DeleteOutpost) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::DeleteOutpost::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::DeleteOutpost::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::DeleteOutpost::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::DeleteOutpost::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     /// - On success, responds with [`DeleteOutpostOutput`](crate::output::DeleteOutpostOutput)
 
     /// - On failure, responds with [`SdkError<DeleteOutpostError>`](crate::error::DeleteOutpostError)
@@ -159,7 +159,7 @@ impl Client {
     /// Constructs a fluent builder for the [`DeleteSite`](crate::client::fluent_builders::DeleteSite) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::DeleteSite::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::DeleteSite::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::DeleteSite::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::DeleteSite::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     /// - On success, responds with [`DeleteSiteOutput`](crate::output::DeleteSiteOutput)
 
     /// - On failure, responds with [`SdkError<DeleteSiteError>`](crate::error::DeleteSiteError)
@@ -176,6 +176,17 @@ impl Client {
     pub fn get_catalog_item(&self) -> fluent_builders::GetCatalogItem {
         fluent_builders::GetCatalogItem::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`GetConnection`](crate::client::fluent_builders::GetConnection) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`connection_id(impl Into<String>)`](crate::client::fluent_builders::GetConnection::connection_id) / [`set_connection_id(Option<String>)`](crate::client::fluent_builders::GetConnection::set_connection_id): <p> The ID of the connection you request. </p>
+    /// - On success, responds with [`GetConnectionOutput`](crate::output::GetConnectionOutput) with field(s):
+    ///   - [`connection_id(Option<String>)`](crate::output::GetConnectionOutput::connection_id): <p> The ID of the connection you receive. </p>
+    ///   - [`connection_details(Option<ConnectionDetails>)`](crate::output::GetConnectionOutput::connection_details): <p> Information about a connection. </p>
+    /// - On failure, responds with [`SdkError<GetConnectionError>`](crate::error::GetConnectionError)
+    pub fn get_connection(&self) -> fluent_builders::GetConnection {
+        fluent_builders::GetConnection::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`GetOrder`](crate::client::fluent_builders::GetOrder) operation.
     ///
     /// - The fluent builder is configurable:
@@ -189,7 +200,7 @@ impl Client {
     /// Constructs a fluent builder for the [`GetOutpost`](crate::client::fluent_builders::GetOutpost) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::GetOutpost::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::GetOutpost::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::GetOutpost::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::GetOutpost::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     /// - On success, responds with [`GetOutpostOutput`](crate::output::GetOutpostOutput) with field(s):
     ///   - [`outpost(Option<Outpost>)`](crate::output::GetOutpostOutput::outpost): <p>Information about an Outpost.</p>
     /// - On failure, responds with [`SdkError<GetOutpostError>`](crate::error::GetOutpostError)
@@ -197,15 +208,16 @@ impl Client {
         fluent_builders::GetOutpost::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`GetOutpostInstanceTypes`](crate::client::fluent_builders::GetOutpostInstanceTypes) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::GetOutpostInstanceTypes::into_paginator).
     ///
     /// - The fluent builder is configurable:
-    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::GetOutpostInstanceTypes::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::GetOutpostInstanceTypes::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::GetOutpostInstanceTypes::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::GetOutpostInstanceTypes::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::GetOutpostInstanceTypes::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::GetOutpostInstanceTypes::set_next_token): <p>The pagination token.</p>
     ///   - [`max_results(i32)`](crate::client::fluent_builders::GetOutpostInstanceTypes::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::GetOutpostInstanceTypes::set_max_results): <p>The maximum page size.</p>
     /// - On success, responds with [`GetOutpostInstanceTypesOutput`](crate::output::GetOutpostInstanceTypesOutput) with field(s):
     ///   - [`instance_types(Option<Vec<InstanceTypeItem>>)`](crate::output::GetOutpostInstanceTypesOutput::instance_types): <p>Information about the instance types.</p>
     ///   - [`next_token(Option<String>)`](crate::output::GetOutpostInstanceTypesOutput::next_token): <p>The pagination token.</p>
-    ///   - [`outpost_id(Option<String>)`](crate::output::GetOutpostInstanceTypesOutput::outpost_id): <p> The ID of the Outpost. </p>
+    ///   - [`outpost_id(Option<String>)`](crate::output::GetOutpostInstanceTypesOutput::outpost_id): <p> The ID of the Outpost. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`outpost_arn(Option<String>)`](crate::output::GetOutpostInstanceTypesOutput::outpost_arn): <p>The Amazon Resource Name (ARN) of the Outpost.</p>
     /// - On failure, responds with [`SdkError<GetOutpostInstanceTypesError>`](crate::error::GetOutpostInstanceTypesError)
     pub fn get_outpost_instance_types(&self) -> fluent_builders::GetOutpostInstanceTypes {
@@ -214,7 +226,7 @@ impl Client {
     /// Constructs a fluent builder for the [`GetSite`](crate::client::fluent_builders::GetSite) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::GetSite::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::GetSite::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::GetSite::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::GetSite::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     /// - On success, responds with [`GetSiteOutput`](crate::output::GetSiteOutput) with field(s):
     ///   - [`site(Option<Site>)`](crate::output::GetSiteOutput::site): <p>Information about a site.</p>
     /// - On failure, responds with [`SdkError<GetSiteError>`](crate::error::GetSiteError)
@@ -224,7 +236,7 @@ impl Client {
     /// Constructs a fluent builder for the [`GetSiteAddress`](crate::client::fluent_builders::GetSiteAddress) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::GetSiteAddress::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::GetSiteAddress::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::GetSiteAddress::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::GetSiteAddress::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`address_type(AddressType)`](crate::client::fluent_builders::GetSiteAddress::address_type) / [`set_address_type(Option<AddressType>)`](crate::client::fluent_builders::GetSiteAddress::set_address_type): <p> The type of the address you request. </p>
     /// - On success, responds with [`GetSiteAddressOutput`](crate::output::GetSiteAddressOutput) with field(s):
     ///   - [`site_id(Option<String>)`](crate::output::GetSiteAddressOutput::site_id): <p> The ID of the site. </p>
@@ -233,6 +245,21 @@ impl Client {
     /// - On failure, responds with [`SdkError<GetSiteAddressError>`](crate::error::GetSiteAddressError)
     pub fn get_site_address(&self) -> fluent_builders::GetSiteAddress {
         fluent_builders::GetSiteAddress::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`ListAssets`](crate::client::fluent_builders::ListAssets) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListAssets::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`outpost_identifier(impl Into<String>)`](crate::client::fluent_builders::ListAssets::outpost_identifier) / [`set_outpost_identifier(Option<String>)`](crate::client::fluent_builders::ListAssets::set_outpost_identifier): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+    ///   - [`host_id_filter(Vec<String>)`](crate::client::fluent_builders::ListAssets::host_id_filter) / [`set_host_id_filter(Option<Vec<String>>)`](crate::client::fluent_builders::ListAssets::set_host_id_filter): <p> A filter for the host ID of Dedicated Hosts on the Outpost. </p>  <p>Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request returns all results that match any of the specified values.</p>
+    ///   - [`max_results(i32)`](crate::client::fluent_builders::ListAssets::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::ListAssets::set_max_results): <p>The maximum page size.</p>
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListAssets::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListAssets::set_next_token): <p>The pagination token.</p>
+    /// - On success, responds with [`ListAssetsOutput`](crate::output::ListAssetsOutput) with field(s):
+    ///   - [`assets(Option<Vec<AssetInfo>>)`](crate::output::ListAssetsOutput::assets): <p> Information about hardware assets. </p>
+    ///   - [`next_token(Option<String>)`](crate::output::ListAssetsOutput::next_token): <p>The pagination token.</p>
+    /// - On failure, responds with [`SdkError<ListAssetsError>`](crate::error::ListAssetsError)
+    pub fn list_assets(&self) -> fluent_builders::ListAssets {
+        fluent_builders::ListAssets::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`ListCatalogItems`](crate::client::fluent_builders::ListCatalogItems) operation.
     /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListCatalogItems::into_paginator).
@@ -306,6 +333,20 @@ impl Client {
     pub fn list_tags_for_resource(&self) -> fluent_builders::ListTagsForResource {
         fluent_builders::ListTagsForResource::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`StartConnection`](crate::client::fluent_builders::StartConnection) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`device_serial_number(impl Into<String>)`](crate::client::fluent_builders::StartConnection::device_serial_number) / [`set_device_serial_number(Option<String>)`](crate::client::fluent_builders::StartConnection::set_device_serial_number): <p> The serial number of the dongle. </p>
+    ///   - [`asset_id(impl Into<String>)`](crate::client::fluent_builders::StartConnection::asset_id) / [`set_asset_id(Option<String>)`](crate::client::fluent_builders::StartConnection::set_asset_id): <p> The ID of the Outpost server. </p>
+    ///   - [`client_public_key(impl Into<String>)`](crate::client::fluent_builders::StartConnection::client_public_key) / [`set_client_public_key(Option<String>)`](crate::client::fluent_builders::StartConnection::set_client_public_key): <p> The public key of the client. </p>
+    ///   - [`network_interface_device_index(i32)`](crate::client::fluent_builders::StartConnection::network_interface_device_index) / [`set_network_interface_device_index(i32)`](crate::client::fluent_builders::StartConnection::set_network_interface_device_index): <p> The device index of the network interface on the Outpost server. </p>
+    /// - On success, responds with [`StartConnectionOutput`](crate::output::StartConnectionOutput) with field(s):
+    ///   - [`connection_id(Option<String>)`](crate::output::StartConnectionOutput::connection_id): <p> The ID of the connection. </p>
+    ///   - [`underlay_ip_address(Option<String>)`](crate::output::StartConnectionOutput::underlay_ip_address): <p> The underlay IP address. </p>
+    /// - On failure, responds with [`SdkError<StartConnectionError>`](crate::error::StartConnectionError)
+    pub fn start_connection(&self) -> fluent_builders::StartConnection {
+        fluent_builders::StartConnection::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`TagResource`](crate::client::fluent_builders::TagResource) operation.
     ///
     /// - The fluent builder is configurable:
@@ -331,7 +372,7 @@ impl Client {
     /// Constructs a fluent builder for the [`UpdateOutpost`](crate::client::fluent_builders::UpdateOutpost) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::UpdateOutpost::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::UpdateOutpost::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+    ///   - [`outpost_id(impl Into<String>)`](crate::client::fluent_builders::UpdateOutpost::outpost_id) / [`set_outpost_id(Option<String>)`](crate::client::fluent_builders::UpdateOutpost::set_outpost_id): <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`name(impl Into<String>)`](crate::client::fluent_builders::UpdateOutpost::name) / [`set_name(Option<String>)`](crate::client::fluent_builders::UpdateOutpost::set_name): <p>The name of the Outpost.</p>
     ///   - [`description(impl Into<String>)`](crate::client::fluent_builders::UpdateOutpost::description) / [`set_description(Option<String>)`](crate::client::fluent_builders::UpdateOutpost::set_description): <p>The description of the Outpost.</p>
     ///   - [`supported_hardware_type(SupportedHardwareType)`](crate::client::fluent_builders::UpdateOutpost::supported_hardware_type) / [`set_supported_hardware_type(Option<SupportedHardwareType>)`](crate::client::fluent_builders::UpdateOutpost::set_supported_hardware_type): <p> The type of hardware for this Outpost. </p>
@@ -344,7 +385,7 @@ impl Client {
     /// Constructs a fluent builder for the [`UpdateSite`](crate::client::fluent_builders::UpdateSite) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::UpdateSite::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::UpdateSite::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::UpdateSite::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::UpdateSite::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`name(impl Into<String>)`](crate::client::fluent_builders::UpdateSite::name) / [`set_name(Option<String>)`](crate::client::fluent_builders::UpdateSite::set_name): <p>The name of the site.</p>
     ///   - [`description(impl Into<String>)`](crate::client::fluent_builders::UpdateSite::description) / [`set_description(Option<String>)`](crate::client::fluent_builders::UpdateSite::set_description): <p>The description of the site.</p>
     ///   - [`notes(impl Into<String>)`](crate::client::fluent_builders::UpdateSite::notes) / [`set_notes(Option<String>)`](crate::client::fluent_builders::UpdateSite::set_notes): <p> Notes about a site. </p>
@@ -357,7 +398,7 @@ impl Client {
     /// Constructs a fluent builder for the [`UpdateSiteAddress`](crate::client::fluent_builders::UpdateSiteAddress) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::UpdateSiteAddress::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::UpdateSiteAddress::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::UpdateSiteAddress::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::UpdateSiteAddress::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`address_type(AddressType)`](crate::client::fluent_builders::UpdateSiteAddress::address_type) / [`set_address_type(Option<AddressType>)`](crate::client::fluent_builders::UpdateSiteAddress::set_address_type): <p> The type of the address. </p>
     ///   - [`address(Address)`](crate::client::fluent_builders::UpdateSiteAddress::address) / [`set_address(Option<Address>)`](crate::client::fluent_builders::UpdateSiteAddress::set_address): <p> The address for the site. </p>
     /// - On success, responds with [`UpdateSiteAddressOutput`](crate::output::UpdateSiteAddressOutput) with field(s):
@@ -370,7 +411,7 @@ impl Client {
     /// Constructs a fluent builder for the [`UpdateSiteRackPhysicalProperties`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+    ///   - [`site_id(impl Into<String>)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::site_id) / [`set_site_id(Option<String>)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::set_site_id): <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>   <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>  </note>
     ///   - [`power_draw_kva(PowerDrawKva)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::power_draw_kva) / [`set_power_draw_kva(Option<PowerDrawKva>)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::set_power_draw_kva): <p>Specify in kVA the power draw available at the hardware placement position for the rack.</p>
     ///   - [`power_phase(PowerPhase)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::power_phase) / [`set_power_phase(Option<PowerPhase>)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::set_power_phase): <p> Specify the power option that you can provide for hardware. </p>  <ul>   <li> <p>Single-phase AC feed: 200 V to 277 V, 50 Hz or 60 Hz</p> </li>   <li> <p>Three-phase AC feed: 346 V to 480 V, 50 Hz or 60 Hz</p> </li>  </ul>
     ///   - [`power_connector(PowerConnector)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::power_connector) / [`set_power_connector(Option<PowerConnector>)`](crate::client::fluent_builders::UpdateSiteRackPhysicalProperties::set_power_connector): <p> Specify the power connector that Amazon Web Services should plan to provide for connections to the hardware. Note the correlation between <code>PowerPhase</code> and <code>PowerConnector</code>. </p>  <ul>   <li> <p>Single-phase AC feed</p>    <ul>     <li> <p> <b>L6-30P</b> – (common in US); 30A; single phase</p> </li>     <li> <p> <b>IEC309 (blue)</b> – P+N+E, 6hr; 32 A; single phase</p> </li>    </ul> </li>   <li> <p>Three-phase AC feed</p>    <ul>     <li> <p> <b>AH530P7W (red)</b> – 3P+N+E, 7hr; 30A; three phase</p> </li>     <li> <p> <b>AH532P6W (red)</b> – 3P+N+E, 6hr; 32A; three phase</p> </li>    </ul> </li>  </ul>
@@ -390,13 +431,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `CancelOrder`.
     ///
     /// <p> Cancels an order for an Outpost. </p>
@@ -612,12 +652,16 @@ pub mod fluent_builders {
             self.inner = self.inner.set_description(input);
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn site_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.site_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_site_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_site_id(input);
             self
@@ -868,12 +912,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn outpost_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.outpost_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_outpost_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_outpost_id(input);
             self
@@ -921,12 +969,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn site_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.site_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_site_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_site_id(input);
             self
@@ -985,6 +1037,66 @@ pub mod fluent_builders {
             input: std::option::Option<std::string::String>,
         ) -> Self {
             self.inner = self.inner.set_catalog_item_id(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `GetConnection`.
+    ///
+    /// <note>
+    /// <p> Amazon Web Services uses this action to install Outpost servers.</p>
+    /// </note>
+    /// <p> Gets information about a specified connection. </p>
+    /// <p> Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to secure it. For more information, see <a href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services managed policies for Amazon Web Services Outposts</a> and <a href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User Guide</i>. </p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct GetConnection {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::get_connection_input::Builder,
+    }
+    impl GetConnection {
+        /// Creates a new `GetConnection`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::GetConnectionOutput,
+            aws_smithy_http::result::SdkError<crate::error::GetConnectionError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p> The ID of the connection you request. </p>
+        pub fn connection_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.connection_id(input.into());
+            self
+        }
+        /// <p> The ID of the connection you request. </p>
+        pub fn set_connection_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_connection_id(input);
             self
         }
     }
@@ -1083,12 +1195,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn outpost_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.outpost_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_outpost_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_outpost_id(input);
             self
@@ -1096,7 +1212,7 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `GetOutpostInstanceTypes`.
     ///
-    /// <p>Lists the instance types for the specified Outpost.</p>
+    /// <p>Gets the instance types for the specified Outpost.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct GetOutpostInstanceTypes {
         handle: std::sync::Arc<super::Handle>,
@@ -1136,12 +1252,22 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::GetOutpostInstanceTypesPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::GetOutpostInstanceTypesPaginator {
+            crate::paginator::GetOutpostInstanceTypesPaginator::new(self.handle, self.inner)
+        }
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn outpost_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.outpost_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_outpost_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_outpost_id(input);
             self
@@ -1209,12 +1335,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn site_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.site_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_site_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_site_id(input);
             self
@@ -1262,12 +1392,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn site_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.site_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_site_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_site_id(input);
             self
@@ -1286,9 +1420,110 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `ListAssets`.
+    ///
+    /// <p> Lists the hardware assets in an Outpost. If you are using Dedicated Hosts on Amazon Web Services Outposts, you can filter your request by host ID to return a list of hardware assets that allocate resources for Dedicated Hosts. </p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct ListAssets {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::list_assets_input::Builder,
+    }
+    impl ListAssets {
+        /// Creates a new `ListAssets`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::ListAssetsOutput,
+            aws_smithy_http::result::SdkError<crate::error::ListAssetsError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::ListAssetsPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::ListAssetsPaginator {
+            crate::paginator::ListAssetsPaginator::new(self.handle, self.inner)
+        }
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        pub fn outpost_identifier(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.outpost_identifier(input.into());
+            self
+        }
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        pub fn set_outpost_identifier(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_outpost_identifier(input);
+            self
+        }
+        /// Appends an item to `HostIdFilter`.
+        ///
+        /// To override the contents of this collection use [`set_host_id_filter`](Self::set_host_id_filter).
+        ///
+        /// <p> A filter for the host ID of Dedicated Hosts on the Outpost. </p>
+        /// <p>Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request returns all results that match any of the specified values.</p>
+        pub fn host_id_filter(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.host_id_filter(input.into());
+            self
+        }
+        /// <p> A filter for the host ID of Dedicated Hosts on the Outpost. </p>
+        /// <p>Filter values are case sensitive. If you specify multiple values for a filter, the values are joined with an <code>OR</code>, and the request returns all results that match any of the specified values.</p>
+        pub fn set_host_id_filter(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.inner = self.inner.set_host_id_filter(input);
+            self
+        }
+        /// <p>The maximum page size.</p>
+        pub fn max_results(mut self, input: i32) -> Self {
+            self.inner = self.inner.max_results(input);
+            self
+        }
+        /// <p>The maximum page size.</p>
+        pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_max_results(input);
+            self
+        }
+        /// <p>The pagination token.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>The pagination token.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `ListCatalogItems`.
     ///
-    /// <p>Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of results. Use filters to match an item class, storage option, or EC2 family. </p>
+    /// <p>Lists the items in the catalog. Add filters to your request to return a more specific list of results. Use filters to match an item class, storage option, or EC2 family. </p>
     /// <p>If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only results that match all of the specified filters.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct ListCatalogItems {
@@ -1418,7 +1653,7 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `ListOrders`.
     ///
-    /// <p>Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost to return a more specific list of results. </p>
+    /// <p>Lists the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost to return a more specific list of results. </p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct ListOrders {
         handle: std::sync::Arc<super::Handle>,
@@ -1500,7 +1735,7 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `ListOutposts`.
     ///
-    /// <p>Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (<code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>). </p>
+    /// <p>Lists the Outposts for your Amazon Web Services account. Add filters to your request to return a more specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (<code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>). </p>
     /// <p>If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only results that match all of the specified filters.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct ListOutposts {
@@ -1630,7 +1865,7 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `ListSites`.
     ///
-    /// <p>Create a list of the Outpost sites for your Amazon Web Services account. Add operating address filters to your request to return a more specific list of results. Use filters to match site city, country code, or state/region of the operating address. </p>
+    /// <p>Lists the Outpost sites for your Amazon Web Services account. Add operating address filters to your request to return a more specific list of results. Use filters to match site city, country code, or state/region of the operating address. </p>
     /// <p>If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only results that match all of the specified filters.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct ListSites {
@@ -1823,6 +2058,102 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `StartConnection`.
+    ///
+    /// <note>
+    /// <p> Amazon Web Services uses this action to install Outpost servers.</p>
+    /// </note>
+    /// <p> Starts the connection required for Outpost server installation. </p>
+    /// <p> Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to secure it. For more information, see <a href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services managed policies for Amazon Web Services Outposts</a> and <a href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User Guide</i>. </p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct StartConnection {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::start_connection_input::Builder,
+    }
+    impl StartConnection {
+        /// Creates a new `StartConnection`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::StartConnectionOutput,
+            aws_smithy_http::result::SdkError<crate::error::StartConnectionError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p> The serial number of the dongle. </p>
+        pub fn device_serial_number(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.device_serial_number(input.into());
+            self
+        }
+        /// <p> The serial number of the dongle. </p>
+        pub fn set_device_serial_number(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_device_serial_number(input);
+            self
+        }
+        /// <p> The ID of the Outpost server. </p>
+        pub fn asset_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.asset_id(input.into());
+            self
+        }
+        /// <p> The ID of the Outpost server. </p>
+        pub fn set_asset_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_asset_id(input);
+            self
+        }
+        /// <p> The public key of the client. </p>
+        pub fn client_public_key(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.client_public_key(input.into());
+            self
+        }
+        /// <p> The public key of the client. </p>
+        pub fn set_client_public_key(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_client_public_key(input);
+            self
+        }
+        /// <p> The device index of the network interface on the Outpost server. </p>
+        pub fn network_interface_device_index(mut self, input: i32) -> Self {
+            self.inner = self.inner.network_interface_device_index(input);
+            self
+        }
+        /// <p> The device index of the network interface on the Outpost server. </p>
+        pub fn set_network_interface_device_index(
+            mut self,
+            input: std::option::Option<i32>,
+        ) -> Self {
+            self.inner = self.inner.set_network_interface_device_index(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `TagResource`.
     ///
     /// <p>Adds tags to the specified resource.</p>
@@ -2011,12 +2342,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn outpost_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.outpost_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_outpost_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_outpost_id(input);
             self
@@ -2100,12 +2435,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn site_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.site_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_site_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_site_id(input);
             self
@@ -2185,12 +2524,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn site_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.site_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_site_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_site_id(input);
             self
@@ -2262,12 +2605,16 @@ pub mod fluent_builders {
                 })?;
             self.handle.client.call(op).await
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn site_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.site_id(input.into());
             self
         }
-        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p>
+        /// <p> The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_site_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_site_id(input);
             self

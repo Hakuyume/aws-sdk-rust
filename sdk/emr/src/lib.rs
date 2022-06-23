@@ -5,12 +5,12 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>Amazon EMR is a web service that makes it easier to process large amounts of data
-//! efficiently. Amazon EMR uses Hadoop processing combined with several Amazon Web Services services to do
-//! tasks such as web indexing, data mining, log file analysis, machine learning, scientific
-//! simulation, and data warehouse management.</p>
+//! <p>Amazon EMR is a web service that makes it easier to process large amounts of
+//! data efficiently. Amazon EMR uses Hadoop processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file analysis,
+//! machine learning, scientific simulation, and data warehouse management.</p>
 //!
 //! # Crate Organization
 //!
@@ -44,7 +44,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

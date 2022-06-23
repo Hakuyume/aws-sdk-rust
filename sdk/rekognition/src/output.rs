@@ -2,6 +2,37 @@
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateStreamProcessorOutput {}
+impl std::fmt::Debug for UpdateStreamProcessorOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateStreamProcessorOutput");
+        formatter.finish()
+    }
+}
+/// See [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
+pub mod update_stream_processor_output {
+
+    /// A builder for [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
+        pub fn build(self) -> crate::output::UpdateStreamProcessorOutput {
+            crate::output::UpdateStreamProcessorOutput {}
+        }
+    }
+}
+impl UpdateStreamProcessorOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateStreamProcessorOutput`](crate::output::UpdateStreamProcessorOutput)
+    pub fn builder() -> crate::output::update_stream_processor_output::Builder {
+        crate::output::update_stream_processor_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDatasetEntriesOutput {}
 impl std::fmt::Debug for UpdateDatasetEntriesOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -11,6 +42,7 @@ impl std::fmt::Debug for UpdateDatasetEntriesOutput {
 }
 /// See [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput)
 pub mod update_dataset_entries_output {
+
     /// A builder for [`UpdateDatasetEntriesOutput`](crate::output::UpdateDatasetEntriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +73,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -71,6 +104,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -101,6 +135,7 @@ impl std::fmt::Debug for StopStreamProcessorOutput {
 }
 /// See [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput)
 pub mod stop_stream_processor_output {
+
     /// A builder for [`StopStreamProcessorOutput`](crate::output::StopStreamProcessorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -141,6 +176,7 @@ impl std::fmt::Debug for StopProjectVersionOutput {
 }
 /// See [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput)
 pub mod stop_project_version_output {
+
     /// A builder for [`StopProjectVersionOutput`](crate::output::StopProjectVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -198,6 +234,7 @@ impl std::fmt::Debug for StartTextDetectionOutput {
 }
 /// See [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput)
 pub mod start_text_detection_output {
+
     /// A builder for [`StartTextDetectionOutput`](crate::output::StartTextDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -233,23 +270,48 @@ impl StartTextDetectionOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct StartStreamProcessorOutput {}
+pub struct StartStreamProcessorOutput {
+    /// <p> A unique identifier for the stream processing session. </p>
+    pub session_id: std::option::Option<std::string::String>,
+}
+impl StartStreamProcessorOutput {
+    /// <p> A unique identifier for the stream processing session. </p>
+    pub fn session_id(&self) -> std::option::Option<&str> {
+        self.session_id.as_deref()
+    }
+}
 impl std::fmt::Debug for StartStreamProcessorOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("StartStreamProcessorOutput");
+        formatter.field("session_id", &self.session_id);
         formatter.finish()
     }
 }
 /// See [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput)
 pub mod start_stream_processor_output {
+
     /// A builder for [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {}
+    pub struct Builder {
+        pub(crate) session_id: std::option::Option<std::string::String>,
+    }
     impl Builder {
+        /// <p> A unique identifier for the stream processing session. </p>
+        pub fn session_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.session_id = Some(input.into());
+            self
+        }
+        /// <p> A unique identifier for the stream processing session. </p>
+        pub fn set_session_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.session_id = input;
+            self
+        }
         /// Consumes the builder and constructs a [`StartStreamProcessorOutput`](crate::output::StartStreamProcessorOutput)
         pub fn build(self) -> crate::output::StartStreamProcessorOutput {
-            crate::output::StartStreamProcessorOutput {}
+            crate::output::StartStreamProcessorOutput {
+                session_id: self.session_id,
+            }
         }
     }
 }
@@ -282,6 +344,7 @@ impl std::fmt::Debug for StartSegmentDetectionOutput {
 }
 /// See [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput)
 pub mod start_segment_detection_output {
+
     /// A builder for [`StartSegmentDetectionOutput`](crate::output::StartSegmentDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -336,6 +399,7 @@ impl std::fmt::Debug for StartProjectVersionOutput {
 }
 /// See [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput)
 pub mod start_project_version_output {
+
     /// A builder for [`StartProjectVersionOutput`](crate::output::StartProjectVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -393,6 +457,7 @@ impl std::fmt::Debug for StartPersonTrackingOutput {
 }
 /// See [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput)
 pub mod start_person_tracking_output {
+
     /// A builder for [`StartPersonTrackingOutput`](crate::output::StartPersonTrackingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -447,6 +512,7 @@ impl std::fmt::Debug for StartLabelDetectionOutput {
 }
 /// See [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput)
 pub mod start_label_detection_output {
+
     /// A builder for [`StartLabelDetectionOutput`](crate::output::StartLabelDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -501,6 +567,7 @@ impl std::fmt::Debug for StartFaceSearchOutput {
 }
 /// See [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput)
 pub mod start_face_search_output {
+
     /// A builder for [`StartFaceSearchOutput`](crate::output::StartFaceSearchOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -555,6 +622,7 @@ impl std::fmt::Debug for StartFaceDetectionOutput {
 }
 /// See [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput)
 pub mod start_face_detection_output {
+
     /// A builder for [`StartFaceDetectionOutput`](crate::output::StartFaceDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -609,6 +677,7 @@ impl std::fmt::Debug for StartContentModerationOutput {
 }
 /// See [`StartContentModerationOutput`](crate::output::StartContentModerationOutput)
 pub mod start_content_moderation_output {
+
     /// A builder for [`StartContentModerationOutput`](crate::output::StartContentModerationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -663,6 +732,7 @@ impl std::fmt::Debug for StartCelebrityRecognitionOutput {
 }
 /// See [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput)
 pub mod start_celebrity_recognition_output {
+
     /// A builder for [`StartCelebrityRecognitionOutput`](crate::output::StartCelebrityRecognitionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -705,7 +775,7 @@ pub struct SearchFacesByImageOutput {
     pub searched_face_confidence: std::option::Option<f32>,
     /// <p>An array of faces that match the input face, along with the confidence in the match.</p>
     pub face_matches: std::option::Option<std::vec::Vec<crate::model::FaceMatch>>,
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl SearchFacesByImageOutput {
@@ -721,7 +791,7 @@ impl SearchFacesByImageOutput {
     pub fn face_matches(&self) -> std::option::Option<&[crate::model::FaceMatch]> {
         self.face_matches.as_deref()
     }
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
     pub fn face_model_version(&self) -> std::option::Option<&str> {
         self.face_model_version.as_deref()
     }
@@ -741,6 +811,7 @@ impl std::fmt::Debug for SearchFacesByImageOutput {
 }
 /// See [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput)
 pub mod search_faces_by_image_output {
+
     /// A builder for [`SearchFacesByImageOutput`](crate::output::SearchFacesByImageOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -793,12 +864,12 @@ pub mod search_faces_by_image_output {
             self.face_matches = input;
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
         pub fn face_model_version(mut self, input: impl Into<std::string::String>) -> Self {
             self.face_model_version = Some(input.into());
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
         pub fn set_face_model_version(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -832,7 +903,7 @@ pub struct SearchFacesOutput {
     pub searched_face_id: std::option::Option<std::string::String>,
     /// <p>An array of faces that matched the input face, along with the confidence in the match.</p>
     pub face_matches: std::option::Option<std::vec::Vec<crate::model::FaceMatch>>,
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl SearchFacesOutput {
@@ -844,7 +915,7 @@ impl SearchFacesOutput {
     pub fn face_matches(&self) -> std::option::Option<&[crate::model::FaceMatch]> {
         self.face_matches.as_deref()
     }
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
     pub fn face_model_version(&self) -> std::option::Option<&str> {
         self.face_model_version.as_deref()
     }
@@ -860,6 +931,7 @@ impl std::fmt::Debug for SearchFacesOutput {
 }
 /// See [`SearchFacesOutput`](crate::output::SearchFacesOutput)
 pub mod search_faces_output {
+
     /// A builder for [`SearchFacesOutput`](crate::output::SearchFacesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -901,12 +973,12 @@ pub mod search_faces_output {
             self.face_matches = input;
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
         pub fn face_model_version(mut self, input: impl Into<std::string::String>) -> Self {
             self.face_model_version = Some(input.into());
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
         pub fn set_face_model_version(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -979,6 +1051,7 @@ impl std::fmt::Debug for RecognizeCelebritiesOutput {
 }
 /// See [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput)
 pub mod recognize_celebrities_output {
+
     /// A builder for [`RecognizeCelebritiesOutput`](crate::output::RecognizeCelebritiesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1096,6 +1169,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1172,6 +1246,7 @@ impl std::fmt::Debug for ListStreamProcessorsOutput {
 }
 /// See [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput)
 pub mod list_stream_processors_output {
+
     /// A builder for [`ListStreamProcessorsOutput`](crate::output::ListStreamProcessorsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1234,7 +1309,7 @@ pub struct ListFacesOutput {
     pub faces: std::option::Option<std::vec::Vec<crate::model::Face>>,
     /// <p>If the response is truncated, Amazon Rekognition returns this token that you can use in the subsequent request to retrieve the next set of faces.</p>
     pub next_token: std::option::Option<std::string::String>,
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl ListFacesOutput {
@@ -1246,7 +1321,7 @@ impl ListFacesOutput {
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
     pub fn face_model_version(&self) -> std::option::Option<&str> {
         self.face_model_version.as_deref()
     }
@@ -1262,6 +1337,7 @@ impl std::fmt::Debug for ListFacesOutput {
 }
 /// See [`ListFacesOutput`](crate::output::ListFacesOutput)
 pub mod list_faces_output {
+
     /// A builder for [`ListFacesOutput`](crate::output::ListFacesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1300,12 +1376,12 @@ pub mod list_faces_output {
             self.next_token = input;
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
         pub fn face_model_version(mut self, input: impl Into<std::string::String>) -> Self {
             self.face_model_version = Some(input.into());
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the input collection (<code>CollectionId</code>).</p>
         pub fn set_face_model_version(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -1365,6 +1441,7 @@ impl std::fmt::Debug for ListDatasetLabelsOutput {
 }
 /// See [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput)
 pub mod list_dataset_labels_output {
+
     /// A builder for [`ListDatasetLabelsOutput`](crate::output::ListDatasetLabelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1451,6 +1528,7 @@ impl std::fmt::Debug for ListDatasetEntriesOutput {
 }
 /// See [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput)
 pub mod list_dataset_entries_output {
+
     /// A builder for [`ListDatasetEntriesOutput`](crate::output::ListDatasetEntriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1512,7 +1590,7 @@ pub struct ListCollectionsOutput {
     pub collection_ids: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>If the result is truncated, the response provides a <code>NextToken</code> that you can use in the subsequent request to fetch the next set of collection IDs.</p>
     pub next_token: std::option::Option<std::string::String>,
-    /// <p>Latest face models being used with the corresponding collections in the array. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
+    /// <p>Version numbers of the face detection models associated with the collections in the array <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
     pub face_model_versions: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl ListCollectionsOutput {
@@ -1524,7 +1602,7 @@ impl ListCollectionsOutput {
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
-    /// <p>Latest face models being used with the corresponding collections in the array. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
+    /// <p>Version numbers of the face detection models associated with the collections in the array <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
     pub fn face_model_versions(&self) -> std::option::Option<&[std::string::String]> {
         self.face_model_versions.as_deref()
     }
@@ -1540,6 +1618,7 @@ impl std::fmt::Debug for ListCollectionsOutput {
 }
 /// See [`ListCollectionsOutput`](crate::output::ListCollectionsOutput)
 pub mod list_collections_output {
+
     /// A builder for [`ListCollectionsOutput`](crate::output::ListCollectionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1582,14 +1661,14 @@ pub mod list_collections_output {
         ///
         /// To override the contents of this collection use [`set_face_model_versions`](Self::set_face_model_versions).
         ///
-        /// <p>Latest face models being used with the corresponding collections in the array. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
+        /// <p>Version numbers of the face detection models associated with the collections in the array <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
         pub fn face_model_versions(mut self, input: impl Into<std::string::String>) -> Self {
             let mut v = self.face_model_versions.unwrap_or_default();
             v.push(input.into());
             self.face_model_versions = Some(v);
             self
         }
-        /// <p>Latest face models being used with the corresponding collections in the array. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
+        /// <p>Version numbers of the face detection models associated with the collections in the array <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used by the collection in <code>CollectionId[2]</code>.</p>
         pub fn set_face_model_versions(
             mut self,
             input: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1628,7 +1707,7 @@ pub struct IndexFacesOutput {
     /// </ul>
     /// <p>Bounding box information is returned in the <code>FaceRecords</code> array. You can get the version of the face detection model by calling <code>DescribeCollection</code>. </p>
     pub orientation_correction: std::option::Option<crate::model::OrientationCorrection>,
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>The version number of the face detection model that's associated with the input collection (<code>CollectionId</code>).</p>
     pub face_model_version: std::option::Option<std::string::String>,
     /// <p>An array of faces that were detected in the image but weren't indexed. They weren't indexed because the quality filter identified them as low quality, or the <code>MaxFaces</code> request parameter filtered them out. To use the quality filter, you specify the <code>QualityFilter</code> request parameter.</p>
     pub unindexed_faces: std::option::Option<std::vec::Vec<crate::model::UnindexedFace>>,
@@ -1650,7 +1729,7 @@ impl IndexFacesOutput {
     ) -> std::option::Option<&crate::model::OrientationCorrection> {
         self.orientation_correction.as_ref()
     }
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>The version number of the face detection model that's associated with the input collection (<code>CollectionId</code>).</p>
     pub fn face_model_version(&self) -> std::option::Option<&str> {
         self.face_model_version.as_deref()
     }
@@ -1671,6 +1750,7 @@ impl std::fmt::Debug for IndexFacesOutput {
 }
 /// See [`IndexFacesOutput`](crate::output::IndexFacesOutput)
 pub mod index_faces_output {
+
     /// A builder for [`IndexFacesOutput`](crate::output::IndexFacesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1728,12 +1808,12 @@ pub mod index_faces_output {
             self.orientation_correction = input;
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>The version number of the face detection model that's associated with the input collection (<code>CollectionId</code>).</p>
         pub fn face_model_version(mut self, input: impl Into<std::string::String>) -> Self {
             self.face_model_version = Some(input.into());
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>The version number of the face detection model that's associated with the input collection (<code>CollectionId</code>).</p>
         pub fn set_face_model_version(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -1835,6 +1915,7 @@ impl std::fmt::Debug for GetTextDetectionOutput {
 }
 /// See [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput)
 pub mod get_text_detection_output {
+
     /// A builder for [`GetTextDetectionOutput`](crate::output::GetTextDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2013,6 +2094,7 @@ impl std::fmt::Debug for GetSegmentDetectionOutput {
 }
 /// See [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput)
 pub mod get_segment_detection_output {
+
     /// A builder for [`GetSegmentDetectionOutput`](crate::output::GetSegmentDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2210,6 +2292,7 @@ impl std::fmt::Debug for GetPersonTrackingOutput {
 }
 /// See [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput)
 pub mod get_person_tracking_output {
+
     /// A builder for [`GetPersonTrackingOutput`](crate::output::GetPersonTrackingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2365,6 +2448,7 @@ impl std::fmt::Debug for GetLabelDetectionOutput {
 }
 /// See [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput)
 pub mod get_label_detection_output {
+
     /// A builder for [`GetLabelDetectionOutput`](crate::output::GetLabelDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2528,6 +2612,7 @@ impl std::fmt::Debug for GetFaceSearchOutput {
 }
 /// See [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput)
 pub mod get_face_search_output {
+
     /// A builder for [`GetFaceSearchOutput`](crate::output::GetFaceSearchOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2676,6 +2761,7 @@ impl std::fmt::Debug for GetFaceDetectionOutput {
 }
 /// See [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput)
 pub mod get_face_detection_output {
+
     /// A builder for [`GetFaceDetectionOutput`](crate::output::GetFaceDetectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2834,6 +2920,7 @@ impl std::fmt::Debug for GetContentModerationOutput {
 }
 /// See [`GetContentModerationOutput`](crate::output::GetContentModerationOutput)
 pub mod get_content_moderation_output {
+
     /// A builder for [`GetContentModerationOutput`](crate::output::GetContentModerationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3001,6 +3088,7 @@ impl std::fmt::Debug for GetCelebrityRecognitionOutput {
 }
 /// See [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput)
 pub mod get_celebrity_recognition_output {
+
     /// A builder for [`GetCelebrityRecognitionOutput`](crate::output::GetCelebrityRecognitionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3136,6 +3224,7 @@ impl std::fmt::Debug for GetCelebrityInfoOutput {
 }
 /// See [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput)
 pub mod get_celebrity_info_output {
+
     /// A builder for [`GetCelebrityInfoOutput`](crate::output::GetCelebrityInfoOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3216,6 +3305,7 @@ impl std::fmt::Debug for DistributeDatasetEntriesOutput {
 }
 /// See [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput)
 pub mod distribute_dataset_entries_output {
+
     /// A builder for [`DistributeDatasetEntriesOutput`](crate::output::DistributeDatasetEntriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3263,6 +3353,7 @@ impl std::fmt::Debug for DetectTextOutput {
 }
 /// See [`DetectTextOutput`](crate::output::DetectTextOutput)
 pub mod detect_text_output {
+
     /// A builder for [`DetectTextOutput`](crate::output::DetectTextOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3358,6 +3449,7 @@ impl std::fmt::Debug for DetectProtectiveEquipmentOutput {
 }
 /// See [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput)
 pub mod detect_protective_equipment_output {
+
     /// A builder for [`DetectProtectiveEquipmentOutput`](crate::output::DetectProtectiveEquipmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3474,6 +3566,7 @@ impl std::fmt::Debug for DetectModerationLabelsOutput {
 }
 /// See [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput)
 pub mod detect_moderation_labels_output {
+
     /// A builder for [`DetectModerationLabelsOutput`](crate::output::DetectModerationLabelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3592,6 +3685,7 @@ impl std::fmt::Debug for DetectLabelsOutput {
 }
 /// See [`DetectLabelsOutput`](crate::output::DetectLabelsOutput)
 pub mod detect_labels_output {
+
     /// A builder for [`DetectLabelsOutput`](crate::output::DetectLabelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3705,6 +3799,7 @@ impl std::fmt::Debug for DetectFacesOutput {
 }
 /// See [`DetectFacesOutput`](crate::output::DetectFacesOutput)
 pub mod detect_faces_output {
+
     /// A builder for [`DetectFacesOutput`](crate::output::DetectFacesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3790,6 +3885,7 @@ impl std::fmt::Debug for DetectCustomLabelsOutput {
 }
 /// See [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput)
 pub mod detect_custom_labels_output {
+
     /// A builder for [`DetectCustomLabelsOutput`](crate::output::DetectCustomLabelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3853,8 +3949,19 @@ pub struct DescribeStreamProcessorOutput {
     pub output: std::option::Option<crate::model::StreamProcessorOutput>,
     /// <p>ARN of the IAM role that allows access to the stream processor.</p>
     pub role_arn: std::option::Option<std::string::String>,
-    /// <p>Face recognition input parameters that are being used by the stream processor. Includes the collection to use for face recognition and the face attributes to detect.</p>
+    /// <p>Input parameters used in a streaming video analyzed by a stream processor. You can use <code>FaceSearch</code> to recognize faces in a streaming video, or you can use <code>ConnectedHome</code> to detect labels.</p>
     pub settings: std::option::Option<crate::model::StreamProcessorSettings>,
+    /// <p>The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object detection results and completion status of a video analysis operation.</p>
+    /// <p>Amazon Rekognition publishes a notification the first time an object of interest or a person is detected in the video stream. For example, if Amazon Rekognition detects a person at second 2, a pet at second 4, and a person again at second 5, Amazon Rekognition sends 2 object class detected notifications, one for a person at second 2 and one for a pet at second 4.</p>
+    /// <p>Amazon Rekognition also publishes an an end-of-session notification with a summary when the stream processing session is complete.</p>
+    pub notification_channel: std::option::Option<crate::model::StreamProcessorNotificationChannel>,
+    /// <p> The identifier for your AWS Key Management Service key (AWS KMS key). This is an optional parameter for label detection stream processors. </p>
+    pub kms_key_id: std::option::Option<std::string::String>,
+    /// <p> Specifies locations in the frames where Amazon Rekognition checks for objects or people. This is an optional parameter for label detection stream processors. </p>
+    pub regions_of_interest: std::option::Option<std::vec::Vec<crate::model::RegionOfInterest>>,
+    /// <p> Shows whether you are sharing data with Rekognition to improve model performance. You can choose this option at the account level or on a per-stream basis. Note that if you opt out at the account level this setting is ignored on individual streams. </p>
+    pub data_sharing_preference:
+        std::option::Option<crate::model::StreamProcessorDataSharingPreference>,
 }
 impl DescribeStreamProcessorOutput {
     /// <p>Name of the stream processor. </p>
@@ -3893,9 +4000,31 @@ impl DescribeStreamProcessorOutput {
     pub fn role_arn(&self) -> std::option::Option<&str> {
         self.role_arn.as_deref()
     }
-    /// <p>Face recognition input parameters that are being used by the stream processor. Includes the collection to use for face recognition and the face attributes to detect.</p>
+    /// <p>Input parameters used in a streaming video analyzed by a stream processor. You can use <code>FaceSearch</code> to recognize faces in a streaming video, or you can use <code>ConnectedHome</code> to detect labels.</p>
     pub fn settings(&self) -> std::option::Option<&crate::model::StreamProcessorSettings> {
         self.settings.as_ref()
+    }
+    /// <p>The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object detection results and completion status of a video analysis operation.</p>
+    /// <p>Amazon Rekognition publishes a notification the first time an object of interest or a person is detected in the video stream. For example, if Amazon Rekognition detects a person at second 2, a pet at second 4, and a person again at second 5, Amazon Rekognition sends 2 object class detected notifications, one for a person at second 2 and one for a pet at second 4.</p>
+    /// <p>Amazon Rekognition also publishes an an end-of-session notification with a summary when the stream processing session is complete.</p>
+    pub fn notification_channel(
+        &self,
+    ) -> std::option::Option<&crate::model::StreamProcessorNotificationChannel> {
+        self.notification_channel.as_ref()
+    }
+    /// <p> The identifier for your AWS Key Management Service key (AWS KMS key). This is an optional parameter for label detection stream processors. </p>
+    pub fn kms_key_id(&self) -> std::option::Option<&str> {
+        self.kms_key_id.as_deref()
+    }
+    /// <p> Specifies locations in the frames where Amazon Rekognition checks for objects or people. This is an optional parameter for label detection stream processors. </p>
+    pub fn regions_of_interest(&self) -> std::option::Option<&[crate::model::RegionOfInterest]> {
+        self.regions_of_interest.as_deref()
+    }
+    /// <p> Shows whether you are sharing data with Rekognition to improve model performance. You can choose this option at the account level or on a per-stream basis. Note that if you opt out at the account level this setting is ignored on individual streams. </p>
+    pub fn data_sharing_preference(
+        &self,
+    ) -> std::option::Option<&crate::model::StreamProcessorDataSharingPreference> {
+        self.data_sharing_preference.as_ref()
     }
 }
 impl std::fmt::Debug for DescribeStreamProcessorOutput {
@@ -3911,11 +4040,16 @@ impl std::fmt::Debug for DescribeStreamProcessorOutput {
         formatter.field("output", &self.output);
         formatter.field("role_arn", &self.role_arn);
         formatter.field("settings", &self.settings);
+        formatter.field("notification_channel", &self.notification_channel);
+        formatter.field("kms_key_id", &self.kms_key_id);
+        formatter.field("regions_of_interest", &self.regions_of_interest);
+        formatter.field("data_sharing_preference", &self.data_sharing_preference);
         formatter.finish()
     }
 }
 /// See [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput)
 pub mod describe_stream_processor_output {
+
     /// A builder for [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3930,6 +4064,13 @@ pub mod describe_stream_processor_output {
         pub(crate) output: std::option::Option<crate::model::StreamProcessorOutput>,
         pub(crate) role_arn: std::option::Option<std::string::String>,
         pub(crate) settings: std::option::Option<crate::model::StreamProcessorSettings>,
+        pub(crate) notification_channel:
+            std::option::Option<crate::model::StreamProcessorNotificationChannel>,
+        pub(crate) kms_key_id: std::option::Option<std::string::String>,
+        pub(crate) regions_of_interest:
+            std::option::Option<std::vec::Vec<crate::model::RegionOfInterest>>,
+        pub(crate) data_sharing_preference:
+            std::option::Option<crate::model::StreamProcessorDataSharingPreference>,
     }
     impl Builder {
         /// <p>Name of the stream processor. </p>
@@ -4043,17 +4184,82 @@ pub mod describe_stream_processor_output {
             self.role_arn = input;
             self
         }
-        /// <p>Face recognition input parameters that are being used by the stream processor. Includes the collection to use for face recognition and the face attributes to detect.</p>
+        /// <p>Input parameters used in a streaming video analyzed by a stream processor. You can use <code>FaceSearch</code> to recognize faces in a streaming video, or you can use <code>ConnectedHome</code> to detect labels.</p>
         pub fn settings(mut self, input: crate::model::StreamProcessorSettings) -> Self {
             self.settings = Some(input);
             self
         }
-        /// <p>Face recognition input parameters that are being used by the stream processor. Includes the collection to use for face recognition and the face attributes to detect.</p>
+        /// <p>Input parameters used in a streaming video analyzed by a stream processor. You can use <code>FaceSearch</code> to recognize faces in a streaming video, or you can use <code>ConnectedHome</code> to detect labels.</p>
         pub fn set_settings(
             mut self,
             input: std::option::Option<crate::model::StreamProcessorSettings>,
         ) -> Self {
             self.settings = input;
+            self
+        }
+        /// <p>The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object detection results and completion status of a video analysis operation.</p>
+        /// <p>Amazon Rekognition publishes a notification the first time an object of interest or a person is detected in the video stream. For example, if Amazon Rekognition detects a person at second 2, a pet at second 4, and a person again at second 5, Amazon Rekognition sends 2 object class detected notifications, one for a person at second 2 and one for a pet at second 4.</p>
+        /// <p>Amazon Rekognition also publishes an an end-of-session notification with a summary when the stream processing session is complete.</p>
+        pub fn notification_channel(
+            mut self,
+            input: crate::model::StreamProcessorNotificationChannel,
+        ) -> Self {
+            self.notification_channel = Some(input);
+            self
+        }
+        /// <p>The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object detection results and completion status of a video analysis operation.</p>
+        /// <p>Amazon Rekognition publishes a notification the first time an object of interest or a person is detected in the video stream. For example, if Amazon Rekognition detects a person at second 2, a pet at second 4, and a person again at second 5, Amazon Rekognition sends 2 object class detected notifications, one for a person at second 2 and one for a pet at second 4.</p>
+        /// <p>Amazon Rekognition also publishes an an end-of-session notification with a summary when the stream processing session is complete.</p>
+        pub fn set_notification_channel(
+            mut self,
+            input: std::option::Option<crate::model::StreamProcessorNotificationChannel>,
+        ) -> Self {
+            self.notification_channel = input;
+            self
+        }
+        /// <p> The identifier for your AWS Key Management Service key (AWS KMS key). This is an optional parameter for label detection stream processors. </p>
+        pub fn kms_key_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.kms_key_id = Some(input.into());
+            self
+        }
+        /// <p> The identifier for your AWS Key Management Service key (AWS KMS key). This is an optional parameter for label detection stream processors. </p>
+        pub fn set_kms_key_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.kms_key_id = input;
+            self
+        }
+        /// Appends an item to `regions_of_interest`.
+        ///
+        /// To override the contents of this collection use [`set_regions_of_interest`](Self::set_regions_of_interest).
+        ///
+        /// <p> Specifies locations in the frames where Amazon Rekognition checks for objects or people. This is an optional parameter for label detection stream processors. </p>
+        pub fn regions_of_interest(mut self, input: crate::model::RegionOfInterest) -> Self {
+            let mut v = self.regions_of_interest.unwrap_or_default();
+            v.push(input);
+            self.regions_of_interest = Some(v);
+            self
+        }
+        /// <p> Specifies locations in the frames where Amazon Rekognition checks for objects or people. This is an optional parameter for label detection stream processors. </p>
+        pub fn set_regions_of_interest(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::RegionOfInterest>>,
+        ) -> Self {
+            self.regions_of_interest = input;
+            self
+        }
+        /// <p> Shows whether you are sharing data with Rekognition to improve model performance. You can choose this option at the account level or on a per-stream basis. Note that if you opt out at the account level this setting is ignored on individual streams. </p>
+        pub fn data_sharing_preference(
+            mut self,
+            input: crate::model::StreamProcessorDataSharingPreference,
+        ) -> Self {
+            self.data_sharing_preference = Some(input);
+            self
+        }
+        /// <p> Shows whether you are sharing data with Rekognition to improve model performance. You can choose this option at the account level or on a per-stream basis. Note that if you opt out at the account level this setting is ignored on individual streams. </p>
+        pub fn set_data_sharing_preference(
+            mut self,
+            input: std::option::Option<crate::model::StreamProcessorDataSharingPreference>,
+        ) -> Self {
+            self.data_sharing_preference = input;
             self
         }
         /// Consumes the builder and constructs a [`DescribeStreamProcessorOutput`](crate::output::DescribeStreamProcessorOutput)
@@ -4069,6 +4275,10 @@ pub mod describe_stream_processor_output {
                 output: self.output,
                 role_arn: self.role_arn,
                 settings: self.settings,
+                notification_channel: self.notification_channel,
+                kms_key_id: self.kms_key_id,
+                regions_of_interest: self.regions_of_interest,
+                data_sharing_preference: self.data_sharing_preference,
             }
         }
     }
@@ -4115,6 +4325,7 @@ impl std::fmt::Debug for DescribeProjectVersionsOutput {
 }
 /// See [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput)
 pub mod describe_project_versions_output {
+
     /// A builder for [`DescribeProjectVersionsOutput`](crate::output::DescribeProjectVersionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4201,6 +4412,7 @@ impl std::fmt::Debug for DescribeProjectsOutput {
 }
 /// See [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput)
 pub mod describe_projects_output {
+
     /// A builder for [`DescribeProjectsOutput`](crate::output::DescribeProjectsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4277,6 +4489,7 @@ impl std::fmt::Debug for DescribeDatasetOutput {
 }
 /// See [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
 pub mod describe_dataset_output {
+
     /// A builder for [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4319,7 +4532,7 @@ pub struct DescribeCollectionOutput {
     /// <p>The number of faces that are indexed into the collection. To index faces into a collection, use <code>IndexFaces</code>.</p>
     pub face_count: std::option::Option<i64>,
     /// <p>The version of the face model that's used by the collection for face detection.</p>
-    /// <p>For more information, see Model Versioning in the Amazon Rekognition Developer Guide.</p>
+    /// <p>For more information, see Model versioning in the Amazon Rekognition Developer Guide.</p>
     pub face_model_version: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the collection.</p>
     pub collection_arn: std::option::Option<std::string::String>,
@@ -4332,7 +4545,7 @@ impl DescribeCollectionOutput {
         self.face_count
     }
     /// <p>The version of the face model that's used by the collection for face detection.</p>
-    /// <p>For more information, see Model Versioning in the Amazon Rekognition Developer Guide.</p>
+    /// <p>For more information, see Model versioning in the Amazon Rekognition Developer Guide.</p>
     pub fn face_model_version(&self) -> std::option::Option<&str> {
         self.face_model_version.as_deref()
     }
@@ -4357,6 +4570,7 @@ impl std::fmt::Debug for DescribeCollectionOutput {
 }
 /// See [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput)
 pub mod describe_collection_output {
+
     /// A builder for [`DescribeCollectionOutput`](crate::output::DescribeCollectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4378,13 +4592,13 @@ pub mod describe_collection_output {
             self
         }
         /// <p>The version of the face model that's used by the collection for face detection.</p>
-        /// <p>For more information, see Model Versioning in the Amazon Rekognition Developer Guide.</p>
+        /// <p>For more information, see Model versioning in the Amazon Rekognition Developer Guide.</p>
         pub fn face_model_version(mut self, input: impl Into<std::string::String>) -> Self {
             self.face_model_version = Some(input.into());
             self
         }
         /// <p>The version of the face model that's used by the collection for face detection.</p>
-        /// <p>For more information, see Model Versioning in the Amazon Rekognition Developer Guide.</p>
+        /// <p>For more information, see Model versioning in the Amazon Rekognition Developer Guide.</p>
         pub fn set_face_model_version(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -4448,6 +4662,7 @@ impl std::fmt::Debug for DeleteStreamProcessorOutput {
 }
 /// See [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput)
 pub mod delete_stream_processor_output {
+
     /// A builder for [`DeleteStreamProcessorOutput`](crate::output::DeleteStreamProcessorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4488,6 +4703,7 @@ impl std::fmt::Debug for DeleteProjectVersionOutput {
 }
 /// See [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput)
 pub mod delete_project_version_output {
+
     /// A builder for [`DeleteProjectVersionOutput`](crate::output::DeleteProjectVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4545,6 +4761,7 @@ impl std::fmt::Debug for DeleteProjectOutput {
 }
 /// See [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
 pub mod delete_project_output {
+
     /// A builder for [`DeleteProjectOutput`](crate::output::DeleteProjectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4602,6 +4819,7 @@ impl std::fmt::Debug for DeleteFacesOutput {
 }
 /// See [`DeleteFacesOutput`](crate::output::DeleteFacesOutput)
 pub mod delete_faces_output {
+
     /// A builder for [`DeleteFacesOutput`](crate::output::DeleteFacesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4655,6 +4873,7 @@ impl std::fmt::Debug for DeleteDatasetOutput {
 }
 /// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
 pub mod delete_dataset_output {
+
     /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4695,6 +4914,7 @@ impl std::fmt::Debug for DeleteCollectionOutput {
 }
 /// See [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput)
 pub mod delete_collection_output {
+
     /// A builder for [`DeleteCollectionOutput`](crate::output::DeleteCollectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4731,11 +4951,11 @@ impl DeleteCollectionOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateStreamProcessorOutput {
-    /// <p>ARN for the newly create stream processor.</p>
+    /// <p>Amazon Resource Number for the newly created stream processor.</p>
     pub stream_processor_arn: std::option::Option<std::string::String>,
 }
 impl CreateStreamProcessorOutput {
-    /// <p>ARN for the newly create stream processor.</p>
+    /// <p>Amazon Resource Number for the newly created stream processor.</p>
     pub fn stream_processor_arn(&self) -> std::option::Option<&str> {
         self.stream_processor_arn.as_deref()
     }
@@ -4749,6 +4969,7 @@ impl std::fmt::Debug for CreateStreamProcessorOutput {
 }
 /// See [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput)
 pub mod create_stream_processor_output {
+
     /// A builder for [`CreateStreamProcessorOutput`](crate::output::CreateStreamProcessorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4756,12 +4977,12 @@ pub mod create_stream_processor_output {
         pub(crate) stream_processor_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>ARN for the newly create stream processor.</p>
+        /// <p>Amazon Resource Number for the newly created stream processor.</p>
         pub fn stream_processor_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.stream_processor_arn = Some(input.into());
             self
         }
-        /// <p>ARN for the newly create stream processor.</p>
+        /// <p>Amazon Resource Number for the newly created stream processor.</p>
         pub fn set_stream_processor_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -4806,6 +5027,7 @@ impl std::fmt::Debug for CreateProjectVersionOutput {
 }
 /// See [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput)
 pub mod create_project_version_output {
+
     /// A builder for [`CreateProjectVersionOutput`](crate::output::CreateProjectVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4863,6 +5085,7 @@ impl std::fmt::Debug for CreateProjectOutput {
 }
 /// See [`CreateProjectOutput`](crate::output::CreateProjectOutput)
 pub mod create_project_output {
+
     /// A builder for [`CreateProjectOutput`](crate::output::CreateProjectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4917,6 +5140,7 @@ impl std::fmt::Debug for CreateDatasetOutput {
 }
 /// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
 pub mod create_dataset_output {
+
     /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4957,7 +5181,7 @@ pub struct CreateCollectionOutput {
     pub status_code: std::option::Option<i32>,
     /// <p>Amazon Resource Name (ARN) of the collection. You can use this to manage permissions on your resources. </p>
     pub collection_arn: std::option::Option<std::string::String>,
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the collection you are creating.</p>
     pub face_model_version: std::option::Option<std::string::String>,
 }
 impl CreateCollectionOutput {
@@ -4969,7 +5193,7 @@ impl CreateCollectionOutput {
     pub fn collection_arn(&self) -> std::option::Option<&str> {
         self.collection_arn.as_deref()
     }
-    /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+    /// <p>Version number of the face detection model associated with the collection you are creating.</p>
     pub fn face_model_version(&self) -> std::option::Option<&str> {
         self.face_model_version.as_deref()
     }
@@ -4985,6 +5209,7 @@ impl std::fmt::Debug for CreateCollectionOutput {
 }
 /// See [`CreateCollectionOutput`](crate::output::CreateCollectionOutput)
 pub mod create_collection_output {
+
     /// A builder for [`CreateCollectionOutput`](crate::output::CreateCollectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5017,12 +5242,12 @@ pub mod create_collection_output {
             self.collection_arn = input;
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the collection you are creating.</p>
         pub fn face_model_version(mut self, input: impl Into<std::string::String>) -> Self {
             self.face_model_version = Some(input.into());
             self
         }
-        /// <p>Latest face model being used with the collection. For more information, see <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>.</p>
+        /// <p>Version number of the face detection model associated with the collection you are creating.</p>
         pub fn set_face_model_version(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -5117,6 +5342,7 @@ impl std::fmt::Debug for CompareFacesOutput {
 }
 /// See [`CompareFacesOutput`](crate::output::CompareFacesOutput)
 pub mod compare_faces_output {
+
     /// A builder for [`CompareFacesOutput`](crate::output::CompareFacesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

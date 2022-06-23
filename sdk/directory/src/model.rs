@@ -54,6 +54,84 @@ impl AsRef<str> for SelectiveAuth {
     }
 }
 
+/// <p>Contains information about the configurable settings for a directory.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct Setting {
+    /// <p>The name of the directory setting. For example:</p>
+    /// <p> <code>TLS_1_0</code> </p>
+    pub name: std::option::Option<std::string::String>,
+    /// <p>The value of the directory setting for which to retrieve information. For example, for <code>TLS_1_0</code>, the valid values are: <code>Enable</code> and <code>Disable</code>.</p>
+    pub value: std::option::Option<std::string::String>,
+}
+impl Setting {
+    /// <p>The name of the directory setting. For example:</p>
+    /// <p> <code>TLS_1_0</code> </p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>The value of the directory setting for which to retrieve information. For example, for <code>TLS_1_0</code>, the valid values are: <code>Enable</code> and <code>Disable</code>.</p>
+    pub fn value(&self) -> std::option::Option<&str> {
+        self.value.as_deref()
+    }
+}
+impl std::fmt::Debug for Setting {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("Setting");
+        formatter.field("name", &self.name);
+        formatter.field("value", &self.value);
+        formatter.finish()
+    }
+}
+/// See [`Setting`](crate::model::Setting)
+pub mod setting {
+
+    /// A builder for [`Setting`](crate::model::Setting)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) value: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The name of the directory setting. For example:</p>
+        /// <p> <code>TLS_1_0</code> </p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of the directory setting. For example:</p>
+        /// <p> <code>TLS_1_0</code> </p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>The value of the directory setting for which to retrieve information. For example, for <code>TLS_1_0</code>, the valid values are: <code>Enable</code> and <code>Disable</code>.</p>
+        pub fn value(mut self, input: impl Into<std::string::String>) -> Self {
+            self.value = Some(input.into());
+            self
+        }
+        /// <p>The value of the directory setting for which to retrieve information. For example, for <code>TLS_1_0</code>, the valid values are: <code>Enable</code> and <code>Disable</code>.</p>
+        pub fn set_value(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.value = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`Setting`](crate::model::Setting)
+        pub fn build(self) -> crate::model::Setting {
+            crate::model::Setting {
+                name: self.name,
+                value: self.value,
+            }
+        }
+    }
+}
+impl Setting {
+    /// Creates a new builder-style object to manufacture [`Setting`](crate::model::Setting)
+    pub fn builder() -> crate::model::setting::Builder {
+        crate::model::setting::Builder::default()
+    }
+}
+
 /// <p>Contains information about a Remote Authentication Dial In User Service (RADIUS) server.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -127,6 +205,7 @@ impl std::fmt::Debug for RadiusSettings {
 }
 /// See [`RadiusSettings`](crate::model::RadiusSettings)
 pub mod radius_settings {
+
     /// A builder for [`RadiusSettings`](crate::model::RadiusSettings)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -357,6 +436,7 @@ impl std::fmt::Debug for UnshareTarget {
 }
 /// See [`UnshareTarget`](crate::model::UnshareTarget)
 pub mod unshare_target {
+
     /// A builder for [`UnshareTarget`](crate::model::UnshareTarget)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -536,6 +616,7 @@ impl std::fmt::Debug for ShareTarget {
 }
 /// See [`ShareTarget`](crate::model::ShareTarget)
 pub mod share_target {
+
     /// A builder for [`ShareTarget`](crate::model::ShareTarget)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -602,6 +683,7 @@ impl std::fmt::Debug for ClientCertAuthSettings {
 }
 /// See [`ClientCertAuthSettings`](crate::model::ClientCertAuthSettings)
 pub mod client_cert_auth_settings {
+
     /// A builder for [`ClientCertAuthSettings`](crate::model::ClientCertAuthSettings)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -718,6 +800,7 @@ impl std::fmt::Debug for Tag {
 }
 /// See [`Tag`](crate::model::Tag)
 pub mod tag {
+
     /// A builder for [`Tag`](crate::model::Tag)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -831,6 +914,7 @@ impl std::fmt::Debug for SchemaExtensionInfo {
 }
 /// See [`SchemaExtensionInfo`](crate::model::SchemaExtensionInfo)
 pub mod schema_extension_info {
+
     /// A builder for [`SchemaExtensionInfo`](crate::model::SchemaExtensionInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1091,6 +1175,7 @@ impl std::fmt::Debug for LogSubscription {
 }
 /// See [`LogSubscription`](crate::model::LogSubscription)
 pub mod log_subscription {
+
     /// A builder for [`LogSubscription`](crate::model::LogSubscription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1210,6 +1295,7 @@ impl std::fmt::Debug for IpRouteInfo {
 }
 /// See [`IpRouteInfo`](crate::model::IpRouteInfo)
 pub mod ip_route_info {
+
     /// A builder for [`IpRouteInfo`](crate::model::IpRouteInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1439,6 +1525,7 @@ impl std::fmt::Debug for CertificateInfo {
 }
 /// See [`CertificateInfo`](crate::model::CertificateInfo)
 pub mod certificate_info {
+
     /// A builder for [`CertificateInfo`](crate::model::CertificateInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1651,6 +1738,7 @@ impl std::fmt::Debug for SnapshotLimits {
 }
 /// See [`SnapshotLimits`](crate::model::SnapshotLimits)
 pub mod snapshot_limits {
+
     /// A builder for [`SnapshotLimits`](crate::model::SnapshotLimits)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1820,6 +1908,7 @@ impl std::fmt::Debug for DirectoryLimits {
 }
 /// See [`DirectoryLimits`](crate::model::DirectoryLimits)
 pub mod directory_limits {
+
     /// A builder for [`DirectoryLimits`](crate::model::DirectoryLimits)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2040,6 +2129,8 @@ impl AsRef<str> for LdapsType {
 pub enum ClientAuthenticationType {
     #[allow(missing_docs)] // documentation missing in model
     SmartCard,
+    #[allow(missing_docs)] // documentation missing in model
+    SmartCardOrPassword,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
 }
@@ -2047,6 +2138,7 @@ impl std::convert::From<&str> for ClientAuthenticationType {
     fn from(s: &str) -> Self {
         match s {
             "SmartCard" => ClientAuthenticationType::SmartCard,
+            "SmartCardOrPassword" => ClientAuthenticationType::SmartCardOrPassword,
             other => ClientAuthenticationType::Unknown(other.to_owned()),
         }
     }
@@ -2063,12 +2155,13 @@ impl ClientAuthenticationType {
     pub fn as_str(&self) -> &str {
         match self {
             ClientAuthenticationType::SmartCard => "SmartCard",
+            ClientAuthenticationType::SmartCardOrPassword => "SmartCardOrPassword",
             ClientAuthenticationType::Unknown(s) => s.as_ref(),
         }
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["SmartCard"]
+        &["SmartCard", "SmartCardOrPassword"]
     }
 }
 impl AsRef<str> for ClientAuthenticationType {
@@ -2172,6 +2265,7 @@ impl std::fmt::Debug for Trust {
 }
 /// See [`Trust`](crate::model::Trust)
 pub mod trust {
+
     /// A builder for [`Trust`](crate::model::Trust)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2625,6 +2719,7 @@ impl std::fmt::Debug for Snapshot {
 }
 /// See [`Snapshot`](crate::model::Snapshot)
 pub mod snapshot {
+
     /// A builder for [`Snapshot`](crate::model::Snapshot)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2915,6 +3010,7 @@ impl std::fmt::Debug for SharedDirectory {
 }
 /// See [`SharedDirectory`](crate::model::SharedDirectory)
 pub mod shared_directory {
+
     /// A builder for [`SharedDirectory`](crate::model::SharedDirectory)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3160,6 +3256,355 @@ impl AsRef<str> for ShareStatus {
     }
 }
 
+/// <p>Contains information about the specified configurable setting for a directory.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SettingEntry {
+    /// <p>The type of directory setting. For example, <code>Protocol</code> or <code>Cipher</code>.</p>
+    pub r#type: std::option::Option<std::string::String>,
+    /// <p>The name of the directory setting. For example:</p>
+    /// <p> <code>TLS_1_0</code> </p>
+    pub name: std::option::Option<std::string::String>,
+    /// <p>The valid range of values for the directory setting.</p>
+    pub allowed_values: std::option::Option<std::string::String>,
+    /// <p>The value of the directory setting that is applied to the directory.</p>
+    pub applied_value: std::option::Option<std::string::String>,
+    /// <p>The value that was last requested for the directory setting.</p>
+    pub requested_value: std::option::Option<std::string::String>,
+    /// <p>The overall status of the request to update the directory setting request. If the directory setting is deployed in more than one region, and the request fails in any region, the overall status is <code>Failed</code>.</p>
+    pub request_status: std::option::Option<crate::model::DirectoryConfigurationStatus>,
+    /// <p>Details about the status of the request to update the directory setting. If the directory setting is deployed in more than one region, status is returned for the request in each region where the setting is deployed.</p>
+    pub request_detailed_status: std::option::Option<
+        std::collections::HashMap<std::string::String, crate::model::DirectoryConfigurationStatus>,
+    >,
+    /// <p>The last status message for the directory status request.</p>
+    pub request_status_message: std::option::Option<std::string::String>,
+    /// <p>The date and time when the directory setting was last updated.</p>
+    pub last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The date and time when the request to update a directory setting was last submitted.</p>
+    pub last_requested_date_time: std::option::Option<aws_smithy_types::DateTime>,
+}
+impl SettingEntry {
+    /// <p>The type of directory setting. For example, <code>Protocol</code> or <code>Cipher</code>.</p>
+    pub fn r#type(&self) -> std::option::Option<&str> {
+        self.r#type.as_deref()
+    }
+    /// <p>The name of the directory setting. For example:</p>
+    /// <p> <code>TLS_1_0</code> </p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>The valid range of values for the directory setting.</p>
+    pub fn allowed_values(&self) -> std::option::Option<&str> {
+        self.allowed_values.as_deref()
+    }
+    /// <p>The value of the directory setting that is applied to the directory.</p>
+    pub fn applied_value(&self) -> std::option::Option<&str> {
+        self.applied_value.as_deref()
+    }
+    /// <p>The value that was last requested for the directory setting.</p>
+    pub fn requested_value(&self) -> std::option::Option<&str> {
+        self.requested_value.as_deref()
+    }
+    /// <p>The overall status of the request to update the directory setting request. If the directory setting is deployed in more than one region, and the request fails in any region, the overall status is <code>Failed</code>.</p>
+    pub fn request_status(
+        &self,
+    ) -> std::option::Option<&crate::model::DirectoryConfigurationStatus> {
+        self.request_status.as_ref()
+    }
+    /// <p>Details about the status of the request to update the directory setting. If the directory setting is deployed in more than one region, status is returned for the request in each region where the setting is deployed.</p>
+    pub fn request_detailed_status(
+        &self,
+    ) -> std::option::Option<
+        &std::collections::HashMap<std::string::String, crate::model::DirectoryConfigurationStatus>,
+    > {
+        self.request_detailed_status.as_ref()
+    }
+    /// <p>The last status message for the directory status request.</p>
+    pub fn request_status_message(&self) -> std::option::Option<&str> {
+        self.request_status_message.as_deref()
+    }
+    /// <p>The date and time when the directory setting was last updated.</p>
+    pub fn last_updated_date_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_updated_date_time.as_ref()
+    }
+    /// <p>The date and time when the request to update a directory setting was last submitted.</p>
+    pub fn last_requested_date_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_requested_date_time.as_ref()
+    }
+}
+impl std::fmt::Debug for SettingEntry {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SettingEntry");
+        formatter.field("r#type", &self.r#type);
+        formatter.field("name", &self.name);
+        formatter.field("allowed_values", &self.allowed_values);
+        formatter.field("applied_value", &self.applied_value);
+        formatter.field("requested_value", &self.requested_value);
+        formatter.field("request_status", &self.request_status);
+        formatter.field("request_detailed_status", &self.request_detailed_status);
+        formatter.field("request_status_message", &self.request_status_message);
+        formatter.field("last_updated_date_time", &self.last_updated_date_time);
+        formatter.field("last_requested_date_time", &self.last_requested_date_time);
+        formatter.finish()
+    }
+}
+/// See [`SettingEntry`](crate::model::SettingEntry)
+pub mod setting_entry {
+
+    /// A builder for [`SettingEntry`](crate::model::SettingEntry)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) r#type: std::option::Option<std::string::String>,
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) allowed_values: std::option::Option<std::string::String>,
+        pub(crate) applied_value: std::option::Option<std::string::String>,
+        pub(crate) requested_value: std::option::Option<std::string::String>,
+        pub(crate) request_status: std::option::Option<crate::model::DirectoryConfigurationStatus>,
+        pub(crate) request_detailed_status: std::option::Option<
+            std::collections::HashMap<
+                std::string::String,
+                crate::model::DirectoryConfigurationStatus,
+            >,
+        >,
+        pub(crate) request_status_message: std::option::Option<std::string::String>,
+        pub(crate) last_updated_date_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) last_requested_date_time: std::option::Option<aws_smithy_types::DateTime>,
+    }
+    impl Builder {
+        /// <p>The type of directory setting. For example, <code>Protocol</code> or <code>Cipher</code>.</p>
+        pub fn r#type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.r#type = Some(input.into());
+            self
+        }
+        /// <p>The type of directory setting. For example, <code>Protocol</code> or <code>Cipher</code>.</p>
+        pub fn set_type(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.r#type = input;
+            self
+        }
+        /// <p>The name of the directory setting. For example:</p>
+        /// <p> <code>TLS_1_0</code> </p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of the directory setting. For example:</p>
+        /// <p> <code>TLS_1_0</code> </p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>The valid range of values for the directory setting.</p>
+        pub fn allowed_values(mut self, input: impl Into<std::string::String>) -> Self {
+            self.allowed_values = Some(input.into());
+            self
+        }
+        /// <p>The valid range of values for the directory setting.</p>
+        pub fn set_allowed_values(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.allowed_values = input;
+            self
+        }
+        /// <p>The value of the directory setting that is applied to the directory.</p>
+        pub fn applied_value(mut self, input: impl Into<std::string::String>) -> Self {
+            self.applied_value = Some(input.into());
+            self
+        }
+        /// <p>The value of the directory setting that is applied to the directory.</p>
+        pub fn set_applied_value(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.applied_value = input;
+            self
+        }
+        /// <p>The value that was last requested for the directory setting.</p>
+        pub fn requested_value(mut self, input: impl Into<std::string::String>) -> Self {
+            self.requested_value = Some(input.into());
+            self
+        }
+        /// <p>The value that was last requested for the directory setting.</p>
+        pub fn set_requested_value(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.requested_value = input;
+            self
+        }
+        /// <p>The overall status of the request to update the directory setting request. If the directory setting is deployed in more than one region, and the request fails in any region, the overall status is <code>Failed</code>.</p>
+        pub fn request_status(mut self, input: crate::model::DirectoryConfigurationStatus) -> Self {
+            self.request_status = Some(input);
+            self
+        }
+        /// <p>The overall status of the request to update the directory setting request. If the directory setting is deployed in more than one region, and the request fails in any region, the overall status is <code>Failed</code>.</p>
+        pub fn set_request_status(
+            mut self,
+            input: std::option::Option<crate::model::DirectoryConfigurationStatus>,
+        ) -> Self {
+            self.request_status = input;
+            self
+        }
+        /// Adds a key-value pair to `request_detailed_status`.
+        ///
+        /// To override the contents of this collection use [`set_request_detailed_status`](Self::set_request_detailed_status).
+        ///
+        /// <p>Details about the status of the request to update the directory setting. If the directory setting is deployed in more than one region, status is returned for the request in each region where the setting is deployed.</p>
+        pub fn request_detailed_status(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: crate::model::DirectoryConfigurationStatus,
+        ) -> Self {
+            let mut hash_map = self.request_detailed_status.unwrap_or_default();
+            hash_map.insert(k.into(), v);
+            self.request_detailed_status = Some(hash_map);
+            self
+        }
+        /// <p>Details about the status of the request to update the directory setting. If the directory setting is deployed in more than one region, status is returned for the request in each region where the setting is deployed.</p>
+        pub fn set_request_detailed_status(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<
+                    std::string::String,
+                    crate::model::DirectoryConfigurationStatus,
+                >,
+            >,
+        ) -> Self {
+            self.request_detailed_status = input;
+            self
+        }
+        /// <p>The last status message for the directory status request.</p>
+        pub fn request_status_message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.request_status_message = Some(input.into());
+            self
+        }
+        /// <p>The last status message for the directory status request.</p>
+        pub fn set_request_status_message(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.request_status_message = input;
+            self
+        }
+        /// <p>The date and time when the directory setting was last updated.</p>
+        pub fn last_updated_date_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_updated_date_time = Some(input);
+            self
+        }
+        /// <p>The date and time when the directory setting was last updated.</p>
+        pub fn set_last_updated_date_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_updated_date_time = input;
+            self
+        }
+        /// <p>The date and time when the request to update a directory setting was last submitted.</p>
+        pub fn last_requested_date_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_requested_date_time = Some(input);
+            self
+        }
+        /// <p>The date and time when the request to update a directory setting was last submitted.</p>
+        pub fn set_last_requested_date_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_requested_date_time = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SettingEntry`](crate::model::SettingEntry)
+        pub fn build(self) -> crate::model::SettingEntry {
+            crate::model::SettingEntry {
+                r#type: self.r#type,
+                name: self.name,
+                allowed_values: self.allowed_values,
+                applied_value: self.applied_value,
+                requested_value: self.requested_value,
+                request_status: self.request_status,
+                request_detailed_status: self.request_detailed_status,
+                request_status_message: self.request_status_message,
+                last_updated_date_time: self.last_updated_date_time,
+                last_requested_date_time: self.last_requested_date_time,
+            }
+        }
+    }
+}
+impl SettingEntry {
+    /// Creates a new builder-style object to manufacture [`SettingEntry`](crate::model::SettingEntry)
+    pub fn builder() -> crate::model::setting_entry::Builder {
+        crate::model::setting_entry::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum DirectoryConfigurationStatus {
+    #[allow(missing_docs)] // documentation missing in model
+    Default,
+    #[allow(missing_docs)] // documentation missing in model
+    Failed,
+    #[allow(missing_docs)] // documentation missing in model
+    Requested,
+    #[allow(missing_docs)] // documentation missing in model
+    Updated,
+    #[allow(missing_docs)] // documentation missing in model
+    Updating,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for DirectoryConfigurationStatus {
+    fn from(s: &str) -> Self {
+        match s {
+            "Default" => DirectoryConfigurationStatus::Default,
+            "Failed" => DirectoryConfigurationStatus::Failed,
+            "Requested" => DirectoryConfigurationStatus::Requested,
+            "Updated" => DirectoryConfigurationStatus::Updated,
+            "Updating" => DirectoryConfigurationStatus::Updating,
+            other => DirectoryConfigurationStatus::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for DirectoryConfigurationStatus {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(DirectoryConfigurationStatus::from(s))
+    }
+}
+impl DirectoryConfigurationStatus {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            DirectoryConfigurationStatus::Default => "Default",
+            DirectoryConfigurationStatus::Failed => "Failed",
+            DirectoryConfigurationStatus::Requested => "Requested",
+            DirectoryConfigurationStatus::Updated => "Updated",
+            DirectoryConfigurationStatus::Updating => "Updating",
+            DirectoryConfigurationStatus::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["Default", "Failed", "Requested", "Updated", "Updating"]
+    }
+}
+impl AsRef<str> for DirectoryConfigurationStatus {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
 /// <p>The replicated Region information for a directory.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3246,6 +3691,7 @@ impl std::fmt::Debug for RegionDescription {
 }
 /// See [`RegionDescription`](crate::model::RegionDescription)
 pub mod region_description {
+
     /// A builder for [`RegionDescription`](crate::model::RegionDescription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3426,6 +3872,7 @@ impl std::fmt::Debug for DirectoryVpcSettings {
 }
 /// See [`DirectoryVpcSettings`](crate::model::DirectoryVpcSettings)
 pub mod directory_vpc_settings {
+
     /// A builder for [`DirectoryVpcSettings`](crate::model::DirectoryVpcSettings)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3673,6 +4120,7 @@ impl std::fmt::Debug for LdapsSettingInfo {
 }
 /// See [`LdapsSettingInfo`](crate::model::LdapsSettingInfo)
 pub mod ldaps_setting_info {
+
     /// A builder for [`LdapsSettingInfo`](crate::model::LdapsSettingInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3851,6 +4299,7 @@ impl std::fmt::Debug for EventTopic {
 }
 /// See [`EventTopic`](crate::model::EventTopic)
 pub mod event_topic {
+
     /// A builder for [`EventTopic`](crate::model::EventTopic)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4087,6 +4536,7 @@ impl std::fmt::Debug for DomainController {
 }
 /// See [`DomainController`](crate::model::DomainController)
 pub mod domain_controller {
+
     /// A builder for [`DomainController`](crate::model::DomainController)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4541,6 +4991,7 @@ impl std::fmt::Debug for DirectoryDescription {
 }
 /// See [`DirectoryDescription`](crate::model::DirectoryDescription)
 pub mod directory_description {
+
     /// A builder for [`DirectoryDescription`](crate::model::DirectoryDescription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4959,6 +5410,7 @@ impl std::fmt::Debug for RegionsInfo {
 }
 /// See [`RegionsInfo`](crate::model::RegionsInfo)
 pub mod regions_info {
+
     /// A builder for [`RegionsInfo`](crate::model::RegionsInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5074,6 +5526,7 @@ impl std::fmt::Debug for OwnerDirectoryDescription {
 }
 /// See [`OwnerDirectoryDescription`](crate::model::OwnerDirectoryDescription)
 pub mod owner_directory_description {
+
     /// A builder for [`OwnerDirectoryDescription`](crate::model::OwnerDirectoryDescription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5289,6 +5742,7 @@ impl std::fmt::Debug for DirectoryVpcSettingsDescription {
 }
 /// See [`DirectoryVpcSettingsDescription`](crate::model::DirectoryVpcSettingsDescription)
 pub mod directory_vpc_settings_description {
+
     /// A builder for [`DirectoryVpcSettingsDescription`](crate::model::DirectoryVpcSettingsDescription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5435,6 +5889,7 @@ impl std::fmt::Debug for DirectoryConnectSettingsDescription {
 }
 /// See [`DirectoryConnectSettingsDescription`](crate::model::DirectoryConnectSettingsDescription)
 pub mod directory_connect_settings_description {
+
     /// A builder for [`DirectoryConnectSettingsDescription`](crate::model::DirectoryConnectSettingsDescription)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5774,6 +6229,7 @@ impl std::fmt::Debug for ConditionalForwarder {
 }
 /// See [`ConditionalForwarder`](crate::model::ConditionalForwarder)
 pub mod conditional_forwarder {
+
     /// A builder for [`ConditionalForwarder`](crate::model::ConditionalForwarder)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5932,6 +6388,7 @@ impl std::fmt::Debug for ClientAuthenticationSettingInfo {
 }
 /// See [`ClientAuthenticationSettingInfo`](crate::model::ClientAuthenticationSettingInfo)
 pub mod client_authentication_setting_info {
+
     /// A builder for [`ClientAuthenticationSettingInfo`](crate::model::ClientAuthenticationSettingInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6125,6 +6582,7 @@ impl std::fmt::Debug for Certificate {
 }
 /// See [`Certificate`](crate::model::Certificate)
 pub mod certificate {
+
     /// A builder for [`Certificate`](crate::model::Certificate)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6299,6 +6757,7 @@ impl std::fmt::Debug for Computer {
 }
 /// See [`Computer`](crate::model::Computer)
 pub mod computer {
+
     /// A builder for [`Computer`](crate::model::Computer)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6396,6 +6855,7 @@ impl std::fmt::Debug for Attribute {
 }
 /// See [`Attribute`](crate::model::Attribute)
 pub mod attribute {
+
     /// A builder for [`Attribute`](crate::model::Attribute)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6493,6 +6953,7 @@ impl std::fmt::Debug for DirectoryConnectSettings {
 }
 /// See [`DirectoryConnectSettings`](crate::model::DirectoryConnectSettings)
 pub mod directory_connect_settings {
+
     /// A builder for [`DirectoryConnectSettings`](crate::model::DirectoryConnectSettings)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6621,6 +7082,7 @@ impl std::fmt::Debug for IpRoute {
 }
 /// See [`IpRoute`](crate::model::IpRoute)
 pub mod ip_route {
+
     /// A builder for [`IpRoute`](crate::model::IpRoute)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

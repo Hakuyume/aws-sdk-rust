@@ -5,14 +5,16 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
 //! <fullname>Amazon RDS Data Service</fullname>
 //! <p>Amazon RDS provides an HTTP endpoint to run SQL statements on an Amazon Aurora
 //! Serverless DB cluster. To run these statements, you work with the Data Service
 //! API.</p>
-//! <p>For more information about the Data Service API, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-//! Serverless</a> in the <i>Amazon Aurora User Guide</i>.</p>
+//! <p>For more information about the Data Service API, see
+//! <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API</a>
+//! in the <i>Amazon Aurora User Guide</i>.</p>
 //!
 //! # Crate Organization
 //!

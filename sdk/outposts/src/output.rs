@@ -21,6 +21,7 @@ impl std::fmt::Debug for UpdateSiteRackPhysicalPropertiesOutput {
 }
 /// See [`UpdateSiteRackPhysicalPropertiesOutput`](crate::output::UpdateSiteRackPhysicalPropertiesOutput)
 pub mod update_site_rack_physical_properties_output {
+
     /// A builder for [`UpdateSiteRackPhysicalPropertiesOutput`](crate::output::UpdateSiteRackPhysicalPropertiesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -80,6 +81,7 @@ impl std::fmt::Debug for UpdateSiteAddressOutput {
 }
 /// See [`UpdateSiteAddressOutput`](crate::output::UpdateSiteAddressOutput)
 pub mod update_site_address_output {
+
     /// A builder for [`UpdateSiteAddressOutput`](crate::output::UpdateSiteAddressOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -149,6 +151,7 @@ impl std::fmt::Debug for UpdateSiteOutput {
 }
 /// See [`UpdateSiteOutput`](crate::output::UpdateSiteOutput)
 pub mod update_site_output {
+
     /// A builder for [`UpdateSiteOutput`](crate::output::UpdateSiteOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -201,6 +204,7 @@ impl std::fmt::Debug for UpdateOutpostOutput {
 }
 /// See [`UpdateOutpostOutput`](crate::output::UpdateOutpostOutput)
 pub mod update_outpost_output {
+
     /// A builder for [`UpdateOutpostOutput`](crate::output::UpdateOutpostOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -245,6 +249,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -275,6 +280,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -290,6 +296,86 @@ impl TagResourceOutput {
     /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct StartConnectionOutput {
+    /// <p> The ID of the connection. </p>
+    pub connection_id: std::option::Option<std::string::String>,
+    /// <p> The underlay IP address. </p>
+    pub underlay_ip_address: std::option::Option<std::string::String>,
+}
+impl StartConnectionOutput {
+    /// <p> The ID of the connection. </p>
+    pub fn connection_id(&self) -> std::option::Option<&str> {
+        self.connection_id.as_deref()
+    }
+    /// <p> The underlay IP address. </p>
+    pub fn underlay_ip_address(&self) -> std::option::Option<&str> {
+        self.underlay_ip_address.as_deref()
+    }
+}
+impl std::fmt::Debug for StartConnectionOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("StartConnectionOutput");
+        formatter.field("connection_id", &self.connection_id);
+        formatter.field("underlay_ip_address", &self.underlay_ip_address);
+        formatter.finish()
+    }
+}
+/// See [`StartConnectionOutput`](crate::output::StartConnectionOutput)
+pub mod start_connection_output {
+
+    /// A builder for [`StartConnectionOutput`](crate::output::StartConnectionOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) connection_id: std::option::Option<std::string::String>,
+        pub(crate) underlay_ip_address: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p> The ID of the connection. </p>
+        pub fn connection_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.connection_id = Some(input.into());
+            self
+        }
+        /// <p> The ID of the connection. </p>
+        pub fn set_connection_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.connection_id = input;
+            self
+        }
+        /// <p> The underlay IP address. </p>
+        pub fn underlay_ip_address(mut self, input: impl Into<std::string::String>) -> Self {
+            self.underlay_ip_address = Some(input.into());
+            self
+        }
+        /// <p> The underlay IP address. </p>
+        pub fn set_underlay_ip_address(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.underlay_ip_address = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`StartConnectionOutput`](crate::output::StartConnectionOutput)
+        pub fn build(self) -> crate::output::StartConnectionOutput {
+            crate::output::StartConnectionOutput {
+                connection_id: self.connection_id,
+                underlay_ip_address: self.underlay_ip_address,
+            }
+        }
+    }
+}
+impl StartConnectionOutput {
+    /// Creates a new builder-style object to manufacture [`StartConnectionOutput`](crate::output::StartConnectionOutput)
+    pub fn builder() -> crate::output::start_connection_output::Builder {
+        crate::output::start_connection_output::Builder::default()
     }
 }
 
@@ -319,6 +405,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -395,6 +482,7 @@ impl std::fmt::Debug for ListSitesOutput {
 }
 /// See [`ListSitesOutput`](crate::output::ListSitesOutput)
 pub mod list_sites_output {
+
     /// A builder for [`ListSitesOutput`](crate::output::ListSitesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -477,6 +565,7 @@ impl std::fmt::Debug for ListOutpostsOutput {
 }
 /// See [`ListOutpostsOutput`](crate::output::ListOutpostsOutput)
 pub mod list_outposts_output {
+
     /// A builder for [`ListOutpostsOutput`](crate::output::ListOutpostsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -559,6 +648,7 @@ impl std::fmt::Debug for ListOrdersOutput {
 }
 /// See [`ListOrdersOutput`](crate::output::ListOrdersOutput)
 pub mod list_orders_output {
+
     /// A builder for [`ListOrdersOutput`](crate::output::ListOrdersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -641,6 +731,7 @@ impl std::fmt::Debug for ListCatalogItemsOutput {
 }
 /// See [`ListCatalogItemsOutput`](crate::output::ListCatalogItemsOutput)
 pub mod list_catalog_items_output {
+
     /// A builder for [`ListCatalogItemsOutput`](crate::output::ListCatalogItemsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -697,6 +788,89 @@ impl ListCatalogItemsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListAssetsOutput {
+    /// <p> Information about hardware assets. </p>
+    pub assets: std::option::Option<std::vec::Vec<crate::model::AssetInfo>>,
+    /// <p>The pagination token.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListAssetsOutput {
+    /// <p> Information about hardware assets. </p>
+    pub fn assets(&self) -> std::option::Option<&[crate::model::AssetInfo]> {
+        self.assets.as_deref()
+    }
+    /// <p>The pagination token.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListAssetsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListAssetsOutput");
+        formatter.field("assets", &self.assets);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListAssetsOutput`](crate::output::ListAssetsOutput)
+pub mod list_assets_output {
+
+    /// A builder for [`ListAssetsOutput`](crate::output::ListAssetsOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) assets: std::option::Option<std::vec::Vec<crate::model::AssetInfo>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `assets`.
+        ///
+        /// To override the contents of this collection use [`set_assets`](Self::set_assets).
+        ///
+        /// <p> Information about hardware assets. </p>
+        pub fn assets(mut self, input: crate::model::AssetInfo) -> Self {
+            let mut v = self.assets.unwrap_or_default();
+            v.push(input);
+            self.assets = Some(v);
+            self
+        }
+        /// <p> Information about hardware assets. </p>
+        pub fn set_assets(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::AssetInfo>>,
+        ) -> Self {
+            self.assets = input;
+            self
+        }
+        /// <p>The pagination token.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The pagination token.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListAssetsOutput`](crate::output::ListAssetsOutput)
+        pub fn build(self) -> crate::output::ListAssetsOutput {
+            crate::output::ListAssetsOutput {
+                assets: self.assets,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListAssetsOutput {
+    /// Creates a new builder-style object to manufacture [`ListAssetsOutput`](crate::output::ListAssetsOutput)
+    pub fn builder() -> crate::output::list_assets_output::Builder {
+        crate::output::list_assets_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetSiteAddressOutput {
     /// <p> The ID of the site. </p>
     pub site_id: std::option::Option<std::string::String>,
@@ -730,6 +904,7 @@ impl std::fmt::Debug for GetSiteAddressOutput {
 }
 /// See [`GetSiteAddressOutput`](crate::output::GetSiteAddressOutput)
 pub mod get_site_address_output {
+
     /// A builder for [`GetSiteAddressOutput`](crate::output::GetSiteAddressOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -811,6 +986,7 @@ impl std::fmt::Debug for GetSiteOutput {
 }
 /// See [`GetSiteOutput`](crate::output::GetSiteOutput)
 pub mod get_site_output {
+
     /// A builder for [`GetSiteOutput`](crate::output::GetSiteOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -849,7 +1025,9 @@ pub struct GetOutpostInstanceTypesOutput {
     pub instance_types: std::option::Option<std::vec::Vec<crate::model::InstanceTypeItem>>,
     /// <p>The pagination token.</p>
     pub next_token: std::option::Option<std::string::String>,
-    /// <p> The ID of the Outpost. </p>
+    /// <p> The ID of the Outpost. </p> <note>
+    /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+    /// </note>
     pub outpost_id: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the Outpost.</p>
     pub outpost_arn: std::option::Option<std::string::String>,
@@ -863,7 +1041,9 @@ impl GetOutpostInstanceTypesOutput {
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
-    /// <p> The ID of the Outpost. </p>
+    /// <p> The ID of the Outpost. </p> <note>
+    /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+    /// </note>
     pub fn outpost_id(&self) -> std::option::Option<&str> {
         self.outpost_id.as_deref()
     }
@@ -884,6 +1064,7 @@ impl std::fmt::Debug for GetOutpostInstanceTypesOutput {
 }
 /// See [`GetOutpostInstanceTypesOutput`](crate::output::GetOutpostInstanceTypesOutput)
 pub mod get_outpost_instance_types_output {
+
     /// A builder for [`GetOutpostInstanceTypesOutput`](crate::output::GetOutpostInstanceTypesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -924,12 +1105,16 @@ pub mod get_outpost_instance_types_output {
             self.next_token = input;
             self
         }
-        /// <p> The ID of the Outpost. </p>
+        /// <p> The ID of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn outpost_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.outpost_id = Some(input.into());
             self
         }
-        /// <p> The ID of the Outpost. </p>
+        /// <p> The ID of the Outpost. </p> <note>
+        /// <p>In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.</p>
+        /// </note>
         pub fn set_outpost_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.outpost_id = input;
             self
@@ -984,6 +1169,7 @@ impl std::fmt::Debug for GetOutpostOutput {
 }
 /// See [`GetOutpostOutput`](crate::output::GetOutpostOutput)
 pub mod get_outpost_output {
+
     /// A builder for [`GetOutpostOutput`](crate::output::GetOutpostOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1038,6 +1224,7 @@ impl std::fmt::Debug for GetOrderOutput {
 }
 /// See [`GetOrderOutput`](crate::output::GetOrderOutput)
 pub mod get_order_output {
+
     /// A builder for [`GetOrderOutput`](crate::output::GetOrderOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1071,6 +1258,86 @@ impl GetOrderOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetConnectionOutput {
+    /// <p> The ID of the connection you receive. </p>
+    pub connection_id: std::option::Option<std::string::String>,
+    /// <p> Information about a connection. </p>
+    pub connection_details: std::option::Option<crate::model::ConnectionDetails>,
+}
+impl GetConnectionOutput {
+    /// <p> The ID of the connection you receive. </p>
+    pub fn connection_id(&self) -> std::option::Option<&str> {
+        self.connection_id.as_deref()
+    }
+    /// <p> Information about a connection. </p>
+    pub fn connection_details(&self) -> std::option::Option<&crate::model::ConnectionDetails> {
+        self.connection_details.as_ref()
+    }
+}
+impl std::fmt::Debug for GetConnectionOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetConnectionOutput");
+        formatter.field("connection_id", &self.connection_id);
+        formatter.field("connection_details", &self.connection_details);
+        formatter.finish()
+    }
+}
+/// See [`GetConnectionOutput`](crate::output::GetConnectionOutput)
+pub mod get_connection_output {
+
+    /// A builder for [`GetConnectionOutput`](crate::output::GetConnectionOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) connection_id: std::option::Option<std::string::String>,
+        pub(crate) connection_details: std::option::Option<crate::model::ConnectionDetails>,
+    }
+    impl Builder {
+        /// <p> The ID of the connection you receive. </p>
+        pub fn connection_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.connection_id = Some(input.into());
+            self
+        }
+        /// <p> The ID of the connection you receive. </p>
+        pub fn set_connection_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.connection_id = input;
+            self
+        }
+        /// <p> Information about a connection. </p>
+        pub fn connection_details(mut self, input: crate::model::ConnectionDetails) -> Self {
+            self.connection_details = Some(input);
+            self
+        }
+        /// <p> Information about a connection. </p>
+        pub fn set_connection_details(
+            mut self,
+            input: std::option::Option<crate::model::ConnectionDetails>,
+        ) -> Self {
+            self.connection_details = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetConnectionOutput`](crate::output::GetConnectionOutput)
+        pub fn build(self) -> crate::output::GetConnectionOutput {
+            crate::output::GetConnectionOutput {
+                connection_id: self.connection_id,
+                connection_details: self.connection_details,
+            }
+        }
+    }
+}
+impl GetConnectionOutput {
+    /// Creates a new builder-style object to manufacture [`GetConnectionOutput`](crate::output::GetConnectionOutput)
+    pub fn builder() -> crate::output::get_connection_output::Builder {
+        crate::output::get_connection_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetCatalogItemOutput {
     /// <p>Information about this catalog item.</p>
     pub catalog_item: std::option::Option<crate::model::CatalogItem>,
@@ -1090,6 +1357,7 @@ impl std::fmt::Debug for GetCatalogItemOutput {
 }
 /// See [`GetCatalogItemOutput`](crate::output::GetCatalogItemOutput)
 pub mod get_catalog_item_output {
+
     /// A builder for [`GetCatalogItemOutput`](crate::output::GetCatalogItemOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1137,6 +1405,7 @@ impl std::fmt::Debug for DeleteSiteOutput {
 }
 /// See [`DeleteSiteOutput`](crate::output::DeleteSiteOutput)
 pub mod delete_site_output {
+
     /// A builder for [`DeleteSiteOutput`](crate::output::DeleteSiteOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1167,6 +1436,7 @@ impl std::fmt::Debug for DeleteOutpostOutput {
 }
 /// See [`DeleteOutpostOutput`](crate::output::DeleteOutpostOutput)
 pub mod delete_outpost_output {
+
     /// A builder for [`DeleteOutpostOutput`](crate::output::DeleteOutpostOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1207,6 +1477,7 @@ impl std::fmt::Debug for CreateSiteOutput {
 }
 /// See [`CreateSiteOutput`](crate::output::CreateSiteOutput)
 pub mod create_site_output {
+
     /// A builder for [`CreateSiteOutput`](crate::output::CreateSiteOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1259,6 +1530,7 @@ impl std::fmt::Debug for CreateOutpostOutput {
 }
 /// See [`CreateOutpostOutput`](crate::output::CreateOutpostOutput)
 pub mod create_outpost_output {
+
     /// A builder for [`CreateOutpostOutput`](crate::output::CreateOutpostOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1313,6 +1585,7 @@ impl std::fmt::Debug for CreateOrderOutput {
 }
 /// See [`CreateOrderOutput`](crate::output::CreateOrderOutput)
 pub mod create_order_output {
+
     /// A builder for [`CreateOrderOutput`](crate::output::CreateOrderOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1355,6 +1628,7 @@ impl std::fmt::Debug for CancelOrderOutput {
 }
 /// See [`CancelOrderOutput`](crate::output::CancelOrderOutput)
 pub mod cancel_order_output {
+
     /// A builder for [`CancelOrderOutput`](crate::output::CancelOrderOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

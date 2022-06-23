@@ -5,13 +5,14 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <fullname>AWS IoT Secure Tunneling</fullname>
-//! <p>AWS IoT Secure Tunnling enables you to create remote connections to devices
-//! deployed in the field.</p>
-//!
-//! <p>For more information about how AWS IoT Secure Tunneling works, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html">AWS IoT Secure Tunneling</a>.</p>
+//! <fullname>IoT Secure Tunneling</fullname>
+//! <p>IoT Secure Tunneling creates remote connections to devices deployed in the
+//! field.</p>
+//! <p>For more information about how IoT Secure Tunneling works, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html">IoT
+//! Secure Tunneling</a>.</p>
 //!
 //! # Crate Organization
 //!
@@ -45,7 +46,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

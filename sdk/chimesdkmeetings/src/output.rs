@@ -2,6 +2,65 @@
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateAttendeeCapabilitiesOutput {
+    /// <p>An Amazon Chime SDK meeting attendee. Includes a unique <code>AttendeeId</code> and <code>JoinToken</code>. The <code>JoinToken</code> allows a client to authenticate and join as the specified attendee. The <code>JoinToken</code> expires when the meeting ends, or when <code>DeleteAttendee</code> is called. After that, the attendee is unable to join the meeting. </p>
+    /// <p>We recommend securely transferring each <code>JoinToken</code> from your server application to the client so that no other client has access to the token except for the one authorized to represent the attendee.</p>
+    pub attendee: std::option::Option<crate::model::Attendee>,
+}
+impl UpdateAttendeeCapabilitiesOutput {
+    /// <p>An Amazon Chime SDK meeting attendee. Includes a unique <code>AttendeeId</code> and <code>JoinToken</code>. The <code>JoinToken</code> allows a client to authenticate and join as the specified attendee. The <code>JoinToken</code> expires when the meeting ends, or when <code>DeleteAttendee</code> is called. After that, the attendee is unable to join the meeting. </p>
+    /// <p>We recommend securely transferring each <code>JoinToken</code> from your server application to the client so that no other client has access to the token except for the one authorized to represent the attendee.</p>
+    pub fn attendee(&self) -> std::option::Option<&crate::model::Attendee> {
+        self.attendee.as_ref()
+    }
+}
+impl std::fmt::Debug for UpdateAttendeeCapabilitiesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateAttendeeCapabilitiesOutput");
+        formatter.field("attendee", &self.attendee);
+        formatter.finish()
+    }
+}
+/// See [`UpdateAttendeeCapabilitiesOutput`](crate::output::UpdateAttendeeCapabilitiesOutput)
+pub mod update_attendee_capabilities_output {
+
+    /// A builder for [`UpdateAttendeeCapabilitiesOutput`](crate::output::UpdateAttendeeCapabilitiesOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) attendee: std::option::Option<crate::model::Attendee>,
+    }
+    impl Builder {
+        /// <p>An Amazon Chime SDK meeting attendee. Includes a unique <code>AttendeeId</code> and <code>JoinToken</code>. The <code>JoinToken</code> allows a client to authenticate and join as the specified attendee. The <code>JoinToken</code> expires when the meeting ends, or when <code>DeleteAttendee</code> is called. After that, the attendee is unable to join the meeting. </p>
+        /// <p>We recommend securely transferring each <code>JoinToken</code> from your server application to the client so that no other client has access to the token except for the one authorized to represent the attendee.</p>
+        pub fn attendee(mut self, input: crate::model::Attendee) -> Self {
+            self.attendee = Some(input);
+            self
+        }
+        /// <p>An Amazon Chime SDK meeting attendee. Includes a unique <code>AttendeeId</code> and <code>JoinToken</code>. The <code>JoinToken</code> allows a client to authenticate and join as the specified attendee. The <code>JoinToken</code> expires when the meeting ends, or when <code>DeleteAttendee</code> is called. After that, the attendee is unable to join the meeting. </p>
+        /// <p>We recommend securely transferring each <code>JoinToken</code> from your server application to the client so that no other client has access to the token except for the one authorized to represent the attendee.</p>
+        pub fn set_attendee(mut self, input: std::option::Option<crate::model::Attendee>) -> Self {
+            self.attendee = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateAttendeeCapabilitiesOutput`](crate::output::UpdateAttendeeCapabilitiesOutput)
+        pub fn build(self) -> crate::output::UpdateAttendeeCapabilitiesOutput {
+            crate::output::UpdateAttendeeCapabilitiesOutput {
+                attendee: self.attendee,
+            }
+        }
+    }
+}
+impl UpdateAttendeeCapabilitiesOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateAttendeeCapabilitiesOutput`](crate::output::UpdateAttendeeCapabilitiesOutput)
+    pub fn builder() -> crate::output::update_attendee_capabilities_output::Builder {
+        crate::output::update_attendee_capabilities_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StopMeetingTranscriptionOutput {}
 impl std::fmt::Debug for StopMeetingTranscriptionOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -11,6 +70,7 @@ impl std::fmt::Debug for StopMeetingTranscriptionOutput {
 }
 /// See [`StopMeetingTranscriptionOutput`](crate::output::StopMeetingTranscriptionOutput)
 pub mod stop_meeting_transcription_output {
+
     /// A builder for [`StopMeetingTranscriptionOutput`](crate::output::StopMeetingTranscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +101,7 @@ impl std::fmt::Debug for StartMeetingTranscriptionOutput {
 }
 /// See [`StartMeetingTranscriptionOutput`](crate::output::StartMeetingTranscriptionOutput)
 pub mod start_meeting_transcription_output {
+
     /// A builder for [`StartMeetingTranscriptionOutput`](crate::output::StartMeetingTranscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -88,6 +149,7 @@ impl std::fmt::Debug for ListAttendeesOutput {
 }
 /// See [`ListAttendeesOutput`](crate::output::ListAttendeesOutput)
 pub mod list_attendees_output {
+
     /// A builder for [`ListAttendeesOutput`](crate::output::ListAttendeesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -163,6 +225,7 @@ impl std::fmt::Debug for GetMeetingOutput {
 }
 /// See [`GetMeetingOutput`](crate::output::GetMeetingOutput)
 pub mod get_meeting_output {
+
     /// A builder for [`GetMeetingOutput`](crate::output::GetMeetingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -217,6 +280,7 @@ impl std::fmt::Debug for GetAttendeeOutput {
 }
 /// See [`GetAttendeeOutput`](crate::output::GetAttendeeOutput)
 pub mod get_attendee_output {
+
     /// A builder for [`GetAttendeeOutput`](crate::output::GetAttendeeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -261,6 +325,7 @@ impl std::fmt::Debug for DeleteMeetingOutput {
 }
 /// See [`DeleteMeetingOutput`](crate::output::DeleteMeetingOutput)
 pub mod delete_meeting_output {
+
     /// A builder for [`DeleteMeetingOutput`](crate::output::DeleteMeetingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -291,6 +356,7 @@ impl std::fmt::Debug for DeleteAttendeeOutput {
 }
 /// See [`DeleteAttendeeOutput`](crate::output::DeleteAttendeeOutput)
 pub mod delete_attendee_output {
+
     /// A builder for [`DeleteAttendeeOutput`](crate::output::DeleteAttendeeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -345,6 +411,7 @@ impl std::fmt::Debug for CreateMeetingWithAttendeesOutput {
 }
 /// See [`CreateMeetingWithAttendeesOutput`](crate::output::CreateMeetingWithAttendeesOutput)
 pub mod create_meeting_with_attendees_output {
+
     /// A builder for [`CreateMeetingWithAttendeesOutput`](crate::output::CreateMeetingWithAttendeesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -441,6 +508,7 @@ impl std::fmt::Debug for CreateMeetingOutput {
 }
 /// See [`CreateMeetingOutput`](crate::output::CreateMeetingOutput)
 pub mod create_meeting_output {
+
     /// A builder for [`CreateMeetingOutput`](crate::output::CreateMeetingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -495,6 +563,7 @@ impl std::fmt::Debug for CreateAttendeeOutput {
 }
 /// See [`CreateAttendeeOutput`](crate::output::CreateAttendeeOutput)
 pub mod create_attendee_output {
+
     /// A builder for [`CreateAttendeeOutput`](crate::output::CreateAttendeeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -530,6 +599,37 @@ impl CreateAttendeeOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct BatchUpdateAttendeeCapabilitiesExceptOutput {}
+impl std::fmt::Debug for BatchUpdateAttendeeCapabilitiesExceptOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("BatchUpdateAttendeeCapabilitiesExceptOutput");
+        formatter.finish()
+    }
+}
+/// See [`BatchUpdateAttendeeCapabilitiesExceptOutput`](crate::output::BatchUpdateAttendeeCapabilitiesExceptOutput)
+pub mod batch_update_attendee_capabilities_except_output {
+
+    /// A builder for [`BatchUpdateAttendeeCapabilitiesExceptOutput`](crate::output::BatchUpdateAttendeeCapabilitiesExceptOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`BatchUpdateAttendeeCapabilitiesExceptOutput`](crate::output::BatchUpdateAttendeeCapabilitiesExceptOutput)
+        pub fn build(self) -> crate::output::BatchUpdateAttendeeCapabilitiesExceptOutput {
+            crate::output::BatchUpdateAttendeeCapabilitiesExceptOutput {}
+        }
+    }
+}
+impl BatchUpdateAttendeeCapabilitiesExceptOutput {
+    /// Creates a new builder-style object to manufacture [`BatchUpdateAttendeeCapabilitiesExceptOutput`](crate::output::BatchUpdateAttendeeCapabilitiesExceptOutput)
+    pub fn builder() -> crate::output::batch_update_attendee_capabilities_except_output::Builder {
+        crate::output::batch_update_attendee_capabilities_except_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct BatchCreateAttendeeOutput {
     /// <p>The attendee information, including attendees' IDs and join tokens.</p>
     pub attendees: std::option::Option<std::vec::Vec<crate::model::Attendee>>,
@@ -556,6 +656,7 @@ impl std::fmt::Debug for BatchCreateAttendeeOutput {
 }
 /// See [`BatchCreateAttendeeOutput`](crate::output::BatchCreateAttendeeOutput)
 pub mod batch_create_attendee_output {
+
     /// A builder for [`BatchCreateAttendeeOutput`](crate::output::BatchCreateAttendeeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

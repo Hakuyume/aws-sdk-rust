@@ -97,6 +97,7 @@ impl std::fmt::Debug for MssPackage {
 }
 /// See [`MssPackage`](crate::model::MssPackage)
 pub mod mss_package {
+
     /// A builder for [`MssPackage`](crate::model::MssPackage)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -207,6 +208,7 @@ impl std::fmt::Debug for StreamSelection {
 }
 /// See [`StreamSelection`](crate::model::StreamSelection)
 pub mod stream_selection {
+
     /// A builder for [`StreamSelection`](crate::model::StreamSelection)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -351,6 +353,7 @@ impl std::fmt::Debug for MssEncryption {
 }
 /// See [`MssEncryption`](crate::model::MssEncryption)
 pub mod mss_encryption {
+
     /// A builder for [`MssEncryption`](crate::model::MssEncryption)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -449,6 +452,7 @@ impl std::fmt::Debug for SpekeKeyProvider {
 }
 /// See [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
 pub mod speke_key_provider {
+
     /// A builder for [`SpekeKeyProvider`](crate::model::SpekeKeyProvider)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -589,6 +593,7 @@ impl std::fmt::Debug for EncryptionContractConfiguration {
 }
 /// See [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration)
 pub mod encryption_contract_configuration {
+
     /// A builder for [`EncryptionContractConfiguration`](crate::model::EncryptionContractConfiguration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -851,6 +856,7 @@ impl std::fmt::Debug for HlsPackage {
 }
 /// See [`HlsPackage`](crate::model::HlsPackage)
 pub mod hls_package {
+
     /// A builder for [`HlsPackage`](crate::model::HlsPackage)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1163,6 +1169,7 @@ impl std::fmt::Debug for HlsEncryption {
 }
 /// See [`HlsEncryption`](crate::model::HlsEncryption)
 pub mod hls_encryption {
+
     /// A builder for [`HlsEncryption`](crate::model::HlsEncryption)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1568,7 +1575,7 @@ pub struct DashPackage {
     pub min_update_period_seconds: i32,
     /// A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Channel source contains SCTE-35 ad markers.
     pub period_triggers: std::option::Option<std::vec::Vec<crate::model::PeriodTriggersElement>>,
-    /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+    /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
     pub profile: std::option::Option<crate::model::Profile>,
     /// Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
     pub segment_duration_seconds: i32,
@@ -1580,7 +1587,7 @@ pub struct DashPackage {
     pub suggested_presentation_delay_seconds: i32,
     /// Determines the type of UTCTiming included in the Media Presentation Description (MPD)
     pub utc_timing: std::option::Option<crate::model::UtcTiming>,
-    /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+    /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
     pub utc_timing_uri: std::option::Option<std::string::String>,
 }
 impl DashPackage {
@@ -1618,7 +1625,7 @@ impl DashPackage {
     pub fn period_triggers(&self) -> std::option::Option<&[crate::model::PeriodTriggersElement]> {
         self.period_triggers.as_deref()
     }
-    /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+    /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
     pub fn profile(&self) -> std::option::Option<&crate::model::Profile> {
         self.profile.as_ref()
     }
@@ -1644,7 +1651,7 @@ impl DashPackage {
     pub fn utc_timing(&self) -> std::option::Option<&crate::model::UtcTiming> {
         self.utc_timing.as_ref()
     }
-    /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+    /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
     pub fn utc_timing_uri(&self) -> std::option::Option<&str> {
         self.utc_timing_uri.as_deref()
     }
@@ -1678,6 +1685,7 @@ impl std::fmt::Debug for DashPackage {
 }
 /// See [`DashPackage`](crate::model::DashPackage)
 pub mod dash_package {
+
     /// A builder for [`DashPackage`](crate::model::DashPackage)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1812,12 +1820,12 @@ pub mod dash_package {
             self.period_triggers = input;
             self
         }
-        /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+        /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
         pub fn profile(mut self, input: crate::model::Profile) -> Self {
             self.profile = Some(input);
             self
         }
-        /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
+        /// The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled. When set to "DVB-DASH_2014", DVB-DASH 2014 compliant output is enabled.
         pub fn set_profile(mut self, input: std::option::Option<crate::model::Profile>) -> Self {
             self.profile = input;
             self
@@ -1887,12 +1895,12 @@ pub mod dash_package {
             self.utc_timing = input;
             self
         }
-        /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+        /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
         pub fn utc_timing_uri(mut self, input: impl Into<std::string::String>) -> Self {
             self.utc_timing_uri = Some(input.into());
             self
         }
-        /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+        /// Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO, HTTP-HEAD or HTTP-XSDATE
         pub fn set_utc_timing_uri(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -1948,6 +1956,8 @@ pub enum UtcTiming {
     #[allow(missing_docs)] // documentation missing in model
     HttpIso,
     #[allow(missing_docs)] // documentation missing in model
+    HttpXsdate,
+    #[allow(missing_docs)] // documentation missing in model
     None,
     /// Unknown contains new variants that have been added since this code was generated.
     Unknown(String),
@@ -1957,6 +1967,7 @@ impl std::convert::From<&str> for UtcTiming {
         match s {
             "HTTP-HEAD" => UtcTiming::HttpHead,
             "HTTP-ISO" => UtcTiming::HttpIso,
+            "HTTP-XSDATE" => UtcTiming::HttpXsdate,
             "NONE" => UtcTiming::None,
             other => UtcTiming::Unknown(other.to_owned()),
         }
@@ -1975,13 +1986,14 @@ impl UtcTiming {
         match self {
             UtcTiming::HttpHead => "HTTP-HEAD",
             UtcTiming::HttpIso => "HTTP-ISO",
+            UtcTiming::HttpXsdate => "HTTP-XSDATE",
             UtcTiming::None => "NONE",
             UtcTiming::Unknown(s) => s.as_ref(),
         }
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["HTTP-HEAD", "HTTP-ISO", "NONE"]
+        &["HTTP-HEAD", "HTTP-ISO", "HTTP-XSDATE", "NONE"]
     }
 }
 impl AsRef<str> for UtcTiming {
@@ -2066,6 +2078,8 @@ impl AsRef<str> for SegmentTemplateFormat {
 )]
 pub enum Profile {
     #[allow(missing_docs)] // documentation missing in model
+    DvbDash2014,
+    #[allow(missing_docs)] // documentation missing in model
     Hbbtv15,
     #[allow(missing_docs)] // documentation missing in model
     Hybridcast,
@@ -2077,6 +2091,7 @@ pub enum Profile {
 impl std::convert::From<&str> for Profile {
     fn from(s: &str) -> Self {
         match s {
+            "DVB_DASH_2014" => Profile::DvbDash2014,
             "HBBTV_1_5" => Profile::Hbbtv15,
             "HYBRIDCAST" => Profile::Hybridcast,
             "NONE" => Profile::None,
@@ -2095,6 +2110,7 @@ impl Profile {
     /// Returns the `&str` value of the enum member.
     pub fn as_str(&self) -> &str {
         match self {
+            Profile::DvbDash2014 => "DVB_DASH_2014",
             Profile::Hbbtv15 => "HBBTV_1_5",
             Profile::Hybridcast => "HYBRIDCAST",
             Profile::None => "NONE",
@@ -2103,7 +2119,7 @@ impl Profile {
     }
     /// Returns all the `&str` values of the enum members.
     pub fn values() -> &'static [&'static str] {
-        &["HBBTV_1_5", "HYBRIDCAST", "NONE"]
+        &["DVB_DASH_2014", "HBBTV_1_5", "HYBRIDCAST", "NONE"]
     }
 }
 impl AsRef<str> for Profile {
@@ -2250,6 +2266,7 @@ impl std::fmt::Debug for DashEncryption {
 }
 /// See [`DashEncryption`](crate::model::DashEncryption)
 pub mod dash_encryption {
+
     /// A builder for [`DashEncryption`](crate::model::DashEncryption)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2352,6 +2369,7 @@ impl std::fmt::Debug for CmafPackage {
 }
 /// See [`CmafPackage`](crate::model::CmafPackage)
 pub mod cmaf_package {
+
     /// A builder for [`CmafPackage`](crate::model::CmafPackage)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2527,6 +2545,7 @@ impl std::fmt::Debug for HlsManifest {
 }
 /// See [`HlsManifest`](crate::model::HlsManifest)
 pub mod hls_manifest {
+
     /// A builder for [`HlsManifest`](crate::model::HlsManifest)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2699,6 +2718,7 @@ impl std::fmt::Debug for CmafEncryption {
 }
 /// See [`CmafEncryption`](crate::model::CmafEncryption)
 pub mod cmaf_encryption {
+
     /// A builder for [`CmafEncryption`](crate::model::CmafEncryption)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2798,6 +2818,7 @@ impl std::fmt::Debug for Authorization {
 }
 /// See [`Authorization`](crate::model::Authorization)
 pub mod authorization {
+
     /// A builder for [`Authorization`](crate::model::Authorization)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2901,6 +2922,7 @@ impl std::fmt::Debug for CmafPackageCreateOrUpdateParameters {
 }
 /// See [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters)
 pub mod cmaf_package_create_or_update_parameters {
+
     /// A builder for [`CmafPackageCreateOrUpdateParameters`](crate::model::CmafPackageCreateOrUpdateParameters)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3094,6 +3116,7 @@ impl std::fmt::Debug for HlsManifestCreateOrUpdateParameters {
 }
 /// See [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters)
 pub mod hls_manifest_create_or_update_parameters {
+
     /// A builder for [`HlsManifestCreateOrUpdateParameters`](crate::model::HlsManifestCreateOrUpdateParameters)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3274,6 +3297,7 @@ impl std::fmt::Debug for IngressAccessLogs {
 }
 /// See [`IngressAccessLogs`](crate::model::IngressAccessLogs)
 pub mod ingress_access_logs {
+
     /// A builder for [`IngressAccessLogs`](crate::model::IngressAccessLogs)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3331,6 +3355,7 @@ impl std::fmt::Debug for HlsIngest {
 }
 /// See [`HlsIngest`](crate::model::HlsIngest)
 pub mod hls_ingest {
+
     /// A builder for [`HlsIngest`](crate::model::HlsIngest)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3416,6 +3441,7 @@ impl std::fmt::Debug for IngestEndpoint {
 }
 /// See [`IngestEndpoint`](crate::model::IngestEndpoint)
 pub mod ingest_endpoint {
+
     /// A builder for [`IngestEndpoint`](crate::model::IngestEndpoint)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3506,6 +3532,7 @@ impl std::fmt::Debug for EgressAccessLogs {
 }
 /// See [`EgressAccessLogs`](crate::model::EgressAccessLogs)
 pub mod egress_access_logs {
+
     /// A builder for [`EgressAccessLogs`](crate::model::EgressAccessLogs)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3672,6 +3699,7 @@ impl std::fmt::Debug for OriginEndpoint {
 }
 /// See [`OriginEndpoint`](crate::model::OriginEndpoint)
 pub mod origin_endpoint {
+
     /// A builder for [`OriginEndpoint`](crate::model::OriginEndpoint)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4009,6 +4037,7 @@ impl std::fmt::Debug for HarvestJob {
 }
 /// See [`HarvestJob`](crate::model::HarvestJob)
 pub mod harvest_job {
+
     /// A builder for [`HarvestJob`](crate::model::HarvestJob)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4238,6 +4267,7 @@ impl std::fmt::Debug for S3Destination {
 }
 /// See [`S3Destination`](crate::model::S3Destination)
 pub mod s3_destination {
+
     /// A builder for [`S3Destination`](crate::model::S3Destination)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4362,6 +4392,7 @@ impl std::fmt::Debug for Channel {
 }
 /// See [`Channel`](crate::model::Channel)
 pub mod channel {
+
     /// A builder for [`Channel`](crate::model::Channel)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

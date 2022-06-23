@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateUserSecurityProfilesOutput {
 }
 /// See [`UpdateUserSecurityProfilesOutput`](crate::output::UpdateUserSecurityProfilesOutput)
 pub mod update_user_security_profiles_output {
+
     /// A builder for [`UpdateUserSecurityProfilesOutput`](crate::output::UpdateUserSecurityProfilesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +42,7 @@ impl std::fmt::Debug for UpdateUserRoutingProfileOutput {
 }
 /// See [`UpdateUserRoutingProfileOutput`](crate::output::UpdateUserRoutingProfileOutput)
 pub mod update_user_routing_profile_output {
+
     /// A builder for [`UpdateUserRoutingProfileOutput`](crate::output::UpdateUserRoutingProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -71,6 +73,7 @@ impl std::fmt::Debug for UpdateUserPhoneConfigOutput {
 }
 /// See [`UpdateUserPhoneConfigOutput`](crate::output::UpdateUserPhoneConfigOutput)
 pub mod update_user_phone_config_output {
+
     /// A builder for [`UpdateUserPhoneConfigOutput`](crate::output::UpdateUserPhoneConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -101,6 +104,7 @@ impl std::fmt::Debug for UpdateUserIdentityInfoOutput {
 }
 /// See [`UpdateUserIdentityInfoOutput`](crate::output::UpdateUserIdentityInfoOutput)
 pub mod update_user_identity_info_output {
+
     /// A builder for [`UpdateUserIdentityInfoOutput`](crate::output::UpdateUserIdentityInfoOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -131,6 +135,7 @@ impl std::fmt::Debug for UpdateUserHierarchyStructureOutput {
 }
 /// See [`UpdateUserHierarchyStructureOutput`](crate::output::UpdateUserHierarchyStructureOutput)
 pub mod update_user_hierarchy_structure_output {
+
     /// A builder for [`UpdateUserHierarchyStructureOutput`](crate::output::UpdateUserHierarchyStructureOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -161,6 +166,7 @@ impl std::fmt::Debug for UpdateUserHierarchyGroupNameOutput {
 }
 /// See [`UpdateUserHierarchyGroupNameOutput`](crate::output::UpdateUserHierarchyGroupNameOutput)
 pub mod update_user_hierarchy_group_name_output {
+
     /// A builder for [`UpdateUserHierarchyGroupNameOutput`](crate::output::UpdateUserHierarchyGroupNameOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -191,6 +197,7 @@ impl std::fmt::Debug for UpdateUserHierarchyOutput {
 }
 /// See [`UpdateUserHierarchyOutput`](crate::output::UpdateUserHierarchyOutput)
 pub mod update_user_hierarchy_output {
+
     /// A builder for [`UpdateUserHierarchyOutput`](crate::output::UpdateUserHierarchyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -212,6 +219,297 @@ impl UpdateUserHierarchyOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateTaskTemplateOutput {
+    /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+    pub instance_id: std::option::Option<std::string::String>,
+    /// <p>The identifier of the task template resource.</p>
+    pub id: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>The name of the task template.</p>
+    pub name: std::option::Option<std::string::String>,
+    /// <p>The description of the task template.</p>
+    pub description: std::option::Option<std::string::String>,
+    /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+    pub contact_flow_id: std::option::Option<std::string::String>,
+    /// <p>Constraints that are applicable to the fields listed.</p>
+    pub constraints: std::option::Option<crate::model::TaskTemplateConstraints>,
+    /// <p>The default values for fields when a task is created by referencing this template.</p>
+    pub defaults: std::option::Option<crate::model::TaskTemplateDefaults>,
+    /// <p>Fields that are part of the template.</p>
+    pub fields: std::option::Option<std::vec::Vec<crate::model::TaskTemplateField>>,
+    /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+    pub status: std::option::Option<crate::model::TaskTemplateStatus>,
+    /// <p>The timestamp when the task template was last modified.</p>
+    pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The timestamp when the task template was created.</p>
+    pub created_time: std::option::Option<aws_smithy_types::DateTime>,
+}
+impl UpdateTaskTemplateOutput {
+    /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+    pub fn instance_id(&self) -> std::option::Option<&str> {
+        self.instance_id.as_deref()
+    }
+    /// <p>The identifier of the task template resource.</p>
+    pub fn id(&self) -> std::option::Option<&str> {
+        self.id.as_deref()
+    }
+    /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>The name of the task template.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>The description of the task template.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+    pub fn contact_flow_id(&self) -> std::option::Option<&str> {
+        self.contact_flow_id.as_deref()
+    }
+    /// <p>Constraints that are applicable to the fields listed.</p>
+    pub fn constraints(&self) -> std::option::Option<&crate::model::TaskTemplateConstraints> {
+        self.constraints.as_ref()
+    }
+    /// <p>The default values for fields when a task is created by referencing this template.</p>
+    pub fn defaults(&self) -> std::option::Option<&crate::model::TaskTemplateDefaults> {
+        self.defaults.as_ref()
+    }
+    /// <p>Fields that are part of the template.</p>
+    pub fn fields(&self) -> std::option::Option<&[crate::model::TaskTemplateField]> {
+        self.fields.as_deref()
+    }
+    /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+    pub fn status(&self) -> std::option::Option<&crate::model::TaskTemplateStatus> {
+        self.status.as_ref()
+    }
+    /// <p>The timestamp when the task template was last modified.</p>
+    pub fn last_modified_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_modified_time.as_ref()
+    }
+    /// <p>The timestamp when the task template was created.</p>
+    pub fn created_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.created_time.as_ref()
+    }
+}
+impl std::fmt::Debug for UpdateTaskTemplateOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateTaskTemplateOutput");
+        formatter.field("instance_id", &self.instance_id);
+        formatter.field("id", &self.id);
+        formatter.field("arn", &self.arn);
+        formatter.field("name", &self.name);
+        formatter.field("description", &self.description);
+        formatter.field("contact_flow_id", &self.contact_flow_id);
+        formatter.field("constraints", &self.constraints);
+        formatter.field("defaults", &self.defaults);
+        formatter.field("fields", &self.fields);
+        formatter.field("status", &self.status);
+        formatter.field("last_modified_time", &self.last_modified_time);
+        formatter.field("created_time", &self.created_time);
+        formatter.finish()
+    }
+}
+/// See [`UpdateTaskTemplateOutput`](crate::output::UpdateTaskTemplateOutput)
+pub mod update_task_template_output {
+
+    /// A builder for [`UpdateTaskTemplateOutput`](crate::output::UpdateTaskTemplateOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) instance_id: std::option::Option<std::string::String>,
+        pub(crate) id: std::option::Option<std::string::String>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) contact_flow_id: std::option::Option<std::string::String>,
+        pub(crate) constraints: std::option::Option<crate::model::TaskTemplateConstraints>,
+        pub(crate) defaults: std::option::Option<crate::model::TaskTemplateDefaults>,
+        pub(crate) fields: std::option::Option<std::vec::Vec<crate::model::TaskTemplateField>>,
+        pub(crate) status: std::option::Option<crate::model::TaskTemplateStatus>,
+        pub(crate) last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) created_time: std::option::Option<aws_smithy_types::DateTime>,
+    }
+    impl Builder {
+        /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+        pub fn instance_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.instance_id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+        pub fn set_instance_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.instance_id = input;
+            self
+        }
+        /// <p>The identifier of the task template resource.</p>
+        pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the task template resource.</p>
+        pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.id = input;
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>The name of the task template.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of the task template.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>The description of the task template.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>The description of the task template.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+        pub fn contact_flow_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.contact_flow_id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+        pub fn set_contact_flow_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.contact_flow_id = input;
+            self
+        }
+        /// <p>Constraints that are applicable to the fields listed.</p>
+        pub fn constraints(mut self, input: crate::model::TaskTemplateConstraints) -> Self {
+            self.constraints = Some(input);
+            self
+        }
+        /// <p>Constraints that are applicable to the fields listed.</p>
+        pub fn set_constraints(
+            mut self,
+            input: std::option::Option<crate::model::TaskTemplateConstraints>,
+        ) -> Self {
+            self.constraints = input;
+            self
+        }
+        /// <p>The default values for fields when a task is created by referencing this template.</p>
+        pub fn defaults(mut self, input: crate::model::TaskTemplateDefaults) -> Self {
+            self.defaults = Some(input);
+            self
+        }
+        /// <p>The default values for fields when a task is created by referencing this template.</p>
+        pub fn set_defaults(
+            mut self,
+            input: std::option::Option<crate::model::TaskTemplateDefaults>,
+        ) -> Self {
+            self.defaults = input;
+            self
+        }
+        /// Appends an item to `fields`.
+        ///
+        /// To override the contents of this collection use [`set_fields`](Self::set_fields).
+        ///
+        /// <p>Fields that are part of the template.</p>
+        pub fn fields(mut self, input: crate::model::TaskTemplateField) -> Self {
+            let mut v = self.fields.unwrap_or_default();
+            v.push(input);
+            self.fields = Some(v);
+            self
+        }
+        /// <p>Fields that are part of the template.</p>
+        pub fn set_fields(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::TaskTemplateField>>,
+        ) -> Self {
+            self.fields = input;
+            self
+        }
+        /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+        pub fn status(mut self, input: crate::model::TaskTemplateStatus) -> Self {
+            self.status = Some(input);
+            self
+        }
+        /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+        pub fn set_status(
+            mut self,
+            input: std::option::Option<crate::model::TaskTemplateStatus>,
+        ) -> Self {
+            self.status = input;
+            self
+        }
+        /// <p>The timestamp when the task template was last modified.</p>
+        pub fn last_modified_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_modified_time = Some(input);
+            self
+        }
+        /// <p>The timestamp when the task template was last modified.</p>
+        pub fn set_last_modified_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_modified_time = input;
+            self
+        }
+        /// <p>The timestamp when the task template was created.</p>
+        pub fn created_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.created_time = Some(input);
+            self
+        }
+        /// <p>The timestamp when the task template was created.</p>
+        pub fn set_created_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.created_time = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateTaskTemplateOutput`](crate::output::UpdateTaskTemplateOutput)
+        pub fn build(self) -> crate::output::UpdateTaskTemplateOutput {
+            crate::output::UpdateTaskTemplateOutput {
+                instance_id: self.instance_id,
+                id: self.id,
+                arn: self.arn,
+                name: self.name,
+                description: self.description,
+                contact_flow_id: self.contact_flow_id,
+                constraints: self.constraints,
+                defaults: self.defaults,
+                fields: self.fields,
+                status: self.status,
+                last_modified_time: self.last_modified_time,
+                created_time: self.created_time,
+            }
+        }
+    }
+}
+impl UpdateTaskTemplateOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateTaskTemplateOutput`](crate::output::UpdateTaskTemplateOutput)
+    pub fn builder() -> crate::output::update_task_template_output::Builder {
+        crate::output::update_task_template_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateSecurityProfileOutput {}
 impl std::fmt::Debug for UpdateSecurityProfileOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -221,6 +519,7 @@ impl std::fmt::Debug for UpdateSecurityProfileOutput {
 }
 /// See [`UpdateSecurityProfileOutput`](crate::output::UpdateSecurityProfileOutput)
 pub mod update_security_profile_output {
+
     /// A builder for [`UpdateSecurityProfileOutput`](crate::output::UpdateSecurityProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -251,6 +550,7 @@ impl std::fmt::Debug for UpdateRoutingProfileQueuesOutput {
 }
 /// See [`UpdateRoutingProfileQueuesOutput`](crate::output::UpdateRoutingProfileQueuesOutput)
 pub mod update_routing_profile_queues_output {
+
     /// A builder for [`UpdateRoutingProfileQueuesOutput`](crate::output::UpdateRoutingProfileQueuesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -281,6 +581,7 @@ impl std::fmt::Debug for UpdateRoutingProfileNameOutput {
 }
 /// See [`UpdateRoutingProfileNameOutput`](crate::output::UpdateRoutingProfileNameOutput)
 pub mod update_routing_profile_name_output {
+
     /// A builder for [`UpdateRoutingProfileNameOutput`](crate::output::UpdateRoutingProfileNameOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -311,6 +612,7 @@ impl std::fmt::Debug for UpdateRoutingProfileDefaultOutboundQueueOutput {
 }
 /// See [`UpdateRoutingProfileDefaultOutboundQueueOutput`](crate::output::UpdateRoutingProfileDefaultOutboundQueueOutput)
 pub mod update_routing_profile_default_outbound_queue_output {
+
     /// A builder for [`UpdateRoutingProfileDefaultOutboundQueueOutput`](crate::output::UpdateRoutingProfileDefaultOutboundQueueOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -342,6 +644,7 @@ impl std::fmt::Debug for UpdateRoutingProfileConcurrencyOutput {
 }
 /// See [`UpdateRoutingProfileConcurrencyOutput`](crate::output::UpdateRoutingProfileConcurrencyOutput)
 pub mod update_routing_profile_concurrency_output {
+
     /// A builder for [`UpdateRoutingProfileConcurrencyOutput`](crate::output::UpdateRoutingProfileConcurrencyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -372,6 +675,7 @@ impl std::fmt::Debug for UpdateQuickConnectNameOutput {
 }
 /// See [`UpdateQuickConnectNameOutput`](crate::output::UpdateQuickConnectNameOutput)
 pub mod update_quick_connect_name_output {
+
     /// A builder for [`UpdateQuickConnectNameOutput`](crate::output::UpdateQuickConnectNameOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -402,6 +706,7 @@ impl std::fmt::Debug for UpdateQuickConnectConfigOutput {
 }
 /// See [`UpdateQuickConnectConfigOutput`](crate::output::UpdateQuickConnectConfigOutput)
 pub mod update_quick_connect_config_output {
+
     /// A builder for [`UpdateQuickConnectConfigOutput`](crate::output::UpdateQuickConnectConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -432,6 +737,7 @@ impl std::fmt::Debug for UpdateQueueStatusOutput {
 }
 /// See [`UpdateQueueStatusOutput`](crate::output::UpdateQueueStatusOutput)
 pub mod update_queue_status_output {
+
     /// A builder for [`UpdateQueueStatusOutput`](crate::output::UpdateQueueStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -462,6 +768,7 @@ impl std::fmt::Debug for UpdateQueueOutboundCallerConfigOutput {
 }
 /// See [`UpdateQueueOutboundCallerConfigOutput`](crate::output::UpdateQueueOutboundCallerConfigOutput)
 pub mod update_queue_outbound_caller_config_output {
+
     /// A builder for [`UpdateQueueOutboundCallerConfigOutput`](crate::output::UpdateQueueOutboundCallerConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -492,6 +799,7 @@ impl std::fmt::Debug for UpdateQueueNameOutput {
 }
 /// See [`UpdateQueueNameOutput`](crate::output::UpdateQueueNameOutput)
 pub mod update_queue_name_output {
+
     /// A builder for [`UpdateQueueNameOutput`](crate::output::UpdateQueueNameOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -522,6 +830,7 @@ impl std::fmt::Debug for UpdateQueueMaxContactsOutput {
 }
 /// See [`UpdateQueueMaxContactsOutput`](crate::output::UpdateQueueMaxContactsOutput)
 pub mod update_queue_max_contacts_output {
+
     /// A builder for [`UpdateQueueMaxContactsOutput`](crate::output::UpdateQueueMaxContactsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -552,6 +861,7 @@ impl std::fmt::Debug for UpdateQueueHoursOfOperationOutput {
 }
 /// See [`UpdateQueueHoursOfOperationOutput`](crate::output::UpdateQueueHoursOfOperationOutput)
 pub mod update_queue_hours_of_operation_output {
+
     /// A builder for [`UpdateQueueHoursOfOperationOutput`](crate::output::UpdateQueueHoursOfOperationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -573,6 +883,86 @@ impl UpdateQueueHoursOfOperationOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdatePhoneNumberOutput {
+    /// <p>A unique identifier for the phone number.</p>
+    pub phone_number_id: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+    pub phone_number_arn: std::option::Option<std::string::String>,
+}
+impl UpdatePhoneNumberOutput {
+    /// <p>A unique identifier for the phone number.</p>
+    pub fn phone_number_id(&self) -> std::option::Option<&str> {
+        self.phone_number_id.as_deref()
+    }
+    /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+    pub fn phone_number_arn(&self) -> std::option::Option<&str> {
+        self.phone_number_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for UpdatePhoneNumberOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdatePhoneNumberOutput");
+        formatter.field("phone_number_id", &self.phone_number_id);
+        formatter.field("phone_number_arn", &self.phone_number_arn);
+        formatter.finish()
+    }
+}
+/// See [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
+pub mod update_phone_number_output {
+
+    /// A builder for [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) phone_number_id: std::option::Option<std::string::String>,
+        pub(crate) phone_number_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>A unique identifier for the phone number.</p>
+        pub fn phone_number_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.phone_number_id = Some(input.into());
+            self
+        }
+        /// <p>A unique identifier for the phone number.</p>
+        pub fn set_phone_number_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.phone_number_id = input;
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+        pub fn phone_number_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.phone_number_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+        pub fn set_phone_number_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.phone_number_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
+        pub fn build(self) -> crate::output::UpdatePhoneNumberOutput {
+            crate::output::UpdatePhoneNumberOutput {
+                phone_number_id: self.phone_number_id,
+                phone_number_arn: self.phone_number_arn,
+            }
+        }
+    }
+}
+impl UpdatePhoneNumberOutput {
+    /// Creates a new builder-style object to manufacture [`UpdatePhoneNumberOutput`](crate::output::UpdatePhoneNumberOutput)
+    pub fn builder() -> crate::output::update_phone_number_output::Builder {
+        crate::output::update_phone_number_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateInstanceStorageConfigOutput {}
 impl std::fmt::Debug for UpdateInstanceStorageConfigOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -582,6 +972,7 @@ impl std::fmt::Debug for UpdateInstanceStorageConfigOutput {
 }
 /// See [`UpdateInstanceStorageConfigOutput`](crate::output::UpdateInstanceStorageConfigOutput)
 pub mod update_instance_storage_config_output {
+
     /// A builder for [`UpdateInstanceStorageConfigOutput`](crate::output::UpdateInstanceStorageConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -612,6 +1003,7 @@ impl std::fmt::Debug for UpdateInstanceAttributeOutput {
 }
 /// See [`UpdateInstanceAttributeOutput`](crate::output::UpdateInstanceAttributeOutput)
 pub mod update_instance_attribute_output {
+
     /// A builder for [`UpdateInstanceAttributeOutput`](crate::output::UpdateInstanceAttributeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -642,6 +1034,7 @@ impl std::fmt::Debug for UpdateHoursOfOperationOutput {
 }
 /// See [`UpdateHoursOfOperationOutput`](crate::output::UpdateHoursOfOperationOutput)
 pub mod update_hours_of_operation_output {
+
     /// A builder for [`UpdateHoursOfOperationOutput`](crate::output::UpdateHoursOfOperationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -672,6 +1065,7 @@ impl std::fmt::Debug for UpdateContactScheduleOutput {
 }
 /// See [`UpdateContactScheduleOutput`](crate::output::UpdateContactScheduleOutput)
 pub mod update_contact_schedule_output {
+
     /// A builder for [`UpdateContactScheduleOutput`](crate::output::UpdateContactScheduleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -702,6 +1096,7 @@ impl std::fmt::Debug for UpdateContactFlowNameOutput {
 }
 /// See [`UpdateContactFlowNameOutput`](crate::output::UpdateContactFlowNameOutput)
 pub mod update_contact_flow_name_output {
+
     /// A builder for [`UpdateContactFlowNameOutput`](crate::output::UpdateContactFlowNameOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -732,6 +1127,7 @@ impl std::fmt::Debug for UpdateContactFlowModuleMetadataOutput {
 }
 /// See [`UpdateContactFlowModuleMetadataOutput`](crate::output::UpdateContactFlowModuleMetadataOutput)
 pub mod update_contact_flow_module_metadata_output {
+
     /// A builder for [`UpdateContactFlowModuleMetadataOutput`](crate::output::UpdateContactFlowModuleMetadataOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -762,6 +1158,7 @@ impl std::fmt::Debug for UpdateContactFlowModuleContentOutput {
 }
 /// See [`UpdateContactFlowModuleContentOutput`](crate::output::UpdateContactFlowModuleContentOutput)
 pub mod update_contact_flow_module_content_output {
+
     /// A builder for [`UpdateContactFlowModuleContentOutput`](crate::output::UpdateContactFlowModuleContentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -792,6 +1189,7 @@ impl std::fmt::Debug for UpdateContactFlowMetadataOutput {
 }
 /// See [`UpdateContactFlowMetadataOutput`](crate::output::UpdateContactFlowMetadataOutput)
 pub mod update_contact_flow_metadata_output {
+
     /// A builder for [`UpdateContactFlowMetadataOutput`](crate::output::UpdateContactFlowMetadataOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -822,6 +1220,7 @@ impl std::fmt::Debug for UpdateContactFlowContentOutput {
 }
 /// See [`UpdateContactFlowContentOutput`](crate::output::UpdateContactFlowContentOutput)
 pub mod update_contact_flow_content_output {
+
     /// A builder for [`UpdateContactFlowContentOutput`](crate::output::UpdateContactFlowContentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -852,6 +1251,7 @@ impl std::fmt::Debug for UpdateContactAttributesOutput {
 }
 /// See [`UpdateContactAttributesOutput`](crate::output::UpdateContactAttributesOutput)
 pub mod update_contact_attributes_output {
+
     /// A builder for [`UpdateContactAttributesOutput`](crate::output::UpdateContactAttributesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -882,6 +1282,7 @@ impl std::fmt::Debug for UpdateContactOutput {
 }
 /// See [`UpdateContactOutput`](crate::output::UpdateContactOutput)
 pub mod update_contact_output {
+
     /// A builder for [`UpdateContactOutput`](crate::output::UpdateContactOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -912,6 +1313,7 @@ impl std::fmt::Debug for UpdateAgentStatusOutput {
 }
 /// See [`UpdateAgentStatusOutput`](crate::output::UpdateAgentStatusOutput)
 pub mod update_agent_status_output {
+
     /// A builder for [`UpdateAgentStatusOutput`](crate::output::UpdateAgentStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -942,6 +1344,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -963,6 +1366,80 @@ impl UntagResourceOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct TransferContactOutput {
+    /// <p>The identifier of the contact in this instance of Amazon Connect. </p>
+    pub contact_id: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name (ARN) of the contact.</p>
+    pub contact_arn: std::option::Option<std::string::String>,
+}
+impl TransferContactOutput {
+    /// <p>The identifier of the contact in this instance of Amazon Connect. </p>
+    pub fn contact_id(&self) -> std::option::Option<&str> {
+        self.contact_id.as_deref()
+    }
+    /// <p>The Amazon Resource Name (ARN) of the contact.</p>
+    pub fn contact_arn(&self) -> std::option::Option<&str> {
+        self.contact_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for TransferContactOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("TransferContactOutput");
+        formatter.field("contact_id", &self.contact_id);
+        formatter.field("contact_arn", &self.contact_arn);
+        formatter.finish()
+    }
+}
+/// See [`TransferContactOutput`](crate::output::TransferContactOutput)
+pub mod transfer_contact_output {
+
+    /// A builder for [`TransferContactOutput`](crate::output::TransferContactOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) contact_id: std::option::Option<std::string::String>,
+        pub(crate) contact_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The identifier of the contact in this instance of Amazon Connect. </p>
+        pub fn contact_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.contact_id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the contact in this instance of Amazon Connect. </p>
+        pub fn set_contact_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.contact_id = input;
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the contact.</p>
+        pub fn contact_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.contact_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the contact.</p>
+        pub fn set_contact_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.contact_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`TransferContactOutput`](crate::output::TransferContactOutput)
+        pub fn build(self) -> crate::output::TransferContactOutput {
+            crate::output::TransferContactOutput {
+                contact_id: self.contact_id,
+                contact_arn: self.contact_arn,
+            }
+        }
+    }
+}
+impl TransferContactOutput {
+    /// Creates a new builder-style object to manufacture [`TransferContactOutput`](crate::output::TransferContactOutput)
+    pub fn builder() -> crate::output::transfer_contact_output::Builder {
+        crate::output::transfer_contact_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TagResourceOutput {}
 impl std::fmt::Debug for TagResourceOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -972,6 +1449,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1002,6 +1480,7 @@ impl std::fmt::Debug for SuspendContactRecordingOutput {
 }
 /// See [`SuspendContactRecordingOutput`](crate::output::SuspendContactRecordingOutput)
 pub mod suspend_contact_recording_output {
+
     /// A builder for [`SuspendContactRecordingOutput`](crate::output::SuspendContactRecordingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1032,6 +1511,7 @@ impl std::fmt::Debug for StopContactStreamingOutput {
 }
 /// See [`StopContactStreamingOutput`](crate::output::StopContactStreamingOutput)
 pub mod stop_contact_streaming_output {
+
     /// A builder for [`StopContactStreamingOutput`](crate::output::StopContactStreamingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1062,6 +1542,7 @@ impl std::fmt::Debug for StopContactRecordingOutput {
 }
 /// See [`StopContactRecordingOutput`](crate::output::StopContactRecordingOutput)
 pub mod stop_contact_recording_output {
+
     /// A builder for [`StopContactRecordingOutput`](crate::output::StopContactRecordingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1092,6 +1573,7 @@ impl std::fmt::Debug for StopContactOutput {
 }
 /// See [`StopContactOutput`](crate::output::StopContactOutput)
 pub mod stop_contact_output {
+
     /// A builder for [`StopContactOutput`](crate::output::StopContactOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1132,6 +1614,7 @@ impl std::fmt::Debug for StartTaskContactOutput {
 }
 /// See [`StartTaskContactOutput`](crate::output::StartTaskContactOutput)
 pub mod start_task_contact_output {
+
     /// A builder for [`StartTaskContactOutput`](crate::output::StartTaskContactOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1186,6 +1669,7 @@ impl std::fmt::Debug for StartOutboundVoiceContactOutput {
 }
 /// See [`StartOutboundVoiceContactOutput`](crate::output::StartOutboundVoiceContactOutput)
 pub mod start_outbound_voice_contact_output {
+
     /// A builder for [`StartOutboundVoiceContactOutput`](crate::output::StartOutboundVoiceContactOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1240,6 +1724,7 @@ impl std::fmt::Debug for StartContactStreamingOutput {
 }
 /// See [`StartContactStreamingOutput`](crate::output::StartContactStreamingOutput)
 pub mod start_contact_streaming_output {
+
     /// A builder for [`StartContactStreamingOutput`](crate::output::StartContactStreamingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1284,6 +1769,7 @@ impl std::fmt::Debug for StartContactRecordingOutput {
 }
 /// See [`StartContactRecordingOutput`](crate::output::StartContactRecordingOutput)
 pub mod start_contact_recording_output {
+
     /// A builder for [`StartContactRecordingOutput`](crate::output::StartContactRecordingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1338,6 +1824,7 @@ impl std::fmt::Debug for StartChatContactOutput {
 }
 /// See [`StartChatContactOutput`](crate::output::StartChatContactOutput)
 pub mod start_chat_contact_output {
+
     /// A builder for [`StartChatContactOutput`](crate::output::StartChatContactOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1432,6 +1919,7 @@ impl std::fmt::Debug for SearchVocabulariesOutput {
 }
 /// See [`SearchVocabulariesOutput`](crate::output::SearchVocabulariesOutput)
 pub mod search_vocabularies_output {
+
     /// A builder for [`SearchVocabulariesOutput`](crate::output::SearchVocabulariesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1489,6 +1977,198 @@ impl SearchVocabulariesOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SearchUsersOutput {
+    /// <p>Information about the users.</p>
+    pub users: std::option::Option<std::vec::Vec<crate::model::UserSearchSummary>>,
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>The total number of users who matched your search query.</p>
+    pub approximate_total_count: std::option::Option<i64>,
+}
+impl SearchUsersOutput {
+    /// <p>Information about the users.</p>
+    pub fn users(&self) -> std::option::Option<&[crate::model::UserSearchSummary]> {
+        self.users.as_deref()
+    }
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>The total number of users who matched your search query.</p>
+    pub fn approximate_total_count(&self) -> std::option::Option<i64> {
+        self.approximate_total_count
+    }
+}
+impl std::fmt::Debug for SearchUsersOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SearchUsersOutput");
+        formatter.field("users", &self.users);
+        formatter.field("next_token", &self.next_token);
+        formatter.field("approximate_total_count", &self.approximate_total_count);
+        formatter.finish()
+    }
+}
+/// See [`SearchUsersOutput`](crate::output::SearchUsersOutput)
+pub mod search_users_output {
+
+    /// A builder for [`SearchUsersOutput`](crate::output::SearchUsersOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) users: std::option::Option<std::vec::Vec<crate::model::UserSearchSummary>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) approximate_total_count: std::option::Option<i64>,
+    }
+    impl Builder {
+        /// Appends an item to `users`.
+        ///
+        /// To override the contents of this collection use [`set_users`](Self::set_users).
+        ///
+        /// <p>Information about the users.</p>
+        pub fn users(mut self, input: crate::model::UserSearchSummary) -> Self {
+            let mut v = self.users.unwrap_or_default();
+            v.push(input);
+            self.users = Some(v);
+            self
+        }
+        /// <p>Information about the users.</p>
+        pub fn set_users(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::UserSearchSummary>>,
+        ) -> Self {
+            self.users = input;
+            self
+        }
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// <p>The total number of users who matched your search query.</p>
+        pub fn approximate_total_count(mut self, input: i64) -> Self {
+            self.approximate_total_count = Some(input);
+            self
+        }
+        /// <p>The total number of users who matched your search query.</p>
+        pub fn set_approximate_total_count(mut self, input: std::option::Option<i64>) -> Self {
+            self.approximate_total_count = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SearchUsersOutput`](crate::output::SearchUsersOutput)
+        pub fn build(self) -> crate::output::SearchUsersOutput {
+            crate::output::SearchUsersOutput {
+                users: self.users,
+                next_token: self.next_token,
+                approximate_total_count: self.approximate_total_count,
+            }
+        }
+    }
+}
+impl SearchUsersOutput {
+    /// Creates a new builder-style object to manufacture [`SearchUsersOutput`](crate::output::SearchUsersOutput)
+    pub fn builder() -> crate::output::search_users_output::Builder {
+        crate::output::search_users_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct SearchAvailablePhoneNumbersOutput {
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>A list of available phone numbers that you can claim for your Amazon Connect instance.</p>
+    pub available_numbers_list:
+        std::option::Option<std::vec::Vec<crate::model::AvailableNumberSummary>>,
+}
+impl SearchAvailablePhoneNumbersOutput {
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>A list of available phone numbers that you can claim for your Amazon Connect instance.</p>
+    pub fn available_numbers_list(
+        &self,
+    ) -> std::option::Option<&[crate::model::AvailableNumberSummary]> {
+        self.available_numbers_list.as_deref()
+    }
+}
+impl std::fmt::Debug for SearchAvailablePhoneNumbersOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("SearchAvailablePhoneNumbersOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field("available_numbers_list", &self.available_numbers_list);
+        formatter.finish()
+    }
+}
+/// See [`SearchAvailablePhoneNumbersOutput`](crate::output::SearchAvailablePhoneNumbersOutput)
+pub mod search_available_phone_numbers_output {
+
+    /// A builder for [`SearchAvailablePhoneNumbersOutput`](crate::output::SearchAvailablePhoneNumbersOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) available_numbers_list:
+            std::option::Option<std::vec::Vec<crate::model::AvailableNumberSummary>>,
+    }
+    impl Builder {
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `available_numbers_list`.
+        ///
+        /// To override the contents of this collection use [`set_available_numbers_list`](Self::set_available_numbers_list).
+        ///
+        /// <p>A list of available phone numbers that you can claim for your Amazon Connect instance.</p>
+        pub fn available_numbers_list(
+            mut self,
+            input: crate::model::AvailableNumberSummary,
+        ) -> Self {
+            let mut v = self.available_numbers_list.unwrap_or_default();
+            v.push(input);
+            self.available_numbers_list = Some(v);
+            self
+        }
+        /// <p>A list of available phone numbers that you can claim for your Amazon Connect instance.</p>
+        pub fn set_available_numbers_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::AvailableNumberSummary>>,
+        ) -> Self {
+            self.available_numbers_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`SearchAvailablePhoneNumbersOutput`](crate::output::SearchAvailablePhoneNumbersOutput)
+        pub fn build(self) -> crate::output::SearchAvailablePhoneNumbersOutput {
+            crate::output::SearchAvailablePhoneNumbersOutput {
+                next_token: self.next_token,
+                available_numbers_list: self.available_numbers_list,
+            }
+        }
+    }
+}
+impl SearchAvailablePhoneNumbersOutput {
+    /// Creates a new builder-style object to manufacture [`SearchAvailablePhoneNumbersOutput`](crate::output::SearchAvailablePhoneNumbersOutput)
+    pub fn builder() -> crate::output::search_available_phone_numbers_output::Builder {
+        crate::output::search_available_phone_numbers_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResumeContactRecordingOutput {}
 impl std::fmt::Debug for ResumeContactRecordingOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1498,6 +2178,7 @@ impl std::fmt::Debug for ResumeContactRecordingOutput {
 }
 /// See [`ResumeContactRecordingOutput`](crate::output::ResumeContactRecordingOutput)
 pub mod resume_contact_recording_output {
+
     /// A builder for [`ResumeContactRecordingOutput`](crate::output::ResumeContactRecordingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1513,6 +2194,68 @@ impl ResumeContactRecordingOutput {
     /// Creates a new builder-style object to manufacture [`ResumeContactRecordingOutput`](crate::output::ResumeContactRecordingOutput)
     pub fn builder() -> crate::output::resume_contact_recording_output::Builder {
         crate::output::resume_contact_recording_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ReleasePhoneNumberOutput {}
+impl std::fmt::Debug for ReleasePhoneNumberOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ReleasePhoneNumberOutput");
+        formatter.finish()
+    }
+}
+/// See [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
+pub mod release_phone_number_output {
+
+    /// A builder for [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
+        pub fn build(self) -> crate::output::ReleasePhoneNumberOutput {
+            crate::output::ReleasePhoneNumberOutput {}
+        }
+    }
+}
+impl ReleasePhoneNumberOutput {
+    /// Creates a new builder-style object to manufacture [`ReleasePhoneNumberOutput`](crate::output::ReleasePhoneNumberOutput)
+    pub fn builder() -> crate::output::release_phone_number_output::Builder {
+        crate::output::release_phone_number_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct PutUserStatusOutput {}
+impl std::fmt::Debug for PutUserStatusOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("PutUserStatusOutput");
+        formatter.finish()
+    }
+}
+/// See [`PutUserStatusOutput`](crate::output::PutUserStatusOutput)
+pub mod put_user_status_output {
+
+    /// A builder for [`PutUserStatusOutput`](crate::output::PutUserStatusOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`PutUserStatusOutput`](crate::output::PutUserStatusOutput)
+        pub fn build(self) -> crate::output::PutUserStatusOutput {
+            crate::output::PutUserStatusOutput {}
+        }
+    }
+}
+impl PutUserStatusOutput {
+    /// Creates a new builder-style object to manufacture [`PutUserStatusOutput`](crate::output::PutUserStatusOutput)
+    pub fn builder() -> crate::output::put_user_status_output::Builder {
+        crate::output::put_user_status_output::Builder::default()
     }
 }
 
@@ -1545,6 +2288,7 @@ impl std::fmt::Debug for ListUsersOutput {
 }
 /// See [`ListUsersOutput`](crate::output::ListUsersOutput)
 pub mod list_users_output {
+
     /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1633,6 +2377,7 @@ impl std::fmt::Debug for ListUserHierarchyGroupsOutput {
 }
 /// See [`ListUserHierarchyGroupsOutput`](crate::output::ListUserHierarchyGroupsOutput)
 pub mod list_user_hierarchy_groups_output {
+
     /// A builder for [`ListUserHierarchyGroupsOutput`](crate::output::ListUserHierarchyGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1719,6 +2464,7 @@ impl std::fmt::Debug for ListUseCasesOutput {
 }
 /// See [`ListUseCasesOutput`](crate::output::ListUseCasesOutput)
 pub mod list_use_cases_output {
+
     /// A builder for [`ListUseCasesOutput`](crate::output::ListUseCasesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1775,6 +2521,98 @@ impl ListUseCasesOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListTaskTemplatesOutput {
+    /// <p>Provides details about a list of task templates belonging to an instance.</p>
+    pub task_templates: std::option::Option<std::vec::Vec<crate::model::TaskTemplateMetadata>>,
+    /// <p>If there are additional results, this is the token for the next set of results.</p> <important>
+    /// <p>This is always returned as a null in the response.</p>
+    /// </important>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListTaskTemplatesOutput {
+    /// <p>Provides details about a list of task templates belonging to an instance.</p>
+    pub fn task_templates(&self) -> std::option::Option<&[crate::model::TaskTemplateMetadata]> {
+        self.task_templates.as_deref()
+    }
+    /// <p>If there are additional results, this is the token for the next set of results.</p> <important>
+    /// <p>This is always returned as a null in the response.</p>
+    /// </important>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListTaskTemplatesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListTaskTemplatesOutput");
+        formatter.field("task_templates", &self.task_templates);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListTaskTemplatesOutput`](crate::output::ListTaskTemplatesOutput)
+pub mod list_task_templates_output {
+
+    /// A builder for [`ListTaskTemplatesOutput`](crate::output::ListTaskTemplatesOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) task_templates:
+            std::option::Option<std::vec::Vec<crate::model::TaskTemplateMetadata>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `task_templates`.
+        ///
+        /// To override the contents of this collection use [`set_task_templates`](Self::set_task_templates).
+        ///
+        /// <p>Provides details about a list of task templates belonging to an instance.</p>
+        pub fn task_templates(mut self, input: crate::model::TaskTemplateMetadata) -> Self {
+            let mut v = self.task_templates.unwrap_or_default();
+            v.push(input);
+            self.task_templates = Some(v);
+            self
+        }
+        /// <p>Provides details about a list of task templates belonging to an instance.</p>
+        pub fn set_task_templates(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::TaskTemplateMetadata>>,
+        ) -> Self {
+            self.task_templates = input;
+            self
+        }
+        /// <p>If there are additional results, this is the token for the next set of results.</p> <important>
+        /// <p>This is always returned as a null in the response.</p>
+        /// </important>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>If there are additional results, this is the token for the next set of results.</p> <important>
+        /// <p>This is always returned as a null in the response.</p>
+        /// </important>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListTaskTemplatesOutput`](crate::output::ListTaskTemplatesOutput)
+        pub fn build(self) -> crate::output::ListTaskTemplatesOutput {
+            crate::output::ListTaskTemplatesOutput {
+                task_templates: self.task_templates,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListTaskTemplatesOutput {
+    /// Creates a new builder-style object to manufacture [`ListTaskTemplatesOutput`](crate::output::ListTaskTemplatesOutput)
+    pub fn builder() -> crate::output::list_task_templates_output::Builder {
+        crate::output::list_task_templates_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListTagsForResourceOutput {
     /// <p>Information about the tags.</p>
     pub tags:
@@ -1798,6 +2636,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1880,6 +2719,7 @@ impl std::fmt::Debug for ListSecurityProfilesOutput {
 }
 /// See [`ListSecurityProfilesOutput`](crate::output::ListSecurityProfilesOutput)
 pub mod list_security_profiles_output {
+
     /// A builder for [`ListSecurityProfilesOutput`](crate::output::ListSecurityProfilesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1966,6 +2806,7 @@ impl std::fmt::Debug for ListSecurityProfilePermissionsOutput {
 }
 /// See [`ListSecurityProfilePermissionsOutput`](crate::output::ListSecurityProfilePermissionsOutput)
 pub mod list_security_profile_permissions_output {
+
     /// A builder for [`ListSecurityProfilePermissionsOutput`](crate::output::ListSecurityProfilePermissionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2048,6 +2889,7 @@ impl std::fmt::Debug for ListSecurityKeysOutput {
 }
 /// See [`ListSecurityKeysOutput`](crate::output::ListSecurityKeysOutput)
 pub mod list_security_keys_output {
+
     /// A builder for [`ListSecurityKeysOutput`](crate::output::ListSecurityKeysOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2136,6 +2978,7 @@ impl std::fmt::Debug for ListRoutingProfilesOutput {
 }
 /// See [`ListRoutingProfilesOutput`](crate::output::ListRoutingProfilesOutput)
 pub mod list_routing_profiles_output {
+
     /// A builder for [`ListRoutingProfilesOutput`](crate::output::ListRoutingProfilesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2228,6 +3071,7 @@ impl std::fmt::Debug for ListRoutingProfileQueuesOutput {
 }
 /// See [`ListRoutingProfileQueuesOutput`](crate::output::ListRoutingProfileQueuesOutput)
 pub mod list_routing_profile_queues_output {
+
     /// A builder for [`ListRoutingProfileQueuesOutput`](crate::output::ListRoutingProfileQueuesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2325,6 +3169,7 @@ impl std::fmt::Debug for ListQuickConnectsOutput {
 }
 /// See [`ListQuickConnectsOutput`](crate::output::ListQuickConnectsOutput)
 pub mod list_quick_connects_output {
+
     /// A builder for [`ListQuickConnectsOutput`](crate::output::ListQuickConnectsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2411,6 +3256,7 @@ impl std::fmt::Debug for ListQueuesOutput {
 }
 /// See [`ListQueuesOutput`](crate::output::ListQueuesOutput)
 pub mod list_queues_output {
+
     /// A builder for [`ListQueuesOutput`](crate::output::ListQueuesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2500,6 +3346,7 @@ impl std::fmt::Debug for ListQueueQuickConnectsOutput {
 }
 /// See [`ListQueueQuickConnectsOutput`](crate::output::ListQueueQuickConnectsOutput)
 pub mod list_queue_quick_connects_output {
+
     /// A builder for [`ListQueueQuickConnectsOutput`](crate::output::ListQueueQuickConnectsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2586,6 +3433,7 @@ impl std::fmt::Debug for ListPromptsOutput {
 }
 /// See [`ListPromptsOutput`](crate::output::ListPromptsOutput)
 pub mod list_prompts_output {
+
     /// A builder for [`ListPromptsOutput`](crate::output::ListPromptsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2643,6 +3491,99 @@ impl ListPromptsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListPhoneNumbersV2Output {
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>Information about phone numbers that have been claimed to your Amazon Connect instances.</p>
+    pub list_phone_numbers_summary_list:
+        std::option::Option<std::vec::Vec<crate::model::ListPhoneNumbersSummary>>,
+}
+impl ListPhoneNumbersV2Output {
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>Information about phone numbers that have been claimed to your Amazon Connect instances.</p>
+    pub fn list_phone_numbers_summary_list(
+        &self,
+    ) -> std::option::Option<&[crate::model::ListPhoneNumbersSummary]> {
+        self.list_phone_numbers_summary_list.as_deref()
+    }
+}
+impl std::fmt::Debug for ListPhoneNumbersV2Output {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListPhoneNumbersV2Output");
+        formatter.field("next_token", &self.next_token);
+        formatter.field(
+            "list_phone_numbers_summary_list",
+            &self.list_phone_numbers_summary_list,
+        );
+        formatter.finish()
+    }
+}
+/// See [`ListPhoneNumbersV2Output`](crate::output::ListPhoneNumbersV2Output)
+pub mod list_phone_numbers_v2_output {
+
+    /// A builder for [`ListPhoneNumbersV2Output`](crate::output::ListPhoneNumbersV2Output)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) list_phone_numbers_summary_list:
+            std::option::Option<std::vec::Vec<crate::model::ListPhoneNumbersSummary>>,
+    }
+    impl Builder {
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `list_phone_numbers_summary_list`.
+        ///
+        /// To override the contents of this collection use [`set_list_phone_numbers_summary_list`](Self::set_list_phone_numbers_summary_list).
+        ///
+        /// <p>Information about phone numbers that have been claimed to your Amazon Connect instances.</p>
+        pub fn list_phone_numbers_summary_list(
+            mut self,
+            input: crate::model::ListPhoneNumbersSummary,
+        ) -> Self {
+            let mut v = self.list_phone_numbers_summary_list.unwrap_or_default();
+            v.push(input);
+            self.list_phone_numbers_summary_list = Some(v);
+            self
+        }
+        /// <p>Information about phone numbers that have been claimed to your Amazon Connect instances.</p>
+        pub fn set_list_phone_numbers_summary_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ListPhoneNumbersSummary>>,
+        ) -> Self {
+            self.list_phone_numbers_summary_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListPhoneNumbersV2Output`](crate::output::ListPhoneNumbersV2Output)
+        pub fn build(self) -> crate::output::ListPhoneNumbersV2Output {
+            crate::output::ListPhoneNumbersV2Output {
+                next_token: self.next_token,
+                list_phone_numbers_summary_list: self.list_phone_numbers_summary_list,
+            }
+        }
+    }
+}
+impl ListPhoneNumbersV2Output {
+    /// Creates a new builder-style object to manufacture [`ListPhoneNumbersV2Output`](crate::output::ListPhoneNumbersV2Output)
+    pub fn builder() -> crate::output::list_phone_numbers_v2_output::Builder {
+        crate::output::list_phone_numbers_v2_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ListPhoneNumbersOutput {
     /// <p>Information about the phone numbers.</p>
     pub phone_number_summary_list:
@@ -2672,6 +3613,7 @@ impl std::fmt::Debug for ListPhoneNumbersOutput {
 }
 /// See [`ListPhoneNumbersOutput`](crate::output::ListPhoneNumbersOutput)
 pub mod list_phone_numbers_output {
+
     /// A builder for [`ListPhoneNumbersOutput`](crate::output::ListPhoneNumbersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2758,6 +3700,7 @@ impl std::fmt::Debug for ListLexBotsOutput {
 }
 /// See [`ListLexBotsOutput`](crate::output::ListLexBotsOutput)
 pub mod list_lex_bots_output {
+
     /// A builder for [`ListLexBotsOutput`](crate::output::ListLexBotsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2840,6 +3783,7 @@ impl std::fmt::Debug for ListLambdaFunctionsOutput {
 }
 /// See [`ListLambdaFunctionsOutput`](crate::output::ListLambdaFunctionsOutput)
 pub mod list_lambda_functions_output {
+
     /// A builder for [`ListLambdaFunctionsOutput`](crate::output::ListLambdaFunctionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2928,6 +3872,7 @@ impl std::fmt::Debug for ListIntegrationAssociationsOutput {
 }
 /// See [`ListIntegrationAssociationsOutput`](crate::output::ListIntegrationAssociationsOutput)
 pub mod list_integration_associations_output {
+
     /// A builder for [`ListIntegrationAssociationsOutput`](crate::output::ListIntegrationAssociationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3016,6 +3961,7 @@ impl std::fmt::Debug for ListInstanceStorageConfigsOutput {
 }
 /// See [`ListInstanceStorageConfigsOutput`](crate::output::ListInstanceStorageConfigsOutput)
 pub mod list_instance_storage_configs_output {
+
     /// A builder for [`ListInstanceStorageConfigsOutput`](crate::output::ListInstanceStorageConfigsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3099,6 +4045,7 @@ impl std::fmt::Debug for ListInstancesOutput {
 }
 /// See [`ListInstancesOutput`](crate::output::ListInstancesOutput)
 pub mod list_instances_output {
+
     /// A builder for [`ListInstancesOutput`](crate::output::ListInstancesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3182,6 +4129,7 @@ impl std::fmt::Debug for ListInstanceAttributesOutput {
 }
 /// See [`ListInstanceAttributesOutput`](crate::output::ListInstanceAttributesOutput)
 pub mod list_instance_attributes_output {
+
     /// A builder for [`ListInstanceAttributesOutput`](crate::output::ListInstanceAttributesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3270,6 +4218,7 @@ impl std::fmt::Debug for ListHoursOfOperationsOutput {
 }
 /// See [`ListHoursOfOperationsOutput`](crate::output::ListHoursOfOperationsOutput)
 pub mod list_hours_of_operations_output {
+
     /// A builder for [`ListHoursOfOperationsOutput`](crate::output::ListHoursOfOperationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3359,6 +4308,7 @@ impl std::fmt::Debug for ListDefaultVocabulariesOutput {
 }
 /// See [`ListDefaultVocabulariesOutput`](crate::output::ListDefaultVocabulariesOutput)
 pub mod list_default_vocabularies_output {
+
     /// A builder for [`ListDefaultVocabulariesOutput`](crate::output::ListDefaultVocabulariesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3446,6 +4396,7 @@ impl std::fmt::Debug for ListContactReferencesOutput {
 }
 /// See [`ListContactReferencesOutput`](crate::output::ListContactReferencesOutput)
 pub mod list_contact_references_output {
+
     /// A builder for [`ListContactReferencesOutput`](crate::output::ListContactReferencesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3536,6 +4487,7 @@ impl std::fmt::Debug for ListContactFlowsOutput {
 }
 /// See [`ListContactFlowsOutput`](crate::output::ListContactFlowsOutput)
 pub mod list_contact_flows_output {
+
     /// A builder for [`ListContactFlowsOutput`](crate::output::ListContactFlowsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3628,6 +4580,7 @@ impl std::fmt::Debug for ListContactFlowModulesOutput {
 }
 /// See [`ListContactFlowModulesOutput`](crate::output::ListContactFlowModulesOutput)
 pub mod list_contact_flow_modules_output {
+
     /// A builder for [`ListContactFlowModulesOutput`](crate::output::ListContactFlowModulesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3714,6 +4667,7 @@ impl std::fmt::Debug for ListBotsOutput {
 }
 /// See [`ListBotsOutput`](crate::output::ListBotsOutput)
 pub mod list_bots_output {
+
     /// A builder for [`ListBotsOutput`](crate::output::ListBotsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3796,6 +4750,7 @@ impl std::fmt::Debug for ListApprovedOriginsOutput {
 }
 /// See [`ListApprovedOriginsOutput`](crate::output::ListApprovedOriginsOutput)
 pub mod list_approved_origins_output {
+
     /// A builder for [`ListApprovedOriginsOutput`](crate::output::ListApprovedOriginsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3881,6 +4836,7 @@ impl std::fmt::Debug for ListAgentStatusesOutput {
 }
 /// See [`ListAgentStatusesOutput`](crate::output::ListAgentStatusesOutput)
 pub mod list_agent_statuses_output {
+
     /// A builder for [`ListAgentStatusesOutput`](crate::output::ListAgentStatusesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3941,6 +4897,337 @@ impl ListAgentStatusesOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetTaskTemplateOutput {
+    /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+    pub instance_id: std::option::Option<std::string::String>,
+    /// <p>A unique identifier for the task template.</p>
+    pub id: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name (ARN).</p>
+    pub arn: std::option::Option<std::string::String>,
+    /// <p>The name of the task template.</p>
+    pub name: std::option::Option<std::string::String>,
+    /// <p>The description of the task template.</p>
+    pub description: std::option::Option<std::string::String>,
+    /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+    pub contact_flow_id: std::option::Option<std::string::String>,
+    /// <p>Constraints that are applicable to the fields listed.</p>
+    pub constraints: std::option::Option<crate::model::TaskTemplateConstraints>,
+    /// <p>The default values for fields when a task is created by referencing this template.</p>
+    pub defaults: std::option::Option<crate::model::TaskTemplateDefaults>,
+    /// <p>Fields that are part of the template.</p>
+    pub fields: std::option::Option<std::vec::Vec<crate::model::TaskTemplateField>>,
+    /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+    pub status: std::option::Option<crate::model::TaskTemplateStatus>,
+    /// <p>The timestamp when the task template was last modified.</p>
+    pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The timestamp when the task template was created.</p>
+    pub created_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The tags used to organize, track, or control access for this resource.</p>
+    pub tags:
+        std::option::Option<std::collections::HashMap<std::string::String, std::string::String>>,
+}
+impl GetTaskTemplateOutput {
+    /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+    pub fn instance_id(&self) -> std::option::Option<&str> {
+        self.instance_id.as_deref()
+    }
+    /// <p>A unique identifier for the task template.</p>
+    pub fn id(&self) -> std::option::Option<&str> {
+        self.id.as_deref()
+    }
+    /// <p>The Amazon Resource Name (ARN).</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p>The name of the task template.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>The description of the task template.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+    pub fn contact_flow_id(&self) -> std::option::Option<&str> {
+        self.contact_flow_id.as_deref()
+    }
+    /// <p>Constraints that are applicable to the fields listed.</p>
+    pub fn constraints(&self) -> std::option::Option<&crate::model::TaskTemplateConstraints> {
+        self.constraints.as_ref()
+    }
+    /// <p>The default values for fields when a task is created by referencing this template.</p>
+    pub fn defaults(&self) -> std::option::Option<&crate::model::TaskTemplateDefaults> {
+        self.defaults.as_ref()
+    }
+    /// <p>Fields that are part of the template.</p>
+    pub fn fields(&self) -> std::option::Option<&[crate::model::TaskTemplateField]> {
+        self.fields.as_deref()
+    }
+    /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+    pub fn status(&self) -> std::option::Option<&crate::model::TaskTemplateStatus> {
+        self.status.as_ref()
+    }
+    /// <p>The timestamp when the task template was last modified.</p>
+    pub fn last_modified_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_modified_time.as_ref()
+    }
+    /// <p>The timestamp when the task template was created.</p>
+    pub fn created_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.created_time.as_ref()
+    }
+    /// <p>The tags used to organize, track, or control access for this resource.</p>
+    pub fn tags(
+        &self,
+    ) -> std::option::Option<&std::collections::HashMap<std::string::String, std::string::String>>
+    {
+        self.tags.as_ref()
+    }
+}
+impl std::fmt::Debug for GetTaskTemplateOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetTaskTemplateOutput");
+        formatter.field("instance_id", &self.instance_id);
+        formatter.field("id", &self.id);
+        formatter.field("arn", &self.arn);
+        formatter.field("name", &self.name);
+        formatter.field("description", &self.description);
+        formatter.field("contact_flow_id", &self.contact_flow_id);
+        formatter.field("constraints", &self.constraints);
+        formatter.field("defaults", &self.defaults);
+        formatter.field("fields", &self.fields);
+        formatter.field("status", &self.status);
+        formatter.field("last_modified_time", &self.last_modified_time);
+        formatter.field("created_time", &self.created_time);
+        formatter.field("tags", &self.tags);
+        formatter.finish()
+    }
+}
+/// See [`GetTaskTemplateOutput`](crate::output::GetTaskTemplateOutput)
+pub mod get_task_template_output {
+
+    /// A builder for [`GetTaskTemplateOutput`](crate::output::GetTaskTemplateOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) instance_id: std::option::Option<std::string::String>,
+        pub(crate) id: std::option::Option<std::string::String>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) contact_flow_id: std::option::Option<std::string::String>,
+        pub(crate) constraints: std::option::Option<crate::model::TaskTemplateConstraints>,
+        pub(crate) defaults: std::option::Option<crate::model::TaskTemplateDefaults>,
+        pub(crate) fields: std::option::Option<std::vec::Vec<crate::model::TaskTemplateField>>,
+        pub(crate) status: std::option::Option<crate::model::TaskTemplateStatus>,
+        pub(crate) last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) created_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) tags: std::option::Option<
+            std::collections::HashMap<std::string::String, std::string::String>,
+        >,
+    }
+    impl Builder {
+        /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+        pub fn instance_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.instance_id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</p>
+        pub fn set_instance_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.instance_id = input;
+            self
+        }
+        /// <p>A unique identifier for the task template.</p>
+        pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.id = Some(input.into());
+            self
+        }
+        /// <p>A unique identifier for the task template.</p>
+        pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.id = input;
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN).</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN).</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p>The name of the task template.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name of the task template.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>The description of the task template.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>The description of the task template.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+        pub fn contact_flow_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.contact_flow_id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the flow that runs by default when a task is created by referencing this template.</p>
+        pub fn set_contact_flow_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.contact_flow_id = input;
+            self
+        }
+        /// <p>Constraints that are applicable to the fields listed.</p>
+        pub fn constraints(mut self, input: crate::model::TaskTemplateConstraints) -> Self {
+            self.constraints = Some(input);
+            self
+        }
+        /// <p>Constraints that are applicable to the fields listed.</p>
+        pub fn set_constraints(
+            mut self,
+            input: std::option::Option<crate::model::TaskTemplateConstraints>,
+        ) -> Self {
+            self.constraints = input;
+            self
+        }
+        /// <p>The default values for fields when a task is created by referencing this template.</p>
+        pub fn defaults(mut self, input: crate::model::TaskTemplateDefaults) -> Self {
+            self.defaults = Some(input);
+            self
+        }
+        /// <p>The default values for fields when a task is created by referencing this template.</p>
+        pub fn set_defaults(
+            mut self,
+            input: std::option::Option<crate::model::TaskTemplateDefaults>,
+        ) -> Self {
+            self.defaults = input;
+            self
+        }
+        /// Appends an item to `fields`.
+        ///
+        /// To override the contents of this collection use [`set_fields`](Self::set_fields).
+        ///
+        /// <p>Fields that are part of the template.</p>
+        pub fn fields(mut self, input: crate::model::TaskTemplateField) -> Self {
+            let mut v = self.fields.unwrap_or_default();
+            v.push(input);
+            self.fields = Some(v);
+            self
+        }
+        /// <p>Fields that are part of the template.</p>
+        pub fn set_fields(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::TaskTemplateField>>,
+        ) -> Self {
+            self.fields = input;
+            self
+        }
+        /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+        pub fn status(mut self, input: crate::model::TaskTemplateStatus) -> Self {
+            self.status = Some(input);
+            self
+        }
+        /// <p>Marks a template as <code>ACTIVE</code> or <code>INACTIVE</code> for a task to refer to it. Tasks can only be created from <code>ACTIVE</code> templates. If a template is marked as <code>INACTIVE</code>, then a task that refers to this template cannot be created.</p>
+        pub fn set_status(
+            mut self,
+            input: std::option::Option<crate::model::TaskTemplateStatus>,
+        ) -> Self {
+            self.status = input;
+            self
+        }
+        /// <p>The timestamp when the task template was last modified.</p>
+        pub fn last_modified_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_modified_time = Some(input);
+            self
+        }
+        /// <p>The timestamp when the task template was last modified.</p>
+        pub fn set_last_modified_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_modified_time = input;
+            self
+        }
+        /// <p>The timestamp when the task template was created.</p>
+        pub fn created_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.created_time = Some(input);
+            self
+        }
+        /// <p>The timestamp when the task template was created.</p>
+        pub fn set_created_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.created_time = input;
+            self
+        }
+        /// Adds a key-value pair to `tags`.
+        ///
+        /// To override the contents of this collection use [`set_tags`](Self::set_tags).
+        ///
+        /// <p>The tags used to organize, track, or control access for this resource.</p>
+        pub fn tags(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: impl Into<std::string::String>,
+        ) -> Self {
+            let mut hash_map = self.tags.unwrap_or_default();
+            hash_map.insert(k.into(), v.into());
+            self.tags = Some(hash_map);
+            self
+        }
+        /// <p>The tags used to organize, track, or control access for this resource.</p>
+        pub fn set_tags(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, std::string::String>,
+            >,
+        ) -> Self {
+            self.tags = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetTaskTemplateOutput`](crate::output::GetTaskTemplateOutput)
+        pub fn build(self) -> crate::output::GetTaskTemplateOutput {
+            crate::output::GetTaskTemplateOutput {
+                instance_id: self.instance_id,
+                id: self.id,
+                arn: self.arn,
+                name: self.name,
+                description: self.description,
+                contact_flow_id: self.contact_flow_id,
+                constraints: self.constraints,
+                defaults: self.defaults,
+                fields: self.fields,
+                status: self.status,
+                last_modified_time: self.last_modified_time,
+                created_time: self.created_time,
+                tags: self.tags,
+            }
+        }
+    }
+}
+impl GetTaskTemplateOutput {
+    /// Creates a new builder-style object to manufacture [`GetTaskTemplateOutput`](crate::output::GetTaskTemplateOutput)
+    pub fn builder() -> crate::output::get_task_template_output::Builder {
+        crate::output::get_task_template_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetMetricDataOutput {
     /// <p>If there are additional results, this is the token for the next set of results.</p>
     /// <p>The token expires after 5 minutes from the time it is created. Subsequent requests that use the token must use the same request parameters as the request that generated the token.</p>
@@ -3971,6 +5258,7 @@ impl std::fmt::Debug for GetMetricDataOutput {
 }
 /// See [`GetMetricDataOutput`](crate::output::GetMetricDataOutput)
 pub mod get_metric_data_output {
+
     /// A builder for [`GetMetricDataOutput`](crate::output::GetMetricDataOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4051,6 +5339,7 @@ impl std::fmt::Debug for GetFederationTokenOutput {
 }
 /// See [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput)
 pub mod get_federation_token_output {
+
     /// A builder for [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4083,6 +5372,89 @@ impl GetFederationTokenOutput {
     /// Creates a new builder-style object to manufacture [`GetFederationTokenOutput`](crate::output::GetFederationTokenOutput)
     pub fn builder() -> crate::output::get_federation_token_output::Builder {
         crate::output::get_federation_token_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetCurrentUserDataOutput {
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>A list of the user data that is returned.</p>
+    pub user_data_list: std::option::Option<std::vec::Vec<crate::model::UserData>>,
+}
+impl GetCurrentUserDataOutput {
+    /// <p>If there are additional results, this is the token for the next set of results.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>A list of the user data that is returned.</p>
+    pub fn user_data_list(&self) -> std::option::Option<&[crate::model::UserData]> {
+        self.user_data_list.as_deref()
+    }
+}
+impl std::fmt::Debug for GetCurrentUserDataOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetCurrentUserDataOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field("user_data_list", &self.user_data_list);
+        formatter.finish()
+    }
+}
+/// See [`GetCurrentUserDataOutput`](crate::output::GetCurrentUserDataOutput)
+pub mod get_current_user_data_output {
+
+    /// A builder for [`GetCurrentUserDataOutput`](crate::output::GetCurrentUserDataOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) user_data_list: std::option::Option<std::vec::Vec<crate::model::UserData>>,
+    }
+    impl Builder {
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>If there are additional results, this is the token for the next set of results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `user_data_list`.
+        ///
+        /// To override the contents of this collection use [`set_user_data_list`](Self::set_user_data_list).
+        ///
+        /// <p>A list of the user data that is returned.</p>
+        pub fn user_data_list(mut self, input: crate::model::UserData) -> Self {
+            let mut v = self.user_data_list.unwrap_or_default();
+            v.push(input);
+            self.user_data_list = Some(v);
+            self
+        }
+        /// <p>A list of the user data that is returned.</p>
+        pub fn set_user_data_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::UserData>>,
+        ) -> Self {
+            self.user_data_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetCurrentUserDataOutput`](crate::output::GetCurrentUserDataOutput)
+        pub fn build(self) -> crate::output::GetCurrentUserDataOutput {
+            crate::output::GetCurrentUserDataOutput {
+                next_token: self.next_token,
+                user_data_list: self.user_data_list,
+            }
+        }
+    }
+}
+impl GetCurrentUserDataOutput {
+    /// Creates a new builder-style object to manufacture [`GetCurrentUserDataOutput`](crate::output::GetCurrentUserDataOutput)
+    pub fn builder() -> crate::output::get_current_user_data_output::Builder {
+        crate::output::get_current_user_data_output::Builder::default()
     }
 }
 
@@ -4124,6 +5496,7 @@ impl std::fmt::Debug for GetCurrentMetricDataOutput {
 }
 /// See [`GetCurrentMetricDataOutput`](crate::output::GetCurrentMetricDataOutput)
 pub mod get_current_metric_data_output {
+
     /// A builder for [`GetCurrentMetricDataOutput`](crate::output::GetCurrentMetricDataOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4221,6 +5594,7 @@ impl std::fmt::Debug for GetContactAttributesOutput {
 }
 /// See [`GetContactAttributesOutput`](crate::output::GetContactAttributesOutput)
 pub mod get_contact_attributes_output {
+
     /// A builder for [`GetContactAttributesOutput`](crate::output::GetContactAttributesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4282,6 +5656,7 @@ impl std::fmt::Debug for DisassociateSecurityKeyOutput {
 }
 /// See [`DisassociateSecurityKeyOutput`](crate::output::DisassociateSecurityKeyOutput)
 pub mod disassociate_security_key_output {
+
     /// A builder for [`DisassociateSecurityKeyOutput`](crate::output::DisassociateSecurityKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4312,6 +5687,7 @@ impl std::fmt::Debug for DisassociateRoutingProfileQueuesOutput {
 }
 /// See [`DisassociateRoutingProfileQueuesOutput`](crate::output::DisassociateRoutingProfileQueuesOutput)
 pub mod disassociate_routing_profile_queues_output {
+
     /// A builder for [`DisassociateRoutingProfileQueuesOutput`](crate::output::DisassociateRoutingProfileQueuesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4342,6 +5718,7 @@ impl std::fmt::Debug for DisassociateQueueQuickConnectsOutput {
 }
 /// See [`DisassociateQueueQuickConnectsOutput`](crate::output::DisassociateQueueQuickConnectsOutput)
 pub mod disassociate_queue_quick_connects_output {
+
     /// A builder for [`DisassociateQueueQuickConnectsOutput`](crate::output::DisassociateQueueQuickConnectsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4363,6 +5740,37 @@ impl DisassociateQueueQuickConnectsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DisassociatePhoneNumberContactFlowOutput {}
+impl std::fmt::Debug for DisassociatePhoneNumberContactFlowOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DisassociatePhoneNumberContactFlowOutput");
+        formatter.finish()
+    }
+}
+/// See [`DisassociatePhoneNumberContactFlowOutput`](crate::output::DisassociatePhoneNumberContactFlowOutput)
+pub mod disassociate_phone_number_contact_flow_output {
+
+    /// A builder for [`DisassociatePhoneNumberContactFlowOutput`](crate::output::DisassociatePhoneNumberContactFlowOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`DisassociatePhoneNumberContactFlowOutput`](crate::output::DisassociatePhoneNumberContactFlowOutput)
+        pub fn build(self) -> crate::output::DisassociatePhoneNumberContactFlowOutput {
+            crate::output::DisassociatePhoneNumberContactFlowOutput {}
+        }
+    }
+}
+impl DisassociatePhoneNumberContactFlowOutput {
+    /// Creates a new builder-style object to manufacture [`DisassociatePhoneNumberContactFlowOutput`](crate::output::DisassociatePhoneNumberContactFlowOutput)
+    pub fn builder() -> crate::output::disassociate_phone_number_contact_flow_output::Builder {
+        crate::output::disassociate_phone_number_contact_flow_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DisassociateLexBotOutput {}
 impl std::fmt::Debug for DisassociateLexBotOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -4372,6 +5780,7 @@ impl std::fmt::Debug for DisassociateLexBotOutput {
 }
 /// See [`DisassociateLexBotOutput`](crate::output::DisassociateLexBotOutput)
 pub mod disassociate_lex_bot_output {
+
     /// A builder for [`DisassociateLexBotOutput`](crate::output::DisassociateLexBotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4402,6 +5811,7 @@ impl std::fmt::Debug for DisassociateLambdaFunctionOutput {
 }
 /// See [`DisassociateLambdaFunctionOutput`](crate::output::DisassociateLambdaFunctionOutput)
 pub mod disassociate_lambda_function_output {
+
     /// A builder for [`DisassociateLambdaFunctionOutput`](crate::output::DisassociateLambdaFunctionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4432,6 +5842,7 @@ impl std::fmt::Debug for DisassociateInstanceStorageConfigOutput {
 }
 /// See [`DisassociateInstanceStorageConfigOutput`](crate::output::DisassociateInstanceStorageConfigOutput)
 pub mod disassociate_instance_storage_config_output {
+
     /// A builder for [`DisassociateInstanceStorageConfigOutput`](crate::output::DisassociateInstanceStorageConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4462,6 +5873,7 @@ impl std::fmt::Debug for DisassociateBotOutput {
 }
 /// See [`DisassociateBotOutput`](crate::output::DisassociateBotOutput)
 pub mod disassociate_bot_output {
+
     /// A builder for [`DisassociateBotOutput`](crate::output::DisassociateBotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4492,6 +5904,7 @@ impl std::fmt::Debug for DisassociateApprovedOriginOutput {
 }
 /// See [`DisassociateApprovedOriginOutput`](crate::output::DisassociateApprovedOriginOutput)
 pub mod disassociate_approved_origin_output {
+
     /// A builder for [`DisassociateApprovedOriginOutput`](crate::output::DisassociateApprovedOriginOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4532,6 +5945,7 @@ impl std::fmt::Debug for DescribeVocabularyOutput {
 }
 /// See [`DescribeVocabularyOutput`](crate::output::DescribeVocabularyOutput)
 pub mod describe_vocabulary_output {
+
     /// A builder for [`DescribeVocabularyOutput`](crate::output::DescribeVocabularyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4589,6 +6003,7 @@ impl std::fmt::Debug for DescribeUserHierarchyStructureOutput {
 }
 /// See [`DescribeUserHierarchyStructureOutput`](crate::output::DescribeUserHierarchyStructureOutput)
 pub mod describe_user_hierarchy_structure_output {
+
     /// A builder for [`DescribeUserHierarchyStructureOutput`](crate::output::DescribeUserHierarchyStructureOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4646,6 +6061,7 @@ impl std::fmt::Debug for DescribeUserHierarchyGroupOutput {
 }
 /// See [`DescribeUserHierarchyGroupOutput`](crate::output::DescribeUserHierarchyGroupOutput)
 pub mod describe_user_hierarchy_group_output {
+
     /// A builder for [`DescribeUserHierarchyGroupOutput`](crate::output::DescribeUserHierarchyGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4703,6 +6119,7 @@ impl std::fmt::Debug for DescribeUserOutput {
 }
 /// See [`DescribeUserOutput`](crate::output::DescribeUserOutput)
 pub mod describe_user_output {
+
     /// A builder for [`DescribeUserOutput`](crate::output::DescribeUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4755,6 +6172,7 @@ impl std::fmt::Debug for DescribeSecurityProfileOutput {
 }
 /// See [`DescribeSecurityProfileOutput`](crate::output::DescribeSecurityProfileOutput)
 pub mod describe_security_profile_output {
+
     /// A builder for [`DescribeSecurityProfileOutput`](crate::output::DescribeSecurityProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4812,6 +6230,7 @@ impl std::fmt::Debug for DescribeRoutingProfileOutput {
 }
 /// See [`DescribeRoutingProfileOutput`](crate::output::DescribeRoutingProfileOutput)
 pub mod describe_routing_profile_output {
+
     /// A builder for [`DescribeRoutingProfileOutput`](crate::output::DescribeRoutingProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4869,6 +6288,7 @@ impl std::fmt::Debug for DescribeQuickConnectOutput {
 }
 /// See [`DescribeQuickConnectOutput`](crate::output::DescribeQuickConnectOutput)
 pub mod describe_quick_connect_output {
+
     /// A builder for [`DescribeQuickConnectOutput`](crate::output::DescribeQuickConnectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4926,6 +6346,7 @@ impl std::fmt::Debug for DescribeQueueOutput {
 }
 /// See [`DescribeQueueOutput`](crate::output::DescribeQueueOutput)
 pub mod describe_queue_output {
+
     /// A builder for [`DescribeQueueOutput`](crate::output::DescribeQueueOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4959,6 +6380,73 @@ impl DescribeQueueOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DescribePhoneNumberOutput {
+    /// <p>Information about a phone number that's been claimed to your Amazon Connect instance.</p>
+    pub claimed_phone_number_summary: std::option::Option<crate::model::ClaimedPhoneNumberSummary>,
+}
+impl DescribePhoneNumberOutput {
+    /// <p>Information about a phone number that's been claimed to your Amazon Connect instance.</p>
+    pub fn claimed_phone_number_summary(
+        &self,
+    ) -> std::option::Option<&crate::model::ClaimedPhoneNumberSummary> {
+        self.claimed_phone_number_summary.as_ref()
+    }
+}
+impl std::fmt::Debug for DescribePhoneNumberOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DescribePhoneNumberOutput");
+        formatter.field(
+            "claimed_phone_number_summary",
+            &self.claimed_phone_number_summary,
+        );
+        formatter.finish()
+    }
+}
+/// See [`DescribePhoneNumberOutput`](crate::output::DescribePhoneNumberOutput)
+pub mod describe_phone_number_output {
+
+    /// A builder for [`DescribePhoneNumberOutput`](crate::output::DescribePhoneNumberOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) claimed_phone_number_summary:
+            std::option::Option<crate::model::ClaimedPhoneNumberSummary>,
+    }
+    impl Builder {
+        /// <p>Information about a phone number that's been claimed to your Amazon Connect instance.</p>
+        pub fn claimed_phone_number_summary(
+            mut self,
+            input: crate::model::ClaimedPhoneNumberSummary,
+        ) -> Self {
+            self.claimed_phone_number_summary = Some(input);
+            self
+        }
+        /// <p>Information about a phone number that's been claimed to your Amazon Connect instance.</p>
+        pub fn set_claimed_phone_number_summary(
+            mut self,
+            input: std::option::Option<crate::model::ClaimedPhoneNumberSummary>,
+        ) -> Self {
+            self.claimed_phone_number_summary = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribePhoneNumberOutput`](crate::output::DescribePhoneNumberOutput)
+        pub fn build(self) -> crate::output::DescribePhoneNumberOutput {
+            crate::output::DescribePhoneNumberOutput {
+                claimed_phone_number_summary: self.claimed_phone_number_summary,
+            }
+        }
+    }
+}
+impl DescribePhoneNumberOutput {
+    /// Creates a new builder-style object to manufacture [`DescribePhoneNumberOutput`](crate::output::DescribePhoneNumberOutput)
+    pub fn builder() -> crate::output::describe_phone_number_output::Builder {
+        crate::output::describe_phone_number_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeInstanceStorageConfigOutput {
     /// <p>A valid storage type.</p>
     pub storage_config: std::option::Option<crate::model::InstanceStorageConfig>,
@@ -4978,6 +6466,7 @@ impl std::fmt::Debug for DescribeInstanceStorageConfigOutput {
 }
 /// See [`DescribeInstanceStorageConfigOutput`](crate::output::DescribeInstanceStorageConfigOutput)
 pub mod describe_instance_storage_config_output {
+
     /// A builder for [`DescribeInstanceStorageConfigOutput`](crate::output::DescribeInstanceStorageConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5035,6 +6524,7 @@ impl std::fmt::Debug for DescribeInstanceAttributeOutput {
 }
 /// See [`DescribeInstanceAttributeOutput`](crate::output::DescribeInstanceAttributeOutput)
 pub mod describe_instance_attribute_output {
+
     /// A builder for [`DescribeInstanceAttributeOutput`](crate::output::DescribeInstanceAttributeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5092,6 +6582,7 @@ impl std::fmt::Debug for DescribeInstanceOutput {
 }
 /// See [`DescribeInstanceOutput`](crate::output::DescribeInstanceOutput)
 pub mod describe_instance_output {
+
     /// A builder for [`DescribeInstanceOutput`](crate::output::DescribeInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5146,6 +6637,7 @@ impl std::fmt::Debug for DescribeHoursOfOperationOutput {
 }
 /// See [`DescribeHoursOfOperationOutput`](crate::output::DescribeHoursOfOperationOutput)
 pub mod describe_hours_of_operation_output {
+
     /// A builder for [`DescribeHoursOfOperationOutput`](crate::output::DescribeHoursOfOperationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5203,6 +6695,7 @@ impl std::fmt::Debug for DescribeContactFlowModuleOutput {
 }
 /// See [`DescribeContactFlowModuleOutput`](crate::output::DescribeContactFlowModuleOutput)
 pub mod describe_contact_flow_module_output {
+
     /// A builder for [`DescribeContactFlowModuleOutput`](crate::output::DescribeContactFlowModuleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5260,6 +6753,7 @@ impl std::fmt::Debug for DescribeContactFlowOutput {
 }
 /// See [`DescribeContactFlowOutput`](crate::output::DescribeContactFlowOutput)
 pub mod describe_contact_flow_output {
+
     /// A builder for [`DescribeContactFlowOutput`](crate::output::DescribeContactFlowOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5317,6 +6811,7 @@ impl std::fmt::Debug for DescribeContactOutput {
 }
 /// See [`DescribeContactOutput`](crate::output::DescribeContactOutput)
 pub mod describe_contact_output {
+
     /// A builder for [`DescribeContactOutput`](crate::output::DescribeContactOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5371,6 +6866,7 @@ impl std::fmt::Debug for DescribeAgentStatusOutput {
 }
 /// See [`DescribeAgentStatusOutput`](crate::output::DescribeAgentStatusOutput)
 pub mod describe_agent_status_output {
+
     /// A builder for [`DescribeAgentStatusOutput`](crate::output::DescribeAgentStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5442,6 +6938,7 @@ impl std::fmt::Debug for DeleteVocabularyOutput {
 }
 /// See [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput)
 pub mod delete_vocabulary_output {
+
     /// A builder for [`DeleteVocabularyOutput`](crate::output::DeleteVocabularyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5519,6 +7016,7 @@ impl std::fmt::Debug for DeleteUserHierarchyGroupOutput {
 }
 /// See [`DeleteUserHierarchyGroupOutput`](crate::output::DeleteUserHierarchyGroupOutput)
 pub mod delete_user_hierarchy_group_output {
+
     /// A builder for [`DeleteUserHierarchyGroupOutput`](crate::output::DeleteUserHierarchyGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5549,6 +7047,7 @@ impl std::fmt::Debug for DeleteUserOutput {
 }
 /// See [`DeleteUserOutput`](crate::output::DeleteUserOutput)
 pub mod delete_user_output {
+
     /// A builder for [`DeleteUserOutput`](crate::output::DeleteUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5579,6 +7078,7 @@ impl std::fmt::Debug for DeleteUseCaseOutput {
 }
 /// See [`DeleteUseCaseOutput`](crate::output::DeleteUseCaseOutput)
 pub mod delete_use_case_output {
+
     /// A builder for [`DeleteUseCaseOutput`](crate::output::DeleteUseCaseOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5600,6 +7100,37 @@ impl DeleteUseCaseOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeleteTaskTemplateOutput {}
+impl std::fmt::Debug for DeleteTaskTemplateOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeleteTaskTemplateOutput");
+        formatter.finish()
+    }
+}
+/// See [`DeleteTaskTemplateOutput`](crate::output::DeleteTaskTemplateOutput)
+pub mod delete_task_template_output {
+
+    /// A builder for [`DeleteTaskTemplateOutput`](crate::output::DeleteTaskTemplateOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`DeleteTaskTemplateOutput`](crate::output::DeleteTaskTemplateOutput)
+        pub fn build(self) -> crate::output::DeleteTaskTemplateOutput {
+            crate::output::DeleteTaskTemplateOutput {}
+        }
+    }
+}
+impl DeleteTaskTemplateOutput {
+    /// Creates a new builder-style object to manufacture [`DeleteTaskTemplateOutput`](crate::output::DeleteTaskTemplateOutput)
+    pub fn builder() -> crate::output::delete_task_template_output::Builder {
+        crate::output::delete_task_template_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteSecurityProfileOutput {}
 impl std::fmt::Debug for DeleteSecurityProfileOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -5609,6 +7140,7 @@ impl std::fmt::Debug for DeleteSecurityProfileOutput {
 }
 /// See [`DeleteSecurityProfileOutput`](crate::output::DeleteSecurityProfileOutput)
 pub mod delete_security_profile_output {
+
     /// A builder for [`DeleteSecurityProfileOutput`](crate::output::DeleteSecurityProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5639,6 +7171,7 @@ impl std::fmt::Debug for DeleteQuickConnectOutput {
 }
 /// See [`DeleteQuickConnectOutput`](crate::output::DeleteQuickConnectOutput)
 pub mod delete_quick_connect_output {
+
     /// A builder for [`DeleteQuickConnectOutput`](crate::output::DeleteQuickConnectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5669,6 +7202,7 @@ impl std::fmt::Debug for DeleteIntegrationAssociationOutput {
 }
 /// See [`DeleteIntegrationAssociationOutput`](crate::output::DeleteIntegrationAssociationOutput)
 pub mod delete_integration_association_output {
+
     /// A builder for [`DeleteIntegrationAssociationOutput`](crate::output::DeleteIntegrationAssociationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5699,6 +7233,7 @@ impl std::fmt::Debug for DeleteInstanceOutput {
 }
 /// See [`DeleteInstanceOutput`](crate::output::DeleteInstanceOutput)
 pub mod delete_instance_output {
+
     /// A builder for [`DeleteInstanceOutput`](crate::output::DeleteInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5729,6 +7264,7 @@ impl std::fmt::Debug for DeleteHoursOfOperationOutput {
 }
 /// See [`DeleteHoursOfOperationOutput`](crate::output::DeleteHoursOfOperationOutput)
 pub mod delete_hours_of_operation_output {
+
     /// A builder for [`DeleteHoursOfOperationOutput`](crate::output::DeleteHoursOfOperationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5759,6 +7295,7 @@ impl std::fmt::Debug for DeleteContactFlowModuleOutput {
 }
 /// See [`DeleteContactFlowModuleOutput`](crate::output::DeleteContactFlowModuleOutput)
 pub mod delete_contact_flow_module_output {
+
     /// A builder for [`DeleteContactFlowModuleOutput`](crate::output::DeleteContactFlowModuleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5789,6 +7326,7 @@ impl std::fmt::Debug for DeleteContactFlowOutput {
 }
 /// See [`DeleteContactFlowOutput`](crate::output::DeleteContactFlowOutput)
 pub mod delete_contact_flow_output {
+
     /// A builder for [`DeleteContactFlowOutput`](crate::output::DeleteContactFlowOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5843,6 +7381,7 @@ impl std::fmt::Debug for CreateVocabularyOutput {
 }
 /// See [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput)
 pub mod create_vocabulary_output {
+
     /// A builder for [`CreateVocabularyOutput`](crate::output::CreateVocabularyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5937,6 +7476,7 @@ impl std::fmt::Debug for CreateUserHierarchyGroupOutput {
 }
 /// See [`CreateUserHierarchyGroupOutput`](crate::output::CreateUserHierarchyGroupOutput)
 pub mod create_user_hierarchy_group_output {
+
     /// A builder for [`CreateUserHierarchyGroupOutput`](crate::output::CreateUserHierarchyGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6016,6 +7556,7 @@ impl std::fmt::Debug for CreateUserOutput {
 }
 /// See [`CreateUserOutput`](crate::output::CreateUserOutput)
 pub mod create_user_output {
+
     /// A builder for [`CreateUserOutput`](crate::output::CreateUserOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6089,6 +7630,7 @@ impl std::fmt::Debug for CreateUseCaseOutput {
 }
 /// See [`CreateUseCaseOutput`](crate::output::CreateUseCaseOutput)
 pub mod create_use_case_output {
+
     /// A builder for [`CreateUseCaseOutput`](crate::output::CreateUseCaseOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6136,6 +7678,80 @@ impl CreateUseCaseOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateTaskTemplateOutput {
+    /// <p>The identifier of the task template resource.</p>
+    pub id: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+    pub arn: std::option::Option<std::string::String>,
+}
+impl CreateTaskTemplateOutput {
+    /// <p>The identifier of the task template resource.</p>
+    pub fn id(&self) -> std::option::Option<&str> {
+        self.id.as_deref()
+    }
+    /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+}
+impl std::fmt::Debug for CreateTaskTemplateOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateTaskTemplateOutput");
+        formatter.field("id", &self.id);
+        formatter.field("arn", &self.arn);
+        formatter.finish()
+    }
+}
+/// See [`CreateTaskTemplateOutput`](crate::output::CreateTaskTemplateOutput)
+pub mod create_task_template_output {
+
+    /// A builder for [`CreateTaskTemplateOutput`](crate::output::CreateTaskTemplateOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) id: std::option::Option<std::string::String>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The identifier of the task template resource.</p>
+        pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the task template resource.</p>
+        pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.id = input;
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) for the task template resource.</p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateTaskTemplateOutput`](crate::output::CreateTaskTemplateOutput)
+        pub fn build(self) -> crate::output::CreateTaskTemplateOutput {
+            crate::output::CreateTaskTemplateOutput {
+                id: self.id,
+                arn: self.arn,
+            }
+        }
+    }
+}
+impl CreateTaskTemplateOutput {
+    /// Creates a new builder-style object to manufacture [`CreateTaskTemplateOutput`](crate::output::CreateTaskTemplateOutput)
+    pub fn builder() -> crate::output::create_task_template_output::Builder {
+        crate::output::create_task_template_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateSecurityProfileOutput {
     /// <p>The identifier for the security profle.</p>
     pub security_profile_id: std::option::Option<std::string::String>,
@@ -6162,6 +7778,7 @@ impl std::fmt::Debug for CreateSecurityProfileOutput {
 }
 /// See [`CreateSecurityProfileOutput`](crate::output::CreateSecurityProfileOutput)
 pub mod create_security_profile_output {
+
     /// A builder for [`CreateSecurityProfileOutput`](crate::output::CreateSecurityProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6241,6 +7858,7 @@ impl std::fmt::Debug for CreateRoutingProfileOutput {
 }
 /// See [`CreateRoutingProfileOutput`](crate::output::CreateRoutingProfileOutput)
 pub mod create_routing_profile_output {
+
     /// A builder for [`CreateRoutingProfileOutput`](crate::output::CreateRoutingProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6320,6 +7938,7 @@ impl std::fmt::Debug for CreateQuickConnectOutput {
 }
 /// See [`CreateQuickConnectOutput`](crate::output::CreateQuickConnectOutput)
 pub mod create_quick_connect_output {
+
     /// A builder for [`CreateQuickConnectOutput`](crate::output::CreateQuickConnectOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6399,6 +8018,7 @@ impl std::fmt::Debug for CreateQueueOutput {
 }
 /// See [`CreateQueueOutput`](crate::output::CreateQueueOutput)
 pub mod create_queue_output {
+
     /// A builder for [`CreateQueueOutput`](crate::output::CreateQueueOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6478,6 +8098,7 @@ impl std::fmt::Debug for CreateIntegrationAssociationOutput {
 }
 /// See [`CreateIntegrationAssociationOutput`](crate::output::CreateIntegrationAssociationOutput)
 pub mod create_integration_association_output {
+
     /// A builder for [`CreateIntegrationAssociationOutput`](crate::output::CreateIntegrationAssociationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6560,6 +8181,7 @@ impl std::fmt::Debug for CreateInstanceOutput {
 }
 /// See [`CreateInstanceOutput`](crate::output::CreateInstanceOutput)
 pub mod create_instance_output {
+
     /// A builder for [`CreateInstanceOutput`](crate::output::CreateInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6633,6 +8255,7 @@ impl std::fmt::Debug for CreateHoursOfOperationOutput {
 }
 /// See [`CreateHoursOfOperationOutput`](crate::output::CreateHoursOfOperationOutput)
 pub mod create_hours_of_operation_output {
+
     /// A builder for [`CreateHoursOfOperationOutput`](crate::output::CreateHoursOfOperationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6712,6 +8335,7 @@ impl std::fmt::Debug for CreateContactFlowModuleOutput {
 }
 /// See [`CreateContactFlowModuleOutput`](crate::output::CreateContactFlowModuleOutput)
 pub mod create_contact_flow_module_output {
+
     /// A builder for [`CreateContactFlowModuleOutput`](crate::output::CreateContactFlowModuleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6785,6 +8409,7 @@ impl std::fmt::Debug for CreateContactFlowOutput {
 }
 /// See [`CreateContactFlowOutput`](crate::output::CreateContactFlowOutput)
 pub mod create_contact_flow_output {
+
     /// A builder for [`CreateContactFlowOutput`](crate::output::CreateContactFlowOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6864,6 +8489,7 @@ impl std::fmt::Debug for CreateAgentStatusOutput {
 }
 /// See [`CreateAgentStatusOutput`](crate::output::CreateAgentStatusOutput)
 pub mod create_agent_status_output {
+
     /// A builder for [`CreateAgentStatusOutput`](crate::output::CreateAgentStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6917,6 +8543,86 @@ impl CreateAgentStatusOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ClaimPhoneNumberOutput {
+    /// <p>A unique identifier for the phone number.</p>
+    pub phone_number_id: std::option::Option<std::string::String>,
+    /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+    pub phone_number_arn: std::option::Option<std::string::String>,
+}
+impl ClaimPhoneNumberOutput {
+    /// <p>A unique identifier for the phone number.</p>
+    pub fn phone_number_id(&self) -> std::option::Option<&str> {
+        self.phone_number_id.as_deref()
+    }
+    /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+    pub fn phone_number_arn(&self) -> std::option::Option<&str> {
+        self.phone_number_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for ClaimPhoneNumberOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ClaimPhoneNumberOutput");
+        formatter.field("phone_number_id", &self.phone_number_id);
+        formatter.field("phone_number_arn", &self.phone_number_arn);
+        formatter.finish()
+    }
+}
+/// See [`ClaimPhoneNumberOutput`](crate::output::ClaimPhoneNumberOutput)
+pub mod claim_phone_number_output {
+
+    /// A builder for [`ClaimPhoneNumberOutput`](crate::output::ClaimPhoneNumberOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) phone_number_id: std::option::Option<std::string::String>,
+        pub(crate) phone_number_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>A unique identifier for the phone number.</p>
+        pub fn phone_number_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.phone_number_id = Some(input.into());
+            self
+        }
+        /// <p>A unique identifier for the phone number.</p>
+        pub fn set_phone_number_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.phone_number_id = input;
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+        pub fn phone_number_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.phone_number_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the phone number.</p>
+        pub fn set_phone_number_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.phone_number_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ClaimPhoneNumberOutput`](crate::output::ClaimPhoneNumberOutput)
+        pub fn build(self) -> crate::output::ClaimPhoneNumberOutput {
+            crate::output::ClaimPhoneNumberOutput {
+                phone_number_id: self.phone_number_id,
+                phone_number_arn: self.phone_number_arn,
+            }
+        }
+    }
+}
+impl ClaimPhoneNumberOutput {
+    /// Creates a new builder-style object to manufacture [`ClaimPhoneNumberOutput`](crate::output::ClaimPhoneNumberOutput)
+    pub fn builder() -> crate::output::claim_phone_number_output::Builder {
+        crate::output::claim_phone_number_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateSecurityKeyOutput {
     /// <p>The existing association identifier that uniquely identifies the resource type and storage config for the given instance ID.</p>
     pub association_id: std::option::Option<std::string::String>,
@@ -6936,6 +8642,7 @@ impl std::fmt::Debug for AssociateSecurityKeyOutput {
 }
 /// See [`AssociateSecurityKeyOutput`](crate::output::AssociateSecurityKeyOutput)
 pub mod associate_security_key_output {
+
     /// A builder for [`AssociateSecurityKeyOutput`](crate::output::AssociateSecurityKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6983,6 +8690,7 @@ impl std::fmt::Debug for AssociateRoutingProfileQueuesOutput {
 }
 /// See [`AssociateRoutingProfileQueuesOutput`](crate::output::AssociateRoutingProfileQueuesOutput)
 pub mod associate_routing_profile_queues_output {
+
     /// A builder for [`AssociateRoutingProfileQueuesOutput`](crate::output::AssociateRoutingProfileQueuesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7013,6 +8721,7 @@ impl std::fmt::Debug for AssociateQueueQuickConnectsOutput {
 }
 /// See [`AssociateQueueQuickConnectsOutput`](crate::output::AssociateQueueQuickConnectsOutput)
 pub mod associate_queue_quick_connects_output {
+
     /// A builder for [`AssociateQueueQuickConnectsOutput`](crate::output::AssociateQueueQuickConnectsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7034,6 +8743,37 @@ impl AssociateQueueQuickConnectsOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AssociatePhoneNumberContactFlowOutput {}
+impl std::fmt::Debug for AssociatePhoneNumberContactFlowOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AssociatePhoneNumberContactFlowOutput");
+        formatter.finish()
+    }
+}
+/// See [`AssociatePhoneNumberContactFlowOutput`](crate::output::AssociatePhoneNumberContactFlowOutput)
+pub mod associate_phone_number_contact_flow_output {
+
+    /// A builder for [`AssociatePhoneNumberContactFlowOutput`](crate::output::AssociatePhoneNumberContactFlowOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`AssociatePhoneNumberContactFlowOutput`](crate::output::AssociatePhoneNumberContactFlowOutput)
+        pub fn build(self) -> crate::output::AssociatePhoneNumberContactFlowOutput {
+            crate::output::AssociatePhoneNumberContactFlowOutput {}
+        }
+    }
+}
+impl AssociatePhoneNumberContactFlowOutput {
+    /// Creates a new builder-style object to manufacture [`AssociatePhoneNumberContactFlowOutput`](crate::output::AssociatePhoneNumberContactFlowOutput)
+    pub fn builder() -> crate::output::associate_phone_number_contact_flow_output::Builder {
+        crate::output::associate_phone_number_contact_flow_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AssociateLexBotOutput {}
 impl std::fmt::Debug for AssociateLexBotOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -7043,6 +8783,7 @@ impl std::fmt::Debug for AssociateLexBotOutput {
 }
 /// See [`AssociateLexBotOutput`](crate::output::AssociateLexBotOutput)
 pub mod associate_lex_bot_output {
+
     /// A builder for [`AssociateLexBotOutput`](crate::output::AssociateLexBotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7073,6 +8814,7 @@ impl std::fmt::Debug for AssociateLambdaFunctionOutput {
 }
 /// See [`AssociateLambdaFunctionOutput`](crate::output::AssociateLambdaFunctionOutput)
 pub mod associate_lambda_function_output {
+
     /// A builder for [`AssociateLambdaFunctionOutput`](crate::output::AssociateLambdaFunctionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7113,6 +8855,7 @@ impl std::fmt::Debug for AssociateInstanceStorageConfigOutput {
 }
 /// See [`AssociateInstanceStorageConfigOutput`](crate::output::AssociateInstanceStorageConfigOutput)
 pub mod associate_instance_storage_config_output {
+
     /// A builder for [`AssociateInstanceStorageConfigOutput`](crate::output::AssociateInstanceStorageConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7160,6 +8903,7 @@ impl std::fmt::Debug for AssociateDefaultVocabularyOutput {
 }
 /// See [`AssociateDefaultVocabularyOutput`](crate::output::AssociateDefaultVocabularyOutput)
 pub mod associate_default_vocabulary_output {
+
     /// A builder for [`AssociateDefaultVocabularyOutput`](crate::output::AssociateDefaultVocabularyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7190,6 +8934,7 @@ impl std::fmt::Debug for AssociateBotOutput {
 }
 /// See [`AssociateBotOutput`](crate::output::AssociateBotOutput)
 pub mod associate_bot_output {
+
     /// A builder for [`AssociateBotOutput`](crate::output::AssociateBotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7220,6 +8965,7 @@ impl std::fmt::Debug for AssociateApprovedOriginOutput {
 }
 /// See [`AssociateApprovedOriginOutput`](crate::output::AssociateApprovedOriginOutput)
 pub mod associate_approved_origin_output {
+
     /// A builder for [`AssociateApprovedOriginOutput`](crate::output::AssociateApprovedOriginOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

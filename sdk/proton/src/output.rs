@@ -21,6 +21,7 @@ impl std::fmt::Debug for CreateTemplateSyncConfigOutput {
 }
 /// See [`CreateTemplateSyncConfigOutput`](crate::output::CreateTemplateSyncConfigOutput)
 pub mod create_template_sync_config_output {
+
     /// A builder for [`CreateTemplateSyncConfigOutput`](crate::output::CreateTemplateSyncConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -78,6 +79,7 @@ impl std::fmt::Debug for DeleteTemplateSyncConfigOutput {
 }
 /// See [`DeleteTemplateSyncConfigOutput`](crate::output::DeleteTemplateSyncConfigOutput)
 pub mod delete_template_sync_config_output {
+
     /// A builder for [`DeleteTemplateSyncConfigOutput`](crate::output::DeleteTemplateSyncConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -135,6 +137,7 @@ impl std::fmt::Debug for UpdateTemplateSyncConfigOutput {
 }
 /// See [`UpdateTemplateSyncConfigOutput`](crate::output::UpdateTemplateSyncConfigOutput)
 pub mod update_template_sync_config_output {
+
     /// A builder for [`UpdateTemplateSyncConfigOutput`](crate::output::UpdateTemplateSyncConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -192,6 +195,7 @@ impl std::fmt::Debug for GetTemplateSyncConfigOutput {
 }
 /// See [`GetTemplateSyncConfigOutput`](crate::output::GetTemplateSyncConfigOutput)
 pub mod get_template_sync_config_output {
+
     /// A builder for [`GetTemplateSyncConfigOutput`](crate::output::GetTemplateSyncConfigOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -259,6 +263,7 @@ impl std::fmt::Debug for ListServiceTemplateVersionsOutput {
 }
 /// See [`ListServiceTemplateVersionsOutput`](crate::output::ListServiceTemplateVersionsOutput)
 pub mod list_service_template_versions_output {
+
     /// A builder for [`ListServiceTemplateVersionsOutput`](crate::output::ListServiceTemplateVersionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -340,6 +345,7 @@ impl std::fmt::Debug for CreateServiceTemplateVersionOutput {
 }
 /// See [`CreateServiceTemplateVersionOutput`](crate::output::CreateServiceTemplateVersionOutput)
 pub mod create_service_template_version_output {
+
     /// A builder for [`CreateServiceTemplateVersionOutput`](crate::output::CreateServiceTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -383,11 +389,11 @@ impl CreateServiceTemplateVersionOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteServiceTemplateVersionOutput {
-    /// <p>The service template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the service template version being deleted.</p>
     pub service_template_version: std::option::Option<crate::model::ServiceTemplateVersion>,
 }
 impl DeleteServiceTemplateVersionOutput {
-    /// <p>The service template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the service template version being deleted.</p>
     pub fn service_template_version(
         &self,
     ) -> std::option::Option<&crate::model::ServiceTemplateVersion> {
@@ -403,6 +409,7 @@ impl std::fmt::Debug for DeleteServiceTemplateVersionOutput {
 }
 /// See [`DeleteServiceTemplateVersionOutput`](crate::output::DeleteServiceTemplateVersionOutput)
 pub mod delete_service_template_version_output {
+
     /// A builder for [`DeleteServiceTemplateVersionOutput`](crate::output::DeleteServiceTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -411,7 +418,7 @@ pub mod delete_service_template_version_output {
             std::option::Option<crate::model::ServiceTemplateVersion>,
     }
     impl Builder {
-        /// <p>The service template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the service template version being deleted.</p>
         pub fn service_template_version(
             mut self,
             input: crate::model::ServiceTemplateVersion,
@@ -419,7 +426,7 @@ pub mod delete_service_template_version_output {
             self.service_template_version = Some(input);
             self
         }
-        /// <p>The service template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the service template version being deleted.</p>
         pub fn set_service_template_version(
             mut self,
             input: std::option::Option<crate::model::ServiceTemplateVersion>,
@@ -466,6 +473,7 @@ impl std::fmt::Debug for UpdateServiceTemplateVersionOutput {
 }
 /// See [`UpdateServiceTemplateVersionOutput`](crate::output::UpdateServiceTemplateVersionOutput)
 pub mod update_service_template_version_output {
+
     /// A builder for [`UpdateServiceTemplateVersionOutput`](crate::output::UpdateServiceTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -509,11 +517,11 @@ impl UpdateServiceTemplateVersionOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServiceTemplateVersionOutput {
-    /// <p>The service template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service template version.</p>
     pub service_template_version: std::option::Option<crate::model::ServiceTemplateVersion>,
 }
 impl GetServiceTemplateVersionOutput {
-    /// <p>The service template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service template version.</p>
     pub fn service_template_version(
         &self,
     ) -> std::option::Option<&crate::model::ServiceTemplateVersion> {
@@ -529,6 +537,7 @@ impl std::fmt::Debug for GetServiceTemplateVersionOutput {
 }
 /// See [`GetServiceTemplateVersionOutput`](crate::output::GetServiceTemplateVersionOutput)
 pub mod get_service_template_version_output {
+
     /// A builder for [`GetServiceTemplateVersionOutput`](crate::output::GetServiceTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -537,7 +546,7 @@ pub mod get_service_template_version_output {
             std::option::Option<crate::model::ServiceTemplateVersion>,
     }
     impl Builder {
-        /// <p>The service template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service template version.</p>
         pub fn service_template_version(
             mut self,
             input: crate::model::ServiceTemplateVersion,
@@ -545,7 +554,7 @@ pub mod get_service_template_version_output {
             self.service_template_version = Some(input);
             self
         }
-        /// <p>The service template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service template version.</p>
         pub fn set_service_template_version(
             mut self,
             input: std::option::Option<crate::model::ServiceTemplateVersion>,
@@ -597,6 +606,7 @@ impl std::fmt::Debug for ListServiceTemplatesOutput {
 }
 /// See [`ListServiceTemplatesOutput`](crate::output::ListServiceTemplatesOutput)
 pub mod list_service_templates_output {
+
     /// A builder for [`ListServiceTemplatesOutput`](crate::output::ListServiceTemplatesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -673,6 +683,7 @@ impl std::fmt::Debug for CreateServiceTemplateOutput {
 }
 /// See [`CreateServiceTemplateOutput`](crate::output::CreateServiceTemplateOutput)
 pub mod create_service_template_output {
+
     /// A builder for [`CreateServiceTemplateOutput`](crate::output::CreateServiceTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -712,11 +723,11 @@ impl CreateServiceTemplateOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteServiceTemplateOutput {
-    /// <p>The service template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the service template being deleted.</p>
     pub service_template: std::option::Option<crate::model::ServiceTemplate>,
 }
 impl DeleteServiceTemplateOutput {
-    /// <p>The service template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the service template being deleted.</p>
     pub fn service_template(&self) -> std::option::Option<&crate::model::ServiceTemplate> {
         self.service_template.as_ref()
     }
@@ -730,6 +741,7 @@ impl std::fmt::Debug for DeleteServiceTemplateOutput {
 }
 /// See [`DeleteServiceTemplateOutput`](crate::output::DeleteServiceTemplateOutput)
 pub mod delete_service_template_output {
+
     /// A builder for [`DeleteServiceTemplateOutput`](crate::output::DeleteServiceTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -737,12 +749,12 @@ pub mod delete_service_template_output {
         pub(crate) service_template: std::option::Option<crate::model::ServiceTemplate>,
     }
     impl Builder {
-        /// <p>The service template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the service template being deleted.</p>
         pub fn service_template(mut self, input: crate::model::ServiceTemplate) -> Self {
             self.service_template = Some(input);
             self
         }
-        /// <p>The service template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the service template being deleted.</p>
         pub fn set_service_template(
             mut self,
             input: std::option::Option<crate::model::ServiceTemplate>,
@@ -787,6 +799,7 @@ impl std::fmt::Debug for UpdateServiceTemplateOutput {
 }
 /// See [`UpdateServiceTemplateOutput`](crate::output::UpdateServiceTemplateOutput)
 pub mod update_service_template_output {
+
     /// A builder for [`UpdateServiceTemplateOutput`](crate::output::UpdateServiceTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -826,11 +839,11 @@ impl UpdateServiceTemplateOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServiceTemplateOutput {
-    /// <p>The service template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service template.</p>
     pub service_template: std::option::Option<crate::model::ServiceTemplate>,
 }
 impl GetServiceTemplateOutput {
-    /// <p>The service template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service template.</p>
     pub fn service_template(&self) -> std::option::Option<&crate::model::ServiceTemplate> {
         self.service_template.as_ref()
     }
@@ -844,6 +857,7 @@ impl std::fmt::Debug for GetServiceTemplateOutput {
 }
 /// See [`GetServiceTemplateOutput`](crate::output::GetServiceTemplateOutput)
 pub mod get_service_template_output {
+
     /// A builder for [`GetServiceTemplateOutput`](crate::output::GetServiceTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -851,12 +865,12 @@ pub mod get_service_template_output {
         pub(crate) service_template: std::option::Option<crate::model::ServiceTemplate>,
     }
     impl Builder {
-        /// <p>The service template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service template.</p>
         pub fn service_template(mut self, input: crate::model::ServiceTemplate) -> Self {
             self.service_template = Some(input);
             self
         }
-        /// <p>The service template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service template.</p>
         pub fn set_service_template(
             mut self,
             input: std::option::Option<crate::model::ServiceTemplate>,
@@ -908,6 +922,7 @@ impl std::fmt::Debug for ListServicesOutput {
 }
 /// See [`ListServicesOutput`](crate::output::ListServicesOutput)
 pub mod list_services_output {
+
     /// A builder for [`ListServicesOutput`](crate::output::ListServicesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -983,6 +998,7 @@ impl std::fmt::Debug for CreateServiceOutput {
 }
 /// See [`CreateServiceOutput`](crate::output::CreateServiceOutput)
 pub mod create_service_output {
+
     /// A builder for [`CreateServiceOutput`](crate::output::CreateServiceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1019,11 +1035,11 @@ impl CreateServiceOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteServiceOutput {
-    /// <p>The service detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the service being deleted.</p>
     pub service: std::option::Option<crate::model::Service>,
 }
 impl DeleteServiceOutput {
-    /// <p>The service detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the service being deleted.</p>
     pub fn service(&self) -> std::option::Option<&crate::model::Service> {
         self.service.as_ref()
     }
@@ -1037,6 +1053,7 @@ impl std::fmt::Debug for DeleteServiceOutput {
 }
 /// See [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
 pub mod delete_service_output {
+
     /// A builder for [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1044,12 +1061,12 @@ pub mod delete_service_output {
         pub(crate) service: std::option::Option<crate::model::Service>,
     }
     impl Builder {
-        /// <p>The service detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the service being deleted.</p>
         pub fn service(mut self, input: crate::model::Service) -> Self {
             self.service = Some(input);
             self
         }
-        /// <p>The service detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the service being deleted.</p>
         pub fn set_service(mut self, input: std::option::Option<crate::model::Service>) -> Self {
             self.service = input;
             self
@@ -1091,6 +1108,7 @@ impl std::fmt::Debug for UpdateServiceOutput {
 }
 /// See [`UpdateServiceOutput`](crate::output::UpdateServiceOutput)
 pub mod update_service_output {
+
     /// A builder for [`UpdateServiceOutput`](crate::output::UpdateServiceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1127,11 +1145,11 @@ impl UpdateServiceOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServiceOutput {
-    /// <p>The service detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service.</p>
     pub service: std::option::Option<crate::model::Service>,
 }
 impl GetServiceOutput {
-    /// <p>The service detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service.</p>
     pub fn service(&self) -> std::option::Option<&crate::model::Service> {
         self.service.as_ref()
     }
@@ -1145,6 +1163,7 @@ impl std::fmt::Debug for GetServiceOutput {
 }
 /// See [`GetServiceOutput`](crate::output::GetServiceOutput)
 pub mod get_service_output {
+
     /// A builder for [`GetServiceOutput`](crate::output::GetServiceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1152,12 +1171,12 @@ pub mod get_service_output {
         pub(crate) service: std::option::Option<crate::model::Service>,
     }
     impl Builder {
-        /// <p>The service detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service.</p>
         pub fn service(mut self, input: crate::model::Service) -> Self {
             self.service = Some(input);
             self
         }
-        /// <p>The service detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service.</p>
         pub fn set_service(mut self, input: std::option::Option<crate::model::Service>) -> Self {
             self.service = input;
             self
@@ -1199,6 +1218,7 @@ impl std::fmt::Debug for UpdateServicePipelineOutput {
 }
 /// See [`UpdateServicePipelineOutput`](crate::output::UpdateServicePipelineOutput)
 pub mod update_service_pipeline_output {
+
     /// A builder for [`UpdateServicePipelineOutput`](crate::output::UpdateServicePipelineOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1266,6 +1286,7 @@ impl std::fmt::Debug for ListServicePipelineProvisionedResourcesOutput {
 }
 /// See [`ListServicePipelineProvisionedResourcesOutput`](crate::output::ListServicePipelineProvisionedResourcesOutput)
 pub mod list_service_pipeline_provisioned_resources_output {
+
     /// A builder for [`ListServicePipelineProvisionedResourcesOutput`](crate::output::ListServicePipelineProvisionedResourcesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1326,7 +1347,7 @@ impl ListServicePipelineProvisionedResourcesOutput {
 pub struct ListServicePipelineOutputsOutput {
     /// <p>A token that indicates the location of the next output in the array of outputs, after the current requested list of outputs.</p>
     pub next_token: std::option::Option<std::string::String>,
-    /// <p>An array of outputs.</p>
+    /// <p>An array of service pipeline Infrastructure as Code (IaC) outputs.</p>
     pub outputs: std::option::Option<std::vec::Vec<crate::model::Output>>,
 }
 impl ListServicePipelineOutputsOutput {
@@ -1334,7 +1355,7 @@ impl ListServicePipelineOutputsOutput {
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
-    /// <p>An array of outputs.</p>
+    /// <p>An array of service pipeline Infrastructure as Code (IaC) outputs.</p>
     pub fn outputs(&self) -> std::option::Option<&[crate::model::Output]> {
         self.outputs.as_deref()
     }
@@ -1349,6 +1370,7 @@ impl std::fmt::Debug for ListServicePipelineOutputsOutput {
 }
 /// See [`ListServicePipelineOutputsOutput`](crate::output::ListServicePipelineOutputsOutput)
 pub mod list_service_pipeline_outputs_output {
+
     /// A builder for [`ListServicePipelineOutputsOutput`](crate::output::ListServicePipelineOutputsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1371,14 +1393,14 @@ pub mod list_service_pipeline_outputs_output {
         ///
         /// To override the contents of this collection use [`set_outputs`](Self::set_outputs).
         ///
-        /// <p>An array of outputs.</p>
+        /// <p>An array of service pipeline Infrastructure as Code (IaC) outputs.</p>
         pub fn outputs(mut self, input: crate::model::Output) -> Self {
             let mut v = self.outputs.unwrap_or_default();
             v.push(input);
             self.outputs = Some(v);
             self
         }
-        /// <p>An array of outputs.</p>
+        /// <p>An array of service pipeline Infrastructure as Code (IaC) outputs.</p>
         pub fn set_outputs(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::Output>>,
@@ -1408,7 +1430,7 @@ impl ListServicePipelineOutputsOutput {
 pub struct ListServiceInstancesOutput {
     /// <p>A token that indicates the location of the next service instance in the array of service instances, after the current requested list of service instances.</p>
     pub next_token: std::option::Option<std::string::String>,
-    /// <p>An array of service instances with summaries of detail data.</p>
+    /// <p>An array of service instances with summary data.</p>
     pub service_instances: std::option::Option<std::vec::Vec<crate::model::ServiceInstanceSummary>>,
 }
 impl ListServiceInstancesOutput {
@@ -1416,7 +1438,7 @@ impl ListServiceInstancesOutput {
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
-    /// <p>An array of service instances with summaries of detail data.</p>
+    /// <p>An array of service instances with summary data.</p>
     pub fn service_instances(
         &self,
     ) -> std::option::Option<&[crate::model::ServiceInstanceSummary]> {
@@ -1433,6 +1455,7 @@ impl std::fmt::Debug for ListServiceInstancesOutput {
 }
 /// See [`ListServiceInstancesOutput`](crate::output::ListServiceInstancesOutput)
 pub mod list_service_instances_output {
+
     /// A builder for [`ListServiceInstancesOutput`](crate::output::ListServiceInstancesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1456,14 +1479,14 @@ pub mod list_service_instances_output {
         ///
         /// To override the contents of this collection use [`set_service_instances`](Self::set_service_instances).
         ///
-        /// <p>An array of service instances with summaries of detail data.</p>
+        /// <p>An array of service instances with summary data.</p>
         pub fn service_instances(mut self, input: crate::model::ServiceInstanceSummary) -> Self {
             let mut v = self.service_instances.unwrap_or_default();
             v.push(input);
             self.service_instances = Some(v);
             self
         }
-        /// <p>An array of service instances with summaries of detail data.</p>
+        /// <p>An array of service instances with summary data.</p>
         pub fn set_service_instances(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::ServiceInstanceSummary>>,
@@ -1509,6 +1532,7 @@ impl std::fmt::Debug for UpdateServiceInstanceOutput {
 }
 /// See [`UpdateServiceInstanceOutput`](crate::output::UpdateServiceInstanceOutput)
 pub mod update_service_instance_output {
+
     /// A builder for [`UpdateServiceInstanceOutput`](crate::output::UpdateServiceInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1548,11 +1572,11 @@ impl UpdateServiceInstanceOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetServiceInstanceOutput {
-    /// <p>The service instance detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service instance.</p>
     pub service_instance: std::option::Option<crate::model::ServiceInstance>,
 }
 impl GetServiceInstanceOutput {
-    /// <p>The service instance detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested service instance.</p>
     pub fn service_instance(&self) -> std::option::Option<&crate::model::ServiceInstance> {
         self.service_instance.as_ref()
     }
@@ -1566,6 +1590,7 @@ impl std::fmt::Debug for GetServiceInstanceOutput {
 }
 /// See [`GetServiceInstanceOutput`](crate::output::GetServiceInstanceOutput)
 pub mod get_service_instance_output {
+
     /// A builder for [`GetServiceInstanceOutput`](crate::output::GetServiceInstanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1573,12 +1598,12 @@ pub mod get_service_instance_output {
         pub(crate) service_instance: std::option::Option<crate::model::ServiceInstance>,
     }
     impl Builder {
-        /// <p>The service instance detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service instance.</p>
         pub fn service_instance(mut self, input: crate::model::ServiceInstance) -> Self {
             self.service_instance = Some(input);
             self
         }
-        /// <p>The service instance detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested service instance.</p>
         pub fn set_service_instance(
             mut self,
             input: std::option::Option<crate::model::ServiceInstance>,
@@ -1633,6 +1658,7 @@ impl std::fmt::Debug for ListServiceInstanceProvisionedResourcesOutput {
 }
 /// See [`ListServiceInstanceProvisionedResourcesOutput`](crate::output::ListServiceInstanceProvisionedResourcesOutput)
 pub mod list_service_instance_provisioned_resources_output {
+
     /// A builder for [`ListServiceInstanceProvisionedResourcesOutput`](crate::output::ListServiceInstanceProvisionedResourcesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1693,7 +1719,7 @@ impl ListServiceInstanceProvisionedResourcesOutput {
 pub struct ListServiceInstanceOutputsOutput {
     /// <p>A token that indicates the location of the next output in the array of outputs, after the current requested list of outputs.</p>
     pub next_token: std::option::Option<std::string::String>,
-    /// <p>An array of service instance infrastructure as code outputs.</p>
+    /// <p>An array of service instance Infrastructure as Code (IaC) outputs.</p>
     pub outputs: std::option::Option<std::vec::Vec<crate::model::Output>>,
 }
 impl ListServiceInstanceOutputsOutput {
@@ -1701,7 +1727,7 @@ impl ListServiceInstanceOutputsOutput {
     pub fn next_token(&self) -> std::option::Option<&str> {
         self.next_token.as_deref()
     }
-    /// <p>An array of service instance infrastructure as code outputs.</p>
+    /// <p>An array of service instance Infrastructure as Code (IaC) outputs.</p>
     pub fn outputs(&self) -> std::option::Option<&[crate::model::Output]> {
         self.outputs.as_deref()
     }
@@ -1716,6 +1742,7 @@ impl std::fmt::Debug for ListServiceInstanceOutputsOutput {
 }
 /// See [`ListServiceInstanceOutputsOutput`](crate::output::ListServiceInstanceOutputsOutput)
 pub mod list_service_instance_outputs_output {
+
     /// A builder for [`ListServiceInstanceOutputsOutput`](crate::output::ListServiceInstanceOutputsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1738,14 +1765,14 @@ pub mod list_service_instance_outputs_output {
         ///
         /// To override the contents of this collection use [`set_outputs`](Self::set_outputs).
         ///
-        /// <p>An array of service instance infrastructure as code outputs.</p>
+        /// <p>An array of service instance Infrastructure as Code (IaC) outputs.</p>
         pub fn outputs(mut self, input: crate::model::Output) -> Self {
             let mut v = self.outputs.unwrap_or_default();
             v.push(input);
             self.outputs = Some(v);
             self
         }
-        /// <p>An array of service instance infrastructure as code outputs.</p>
+        /// <p>An array of service instance Infrastructure as Code (IaC) outputs.</p>
         pub fn set_outputs(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::Output>>,
@@ -1798,6 +1825,7 @@ impl std::fmt::Debug for ListRepositoriesOutput {
 }
 /// See [`ListRepositoriesOutput`](crate::output::ListRepositoriesOutput)
 pub mod list_repositories_output {
+
     /// A builder for [`ListRepositoriesOutput`](crate::output::ListRepositoriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1874,6 +1902,7 @@ impl std::fmt::Debug for CreateRepositoryOutput {
 }
 /// See [`CreateRepositoryOutput`](crate::output::CreateRepositoryOutput)
 pub mod create_repository_output {
+
     /// A builder for [`CreateRepositoryOutput`](crate::output::CreateRepositoryOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1931,6 +1960,7 @@ impl std::fmt::Debug for DeleteRepositoryOutput {
 }
 /// See [`DeleteRepositoryOutput`](crate::output::DeleteRepositoryOutput)
 pub mod delete_repository_output {
+
     /// A builder for [`DeleteRepositoryOutput`](crate::output::DeleteRepositoryOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1988,6 +2018,7 @@ impl std::fmt::Debug for GetRepositoryOutput {
 }
 /// See [`GetRepositoryOutput`](crate::output::GetRepositoryOutput)
 pub mod get_repository_output {
+
     /// A builder for [`GetRepositoryOutput`](crate::output::GetRepositoryOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2055,6 +2086,7 @@ impl std::fmt::Debug for ListEnvironmentTemplateVersionsOutput {
 }
 /// See [`ListEnvironmentTemplateVersionsOutput`](crate::output::ListEnvironmentTemplateVersionsOutput)
 pub mod list_environment_template_versions_output {
+
     /// A builder for [`ListEnvironmentTemplateVersionsOutput`](crate::output::ListEnvironmentTemplateVersionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2141,6 +2173,7 @@ impl std::fmt::Debug for CreateEnvironmentTemplateVersionOutput {
 }
 /// See [`CreateEnvironmentTemplateVersionOutput`](crate::output::CreateEnvironmentTemplateVersionOutput)
 pub mod create_environment_template_version_output {
+
     /// A builder for [`CreateEnvironmentTemplateVersionOutput`](crate::output::CreateEnvironmentTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2184,11 +2217,11 @@ impl CreateEnvironmentTemplateVersionOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEnvironmentTemplateVersionOutput {
-    /// <p>The environment template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment template version being deleted.</p>
     pub environment_template_version: std::option::Option<crate::model::EnvironmentTemplateVersion>,
 }
 impl DeleteEnvironmentTemplateVersionOutput {
-    /// <p>The environment template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment template version being deleted.</p>
     pub fn environment_template_version(
         &self,
     ) -> std::option::Option<&crate::model::EnvironmentTemplateVersion> {
@@ -2207,6 +2240,7 @@ impl std::fmt::Debug for DeleteEnvironmentTemplateVersionOutput {
 }
 /// See [`DeleteEnvironmentTemplateVersionOutput`](crate::output::DeleteEnvironmentTemplateVersionOutput)
 pub mod delete_environment_template_version_output {
+
     /// A builder for [`DeleteEnvironmentTemplateVersionOutput`](crate::output::DeleteEnvironmentTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2215,7 +2249,7 @@ pub mod delete_environment_template_version_output {
             std::option::Option<crate::model::EnvironmentTemplateVersion>,
     }
     impl Builder {
-        /// <p>The environment template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment template version being deleted.</p>
         pub fn environment_template_version(
             mut self,
             input: crate::model::EnvironmentTemplateVersion,
@@ -2223,7 +2257,7 @@ pub mod delete_environment_template_version_output {
             self.environment_template_version = Some(input);
             self
         }
-        /// <p>The environment template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment template version being deleted.</p>
         pub fn set_environment_template_version(
             mut self,
             input: std::option::Option<crate::model::EnvironmentTemplateVersion>,
@@ -2273,6 +2307,7 @@ impl std::fmt::Debug for UpdateEnvironmentTemplateVersionOutput {
 }
 /// See [`UpdateEnvironmentTemplateVersionOutput`](crate::output::UpdateEnvironmentTemplateVersionOutput)
 pub mod update_environment_template_version_output {
+
     /// A builder for [`UpdateEnvironmentTemplateVersionOutput`](crate::output::UpdateEnvironmentTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2316,11 +2351,11 @@ impl UpdateEnvironmentTemplateVersionOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEnvironmentTemplateVersionOutput {
-    /// <p>The environment template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment template version.</p>
     pub environment_template_version: std::option::Option<crate::model::EnvironmentTemplateVersion>,
 }
 impl GetEnvironmentTemplateVersionOutput {
-    /// <p>The environment template version detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment template version.</p>
     pub fn environment_template_version(
         &self,
     ) -> std::option::Option<&crate::model::EnvironmentTemplateVersion> {
@@ -2339,6 +2374,7 @@ impl std::fmt::Debug for GetEnvironmentTemplateVersionOutput {
 }
 /// See [`GetEnvironmentTemplateVersionOutput`](crate::output::GetEnvironmentTemplateVersionOutput)
 pub mod get_environment_template_version_output {
+
     /// A builder for [`GetEnvironmentTemplateVersionOutput`](crate::output::GetEnvironmentTemplateVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2347,7 +2383,7 @@ pub mod get_environment_template_version_output {
             std::option::Option<crate::model::EnvironmentTemplateVersion>,
     }
     impl Builder {
-        /// <p>The environment template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment template version.</p>
         pub fn environment_template_version(
             mut self,
             input: crate::model::EnvironmentTemplateVersion,
@@ -2355,7 +2391,7 @@ pub mod get_environment_template_version_output {
             self.environment_template_version = Some(input);
             self
         }
-        /// <p>The environment template version detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment template version.</p>
         pub fn set_environment_template_version(
             mut self,
             input: std::option::Option<crate::model::EnvironmentTemplateVersion>,
@@ -2407,6 +2443,7 @@ impl std::fmt::Debug for ListEnvironmentTemplatesOutput {
 }
 /// See [`ListEnvironmentTemplatesOutput`](crate::output::ListEnvironmentTemplatesOutput)
 pub mod list_environment_templates_output {
+
     /// A builder for [`ListEnvironmentTemplatesOutput`](crate::output::ListEnvironmentTemplatesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2483,6 +2520,7 @@ impl std::fmt::Debug for CreateEnvironmentTemplateOutput {
 }
 /// See [`CreateEnvironmentTemplateOutput`](crate::output::CreateEnvironmentTemplateOutput)
 pub mod create_environment_template_output {
+
     /// A builder for [`CreateEnvironmentTemplateOutput`](crate::output::CreateEnvironmentTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2522,11 +2560,11 @@ impl CreateEnvironmentTemplateOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEnvironmentTemplateOutput {
-    /// <p>The environment template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment template being deleted.</p>
     pub environment_template: std::option::Option<crate::model::EnvironmentTemplate>,
 }
 impl DeleteEnvironmentTemplateOutput {
-    /// <p>The environment template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment template being deleted.</p>
     pub fn environment_template(&self) -> std::option::Option<&crate::model::EnvironmentTemplate> {
         self.environment_template.as_ref()
     }
@@ -2540,6 +2578,7 @@ impl std::fmt::Debug for DeleteEnvironmentTemplateOutput {
 }
 /// See [`DeleteEnvironmentTemplateOutput`](crate::output::DeleteEnvironmentTemplateOutput)
 pub mod delete_environment_template_output {
+
     /// A builder for [`DeleteEnvironmentTemplateOutput`](crate::output::DeleteEnvironmentTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2547,12 +2586,12 @@ pub mod delete_environment_template_output {
         pub(crate) environment_template: std::option::Option<crate::model::EnvironmentTemplate>,
     }
     impl Builder {
-        /// <p>The environment template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment template being deleted.</p>
         pub fn environment_template(mut self, input: crate::model::EnvironmentTemplate) -> Self {
             self.environment_template = Some(input);
             self
         }
-        /// <p>The environment template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment template being deleted.</p>
         pub fn set_environment_template(
             mut self,
             input: std::option::Option<crate::model::EnvironmentTemplate>,
@@ -2597,6 +2636,7 @@ impl std::fmt::Debug for UpdateEnvironmentTemplateOutput {
 }
 /// See [`UpdateEnvironmentTemplateOutput`](crate::output::UpdateEnvironmentTemplateOutput)
 pub mod update_environment_template_output {
+
     /// A builder for [`UpdateEnvironmentTemplateOutput`](crate::output::UpdateEnvironmentTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2636,11 +2676,11 @@ impl UpdateEnvironmentTemplateOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEnvironmentTemplateOutput {
-    /// <p>The environment template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment template.</p>
     pub environment_template: std::option::Option<crate::model::EnvironmentTemplate>,
 }
 impl GetEnvironmentTemplateOutput {
-    /// <p>The environment template detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment template.</p>
     pub fn environment_template(&self) -> std::option::Option<&crate::model::EnvironmentTemplate> {
         self.environment_template.as_ref()
     }
@@ -2654,6 +2694,7 @@ impl std::fmt::Debug for GetEnvironmentTemplateOutput {
 }
 /// See [`GetEnvironmentTemplateOutput`](crate::output::GetEnvironmentTemplateOutput)
 pub mod get_environment_template_output {
+
     /// A builder for [`GetEnvironmentTemplateOutput`](crate::output::GetEnvironmentTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2661,12 +2702,12 @@ pub mod get_environment_template_output {
         pub(crate) environment_template: std::option::Option<crate::model::EnvironmentTemplate>,
     }
     impl Builder {
-        /// <p>The environment template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment template.</p>
         pub fn environment_template(mut self, input: crate::model::EnvironmentTemplate) -> Self {
             self.environment_template = Some(input);
             self
         }
-        /// <p>The environment template detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment template.</p>
         pub fn set_environment_template(
             mut self,
             input: std::option::Option<crate::model::EnvironmentTemplate>,
@@ -2718,6 +2759,7 @@ impl std::fmt::Debug for ListEnvironmentsOutput {
 }
 /// See [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
 pub mod list_environments_output {
+
     /// A builder for [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2794,6 +2836,7 @@ impl std::fmt::Debug for CreateEnvironmentOutput {
 }
 /// See [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
 pub mod create_environment_output {
+
     /// A builder for [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2833,11 +2876,11 @@ impl CreateEnvironmentOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEnvironmentOutput {
-    /// <p>The environment detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment being deleted.</p>
     pub environment: std::option::Option<crate::model::Environment>,
 }
 impl DeleteEnvironmentOutput {
-    /// <p>The environment detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment being deleted.</p>
     pub fn environment(&self) -> std::option::Option<&crate::model::Environment> {
         self.environment.as_ref()
     }
@@ -2851,6 +2894,7 @@ impl std::fmt::Debug for DeleteEnvironmentOutput {
 }
 /// See [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
 pub mod delete_environment_output {
+
     /// A builder for [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2858,12 +2902,12 @@ pub mod delete_environment_output {
         pub(crate) environment: std::option::Option<crate::model::Environment>,
     }
     impl Builder {
-        /// <p>The environment detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment being deleted.</p>
         pub fn environment(mut self, input: crate::model::Environment) -> Self {
             self.environment = Some(input);
             self
         }
-        /// <p>The environment detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment being deleted.</p>
         pub fn set_environment(
             mut self,
             input: std::option::Option<crate::model::Environment>,
@@ -2908,6 +2952,7 @@ impl std::fmt::Debug for UpdateEnvironmentOutput {
 }
 /// See [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput)
 pub mod update_environment_output {
+
     /// A builder for [`UpdateEnvironmentOutput`](crate::output::UpdateEnvironmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2947,11 +2992,11 @@ impl UpdateEnvironmentOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEnvironmentOutput {
-    /// <p>The environment detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment.</p>
     pub environment: std::option::Option<crate::model::Environment>,
 }
 impl GetEnvironmentOutput {
-    /// <p>The environment detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment.</p>
     pub fn environment(&self) -> std::option::Option<&crate::model::Environment> {
         self.environment.as_ref()
     }
@@ -2965,6 +3010,7 @@ impl std::fmt::Debug for GetEnvironmentOutput {
 }
 /// See [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
 pub mod get_environment_output {
+
     /// A builder for [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2972,12 +3018,12 @@ pub mod get_environment_output {
         pub(crate) environment: std::option::Option<crate::model::Environment>,
     }
     impl Builder {
-        /// <p>The environment detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment.</p>
         pub fn environment(mut self, input: crate::model::Environment) -> Self {
             self.environment = Some(input);
             self
         }
-        /// <p>The environment detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment.</p>
         pub fn set_environment(
             mut self,
             input: std::option::Option<crate::model::Environment>,
@@ -3032,6 +3078,7 @@ impl std::fmt::Debug for ListEnvironmentProvisionedResourcesOutput {
 }
 /// See [`ListEnvironmentProvisionedResourcesOutput`](crate::output::ListEnvironmentProvisionedResourcesOutput)
 pub mod list_environment_provisioned_resources_output {
+
     /// A builder for [`ListEnvironmentProvisionedResourcesOutput`](crate::output::ListEnvironmentProvisionedResourcesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3115,6 +3162,7 @@ impl std::fmt::Debug for ListEnvironmentOutputsOutput {
 }
 /// See [`ListEnvironmentOutputsOutput`](crate::output::ListEnvironmentOutputsOutput)
 pub mod list_environment_outputs_output {
+
     /// A builder for [`ListEnvironmentOutputsOutput`](crate::output::ListEnvironmentOutputsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3196,6 +3244,7 @@ impl std::fmt::Debug for RejectEnvironmentAccountConnectionOutput {
 }
 /// See [`RejectEnvironmentAccountConnectionOutput`](crate::output::RejectEnvironmentAccountConnectionOutput)
 pub mod reject_environment_account_connection_output {
+
     /// A builder for [`RejectEnvironmentAccountConnectionOutput`](crate::output::RejectEnvironmentAccountConnectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3263,6 +3312,7 @@ impl std::fmt::Debug for AcceptEnvironmentAccountConnectionOutput {
 }
 /// See [`AcceptEnvironmentAccountConnectionOutput`](crate::output::AcceptEnvironmentAccountConnectionOutput)
 pub mod accept_environment_account_connection_output {
+
     /// A builder for [`AcceptEnvironmentAccountConnectionOutput`](crate::output::AcceptEnvironmentAccountConnectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3337,6 +3387,7 @@ impl std::fmt::Debug for ListEnvironmentAccountConnectionsOutput {
 }
 /// See [`ListEnvironmentAccountConnectionsOutput`](crate::output::ListEnvironmentAccountConnectionsOutput)
 pub mod list_environment_account_connections_output {
+
     /// A builder for [`ListEnvironmentAccountConnectionsOutput`](crate::output::ListEnvironmentAccountConnectionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3424,6 +3475,7 @@ impl std::fmt::Debug for CreateEnvironmentAccountConnectionOutput {
 }
 /// See [`CreateEnvironmentAccountConnectionOutput`](crate::output::CreateEnvironmentAccountConnectionOutput)
 pub mod create_environment_account_connection_output {
+
     /// A builder for [`CreateEnvironmentAccountConnectionOutput`](crate::output::CreateEnvironmentAccountConnectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3467,12 +3519,12 @@ impl CreateEnvironmentAccountConnectionOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteEnvironmentAccountConnectionOutput {
-    /// <p>The environment account connection detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment account connection being deleted.</p>
     pub environment_account_connection:
         std::option::Option<crate::model::EnvironmentAccountConnection>,
 }
 impl DeleteEnvironmentAccountConnectionOutput {
-    /// <p>The environment account connection detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the environment account connection being deleted.</p>
     pub fn environment_account_connection(
         &self,
     ) -> std::option::Option<&crate::model::EnvironmentAccountConnection> {
@@ -3491,6 +3543,7 @@ impl std::fmt::Debug for DeleteEnvironmentAccountConnectionOutput {
 }
 /// See [`DeleteEnvironmentAccountConnectionOutput`](crate::output::DeleteEnvironmentAccountConnectionOutput)
 pub mod delete_environment_account_connection_output {
+
     /// A builder for [`DeleteEnvironmentAccountConnectionOutput`](crate::output::DeleteEnvironmentAccountConnectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3499,7 +3552,7 @@ pub mod delete_environment_account_connection_output {
             std::option::Option<crate::model::EnvironmentAccountConnection>,
     }
     impl Builder {
-        /// <p>The environment account connection detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment account connection being deleted.</p>
         pub fn environment_account_connection(
             mut self,
             input: crate::model::EnvironmentAccountConnection,
@@ -3507,7 +3560,7 @@ pub mod delete_environment_account_connection_output {
             self.environment_account_connection = Some(input);
             self
         }
-        /// <p>The environment account connection detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the environment account connection being deleted.</p>
         pub fn set_environment_account_connection(
             mut self,
             input: std::option::Option<crate::model::EnvironmentAccountConnection>,
@@ -3558,6 +3611,7 @@ impl std::fmt::Debug for UpdateEnvironmentAccountConnectionOutput {
 }
 /// See [`UpdateEnvironmentAccountConnectionOutput`](crate::output::UpdateEnvironmentAccountConnectionOutput)
 pub mod update_environment_account_connection_output {
+
     /// A builder for [`UpdateEnvironmentAccountConnectionOutput`](crate::output::UpdateEnvironmentAccountConnectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3601,12 +3655,12 @@ impl UpdateEnvironmentAccountConnectionOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetEnvironmentAccountConnectionOutput {
-    /// <p>The environment account connection detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment account connection.</p>
     pub environment_account_connection:
         std::option::Option<crate::model::EnvironmentAccountConnection>,
 }
 impl GetEnvironmentAccountConnectionOutput {
-    /// <p>The environment account connection detail data that's returned by Proton.</p>
+    /// <p>The detailed data of the requested environment account connection.</p>
     pub fn environment_account_connection(
         &self,
     ) -> std::option::Option<&crate::model::EnvironmentAccountConnection> {
@@ -3625,6 +3679,7 @@ impl std::fmt::Debug for GetEnvironmentAccountConnectionOutput {
 }
 /// See [`GetEnvironmentAccountConnectionOutput`](crate::output::GetEnvironmentAccountConnectionOutput)
 pub mod get_environment_account_connection_output {
+
     /// A builder for [`GetEnvironmentAccountConnectionOutput`](crate::output::GetEnvironmentAccountConnectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3633,7 +3688,7 @@ pub mod get_environment_account_connection_output {
             std::option::Option<crate::model::EnvironmentAccountConnection>,
     }
     impl Builder {
-        /// <p>The environment account connection detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment account connection.</p>
         pub fn environment_account_connection(
             mut self,
             input: crate::model::EnvironmentAccountConnection,
@@ -3641,7 +3696,7 @@ pub mod get_environment_account_connection_output {
             self.environment_account_connection = Some(input);
             self
         }
-        /// <p>The environment account connection detail data that's returned by Proton.</p>
+        /// <p>The detailed data of the requested environment account connection.</p>
         pub fn set_environment_account_connection(
             mut self,
             input: std::option::Option<crate::model::EnvironmentAccountConnection>,
@@ -3667,6 +3722,491 @@ impl GetEnvironmentAccountConnectionOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListComponentsOutput {
+    /// <p>A token that indicates the location of the next component in the array of components, after the current requested list of components.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>An array of components with summary data.</p>
+    pub components: std::option::Option<std::vec::Vec<crate::model::ComponentSummary>>,
+}
+impl ListComponentsOutput {
+    /// <p>A token that indicates the location of the next component in the array of components, after the current requested list of components.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>An array of components with summary data.</p>
+    pub fn components(&self) -> std::option::Option<&[crate::model::ComponentSummary]> {
+        self.components.as_deref()
+    }
+}
+impl std::fmt::Debug for ListComponentsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListComponentsOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field("components", &self.components);
+        formatter.finish()
+    }
+}
+/// See [`ListComponentsOutput`](crate::output::ListComponentsOutput)
+pub mod list_components_output {
+
+    /// A builder for [`ListComponentsOutput`](crate::output::ListComponentsOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) components: std::option::Option<std::vec::Vec<crate::model::ComponentSummary>>,
+    }
+    impl Builder {
+        /// <p>A token that indicates the location of the next component in the array of components, after the current requested list of components.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>A token that indicates the location of the next component in the array of components, after the current requested list of components.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `components`.
+        ///
+        /// To override the contents of this collection use [`set_components`](Self::set_components).
+        ///
+        /// <p>An array of components with summary data.</p>
+        pub fn components(mut self, input: crate::model::ComponentSummary) -> Self {
+            let mut v = self.components.unwrap_or_default();
+            v.push(input);
+            self.components = Some(v);
+            self
+        }
+        /// <p>An array of components with summary data.</p>
+        pub fn set_components(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ComponentSummary>>,
+        ) -> Self {
+            self.components = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListComponentsOutput`](crate::output::ListComponentsOutput)
+        pub fn build(self) -> crate::output::ListComponentsOutput {
+            crate::output::ListComponentsOutput {
+                next_token: self.next_token,
+                components: self.components,
+            }
+        }
+    }
+}
+impl ListComponentsOutput {
+    /// Creates a new builder-style object to manufacture [`ListComponentsOutput`](crate::output::ListComponentsOutput)
+    pub fn builder() -> crate::output::list_components_output::Builder {
+        crate::output::list_components_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateComponentOutput {
+    /// <p>The detailed data of the created component.</p>
+    pub component: std::option::Option<crate::model::Component>,
+}
+impl CreateComponentOutput {
+    /// <p>The detailed data of the created component.</p>
+    pub fn component(&self) -> std::option::Option<&crate::model::Component> {
+        self.component.as_ref()
+    }
+}
+impl std::fmt::Debug for CreateComponentOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateComponentOutput");
+        formatter.field("component", &self.component);
+        formatter.finish()
+    }
+}
+/// See [`CreateComponentOutput`](crate::output::CreateComponentOutput)
+pub mod create_component_output {
+
+    /// A builder for [`CreateComponentOutput`](crate::output::CreateComponentOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) component: std::option::Option<crate::model::Component>,
+    }
+    impl Builder {
+        /// <p>The detailed data of the created component.</p>
+        pub fn component(mut self, input: crate::model::Component) -> Self {
+            self.component = Some(input);
+            self
+        }
+        /// <p>The detailed data of the created component.</p>
+        pub fn set_component(
+            mut self,
+            input: std::option::Option<crate::model::Component>,
+        ) -> Self {
+            self.component = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateComponentOutput`](crate::output::CreateComponentOutput)
+        pub fn build(self) -> crate::output::CreateComponentOutput {
+            crate::output::CreateComponentOutput {
+                component: self.component,
+            }
+        }
+    }
+}
+impl CreateComponentOutput {
+    /// Creates a new builder-style object to manufacture [`CreateComponentOutput`](crate::output::CreateComponentOutput)
+    pub fn builder() -> crate::output::create_component_output::Builder {
+        crate::output::create_component_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeleteComponentOutput {
+    /// <p>The detailed data of the component being deleted.</p>
+    pub component: std::option::Option<crate::model::Component>,
+}
+impl DeleteComponentOutput {
+    /// <p>The detailed data of the component being deleted.</p>
+    pub fn component(&self) -> std::option::Option<&crate::model::Component> {
+        self.component.as_ref()
+    }
+}
+impl std::fmt::Debug for DeleteComponentOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeleteComponentOutput");
+        formatter.field("component", &self.component);
+        formatter.finish()
+    }
+}
+/// See [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
+pub mod delete_component_output {
+
+    /// A builder for [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) component: std::option::Option<crate::model::Component>,
+    }
+    impl Builder {
+        /// <p>The detailed data of the component being deleted.</p>
+        pub fn component(mut self, input: crate::model::Component) -> Self {
+            self.component = Some(input);
+            self
+        }
+        /// <p>The detailed data of the component being deleted.</p>
+        pub fn set_component(
+            mut self,
+            input: std::option::Option<crate::model::Component>,
+        ) -> Self {
+            self.component = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
+        pub fn build(self) -> crate::output::DeleteComponentOutput {
+            crate::output::DeleteComponentOutput {
+                component: self.component,
+            }
+        }
+    }
+}
+impl DeleteComponentOutput {
+    /// Creates a new builder-style object to manufacture [`DeleteComponentOutput`](crate::output::DeleteComponentOutput)
+    pub fn builder() -> crate::output::delete_component_output::Builder {
+        crate::output::delete_component_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateComponentOutput {
+    /// <p>The detailed data of the updated component.</p>
+    pub component: std::option::Option<crate::model::Component>,
+}
+impl UpdateComponentOutput {
+    /// <p>The detailed data of the updated component.</p>
+    pub fn component(&self) -> std::option::Option<&crate::model::Component> {
+        self.component.as_ref()
+    }
+}
+impl std::fmt::Debug for UpdateComponentOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateComponentOutput");
+        formatter.field("component", &self.component);
+        formatter.finish()
+    }
+}
+/// See [`UpdateComponentOutput`](crate::output::UpdateComponentOutput)
+pub mod update_component_output {
+
+    /// A builder for [`UpdateComponentOutput`](crate::output::UpdateComponentOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) component: std::option::Option<crate::model::Component>,
+    }
+    impl Builder {
+        /// <p>The detailed data of the updated component.</p>
+        pub fn component(mut self, input: crate::model::Component) -> Self {
+            self.component = Some(input);
+            self
+        }
+        /// <p>The detailed data of the updated component.</p>
+        pub fn set_component(
+            mut self,
+            input: std::option::Option<crate::model::Component>,
+        ) -> Self {
+            self.component = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateComponentOutput`](crate::output::UpdateComponentOutput)
+        pub fn build(self) -> crate::output::UpdateComponentOutput {
+            crate::output::UpdateComponentOutput {
+                component: self.component,
+            }
+        }
+    }
+}
+impl UpdateComponentOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateComponentOutput`](crate::output::UpdateComponentOutput)
+    pub fn builder() -> crate::output::update_component_output::Builder {
+        crate::output::update_component_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetComponentOutput {
+    /// <p>The detailed data of the requested component.</p>
+    pub component: std::option::Option<crate::model::Component>,
+}
+impl GetComponentOutput {
+    /// <p>The detailed data of the requested component.</p>
+    pub fn component(&self) -> std::option::Option<&crate::model::Component> {
+        self.component.as_ref()
+    }
+}
+impl std::fmt::Debug for GetComponentOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetComponentOutput");
+        formatter.field("component", &self.component);
+        formatter.finish()
+    }
+}
+/// See [`GetComponentOutput`](crate::output::GetComponentOutput)
+pub mod get_component_output {
+
+    /// A builder for [`GetComponentOutput`](crate::output::GetComponentOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) component: std::option::Option<crate::model::Component>,
+    }
+    impl Builder {
+        /// <p>The detailed data of the requested component.</p>
+        pub fn component(mut self, input: crate::model::Component) -> Self {
+            self.component = Some(input);
+            self
+        }
+        /// <p>The detailed data of the requested component.</p>
+        pub fn set_component(
+            mut self,
+            input: std::option::Option<crate::model::Component>,
+        ) -> Self {
+            self.component = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetComponentOutput`](crate::output::GetComponentOutput)
+        pub fn build(self) -> crate::output::GetComponentOutput {
+            crate::output::GetComponentOutput {
+                component: self.component,
+            }
+        }
+    }
+}
+impl GetComponentOutput {
+    /// Creates a new builder-style object to manufacture [`GetComponentOutput`](crate::output::GetComponentOutput)
+    pub fn builder() -> crate::output::get_component_output::Builder {
+        crate::output::get_component_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListComponentProvisionedResourcesOutput {
+    /// <p>A token that indicates the location of the next provisioned resource in the array of provisioned resources, after the current requested list of provisioned resources.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>An array of provisioned resources for a component.</p>
+    pub provisioned_resources:
+        std::option::Option<std::vec::Vec<crate::model::ProvisionedResource>>,
+}
+impl ListComponentProvisionedResourcesOutput {
+    /// <p>A token that indicates the location of the next provisioned resource in the array of provisioned resources, after the current requested list of provisioned resources.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>An array of provisioned resources for a component.</p>
+    pub fn provisioned_resources(
+        &self,
+    ) -> std::option::Option<&[crate::model::ProvisionedResource]> {
+        self.provisioned_resources.as_deref()
+    }
+}
+impl std::fmt::Debug for ListComponentProvisionedResourcesOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListComponentProvisionedResourcesOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field("provisioned_resources", &self.provisioned_resources);
+        formatter.finish()
+    }
+}
+/// See [`ListComponentProvisionedResourcesOutput`](crate::output::ListComponentProvisionedResourcesOutput)
+pub mod list_component_provisioned_resources_output {
+
+    /// A builder for [`ListComponentProvisionedResourcesOutput`](crate::output::ListComponentProvisionedResourcesOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) provisioned_resources:
+            std::option::Option<std::vec::Vec<crate::model::ProvisionedResource>>,
+    }
+    impl Builder {
+        /// <p>A token that indicates the location of the next provisioned resource in the array of provisioned resources, after the current requested list of provisioned resources.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>A token that indicates the location of the next provisioned resource in the array of provisioned resources, after the current requested list of provisioned resources.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `provisioned_resources`.
+        ///
+        /// To override the contents of this collection use [`set_provisioned_resources`](Self::set_provisioned_resources).
+        ///
+        /// <p>An array of provisioned resources for a component.</p>
+        pub fn provisioned_resources(mut self, input: crate::model::ProvisionedResource) -> Self {
+            let mut v = self.provisioned_resources.unwrap_or_default();
+            v.push(input);
+            self.provisioned_resources = Some(v);
+            self
+        }
+        /// <p>An array of provisioned resources for a component.</p>
+        pub fn set_provisioned_resources(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::ProvisionedResource>>,
+        ) -> Self {
+            self.provisioned_resources = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListComponentProvisionedResourcesOutput`](crate::output::ListComponentProvisionedResourcesOutput)
+        pub fn build(self) -> crate::output::ListComponentProvisionedResourcesOutput {
+            crate::output::ListComponentProvisionedResourcesOutput {
+                next_token: self.next_token,
+                provisioned_resources: self.provisioned_resources,
+            }
+        }
+    }
+}
+impl ListComponentProvisionedResourcesOutput {
+    /// Creates a new builder-style object to manufacture [`ListComponentProvisionedResourcesOutput`](crate::output::ListComponentProvisionedResourcesOutput)
+    pub fn builder() -> crate::output::list_component_provisioned_resources_output::Builder {
+        crate::output::list_component_provisioned_resources_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListComponentOutputsOutput {
+    /// <p>A token that indicates the location of the next output in the array of outputs, after the list of outputs that was previously requested.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>An array of component Infrastructure as Code (IaC) outputs.</p>
+    pub outputs: std::option::Option<std::vec::Vec<crate::model::Output>>,
+}
+impl ListComponentOutputsOutput {
+    /// <p>A token that indicates the location of the next output in the array of outputs, after the list of outputs that was previously requested.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>An array of component Infrastructure as Code (IaC) outputs.</p>
+    pub fn outputs(&self) -> std::option::Option<&[crate::model::Output]> {
+        self.outputs.as_deref()
+    }
+}
+impl std::fmt::Debug for ListComponentOutputsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListComponentOutputsOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field("outputs", &self.outputs);
+        formatter.finish()
+    }
+}
+/// See [`ListComponentOutputsOutput`](crate::output::ListComponentOutputsOutput)
+pub mod list_component_outputs_output {
+
+    /// A builder for [`ListComponentOutputsOutput`](crate::output::ListComponentOutputsOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) outputs: std::option::Option<std::vec::Vec<crate::model::Output>>,
+    }
+    impl Builder {
+        /// <p>A token that indicates the location of the next output in the array of outputs, after the list of outputs that was previously requested.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>A token that indicates the location of the next output in the array of outputs, after the list of outputs that was previously requested.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `outputs`.
+        ///
+        /// To override the contents of this collection use [`set_outputs`](Self::set_outputs).
+        ///
+        /// <p>An array of component Infrastructure as Code (IaC) outputs.</p>
+        pub fn outputs(mut self, input: crate::model::Output) -> Self {
+            let mut v = self.outputs.unwrap_or_default();
+            v.push(input);
+            self.outputs = Some(v);
+            self
+        }
+        /// <p>An array of component Infrastructure as Code (IaC) outputs.</p>
+        pub fn set_outputs(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::Output>>,
+        ) -> Self {
+            self.outputs = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListComponentOutputsOutput`](crate::output::ListComponentOutputsOutput)
+        pub fn build(self) -> crate::output::ListComponentOutputsOutput {
+            crate::output::ListComponentOutputsOutput {
+                next_token: self.next_token,
+                outputs: self.outputs,
+            }
+        }
+    }
+}
+impl ListComponentOutputsOutput {
+    /// Creates a new builder-style object to manufacture [`ListComponentOutputsOutput`](crate::output::ListComponentOutputsOutput)
+    pub fn builder() -> crate::output::list_component_outputs_output::Builder {
+        crate::output::list_component_outputs_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateAccountSettingsOutput {
     /// <p>The Proton pipeline service role and repository data shared across the Amazon Web Services account.</p>
     pub account_settings: std::option::Option<crate::model::AccountSettings>,
@@ -3686,6 +4226,7 @@ impl std::fmt::Debug for UpdateAccountSettingsOutput {
 }
 /// See [`UpdateAccountSettingsOutput`](crate::output::UpdateAccountSettingsOutput)
 pub mod update_account_settings_output {
+
     /// A builder for [`UpdateAccountSettingsOutput`](crate::output::UpdateAccountSettingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3743,6 +4284,7 @@ impl std::fmt::Debug for GetAccountSettingsOutput {
 }
 /// See [`GetAccountSettingsOutput`](crate::output::GetAccountSettingsOutput)
 pub mod get_account_settings_output {
+
     /// A builder for [`GetAccountSettingsOutput`](crate::output::GetAccountSettingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3790,6 +4332,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3820,6 +4363,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3850,6 +4394,7 @@ impl std::fmt::Debug for NotifyResourceDeploymentStatusChangeOutput {
 }
 /// See [`NotifyResourceDeploymentStatusChangeOutput`](crate::output::NotifyResourceDeploymentStatusChangeOutput)
 pub mod notify_resource_deployment_status_change_output {
+
     /// A builder for [`NotifyResourceDeploymentStatusChangeOutput`](crate::output::NotifyResourceDeploymentStatusChangeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3897,6 +4442,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3982,6 +4528,7 @@ impl std::fmt::Debug for ListRepositorySyncDefinitionsOutput {
 }
 /// See [`ListRepositorySyncDefinitionsOutput`](crate::output::ListRepositorySyncDefinitionsOutput)
 pub mod list_repository_sync_definitions_output {
+
     /// A builder for [`ListRepositorySyncDefinitionsOutput`](crate::output::ListRepositorySyncDefinitionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4074,6 +4621,7 @@ impl std::fmt::Debug for GetTemplateSyncStatusOutput {
 }
 /// See [`GetTemplateSyncStatusOutput`](crate::output::GetTemplateSyncStatusOutput)
 pub mod get_template_sync_status_output {
+
     /// A builder for [`GetTemplateSyncStatusOutput`](crate::output::GetTemplateSyncStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4161,6 +4709,7 @@ impl std::fmt::Debug for GetRepositorySyncStatusOutput {
 }
 /// See [`GetRepositorySyncStatusOutput`](crate::output::GetRepositorySyncStatusOutput)
 pub mod get_repository_sync_status_output {
+
     /// A builder for [`GetRepositorySyncStatusOutput`](crate::output::GetRepositorySyncStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4218,6 +4767,7 @@ impl std::fmt::Debug for CancelServicePipelineDeploymentOutput {
 }
 /// See [`CancelServicePipelineDeploymentOutput`](crate::output::CancelServicePipelineDeploymentOutput)
 pub mod cancel_service_pipeline_deployment_output {
+
     /// A builder for [`CancelServicePipelineDeploymentOutput`](crate::output::CancelServicePipelineDeploymentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4275,6 +4825,7 @@ impl std::fmt::Debug for CancelServiceInstanceDeploymentOutput {
 }
 /// See [`CancelServiceInstanceDeploymentOutput`](crate::output::CancelServiceInstanceDeploymentOutput)
 pub mod cancel_service_instance_deployment_output {
+
     /// A builder for [`CancelServiceInstanceDeploymentOutput`](crate::output::CancelServiceInstanceDeploymentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4332,6 +4883,7 @@ impl std::fmt::Debug for CancelEnvironmentDeploymentOutput {
 }
 /// See [`CancelEnvironmentDeploymentOutput`](crate::output::CancelEnvironmentDeploymentOutput)
 pub mod cancel_environment_deployment_output {
+
     /// A builder for [`CancelEnvironmentDeploymentOutput`](crate::output::CancelEnvironmentDeploymentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4364,5 +4916,63 @@ impl CancelEnvironmentDeploymentOutput {
     /// Creates a new builder-style object to manufacture [`CancelEnvironmentDeploymentOutput`](crate::output::CancelEnvironmentDeploymentOutput)
     pub fn builder() -> crate::output::cancel_environment_deployment_output::Builder {
         crate::output::cancel_environment_deployment_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CancelComponentDeploymentOutput {
+    /// <p>The detailed data of the component with the deployment that is being canceled.</p>
+    pub component: std::option::Option<crate::model::Component>,
+}
+impl CancelComponentDeploymentOutput {
+    /// <p>The detailed data of the component with the deployment that is being canceled.</p>
+    pub fn component(&self) -> std::option::Option<&crate::model::Component> {
+        self.component.as_ref()
+    }
+}
+impl std::fmt::Debug for CancelComponentDeploymentOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CancelComponentDeploymentOutput");
+        formatter.field("component", &self.component);
+        formatter.finish()
+    }
+}
+/// See [`CancelComponentDeploymentOutput`](crate::output::CancelComponentDeploymentOutput)
+pub mod cancel_component_deployment_output {
+
+    /// A builder for [`CancelComponentDeploymentOutput`](crate::output::CancelComponentDeploymentOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) component: std::option::Option<crate::model::Component>,
+    }
+    impl Builder {
+        /// <p>The detailed data of the component with the deployment that is being canceled.</p>
+        pub fn component(mut self, input: crate::model::Component) -> Self {
+            self.component = Some(input);
+            self
+        }
+        /// <p>The detailed data of the component with the deployment that is being canceled.</p>
+        pub fn set_component(
+            mut self,
+            input: std::option::Option<crate::model::Component>,
+        ) -> Self {
+            self.component = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CancelComponentDeploymentOutput`](crate::output::CancelComponentDeploymentOutput)
+        pub fn build(self) -> crate::output::CancelComponentDeploymentOutput {
+            crate::output::CancelComponentDeploymentOutput {
+                component: self.component,
+            }
+        }
+    }
+}
+impl CancelComponentDeploymentOutput {
+    /// Creates a new builder-style object to manufacture [`CancelComponentDeploymentOutput`](crate::output::CancelComponentDeploymentOutput)
+    pub fn builder() -> crate::output::cancel_component_deployment_output::Builder {
+        crate::output::cancel_component_deployment_output::Builder::default()
     }
 }

@@ -527,7 +527,7 @@ impl Client {
     ///   - [`solution_version_arn(impl Into<String>)`](crate::client::fluent_builders::GetSolutionMetrics::solution_version_arn) / [`set_solution_version_arn(Option<String>)`](crate::client::fluent_builders::GetSolutionMetrics::set_solution_version_arn): <p>The Amazon Resource Name (ARN) of the solution version for which to get metrics.</p>
     /// - On success, responds with [`GetSolutionMetricsOutput`](crate::output::GetSolutionMetricsOutput) with field(s):
     ///   - [`solution_version_arn(Option<String>)`](crate::output::GetSolutionMetricsOutput::solution_version_arn): <p>The same solution version ARN as specified in the request.</p>
-    ///   - [`metrics(Option<HashMap<String, f64>>)`](crate::output::GetSolutionMetricsOutput::metrics): <p>The metrics for the solution version.</p>
+    ///   - [`metrics(Option<HashMap<String, f64>>)`](crate::output::GetSolutionMetricsOutput::metrics): <p>The metrics for the solution version. For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/working-with-training-metrics.html"> Evaluating a solution version with metrics </a>.</p>
     /// - On failure, responds with [`SdkError<GetSolutionMetricsError>`](crate::error::GetSolutionMetricsError)
     pub fn get_solution_metrics(&self) -> fluent_builders::GetSolutionMetrics {
         fluent_builders::GetSolutionMetrics::new(self.handle.clone())
@@ -737,6 +737,26 @@ impl Client {
     pub fn list_tags_for_resource(&self) -> fluent_builders::ListTagsForResource {
         fluent_builders::ListTagsForResource::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`StartRecommender`](crate::client::fluent_builders::StartRecommender) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`recommender_arn(impl Into<String>)`](crate::client::fluent_builders::StartRecommender::recommender_arn) / [`set_recommender_arn(Option<String>)`](crate::client::fluent_builders::StartRecommender::set_recommender_arn): <p>The Amazon Resource Name (ARN) of the recommender to start.</p>
+    /// - On success, responds with [`StartRecommenderOutput`](crate::output::StartRecommenderOutput) with field(s):
+    ///   - [`recommender_arn(Option<String>)`](crate::output::StartRecommenderOutput::recommender_arn): <p>The Amazon Resource Name (ARN) of the recommender you started.</p>
+    /// - On failure, responds with [`SdkError<StartRecommenderError>`](crate::error::StartRecommenderError)
+    pub fn start_recommender(&self) -> fluent_builders::StartRecommender {
+        fluent_builders::StartRecommender::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`StopRecommender`](crate::client::fluent_builders::StopRecommender) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`recommender_arn(impl Into<String>)`](crate::client::fluent_builders::StopRecommender::recommender_arn) / [`set_recommender_arn(Option<String>)`](crate::client::fluent_builders::StopRecommender::set_recommender_arn): <p>The Amazon Resource Name (ARN) of the recommender to stop.</p>
+    /// - On success, responds with [`StopRecommenderOutput`](crate::output::StopRecommenderOutput) with field(s):
+    ///   - [`recommender_arn(Option<String>)`](crate::output::StopRecommenderOutput::recommender_arn): <p>The Amazon Resource Name (ARN) of the recommender you stopped.</p>
+    /// - On failure, responds with [`SdkError<StopRecommenderError>`](crate::error::StopRecommenderError)
+    pub fn stop_recommender(&self) -> fluent_builders::StopRecommender {
+        fluent_builders::StopRecommender::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`StopSolutionVersionCreation`](crate::client::fluent_builders::StopSolutionVersionCreation) operation.
     ///
     /// - The fluent builder is configurable:
@@ -795,13 +815,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `CreateBatchInferenceJob`.
     ///
     /// <p>Creates a batch inference job. The operation can handle up to 50 million records and the input file must be in JSON format. For more information, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/creating-batch-inference-job.html">Creating a batch inference job</a>. </p>
@@ -1931,6 +1950,7 @@ pub mod fluent_builders {
     /// <p>A recommender can be in one of the following states:</p>
     /// <ul>
     /// <li> <p>CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED</p> </li>
+    /// <li> <p>STOP PENDING &gt; STOP IN_PROGRESS &gt; INACTIVE &gt; START PENDING &gt; START IN_PROGRESS &gt; ACTIVE</p> </li>
     /// <li> <p>DELETE PENDING &gt; DELETE IN_PROGRESS</p> </li>
     /// </ul>
     /// <p>To get the recommender status, call <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeRecommender.html">DescribeRecommender</a>.</p> <note>
@@ -3520,9 +3540,11 @@ pub mod fluent_builders {
     /// <p>A recommender can be in one of the following states:</p>
     /// <ul>
     /// <li> <p>CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED</p> </li>
+    /// <li> <p>STOP PENDING &gt; STOP IN_PROGRESS &gt; INACTIVE &gt; START PENDING &gt; START IN_PROGRESS &gt; ACTIVE</p> </li>
     /// <li> <p>DELETE PENDING &gt; DELETE IN_PROGRESS</p> </li>
     /// </ul>
     /// <p>When the <code>status</code> is <code>CREATE FAILED</code>, the response includes the <code>failureReason</code> key, which describes why.</p>
+    /// <p>The <code>modelMetrics</code> key is null when the recommender is being created or deleted.</p>
     /// <p>For more information on recommenders, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateRecommender.html">CreateRecommender</a>.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct DescribeRecommender {
@@ -4968,6 +4990,118 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `StartRecommender`.
+    ///
+    /// <p>Starts a recommender that is INACTIVE. Starting a recommender does not create any new models, but resumes billing and automatic retraining for the recommender.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct StartRecommender {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::start_recommender_input::Builder,
+    }
+    impl StartRecommender {
+        /// Creates a new `StartRecommender`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::StartRecommenderOutput,
+            aws_smithy_http::result::SdkError<crate::error::StartRecommenderError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The Amazon Resource Name (ARN) of the recommender to start.</p>
+        pub fn recommender_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.recommender_arn(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the recommender to start.</p>
+        pub fn set_recommender_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_recommender_arn(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `StopRecommender`.
+    ///
+    /// <p>Stops a recommender that is ACTIVE. Stopping a recommender halts billing and automatic retraining for the recommender.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct StopRecommender {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::stop_recommender_input::Builder,
+    }
+    impl StopRecommender {
+        /// Creates a new `StopRecommender`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::StopRecommenderOutput,
+            aws_smithy_http::result::SdkError<crate::error::StopRecommenderError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The Amazon Resource Name (ARN) of the recommender to stop.</p>
+        pub fn recommender_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.recommender_arn(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the recommender to stop.</p>
+        pub fn set_recommender_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_recommender_arn(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `StopSolutionVersionCreation`.
     ///
     /// <p>Stops creating a solution version that is in a state of CREATE_PENDING or CREATE IN_PROGRESS. </p>
@@ -5174,7 +5308,7 @@ pub mod fluent_builders {
     ///
     /// <p>Updates a campaign by either deploying a new solution or changing the value of the campaign's <code>minProvisionedTPS</code> parameter.</p>
     /// <p>To update a campaign, the campaign status must be ACTIVE or CREATE FAILED. Check the campaign status using the <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeCampaign.html">DescribeCampaign</a> operation.</p> <note>
-    /// <p>You must wait until the <code>status</code> of the updated campaign is <code>ACTIVE</code> before asking the campaign for recommendations.</p>
+    /// <p>You can still get recommendations from a campaign while an update is in progress. The campaign will use the previous solution version and campaign configuration to generate recommendations until the latest campaign update status is <code>Active</code>. </p>
     /// </note>
     /// <p>For more information on campaigns, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]

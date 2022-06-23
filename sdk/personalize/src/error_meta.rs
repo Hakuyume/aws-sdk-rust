@@ -353,6 +353,9 @@ where
                 crate::error::CreateRecommenderErrorKind::ResourceAlreadyExistsException(inner) => {
                     Error::ResourceAlreadyExistsException(inner)
                 }
+                crate::error::CreateRecommenderErrorKind::ResourceInUseException(inner) => {
+                    Error::ResourceInUseException(inner)
+                }
                 crate::error::CreateRecommenderErrorKind::ResourceNotFoundException(inner) => {
                     Error::ResourceNotFoundException(inner)
                 }
@@ -1348,6 +1351,54 @@ where
                 crate::error::ListTagsForResourceErrorKind::Unhandled(inner) => {
                     Error::Unhandled(inner)
                 }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::StartRecommenderError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::StartRecommenderError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::StartRecommenderErrorKind::InvalidInputException(inner) => {
+                    Error::InvalidInputException(inner)
+                }
+                crate::error::StartRecommenderErrorKind::ResourceInUseException(inner) => {
+                    Error::ResourceInUseException(inner)
+                }
+                crate::error::StartRecommenderErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::StartRecommenderErrorKind::Unhandled(inner) => {
+                    Error::Unhandled(inner)
+                }
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::StopRecommenderError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::StopRecommenderError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::StopRecommenderErrorKind::InvalidInputException(inner) => {
+                    Error::InvalidInputException(inner)
+                }
+                crate::error::StopRecommenderErrorKind::ResourceInUseException(inner) => {
+                    Error::ResourceInUseException(inner)
+                }
+                crate::error::StopRecommenderErrorKind::ResourceNotFoundException(inner) => {
+                    Error::ResourceNotFoundException(inner)
+                }
+                crate::error::StopRecommenderErrorKind::Unhandled(inner) => Error::Unhandled(inner),
             },
             _ => Error::Unhandled(err.into()),
         }

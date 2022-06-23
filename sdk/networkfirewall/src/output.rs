@@ -46,6 +46,7 @@ impl std::fmt::Debug for UpdateSubnetChangeProtectionOutput {
 }
 /// See [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput)
 pub mod update_subnet_change_protection_output {
+
     /// A builder for [`UpdateSubnetChangeProtectionOutput`](crate::output::UpdateSubnetChangeProtectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -152,6 +153,7 @@ impl std::fmt::Debug for UpdateRuleGroupOutput {
 }
 /// See [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
 pub mod update_rule_group_output {
+
     /// A builder for [`UpdateRuleGroupOutput`](crate::output::UpdateRuleGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -209,7 +211,7 @@ pub struct UpdateLoggingConfigurationOutput {
     pub firewall_arn: std::option::Option<std::string::String>,
     /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
     pub firewall_name: std::option::Option<std::string::String>,
-    /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+    /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl UpdateLoggingConfigurationOutput {
@@ -221,7 +223,7 @@ impl UpdateLoggingConfigurationOutput {
     pub fn firewall_name(&self) -> std::option::Option<&str> {
         self.firewall_name.as_deref()
     }
-    /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+    /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
     pub fn logging_configuration(
         &self,
     ) -> std::option::Option<&crate::model::LoggingConfiguration> {
@@ -239,6 +241,7 @@ impl std::fmt::Debug for UpdateLoggingConfigurationOutput {
 }
 /// See [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput)
 pub mod update_logging_configuration_output {
+
     /// A builder for [`UpdateLoggingConfigurationOutput`](crate::output::UpdateLoggingConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -271,12 +274,12 @@ pub mod update_logging_configuration_output {
             self.firewall_name = input;
             self
         }
-        /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+        /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
         pub fn logging_configuration(mut self, input: crate::model::LoggingConfiguration) -> Self {
             self.logging_configuration = Some(input);
             self
         }
-        /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+        /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
         pub fn set_logging_configuration(
             mut self,
             input: std::option::Option<crate::model::LoggingConfiguration>,
@@ -351,6 +354,7 @@ impl std::fmt::Debug for UpdateFirewallPolicyChangeProtectionOutput {
 }
 /// See [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput)
 pub mod update_firewall_policy_change_protection_output {
+
     /// A builder for [`UpdateFirewallPolicyChangeProtectionOutput`](crate::output::UpdateFirewallPolicyChangeProtectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -464,6 +468,7 @@ impl std::fmt::Debug for UpdateFirewallPolicyOutput {
 }
 /// See [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput)
 pub mod update_firewall_policy_output {
+
     /// A builder for [`UpdateFirewallPolicyOutput`](crate::output::UpdateFirewallPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -520,6 +525,138 @@ impl UpdateFirewallPolicyOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateFirewallEncryptionConfigurationOutput {
+    /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    pub firewall_arn: std::option::Option<std::string::String>,
+    /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    pub firewall_name: std::option::Option<std::string::String>,
+    /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
+    /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
+    /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    pub update_token: std::option::Option<std::string::String>,
+    /// <p>A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.</p>
+    pub encryption_configuration: std::option::Option<crate::model::EncryptionConfiguration>,
+}
+impl UpdateFirewallEncryptionConfigurationOutput {
+    /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+    pub fn firewall_arn(&self) -> std::option::Option<&str> {
+        self.firewall_arn.as_deref()
+    }
+    /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+    pub fn firewall_name(&self) -> std::option::Option<&str> {
+        self.firewall_name.as_deref()
+    }
+    /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
+    /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
+    /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+    pub fn update_token(&self) -> std::option::Option<&str> {
+        self.update_token.as_deref()
+    }
+    /// <p>A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.</p>
+    pub fn encryption_configuration(
+        &self,
+    ) -> std::option::Option<&crate::model::EncryptionConfiguration> {
+        self.encryption_configuration.as_ref()
+    }
+}
+impl std::fmt::Debug for UpdateFirewallEncryptionConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateFirewallEncryptionConfigurationOutput");
+        formatter.field("firewall_arn", &self.firewall_arn);
+        formatter.field("firewall_name", &self.firewall_name);
+        formatter.field("update_token", &self.update_token);
+        formatter.field("encryption_configuration", &self.encryption_configuration);
+        formatter.finish()
+    }
+}
+/// See [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
+pub mod update_firewall_encryption_configuration_output {
+
+    /// A builder for [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) firewall_arn: std::option::Option<std::string::String>,
+        pub(crate) firewall_name: std::option::Option<std::string::String>,
+        pub(crate) update_token: std::option::Option<std::string::String>,
+        pub(crate) encryption_configuration:
+            std::option::Option<crate::model::EncryptionConfiguration>,
+    }
+    impl Builder {
+        /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+        pub fn firewall_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.firewall_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
+        pub fn set_firewall_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.firewall_arn = input;
+            self
+        }
+        /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+        pub fn firewall_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.firewall_name = Some(input.into());
+            self
+        }
+        /// <p>The descriptive name of the firewall. You can't change the name of a firewall after you create it.</p>
+        pub fn set_firewall_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.firewall_name = input;
+            self
+        }
+        /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
+        /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
+        /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+        pub fn update_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.update_token = Some(input.into());
+            self
+        }
+        /// <p>An optional token that you can use for optimistic locking. Network Firewall returns a token to your requests that access the firewall. The token marks the state of the firewall resource at the time of the request. </p>
+        /// <p>To make an unconditional change to the firewall, omit the token in your update request. Without the token, Network Firewall performs your updates regardless of whether the firewall has changed since you last retrieved it.</p>
+        /// <p>To make a conditional change to the firewall, provide the token in your update request. Network Firewall uses the token to ensure that the firewall hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the firewall again to get a current copy of it with a new token. Reapply your changes as needed, then try the operation again using the new token. </p>
+        pub fn set_update_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.update_token = input;
+            self
+        }
+        /// <p>A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.</p>
+        pub fn encryption_configuration(
+            mut self,
+            input: crate::model::EncryptionConfiguration,
+        ) -> Self {
+            self.encryption_configuration = Some(input);
+            self
+        }
+        /// <p>A complex type that contains optional Amazon Web Services Key Management Service (KMS) encryption settings for your Network Firewall resources. Your data is encrypted by default with an Amazon Web Services owned key that Amazon Web Services owns and manages for you. You can use either the Amazon Web Services owned key, or provide your own customer managed key. To learn more about KMS encryption of your Network Firewall resources, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/kms-encryption-at-rest.html">Encryption at rest with Amazon Web Services Key Managment Service</a> in the <i>Network Firewall Developer Guide</i>.</p>
+        pub fn set_encryption_configuration(
+            mut self,
+            input: std::option::Option<crate::model::EncryptionConfiguration>,
+        ) -> Self {
+            self.encryption_configuration = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
+        pub fn build(self) -> crate::output::UpdateFirewallEncryptionConfigurationOutput {
+            crate::output::UpdateFirewallEncryptionConfigurationOutput {
+                firewall_arn: self.firewall_arn,
+                firewall_name: self.firewall_name,
+                update_token: self.update_token,
+                encryption_configuration: self.encryption_configuration,
+            }
+        }
+    }
+}
+impl UpdateFirewallEncryptionConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateFirewallEncryptionConfigurationOutput`](crate::output::UpdateFirewallEncryptionConfigurationOutput)
+    pub fn builder() -> crate::output::update_firewall_encryption_configuration_output::Builder {
+        crate::output::update_firewall_encryption_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateFirewallDescriptionOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
     pub firewall_arn: std::option::Option<std::string::String>,
@@ -564,6 +701,7 @@ impl std::fmt::Debug for UpdateFirewallDescriptionOutput {
 }
 /// See [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput)
 pub mod update_firewall_description_output {
+
     /// A builder for [`UpdateFirewallDescriptionOutput`](crate::output::UpdateFirewallDescriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -686,6 +824,7 @@ impl std::fmt::Debug for UpdateFirewallDeleteProtectionOutput {
 }
 /// See [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput)
 pub mod update_firewall_delete_protection_output {
+
     /// A builder for [`UpdateFirewallDeleteProtectionOutput`](crate::output::UpdateFirewallDeleteProtectionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -773,6 +912,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -803,6 +943,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -833,6 +974,7 @@ impl std::fmt::Debug for PutResourcePolicyOutput {
 }
 /// See [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
 pub mod put_resource_policy_output {
+
     /// A builder for [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -880,6 +1022,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -962,6 +1105,7 @@ impl std::fmt::Debug for ListRuleGroupsOutput {
 }
 /// See [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
 pub mod list_rule_groups_output {
+
     /// A builder for [`ListRuleGroupsOutput`](crate::output::ListRuleGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1044,6 +1188,7 @@ impl std::fmt::Debug for ListFirewallsOutput {
 }
 /// See [`ListFirewallsOutput`](crate::output::ListFirewallsOutput)
 pub mod list_firewalls_output {
+
     /// A builder for [`ListFirewallsOutput`](crate::output::ListFirewallsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1128,6 +1273,7 @@ impl std::fmt::Debug for ListFirewallPoliciesOutput {
 }
 /// See [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput)
 pub mod list_firewall_policies_output {
+
     /// A builder for [`ListFirewallPoliciesOutput`](crate::output::ListFirewallPoliciesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1229,6 +1375,7 @@ impl std::fmt::Debug for DisassociateSubnetsOutput {
 }
 /// See [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput)
 pub mod disassociate_subnets_output {
+
     /// A builder for [`DisassociateSubnetsOutput`](crate::output::DisassociateSubnetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1334,6 +1481,8 @@ pub struct DescribeRuleGroupMetadataOutput {
     pub capacity: std::option::Option<i32>,
     /// <p>Additional options governing how Network Firewall handles the rule group. You can only use these for stateful rule groups.</p>
     pub stateful_rule_options: std::option::Option<crate::model::StatefulRuleOptions>,
+    /// <p>The last time that the rule group was changed.</p>
+    pub last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeRuleGroupMetadataOutput {
     /// <p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p>
@@ -1365,6 +1514,10 @@ impl DescribeRuleGroupMetadataOutput {
     pub fn stateful_rule_options(&self) -> std::option::Option<&crate::model::StatefulRuleOptions> {
         self.stateful_rule_options.as_ref()
     }
+    /// <p>The last time that the rule group was changed.</p>
+    pub fn last_modified_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_modified_time.as_ref()
+    }
 }
 impl std::fmt::Debug for DescribeRuleGroupMetadataOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1375,11 +1528,13 @@ impl std::fmt::Debug for DescribeRuleGroupMetadataOutput {
         formatter.field("r#type", &self.r#type);
         formatter.field("capacity", &self.capacity);
         formatter.field("stateful_rule_options", &self.stateful_rule_options);
+        formatter.field("last_modified_time", &self.last_modified_time);
         formatter.finish()
     }
 }
 /// See [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput)
 pub mod describe_rule_group_metadata_output {
+
     /// A builder for [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1390,6 +1545,7 @@ pub mod describe_rule_group_metadata_output {
         pub(crate) r#type: std::option::Option<crate::model::RuleGroupType>,
         pub(crate) capacity: std::option::Option<i32>,
         pub(crate) stateful_rule_options: std::option::Option<crate::model::StatefulRuleOptions>,
+        pub(crate) last_modified_time: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
         /// <p>The descriptive name of the rule group. You can't change the name of a rule group after you create it.</p>
@@ -1471,6 +1627,19 @@ pub mod describe_rule_group_metadata_output {
             self.stateful_rule_options = input;
             self
         }
+        /// <p>The last time that the rule group was changed.</p>
+        pub fn last_modified_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_modified_time = Some(input);
+            self
+        }
+        /// <p>The last time that the rule group was changed.</p>
+        pub fn set_last_modified_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_modified_time = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DescribeRuleGroupMetadataOutput`](crate::output::DescribeRuleGroupMetadataOutput)
         pub fn build(self) -> crate::output::DescribeRuleGroupMetadataOutput {
             crate::output::DescribeRuleGroupMetadataOutput {
@@ -1480,6 +1649,7 @@ pub mod describe_rule_group_metadata_output {
                 r#type: self.r#type,
                 capacity: self.capacity,
                 stateful_rule_options: self.stateful_rule_options,
+                last_modified_time: self.last_modified_time,
             }
         }
     }
@@ -1499,7 +1669,7 @@ pub struct DescribeRuleGroupOutput {
     /// <p>To make changes to the rule group, you provide the token in your request. Network Firewall uses the token to ensure that the rule group hasn't changed since you last retrieved it. If it has changed, the operation fails with an <code>InvalidTokenException</code>. If this happens, retrieve the rule group again to get a current copy of it with a current token. Reapply your changes as needed, then try the operation again using the new token. </p>
     pub update_token: std::option::Option<std::string::String>,
     /// <p>The object that defines the rules in a rule group. This, along with <code>RuleGroupResponse</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
-    /// <p>AWS Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
+    /// <p>Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
     /// <p>To use a rule group, you include it by reference in an Network Firewall firewall policy, then you use the policy in a firewall. You can reference a rule group from more than one firewall policy, and you can use a firewall policy in more than one firewall. </p>
     pub rule_group: std::option::Option<crate::model::RuleGroup>,
     /// <p>The high-level properties of a rule group. This, along with the <code>RuleGroup</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
@@ -1512,7 +1682,7 @@ impl DescribeRuleGroupOutput {
         self.update_token.as_deref()
     }
     /// <p>The object that defines the rules in a rule group. This, along with <code>RuleGroupResponse</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
-    /// <p>AWS Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
+    /// <p>Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
     /// <p>To use a rule group, you include it by reference in an Network Firewall firewall policy, then you use the policy in a firewall. You can reference a rule group from more than one firewall policy, and you can use a firewall policy in more than one firewall. </p>
     pub fn rule_group(&self) -> std::option::Option<&crate::model::RuleGroup> {
         self.rule_group.as_ref()
@@ -1533,6 +1703,7 @@ impl std::fmt::Debug for DescribeRuleGroupOutput {
 }
 /// See [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput)
 pub mod describe_rule_group_output {
+
     /// A builder for [`DescribeRuleGroupOutput`](crate::output::DescribeRuleGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1555,14 +1726,14 @@ pub mod describe_rule_group_output {
             self
         }
         /// <p>The object that defines the rules in a rule group. This, along with <code>RuleGroupResponse</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
-        /// <p>AWS Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
+        /// <p>Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
         /// <p>To use a rule group, you include it by reference in an Network Firewall firewall policy, then you use the policy in a firewall. You can reference a rule group from more than one firewall policy, and you can use a firewall policy in more than one firewall. </p>
         pub fn rule_group(mut self, input: crate::model::RuleGroup) -> Self {
             self.rule_group = Some(input);
             self
         }
         /// <p>The object that defines the rules in a rule group. This, along with <code>RuleGroupResponse</code>, define the rule group. You can retrieve all objects for a rule group by calling <code>DescribeRuleGroup</code>. </p>
-        /// <p>AWS Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
+        /// <p>Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic flow. </p>
         /// <p>To use a rule group, you include it by reference in an Network Firewall firewall policy, then you use the policy in a firewall. You can reference a rule group from more than one firewall policy, and you can use a firewall policy in more than one firewall. </p>
         pub fn set_rule_group(
             mut self,
@@ -1605,11 +1776,11 @@ impl DescribeRuleGroupOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeResourcePolicyOutput {
-    /// <p>The AWS Identity and Access Management policy for the resource. </p>
+    /// <p>The IAM policy for the resource. </p>
     pub policy: std::option::Option<std::string::String>,
 }
 impl DescribeResourcePolicyOutput {
-    /// <p>The AWS Identity and Access Management policy for the resource. </p>
+    /// <p>The IAM policy for the resource. </p>
     pub fn policy(&self) -> std::option::Option<&str> {
         self.policy.as_deref()
     }
@@ -1623,6 +1794,7 @@ impl std::fmt::Debug for DescribeResourcePolicyOutput {
 }
 /// See [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
 pub mod describe_resource_policy_output {
+
     /// A builder for [`DescribeResourcePolicyOutput`](crate::output::DescribeResourcePolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1630,12 +1802,12 @@ pub mod describe_resource_policy_output {
         pub(crate) policy: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The AWS Identity and Access Management policy for the resource. </p>
+        /// <p>The IAM policy for the resource. </p>
         pub fn policy(mut self, input: impl Into<std::string::String>) -> Self {
             self.policy = Some(input.into());
             self
         }
-        /// <p>The AWS Identity and Access Management policy for the resource. </p>
+        /// <p>The IAM policy for the resource. </p>
         pub fn set_policy(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.policy = input;
             self
@@ -1661,7 +1833,7 @@ impl DescribeResourcePolicyOutput {
 pub struct DescribeLoggingConfigurationOutput {
     /// <p>The Amazon Resource Name (ARN) of the firewall.</p>
     pub firewall_arn: std::option::Option<std::string::String>,
-    /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+    /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
     pub logging_configuration: std::option::Option<crate::model::LoggingConfiguration>,
 }
 impl DescribeLoggingConfigurationOutput {
@@ -1669,7 +1841,7 @@ impl DescribeLoggingConfigurationOutput {
     pub fn firewall_arn(&self) -> std::option::Option<&str> {
         self.firewall_arn.as_deref()
     }
-    /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+    /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
     pub fn logging_configuration(
         &self,
     ) -> std::option::Option<&crate::model::LoggingConfiguration> {
@@ -1686,6 +1858,7 @@ impl std::fmt::Debug for DescribeLoggingConfigurationOutput {
 }
 /// See [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput)
 pub mod describe_logging_configuration_output {
+
     /// A builder for [`DescribeLoggingConfigurationOutput`](crate::output::DescribeLoggingConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1704,12 +1877,12 @@ pub mod describe_logging_configuration_output {
             self.firewall_arn = input;
             self
         }
-        /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+        /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
         pub fn logging_configuration(mut self, input: crate::model::LoggingConfiguration) -> Self {
             self.logging_configuration = Some(input);
             self
         }
-        /// <p>Defines how AWS Network Firewall performs logging for a <code>Firewall</code>. </p>
+        /// <p>Defines how Network Firewall performs logging for a <code>Firewall</code>. </p>
         pub fn set_logging_configuration(
             mut self,
             input: std::option::Option<crate::model::LoggingConfiguration>,
@@ -1773,6 +1946,7 @@ impl std::fmt::Debug for DescribeFirewallPolicyOutput {
 }
 /// See [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput)
 pub mod describe_firewall_policy_output {
+
     /// A builder for [`DescribeFirewallPolicyOutput`](crate::output::DescribeFirewallPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1881,6 +2055,7 @@ impl std::fmt::Debug for DescribeFirewallOutput {
 }
 /// See [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput)
 pub mod describe_firewall_output {
+
     /// A builder for [`DescribeFirewallOutput`](crate::output::DescribeFirewallOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1966,6 +2141,7 @@ impl std::fmt::Debug for DeleteRuleGroupOutput {
 }
 /// See [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
 pub mod delete_rule_group_output {
+
     /// A builder for [`DeleteRuleGroupOutput`](crate::output::DeleteRuleGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2013,6 +2189,7 @@ impl std::fmt::Debug for DeleteResourcePolicyOutput {
 }
 /// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
 pub mod delete_resource_policy_output {
+
     /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2055,6 +2232,7 @@ impl std::fmt::Debug for DeleteFirewallPolicyOutput {
 }
 /// See [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput)
 pub mod delete_firewall_policy_output {
+
     /// A builder for [`DeleteFirewallPolicyOutput`](crate::output::DeleteFirewallPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2098,14 +2276,14 @@ impl DeleteFirewallPolicyOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteFirewallOutput {
-    /// <p>The firewall defines the configuration settings for an AWS Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall AWS resource. </p>
+    /// <p>The firewall defines the configuration settings for an Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall Amazon Web Services resource. </p>
     /// <p>The status of the firewall, for example whether it's ready to filter network traffic, is provided in the corresponding <code>FirewallStatus</code>. You can retrieve both objects by calling <code>DescribeFirewall</code>.</p>
     pub firewall: std::option::Option<crate::model::Firewall>,
     /// <p>Detailed information about the current status of a <code>Firewall</code>. You can retrieve this for a firewall by calling <code>DescribeFirewall</code> and providing the firewall name and ARN.</p>
     pub firewall_status: std::option::Option<crate::model::FirewallStatus>,
 }
 impl DeleteFirewallOutput {
-    /// <p>The firewall defines the configuration settings for an AWS Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall AWS resource. </p>
+    /// <p>The firewall defines the configuration settings for an Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall Amazon Web Services resource. </p>
     /// <p>The status of the firewall, for example whether it's ready to filter network traffic, is provided in the corresponding <code>FirewallStatus</code>. You can retrieve both objects by calling <code>DescribeFirewall</code>.</p>
     pub fn firewall(&self) -> std::option::Option<&crate::model::Firewall> {
         self.firewall.as_ref()
@@ -2125,6 +2303,7 @@ impl std::fmt::Debug for DeleteFirewallOutput {
 }
 /// See [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput)
 pub mod delete_firewall_output {
+
     /// A builder for [`DeleteFirewallOutput`](crate::output::DeleteFirewallOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2133,13 +2312,13 @@ pub mod delete_firewall_output {
         pub(crate) firewall_status: std::option::Option<crate::model::FirewallStatus>,
     }
     impl Builder {
-        /// <p>The firewall defines the configuration settings for an AWS Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall AWS resource. </p>
+        /// <p>The firewall defines the configuration settings for an Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall Amazon Web Services resource. </p>
         /// <p>The status of the firewall, for example whether it's ready to filter network traffic, is provided in the corresponding <code>FirewallStatus</code>. You can retrieve both objects by calling <code>DescribeFirewall</code>.</p>
         pub fn firewall(mut self, input: crate::model::Firewall) -> Self {
             self.firewall = Some(input);
             self
         }
-        /// <p>The firewall defines the configuration settings for an AWS Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall AWS resource. </p>
+        /// <p>The firewall defines the configuration settings for an Network Firewall firewall. These settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall Amazon Web Services resource. </p>
         /// <p>The status of the firewall, for example whether it's ready to filter network traffic, is provided in the corresponding <code>FirewallStatus</code>. You can retrieve both objects by calling <code>DescribeFirewall</code>.</p>
         pub fn set_firewall(mut self, input: std::option::Option<crate::model::Firewall>) -> Self {
             self.firewall = input;
@@ -2205,6 +2384,7 @@ impl std::fmt::Debug for CreateRuleGroupOutput {
 }
 /// See [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
 pub mod create_rule_group_output {
+
     /// A builder for [`CreateRuleGroupOutput`](crate::output::CreateRuleGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2287,6 +2467,7 @@ impl std::fmt::Debug for CreateFirewallPolicyOutput {
 }
 /// See [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput)
 pub mod create_firewall_policy_output {
+
     /// A builder for [`CreateFirewallPolicyOutput`](crate::output::CreateFirewallPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2369,6 +2550,7 @@ impl std::fmt::Debug for CreateFirewallOutput {
 }
 /// See [`CreateFirewallOutput`](crate::output::CreateFirewallOutput)
 pub mod create_firewall_output {
+
     /// A builder for [`CreateFirewallOutput`](crate::output::CreateFirewallOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2463,6 +2645,7 @@ impl std::fmt::Debug for AssociateSubnetsOutput {
 }
 /// See [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput)
 pub mod associate_subnets_output {
+
     /// A builder for [`AssociateSubnetsOutput`](crate::output::AssociateSubnetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2594,6 +2777,7 @@ impl std::fmt::Debug for AssociateFirewallPolicyOutput {
 }
 /// See [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput)
 pub mod associate_firewall_policy_output {
+
     /// A builder for [`AssociateFirewallPolicyOutput`](crate::output::AssociateFirewallPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

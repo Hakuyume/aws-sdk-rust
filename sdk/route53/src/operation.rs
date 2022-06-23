@@ -67,6 +67,40 @@ impl aws_smithy_http::response::ParseStrictResponse for AssociateVPCWithHostedZo
     }
 }
 
+/// Operation shape for `ChangeCidrCollection`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`change_cidr_collection`](crate::client::Client::change_cidr_collection).
+///
+/// See [`crate::client::fluent_builders::ChangeCidrCollection`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ChangeCidrCollection {
+    _private: (),
+}
+impl ChangeCidrCollection {
+    /// Creates a new builder-style object to manufacture [`ChangeCidrCollectionInput`](crate::input::ChangeCidrCollectionInput)
+    pub fn builder() -> crate::input::change_cidr_collection_input::Builder {
+        crate::input::change_cidr_collection_input::Builder::default()
+    }
+    /// Creates a new `ChangeCidrCollection` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ChangeCidrCollection {
+    type Output = std::result::Result<
+        crate::output::ChangeCidrCollectionOutput,
+        crate::error::ChangeCidrCollectionError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_change_cidr_collection_error(response)
+        } else {
+            crate::operation_deser::parse_change_cidr_collection_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ChangeResourceRecordSets`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -131,6 +165,40 @@ impl aws_smithy_http::response::ParseStrictResponse for ChangeTagsForResource {
             crate::operation_deser::parse_change_tags_for_resource_error(response)
         } else {
             crate::operation_deser::parse_change_tags_for_resource_response(response)
+        }
+    }
+}
+
+/// Operation shape for `CreateCidrCollection`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_cidr_collection`](crate::client::Client::create_cidr_collection).
+///
+/// See [`crate::client::fluent_builders::CreateCidrCollection`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateCidrCollection {
+    _private: (),
+}
+impl CreateCidrCollection {
+    /// Creates a new builder-style object to manufacture [`CreateCidrCollectionInput`](crate::input::CreateCidrCollectionInput)
+    pub fn builder() -> crate::input::create_cidr_collection_input::Builder {
+        crate::input::create_cidr_collection_input::Builder::default()
+    }
+    /// Creates a new `CreateCidrCollection` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateCidrCollection {
+    type Output = std::result::Result<
+        crate::output::CreateCidrCollectionOutput,
+        crate::error::CreateCidrCollectionError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 201 {
+            crate::operation_deser::parse_create_cidr_collection_error(response)
+        } else {
+            crate::operation_deser::parse_create_cidr_collection_response(response)
         }
     }
 }
@@ -471,6 +539,40 @@ impl aws_smithy_http::response::ParseStrictResponse for DeactivateKeySigningKey 
             crate::operation_deser::parse_deactivate_key_signing_key_error(response)
         } else {
             crate::operation_deser::parse_deactivate_key_signing_key_response(response)
+        }
+    }
+}
+
+/// Operation shape for `DeleteCidrCollection`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_cidr_collection`](crate::client::Client::delete_cidr_collection).
+///
+/// See [`crate::client::fluent_builders::DeleteCidrCollection`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteCidrCollection {
+    _private: (),
+}
+impl DeleteCidrCollection {
+    /// Creates a new builder-style object to manufacture [`DeleteCidrCollectionInput`](crate::input::DeleteCidrCollectionInput)
+    pub fn builder() -> crate::input::delete_cidr_collection_input::Builder {
+        crate::input::delete_cidr_collection_input::Builder::default()
+    }
+    /// Creates a new `DeleteCidrCollection` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteCidrCollection {
+    type Output = std::result::Result<
+        crate::output::DeleteCidrCollectionOutput,
+        crate::error::DeleteCidrCollectionError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_cidr_collection_error(response)
+        } else {
+            crate::operation_deser::parse_delete_cidr_collection_response(response)
         }
     }
 }
@@ -913,6 +1015,26 @@ impl aws_smithy_http::response::ParseStrictResponse for GetChange {
         }
     }
 }
+#[cfg(test)]
+#[allow(unreachable_code, unused_variables)]
+mod get_change_request_test {
+    /// This test validates that change id is correctly trimmed
+    /// Test ID: GetChangeTrimChangeId
+    #[tokio::test]
+    async fn get_change_trim_change_id_request() {
+        let config = crate::config::Config::builder().build();
+        let input = crate::input::GetChangeInput::builder()
+            .set_id(Some("/change/SOMECHANGEID".to_string()))
+            .build()
+            .unwrap()
+            .make_operation(&config)
+            .await
+            .expect("operation failed to build");
+        let (http_request, parts) = input.into_request_response().0.into_parts();
+        pretty_assertions::assert_eq!(http_request.method(), "GET");
+        pretty_assertions::assert_eq!(http_request.uri().path(), "/2013-04-01/change/SOMECHANGEID");
+    }
+}
 
 /// Operation shape for `GetCheckerIpRanges`.
 ///
@@ -1312,6 +1434,29 @@ impl aws_smithy_http::response::ParseStrictResponse for GetReusableDelegationSet
         }
     }
 }
+#[cfg(test)]
+#[allow(unreachable_code, unused_variables)]
+mod get_reusable_delegation_set_request_test {
+    /// This test validates that delegation set id is correctly trimmed
+    /// Test ID: GetReusableDelegationSetTrimDelegationSetId
+    #[tokio::test]
+    async fn get_reusable_delegation_set_trim_delegation_set_id_request() {
+        let config = crate::config::Config::builder().build();
+        let input = crate::input::GetReusableDelegationSetInput::builder()
+            .set_id(Some("/delegationset/DELEGATIONSETID".to_string()))
+            .build()
+            .unwrap()
+            .make_operation(&config)
+            .await
+            .expect("operation failed to build");
+        let (http_request, parts) = input.into_request_response().0.into_parts();
+        pretty_assertions::assert_eq!(http_request.method(), "GET");
+        pretty_assertions::assert_eq!(
+            http_request.uri().path(),
+            "/2013-04-01/delegationset/DELEGATIONSETID"
+        );
+    }
+}
 
 /// Operation shape for `GetReusableDelegationSetLimit`.
 ///
@@ -1445,6 +1590,106 @@ impl aws_smithy_http::response::ParseStrictResponse for GetTrafficPolicyInstance
             crate::operation_deser::parse_get_traffic_policy_instance_count_error(response)
         } else {
             crate::operation_deser::parse_get_traffic_policy_instance_count_response(response)
+        }
+    }
+}
+
+/// Operation shape for `ListCidrBlocks`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_cidr_blocks`](crate::client::Client::list_cidr_blocks).
+///
+/// See [`crate::client::fluent_builders::ListCidrBlocks`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListCidrBlocks {
+    _private: (),
+}
+impl ListCidrBlocks {
+    /// Creates a new builder-style object to manufacture [`ListCidrBlocksInput`](crate::input::ListCidrBlocksInput)
+    pub fn builder() -> crate::input::list_cidr_blocks_input::Builder {
+        crate::input::list_cidr_blocks_input::Builder::default()
+    }
+    /// Creates a new `ListCidrBlocks` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListCidrBlocks {
+    type Output =
+        std::result::Result<crate::output::ListCidrBlocksOutput, crate::error::ListCidrBlocksError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_cidr_blocks_error(response)
+        } else {
+            crate::operation_deser::parse_list_cidr_blocks_response(response)
+        }
+    }
+}
+
+/// Operation shape for `ListCidrCollections`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_cidr_collections`](crate::client::Client::list_cidr_collections).
+///
+/// See [`crate::client::fluent_builders::ListCidrCollections`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListCidrCollections {
+    _private: (),
+}
+impl ListCidrCollections {
+    /// Creates a new builder-style object to manufacture [`ListCidrCollectionsInput`](crate::input::ListCidrCollectionsInput)
+    pub fn builder() -> crate::input::list_cidr_collections_input::Builder {
+        crate::input::list_cidr_collections_input::Builder::default()
+    }
+    /// Creates a new `ListCidrCollections` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListCidrCollections {
+    type Output = std::result::Result<
+        crate::output::ListCidrCollectionsOutput,
+        crate::error::ListCidrCollectionsError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_cidr_collections_error(response)
+        } else {
+            crate::operation_deser::parse_list_cidr_collections_response(response)
+        }
+    }
+}
+
+/// Operation shape for `ListCidrLocations`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_cidr_locations`](crate::client::Client::list_cidr_locations).
+///
+/// See [`crate::client::fluent_builders::ListCidrLocations`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListCidrLocations {
+    _private: (),
+}
+impl ListCidrLocations {
+    /// Creates a new builder-style object to manufacture [`ListCidrLocationsInput`](crate::input::ListCidrLocationsInput)
+    pub fn builder() -> crate::input::list_cidr_locations_input::Builder {
+        crate::input::list_cidr_locations_input::Builder::default()
+    }
+    /// Creates a new `ListCidrLocations` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListCidrLocations {
+    type Output = std::result::Result<
+        crate::output::ListCidrLocationsOutput,
+        crate::error::ListCidrLocationsError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_cidr_locations_error(response)
+        } else {
+            crate::operation_deser::parse_list_cidr_locations_response(response)
         }
     }
 }
@@ -1689,10 +1934,10 @@ impl aws_smithy_http::response::ParseStrictResponse for ListResourceRecordSets {
 #[cfg(test)]
 #[allow(unreachable_code, unused_variables)]
 mod list_resource_record_sets_request_test {
-    /// This test validates that that hosted zone is correctly trimmed
-    /// Test ID: ListResourceRecordSetsTrimHostdZone
+    /// This test validates that hosted zone is correctly trimmed
+    /// Test ID: ListResourceRecordSetsTrimHostedZone
     #[tokio::test]
-    async fn list_resource_record_sets_trim_hostd_zone_request() {
+    async fn list_resource_record_sets_trim_hosted_zone_request() {
         let config = crate::config::Config::builder().build();
         let input = crate::input::ListResourceRecordSetsInput::builder()
             .set_hosted_zone_id(Some("/hostedzone/IDOFMYHOSTEDZONE".to_string()))

@@ -5,11 +5,12 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
 //! <p>You can use the Amazon Redshift Data API to run queries on Amazon Redshift tables. You
 //! can run SQL statements, which are committed if the statement succeeds. </p>
-//! <p>For more information about the Amazon Redshift Data API, see
+//! <p>For more information about the Amazon Redshift Data API and CLI usage examples, see
 //! <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html">Using the Amazon Redshift Data API</a> in the
 //! <i>Amazon Redshift Cluster Management Guide</i>. </p>
 //!
@@ -45,7 +46,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

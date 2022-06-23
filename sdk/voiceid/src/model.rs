@@ -96,6 +96,8 @@ pub enum ConflictType {
     #[allow(missing_docs)] // documentation missing in model
     ConcurrentChanges,
     #[allow(missing_docs)] // documentation missing in model
+    DomainLockedFromEncryptionUpdates,
+    #[allow(missing_docs)] // documentation missing in model
     DomainNotActive,
     #[allow(missing_docs)] // documentation missing in model
     EnrollmentAlreadyExists,
@@ -114,6 +116,9 @@ impl std::convert::From<&str> for ConflictType {
                 ConflictType::CannotChangeSpeakerAfterEnrollment
             }
             "CONCURRENT_CHANGES" => ConflictType::ConcurrentChanges,
+            "DOMAIN_LOCKED_FROM_ENCRYPTION_UPDATES" => {
+                ConflictType::DomainLockedFromEncryptionUpdates
+            }
             "DOMAIN_NOT_ACTIVE" => ConflictType::DomainNotActive,
             "ENROLLMENT_ALREADY_EXISTS" => ConflictType::EnrollmentAlreadyExists,
             "SPEAKER_NOT_SET" => ConflictType::SpeakerNotSet,
@@ -138,6 +143,9 @@ impl ConflictType {
                 "CANNOT_CHANGE_SPEAKER_AFTER_ENROLLMENT"
             }
             ConflictType::ConcurrentChanges => "CONCURRENT_CHANGES",
+            ConflictType::DomainLockedFromEncryptionUpdates => {
+                "DOMAIN_LOCKED_FROM_ENCRYPTION_UPDATES"
+            }
             ConflictType::DomainNotActive => "DOMAIN_NOT_ACTIVE",
             ConflictType::EnrollmentAlreadyExists => "ENROLLMENT_ALREADY_EXISTS",
             ConflictType::SpeakerNotSet => "SPEAKER_NOT_SET",
@@ -151,6 +159,7 @@ impl ConflictType {
             "ANOTHER_ACTIVE_STREAM",
             "CANNOT_CHANGE_SPEAKER_AFTER_ENROLLMENT",
             "CONCURRENT_CHANGES",
+            "DOMAIN_LOCKED_FROM_ENCRYPTION_UPDATES",
             "DOMAIN_NOT_ACTIVE",
             "ENROLLMENT_ALREADY_EXISTS",
             "SPEAKER_NOT_SET",
@@ -178,13 +187,16 @@ pub struct Domain {
     pub description: std::option::Option<std::string::String>,
     /// <p>The current status of the domain.</p>
     pub domain_status: std::option::Option<crate::model::DomainStatus>,
-    /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data.</p>
+    /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
     pub server_side_encryption_configuration:
         std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
     /// <p>The timestamp at which the domain is created.</p>
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp showing the domain's last update.</p>
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain's data can only be accessed using the new KMS key.</p>
+    pub server_side_encryption_update_details:
+        std::option::Option<crate::model::ServerSideEncryptionUpdateDetails>,
 }
 impl Domain {
     /// <p>The service-generated identifier for the domain.</p>
@@ -207,7 +219,7 @@ impl Domain {
     pub fn domain_status(&self) -> std::option::Option<&crate::model::DomainStatus> {
         self.domain_status.as_ref()
     }
-    /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data.</p>
+    /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
     pub fn server_side_encryption_configuration(
         &self,
     ) -> std::option::Option<&crate::model::ServerSideEncryptionConfiguration> {
@@ -220,6 +232,12 @@ impl Domain {
     /// <p>The timestamp showing the domain's last update.</p>
     pub fn updated_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_at.as_ref()
+    }
+    /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain's data can only be accessed using the new KMS key.</p>
+    pub fn server_side_encryption_update_details(
+        &self,
+    ) -> std::option::Option<&crate::model::ServerSideEncryptionUpdateDetails> {
+        self.server_side_encryption_update_details.as_ref()
     }
 }
 impl std::fmt::Debug for Domain {
@@ -236,11 +254,16 @@ impl std::fmt::Debug for Domain {
         );
         formatter.field("created_at", &self.created_at);
         formatter.field("updated_at", &self.updated_at);
+        formatter.field(
+            "server_side_encryption_update_details",
+            &self.server_side_encryption_update_details,
+        );
         formatter.finish()
     }
 }
 /// See [`Domain`](crate::model::Domain)
 pub mod domain {
+
     /// A builder for [`Domain`](crate::model::Domain)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -254,6 +277,8 @@ pub mod domain {
             std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) updated_at: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) server_side_encryption_update_details:
+            std::option::Option<crate::model::ServerSideEncryptionUpdateDetails>,
     }
     impl Builder {
         /// <p>The service-generated identifier for the domain.</p>
@@ -309,7 +334,7 @@ pub mod domain {
             self.domain_status = input;
             self
         }
-        /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data.</p>
+        /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
         pub fn server_side_encryption_configuration(
             mut self,
             input: crate::model::ServerSideEncryptionConfiguration,
@@ -317,7 +342,7 @@ pub mod domain {
             self.server_side_encryption_configuration = Some(input);
             self
         }
-        /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data.</p>
+        /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
         pub fn set_server_side_encryption_configuration(
             mut self,
             input: std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
@@ -351,6 +376,22 @@ pub mod domain {
             self.updated_at = input;
             self
         }
+        /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain's data can only be accessed using the new KMS key.</p>
+        pub fn server_side_encryption_update_details(
+            mut self,
+            input: crate::model::ServerSideEncryptionUpdateDetails,
+        ) -> Self {
+            self.server_side_encryption_update_details = Some(input);
+            self
+        }
+        /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain's data can only be accessed using the new KMS key.</p>
+        pub fn set_server_side_encryption_update_details(
+            mut self,
+            input: std::option::Option<crate::model::ServerSideEncryptionUpdateDetails>,
+        ) -> Self {
+            self.server_side_encryption_update_details = input;
+            self
+        }
         /// Consumes the builder and constructs a [`Domain`](crate::model::Domain)
         pub fn build(self) -> crate::model::Domain {
             crate::model::Domain {
@@ -362,6 +403,7 @@ pub mod domain {
                 server_side_encryption_configuration: self.server_side_encryption_configuration,
                 created_at: self.created_at,
                 updated_at: self.updated_at,
+                server_side_encryption_update_details: self.server_side_encryption_update_details,
             }
         }
     }
@@ -373,15 +415,179 @@ impl Domain {
     }
 }
 
-/// <p>The configuration containing information about the customer-managed KMS Key used for encrypting customer data.</p>
+/// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain’s data can only be accessed using the new KMS key.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ServerSideEncryptionUpdateDetails {
+    /// <p>The previous KMS key ID the domain was encrypted with, before ServerSideEncryptionConfiguration was updated to a new KMS key ID.</p>
+    pub old_kms_key_id: std::option::Option<std::string::String>,
+    /// <p>Status of the server-side encryption update. During an update, if there is an issue with the domain's current or old KMS key ID, such as an inaccessible or disabled key, then the status is FAILED. In order to resolve this, the key needs to be made accessible, and then an UpdateDomain call with the existing server-side encryption configuration will re-attempt this update process.</p>
+    pub update_status: std::option::Option<crate::model::ServerSideEncryptionUpdateStatus>,
+    /// <p>Message explaining the current UpdateStatus. When the UpdateStatus is FAILED, this message explains the cause of the failure.</p>
+    pub message: std::option::Option<std::string::String>,
+}
+impl ServerSideEncryptionUpdateDetails {
+    /// <p>The previous KMS key ID the domain was encrypted with, before ServerSideEncryptionConfiguration was updated to a new KMS key ID.</p>
+    pub fn old_kms_key_id(&self) -> std::option::Option<&str> {
+        self.old_kms_key_id.as_deref()
+    }
+    /// <p>Status of the server-side encryption update. During an update, if there is an issue with the domain's current or old KMS key ID, such as an inaccessible or disabled key, then the status is FAILED. In order to resolve this, the key needs to be made accessible, and then an UpdateDomain call with the existing server-side encryption configuration will re-attempt this update process.</p>
+    pub fn update_status(
+        &self,
+    ) -> std::option::Option<&crate::model::ServerSideEncryptionUpdateStatus> {
+        self.update_status.as_ref()
+    }
+    /// <p>Message explaining the current UpdateStatus. When the UpdateStatus is FAILED, this message explains the cause of the failure.</p>
+    pub fn message(&self) -> std::option::Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Debug for ServerSideEncryptionUpdateDetails {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ServerSideEncryptionUpdateDetails");
+        formatter.field("old_kms_key_id", &self.old_kms_key_id);
+        formatter.field("update_status", &self.update_status);
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+/// See [`ServerSideEncryptionUpdateDetails`](crate::model::ServerSideEncryptionUpdateDetails)
+pub mod server_side_encryption_update_details {
+
+    /// A builder for [`ServerSideEncryptionUpdateDetails`](crate::model::ServerSideEncryptionUpdateDetails)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) old_kms_key_id: std::option::Option<std::string::String>,
+        pub(crate) update_status:
+            std::option::Option<crate::model::ServerSideEncryptionUpdateStatus>,
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The previous KMS key ID the domain was encrypted with, before ServerSideEncryptionConfiguration was updated to a new KMS key ID.</p>
+        pub fn old_kms_key_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.old_kms_key_id = Some(input.into());
+            self
+        }
+        /// <p>The previous KMS key ID the domain was encrypted with, before ServerSideEncryptionConfiguration was updated to a new KMS key ID.</p>
+        pub fn set_old_kms_key_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.old_kms_key_id = input;
+            self
+        }
+        /// <p>Status of the server-side encryption update. During an update, if there is an issue with the domain's current or old KMS key ID, such as an inaccessible or disabled key, then the status is FAILED. In order to resolve this, the key needs to be made accessible, and then an UpdateDomain call with the existing server-side encryption configuration will re-attempt this update process.</p>
+        pub fn update_status(
+            mut self,
+            input: crate::model::ServerSideEncryptionUpdateStatus,
+        ) -> Self {
+            self.update_status = Some(input);
+            self
+        }
+        /// <p>Status of the server-side encryption update. During an update, if there is an issue with the domain's current or old KMS key ID, such as an inaccessible or disabled key, then the status is FAILED. In order to resolve this, the key needs to be made accessible, and then an UpdateDomain call with the existing server-side encryption configuration will re-attempt this update process.</p>
+        pub fn set_update_status(
+            mut self,
+            input: std::option::Option<crate::model::ServerSideEncryptionUpdateStatus>,
+        ) -> Self {
+            self.update_status = input;
+            self
+        }
+        /// <p>Message explaining the current UpdateStatus. When the UpdateStatus is FAILED, this message explains the cause of the failure.</p>
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        /// <p>Message explaining the current UpdateStatus. When the UpdateStatus is FAILED, this message explains the cause of the failure.</p>
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ServerSideEncryptionUpdateDetails`](crate::model::ServerSideEncryptionUpdateDetails)
+        pub fn build(self) -> crate::model::ServerSideEncryptionUpdateDetails {
+            crate::model::ServerSideEncryptionUpdateDetails {
+                old_kms_key_id: self.old_kms_key_id,
+                update_status: self.update_status,
+                message: self.message,
+            }
+        }
+    }
+}
+impl ServerSideEncryptionUpdateDetails {
+    /// Creates a new builder-style object to manufacture [`ServerSideEncryptionUpdateDetails`](crate::model::ServerSideEncryptionUpdateDetails)
+    pub fn builder() -> crate::model::server_side_encryption_update_details::Builder {
+        crate::model::server_side_encryption_update_details::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum ServerSideEncryptionUpdateStatus {
+    #[allow(missing_docs)] // documentation missing in model
+    Completed,
+    #[allow(missing_docs)] // documentation missing in model
+    Failed,
+    #[allow(missing_docs)] // documentation missing in model
+    InProgress,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for ServerSideEncryptionUpdateStatus {
+    fn from(s: &str) -> Self {
+        match s {
+            "COMPLETED" => ServerSideEncryptionUpdateStatus::Completed,
+            "FAILED" => ServerSideEncryptionUpdateStatus::Failed,
+            "IN_PROGRESS" => ServerSideEncryptionUpdateStatus::InProgress,
+            other => ServerSideEncryptionUpdateStatus::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for ServerSideEncryptionUpdateStatus {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(ServerSideEncryptionUpdateStatus::from(s))
+    }
+}
+impl ServerSideEncryptionUpdateStatus {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            ServerSideEncryptionUpdateStatus::Completed => "COMPLETED",
+            ServerSideEncryptionUpdateStatus::Failed => "FAILED",
+            ServerSideEncryptionUpdateStatus::InProgress => "IN_PROGRESS",
+            ServerSideEncryptionUpdateStatus::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["COMPLETED", "FAILED", "IN_PROGRESS"]
+    }
+}
+impl AsRef<str> for ServerSideEncryptionUpdateStatus {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
+/// <p>The configuration containing information about the customer managed key used for encrypting customer data.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ServerSideEncryptionConfiguration {
-    /// <p>The identifier of the KMS Key you want Voice ID to use to encrypt your data.</p>
+    /// <p>The identifier of the KMS key you want Voice ID to use to encrypt your data.</p>
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl ServerSideEncryptionConfiguration {
-    /// <p>The identifier of the KMS Key you want Voice ID to use to encrypt your data.</p>
+    /// <p>The identifier of the KMS key you want Voice ID to use to encrypt your data.</p>
     pub fn kms_key_id(&self) -> std::option::Option<&str> {
         self.kms_key_id.as_deref()
     }
@@ -395,6 +601,7 @@ impl std::fmt::Debug for ServerSideEncryptionConfiguration {
 }
 /// See [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
 pub mod server_side_encryption_configuration {
+
     /// A builder for [`ServerSideEncryptionConfiguration`](crate::model::ServerSideEncryptionConfiguration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -402,12 +609,12 @@ pub mod server_side_encryption_configuration {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The identifier of the KMS Key you want Voice ID to use to encrypt your data.</p>
+        /// <p>The identifier of the KMS key you want Voice ID to use to encrypt your data.</p>
         pub fn kms_key_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.kms_key_id = Some(input.into());
             self
         }
-        /// <p>The identifier of the KMS Key you want Voice ID to use to encrypt your data.</p>
+        /// <p>The identifier of the KMS key you want Voice ID to use to encrypt your data.</p>
         pub fn set_kms_key_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.kms_key_id = input;
             self
@@ -515,6 +722,7 @@ impl std::fmt::Debug for Tag {
 }
 /// See [`Tag`](crate::model::Tag)
 pub mod tag {
+
     /// A builder for [`Tag`](crate::model::Tag)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -577,7 +785,7 @@ pub struct SpeakerEnrollmentJob {
     pub enrollment_config: std::option::Option<crate::model::EnrollmentConfig>,
     /// <p>The input data config containing an S3 URI for the input manifest file that contains the list of speaker enrollment job requests.</p>
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
-    /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS Key ID to encrypt the file.</p>
+    /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS key ID to encrypt the file.</p>
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>A timestamp showing the creation of the speaker enrollment job.</p>
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -617,7 +825,7 @@ impl SpeakerEnrollmentJob {
     pub fn input_data_config(&self) -> std::option::Option<&crate::model::InputDataConfig> {
         self.input_data_config.as_ref()
     }
-    /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS Key ID to encrypt the file.</p>
+    /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS key ID to encrypt the file.</p>
     pub fn output_data_config(&self) -> std::option::Option<&crate::model::OutputDataConfig> {
         self.output_data_config.as_ref()
     }
@@ -658,6 +866,7 @@ impl std::fmt::Debug for SpeakerEnrollmentJob {
 }
 /// See [`SpeakerEnrollmentJob`](crate::model::SpeakerEnrollmentJob)
 pub mod speaker_enrollment_job {
+
     /// A builder for [`SpeakerEnrollmentJob`](crate::model::SpeakerEnrollmentJob)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -758,12 +967,12 @@ pub mod speaker_enrollment_job {
             self.input_data_config = input;
             self
         }
-        /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS Key ID to encrypt the file.</p>
+        /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS key ID to encrypt the file.</p>
         pub fn output_data_config(mut self, input: crate::model::OutputDataConfig) -> Self {
             self.output_data_config = Some(input);
             self
         }
-        /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS Key ID to encrypt the file.</p>
+        /// <p>The output data config containing the S3 location where Voice ID writes the job output file; you must also include a KMS key ID to encrypt the file.</p>
         pub fn set_output_data_config(
             mut self,
             input: std::option::Option<crate::model::OutputDataConfig>,
@@ -871,6 +1080,7 @@ impl std::fmt::Debug for JobProgress {
 }
 /// See [`JobProgress`](crate::model::JobProgress)
 pub mod job_progress {
+
     /// A builder for [`JobProgress`](crate::model::JobProgress)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -932,6 +1142,7 @@ impl std::fmt::Debug for FailureDetails {
 }
 /// See [`FailureDetails`](crate::model::FailureDetails)
 pub mod failure_details {
+
     /// A builder for [`FailureDetails`](crate::model::FailureDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -980,13 +1191,13 @@ impl FailureDetails {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct OutputDataConfig {
-    /// <p>The S3 path of the folder to which Voice ID writes the job output file, which has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
+    /// <p>The S3 path of the folder where Voice ID writes the job output file. It has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
     pub s3_uri: std::option::Option<std::string::String>,
     /// <p>the identifier of the KMS key you want Voice ID to use to encrypt the output file of the fraudster registration job.</p>
     pub kms_key_id: std::option::Option<std::string::String>,
 }
 impl OutputDataConfig {
-    /// <p>The S3 path of the folder to which Voice ID writes the job output file, which has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
+    /// <p>The S3 path of the folder where Voice ID writes the job output file. It has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
     pub fn s3_uri(&self) -> std::option::Option<&str> {
         self.s3_uri.as_deref()
     }
@@ -1005,6 +1216,7 @@ impl std::fmt::Debug for OutputDataConfig {
 }
 /// See [`OutputDataConfig`](crate::model::OutputDataConfig)
 pub mod output_data_config {
+
     /// A builder for [`OutputDataConfig`](crate::model::OutputDataConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1013,12 +1225,12 @@ pub mod output_data_config {
         pub(crate) kms_key_id: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The S3 path of the folder to which Voice ID writes the job output file, which has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
+        /// <p>The S3 path of the folder where Voice ID writes the job output file. It has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
         pub fn s3_uri(mut self, input: impl Into<std::string::String>) -> Self {
             self.s3_uri = Some(input.into());
             self
         }
-        /// <p>The S3 path of the folder to which Voice ID writes the job output file, which has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
+        /// <p>The S3 path of the folder where Voice ID writes the job output file. It has a <code>*.out</code> extension. For example, if the input file name is <code>input-file.json</code> and the output folder path is <code>s3://output-bucket/output-folder</code>, the full output file path is <code>s3://output-bucket/output-folder/job-Id/input-file.json.out</code>.</p>
         pub fn set_s3_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.s3_uri = input;
             self
@@ -1071,6 +1283,7 @@ impl std::fmt::Debug for InputDataConfig {
 }
 /// See [`InputDataConfig`](crate::model::InputDataConfig)
 pub mod input_data_config {
+
     /// A builder for [`InputDataConfig`](crate::model::InputDataConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1140,6 +1353,7 @@ impl std::fmt::Debug for EnrollmentConfig {
 }
 /// See [`EnrollmentConfig`](crate::model::EnrollmentConfig)
 pub mod enrollment_config {
+
     /// A builder for [`EnrollmentConfig`](crate::model::EnrollmentConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1229,6 +1443,7 @@ impl std::fmt::Debug for EnrollmentJobFraudDetectionConfig {
 }
 /// See [`EnrollmentJobFraudDetectionConfig`](crate::model::EnrollmentJobFraudDetectionConfig)
 pub mod enrollment_job_fraud_detection_config {
+
     /// A builder for [`EnrollmentJobFraudDetectionConfig`](crate::model::EnrollmentJobFraudDetectionConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1463,7 +1678,7 @@ impl AsRef<str> for SpeakerEnrollmentJobStatus {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct FraudsterRegistrationJob {
-    /// <p>The client-provied name for the fraudster registration job.</p>
+    /// <p>The client-provided name for the fraudster registration job.</p>
     pub job_name: std::option::Option<std::string::String>,
     /// <p>The service-generated identifier for the fraudster registration job.</p>
     pub job_id: std::option::Option<std::string::String>,
@@ -1477,7 +1692,7 @@ pub struct FraudsterRegistrationJob {
     pub registration_config: std::option::Option<crate::model::RegistrationConfig>,
     /// <p>The input data config containing an S3 URI for the input manifest file that contains the list of fraudster registration job requests.</p>
     pub input_data_config: std::option::Option<crate::model::InputDataConfig>,
-    /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS Key ID in order to encrypt the file.</p>
+    /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS key iD in order to encrypt the file.</p>
     pub output_data_config: std::option::Option<crate::model::OutputDataConfig>,
     /// <p>A timestamp showing the creation time of the fraudster registration job.</p>
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -1489,7 +1704,7 @@ pub struct FraudsterRegistrationJob {
     pub job_progress: std::option::Option<crate::model::JobProgress>,
 }
 impl FraudsterRegistrationJob {
-    /// <p>The client-provied name for the fraudster registration job.</p>
+    /// <p>The client-provided name for the fraudster registration job.</p>
     pub fn job_name(&self) -> std::option::Option<&str> {
         self.job_name.as_deref()
     }
@@ -1517,7 +1732,7 @@ impl FraudsterRegistrationJob {
     pub fn input_data_config(&self) -> std::option::Option<&crate::model::InputDataConfig> {
         self.input_data_config.as_ref()
     }
-    /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS Key ID in order to encrypt the file.</p>
+    /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS key iD in order to encrypt the file.</p>
     pub fn output_data_config(&self) -> std::option::Option<&crate::model::OutputDataConfig> {
         self.output_data_config.as_ref()
     }
@@ -1558,6 +1773,7 @@ impl std::fmt::Debug for FraudsterRegistrationJob {
 }
 /// See [`FraudsterRegistrationJob`](crate::model::FraudsterRegistrationJob)
 pub mod fraudster_registration_job {
+
     /// A builder for [`FraudsterRegistrationJob`](crate::model::FraudsterRegistrationJob)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1576,12 +1792,12 @@ pub mod fraudster_registration_job {
         pub(crate) job_progress: std::option::Option<crate::model::JobProgress>,
     }
     impl Builder {
-        /// <p>The client-provied name for the fraudster registration job.</p>
+        /// <p>The client-provided name for the fraudster registration job.</p>
         pub fn job_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.job_name = Some(input.into());
             self
         }
-        /// <p>The client-provied name for the fraudster registration job.</p>
+        /// <p>The client-provided name for the fraudster registration job.</p>
         pub fn set_job_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.job_name = input;
             self
@@ -1658,12 +1874,12 @@ pub mod fraudster_registration_job {
             self.input_data_config = input;
             self
         }
-        /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS Key ID in order to encrypt the file.</p>
+        /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS key iD in order to encrypt the file.</p>
         pub fn output_data_config(mut self, input: crate::model::OutputDataConfig) -> Self {
             self.output_data_config = Some(input);
             self
         }
-        /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS Key ID in order to encrypt the file.</p>
+        /// <p>The output data config containing the S3 location where you want Voice ID to write your job output file; you must also include a KMS key iD in order to encrypt the file.</p>
         pub fn set_output_data_config(
             mut self,
             input: std::option::Option<crate::model::OutputDataConfig>,
@@ -1749,7 +1965,7 @@ impl FraudsterRegistrationJob {
     }
 }
 
-/// <p>The configuration definining the action to take when a duplicate fraudster is detected, and the similarity threshold to use for detecting a duplicate fraudster during a batch fraudster registration job.</p>
+/// <p>The configuration defining the action to take when a duplicate fraudster is detected, and the similarity threshold to use for detecting a duplicate fraudster during a batch fraudster registration job.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RegistrationConfig {
@@ -1787,6 +2003,7 @@ impl std::fmt::Debug for RegistrationConfig {
 }
 /// See [`RegistrationConfig`](crate::model::RegistrationConfig)
 pub mod registration_config {
+
     /// A builder for [`RegistrationConfig`](crate::model::RegistrationConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1985,6 +2202,8 @@ pub struct Speaker {
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp showing the speaker's last update.</p>
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+    pub last_accessed_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl Speaker {
     /// <p>The identifier of the domain that contains the speaker.</p>
@@ -2011,6 +2230,10 @@ impl Speaker {
     pub fn updated_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_at.as_ref()
     }
+    /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+    pub fn last_accessed_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_accessed_at.as_ref()
+    }
 }
 impl std::fmt::Debug for Speaker {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -2021,11 +2244,13 @@ impl std::fmt::Debug for Speaker {
         formatter.field("status", &self.status);
         formatter.field("created_at", &self.created_at);
         formatter.field("updated_at", &self.updated_at);
+        formatter.field("last_accessed_at", &self.last_accessed_at);
         formatter.finish()
     }
 }
 /// See [`Speaker`](crate::model::Speaker)
 pub mod speaker {
+
     /// A builder for [`Speaker`](crate::model::Speaker)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2036,6 +2261,7 @@ pub mod speaker {
         pub(crate) status: std::option::Option<crate::model::SpeakerStatus>,
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) updated_at: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) last_accessed_at: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
         /// <p>The identifier of the domain that contains the speaker.</p>
@@ -2113,6 +2339,19 @@ pub mod speaker {
             self.updated_at = input;
             self
         }
+        /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+        pub fn last_accessed_at(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_accessed_at = Some(input);
+            self
+        }
+        /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+        pub fn set_last_accessed_at(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_accessed_at = input;
+            self
+        }
         /// Consumes the builder and constructs a [`Speaker`](crate::model::Speaker)
         pub fn build(self) -> crate::model::Speaker {
             crate::model::Speaker {
@@ -2122,6 +2361,7 @@ pub mod speaker {
                 status: self.status,
                 created_at: self.created_at,
                 updated_at: self.updated_at,
+                last_accessed_at: self.last_accessed_at,
             }
         }
     }
@@ -2212,6 +2452,8 @@ pub struct SpeakerSummary {
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>A timestamp showing the speaker's last update.</p>
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+    pub last_accessed_at: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl SpeakerSummary {
     /// <p>The identifier of the domain that contains the speaker.</p>
@@ -2238,6 +2480,10 @@ impl SpeakerSummary {
     pub fn updated_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_at.as_ref()
     }
+    /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+    pub fn last_accessed_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_accessed_at.as_ref()
+    }
 }
 impl std::fmt::Debug for SpeakerSummary {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -2248,11 +2494,13 @@ impl std::fmt::Debug for SpeakerSummary {
         formatter.field("status", &self.status);
         formatter.field("created_at", &self.created_at);
         formatter.field("updated_at", &self.updated_at);
+        formatter.field("last_accessed_at", &self.last_accessed_at);
         formatter.finish()
     }
 }
 /// See [`SpeakerSummary`](crate::model::SpeakerSummary)
 pub mod speaker_summary {
+
     /// A builder for [`SpeakerSummary`](crate::model::SpeakerSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2263,6 +2511,7 @@ pub mod speaker_summary {
         pub(crate) status: std::option::Option<crate::model::SpeakerStatus>,
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) updated_at: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) last_accessed_at: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
         /// <p>The identifier of the domain that contains the speaker.</p>
@@ -2340,6 +2589,19 @@ pub mod speaker_summary {
             self.updated_at = input;
             self
         }
+        /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+        pub fn last_accessed_at(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_accessed_at = Some(input);
+            self
+        }
+        /// <p>The timestamp when the speaker was last accessed for enrollment, re-enrollment or a successful authentication. This timestamp is accurate to one hour.</p>
+        pub fn set_last_accessed_at(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_accessed_at = input;
+            self
+        }
         /// Consumes the builder and constructs a [`SpeakerSummary`](crate::model::SpeakerSummary)
         pub fn build(self) -> crate::model::SpeakerSummary {
             crate::model::SpeakerSummary {
@@ -2349,6 +2611,7 @@ pub mod speaker_summary {
                 status: self.status,
                 created_at: self.created_at,
                 updated_at: self.updated_at,
+                last_accessed_at: self.last_accessed_at,
             }
         }
     }
@@ -2431,6 +2694,7 @@ impl std::fmt::Debug for SpeakerEnrollmentJobSummary {
 }
 /// See [`SpeakerEnrollmentJobSummary`](crate::model::SpeakerEnrollmentJobSummary)
 pub mod speaker_enrollment_job_summary {
+
     /// A builder for [`SpeakerEnrollmentJobSummary`](crate::model::SpeakerEnrollmentJobSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2633,6 +2897,7 @@ impl std::fmt::Debug for FraudsterRegistrationJobSummary {
 }
 /// See [`FraudsterRegistrationJobSummary`](crate::model::FraudsterRegistrationJobSummary)
 pub mod fraudster_registration_job_summary {
+
     /// A builder for [`FraudsterRegistrationJobSummary`](crate::model::FraudsterRegistrationJobSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2778,13 +3043,16 @@ pub struct DomainSummary {
     pub description: std::option::Option<std::string::String>,
     /// <p>The current status of the domain.</p>
     pub domain_status: std::option::Option<crate::model::DomainStatus>,
-    /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data..</p>
+    /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
     pub server_side_encryption_configuration:
         std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
     /// <p>The timestamp showing when the domain is created.</p>
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The timestamp showing the domain's last update.</p>
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain’s data can only be accessed using the new KMS key.</p>
+    pub server_side_encryption_update_details:
+        std::option::Option<crate::model::ServerSideEncryptionUpdateDetails>,
 }
 impl DomainSummary {
     /// <p>The service-generated identifier for the domain.</p>
@@ -2807,7 +3075,7 @@ impl DomainSummary {
     pub fn domain_status(&self) -> std::option::Option<&crate::model::DomainStatus> {
         self.domain_status.as_ref()
     }
-    /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data..</p>
+    /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
     pub fn server_side_encryption_configuration(
         &self,
     ) -> std::option::Option<&crate::model::ServerSideEncryptionConfiguration> {
@@ -2820,6 +3088,12 @@ impl DomainSummary {
     /// <p>The timestamp showing the domain's last update.</p>
     pub fn updated_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_at.as_ref()
+    }
+    /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain’s data can only be accessed using the new KMS key.</p>
+    pub fn server_side_encryption_update_details(
+        &self,
+    ) -> std::option::Option<&crate::model::ServerSideEncryptionUpdateDetails> {
+        self.server_side_encryption_update_details.as_ref()
     }
 }
 impl std::fmt::Debug for DomainSummary {
@@ -2836,11 +3110,16 @@ impl std::fmt::Debug for DomainSummary {
         );
         formatter.field("created_at", &self.created_at);
         formatter.field("updated_at", &self.updated_at);
+        formatter.field(
+            "server_side_encryption_update_details",
+            &self.server_side_encryption_update_details,
+        );
         formatter.finish()
     }
 }
 /// See [`DomainSummary`](crate::model::DomainSummary)
 pub mod domain_summary {
+
     /// A builder for [`DomainSummary`](crate::model::DomainSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2854,6 +3133,8 @@ pub mod domain_summary {
             std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
         pub(crate) created_at: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) updated_at: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) server_side_encryption_update_details:
+            std::option::Option<crate::model::ServerSideEncryptionUpdateDetails>,
     }
     impl Builder {
         /// <p>The service-generated identifier for the domain.</p>
@@ -2909,7 +3190,7 @@ pub mod domain_summary {
             self.domain_status = input;
             self
         }
-        /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data..</p>
+        /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
         pub fn server_side_encryption_configuration(
             mut self,
             input: crate::model::ServerSideEncryptionConfiguration,
@@ -2917,7 +3198,7 @@ pub mod domain_summary {
             self.server_side_encryption_configuration = Some(input);
             self
         }
-        /// <p>The server-side encryption configuration containing the KMS Key Identifier you want Voice ID to use to encrypt your data..</p>
+        /// <p>The server-side encryption configuration containing the KMS key identifier you want Voice ID to use to encrypt your data.</p>
         pub fn set_server_side_encryption_configuration(
             mut self,
             input: std::option::Option<crate::model::ServerSideEncryptionConfiguration>,
@@ -2951,6 +3232,22 @@ pub mod domain_summary {
             self.updated_at = input;
             self
         }
+        /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain’s data can only be accessed using the new KMS key.</p>
+        pub fn server_side_encryption_update_details(
+            mut self,
+            input: crate::model::ServerSideEncryptionUpdateDetails,
+        ) -> Self {
+            self.server_side_encryption_update_details = Some(input);
+            self
+        }
+        /// <p>Details about the most recent server-side encryption configuration update. When the server-side encryption configuration is changed, dependency on the old KMS key is removed through an asynchronous process. When this update is complete, the domain’s data can only be accessed using the new KMS key.</p>
+        pub fn set_server_side_encryption_update_details(
+            mut self,
+            input: std::option::Option<crate::model::ServerSideEncryptionUpdateDetails>,
+        ) -> Self {
+            self.server_side_encryption_update_details = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DomainSummary`](crate::model::DomainSummary)
         pub fn build(self) -> crate::model::DomainSummary {
             crate::model::DomainSummary {
@@ -2962,6 +3259,7 @@ pub mod domain_summary {
                 server_side_encryption_configuration: self.server_side_encryption_configuration,
                 created_at: self.created_at,
                 updated_at: self.updated_at,
+                server_side_encryption_update_details: self.server_side_encryption_update_details,
             }
         }
     }
@@ -3043,6 +3341,7 @@ impl std::fmt::Debug for FraudDetectionResult {
 }
 /// See [`FraudDetectionResult`](crate::model::FraudDetectionResult)
 pub mod fraud_detection_result {
+
     /// A builder for [`FraudDetectionResult`](crate::model::FraudDetectionResult)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3196,6 +3495,7 @@ impl std::fmt::Debug for FraudRiskDetails {
 }
 /// See [`FraudRiskDetails`](crate::model::FraudRiskDetails)
 pub mod fraud_risk_details {
+
     /// A builder for [`FraudRiskDetails`](crate::model::FraudRiskDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3260,6 +3560,7 @@ impl std::fmt::Debug for KnownFraudsterRisk {
 }
 /// See [`KnownFraudsterRisk`](crate::model::KnownFraudsterRisk)
 pub mod known_fraudster_risk {
+
     /// A builder for [`KnownFraudsterRisk`](crate::model::KnownFraudsterRisk)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3439,6 +3740,7 @@ impl std::fmt::Debug for FraudDetectionConfiguration {
 }
 /// See [`FraudDetectionConfiguration`](crate::model::FraudDetectionConfiguration)
 pub mod fraud_detection_configuration {
+
     /// A builder for [`FraudDetectionConfiguration`](crate::model::FraudDetectionConfiguration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3548,6 +3850,7 @@ impl std::fmt::Debug for AuthenticationResult {
 }
 /// See [`AuthenticationResult`](crate::model::AuthenticationResult)
 pub mod authentication_result {
+
     /// A builder for [`AuthenticationResult`](crate::model::AuthenticationResult)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3707,6 +4010,7 @@ impl std::fmt::Debug for AuthenticationConfiguration {
 }
 /// See [`AuthenticationConfiguration`](crate::model::AuthenticationConfiguration)
 pub mod authentication_configuration {
+
     /// A builder for [`AuthenticationConfiguration`](crate::model::AuthenticationConfiguration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3758,6 +4062,8 @@ pub enum AuthenticationDecision {
     #[allow(missing_docs)] // documentation missing in model
     Reject,
     #[allow(missing_docs)] // documentation missing in model
+    SpeakerExpired,
+    #[allow(missing_docs)] // documentation missing in model
     SpeakerIdNotProvided,
     #[allow(missing_docs)] // documentation missing in model
     SpeakerNotEnrolled,
@@ -3772,6 +4078,7 @@ impl std::convert::From<&str> for AuthenticationDecision {
             "ACCEPT" => AuthenticationDecision::Accept,
             "NOT_ENOUGH_SPEECH" => AuthenticationDecision::NotEnoughSpeech,
             "REJECT" => AuthenticationDecision::Reject,
+            "SPEAKER_EXPIRED" => AuthenticationDecision::SpeakerExpired,
             "SPEAKER_ID_NOT_PROVIDED" => AuthenticationDecision::SpeakerIdNotProvided,
             "SPEAKER_NOT_ENROLLED" => AuthenticationDecision::SpeakerNotEnrolled,
             "SPEAKER_OPTED_OUT" => AuthenticationDecision::SpeakerOptedOut,
@@ -3793,6 +4100,7 @@ impl AuthenticationDecision {
             AuthenticationDecision::Accept => "ACCEPT",
             AuthenticationDecision::NotEnoughSpeech => "NOT_ENOUGH_SPEECH",
             AuthenticationDecision::Reject => "REJECT",
+            AuthenticationDecision::SpeakerExpired => "SPEAKER_EXPIRED",
             AuthenticationDecision::SpeakerIdNotProvided => "SPEAKER_ID_NOT_PROVIDED",
             AuthenticationDecision::SpeakerNotEnrolled => "SPEAKER_NOT_ENROLLED",
             AuthenticationDecision::SpeakerOptedOut => "SPEAKER_OPTED_OUT",
@@ -3805,6 +4113,7 @@ impl AuthenticationDecision {
             "ACCEPT",
             "NOT_ENOUGH_SPEECH",
             "REJECT",
+            "SPEAKER_EXPIRED",
             "SPEAKER_ID_NOT_PROVIDED",
             "SPEAKER_NOT_ENROLLED",
             "SPEAKER_OPTED_OUT",
@@ -3912,6 +4221,7 @@ impl std::fmt::Debug for Fraudster {
 }
 /// See [`Fraudster`](crate::model::Fraudster)
 pub mod fraudster {
+
     /// A builder for [`Fraudster`](crate::model::Fraudster)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

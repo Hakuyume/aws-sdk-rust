@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateStreamOutput {
 }
 /// See [`UpdateStreamOutput`](crate::output::UpdateStreamOutput)
 pub mod update_stream_output {
+
     /// A builder for [`UpdateStreamOutput`](crate::output::UpdateStreamOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +42,7 @@ impl std::fmt::Debug for UpdateSignalingChannelOutput {
 }
 /// See [`UpdateSignalingChannelOutput`](crate::output::UpdateSignalingChannelOutput)
 pub mod update_signaling_channel_output {
+
     /// A builder for [`UpdateSignalingChannelOutput`](crate::output::UpdateSignalingChannelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -62,6 +64,68 @@ impl UpdateSignalingChannelOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateNotificationConfigurationOutput {}
+impl std::fmt::Debug for UpdateNotificationConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateNotificationConfigurationOutput");
+        formatter.finish()
+    }
+}
+/// See [`UpdateNotificationConfigurationOutput`](crate::output::UpdateNotificationConfigurationOutput)
+pub mod update_notification_configuration_output {
+
+    /// A builder for [`UpdateNotificationConfigurationOutput`](crate::output::UpdateNotificationConfigurationOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`UpdateNotificationConfigurationOutput`](crate::output::UpdateNotificationConfigurationOutput)
+        pub fn build(self) -> crate::output::UpdateNotificationConfigurationOutput {
+            crate::output::UpdateNotificationConfigurationOutput {}
+        }
+    }
+}
+impl UpdateNotificationConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateNotificationConfigurationOutput`](crate::output::UpdateNotificationConfigurationOutput)
+    pub fn builder() -> crate::output::update_notification_configuration_output::Builder {
+        crate::output::update_notification_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateImageGenerationConfigurationOutput {}
+impl std::fmt::Debug for UpdateImageGenerationConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateImageGenerationConfigurationOutput");
+        formatter.finish()
+    }
+}
+/// See [`UpdateImageGenerationConfigurationOutput`](crate::output::UpdateImageGenerationConfigurationOutput)
+pub mod update_image_generation_configuration_output {
+
+    /// A builder for [`UpdateImageGenerationConfigurationOutput`](crate::output::UpdateImageGenerationConfigurationOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`UpdateImageGenerationConfigurationOutput`](crate::output::UpdateImageGenerationConfigurationOutput)
+        pub fn build(self) -> crate::output::UpdateImageGenerationConfigurationOutput {
+            crate::output::UpdateImageGenerationConfigurationOutput {}
+        }
+    }
+}
+impl UpdateImageGenerationConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateImageGenerationConfigurationOutput`](crate::output::UpdateImageGenerationConfigurationOutput)
+    pub fn builder() -> crate::output::update_image_generation_configuration_output::Builder {
+        crate::output::update_image_generation_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UpdateDataRetentionOutput {}
 impl std::fmt::Debug for UpdateDataRetentionOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -71,6 +135,7 @@ impl std::fmt::Debug for UpdateDataRetentionOutput {
 }
 /// See [`UpdateDataRetentionOutput`](crate::output::UpdateDataRetentionOutput)
 pub mod update_data_retention_output {
+
     /// A builder for [`UpdateDataRetentionOutput`](crate::output::UpdateDataRetentionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -101,6 +166,7 @@ impl std::fmt::Debug for UntagStreamOutput {
 }
 /// See [`UntagStreamOutput`](crate::output::UntagStreamOutput)
 pub mod untag_stream_output {
+
     /// A builder for [`UntagStreamOutput`](crate::output::UntagStreamOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -131,6 +197,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -161,6 +228,7 @@ impl std::fmt::Debug for TagStreamOutput {
 }
 /// See [`TagStreamOutput`](crate::output::TagStreamOutput)
 pub mod tag_stream_output {
+
     /// A builder for [`TagStreamOutput`](crate::output::TagStreamOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -191,6 +259,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -242,6 +311,7 @@ impl std::fmt::Debug for ListTagsForStreamOutput {
 }
 /// See [`ListTagsForStreamOutput`](crate::output::ListTagsForStreamOutput)
 pub mod list_tags_for_stream_output {
+
     /// A builder for [`ListTagsForStreamOutput`](crate::output::ListTagsForStreamOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -336,6 +406,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -426,6 +497,7 @@ impl std::fmt::Debug for ListStreamsOutput {
 }
 /// See [`ListStreamsOutput`](crate::output::ListStreamsOutput)
 pub mod list_streams_output {
+
     /// A builder for [`ListStreamsOutput`](crate::output::ListStreamsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -508,6 +580,7 @@ impl std::fmt::Debug for ListSignalingChannelsOutput {
 }
 /// See [`ListSignalingChannelsOutput`](crate::output::ListSignalingChannelsOutput)
 pub mod list_signaling_channels_output {
+
     /// A builder for [`ListSignalingChannelsOutput`](crate::output::ListSignalingChannelsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -586,6 +659,7 @@ impl std::fmt::Debug for GetSignalingChannelEndpointOutput {
 }
 /// See [`GetSignalingChannelEndpointOutput`](crate::output::GetSignalingChannelEndpointOutput)
 pub mod get_signaling_channel_endpoint_output {
+
     /// A builder for [`GetSignalingChannelEndpointOutput`](crate::output::GetSignalingChannelEndpointOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -653,6 +727,7 @@ impl std::fmt::Debug for GetDataEndpointOutput {
 }
 /// See [`GetDataEndpointOutput`](crate::output::GetDataEndpointOutput)
 pub mod get_data_endpoint_output {
+
     /// A builder for [`GetDataEndpointOutput`](crate::output::GetDataEndpointOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -710,6 +785,7 @@ impl std::fmt::Debug for DescribeStreamOutput {
 }
 /// See [`DescribeStreamOutput`](crate::output::DescribeStreamOutput)
 pub mod describe_stream_output {
+
     /// A builder for [`DescribeStreamOutput`](crate::output::DescribeStreamOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -767,6 +843,7 @@ impl std::fmt::Debug for DescribeSignalingChannelOutput {
 }
 /// See [`DescribeSignalingChannelOutput`](crate::output::DescribeSignalingChannelOutput)
 pub mod describe_signaling_channel_output {
+
     /// A builder for [`DescribeSignalingChannelOutput`](crate::output::DescribeSignalingChannelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -805,6 +882,141 @@ impl DescribeSignalingChannelOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DescribeNotificationConfigurationOutput {
+    /// <p>The structure that contains the information required for notifications. If the structure is null, the configuration will be deleted from the stream.</p>
+    pub notification_configuration: std::option::Option<crate::model::NotificationConfiguration>,
+}
+impl DescribeNotificationConfigurationOutput {
+    /// <p>The structure that contains the information required for notifications. If the structure is null, the configuration will be deleted from the stream.</p>
+    pub fn notification_configuration(
+        &self,
+    ) -> std::option::Option<&crate::model::NotificationConfiguration> {
+        self.notification_configuration.as_ref()
+    }
+}
+impl std::fmt::Debug for DescribeNotificationConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DescribeNotificationConfigurationOutput");
+        formatter.field(
+            "notification_configuration",
+            &self.notification_configuration,
+        );
+        formatter.finish()
+    }
+}
+/// See [`DescribeNotificationConfigurationOutput`](crate::output::DescribeNotificationConfigurationOutput)
+pub mod describe_notification_configuration_output {
+
+    /// A builder for [`DescribeNotificationConfigurationOutput`](crate::output::DescribeNotificationConfigurationOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) notification_configuration:
+            std::option::Option<crate::model::NotificationConfiguration>,
+    }
+    impl Builder {
+        /// <p>The structure that contains the information required for notifications. If the structure is null, the configuration will be deleted from the stream.</p>
+        pub fn notification_configuration(
+            mut self,
+            input: crate::model::NotificationConfiguration,
+        ) -> Self {
+            self.notification_configuration = Some(input);
+            self
+        }
+        /// <p>The structure that contains the information required for notifications. If the structure is null, the configuration will be deleted from the stream.</p>
+        pub fn set_notification_configuration(
+            mut self,
+            input: std::option::Option<crate::model::NotificationConfiguration>,
+        ) -> Self {
+            self.notification_configuration = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribeNotificationConfigurationOutput`](crate::output::DescribeNotificationConfigurationOutput)
+        pub fn build(self) -> crate::output::DescribeNotificationConfigurationOutput {
+            crate::output::DescribeNotificationConfigurationOutput {
+                notification_configuration: self.notification_configuration,
+            }
+        }
+    }
+}
+impl DescribeNotificationConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`DescribeNotificationConfigurationOutput`](crate::output::DescribeNotificationConfigurationOutput)
+    pub fn builder() -> crate::output::describe_notification_configuration_output::Builder {
+        crate::output::describe_notification_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DescribeImageGenerationConfigurationOutput {
+    /// <p>The structure that contains the information required for the Kinesis video stream (KVS) images delivery. If this structure is null, the configuration will be deleted from the stream.</p>
+    pub image_generation_configuration:
+        std::option::Option<crate::model::ImageGenerationConfiguration>,
+}
+impl DescribeImageGenerationConfigurationOutput {
+    /// <p>The structure that contains the information required for the Kinesis video stream (KVS) images delivery. If this structure is null, the configuration will be deleted from the stream.</p>
+    pub fn image_generation_configuration(
+        &self,
+    ) -> std::option::Option<&crate::model::ImageGenerationConfiguration> {
+        self.image_generation_configuration.as_ref()
+    }
+}
+impl std::fmt::Debug for DescribeImageGenerationConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DescribeImageGenerationConfigurationOutput");
+        formatter.field(
+            "image_generation_configuration",
+            &self.image_generation_configuration,
+        );
+        formatter.finish()
+    }
+}
+/// See [`DescribeImageGenerationConfigurationOutput`](crate::output::DescribeImageGenerationConfigurationOutput)
+pub mod describe_image_generation_configuration_output {
+
+    /// A builder for [`DescribeImageGenerationConfigurationOutput`](crate::output::DescribeImageGenerationConfigurationOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) image_generation_configuration:
+            std::option::Option<crate::model::ImageGenerationConfiguration>,
+    }
+    impl Builder {
+        /// <p>The structure that contains the information required for the Kinesis video stream (KVS) images delivery. If this structure is null, the configuration will be deleted from the stream.</p>
+        pub fn image_generation_configuration(
+            mut self,
+            input: crate::model::ImageGenerationConfiguration,
+        ) -> Self {
+            self.image_generation_configuration = Some(input);
+            self
+        }
+        /// <p>The structure that contains the information required for the Kinesis video stream (KVS) images delivery. If this structure is null, the configuration will be deleted from the stream.</p>
+        pub fn set_image_generation_configuration(
+            mut self,
+            input: std::option::Option<crate::model::ImageGenerationConfiguration>,
+        ) -> Self {
+            self.image_generation_configuration = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribeImageGenerationConfigurationOutput`](crate::output::DescribeImageGenerationConfigurationOutput)
+        pub fn build(self) -> crate::output::DescribeImageGenerationConfigurationOutput {
+            crate::output::DescribeImageGenerationConfigurationOutput {
+                image_generation_configuration: self.image_generation_configuration,
+            }
+        }
+    }
+}
+impl DescribeImageGenerationConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`DescribeImageGenerationConfigurationOutput`](crate::output::DescribeImageGenerationConfigurationOutput)
+    pub fn builder() -> crate::output::describe_image_generation_configuration_output::Builder {
+        crate::output::describe_image_generation_configuration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteStreamOutput {}
 impl std::fmt::Debug for DeleteStreamOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -814,6 +1026,7 @@ impl std::fmt::Debug for DeleteStreamOutput {
 }
 /// See [`DeleteStreamOutput`](crate::output::DeleteStreamOutput)
 pub mod delete_stream_output {
+
     /// A builder for [`DeleteStreamOutput`](crate::output::DeleteStreamOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -844,6 +1057,7 @@ impl std::fmt::Debug for DeleteSignalingChannelOutput {
 }
 /// See [`DeleteSignalingChannelOutput`](crate::output::DeleteSignalingChannelOutput)
 pub mod delete_signaling_channel_output {
+
     /// A builder for [`DeleteSignalingChannelOutput`](crate::output::DeleteSignalingChannelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -884,6 +1098,7 @@ impl std::fmt::Debug for CreateStreamOutput {
 }
 /// See [`CreateStreamOutput`](crate::output::CreateStreamOutput)
 pub mod create_stream_output {
+
     /// A builder for [`CreateStreamOutput`](crate::output::CreateStreamOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -938,6 +1153,7 @@ impl std::fmt::Debug for CreateSignalingChannelOutput {
 }
 /// See [`CreateSignalingChannelOutput`](crate::output::CreateSignalingChannelOutput)
 pub mod create_signaling_channel_output {
+
     /// A builder for [`CreateSignalingChannelOutput`](crate::output::CreateSignalingChannelOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

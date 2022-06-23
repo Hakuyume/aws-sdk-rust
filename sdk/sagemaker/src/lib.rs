@@ -5,14 +5,15 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>Provides APIs for creating and managing Amazon SageMaker resources. </p>
+//! <p>Provides APIs for creating and managing SageMaker resources. </p>
 //! <p>Other Resources:</p>
 //! <ul>
 //! <li>
 //! <p>
-//! <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">Amazon SageMaker Developer
+//! <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">SageMaker Developer
 //! Guide</a>
 //! </p>
 //! </li>
@@ -60,7 +61,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

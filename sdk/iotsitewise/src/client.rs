@@ -145,6 +145,57 @@ impl Client {
     ) -> fluent_builders::BatchDisassociateProjectAssets {
         fluent_builders::BatchDisassociateProjectAssets::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`BatchGetAssetPropertyAggregates`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`entries(Vec<BatchGetAssetPropertyAggregatesEntry>)`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates::entries) / [`set_entries(Option<Vec<BatchGetAssetPropertyAggregatesEntry>>)`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates::set_entries): <p>The list of asset property aggregate entries for the batch get request. You can specify up to 16 entries per request.</p>
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates::set_next_token): <p>The token to be used for the next set of paginated results.</p>
+    ///   - [`max_results(i32)`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::BatchGetAssetPropertyAggregates::set_max_results): <p>The maximum number of results to return for each paginated request. A result set is returned in the two cases, whichever occurs first.</p>  <ul>   <li> <p>The size of the result set is less than 1 MB.</p> </li>   <li> <p>The number of data points in the result set is less than the value of <code>maxResults</code>. The maximum value of <code>maxResults</code> is 4000.</p> </li>  </ul>
+    /// - On success, responds with [`BatchGetAssetPropertyAggregatesOutput`](crate::output::BatchGetAssetPropertyAggregatesOutput) with field(s):
+    ///   - [`error_entries(Option<Vec<BatchGetAssetPropertyAggregatesErrorEntry>>)`](crate::output::BatchGetAssetPropertyAggregatesOutput::error_entries): <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    ///   - [`success_entries(Option<Vec<BatchGetAssetPropertyAggregatesSuccessEntry>>)`](crate::output::BatchGetAssetPropertyAggregatesOutput::success_entries): <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    ///   - [`skipped_entries(Option<Vec<BatchGetAssetPropertyAggregatesSkippedEntry>>)`](crate::output::BatchGetAssetPropertyAggregatesOutput::skipped_entries): <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    ///   - [`next_token(Option<String>)`](crate::output::BatchGetAssetPropertyAggregatesOutput::next_token): <p>The token for the next set of results, or null if there are no additional results.</p>
+    /// - On failure, responds with [`SdkError<BatchGetAssetPropertyAggregatesError>`](crate::error::BatchGetAssetPropertyAggregatesError)
+    pub fn batch_get_asset_property_aggregates(
+        &self,
+    ) -> fluent_builders::BatchGetAssetPropertyAggregates {
+        fluent_builders::BatchGetAssetPropertyAggregates::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`BatchGetAssetPropertyValue`](crate::client::fluent_builders::BatchGetAssetPropertyValue) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::BatchGetAssetPropertyValue::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`entries(Vec<BatchGetAssetPropertyValueEntry>)`](crate::client::fluent_builders::BatchGetAssetPropertyValue::entries) / [`set_entries(Option<Vec<BatchGetAssetPropertyValueEntry>>)`](crate::client::fluent_builders::BatchGetAssetPropertyValue::set_entries): <p>The list of asset property value entries for the batch get request. You can specify up to 16 entries per request.</p>
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::BatchGetAssetPropertyValue::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::BatchGetAssetPropertyValue::set_next_token): <p>The token to be used for the next set of paginated results.</p>
+    /// - On success, responds with [`BatchGetAssetPropertyValueOutput`](crate::output::BatchGetAssetPropertyValueOutput) with field(s):
+    ///   - [`error_entries(Option<Vec<BatchGetAssetPropertyValueErrorEntry>>)`](crate::output::BatchGetAssetPropertyValueOutput::error_entries): <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    ///   - [`success_entries(Option<Vec<BatchGetAssetPropertyValueSuccessEntry>>)`](crate::output::BatchGetAssetPropertyValueOutput::success_entries): <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    ///   - [`skipped_entries(Option<Vec<BatchGetAssetPropertyValueSkippedEntry>>)`](crate::output::BatchGetAssetPropertyValueOutput::skipped_entries): <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    ///   - [`next_token(Option<String>)`](crate::output::BatchGetAssetPropertyValueOutput::next_token): <p>The token for the next set of results, or null if there are no additional results.</p>
+    /// - On failure, responds with [`SdkError<BatchGetAssetPropertyValueError>`](crate::error::BatchGetAssetPropertyValueError)
+    pub fn batch_get_asset_property_value(&self) -> fluent_builders::BatchGetAssetPropertyValue {
+        fluent_builders::BatchGetAssetPropertyValue::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`BatchGetAssetPropertyValueHistory`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`entries(Vec<BatchGetAssetPropertyValueHistoryEntry>)`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory::entries) / [`set_entries(Option<Vec<BatchGetAssetPropertyValueHistoryEntry>>)`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory::set_entries): <p>The list of asset property historical value entries for the batch get request. You can specify up to 16 entries per request.</p>
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory::set_next_token): <p>The token to be used for the next set of paginated results.</p>
+    ///   - [`max_results(i32)`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::BatchGetAssetPropertyValueHistory::set_max_results): <p>The maximum number of results to return for each paginated request. A result set is returned in the two cases, whichever occurs first.</p>  <ul>   <li> <p>The size of the result set is less than 1 MB.</p> </li>   <li> <p>The number of data points in the result set is less than the value of <code>maxResults</code>. The maximum value of <code>maxResults</code> is 4000.</p> </li>  </ul>
+    /// - On success, responds with [`BatchGetAssetPropertyValueHistoryOutput`](crate::output::BatchGetAssetPropertyValueHistoryOutput) with field(s):
+    ///   - [`error_entries(Option<Vec<BatchGetAssetPropertyValueHistoryErrorEntry>>)`](crate::output::BatchGetAssetPropertyValueHistoryOutput::error_entries): <p>A list of the errors (if any) associated with the batch request. Each error entry contains the <code>entryId</code> of the entry that failed.</p>
+    ///   - [`success_entries(Option<Vec<BatchGetAssetPropertyValueHistorySuccessEntry>>)`](crate::output::BatchGetAssetPropertyValueHistoryOutput::success_entries): <p>A list of entries that were processed successfully by this batch request. Each success entry contains the <code>entryId</code> of the entry that succeeded and the latest query result.</p>
+    ///   - [`skipped_entries(Option<Vec<BatchGetAssetPropertyValueHistorySkippedEntry>>)`](crate::output::BatchGetAssetPropertyValueHistoryOutput::skipped_entries): <p>A list of entries that were not processed by this batch request. because these entries had been completely processed by previous paginated requests. Each skipped entry contains the <code>entryId</code> of the entry that skipped.</p>
+    ///   - [`next_token(Option<String>)`](crate::output::BatchGetAssetPropertyValueHistoryOutput::next_token): <p>The token for the next set of results, or null if there are no additional results.</p>
+    /// - On failure, responds with [`SdkError<BatchGetAssetPropertyValueHistoryError>`](crate::error::BatchGetAssetPropertyValueHistoryError)
+    pub fn batch_get_asset_property_value_history(
+        &self,
+    ) -> fluent_builders::BatchGetAssetPropertyValueHistory {
+        fluent_builders::BatchGetAssetPropertyValueHistory::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`BatchPutAssetPropertyValue`](crate::client::fluent_builders::BatchPutAssetPropertyValue) operation.
     ///
     /// - The fluent builder is configurable:
@@ -177,6 +228,7 @@ impl Client {
     ///   - [`asset_model_id(impl Into<String>)`](crate::client::fluent_builders::CreateAsset::asset_model_id) / [`set_asset_model_id(Option<String>)`](crate::client::fluent_builders::CreateAsset::set_asset_model_id): <p>The ID of the asset model from which to create the asset.</p>
     ///   - [`client_token(impl Into<String>)`](crate::client::fluent_builders::CreateAsset::client_token) / [`set_client_token(Option<String>)`](crate::client::fluent_builders::CreateAsset::set_client_token): <p>A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.</p>
     ///   - [`tags(HashMap<String, String>)`](crate::client::fluent_builders::CreateAsset::tags) / [`set_tags(Option<HashMap<String, String>>)`](crate::client::fluent_builders::CreateAsset::set_tags): <p>A list of key-value pairs that contain metadata for the asset. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/tag-resources.html">Tagging your IoT SiteWise resources</a> in the <i>IoT SiteWise User Guide</i>.</p>
+    ///   - [`asset_description(impl Into<String>)`](crate::client::fluent_builders::CreateAsset::asset_description) / [`set_asset_description(Option<String>)`](crate::client::fluent_builders::CreateAsset::set_asset_description): <p>A description for the asset.</p>
     /// - On success, responds with [`CreateAssetOutput`](crate::output::CreateAssetOutput) with field(s):
     ///   - [`asset_id(Option<String>)`](crate::output::CreateAssetOutput::asset_id): <p>The ID of the asset. This ID uniquely identifies the asset within IoT SiteWise and can be used with other IoT SiteWise APIs.</p>
     ///   - [`asset_arn(Option<String>)`](crate::output::CreateAssetOutput::asset_arn): <p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the asset, which has the following format.</p>  <p> <code>arn:${Partition}:iotsitewise:${Region}:${Account}:asset/${AssetId}</code> </p>
@@ -390,6 +442,7 @@ impl Client {
     ///   - [`asset_creation_date(Option<DateTime>)`](crate::output::DescribeAssetOutput::asset_creation_date): <p>The date the asset was created, in Unix epoch time.</p>
     ///   - [`asset_last_update_date(Option<DateTime>)`](crate::output::DescribeAssetOutput::asset_last_update_date): <p>The date the asset was last updated, in Unix epoch time.</p>
     ///   - [`asset_status(Option<AssetStatus>)`](crate::output::DescribeAssetOutput::asset_status): <p>The current status of the asset, which contains a state and any error message.</p>
+    ///   - [`asset_description(Option<String>)`](crate::output::DescribeAssetOutput::asset_description): <p>A description for the asset.</p>
     /// - On failure, responds with [`SdkError<DescribeAssetError>`](crate::error::DescribeAssetError)
     pub fn describe_asset(&self) -> fluent_builders::DescribeAsset {
         fluent_builders::DescribeAsset::new(self.handle.clone())
@@ -546,7 +599,7 @@ impl Client {
     /// - The fluent builder takes no input, just [`send`](crate::client::fluent_builders::DescribeStorageConfiguration::send) it.
 
     /// - On success, responds with [`DescribeStorageConfigurationOutput`](crate::output::DescribeStorageConfigurationOutput) with field(s):
-    ///   - [`storage_type(Option<StorageType>)`](crate::output::DescribeStorageConfigurationOutput::storage_type): <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>  <ul>   <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>   <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>  </ul>
+    ///   - [`storage_type(Option<StorageType>)`](crate::output::DescribeStorageConfigurationOutput::storage_type): <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>  <ul>   <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>   <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>  </ul>
     ///   - [`multi_layer_storage(Option<MultiLayerStorage>)`](crate::output::DescribeStorageConfigurationOutput::multi_layer_storage): <p>Contains information about the storage destination.</p>
     ///   - [`disassociated_data_storage(Option<DisassociatedDataStorageState>)`](crate::output::DescribeStorageConfigurationOutput::disassociated_data_storage): <p>Contains the storage configuration for time series (data streams) that aren't associated with asset properties. The <code>disassociatedDataStorage</code> can be one of the following values:</p>  <ul>   <li> <p> <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.</p> <important>     <p>After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.</p>    </important> </li>   <li> <p> <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset properties.</p> </li>  </ul>  <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT SiteWise User Guide</i>.</p>
     ///   - [`retention_period(Option<RetentionPeriod>)`](crate::output::DescribeStorageConfigurationOutput::retention_period): <p>How many days your data is kept in the hot tier. By default, your data is kept indefinitely in the hot tier.</p>
@@ -884,12 +937,12 @@ impl Client {
     /// Constructs a fluent builder for the [`PutStorageConfiguration`](crate::client::fluent_builders::PutStorageConfiguration) operation.
     ///
     /// - The fluent builder is configurable:
-    ///   - [`storage_type(StorageType)`](crate::client::fluent_builders::PutStorageConfiguration::storage_type) / [`set_storage_type(Option<StorageType>)`](crate::client::fluent_builders::PutStorageConfiguration::set_storage_type): <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>  <ul>   <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>   <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>  </ul>
+    ///   - [`storage_type(StorageType)`](crate::client::fluent_builders::PutStorageConfiguration::storage_type) / [`set_storage_type(Option<StorageType>)`](crate::client::fluent_builders::PutStorageConfiguration::set_storage_type): <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>  <ul>   <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>   <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>  </ul>
     ///   - [`multi_layer_storage(MultiLayerStorage)`](crate::client::fluent_builders::PutStorageConfiguration::multi_layer_storage) / [`set_multi_layer_storage(Option<MultiLayerStorage>)`](crate::client::fluent_builders::PutStorageConfiguration::set_multi_layer_storage): <p>Identifies a storage destination. If you specified <code>MULTI_LAYER_STORAGE</code> for the storage type, you must specify a <code>MultiLayerStorage</code> object.</p>
     ///   - [`disassociated_data_storage(DisassociatedDataStorageState)`](crate::client::fluent_builders::PutStorageConfiguration::disassociated_data_storage) / [`set_disassociated_data_storage(Option<DisassociatedDataStorageState>)`](crate::client::fluent_builders::PutStorageConfiguration::set_disassociated_data_storage): <p>Contains the storage configuration for time series (data streams) that aren't associated with asset properties. The <code>disassociatedDataStorage</code> can be one of the following values:</p>  <ul>   <li> <p> <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.</p> <important>     <p>After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.</p>    </important> </li>   <li> <p> <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset properties.</p> </li>  </ul>  <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT SiteWise User Guide</i>.</p>
     ///   - [`retention_period(RetentionPeriod)`](crate::client::fluent_builders::PutStorageConfiguration::retention_period) / [`set_retention_period(Option<RetentionPeriod>)`](crate::client::fluent_builders::PutStorageConfiguration::set_retention_period): <p>How many days your data is kept in the hot tier. By default, your data is kept indefinitely in the hot tier.</p>
     /// - On success, responds with [`PutStorageConfigurationOutput`](crate::output::PutStorageConfigurationOutput) with field(s):
-    ///   - [`storage_type(Option<StorageType>)`](crate::output::PutStorageConfigurationOutput::storage_type): <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>  <ul>   <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>   <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>  </ul>
+    ///   - [`storage_type(Option<StorageType>)`](crate::output::PutStorageConfigurationOutput::storage_type): <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>  <ul>   <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>   <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>  </ul>
     ///   - [`multi_layer_storage(Option<MultiLayerStorage>)`](crate::output::PutStorageConfigurationOutput::multi_layer_storage): <p>Contains information about the storage destination.</p>
     ///   - [`disassociated_data_storage(Option<DisassociatedDataStorageState>)`](crate::output::PutStorageConfigurationOutput::disassociated_data_storage): <p>Contains the storage configuration for time series (data streams) that aren't associated with asset properties. The <code>disassociatedDataStorage</code> can be one of the following values:</p>  <ul>   <li> <p> <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.</p> <important>     <p>After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.</p>    </important> </li>   <li> <p> <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset properties.</p> </li>  </ul>  <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT SiteWise User Guide</i>.</p>
     ///   - [`retention_period(Option<RetentionPeriod>)`](crate::output::PutStorageConfigurationOutput::retention_period): <p>How many days your data is kept in the hot tier. By default, your data is kept indefinitely in the hot tier.</p>
@@ -940,6 +993,7 @@ impl Client {
     ///   - [`asset_id(impl Into<String>)`](crate::client::fluent_builders::UpdateAsset::asset_id) / [`set_asset_id(Option<String>)`](crate::client::fluent_builders::UpdateAsset::set_asset_id): <p>The ID of the asset to update.</p>
     ///   - [`asset_name(impl Into<String>)`](crate::client::fluent_builders::UpdateAsset::asset_name) / [`set_asset_name(Option<String>)`](crate::client::fluent_builders::UpdateAsset::set_asset_name): <p>A unique, friendly name for the asset.</p>
     ///   - [`client_token(impl Into<String>)`](crate::client::fluent_builders::UpdateAsset::client_token) / [`set_client_token(Option<String>)`](crate::client::fluent_builders::UpdateAsset::set_client_token): <p>A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.</p>
+    ///   - [`asset_description(impl Into<String>)`](crate::client::fluent_builders::UpdateAsset::asset_description) / [`set_asset_description(Option<String>)`](crate::client::fluent_builders::UpdateAsset::set_asset_description): <p>A description for the asset.</p>
     /// - On success, responds with [`UpdateAssetOutput`](crate::output::UpdateAssetOutput) with field(s):
     ///   - [`asset_status(Option<AssetStatus>)`](crate::output::UpdateAssetOutput::asset_status): <p>The status of the asset, which contains a state (<code>UPDATING</code> after successfully calling this operation) and any error message.</p>
     /// - On failure, responds with [`SdkError<UpdateAssetError>`](crate::error::UpdateAssetError)
@@ -1049,13 +1103,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `AssociateAssets`.
     ///
     /// <p>Associates a child asset with the given parent asset through a hierarchy defined in the parent asset's model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/add-associated-assets.html">Associating assets</a> in the <i>IoT SiteWise User Guide</i>.</p>
@@ -1387,6 +1440,287 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `BatchGetAssetPropertyAggregates`.
+    ///
+    /// <p>Gets aggregated values (for example, average, minimum, and maximum) for one or more asset properties. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#aggregates">Querying aggregates</a> in the <i>IoT SiteWise User Guide</i>.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct BatchGetAssetPropertyAggregates {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::batch_get_asset_property_aggregates_input::Builder,
+    }
+    impl BatchGetAssetPropertyAggregates {
+        /// Creates a new `BatchGetAssetPropertyAggregates`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::BatchGetAssetPropertyAggregatesOutput,
+            aws_smithy_http::result::SdkError<crate::error::BatchGetAssetPropertyAggregatesError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::BatchGetAssetPropertyAggregatesPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::BatchGetAssetPropertyAggregatesPaginator {
+            crate::paginator::BatchGetAssetPropertyAggregatesPaginator::new(self.handle, self.inner)
+        }
+        /// Appends an item to `entries`.
+        ///
+        /// To override the contents of this collection use [`set_entries`](Self::set_entries).
+        ///
+        /// <p>The list of asset property aggregate entries for the batch get request. You can specify up to 16 entries per request.</p>
+        pub fn entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyAggregatesEntry,
+        ) -> Self {
+            self.inner = self.inner.entries(input);
+            self
+        }
+        /// <p>The list of asset property aggregate entries for the batch get request. You can specify up to 16 entries per request.</p>
+        pub fn set_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyAggregatesEntry>,
+            >,
+        ) -> Self {
+            self.inner = self.inner.set_entries(input);
+            self
+        }
+        /// <p>The token to be used for the next set of paginated results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>The token to be used for the next set of paginated results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+        /// <p>The maximum number of results to return for each paginated request. A result set is returned in the two cases, whichever occurs first.</p>
+        /// <ul>
+        /// <li> <p>The size of the result set is less than 1 MB.</p> </li>
+        /// <li> <p>The number of data points in the result set is less than the value of <code>maxResults</code>. The maximum value of <code>maxResults</code> is 4000.</p> </li>
+        /// </ul>
+        pub fn max_results(mut self, input: i32) -> Self {
+            self.inner = self.inner.max_results(input);
+            self
+        }
+        /// <p>The maximum number of results to return for each paginated request. A result set is returned in the two cases, whichever occurs first.</p>
+        /// <ul>
+        /// <li> <p>The size of the result set is less than 1 MB.</p> </li>
+        /// <li> <p>The number of data points in the result set is less than the value of <code>maxResults</code>. The maximum value of <code>maxResults</code> is 4000.</p> </li>
+        /// </ul>
+        pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_max_results(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `BatchGetAssetPropertyValue`.
+    ///
+    /// <p>Gets the current value for one or more asset properties. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#current-values">Querying current values</a> in the <i>IoT SiteWise User Guide</i>.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct BatchGetAssetPropertyValue {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::batch_get_asset_property_value_input::Builder,
+    }
+    impl BatchGetAssetPropertyValue {
+        /// Creates a new `BatchGetAssetPropertyValue`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::BatchGetAssetPropertyValueOutput,
+            aws_smithy_http::result::SdkError<crate::error::BatchGetAssetPropertyValueError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::BatchGetAssetPropertyValuePaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::BatchGetAssetPropertyValuePaginator {
+            crate::paginator::BatchGetAssetPropertyValuePaginator::new(self.handle, self.inner)
+        }
+        /// Appends an item to `entries`.
+        ///
+        /// To override the contents of this collection use [`set_entries`](Self::set_entries).
+        ///
+        /// <p>The list of asset property value entries for the batch get request. You can specify up to 16 entries per request.</p>
+        pub fn entries(mut self, input: crate::model::BatchGetAssetPropertyValueEntry) -> Self {
+            self.inner = self.inner.entries(input);
+            self
+        }
+        /// <p>The list of asset property value entries for the batch get request. You can specify up to 16 entries per request.</p>
+        pub fn set_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueEntry>,
+            >,
+        ) -> Self {
+            self.inner = self.inner.set_entries(input);
+            self
+        }
+        /// <p>The token to be used for the next set of paginated results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>The token to be used for the next set of paginated results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `BatchGetAssetPropertyValueHistory`.
+    ///
+    /// <p>Gets the historical values for one or more asset properties. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/query-industrial-data.html#historical-values">Querying historical values</a> in the <i>IoT SiteWise User Guide</i>.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct BatchGetAssetPropertyValueHistory {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::batch_get_asset_property_value_history_input::Builder,
+    }
+    impl BatchGetAssetPropertyValueHistory {
+        /// Creates a new `BatchGetAssetPropertyValueHistory`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::BatchGetAssetPropertyValueHistoryOutput,
+            aws_smithy_http::result::SdkError<crate::error::BatchGetAssetPropertyValueHistoryError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::BatchGetAssetPropertyValueHistoryPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(
+            self,
+        ) -> crate::paginator::BatchGetAssetPropertyValueHistoryPaginator {
+            crate::paginator::BatchGetAssetPropertyValueHistoryPaginator::new(
+                self.handle,
+                self.inner,
+            )
+        }
+        /// Appends an item to `entries`.
+        ///
+        /// To override the contents of this collection use [`set_entries`](Self::set_entries).
+        ///
+        /// <p>The list of asset property historical value entries for the batch get request. You can specify up to 16 entries per request.</p>
+        pub fn entries(
+            mut self,
+            input: crate::model::BatchGetAssetPropertyValueHistoryEntry,
+        ) -> Self {
+            self.inner = self.inner.entries(input);
+            self
+        }
+        /// <p>The list of asset property historical value entries for the batch get request. You can specify up to 16 entries per request.</p>
+        pub fn set_entries(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::BatchGetAssetPropertyValueHistoryEntry>,
+            >,
+        ) -> Self {
+            self.inner = self.inner.set_entries(input);
+            self
+        }
+        /// <p>The token to be used for the next set of paginated results.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>The token to be used for the next set of paginated results.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+        /// <p>The maximum number of results to return for each paginated request. A result set is returned in the two cases, whichever occurs first.</p>
+        /// <ul>
+        /// <li> <p>The size of the result set is less than 1 MB.</p> </li>
+        /// <li> <p>The number of data points in the result set is less than the value of <code>maxResults</code>. The maximum value of <code>maxResults</code> is 4000.</p> </li>
+        /// </ul>
+        pub fn max_results(mut self, input: i32) -> Self {
+            self.inner = self.inner.max_results(input);
+            self
+        }
+        /// <p>The maximum number of results to return for each paginated request. A result set is returned in the two cases, whichever occurs first.</p>
+        /// <ul>
+        /// <li> <p>The size of the result set is less than 1 MB.</p> </li>
+        /// <li> <p>The number of data points in the result set is less than the value of <code>maxResults</code>. The maximum value of <code>maxResults</code> is 4000.</p> </li>
+        /// </ul>
+        pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_max_results(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `BatchPutAssetPropertyValue`.
     ///
     /// <p>Sends a list of asset property values to IoT SiteWise. Each value is a timestamp-quality-value (TQV) data point. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/ingest-api.html">Ingesting data using the API</a> in the <i>IoT SiteWise User Guide</i>.</p>
@@ -1667,6 +2001,19 @@ pub mod fluent_builders {
             >,
         ) -> Self {
             self.inner = self.inner.set_tags(input);
+            self
+        }
+        /// <p>A description for the asset.</p>
+        pub fn asset_description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.asset_description(input.into());
+            self
+        }
+        /// <p>A description for the asset.</p>
+        pub fn set_asset_description(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_asset_description(input);
             self
         }
     }
@@ -5682,7 +6029,7 @@ pub mod fluent_builders {
         /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
         /// <ul>
         /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
         /// </ul>
         pub fn storage_type(mut self, input: crate::model::StorageType) -> Self {
             self.inner = self.inner.storage_type(input);
@@ -5691,7 +6038,7 @@ pub mod fluent_builders {
         /// <p>The storage tier that you specified for your data. The <code>storageType</code> parameter can be one of the following values:</p>
         /// <ul>
         /// <li> <p> <code>SITEWISE_DEFAULT_STORAGE</code> – IoT SiteWise saves your data into the hot tier. The hot tier is a service-managed database.</p> </li>
-        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the cold tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
+        /// <li> <p> <code>MULTI_LAYER_STORAGE</code> – IoT SiteWise saves your data in both the cold tier and the hot tier. The cold tier is a customer-managed Amazon S3 bucket.</p> </li>
         /// </ul>
         pub fn set_storage_type(
             mut self,
@@ -6078,6 +6425,19 @@ pub mod fluent_builders {
         /// <p>A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.</p>
         pub fn set_client_token(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_client_token(input);
+            self
+        }
+        /// <p>A description for the asset.</p>
+        pub fn asset_description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.asset_description(input.into());
+            self
+        }
+        /// <p>A description for the asset.</p>
+        pub fn set_asset_description(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_asset_description(input);
             self
         }
     }

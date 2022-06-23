@@ -28,6 +28,7 @@ impl std::fmt::Debug for ListHypervisorsOutput {
 }
 /// See [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput)
 pub mod list_hypervisors_output {
+
     /// A builder for [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -103,6 +104,7 @@ impl std::fmt::Debug for ImportHypervisorConfigurationOutput {
 }
 /// See [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput)
 pub mod import_hypervisor_configuration_output {
+
     /// A builder for [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -160,6 +162,7 @@ impl std::fmt::Debug for DeleteHypervisorOutput {
 }
 /// See [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput)
 pub mod delete_hypervisor_output {
+
     /// A builder for [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -217,6 +220,7 @@ impl std::fmt::Debug for UpdateHypervisorOutput {
 }
 /// See [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput)
 pub mod update_hypervisor_output {
+
     /// A builder for [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -255,6 +259,61 @@ impl UpdateHypervisorOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateGatewaySoftwareNowOutput {
+    /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+    pub gateway_arn: std::option::Option<std::string::String>,
+}
+impl UpdateGatewaySoftwareNowOutput {
+    /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+    pub fn gateway_arn(&self) -> std::option::Option<&str> {
+        self.gateway_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for UpdateGatewaySoftwareNowOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateGatewaySoftwareNowOutput");
+        formatter.field("gateway_arn", &self.gateway_arn);
+        formatter.finish()
+    }
+}
+/// See [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
+pub mod update_gateway_software_now_output {
+
+    /// A builder for [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) gateway_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+        pub fn gateway_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.gateway_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+        pub fn set_gateway_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.gateway_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
+        pub fn build(self) -> crate::output::UpdateGatewaySoftwareNowOutput {
+            crate::output::UpdateGatewaySoftwareNowOutput {
+                gateway_arn: self.gateway_arn,
+            }
+        }
+    }
+}
+impl UpdateGatewaySoftwareNowOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput)
+    pub fn builder() -> crate::output::update_gateway_software_now_output::Builder {
+        crate::output::update_gateway_software_now_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TestHypervisorConfigurationOutput {}
 impl std::fmt::Debug for TestHypervisorConfigurationOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -264,6 +323,7 @@ impl std::fmt::Debug for TestHypervisorConfigurationOutput {
 }
 /// See [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput)
 pub mod test_hypervisor_configuration_output {
+
     /// A builder for [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -304,6 +364,7 @@ impl std::fmt::Debug for PutMaintenanceStartTimeOutput {
 }
 /// See [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput)
 pub mod put_maintenance_start_time_output {
+
     /// A builder for [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -358,6 +419,7 @@ impl std::fmt::Debug for DisassociateGatewayFromServerOutput {
 }
 /// See [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput)
 pub mod disassociate_gateway_from_server_output {
+
     /// A builder for [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -412,6 +474,7 @@ impl std::fmt::Debug for AssociateGatewayToServerOutput {
 }
 /// See [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput)
 pub mod associate_gateway_to_server_output {
+
     /// A builder for [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -473,6 +536,7 @@ impl std::fmt::Debug for ListGatewaysOutput {
 }
 /// See [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
 pub mod list_gateways_output {
+
     /// A builder for [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -548,6 +612,7 @@ impl std::fmt::Debug for CreateGatewayOutput {
 }
 /// See [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
 pub mod create_gateway_output {
+
     /// A builder for [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -602,6 +667,7 @@ impl std::fmt::Debug for DeleteGatewayOutput {
 }
 /// See [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
 pub mod delete_gateway_output {
+
     /// A builder for [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -656,6 +722,7 @@ impl std::fmt::Debug for UpdateGatewayInformationOutput {
 }
 /// See [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
 pub mod update_gateway_information_output {
+
     /// A builder for [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -691,6 +758,64 @@ impl UpdateGatewayInformationOutput {
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetGatewayOutput {
+    /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+    pub gateway: std::option::Option<crate::model::GatewayDetails>,
+}
+impl GetGatewayOutput {
+    /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+    pub fn gateway(&self) -> std::option::Option<&crate::model::GatewayDetails> {
+        self.gateway.as_ref()
+    }
+}
+impl std::fmt::Debug for GetGatewayOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetGatewayOutput");
+        formatter.field("gateway", &self.gateway);
+        formatter.finish()
+    }
+}
+/// See [`GetGatewayOutput`](crate::output::GetGatewayOutput)
+pub mod get_gateway_output {
+
+    /// A builder for [`GetGatewayOutput`](crate::output::GetGatewayOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) gateway: std::option::Option<crate::model::GatewayDetails>,
+    }
+    impl Builder {
+        /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+        pub fn gateway(mut self, input: crate::model::GatewayDetails) -> Self {
+            self.gateway = Some(input);
+            self
+        }
+        /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+        pub fn set_gateway(
+            mut self,
+            input: std::option::Option<crate::model::GatewayDetails>,
+        ) -> Self {
+            self.gateway = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetGatewayOutput`](crate::output::GetGatewayOutput)
+        pub fn build(self) -> crate::output::GetGatewayOutput {
+            crate::output::GetGatewayOutput {
+                gateway: self.gateway,
+            }
+        }
+    }
+}
+impl GetGatewayOutput {
+    /// Creates a new builder-style object to manufacture [`GetGatewayOutput`](crate::output::GetGatewayOutput)
+    pub fn builder() -> crate::output::get_gateway_output::Builder {
+        crate::output::get_gateway_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UntagResourceOutput {
     /// <p>The Amazon Resource Name (ARN) of the resource from which you removed tags.</p>
     pub resource_arn: std::option::Option<std::string::String>,
@@ -710,6 +835,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -764,6 +890,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -825,6 +952,7 @@ impl std::fmt::Debug for ListVirtualMachinesOutput {
 }
 /// See [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput)
 pub mod list_virtual_machines_output {
+
     /// A builder for [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -908,6 +1036,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

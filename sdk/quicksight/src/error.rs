@@ -17134,6 +17134,165 @@ impl std::error::Error for UpdateIpRestrictionError {
     }
 }
 
+/// Error type for the `UpdatePublicSharingSettings` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct UpdatePublicSharingSettingsError {
+    /// Kind of error that occurred.
+    pub kind: UpdatePublicSharingSettingsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `UpdatePublicSharingSettings` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdatePublicSharingSettingsErrorKind {
+    /// <p>You don't have access to this item. The provided credentials couldn't be validated. You might not be authorized to carry out the request. Make sure that your account is authorized to use the Amazon QuickSight service, that your policies have the correct permissions, and that you are using the correct access keys.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An internal failure occurred.</p>
+    InternalFailureException(crate::error::InternalFailureException),
+    /// <p>One or more parameters has a value that isn't valid.</p>
+    InvalidParameterValueException(crate::error::InvalidParameterValueException),
+    /// <p>One or more resources can't be found.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>Access is throttled.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>This error indicates that you are calling an embedding operation in Amazon QuickSight without the required pricing plan on your Amazon Web Services account. Before you can use embedding for anonymous users, a QuickSight administrator needs to add capacity pricing to Amazon QuickSight. You can do this on the <b>Manage Amazon QuickSight</b> page. </p>
+    /// <p>After capacity pricing is added, you can use the <code> <a href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_GetDashboardEmbedUrl.html">GetDashboardEmbedUrl</a> </code> API operation with the <code>--identity-type ANONYMOUS</code> option.</p>
+    UnsupportedPricingPlanException(crate::error::UnsupportedPricingPlanException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdatePublicSharingSettingsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            UpdatePublicSharingSettingsErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            UpdatePublicSharingSettingsErrorKind::InternalFailureException(_inner) => _inner.fmt(f),
+            UpdatePublicSharingSettingsErrorKind::InvalidParameterValueException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdatePublicSharingSettingsErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdatePublicSharingSettingsErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            UpdatePublicSharingSettingsErrorKind::UnsupportedPricingPlanException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdatePublicSharingSettingsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for UpdatePublicSharingSettingsError {
+    fn code(&self) -> Option<&str> {
+        UpdatePublicSharingSettingsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl UpdatePublicSharingSettingsError {
+    /// Creates a new `UpdatePublicSharingSettingsError`.
+    pub fn new(kind: UpdatePublicSharingSettingsErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `UpdatePublicSharingSettingsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdatePublicSharingSettingsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `UpdatePublicSharingSettingsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdatePublicSharingSettingsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdatePublicSharingSettingsErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePublicSharingSettingsErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePublicSharingSettingsErrorKind::InternalFailureException`.
+    pub fn is_internal_failure_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePublicSharingSettingsErrorKind::InternalFailureException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePublicSharingSettingsErrorKind::InvalidParameterValueException`.
+    pub fn is_invalid_parameter_value_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePublicSharingSettingsErrorKind::InvalidParameterValueException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePublicSharingSettingsErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePublicSharingSettingsErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePublicSharingSettingsErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePublicSharingSettingsErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePublicSharingSettingsErrorKind::UnsupportedPricingPlanException`.
+    pub fn is_unsupported_pricing_plan_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePublicSharingSettingsErrorKind::UnsupportedPricingPlanException(_)
+        )
+    }
+}
+impl std::error::Error for UpdatePublicSharingSettingsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdatePublicSharingSettingsErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            UpdatePublicSharingSettingsErrorKind::InternalFailureException(_inner) => Some(_inner),
+            UpdatePublicSharingSettingsErrorKind::InvalidParameterValueException(_inner) => {
+                Some(_inner)
+            }
+            UpdatePublicSharingSettingsErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            UpdatePublicSharingSettingsErrorKind::ThrottlingException(_inner) => Some(_inner),
+            UpdatePublicSharingSettingsErrorKind::UnsupportedPricingPlanException(_inner) => {
+                Some(_inner)
+            }
+            UpdatePublicSharingSettingsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `UpdateTemplate` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -18250,6 +18409,7 @@ impl std::fmt::Display for ThrottlingException {
 impl std::error::Error for ThrottlingException {}
 /// See [`ThrottlingException`](crate::error::ThrottlingException)
 pub mod throttling_exception {
+
     /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18342,6 +18502,7 @@ impl std::fmt::Display for ResourceUnavailableException {
 impl std::error::Error for ResourceUnavailableException {}
 /// See [`ResourceUnavailableException`](crate::error::ResourceUnavailableException)
 pub mod resource_unavailable_exception {
+
     /// A builder for [`ResourceUnavailableException`](crate::error::ResourceUnavailableException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18449,6 +18610,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18549,6 +18711,7 @@ impl std::fmt::Display for PreconditionNotMetException {
 impl std::error::Error for PreconditionNotMetException {}
 /// See [`PreconditionNotMetException`](crate::error::PreconditionNotMetException)
 pub mod precondition_not_met_exception {
+
     /// A builder for [`PreconditionNotMetException`](crate::error::PreconditionNotMetException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18634,6 +18797,7 @@ impl std::fmt::Display for InvalidParameterValueException {
 impl std::error::Error for InvalidParameterValueException {}
 /// See [`InvalidParameterValueException`](crate::error::InvalidParameterValueException)
 pub mod invalid_parameter_value_exception {
+
     /// A builder for [`InvalidParameterValueException`](crate::error::InvalidParameterValueException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18719,6 +18883,7 @@ impl std::fmt::Display for InternalFailureException {
 impl std::error::Error for InternalFailureException {}
 /// See [`InternalFailureException`](crate::error::InternalFailureException)
 pub mod internal_failure_exception {
+
     /// A builder for [`InternalFailureException`](crate::error::InternalFailureException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18804,6 +18969,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18889,6 +19055,7 @@ impl std::fmt::Display for UnsupportedUserEditionException {
 impl std::error::Error for UnsupportedUserEditionException {}
 /// See [`UnsupportedUserEditionException`](crate::error::UnsupportedUserEditionException)
 pub mod unsupported_user_edition_exception {
+
     /// A builder for [`UnsupportedUserEditionException`](crate::error::UnsupportedUserEditionException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18981,6 +19148,7 @@ impl std::fmt::Display for ResourceExistsException {
 impl std::error::Error for ResourceExistsException {}
 /// See [`ResourceExistsException`](crate::error::ResourceExistsException)
 pub mod resource_exists_exception {
+
     /// A builder for [`ResourceExistsException`](crate::error::ResourceExistsException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19081,6 +19249,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19173,6 +19342,7 @@ impl std::fmt::Display for LimitExceededException {
 impl std::error::Error for LimitExceededException {}
 /// See [`LimitExceededException`](crate::error::LimitExceededException)
 pub mod limit_exceeded_exception {
+
     /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19232,6 +19402,93 @@ impl LimitExceededException {
     }
 }
 
+/// <p>This error indicates that you are calling an embedding operation in Amazon QuickSight without the required pricing plan on your Amazon Web Services account. Before you can use embedding for anonymous users, a QuickSight administrator needs to add capacity pricing to Amazon QuickSight. You can do this on the <b>Manage Amazon QuickSight</b> page. </p>
+/// <p>After capacity pricing is added, you can use the <code> <a href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_GetDashboardEmbedUrl.html">GetDashboardEmbedUrl</a> </code> API operation with the <code>--identity-type ANONYMOUS</code> option.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UnsupportedPricingPlanException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+    /// <p>The Amazon Web Services request ID for this request.</p>
+    pub request_id: std::option::Option<std::string::String>,
+}
+impl UnsupportedPricingPlanException {
+    /// <p>The Amazon Web Services request ID for this request.</p>
+    pub fn request_id(&self) -> std::option::Option<&str> {
+        self.request_id.as_deref()
+    }
+}
+impl std::fmt::Debug for UnsupportedPricingPlanException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UnsupportedPricingPlanException");
+        formatter.field("message", &self.message);
+        formatter.field("request_id", &self.request_id);
+        formatter.finish()
+    }
+}
+impl UnsupportedPricingPlanException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for UnsupportedPricingPlanException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "UnsupportedPricingPlanException")?;
+        if let Some(inner_12) = &self.message {
+            write!(f, ": {}", inner_12)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for UnsupportedPricingPlanException {}
+/// See [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
+pub mod unsupported_pricing_plan_exception {
+
+    /// A builder for [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+        pub(crate) request_id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// <p>The Amazon Web Services request ID for this request.</p>
+        pub fn request_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.request_id = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Web Services request ID for this request.</p>
+        pub fn set_request_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.request_id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
+        pub fn build(self) -> crate::error::UnsupportedPricingPlanException {
+            crate::error::UnsupportedPricingPlanException {
+                message: self.message,
+                request_id: self.request_id,
+            }
+        }
+    }
+}
+impl UnsupportedPricingPlanException {
+    /// Creates a new builder-style object to manufacture [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
+    pub fn builder() -> crate::error::unsupported_pricing_plan_exception::Builder {
+        crate::error::unsupported_pricing_plan_exception::Builder::default()
+    }
+}
+
 /// <p>A resource is already in a state that indicates an operation is happening that must complete before a new update can be applied.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -19264,8 +19521,8 @@ impl ConcurrentUpdatingException {
 impl std::fmt::Display for ConcurrentUpdatingException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "ConcurrentUpdatingException")?;
-        if let Some(inner_12) = &self.message {
-            write!(f, ": {}", inner_12)?;
+        if let Some(inner_13) = &self.message {
+            write!(f, ": {}", inner_13)?;
         }
         Ok(())
     }
@@ -19273,6 +19530,7 @@ impl std::fmt::Display for ConcurrentUpdatingException {
 impl std::error::Error for ConcurrentUpdatingException {}
 /// See [`ConcurrentUpdatingException`](crate::error::ConcurrentUpdatingException)
 pub mod concurrent_updating_exception {
+
     /// A builder for [`ConcurrentUpdatingException`](crate::error::ConcurrentUpdatingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19349,8 +19607,8 @@ impl InvalidNextTokenException {
 impl std::fmt::Display for InvalidNextTokenException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidNextTokenException")?;
-        if let Some(inner_13) = &self.message {
-            write!(f, ": {}", inner_13)?;
+        if let Some(inner_14) = &self.message {
+            write!(f, ": {}", inner_14)?;
         }
         Ok(())
     }
@@ -19358,6 +19616,7 @@ impl std::fmt::Display for InvalidNextTokenException {
 impl std::error::Error for InvalidNextTokenException {}
 /// See [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
 pub mod invalid_next_token_exception {
+
     /// A builder for [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19434,8 +19693,8 @@ impl SessionLifetimeInMinutesInvalidException {
 impl std::fmt::Display for SessionLifetimeInMinutesInvalidException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SessionLifetimeInMinutesInvalidException")?;
-        if let Some(inner_14) = &self.message {
-            write!(f, ": {}", inner_14)?;
+        if let Some(inner_15) = &self.message {
+            write!(f, ": {}", inner_15)?;
         }
         Ok(())
     }
@@ -19443,6 +19702,7 @@ impl std::fmt::Display for SessionLifetimeInMinutesInvalidException {
 impl std::error::Error for SessionLifetimeInMinutesInvalidException {}
 /// See [`SessionLifetimeInMinutesInvalidException`](crate::error::SessionLifetimeInMinutesInvalidException)
 pub mod session_lifetime_in_minutes_invalid_exception {
+
     /// A builder for [`SessionLifetimeInMinutesInvalidException`](crate::error::SessionLifetimeInMinutesInvalidException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19519,8 +19779,8 @@ impl QuickSightUserNotFoundException {
 impl std::fmt::Display for QuickSightUserNotFoundException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "QuickSightUserNotFoundException")?;
-        if let Some(inner_15) = &self.message {
-            write!(f, ": {}", inner_15)?;
+        if let Some(inner_16) = &self.message {
+            write!(f, ": {}", inner_16)?;
         }
         Ok(())
     }
@@ -19528,6 +19788,7 @@ impl std::fmt::Display for QuickSightUserNotFoundException {
 impl std::error::Error for QuickSightUserNotFoundException {}
 /// See [`QuickSightUserNotFoundException`](crate::error::QuickSightUserNotFoundException)
 pub mod quick_sight_user_not_found_exception {
+
     /// A builder for [`QuickSightUserNotFoundException`](crate::error::QuickSightUserNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19572,92 +19833,6 @@ impl QuickSightUserNotFoundException {
     }
 }
 
-/// <p>This error indicates that you are calling an embedding operation in Amazon QuickSight without the required pricing plan on your Amazon Web Services account. Before you can use embedding for anonymous users, a QuickSight administrator needs to add capacity pricing to Amazon QuickSight. You can do this on the <b>Manage Amazon QuickSight</b> page. </p>
-/// <p>After capacity pricing is added, you can use the <code> <a href="https://docs.aws.amazon.com/quicksight/latest/APIReference/API_GetDashboardEmbedUrl.html">GetDashboardEmbedUrl</a> </code> API operation with the <code>--identity-type ANONYMOUS</code> option.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct UnsupportedPricingPlanException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-    /// <p>The Amazon Web Services request ID for this request.</p>
-    pub request_id: std::option::Option<std::string::String>,
-}
-impl UnsupportedPricingPlanException {
-    /// <p>The Amazon Web Services request ID for this request.</p>
-    pub fn request_id(&self) -> std::option::Option<&str> {
-        self.request_id.as_deref()
-    }
-}
-impl std::fmt::Debug for UnsupportedPricingPlanException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("UnsupportedPricingPlanException");
-        formatter.field("message", &self.message);
-        formatter.field("request_id", &self.request_id);
-        formatter.finish()
-    }
-}
-impl UnsupportedPricingPlanException {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for UnsupportedPricingPlanException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "UnsupportedPricingPlanException")?;
-        if let Some(inner_16) = &self.message {
-            write!(f, ": {}", inner_16)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for UnsupportedPricingPlanException {}
-/// See [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
-pub mod unsupported_pricing_plan_exception {
-    /// A builder for [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-        pub(crate) request_id: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// <p>The Amazon Web Services request ID for this request.</p>
-        pub fn request_id(mut self, input: impl Into<std::string::String>) -> Self {
-            self.request_id = Some(input.into());
-            self
-        }
-        /// <p>The Amazon Web Services request ID for this request.</p>
-        pub fn set_request_id(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.request_id = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
-        pub fn build(self) -> crate::error::UnsupportedPricingPlanException {
-            crate::error::UnsupportedPricingPlanException {
-                message: self.message,
-                request_id: self.request_id,
-            }
-        }
-    }
-}
-impl UnsupportedPricingPlanException {
-    /// Creates a new builder-style object to manufacture [`UnsupportedPricingPlanException`](crate::error::UnsupportedPricingPlanException)
-    pub fn builder() -> crate::error::unsupported_pricing_plan_exception::Builder {
-        crate::error::unsupported_pricing_plan_exception::Builder::default()
-    }
-}
-
 /// <p>The identity type specified isn't supported. Supported identity types include <code>IAM</code> and <code>QUICKSIGHT</code>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -19699,6 +19874,7 @@ impl std::fmt::Display for IdentityTypeNotSupportedException {
 impl std::error::Error for IdentityTypeNotSupportedException {}
 /// See [`IdentityTypeNotSupportedException`](crate::error::IdentityTypeNotSupportedException)
 pub mod identity_type_not_supported_exception {
+
     /// A builder for [`IdentityTypeNotSupportedException`](crate::error::IdentityTypeNotSupportedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19784,6 +19960,7 @@ impl std::fmt::Display for DomainNotWhitelistedException {
 impl std::error::Error for DomainNotWhitelistedException {}
 /// See [`DomainNotWhitelistedException`](crate::error::DomainNotWhitelistedException)
 pub mod domain_not_whitelisted_exception {
+
     /// A builder for [`DomainNotWhitelistedException`](crate::error::DomainNotWhitelistedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

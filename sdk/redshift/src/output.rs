@@ -28,6 +28,7 @@ impl std::fmt::Debug for UpdatePartnerStatusOutput {
 }
 /// See [`UpdatePartnerStatusOutput`](crate::output::UpdatePartnerStatusOutput)
 pub mod update_partner_status_output {
+
     /// A builder for [`UpdatePartnerStatusOutput`](crate::output::UpdatePartnerStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -97,6 +98,7 @@ impl std::fmt::Debug for RotateEncryptionKeyOutput {
 }
 /// See [`RotateEncryptionKeyOutput`](crate::output::RotateEncryptionKeyOutput)
 pub mod rotate_encryption_key_output {
+
     /// A builder for [`RotateEncryptionKeyOutput`](crate::output::RotateEncryptionKeyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -151,6 +153,7 @@ impl std::fmt::Debug for RevokeSnapshotAccessOutput {
 }
 /// See [`RevokeSnapshotAccessOutput`](crate::output::RevokeSnapshotAccessOutput)
 pub mod revoke_snapshot_access_output {
+
     /// A builder for [`RevokeSnapshotAccessOutput`](crate::output::RevokeSnapshotAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -261,6 +264,7 @@ impl std::fmt::Debug for RevokeEndpointAccessOutput {
 }
 /// See [`RevokeEndpointAccessOutput`](crate::output::RevokeEndpointAccessOutput)
 pub mod revoke_endpoint_access_output {
+
     /// A builder for [`RevokeEndpointAccessOutput`](crate::output::RevokeEndpointAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -434,6 +438,7 @@ impl std::fmt::Debug for RevokeClusterSecurityGroupIngressOutput {
 }
 /// See [`RevokeClusterSecurityGroupIngressOutput`](crate::output::RevokeClusterSecurityGroupIngressOutput)
 pub mod revoke_cluster_security_group_ingress_output {
+
     /// A builder for [`RevokeClusterSecurityGroupIngressOutput`](crate::output::RevokeClusterSecurityGroupIngressOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -491,6 +496,7 @@ impl std::fmt::Debug for ResumeClusterOutput {
 }
 /// See [`ResumeClusterOutput`](crate::output::ResumeClusterOutput)
 pub mod resume_cluster_output {
+
     /// A builder for [`ResumeClusterOutput`](crate::output::ResumeClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -545,6 +551,7 @@ impl std::fmt::Debug for RestoreTableFromClusterSnapshotOutput {
 }
 /// See [`RestoreTableFromClusterSnapshotOutput`](crate::output::RestoreTableFromClusterSnapshotOutput)
 pub mod restore_table_from_cluster_snapshot_output {
+
     /// A builder for [`RestoreTableFromClusterSnapshotOutput`](crate::output::RestoreTableFromClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -602,6 +609,7 @@ impl std::fmt::Debug for RestoreFromClusterSnapshotOutput {
 }
 /// See [`RestoreFromClusterSnapshotOutput`](crate::output::RestoreFromClusterSnapshotOutput)
 pub mod restore_from_cluster_snapshot_output {
+
     /// A builder for [`RestoreFromClusterSnapshotOutput`](crate::output::RestoreFromClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -656,6 +664,7 @@ impl std::fmt::Debug for ResizeClusterOutput {
 }
 /// See [`ResizeClusterOutput`](crate::output::ResizeClusterOutput)
 pub mod resize_cluster_output {
+
     /// A builder for [`ResizeClusterOutput`](crate::output::ResizeClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -717,6 +726,7 @@ impl std::fmt::Debug for ResetClusterParameterGroupOutput {
 }
 /// See [`ResetClusterParameterGroupOutput`](crate::output::ResetClusterParameterGroupOutput)
 pub mod reset_cluster_parameter_group_output {
+
     /// A builder for [`ResetClusterParameterGroupOutput`](crate::output::ResetClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -777,7 +787,7 @@ pub struct RejectDataShareOutput {
     pub producer_arn: std::option::Option<std::string::String>,
     /// <p>A value that specifies whether the datashare can be shared to a publicly accessible cluster.</p>
     pub allow_publicly_accessible_consumers: bool,
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub data_share_associations:
         std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
     /// <p>The identifier of a datashare to show its managing entity.</p>
@@ -796,7 +806,7 @@ impl RejectDataShareOutput {
     pub fn allow_publicly_accessible_consumers(&self) -> bool {
         self.allow_publicly_accessible_consumers
     }
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub fn data_share_associations(
         &self,
     ) -> std::option::Option<&[crate::model::DataShareAssociation]> {
@@ -823,6 +833,7 @@ impl std::fmt::Debug for RejectDataShareOutput {
 }
 /// See [`RejectDataShareOutput`](crate::output::RejectDataShareOutput)
 pub mod reject_data_share_output {
+
     /// A builder for [`RejectDataShareOutput`](crate::output::RejectDataShareOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -875,7 +886,7 @@ pub mod reject_data_share_output {
         ///
         /// To override the contents of this collection use [`set_data_share_associations`](Self::set_data_share_associations).
         ///
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn data_share_associations(
             mut self,
             input: crate::model::DataShareAssociation,
@@ -885,7 +896,7 @@ pub mod reject_data_share_output {
             self.data_share_associations = Some(v);
             self
         }
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn set_data_share_associations(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
@@ -946,6 +957,7 @@ impl std::fmt::Debug for RebootClusterOutput {
 }
 /// See [`RebootClusterOutput`](crate::output::RebootClusterOutput)
 pub mod reboot_cluster_output {
+
     /// A builder for [`RebootClusterOutput`](crate::output::RebootClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1000,6 +1012,7 @@ impl std::fmt::Debug for PurchaseReservedNodeOfferingOutput {
 }
 /// See [`PurchaseReservedNodeOfferingOutput`](crate::output::PurchaseReservedNodeOfferingOutput)
 pub mod purchase_reserved_node_offering_output {
+
     /// A builder for [`PurchaseReservedNodeOfferingOutput`](crate::output::PurchaseReservedNodeOfferingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1057,6 +1070,7 @@ impl std::fmt::Debug for PauseClusterOutput {
 }
 /// See [`PauseClusterOutput`](crate::output::PauseClusterOutput)
 pub mod pause_cluster_output {
+
     /// A builder for [`PauseClusterOutput`](crate::output::PauseClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1170,6 +1184,7 @@ impl std::fmt::Debug for ModifyUsageLimitOutput {
 }
 /// See [`ModifyUsageLimitOutput`](crate::output::ModifyUsageLimitOutput)
 pub mod modify_usage_limit_output {
+
     /// A builder for [`ModifyUsageLimitOutput`](crate::output::ModifyUsageLimitOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1390,6 +1405,7 @@ impl std::fmt::Debug for ModifySnapshotScheduleOutput {
 }
 /// See [`ModifySnapshotScheduleOutput`](crate::output::ModifySnapshotScheduleOutput)
 pub mod modify_snapshot_schedule_output {
+
     /// A builder for [`ModifySnapshotScheduleOutput`](crate::output::ModifySnapshotScheduleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1562,6 +1578,7 @@ impl std::fmt::Debug for ModifySnapshotCopyRetentionPeriodOutput {
 }
 /// See [`ModifySnapshotCopyRetentionPeriodOutput`](crate::output::ModifySnapshotCopyRetentionPeriodOutput)
 pub mod modify_snapshot_copy_retention_period_output {
+
     /// A builder for [`ModifySnapshotCopyRetentionPeriodOutput`](crate::output::ModifySnapshotCopyRetentionPeriodOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1681,6 +1698,7 @@ impl std::fmt::Debug for ModifyScheduledActionOutput {
 }
 /// See [`ModifyScheduledActionOutput`](crate::output::ModifyScheduledActionOutput)
 pub mod modify_scheduled_action_output {
+
     /// A builder for [`ModifyScheduledActionOutput`](crate::output::ModifyScheduledActionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1867,6 +1885,7 @@ impl std::fmt::Debug for ModifyEventSubscriptionOutput {
 }
 /// See [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
 pub mod modify_event_subscription_output {
+
     /// A builder for [`ModifyEventSubscriptionOutput`](crate::output::ModifyEventSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1990,6 +2009,7 @@ impl std::fmt::Debug for ModifyEndpointAccessOutput {
 }
 /// See [`ModifyEndpointAccessOutput`](crate::output::ModifyEndpointAccessOutput)
 pub mod modify_endpoint_access_output {
+
     /// A builder for [`ModifyEndpointAccessOutput`](crate::output::ModifyEndpointAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2186,6 +2206,7 @@ impl std::fmt::Debug for ModifyClusterSubnetGroupOutput {
 }
 /// See [`ModifyClusterSubnetGroupOutput`](crate::output::ModifyClusterSubnetGroupOutput)
 pub mod modify_cluster_subnet_group_output {
+
     /// A builder for [`ModifyClusterSubnetGroupOutput`](crate::output::ModifyClusterSubnetGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2233,6 +2254,7 @@ impl std::fmt::Debug for ModifyClusterSnapshotScheduleOutput {
 }
 /// See [`ModifyClusterSnapshotScheduleOutput`](crate::output::ModifyClusterSnapshotScheduleOutput)
 pub mod modify_cluster_snapshot_schedule_output {
+
     /// A builder for [`ModifyClusterSnapshotScheduleOutput`](crate::output::ModifyClusterSnapshotScheduleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2273,6 +2295,7 @@ impl std::fmt::Debug for ModifyClusterSnapshotOutput {
 }
 /// See [`ModifyClusterSnapshotOutput`](crate::output::ModifyClusterSnapshotOutput)
 pub mod modify_cluster_snapshot_output {
+
     /// A builder for [`ModifyClusterSnapshotOutput`](crate::output::ModifyClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2334,6 +2357,7 @@ impl std::fmt::Debug for ModifyClusterParameterGroupOutput {
 }
 /// See [`ModifyClusterParameterGroupOutput`](crate::output::ModifyClusterParameterGroupOutput)
 pub mod modify_cluster_parameter_group_output {
+
     /// A builder for [`ModifyClusterParameterGroupOutput`](crate::output::ModifyClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2406,6 +2430,7 @@ impl std::fmt::Debug for ModifyClusterMaintenanceOutput {
 }
 /// See [`ModifyClusterMaintenanceOutput`](crate::output::ModifyClusterMaintenanceOutput)
 pub mod modify_cluster_maintenance_output {
+
     /// A builder for [`ModifyClusterMaintenanceOutput`](crate::output::ModifyClusterMaintenanceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2460,6 +2485,7 @@ impl std::fmt::Debug for ModifyClusterIamRolesOutput {
 }
 /// See [`ModifyClusterIamRolesOutput`](crate::output::ModifyClusterIamRolesOutput)
 pub mod modify_cluster_iam_roles_output {
+
     /// A builder for [`ModifyClusterIamRolesOutput`](crate::output::ModifyClusterIamRolesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2514,6 +2540,7 @@ impl std::fmt::Debug for ModifyClusterDbRevisionOutput {
 }
 /// See [`ModifyClusterDbRevisionOutput`](crate::output::ModifyClusterDbRevisionOutput)
 pub mod modify_cluster_db_revision_output {
+
     /// A builder for [`ModifyClusterDbRevisionOutput`](crate::output::ModifyClusterDbRevisionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2568,6 +2595,7 @@ impl std::fmt::Debug for ModifyClusterOutput {
 }
 /// See [`ModifyClusterOutput`](crate::output::ModifyClusterOutput)
 pub mod modify_cluster_output {
+
     /// A builder for [`ModifyClusterOutput`](crate::output::ModifyClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2635,6 +2663,7 @@ impl std::fmt::Debug for ModifyAuthenticationProfileOutput {
 }
 /// See [`ModifyAuthenticationProfileOutput`](crate::output::ModifyAuthenticationProfileOutput)
 pub mod modify_authentication_profile_output {
+
     /// A builder for [`ModifyAuthenticationProfileOutput`](crate::output::ModifyAuthenticationProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2713,6 +2742,7 @@ impl std::fmt::Debug for ModifyAquaConfigurationOutput {
 }
 /// See [`ModifyAquaConfigurationOutput`](crate::output::ModifyAquaConfigurationOutput)
 pub mod modify_aqua_configuration_output {
+
     /// A builder for [`ModifyAquaConfigurationOutput`](crate::output::ModifyAquaConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2780,6 +2810,7 @@ impl std::fmt::Debug for GetReservedNodeExchangeOfferingsOutput {
 }
 /// See [`GetReservedNodeExchangeOfferingsOutput`](crate::output::GetReservedNodeExchangeOfferingsOutput)
 pub mod get_reserved_node_exchange_offerings_output {
+
     /// A builder for [`GetReservedNodeExchangeOfferingsOutput`](crate::output::GetReservedNodeExchangeOfferingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2872,6 +2903,7 @@ impl std::fmt::Debug for GetReservedNodeExchangeConfigurationOptionsOutput {
 }
 /// See [`GetReservedNodeExchangeConfigurationOptionsOutput`](crate::output::GetReservedNodeExchangeConfigurationOptionsOutput)
 pub mod get_reserved_node_exchange_configuration_options_output {
+
     /// A builder for [`GetReservedNodeExchangeConfigurationOptionsOutput`](crate::output::GetReservedNodeExchangeConfigurationOptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2935,11 +2967,129 @@ impl GetReservedNodeExchangeConfigurationOptionsOutput {
     }
 }
 
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetClusterCredentialsWithIamOutput {
+    /// <p>A database user name that you provide when you connect to a database. The database user is mapped 1:1 to the source IAM identity. </p>
+    pub db_user: std::option::Option<std::string::String>,
+    /// <p>A temporary password that you provide when you connect to a database.</p>
+    pub db_password: std::option::Option<std::string::String>,
+    /// <p>The time (UTC) when the temporary password expires. After this timestamp, a log in with the temporary password fails.</p>
+    pub expiration: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>Reserved for future use.</p>
+    pub next_refresh_time: std::option::Option<aws_smithy_types::DateTime>,
+}
+impl GetClusterCredentialsWithIamOutput {
+    /// <p>A database user name that you provide when you connect to a database. The database user is mapped 1:1 to the source IAM identity. </p>
+    pub fn db_user(&self) -> std::option::Option<&str> {
+        self.db_user.as_deref()
+    }
+    /// <p>A temporary password that you provide when you connect to a database.</p>
+    pub fn db_password(&self) -> std::option::Option<&str> {
+        self.db_password.as_deref()
+    }
+    /// <p>The time (UTC) when the temporary password expires. After this timestamp, a log in with the temporary password fails.</p>
+    pub fn expiration(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.expiration.as_ref()
+    }
+    /// <p>Reserved for future use.</p>
+    pub fn next_refresh_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.next_refresh_time.as_ref()
+    }
+}
+impl std::fmt::Debug for GetClusterCredentialsWithIamOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetClusterCredentialsWithIamOutput");
+        formatter.field("db_user", &self.db_user);
+        formatter.field("db_password", &"*** Sensitive Data Redacted ***");
+        formatter.field("expiration", &self.expiration);
+        formatter.field("next_refresh_time", &self.next_refresh_time);
+        formatter.finish()
+    }
+}
+/// See [`GetClusterCredentialsWithIamOutput`](crate::output::GetClusterCredentialsWithIamOutput)
+pub mod get_cluster_credentials_with_iam_output {
+
+    /// A builder for [`GetClusterCredentialsWithIamOutput`](crate::output::GetClusterCredentialsWithIamOutput)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) db_user: std::option::Option<std::string::String>,
+        pub(crate) db_password: std::option::Option<std::string::String>,
+        pub(crate) expiration: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) next_refresh_time: std::option::Option<aws_smithy_types::DateTime>,
+    }
+    impl Builder {
+        /// <p>A database user name that you provide when you connect to a database. The database user is mapped 1:1 to the source IAM identity. </p>
+        pub fn db_user(mut self, input: impl Into<std::string::String>) -> Self {
+            self.db_user = Some(input.into());
+            self
+        }
+        /// <p>A database user name that you provide when you connect to a database. The database user is mapped 1:1 to the source IAM identity. </p>
+        pub fn set_db_user(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.db_user = input;
+            self
+        }
+        /// <p>A temporary password that you provide when you connect to a database.</p>
+        pub fn db_password(mut self, input: impl Into<std::string::String>) -> Self {
+            self.db_password = Some(input.into());
+            self
+        }
+        /// <p>A temporary password that you provide when you connect to a database.</p>
+        pub fn set_db_password(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.db_password = input;
+            self
+        }
+        /// <p>The time (UTC) when the temporary password expires. After this timestamp, a log in with the temporary password fails.</p>
+        pub fn expiration(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.expiration = Some(input);
+            self
+        }
+        /// <p>The time (UTC) when the temporary password expires. After this timestamp, a log in with the temporary password fails.</p>
+        pub fn set_expiration(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.expiration = input;
+            self
+        }
+        /// <p>Reserved for future use.</p>
+        pub fn next_refresh_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.next_refresh_time = Some(input);
+            self
+        }
+        /// <p>Reserved for future use.</p>
+        pub fn set_next_refresh_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.next_refresh_time = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetClusterCredentialsWithIamOutput`](crate::output::GetClusterCredentialsWithIamOutput)
+        pub fn build(self) -> crate::output::GetClusterCredentialsWithIamOutput {
+            crate::output::GetClusterCredentialsWithIamOutput {
+                db_user: self.db_user,
+                db_password: self.db_password,
+                expiration: self.expiration,
+                next_refresh_time: self.next_refresh_time,
+            }
+        }
+    }
+}
+impl GetClusterCredentialsWithIamOutput {
+    /// Creates a new builder-style object to manufacture [`GetClusterCredentialsWithIamOutput`](crate::output::GetClusterCredentialsWithIamOutput)
+    pub fn builder() -> crate::output::get_cluster_credentials_with_iam_output::Builder {
+        crate::output::get_cluster_credentials_with_iam_output::Builder::default()
+    }
+}
+
 /// <p>Temporary credentials with authorization to log on to an Amazon Redshift database. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct GetClusterCredentialsOutput {
-    /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database privileges as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
+    /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database permissions as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
     pub db_user: std::option::Option<std::string::String>,
     /// <p>A temporary password that authorizes the user name returned by <code>DbUser</code> to log on to the database <code>DbName</code>. </p>
     pub db_password: std::option::Option<std::string::String>,
@@ -2947,7 +3097,7 @@ pub struct GetClusterCredentialsOutput {
     pub expiration: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl GetClusterCredentialsOutput {
-    /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database privileges as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
+    /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database permissions as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
     pub fn db_user(&self) -> std::option::Option<&str> {
         self.db_user.as_deref()
     }
@@ -2971,6 +3121,7 @@ impl std::fmt::Debug for GetClusterCredentialsOutput {
 }
 /// See [`GetClusterCredentialsOutput`](crate::output::GetClusterCredentialsOutput)
 pub mod get_cluster_credentials_output {
+
     /// A builder for [`GetClusterCredentialsOutput`](crate::output::GetClusterCredentialsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2980,12 +3131,12 @@ pub mod get_cluster_credentials_output {
         pub(crate) expiration: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
-        /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database privileges as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
+        /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database permissions as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
         pub fn db_user(mut self, input: impl Into<std::string::String>) -> Self {
             self.db_user = Some(input.into());
             self
         }
-        /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database privileges as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
+        /// <p>A database user name that is authorized to log on to the database <code>DbName</code> using the password <code>DbPassword</code>. If the specified DbUser exists in the database, the new user name has the same database permissions as the the user named in DbUser. By default, the user is added to PUBLIC. If the <code>DbGroups</code> parameter is specifed, <code>DbUser</code> is added to the listed groups for any sessions created using these credentials.</p>
         pub fn set_db_user(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.db_user = input;
             self
@@ -3052,6 +3203,7 @@ impl std::fmt::Debug for EnableSnapshotCopyOutput {
 }
 /// See [`EnableSnapshotCopyOutput`](crate::output::EnableSnapshotCopyOutput)
 pub mod enable_snapshot_copy_output {
+
     /// A builder for [`EnableSnapshotCopyOutput`](crate::output::EnableSnapshotCopyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3100,6 +3252,10 @@ pub struct EnableLoggingOutput {
     pub last_failure_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The message indicating that logs failed to be delivered.</p>
     pub last_failure_message: std::option::Option<std::string::String>,
+    /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+    pub log_destination_type: std::option::Option<crate::model::LogDestinationType>,
+    /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+    pub log_exports: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl EnableLoggingOutput {
     /// <p> <code>true</code> if logging is on, <code>false</code> if logging is off.</p>
@@ -3128,6 +3284,14 @@ impl EnableLoggingOutput {
     pub fn last_failure_message(&self) -> std::option::Option<&str> {
         self.last_failure_message.as_deref()
     }
+    /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+    pub fn log_destination_type(&self) -> std::option::Option<&crate::model::LogDestinationType> {
+        self.log_destination_type.as_ref()
+    }
+    /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+    pub fn log_exports(&self) -> std::option::Option<&[std::string::String]> {
+        self.log_exports.as_deref()
+    }
 }
 impl std::fmt::Debug for EnableLoggingOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3141,11 +3305,14 @@ impl std::fmt::Debug for EnableLoggingOutput {
         );
         formatter.field("last_failure_time", &self.last_failure_time);
         formatter.field("last_failure_message", &self.last_failure_message);
+        formatter.field("log_destination_type", &self.log_destination_type);
+        formatter.field("log_exports", &self.log_exports);
         formatter.finish()
     }
 }
 /// See [`EnableLoggingOutput`](crate::output::EnableLoggingOutput)
 pub mod enable_logging_output {
+
     /// A builder for [`EnableLoggingOutput`](crate::output::EnableLoggingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3156,6 +3323,8 @@ pub mod enable_logging_output {
         pub(crate) last_successful_delivery_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) last_failure_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) last_failure_message: std::option::Option<std::string::String>,
+        pub(crate) log_destination_type: std::option::Option<crate::model::LogDestinationType>,
+        pub(crate) log_exports: std::option::Option<std::vec::Vec<std::string::String>>,
     }
     impl Builder {
         /// <p> <code>true</code> if logging is on, <code>false</code> if logging is off.</p>
@@ -3230,6 +3399,38 @@ pub mod enable_logging_output {
             self.last_failure_message = input;
             self
         }
+        /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+        pub fn log_destination_type(mut self, input: crate::model::LogDestinationType) -> Self {
+            self.log_destination_type = Some(input);
+            self
+        }
+        /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+        pub fn set_log_destination_type(
+            mut self,
+            input: std::option::Option<crate::model::LogDestinationType>,
+        ) -> Self {
+            self.log_destination_type = input;
+            self
+        }
+        /// Appends an item to `log_exports`.
+        ///
+        /// To override the contents of this collection use [`set_log_exports`](Self::set_log_exports).
+        ///
+        /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+        pub fn log_exports(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.log_exports.unwrap_or_default();
+            v.push(input.into());
+            self.log_exports = Some(v);
+            self
+        }
+        /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+        pub fn set_log_exports(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.log_exports = input;
+            self
+        }
         /// Consumes the builder and constructs a [`EnableLoggingOutput`](crate::output::EnableLoggingOutput)
         pub fn build(self) -> crate::output::EnableLoggingOutput {
             crate::output::EnableLoggingOutput {
@@ -3239,6 +3440,8 @@ pub mod enable_logging_output {
                 last_successful_delivery_time: self.last_successful_delivery_time,
                 last_failure_time: self.last_failure_time,
                 last_failure_message: self.last_failure_message,
+                log_destination_type: self.log_destination_type,
+                log_exports: self.log_exports,
             }
         }
     }
@@ -3260,7 +3463,7 @@ pub struct DisassociateDataShareConsumerOutput {
     pub producer_arn: std::option::Option<std::string::String>,
     /// <p>A value that specifies whether the datashare can be shared to a publicly accessible cluster.</p>
     pub allow_publicly_accessible_consumers: bool,
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub data_share_associations:
         std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
     /// <p>The identifier of a datashare to show its managing entity.</p>
@@ -3279,7 +3482,7 @@ impl DisassociateDataShareConsumerOutput {
     pub fn allow_publicly_accessible_consumers(&self) -> bool {
         self.allow_publicly_accessible_consumers
     }
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub fn data_share_associations(
         &self,
     ) -> std::option::Option<&[crate::model::DataShareAssociation]> {
@@ -3306,6 +3509,7 @@ impl std::fmt::Debug for DisassociateDataShareConsumerOutput {
 }
 /// See [`DisassociateDataShareConsumerOutput`](crate::output::DisassociateDataShareConsumerOutput)
 pub mod disassociate_data_share_consumer_output {
+
     /// A builder for [`DisassociateDataShareConsumerOutput`](crate::output::DisassociateDataShareConsumerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3358,7 +3562,7 @@ pub mod disassociate_data_share_consumer_output {
         ///
         /// To override the contents of this collection use [`set_data_share_associations`](Self::set_data_share_associations).
         ///
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn data_share_associations(
             mut self,
             input: crate::model::DataShareAssociation,
@@ -3368,7 +3572,7 @@ pub mod disassociate_data_share_consumer_output {
             self.data_share_associations = Some(v);
             self
         }
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn set_data_share_associations(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
@@ -3429,6 +3633,7 @@ impl std::fmt::Debug for DisableSnapshotCopyOutput {
 }
 /// See [`DisableSnapshotCopyOutput`](crate::output::DisableSnapshotCopyOutput)
 pub mod disable_snapshot_copy_output {
+
     /// A builder for [`DisableSnapshotCopyOutput`](crate::output::DisableSnapshotCopyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3477,6 +3682,10 @@ pub struct DisableLoggingOutput {
     pub last_failure_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The message indicating that logs failed to be delivered.</p>
     pub last_failure_message: std::option::Option<std::string::String>,
+    /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+    pub log_destination_type: std::option::Option<crate::model::LogDestinationType>,
+    /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+    pub log_exports: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DisableLoggingOutput {
     /// <p> <code>true</code> if logging is on, <code>false</code> if logging is off.</p>
@@ -3505,6 +3714,14 @@ impl DisableLoggingOutput {
     pub fn last_failure_message(&self) -> std::option::Option<&str> {
         self.last_failure_message.as_deref()
     }
+    /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+    pub fn log_destination_type(&self) -> std::option::Option<&crate::model::LogDestinationType> {
+        self.log_destination_type.as_ref()
+    }
+    /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+    pub fn log_exports(&self) -> std::option::Option<&[std::string::String]> {
+        self.log_exports.as_deref()
+    }
 }
 impl std::fmt::Debug for DisableLoggingOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3518,11 +3735,14 @@ impl std::fmt::Debug for DisableLoggingOutput {
         );
         formatter.field("last_failure_time", &self.last_failure_time);
         formatter.field("last_failure_message", &self.last_failure_message);
+        formatter.field("log_destination_type", &self.log_destination_type);
+        formatter.field("log_exports", &self.log_exports);
         formatter.finish()
     }
 }
 /// See [`DisableLoggingOutput`](crate::output::DisableLoggingOutput)
 pub mod disable_logging_output {
+
     /// A builder for [`DisableLoggingOutput`](crate::output::DisableLoggingOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3533,6 +3753,8 @@ pub mod disable_logging_output {
         pub(crate) last_successful_delivery_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) last_failure_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) last_failure_message: std::option::Option<std::string::String>,
+        pub(crate) log_destination_type: std::option::Option<crate::model::LogDestinationType>,
+        pub(crate) log_exports: std::option::Option<std::vec::Vec<std::string::String>>,
     }
     impl Builder {
         /// <p> <code>true</code> if logging is on, <code>false</code> if logging is off.</p>
@@ -3607,6 +3829,38 @@ pub mod disable_logging_output {
             self.last_failure_message = input;
             self
         }
+        /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+        pub fn log_destination_type(mut self, input: crate::model::LogDestinationType) -> Self {
+            self.log_destination_type = Some(input);
+            self
+        }
+        /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+        pub fn set_log_destination_type(
+            mut self,
+            input: std::option::Option<crate::model::LogDestinationType>,
+        ) -> Self {
+            self.log_destination_type = input;
+            self
+        }
+        /// Appends an item to `log_exports`.
+        ///
+        /// To override the contents of this collection use [`set_log_exports`](Self::set_log_exports).
+        ///
+        /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+        pub fn log_exports(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.log_exports.unwrap_or_default();
+            v.push(input.into());
+            self.log_exports = Some(v);
+            self
+        }
+        /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+        pub fn set_log_exports(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.log_exports = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DisableLoggingOutput`](crate::output::DisableLoggingOutput)
         pub fn build(self) -> crate::output::DisableLoggingOutput {
             crate::output::DisableLoggingOutput {
@@ -3616,6 +3870,8 @@ pub mod disable_logging_output {
                 last_successful_delivery_time: self.last_successful_delivery_time,
                 last_failure_time: self.last_failure_time,
                 last_failure_message: self.last_failure_message,
+                log_destination_type: self.log_destination_type,
+                log_exports: self.log_exports,
             }
         }
     }
@@ -3656,6 +3912,7 @@ impl std::fmt::Debug for DescribeUsageLimitsOutput {
 }
 /// See [`DescribeUsageLimitsOutput`](crate::output::DescribeUsageLimitsOutput)
 pub mod describe_usage_limits_output {
+
     /// A builder for [`DescribeUsageLimitsOutput`](crate::output::DescribeUsageLimitsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3738,6 +3995,7 @@ impl std::fmt::Debug for DescribeTagsOutput {
 }
 /// See [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
 pub mod describe_tags_output {
+
     /// A builder for [`DescribeTagsOutput`](crate::output::DescribeTagsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3827,6 +4085,7 @@ impl std::fmt::Debug for DescribeTableRestoreStatusOutput {
 }
 /// See [`DescribeTableRestoreStatusOutput`](crate::output::DescribeTableRestoreStatusOutput)
 pub mod describe_table_restore_status_output {
+
     /// A builder for [`DescribeTableRestoreStatusOutput`](crate::output::DescribeTableRestoreStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3919,6 +4178,7 @@ impl std::fmt::Debug for DescribeStorageOutput {
 }
 /// See [`DescribeStorageOutput`](crate::output::DescribeStorageOutput)
 pub mod describe_storage_output {
+
     /// A builder for [`DescribeStorageOutput`](crate::output::DescribeStorageOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4002,6 +4262,7 @@ impl std::fmt::Debug for DescribeSnapshotSchedulesOutput {
 }
 /// See [`DescribeSnapshotSchedulesOutput`](crate::output::DescribeSnapshotSchedulesOutput)
 pub mod describe_snapshot_schedules_output {
+
     /// A builder for [`DescribeSnapshotSchedulesOutput`](crate::output::DescribeSnapshotSchedulesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4087,6 +4348,7 @@ impl std::fmt::Debug for DescribeSnapshotCopyGrantsOutput {
 }
 /// See [`DescribeSnapshotCopyGrantsOutput`](crate::output::DescribeSnapshotCopyGrantsOutput)
 pub mod describe_snapshot_copy_grants_output {
+
     /// A builder for [`DescribeSnapshotCopyGrantsOutput`](crate::output::DescribeSnapshotCopyGrantsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4172,6 +4434,7 @@ impl std::fmt::Debug for DescribeScheduledActionsOutput {
 }
 /// See [`DescribeScheduledActionsOutput`](crate::output::DescribeScheduledActionsOutput)
 pub mod describe_scheduled_actions_output {
+
     /// A builder for [`DescribeScheduledActionsOutput`](crate::output::DescribeScheduledActionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4377,6 +4640,7 @@ impl std::fmt::Debug for DescribeResizeOutput {
 }
 /// See [`DescribeResizeOutput`](crate::output::DescribeResizeOutput)
 pub mod describe_resize_output {
+
     /// A builder for [`DescribeResizeOutput`](crate::output::DescribeResizeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4682,6 +4946,7 @@ impl std::fmt::Debug for DescribeReservedNodesOutput {
 }
 /// See [`DescribeReservedNodesOutput`](crate::output::DescribeReservedNodesOutput)
 pub mod describe_reserved_nodes_output {
+
     /// A builder for [`DescribeReservedNodesOutput`](crate::output::DescribeReservedNodesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4767,6 +5032,7 @@ impl std::fmt::Debug for DescribeReservedNodeOfferingsOutput {
 }
 /// See [`DescribeReservedNodeOfferingsOutput`](crate::output::DescribeReservedNodeOfferingsOutput)
 pub mod describe_reserved_node_offerings_output {
+
     /// A builder for [`DescribeReservedNodeOfferingsOutput`](crate::output::DescribeReservedNodeOfferingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4859,6 +5125,7 @@ impl std::fmt::Debug for DescribeReservedNodeExchangeStatusOutput {
 }
 /// See [`DescribeReservedNodeExchangeStatusOutput`](crate::output::DescribeReservedNodeExchangeStatusOutput)
 pub mod describe_reserved_node_exchange_status_output {
+
     /// A builder for [`DescribeReservedNodeExchangeStatusOutput`](crate::output::DescribeReservedNodeExchangeStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4946,6 +5213,7 @@ impl std::fmt::Debug for DescribePartnersOutput {
 }
 /// See [`DescribePartnersOutput`](crate::output::DescribePartnersOutput)
 pub mod describe_partners_output {
+
     /// A builder for [`DescribePartnersOutput`](crate::output::DescribePartnersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5023,6 +5291,7 @@ impl std::fmt::Debug for DescribeOrderableClusterOptionsOutput {
 }
 /// See [`DescribeOrderableClusterOptionsOutput`](crate::output::DescribeOrderableClusterOptionsOutput)
 pub mod describe_orderable_cluster_options_output {
+
     /// A builder for [`DescribeOrderableClusterOptionsOutput`](crate::output::DescribeOrderableClusterOptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5115,6 +5384,7 @@ impl std::fmt::Debug for DescribeNodeConfigurationOptionsOutput {
 }
 /// See [`DescribeNodeConfigurationOptionsOutput`](crate::output::DescribeNodeConfigurationOptionsOutput)
 pub mod describe_node_configuration_options_output {
+
     /// A builder for [`DescribeNodeConfigurationOptionsOutput`](crate::output::DescribeNodeConfigurationOptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5188,6 +5458,10 @@ pub struct DescribeLoggingStatusOutput {
     pub last_failure_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The message indicating that logs failed to be delivered.</p>
     pub last_failure_message: std::option::Option<std::string::String>,
+    /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+    pub log_destination_type: std::option::Option<crate::model::LogDestinationType>,
+    /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+    pub log_exports: std::option::Option<std::vec::Vec<std::string::String>>,
 }
 impl DescribeLoggingStatusOutput {
     /// <p> <code>true</code> if logging is on, <code>false</code> if logging is off.</p>
@@ -5216,6 +5490,14 @@ impl DescribeLoggingStatusOutput {
     pub fn last_failure_message(&self) -> std::option::Option<&str> {
         self.last_failure_message.as_deref()
     }
+    /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+    pub fn log_destination_type(&self) -> std::option::Option<&crate::model::LogDestinationType> {
+        self.log_destination_type.as_ref()
+    }
+    /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+    pub fn log_exports(&self) -> std::option::Option<&[std::string::String]> {
+        self.log_exports.as_deref()
+    }
 }
 impl std::fmt::Debug for DescribeLoggingStatusOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -5229,11 +5511,14 @@ impl std::fmt::Debug for DescribeLoggingStatusOutput {
         );
         formatter.field("last_failure_time", &self.last_failure_time);
         formatter.field("last_failure_message", &self.last_failure_message);
+        formatter.field("log_destination_type", &self.log_destination_type);
+        formatter.field("log_exports", &self.log_exports);
         formatter.finish()
     }
 }
 /// See [`DescribeLoggingStatusOutput`](crate::output::DescribeLoggingStatusOutput)
 pub mod describe_logging_status_output {
+
     /// A builder for [`DescribeLoggingStatusOutput`](crate::output::DescribeLoggingStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5244,6 +5529,8 @@ pub mod describe_logging_status_output {
         pub(crate) last_successful_delivery_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) last_failure_time: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) last_failure_message: std::option::Option<std::string::String>,
+        pub(crate) log_destination_type: std::option::Option<crate::model::LogDestinationType>,
+        pub(crate) log_exports: std::option::Option<std::vec::Vec<std::string::String>>,
     }
     impl Builder {
         /// <p> <code>true</code> if logging is on, <code>false</code> if logging is off.</p>
@@ -5318,6 +5605,38 @@ pub mod describe_logging_status_output {
             self.last_failure_message = input;
             self
         }
+        /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+        pub fn log_destination_type(mut self, input: crate::model::LogDestinationType) -> Self {
+            self.log_destination_type = Some(input);
+            self
+        }
+        /// <p>The log destination type. An enum with possible values of <code>s3</code> and <code>cloudwatch</code>.</p>
+        pub fn set_log_destination_type(
+            mut self,
+            input: std::option::Option<crate::model::LogDestinationType>,
+        ) -> Self {
+            self.log_destination_type = input;
+            self
+        }
+        /// Appends an item to `log_exports`.
+        ///
+        /// To override the contents of this collection use [`set_log_exports`](Self::set_log_exports).
+        ///
+        /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+        pub fn log_exports(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.log_exports.unwrap_or_default();
+            v.push(input.into());
+            self.log_exports = Some(v);
+            self
+        }
+        /// <p>The collection of exported log types. Log types include the connection log, user log and user activity log.</p>
+        pub fn set_log_exports(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.log_exports = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DescribeLoggingStatusOutput`](crate::output::DescribeLoggingStatusOutput)
         pub fn build(self) -> crate::output::DescribeLoggingStatusOutput {
             crate::output::DescribeLoggingStatusOutput {
@@ -5327,6 +5646,8 @@ pub mod describe_logging_status_output {
                 last_successful_delivery_time: self.last_successful_delivery_time,
                 last_failure_time: self.last_failure_time,
                 last_failure_message: self.last_failure_message,
+                log_destination_type: self.log_destination_type,
+                log_exports: self.log_exports,
             }
         }
     }
@@ -5367,6 +5688,7 @@ impl std::fmt::Debug for DescribeHsmConfigurationsOutput {
 }
 /// See [`DescribeHsmConfigurationsOutput`](crate::output::DescribeHsmConfigurationsOutput)
 pub mod describe_hsm_configurations_output {
+
     /// A builder for [`DescribeHsmConfigurationsOutput`](crate::output::DescribeHsmConfigurationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5453,6 +5775,7 @@ impl std::fmt::Debug for DescribeHsmClientCertificatesOutput {
 }
 /// See [`DescribeHsmClientCertificatesOutput`](crate::output::DescribeHsmClientCertificatesOutput)
 pub mod describe_hsm_client_certificates_output {
+
     /// A builder for [`DescribeHsmClientCertificatesOutput`](crate::output::DescribeHsmClientCertificatesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5542,6 +5865,7 @@ impl std::fmt::Debug for DescribeEventSubscriptionsOutput {
 }
 /// See [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
 pub mod describe_event_subscriptions_output {
+
     /// A builder for [`DescribeEventSubscriptionsOutput`](crate::output::DescribeEventSubscriptionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5625,6 +5949,7 @@ impl std::fmt::Debug for DescribeEventsOutput {
 }
 /// See [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
 pub mod describe_events_output {
+
     /// A builder for [`DescribeEventsOutput`](crate::output::DescribeEventsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5703,6 +6028,7 @@ impl std::fmt::Debug for DescribeEventCategoriesOutput {
 }
 /// See [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
 pub mod describe_event_categories_output {
+
     /// A builder for [`DescribeEventCategoriesOutput`](crate::output::DescribeEventCategoriesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5783,6 +6109,7 @@ impl std::fmt::Debug for DescribeEndpointAuthorizationOutput {
 }
 /// See [`DescribeEndpointAuthorizationOutput`](crate::output::DescribeEndpointAuthorizationOutput)
 pub mod describe_endpoint_authorization_output {
+
     /// A builder for [`DescribeEndpointAuthorizationOutput`](crate::output::DescribeEndpointAuthorizationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5869,6 +6196,7 @@ impl std::fmt::Debug for DescribeEndpointAccessOutput {
 }
 /// See [`DescribeEndpointAccessOutput`](crate::output::DescribeEndpointAccessOutput)
 pub mod describe_endpoint_access_output {
+
     /// A builder for [`DescribeEndpointAccessOutput`](crate::output::DescribeEndpointAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5950,6 +6278,7 @@ impl std::fmt::Debug for DescribeDefaultClusterParametersOutput {
 }
 /// See [`DescribeDefaultClusterParametersOutput`](crate::output::DescribeDefaultClusterParametersOutput)
 pub mod describe_default_cluster_parameters_output {
+
     /// A builder for [`DescribeDefaultClusterParametersOutput`](crate::output::DescribeDefaultClusterParametersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6018,6 +6347,7 @@ impl std::fmt::Debug for DescribeDataSharesForProducerOutput {
 }
 /// See [`DescribeDataSharesForProducerOutput`](crate::output::DescribeDataSharesForProducerOutput)
 pub mod describe_data_shares_for_producer_output {
+
     /// A builder for [`DescribeDataSharesForProducerOutput`](crate::output::DescribeDataSharesForProducerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6100,6 +6430,7 @@ impl std::fmt::Debug for DescribeDataSharesForConsumerOutput {
 }
 /// See [`DescribeDataSharesForConsumerOutput`](crate::output::DescribeDataSharesForConsumerOutput)
 pub mod describe_data_shares_for_consumer_output {
+
     /// A builder for [`DescribeDataSharesForConsumerOutput`](crate::output::DescribeDataSharesForConsumerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6182,6 +6513,7 @@ impl std::fmt::Debug for DescribeDataSharesOutput {
 }
 /// See [`DescribeDataSharesOutput`](crate::output::DescribeDataSharesOutput)
 pub mod describe_data_shares_output {
+
     /// A builder for [`DescribeDataSharesOutput`](crate::output::DescribeDataSharesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6264,6 +6596,7 @@ impl std::fmt::Debug for DescribeClusterVersionsOutput {
 }
 /// See [`DescribeClusterVersionsOutput`](crate::output::DescribeClusterVersionsOutput)
 pub mod describe_cluster_versions_output {
+
     /// A builder for [`DescribeClusterVersionsOutput`](crate::output::DescribeClusterVersionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6347,6 +6680,7 @@ impl std::fmt::Debug for DescribeClusterTracksOutput {
 }
 /// See [`DescribeClusterTracksOutput`](crate::output::DescribeClusterTracksOutput)
 pub mod describe_cluster_tracks_output {
+
     /// A builder for [`DescribeClusterTracksOutput`](crate::output::DescribeClusterTracksOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6432,6 +6766,7 @@ impl std::fmt::Debug for DescribeClusterSubnetGroupsOutput {
 }
 /// See [`DescribeClusterSubnetGroupsOutput`](crate::output::DescribeClusterSubnetGroupsOutput)
 pub mod describe_cluster_subnet_groups_output {
+
     /// A builder for [`DescribeClusterSubnetGroupsOutput`](crate::output::DescribeClusterSubnetGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6515,6 +6850,7 @@ impl std::fmt::Debug for DescribeClusterSnapshotsOutput {
 }
 /// See [`DescribeClusterSnapshotsOutput`](crate::output::DescribeClusterSnapshotsOutput)
 pub mod describe_cluster_snapshots_output {
+
     /// A builder for [`DescribeClusterSnapshotsOutput`](crate::output::DescribeClusterSnapshotsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6600,6 +6936,7 @@ impl std::fmt::Debug for DescribeClusterSecurityGroupsOutput {
 }
 /// See [`DescribeClusterSecurityGroupsOutput`](crate::output::DescribeClusterSecurityGroupsOutput)
 pub mod describe_cluster_security_groups_output {
+
     /// A builder for [`DescribeClusterSecurityGroupsOutput`](crate::output::DescribeClusterSecurityGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6686,6 +7023,7 @@ impl std::fmt::Debug for DescribeClustersOutput {
 }
 /// See [`DescribeClustersOutput`](crate::output::DescribeClustersOutput)
 pub mod describe_clusters_output {
+
     /// A builder for [`DescribeClustersOutput`](crate::output::DescribeClustersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6768,6 +7106,7 @@ impl std::fmt::Debug for DescribeClusterParametersOutput {
 }
 /// See [`DescribeClusterParametersOutput`](crate::output::DescribeClusterParametersOutput)
 pub mod describe_cluster_parameters_output {
+
     /// A builder for [`DescribeClusterParametersOutput`](crate::output::DescribeClusterParametersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6850,6 +7189,7 @@ impl std::fmt::Debug for DescribeClusterParameterGroupsOutput {
 }
 /// See [`DescribeClusterParameterGroupsOutput`](crate::output::DescribeClusterParameterGroupsOutput)
 pub mod describe_cluster_parameter_groups_output {
+
     /// A builder for [`DescribeClusterParameterGroupsOutput`](crate::output::DescribeClusterParameterGroupsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6933,6 +7273,7 @@ impl std::fmt::Debug for DescribeClusterDbRevisionsOutput {
 }
 /// See [`DescribeClusterDbRevisionsOutput`](crate::output::DescribeClusterDbRevisionsOutput)
 pub mod describe_cluster_db_revisions_output {
+
     /// A builder for [`DescribeClusterDbRevisionsOutput`](crate::output::DescribeClusterDbRevisionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7012,6 +7353,7 @@ impl std::fmt::Debug for DescribeAuthenticationProfilesOutput {
 }
 /// See [`DescribeAuthenticationProfilesOutput`](crate::output::DescribeAuthenticationProfilesOutput)
 pub mod describe_authentication_profiles_output {
+
     /// A builder for [`DescribeAuthenticationProfilesOutput`](crate::output::DescribeAuthenticationProfilesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7079,6 +7421,7 @@ impl std::fmt::Debug for DescribeAccountAttributesOutput {
 }
 /// See [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
 pub mod describe_account_attributes_output {
+
     /// A builder for [`DescribeAccountAttributesOutput`](crate::output::DescribeAccountAttributesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7133,6 +7476,7 @@ impl std::fmt::Debug for DeleteUsageLimitOutput {
 }
 /// See [`DeleteUsageLimitOutput`](crate::output::DeleteUsageLimitOutput)
 pub mod delete_usage_limit_output {
+
     /// A builder for [`DeleteUsageLimitOutput`](crate::output::DeleteUsageLimitOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7163,6 +7507,7 @@ impl std::fmt::Debug for DeleteTagsOutput {
 }
 /// See [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
 pub mod delete_tags_output {
+
     /// A builder for [`DeleteTagsOutput`](crate::output::DeleteTagsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7193,6 +7538,7 @@ impl std::fmt::Debug for DeleteSnapshotScheduleOutput {
 }
 /// See [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput)
 pub mod delete_snapshot_schedule_output {
+
     /// A builder for [`DeleteSnapshotScheduleOutput`](crate::output::DeleteSnapshotScheduleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7223,6 +7569,7 @@ impl std::fmt::Debug for DeleteSnapshotCopyGrantOutput {
 }
 /// See [`DeleteSnapshotCopyGrantOutput`](crate::output::DeleteSnapshotCopyGrantOutput)
 pub mod delete_snapshot_copy_grant_output {
+
     /// A builder for [`DeleteSnapshotCopyGrantOutput`](crate::output::DeleteSnapshotCopyGrantOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7253,6 +7600,7 @@ impl std::fmt::Debug for DeleteScheduledActionOutput {
 }
 /// See [`DeleteScheduledActionOutput`](crate::output::DeleteScheduledActionOutput)
 pub mod delete_scheduled_action_output {
+
     /// A builder for [`DeleteScheduledActionOutput`](crate::output::DeleteScheduledActionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7300,6 +7648,7 @@ impl std::fmt::Debug for DeletePartnerOutput {
 }
 /// See [`DeletePartnerOutput`](crate::output::DeletePartnerOutput)
 pub mod delete_partner_output {
+
     /// A builder for [`DeletePartnerOutput`](crate::output::DeletePartnerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7359,6 +7708,7 @@ impl std::fmt::Debug for DeleteHsmConfigurationOutput {
 }
 /// See [`DeleteHsmConfigurationOutput`](crate::output::DeleteHsmConfigurationOutput)
 pub mod delete_hsm_configuration_output {
+
     /// A builder for [`DeleteHsmConfigurationOutput`](crate::output::DeleteHsmConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7389,6 +7739,7 @@ impl std::fmt::Debug for DeleteHsmClientCertificateOutput {
 }
 /// See [`DeleteHsmClientCertificateOutput`](crate::output::DeleteHsmClientCertificateOutput)
 pub mod delete_hsm_client_certificate_output {
+
     /// A builder for [`DeleteHsmClientCertificateOutput`](crate::output::DeleteHsmClientCertificateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7419,6 +7770,7 @@ impl std::fmt::Debug for DeleteEventSubscriptionOutput {
 }
 /// See [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
 pub mod delete_event_subscription_output {
+
     /// A builder for [`DeleteEventSubscriptionOutput`](crate::output::DeleteEventSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7525,6 +7877,7 @@ impl std::fmt::Debug for DeleteEndpointAccessOutput {
 }
 /// See [`DeleteEndpointAccessOutput`](crate::output::DeleteEndpointAccessOutput)
 pub mod delete_endpoint_access_output {
+
     /// A builder for [`DeleteEndpointAccessOutput`](crate::output::DeleteEndpointAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7711,6 +8064,7 @@ impl std::fmt::Debug for DeleteClusterSubnetGroupOutput {
 }
 /// See [`DeleteClusterSubnetGroupOutput`](crate::output::DeleteClusterSubnetGroupOutput)
 pub mod delete_cluster_subnet_group_output {
+
     /// A builder for [`DeleteClusterSubnetGroupOutput`](crate::output::DeleteClusterSubnetGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7751,6 +8105,7 @@ impl std::fmt::Debug for DeleteClusterSnapshotOutput {
 }
 /// See [`DeleteClusterSnapshotOutput`](crate::output::DeleteClusterSnapshotOutput)
 pub mod delete_cluster_snapshot_output {
+
     /// A builder for [`DeleteClusterSnapshotOutput`](crate::output::DeleteClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7795,6 +8150,7 @@ impl std::fmt::Debug for DeleteClusterSecurityGroupOutput {
 }
 /// See [`DeleteClusterSecurityGroupOutput`](crate::output::DeleteClusterSecurityGroupOutput)
 pub mod delete_cluster_security_group_output {
+
     /// A builder for [`DeleteClusterSecurityGroupOutput`](crate::output::DeleteClusterSecurityGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7825,6 +8181,7 @@ impl std::fmt::Debug for DeleteClusterParameterGroupOutput {
 }
 /// See [`DeleteClusterParameterGroupOutput`](crate::output::DeleteClusterParameterGroupOutput)
 pub mod delete_cluster_parameter_group_output {
+
     /// A builder for [`DeleteClusterParameterGroupOutput`](crate::output::DeleteClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7865,6 +8222,7 @@ impl std::fmt::Debug for DeleteClusterOutput {
 }
 /// See [`DeleteClusterOutput`](crate::output::DeleteClusterOutput)
 pub mod delete_cluster_output {
+
     /// A builder for [`DeleteClusterOutput`](crate::output::DeleteClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7922,6 +8280,7 @@ impl std::fmt::Debug for DeleteAuthenticationProfileOutput {
 }
 /// See [`DeleteAuthenticationProfileOutput`](crate::output::DeleteAuthenticationProfileOutput)
 pub mod delete_authentication_profile_output {
+
     /// A builder for [`DeleteAuthenticationProfileOutput`](crate::output::DeleteAuthenticationProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7970,7 +8329,7 @@ pub struct DeauthorizeDataShareOutput {
     pub producer_arn: std::option::Option<std::string::String>,
     /// <p>A value that specifies whether the datashare can be shared to a publicly accessible cluster.</p>
     pub allow_publicly_accessible_consumers: bool,
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub data_share_associations:
         std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
     /// <p>The identifier of a datashare to show its managing entity.</p>
@@ -7989,7 +8348,7 @@ impl DeauthorizeDataShareOutput {
     pub fn allow_publicly_accessible_consumers(&self) -> bool {
         self.allow_publicly_accessible_consumers
     }
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub fn data_share_associations(
         &self,
     ) -> std::option::Option<&[crate::model::DataShareAssociation]> {
@@ -8016,6 +8375,7 @@ impl std::fmt::Debug for DeauthorizeDataShareOutput {
 }
 /// See [`DeauthorizeDataShareOutput`](crate::output::DeauthorizeDataShareOutput)
 pub mod deauthorize_data_share_output {
+
     /// A builder for [`DeauthorizeDataShareOutput`](crate::output::DeauthorizeDataShareOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8068,7 +8428,7 @@ pub mod deauthorize_data_share_output {
         ///
         /// To override the contents of this collection use [`set_data_share_associations`](Self::set_data_share_associations).
         ///
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn data_share_associations(
             mut self,
             input: crate::model::DataShareAssociation,
@@ -8078,7 +8438,7 @@ pub mod deauthorize_data_share_output {
             self.data_share_associations = Some(v);
             self
         }
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn set_data_share_associations(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
@@ -8198,6 +8558,7 @@ impl std::fmt::Debug for CreateUsageLimitOutput {
 }
 /// See [`CreateUsageLimitOutput`](crate::output::CreateUsageLimitOutput)
 pub mod create_usage_limit_output {
+
     /// A builder for [`CreateUsageLimitOutput`](crate::output::CreateUsageLimitOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8363,6 +8724,7 @@ impl std::fmt::Debug for CreateTagsOutput {
 }
 /// See [`CreateTagsOutput`](crate::output::CreateTagsOutput)
 pub mod create_tags_output {
+
     /// A builder for [`CreateTagsOutput`](crate::output::CreateTagsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8448,6 +8810,7 @@ impl std::fmt::Debug for CreateSnapshotScheduleOutput {
 }
 /// See [`CreateSnapshotScheduleOutput`](crate::output::CreateSnapshotScheduleOutput)
 pub mod create_snapshot_schedule_output {
+
     /// A builder for [`CreateSnapshotScheduleOutput`](crate::output::CreateSnapshotScheduleOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8622,6 +8985,7 @@ impl std::fmt::Debug for CreateSnapshotCopyGrantOutput {
 }
 /// See [`CreateSnapshotCopyGrantOutput`](crate::output::CreateSnapshotCopyGrantOutput)
 pub mod create_snapshot_copy_grant_output {
+
     /// A builder for [`CreateSnapshotCopyGrantOutput`](crate::output::CreateSnapshotCopyGrantOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8746,6 +9110,7 @@ impl std::fmt::Debug for CreateScheduledActionOutput {
 }
 /// See [`CreateScheduledActionOutput`](crate::output::CreateScheduledActionOutput)
 pub mod create_scheduled_action_output {
+
     /// A builder for [`CreateScheduledActionOutput`](crate::output::CreateScheduledActionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8932,6 +9297,7 @@ impl std::fmt::Debug for CreateHsmConfigurationOutput {
 }
 /// See [`CreateHsmConfigurationOutput`](crate::output::CreateHsmConfigurationOutput)
 pub mod create_hsm_configuration_output {
+
     /// A builder for [`CreateHsmConfigurationOutput`](crate::output::CreateHsmConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8991,6 +9357,7 @@ impl std::fmt::Debug for CreateHsmClientCertificateOutput {
 }
 /// See [`CreateHsmClientCertificateOutput`](crate::output::CreateHsmClientCertificateOutput)
 pub mod create_hsm_client_certificate_output {
+
     /// A builder for [`CreateHsmClientCertificateOutput`](crate::output::CreateHsmClientCertificateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9048,6 +9415,7 @@ impl std::fmt::Debug for CreateEventSubscriptionOutput {
 }
 /// See [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
 pub mod create_event_subscription_output {
+
     /// A builder for [`CreateEventSubscriptionOutput`](crate::output::CreateEventSubscriptionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9171,6 +9539,7 @@ impl std::fmt::Debug for CreateEndpointAccessOutput {
 }
 /// See [`CreateEndpointAccessOutput`](crate::output::CreateEndpointAccessOutput)
 pub mod create_endpoint_access_output {
+
     /// A builder for [`CreateEndpointAccessOutput`](crate::output::CreateEndpointAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9367,6 +9736,7 @@ impl std::fmt::Debug for CreateClusterSubnetGroupOutput {
 }
 /// See [`CreateClusterSubnetGroupOutput`](crate::output::CreateClusterSubnetGroupOutput)
 pub mod create_cluster_subnet_group_output {
+
     /// A builder for [`CreateClusterSubnetGroupOutput`](crate::output::CreateClusterSubnetGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9424,6 +9794,7 @@ impl std::fmt::Debug for CreateClusterSnapshotOutput {
 }
 /// See [`CreateClusterSnapshotOutput`](crate::output::CreateClusterSnapshotOutput)
 pub mod create_cluster_snapshot_output {
+
     /// A builder for [`CreateClusterSnapshotOutput`](crate::output::CreateClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9480,6 +9851,7 @@ impl std::fmt::Debug for CreateClusterSecurityGroupOutput {
 }
 /// See [`CreateClusterSecurityGroupOutput`](crate::output::CreateClusterSecurityGroupOutput)
 pub mod create_cluster_security_group_output {
+
     /// A builder for [`CreateClusterSecurityGroupOutput`](crate::output::CreateClusterSecurityGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9539,6 +9911,7 @@ impl std::fmt::Debug for CreateClusterParameterGroupOutput {
 }
 /// See [`CreateClusterParameterGroupOutput`](crate::output::CreateClusterParameterGroupOutput)
 pub mod create_cluster_parameter_group_output {
+
     /// A builder for [`CreateClusterParameterGroupOutput`](crate::output::CreateClusterParameterGroupOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9600,6 +9973,7 @@ impl std::fmt::Debug for CreateClusterOutput {
 }
 /// See [`CreateClusterOutput`](crate::output::CreateClusterOutput)
 pub mod create_cluster_output {
+
     /// A builder for [`CreateClusterOutput`](crate::output::CreateClusterOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9667,6 +10041,7 @@ impl std::fmt::Debug for CreateAuthenticationProfileOutput {
 }
 /// See [`CreateAuthenticationProfileOutput`](crate::output::CreateAuthenticationProfileOutput)
 pub mod create_authentication_profile_output {
+
     /// A builder for [`CreateAuthenticationProfileOutput`](crate::output::CreateAuthenticationProfileOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9745,6 +10120,7 @@ impl std::fmt::Debug for CopyClusterSnapshotOutput {
 }
 /// See [`CopyClusterSnapshotOutput`](crate::output::CopyClusterSnapshotOutput)
 pub mod copy_cluster_snapshot_output {
+
     /// A builder for [`CopyClusterSnapshotOutput`](crate::output::CopyClusterSnapshotOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9928,6 +10304,7 @@ impl std::fmt::Debug for CancelResizeOutput {
 }
 /// See [`CancelResizeOutput`](crate::output::CancelResizeOutput)
 pub mod cancel_resize_output {
+
     /// A builder for [`CancelResizeOutput`](crate::output::CancelResizeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10233,6 +10610,7 @@ impl std::fmt::Debug for BatchModifyClusterSnapshotsOutput {
 }
 /// See [`BatchModifyClusterSnapshotsOutput`](crate::output::BatchModifyClusterSnapshotsOutput)
 pub mod batch_modify_cluster_snapshots_output {
+
     /// A builder for [`BatchModifyClusterSnapshotsOutput`](crate::output::BatchModifyClusterSnapshotsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10324,6 +10702,7 @@ impl std::fmt::Debug for BatchDeleteClusterSnapshotsOutput {
 }
 /// See [`BatchDeleteClusterSnapshotsOutput`](crate::output::BatchDeleteClusterSnapshotsOutput)
 pub mod batch_delete_cluster_snapshots_output {
+
     /// A builder for [`BatchDeleteClusterSnapshotsOutput`](crate::output::BatchDeleteClusterSnapshotsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10408,6 +10787,7 @@ impl std::fmt::Debug for AuthorizeSnapshotAccessOutput {
 }
 /// See [`AuthorizeSnapshotAccessOutput`](crate::output::AuthorizeSnapshotAccessOutput)
 pub mod authorize_snapshot_access_output {
+
     /// A builder for [`AuthorizeSnapshotAccessOutput`](crate::output::AuthorizeSnapshotAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10518,6 +10898,7 @@ impl std::fmt::Debug for AuthorizeEndpointAccessOutput {
 }
 /// See [`AuthorizeEndpointAccessOutput`](crate::output::AuthorizeEndpointAccessOutput)
 pub mod authorize_endpoint_access_output {
+
     /// A builder for [`AuthorizeEndpointAccessOutput`](crate::output::AuthorizeEndpointAccessOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10677,7 +11058,7 @@ pub struct AuthorizeDataShareOutput {
     pub producer_arn: std::option::Option<std::string::String>,
     /// <p>A value that specifies whether the datashare can be shared to a publicly accessible cluster.</p>
     pub allow_publicly_accessible_consumers: bool,
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub data_share_associations:
         std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
     /// <p>The identifier of a datashare to show its managing entity.</p>
@@ -10696,7 +11077,7 @@ impl AuthorizeDataShareOutput {
     pub fn allow_publicly_accessible_consumers(&self) -> bool {
         self.allow_publicly_accessible_consumers
     }
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub fn data_share_associations(
         &self,
     ) -> std::option::Option<&[crate::model::DataShareAssociation]> {
@@ -10723,6 +11104,7 @@ impl std::fmt::Debug for AuthorizeDataShareOutput {
 }
 /// See [`AuthorizeDataShareOutput`](crate::output::AuthorizeDataShareOutput)
 pub mod authorize_data_share_output {
+
     /// A builder for [`AuthorizeDataShareOutput`](crate::output::AuthorizeDataShareOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10775,7 +11157,7 @@ pub mod authorize_data_share_output {
         ///
         /// To override the contents of this collection use [`set_data_share_associations`](Self::set_data_share_associations).
         ///
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn data_share_associations(
             mut self,
             input: crate::model::DataShareAssociation,
@@ -10785,7 +11167,7 @@ pub mod authorize_data_share_output {
             self.data_share_associations = Some(v);
             self
         }
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn set_data_share_associations(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
@@ -10848,6 +11230,7 @@ impl std::fmt::Debug for AuthorizeClusterSecurityGroupIngressOutput {
 }
 /// See [`AuthorizeClusterSecurityGroupIngressOutput`](crate::output::AuthorizeClusterSecurityGroupIngressOutput)
 pub mod authorize_cluster_security_group_ingress_output {
+
     /// A builder for [`AuthorizeClusterSecurityGroupIngressOutput`](crate::output::AuthorizeClusterSecurityGroupIngressOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10893,7 +11276,7 @@ pub struct AssociateDataShareConsumerOutput {
     pub producer_arn: std::option::Option<std::string::String>,
     /// <p>A value that specifies whether the datashare can be shared to a publicly accessible cluster.</p>
     pub allow_publicly_accessible_consumers: bool,
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub data_share_associations:
         std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
     /// <p>The identifier of a datashare to show its managing entity.</p>
@@ -10912,7 +11295,7 @@ impl AssociateDataShareConsumerOutput {
     pub fn allow_publicly_accessible_consumers(&self) -> bool {
         self.allow_publicly_accessible_consumers
     }
-    /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+    /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
     pub fn data_share_associations(
         &self,
     ) -> std::option::Option<&[crate::model::DataShareAssociation]> {
@@ -10939,6 +11322,7 @@ impl std::fmt::Debug for AssociateDataShareConsumerOutput {
 }
 /// See [`AssociateDataShareConsumerOutput`](crate::output::AssociateDataShareConsumerOutput)
 pub mod associate_data_share_consumer_output {
+
     /// A builder for [`AssociateDataShareConsumerOutput`](crate::output::AssociateDataShareConsumerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10991,7 +11375,7 @@ pub mod associate_data_share_consumer_output {
         ///
         /// To override the contents of this collection use [`set_data_share_associations`](Self::set_data_share_associations).
         ///
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn data_share_associations(
             mut self,
             input: crate::model::DataShareAssociation,
@@ -11001,7 +11385,7 @@ pub mod associate_data_share_consumer_output {
             self.data_share_associations = Some(v);
             self
         }
-        /// <p>A value that specifies when the datashare has an association between a producer and data consumers.</p>
+        /// <p>A value that specifies when the datashare has an association between producer and data consumers.</p>
         pub fn set_data_share_associations(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::DataShareAssociation>>,
@@ -11069,6 +11453,7 @@ impl std::fmt::Debug for AddPartnerOutput {
 }
 /// See [`AddPartnerOutput`](crate::output::AddPartnerOutput)
 pub mod add_partner_output {
+
     /// A builder for [`AddPartnerOutput`](crate::output::AddPartnerOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11138,6 +11523,7 @@ impl std::fmt::Debug for AcceptReservedNodeExchangeOutput {
 }
 /// See [`AcceptReservedNodeExchangeOutput`](crate::output::AcceptReservedNodeExchangeOutput)
 pub mod accept_reserved_node_exchange_output {
+
     /// A builder for [`AcceptReservedNodeExchangeOutput`](crate::output::AcceptReservedNodeExchangeOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

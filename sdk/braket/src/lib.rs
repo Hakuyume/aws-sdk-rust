@@ -5,9 +5,19 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>The Amazon Braket API Reference provides information about the operations and structures supported in Amazon Braket.</p>
+//! <p>The Amazon Braket API Reference provides information about the operations and structures
+//! supported in Amazon Braket.</p>
+//! <p>Additional Resources:</p>
+//! <ul>
+//! <li>
+//! <p>
+//! <a href="https://docs.aws.amazon.com/braket/latest/developerguide/what-is-braket.html">Amazon Braket Developer Guide</a>
+//! </p>
+//! </li>
+//! </ul>
 //!
 //! # Crate Organization
 //!
@@ -42,7 +52,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

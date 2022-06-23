@@ -21,6 +21,7 @@ impl std::fmt::Debug for UpdateResiliencyPolicyOutput {
 }
 /// See [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput)
 pub mod update_resiliency_policy_output {
+
     /// A builder for [`UpdateResiliencyPolicyOutput`](crate::output::UpdateResiliencyPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -78,6 +79,7 @@ impl std::fmt::Debug for UpdateAppOutput {
 }
 /// See [`UpdateAppOutput`](crate::output::UpdateAppOutput)
 pub mod update_app_output {
+
     /// A builder for [`UpdateAppOutput`](crate::output::UpdateAppOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -120,6 +122,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -150,6 +153,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -190,6 +194,7 @@ impl std::fmt::Debug for StartAppAssessmentOutput {
 }
 /// See [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput)
 pub mod start_app_assessment_output {
+
     /// A builder for [`StartAppAssessmentOutput`](crate::output::StartAppAssessmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -229,7 +234,7 @@ impl StartAppAssessmentOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ResolveAppVersionResourcesOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
@@ -239,7 +244,7 @@ pub struct ResolveAppVersionResourcesOutput {
     pub status: std::option::Option<crate::model::ResourceResolutionStatusType>,
 }
 impl ResolveAppVersionResourcesOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -268,6 +273,7 @@ impl std::fmt::Debug for ResolveAppVersionResourcesOutput {
 }
 /// See [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput)
 pub mod resolve_app_version_resources_output {
+
     /// A builder for [`ResolveAppVersionResourcesOutput`](crate::output::ResolveAppVersionResourcesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -278,12 +284,12 @@ pub mod resolve_app_version_resources_output {
         pub(crate) status: std::option::Option<crate::model::ResourceResolutionStatusType>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -346,13 +352,13 @@ impl ResolveAppVersionResourcesOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RemoveDraftAppVersionResourceMappingsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
 }
 impl RemoveDraftAppVersionResourceMappingsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -371,6 +377,7 @@ impl std::fmt::Debug for RemoveDraftAppVersionResourceMappingsOutput {
 }
 /// See [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput)
 pub mod remove_draft_app_version_resource_mappings_output {
+
     /// A builder for [`RemoveDraftAppVersionResourceMappingsOutput`](crate::output::RemoveDraftAppVersionResourceMappingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -379,12 +386,12 @@ pub mod remove_draft_app_version_resource_mappings_output {
         pub(crate) app_version: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -419,13 +426,13 @@ impl RemoveDraftAppVersionResourceMappingsOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PutDraftAppVersionTemplateOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
 }
 impl PutDraftAppVersionTemplateOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -444,6 +451,7 @@ impl std::fmt::Debug for PutDraftAppVersionTemplateOutput {
 }
 /// See [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput)
 pub mod put_draft_app_version_template_output {
+
     /// A builder for [`PutDraftAppVersionTemplateOutput`](crate::output::PutDraftAppVersionTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -452,12 +460,12 @@ pub mod put_draft_app_version_template_output {
         pub(crate) app_version: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -492,13 +500,13 @@ impl PutDraftAppVersionTemplateOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct PublishAppVersionOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
 }
 impl PublishAppVersionOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -517,6 +525,7 @@ impl std::fmt::Debug for PublishAppVersionOutput {
 }
 /// See [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput)
 pub mod publish_app_version_output {
+
     /// A builder for [`PublishAppVersionOutput`](crate::output::PublishAppVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -525,12 +534,12 @@ pub mod publish_app_version_output {
         pub(crate) app_version: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -600,6 +609,7 @@ impl std::fmt::Debug for ListUnsupportedAppVersionResourcesOutput {
 }
 /// See [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput)
 pub mod list_unsupported_app_version_resources_output {
+
     /// A builder for [`ListUnsupportedAppVersionResourcesOutput`](crate::output::ListUnsupportedAppVersionResourcesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -698,6 +708,7 @@ impl std::fmt::Debug for ListTestRecommendationsOutput {
 }
 /// See [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput)
 pub mod list_test_recommendations_output {
+
     /// A builder for [`ListTestRecommendationsOutput`](crate::output::ListTestRecommendationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -778,6 +789,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -854,6 +866,7 @@ impl std::fmt::Debug for ListSuggestedResiliencyPoliciesOutput {
 }
 /// See [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput)
 pub mod list_suggested_resiliency_policies_output {
+
     /// A builder for [`ListSuggestedResiliencyPoliciesOutput`](crate::output::ListSuggestedResiliencyPoliciesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -937,6 +950,7 @@ impl std::fmt::Debug for ListSopRecommendationsOutput {
 }
 /// See [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput)
 pub mod list_sop_recommendations_output {
+
     /// A builder for [`ListSopRecommendationsOutput`](crate::output::ListSopRecommendationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1020,6 +1034,7 @@ impl std::fmt::Debug for ListResiliencyPoliciesOutput {
 }
 /// See [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput)
 pub mod list_resiliency_policies_output {
+
     /// A builder for [`ListResiliencyPoliciesOutput`](crate::output::ListResiliencyPoliciesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1106,6 +1121,7 @@ impl std::fmt::Debug for ListRecommendationTemplatesOutput {
 }
 /// See [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput)
 pub mod list_recommendation_templates_output {
+
     /// A builder for [`ListRecommendationTemplatesOutput`](crate::output::ListRecommendationTemplatesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1192,6 +1208,7 @@ impl std::fmt::Debug for ListAppVersionsOutput {
 }
 /// See [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput)
 pub mod list_app_versions_output {
+
     /// A builder for [`ListAppVersionsOutput`](crate::output::ListAppVersionsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1282,6 +1299,7 @@ impl std::fmt::Debug for ListAppVersionResourcesOutput {
 }
 /// See [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput)
 pub mod list_app_version_resources_output {
+
     /// A builder for [`ListAppVersionResourcesOutput`](crate::output::ListAppVersionResourcesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1380,6 +1398,7 @@ impl std::fmt::Debug for ListAppVersionResourceMappingsOutput {
 }
 /// See [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput)
 pub mod list_app_version_resource_mappings_output {
+
     /// A builder for [`ListAppVersionResourceMappingsOutput`](crate::output::ListAppVersionResourceMappingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1463,6 +1482,7 @@ impl std::fmt::Debug for ListAppsOutput {
 }
 /// See [`ListAppsOutput`](crate::output::ListAppsOutput)
 pub mod list_apps_output {
+
     /// A builder for [`ListAppsOutput`](crate::output::ListAppsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1548,6 +1568,7 @@ impl std::fmt::Debug for ListAppComponentRecommendationsOutput {
 }
 /// See [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput)
 pub mod list_app_component_recommendations_output {
+
     /// A builder for [`ListAppComponentRecommendationsOutput`](crate::output::ListAppComponentRecommendationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1637,6 +1658,7 @@ impl std::fmt::Debug for ListAppComponentCompliancesOutput {
 }
 /// See [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput)
 pub mod list_app_component_compliances_output {
+
     /// A builder for [`ListAppComponentCompliancesOutput`](crate::output::ListAppComponentCompliancesOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1726,6 +1748,7 @@ impl std::fmt::Debug for ListAppAssessmentsOutput {
 }
 /// See [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput)
 pub mod list_app_assessments_output {
+
     /// A builder for [`ListAppAssessmentsOutput`](crate::output::ListAppAssessmentsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1812,6 +1835,7 @@ impl std::fmt::Debug for ListAlarmRecommendationsOutput {
 }
 /// See [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput)
 pub mod list_alarm_recommendations_output {
+
     /// A builder for [`ListAlarmRecommendationsOutput`](crate::output::ListAlarmRecommendationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1870,7 +1894,7 @@ impl ListAlarmRecommendationsOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ImportResourcesToDraftAppVersionOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
@@ -1878,9 +1902,11 @@ pub struct ImportResourcesToDraftAppVersionOutput {
     pub source_arns: std::option::Option<std::vec::Vec<std::string::String>>,
     /// <p>The status of the action.</p>
     pub status: std::option::Option<crate::model::ResourceImportStatusType>,
+    /// <p> A list of terraform file s3 URLs you need to import. </p>
+    pub terraform_sources: std::option::Option<std::vec::Vec<crate::model::TerraformSource>>,
 }
 impl ImportResourcesToDraftAppVersionOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -1896,6 +1922,10 @@ impl ImportResourcesToDraftAppVersionOutput {
     pub fn status(&self) -> std::option::Option<&crate::model::ResourceImportStatusType> {
         self.status.as_ref()
     }
+    /// <p> A list of terraform file s3 URLs you need to import. </p>
+    pub fn terraform_sources(&self) -> std::option::Option<&[crate::model::TerraformSource]> {
+        self.terraform_sources.as_deref()
+    }
 }
 impl std::fmt::Debug for ImportResourcesToDraftAppVersionOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -1904,11 +1934,13 @@ impl std::fmt::Debug for ImportResourcesToDraftAppVersionOutput {
         formatter.field("app_version", &self.app_version);
         formatter.field("source_arns", &self.source_arns);
         formatter.field("status", &self.status);
+        formatter.field("terraform_sources", &self.terraform_sources);
         formatter.finish()
     }
 }
 /// See [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput)
 pub mod import_resources_to_draft_app_version_output {
+
     /// A builder for [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1917,14 +1949,16 @@ pub mod import_resources_to_draft_app_version_output {
         pub(crate) app_version: std::option::Option<std::string::String>,
         pub(crate) source_arns: std::option::Option<std::vec::Vec<std::string::String>>,
         pub(crate) status: std::option::Option<crate::model::ResourceImportStatusType>,
+        pub(crate) terraform_sources:
+            std::option::Option<std::vec::Vec<crate::model::TerraformSource>>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -1971,6 +2005,25 @@ pub mod import_resources_to_draft_app_version_output {
             self.status = input;
             self
         }
+        /// Appends an item to `terraform_sources`.
+        ///
+        /// To override the contents of this collection use [`set_terraform_sources`](Self::set_terraform_sources).
+        ///
+        /// <p> A list of terraform file s3 URLs you need to import. </p>
+        pub fn terraform_sources(mut self, input: crate::model::TerraformSource) -> Self {
+            let mut v = self.terraform_sources.unwrap_or_default();
+            v.push(input);
+            self.terraform_sources = Some(v);
+            self
+        }
+        /// <p> A list of terraform file s3 URLs you need to import. </p>
+        pub fn set_terraform_sources(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::TerraformSource>>,
+        ) -> Self {
+            self.terraform_sources = input;
+            self
+        }
         /// Consumes the builder and constructs a [`ImportResourcesToDraftAppVersionOutput`](crate::output::ImportResourcesToDraftAppVersionOutput)
         pub fn build(self) -> crate::output::ImportResourcesToDraftAppVersionOutput {
             crate::output::ImportResourcesToDraftAppVersionOutput {
@@ -1978,6 +2031,7 @@ pub mod import_resources_to_draft_app_version_output {
                 app_version: self.app_version,
                 source_arns: self.source_arns,
                 status: self.status,
+                terraform_sources: self.terraform_sources,
             }
         }
     }
@@ -2011,6 +2065,7 @@ impl std::fmt::Debug for DescribeResiliencyPolicyOutput {
 }
 /// See [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput)
 pub mod describe_resiliency_policy_output {
+
     /// A builder for [`DescribeResiliencyPolicyOutput`](crate::output::DescribeResiliencyPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2050,7 +2105,7 @@ impl DescribeResiliencyPolicyOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeDraftAppVersionResourcesImportStatusOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
@@ -2062,7 +2117,7 @@ pub struct DescribeDraftAppVersionResourcesImportStatusOutput {
     pub error_message: std::option::Option<std::string::String>,
 }
 impl DescribeDraftAppVersionResourcesImportStatusOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -2096,6 +2151,7 @@ impl std::fmt::Debug for DescribeDraftAppVersionResourcesImportStatusOutput {
 }
 /// See [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput)
 pub mod describe_draft_app_version_resources_import_status_output {
+
     /// A builder for [`DescribeDraftAppVersionResourcesImportStatusOutput`](crate::output::DescribeDraftAppVersionResourcesImportStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2107,12 +2163,12 @@ pub mod describe_draft_app_version_resources_import_status_output {
         pub(crate) error_message: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -2190,7 +2246,7 @@ impl DescribeDraftAppVersionResourcesImportStatusOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppVersionTemplateOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
@@ -2198,7 +2254,7 @@ pub struct DescribeAppVersionTemplateOutput {
     pub app_template_body: std::option::Option<std::string::String>,
 }
 impl DescribeAppVersionTemplateOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -2222,6 +2278,7 @@ impl std::fmt::Debug for DescribeAppVersionTemplateOutput {
 }
 /// See [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput)
 pub mod describe_app_version_template_output {
+
     /// A builder for [`DescribeAppVersionTemplateOutput`](crate::output::DescribeAppVersionTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2231,12 +2288,12 @@ pub mod describe_app_version_template_output {
         pub(crate) app_template_body: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -2285,7 +2342,7 @@ impl DescribeAppVersionTemplateOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeAppVersionResourcesResolutionStatusOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
@@ -2297,7 +2354,7 @@ pub struct DescribeAppVersionResourcesResolutionStatusOutput {
     pub error_message: std::option::Option<std::string::String>,
 }
 impl DescribeAppVersionResourcesResolutionStatusOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -2331,6 +2388,7 @@ impl std::fmt::Debug for DescribeAppVersionResourcesResolutionStatusOutput {
 }
 /// See [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput)
 pub mod describe_app_version_resources_resolution_status_output {
+
     /// A builder for [`DescribeAppVersionResourcesResolutionStatusOutput`](crate::output::DescribeAppVersionResourcesResolutionStatusOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2342,12 +2400,12 @@ pub mod describe_app_version_resources_resolution_status_output {
         pub(crate) error_message: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -2443,6 +2501,7 @@ impl std::fmt::Debug for DescribeAppAssessmentOutput {
 }
 /// See [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput)
 pub mod describe_app_assessment_output {
+
     /// A builder for [`DescribeAppAssessmentOutput`](crate::output::DescribeAppAssessmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2500,6 +2559,7 @@ impl std::fmt::Debug for DescribeAppOutput {
 }
 /// See [`DescribeAppOutput`](crate::output::DescribeAppOutput)
 pub mod describe_app_output {
+
     /// A builder for [`DescribeAppOutput`](crate::output::DescribeAppOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2534,11 +2594,11 @@ impl DescribeAppOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteResiliencyPolicyOutput {
-    /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub policy_arn: std::option::Option<std::string::String>,
 }
 impl DeleteResiliencyPolicyOutput {
-    /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn policy_arn(&self) -> std::option::Option<&str> {
         self.policy_arn.as_deref()
     }
@@ -2552,6 +2612,7 @@ impl std::fmt::Debug for DeleteResiliencyPolicyOutput {
 }
 /// See [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput)
 pub mod delete_resiliency_policy_output {
+
     /// A builder for [`DeleteResiliencyPolicyOutput`](crate::output::DeleteResiliencyPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2559,12 +2620,12 @@ pub mod delete_resiliency_policy_output {
         pub(crate) policy_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn policy_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.policy_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the resiliency policy. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:resiliency-policy/<code>policy-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_policy_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.policy_arn = input;
             self
@@ -2616,6 +2677,7 @@ impl std::fmt::Debug for DeleteRecommendationTemplateOutput {
 }
 /// See [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput)
 pub mod delete_recommendation_template_output {
+
     /// A builder for [`DeleteRecommendationTemplateOutput`](crate::output::DeleteRecommendationTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2673,13 +2735,13 @@ impl DeleteRecommendationTemplateOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteAppAssessmentOutput {
-    /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub assessment_arn: std::option::Option<std::string::String>,
     /// <p>The current status of the assessment for the resiliency policy.</p>
     pub assessment_status: std::option::Option<crate::model::AssessmentStatus>,
 }
 impl DeleteAppAssessmentOutput {
-    /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn assessment_arn(&self) -> std::option::Option<&str> {
         self.assessment_arn.as_deref()
     }
@@ -2698,6 +2760,7 @@ impl std::fmt::Debug for DeleteAppAssessmentOutput {
 }
 /// See [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput)
 pub mod delete_app_assessment_output {
+
     /// A builder for [`DeleteAppAssessmentOutput`](crate::output::DeleteAppAssessmentOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2706,12 +2769,12 @@ pub mod delete_app_assessment_output {
         pub(crate) assessment_status: std::option::Option<crate::model::AssessmentStatus>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn assessment_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.assessment_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app-assessment/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_assessment_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -2752,11 +2815,11 @@ impl DeleteAppAssessmentOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DeleteAppOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
 }
 impl DeleteAppOutput {
-    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -2770,6 +2833,7 @@ impl std::fmt::Debug for DeleteAppOutput {
 }
 /// See [`DeleteAppOutput`](crate::output::DeleteAppOutput)
 pub mod delete_app_output {
+
     /// A builder for [`DeleteAppOutput`](crate::output::DeleteAppOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2777,12 +2841,12 @@ pub mod delete_app_output {
         pub(crate) app_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p>The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self
@@ -2824,6 +2888,7 @@ impl std::fmt::Debug for CreateResiliencyPolicyOutput {
 }
 /// See [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput)
 pub mod create_resiliency_policy_output {
+
     /// A builder for [`CreateResiliencyPolicyOutput`](crate::output::CreateResiliencyPolicyOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2883,6 +2948,7 @@ impl std::fmt::Debug for CreateRecommendationTemplateOutput {
 }
 /// See [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput)
 pub mod create_recommendation_template_output {
+
     /// A builder for [`CreateRecommendationTemplateOutput`](crate::output::CreateRecommendationTemplateOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2944,6 +3010,7 @@ impl std::fmt::Debug for CreateAppOutput {
 }
 /// See [`CreateAppOutput`](crate::output::CreateAppOutput)
 pub mod create_app_output {
+
     /// A builder for [`CreateAppOutput`](crate::output::CreateAppOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2978,7 +3045,7 @@ impl CreateAppOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct AddDraftAppVersionResourceMappingsOutput {
-    /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub app_arn: std::option::Option<std::string::String>,
     /// <p>The version of the application.</p>
     pub app_version: std::option::Option<std::string::String>,
@@ -2986,7 +3053,7 @@ pub struct AddDraftAppVersionResourceMappingsOutput {
     pub resource_mappings: std::option::Option<std::vec::Vec<crate::model::ResourceMapping>>,
 }
 impl AddDraftAppVersionResourceMappingsOutput {
-    /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+    /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
     pub fn app_arn(&self) -> std::option::Option<&str> {
         self.app_arn.as_deref()
     }
@@ -3010,6 +3077,7 @@ impl std::fmt::Debug for AddDraftAppVersionResourceMappingsOutput {
 }
 /// See [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput)
 pub mod add_draft_app_version_resource_mappings_output {
+
     /// A builder for [`AddDraftAppVersionResourceMappingsOutput`](crate::output::AddDraftAppVersionResourceMappingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3020,12 +3088,12 @@ pub mod add_draft_app_version_resource_mappings_output {
             std::option::Option<std::vec::Vec<crate::model::ResourceMapping>>,
     }
     impl Builder {
-        /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn app_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.app_arn = Some(input.into());
             self
         }
-        /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
+        /// <p> The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.</p>
         pub fn set_app_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.app_arn = input;
             self

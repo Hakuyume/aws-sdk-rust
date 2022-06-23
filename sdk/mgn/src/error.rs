@@ -3548,6 +3548,7 @@ impl std::fmt::Display for ValidationException {
 impl std::error::Error for ValidationException {}
 /// See [`ValidationException`](crate::error::ValidationException)
 pub mod validation_exception {
+
     /// A builder for [`ValidationException`](crate::error::ValidationException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3670,6 +3671,7 @@ impl std::fmt::Display for UninitializedAccountException {
 impl std::error::Error for UninitializedAccountException {}
 /// See [`UninitializedAccountException`](crate::error::UninitializedAccountException)
 pub mod uninitialized_account_exception {
+
     /// A builder for [`UninitializedAccountException`](crate::error::UninitializedAccountException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3769,6 +3771,7 @@ impl std::fmt::Display for ResourceNotFoundException {
 impl std::error::Error for ResourceNotFoundException {}
 /// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
 pub mod resource_not_found_exception {
+
     /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3895,6 +3898,7 @@ impl std::fmt::Display for ConflictException {
 impl std::error::Error for ConflictException {}
 /// See [`ConflictException`](crate::error::ConflictException)
 pub mod conflict_exception {
+
     /// A builder for [`ConflictException`](crate::error::ConflictException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4007,6 +4011,7 @@ impl std::fmt::Display for AccessDeniedException {
 impl std::error::Error for AccessDeniedException {}
 /// See [`AccessDeniedException`](crate::error::AccessDeniedException)
 pub mod access_denied_exception {
+
     /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4067,6 +4072,8 @@ pub struct ServiceQuotaExceededException {
     pub service_code: std::option::Option<std::string::String>,
     /// <p>Exceeded the service quota code.</p>
     pub quota_code: std::option::Option<std::string::String>,
+    /// <p>Exceeded the service quota value.</p>
+    pub quota_value: i32,
 }
 impl ServiceQuotaExceededException {
     #[allow(missing_docs)] // documentation missing in model
@@ -4089,6 +4096,10 @@ impl ServiceQuotaExceededException {
     pub fn quota_code(&self) -> std::option::Option<&str> {
         self.quota_code.as_deref()
     }
+    /// <p>Exceeded the service quota value.</p>
+    pub fn quota_value(&self) -> i32 {
+        self.quota_value
+    }
 }
 impl std::fmt::Debug for ServiceQuotaExceededException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -4099,6 +4110,7 @@ impl std::fmt::Debug for ServiceQuotaExceededException {
         formatter.field("resource_type", &self.resource_type);
         formatter.field("service_code", &self.service_code);
         formatter.field("quota_code", &self.quota_code);
+        formatter.field("quota_value", &self.quota_value);
         formatter.finish()
     }
 }
@@ -4120,6 +4132,7 @@ impl std::fmt::Display for ServiceQuotaExceededException {
 impl std::error::Error for ServiceQuotaExceededException {}
 /// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
 pub mod service_quota_exceeded_exception {
+
     /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4130,6 +4143,7 @@ pub mod service_quota_exceeded_exception {
         pub(crate) resource_type: std::option::Option<std::string::String>,
         pub(crate) service_code: std::option::Option<std::string::String>,
         pub(crate) quota_code: std::option::Option<std::string::String>,
+        pub(crate) quota_value: std::option::Option<i32>,
     }
     impl Builder {
         #[allow(missing_docs)] // documentation missing in model
@@ -4195,6 +4209,16 @@ pub mod service_quota_exceeded_exception {
             self.quota_code = input;
             self
         }
+        /// <p>Exceeded the service quota value.</p>
+        pub fn quota_value(mut self, input: i32) -> Self {
+            self.quota_value = Some(input);
+            self
+        }
+        /// <p>Exceeded the service quota value.</p>
+        pub fn set_quota_value(mut self, input: std::option::Option<i32>) -> Self {
+            self.quota_value = input;
+            self
+        }
         /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
         pub fn build(self) -> crate::error::ServiceQuotaExceededException {
             crate::error::ServiceQuotaExceededException {
@@ -4204,6 +4228,7 @@ pub mod service_quota_exceeded_exception {
                 resource_type: self.resource_type,
                 service_code: self.service_code,
                 quota_code: self.quota_code,
+                quota_value: self.quota_value.unwrap_or_default(),
             }
         }
     }
@@ -4270,6 +4295,7 @@ impl std::fmt::Display for ThrottlingException {
 impl std::error::Error for ThrottlingException {}
 /// See [`ThrottlingException`](crate::error::ThrottlingException)
 pub mod throttling_exception {
+
     /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4382,6 +4408,7 @@ impl std::fmt::Display for InternalServerException {
 impl std::error::Error for InternalServerException {}
 /// See [`InternalServerException`](crate::error::InternalServerException)
 pub mod internal_server_exception {
+
     /// A builder for [`InternalServerException`](crate::error::InternalServerException)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

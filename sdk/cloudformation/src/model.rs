@@ -105,6 +105,7 @@ impl std::fmt::Debug for TemplateParameter {
 }
 /// See [`TemplateParameter`](crate::model::TemplateParameter)
 pub mod template_parameter {
+
     /// A builder for [`TemplateParameter`](crate::model::TemplateParameter)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -209,6 +210,7 @@ impl std::fmt::Debug for ManagedExecution {
 }
 /// See [`ManagedExecution`](crate::model::ManagedExecution)
 pub mod managed_execution {
+
     /// A builder for [`ManagedExecution`](crate::model::ManagedExecution)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -336,6 +338,7 @@ impl std::fmt::Debug for AutoDeployment {
 }
 /// See [`AutoDeployment`](crate::model::AutoDeployment)
 pub mod auto_deployment {
+
     /// A builder for [`AutoDeployment`](crate::model::AutoDeployment)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -475,6 +478,7 @@ impl std::fmt::Debug for DeploymentTargets {
 }
 /// See [`DeploymentTargets`](crate::model::DeploymentTargets)
 pub mod deployment_targets {
+
     /// A builder for [`DeploymentTargets`](crate::model::DeploymentTargets)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -550,7 +554,7 @@ impl DeploymentTargets {
 }
 
 /// <p>The user-specified preferences for how CloudFormation performs a stack set operation.</p>
-/// <p>For more information on maximum concurrent accounts and failure tolerance, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options">Stack set operation options</a>.</p>
+/// <p>For more information about maximum concurrent accounts and failure tolerance, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options">Stack set operation options</a>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StackSetOperationPreferences {
@@ -636,6 +640,7 @@ impl std::fmt::Debug for StackSetOperationPreferences {
 }
 /// See [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences)
 pub mod stack_set_operation_preferences {
+
     /// A builder for [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -852,6 +857,7 @@ impl std::fmt::Debug for Tag {
 }
 /// See [`Tag`](crate::model::Tag)
 pub mod tag {
+
     /// A builder for [`Tag`](crate::model::Tag)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -939,6 +945,7 @@ impl std::fmt::Debug for Parameter {
 }
 /// See [`Parameter`](crate::model::Parameter)
 pub mod parameter {
+
     /// A builder for [`Parameter`](crate::model::Parameter)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1069,6 +1076,7 @@ impl std::fmt::Debug for RollbackConfiguration {
 }
 /// See [`RollbackConfiguration`](crate::model::RollbackConfiguration)
 pub mod rollback_configuration {
+
     /// A builder for [`RollbackConfiguration`](crate::model::RollbackConfiguration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1174,6 +1182,7 @@ impl std::fmt::Debug for RollbackTrigger {
 }
 /// See [`RollbackTrigger`](crate::model::RollbackTrigger)
 pub mod rollback_trigger {
+
     /// A builder for [`RollbackTrigger`](crate::model::RollbackTrigger)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1422,6 +1431,7 @@ impl std::fmt::Debug for LoggingConfig {
 }
 /// See [`LoggingConfig`](crate::model::LoggingConfig)
 pub mod logging_config {
+
     /// A builder for [`LoggingConfig`](crate::model::LoggingConfig)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1745,6 +1755,7 @@ impl std::fmt::Debug for TypeVersionSummary {
 }
 /// See [`TypeVersionSummary`](crate::model::TypeVersionSummary)
 pub mod type_version_summary {
+
     /// A builder for [`TypeVersionSummary`](crate::model::TypeVersionSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1966,7 +1977,7 @@ pub struct TypeSummary {
     pub publisher_identity: std::option::Option<crate::model::IdentityProvider>,
     /// <p>The publisher name, as defined in the public profile for that publisher in the service used to verify the publisher identity.</p>
     pub publisher_name: std::option::Option<std::string::String>,
-    /// <p>Whether or not the extension is activated for this account and region.</p>
+    /// <p>Whether the extension is activated for this account and region.</p>
     /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
     pub is_activated: std::option::Option<bool>,
 }
@@ -2031,7 +2042,7 @@ impl TypeSummary {
     pub fn publisher_name(&self) -> std::option::Option<&str> {
         self.publisher_name.as_deref()
     }
-    /// <p>Whether or not the extension is activated for this account and region.</p>
+    /// <p>Whether the extension is activated for this account and region.</p>
     /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
     pub fn is_activated(&self) -> std::option::Option<bool> {
         self.is_activated
@@ -2058,6 +2069,7 @@ impl std::fmt::Debug for TypeSummary {
 }
 /// See [`TypeSummary`](crate::model::TypeSummary)
 pub mod type_summary {
+
     /// A builder for [`TypeSummary`](crate::model::TypeSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2242,13 +2254,13 @@ pub mod type_summary {
             self.publisher_name = input;
             self
         }
-        /// <p>Whether or not the extension is activated for this account and region.</p>
+        /// <p>Whether the extension is activated for this account and region.</p>
         /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
         pub fn is_activated(mut self, input: bool) -> Self {
             self.is_activated = Some(input);
             self
         }
-        /// <p>Whether or not the extension is activated for this account and region.</p>
+        /// <p>Whether the extension is activated for this account and region.</p>
         /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
         pub fn set_is_activated(mut self, input: std::option::Option<bool>) -> Self {
             self.is_activated = input;
@@ -2398,6 +2410,7 @@ impl std::fmt::Debug for TypeFilters {
 }
 /// See [`TypeFilters`](crate::model::TypeFilters)
 pub mod type_filters {
+
     /// A builder for [`TypeFilters`](crate::model::TypeFilters)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2816,6 +2829,7 @@ impl std::fmt::Debug for StackSetSummary {
 }
 /// See [`StackSetSummary`](crate::model::StackSetSummary)
 pub mod stack_set_summary {
+
     /// A builder for [`StackSetSummary`](crate::model::StackSetSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3125,6 +3139,8 @@ pub struct StackSetOperationSummary {
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the stack set operation ended, across all accounts and Regions specified. Note that this doesn't necessarily mean that the stack set operation was successful, or even attempted, in each account or Region.</p>
     pub end_timestamp: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The status of the operation in details.</p>
+    pub status_reason: std::option::Option<std::string::String>,
 }
 impl StackSetOperationSummary {
     /// <p>The unique ID of the stack set operation.</p>
@@ -3155,6 +3171,10 @@ impl StackSetOperationSummary {
     pub fn end_timestamp(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.end_timestamp.as_ref()
     }
+    /// <p>The status of the operation in details.</p>
+    pub fn status_reason(&self) -> std::option::Option<&str> {
+        self.status_reason.as_deref()
+    }
 }
 impl std::fmt::Debug for StackSetOperationSummary {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3164,11 +3184,13 @@ impl std::fmt::Debug for StackSetOperationSummary {
         formatter.field("status", &self.status);
         formatter.field("creation_timestamp", &self.creation_timestamp);
         formatter.field("end_timestamp", &self.end_timestamp);
+        formatter.field("status_reason", &self.status_reason);
         formatter.finish()
     }
 }
 /// See [`StackSetOperationSummary`](crate::model::StackSetOperationSummary)
 pub mod stack_set_operation_summary {
+
     /// A builder for [`StackSetOperationSummary`](crate::model::StackSetOperationSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3178,6 +3200,7 @@ pub mod stack_set_operation_summary {
         pub(crate) status: std::option::Option<crate::model::StackSetOperationStatus>,
         pub(crate) creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) end_timestamp: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) status_reason: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The unique ID of the stack set operation.</p>
@@ -3258,6 +3281,19 @@ pub mod stack_set_operation_summary {
             self.end_timestamp = input;
             self
         }
+        /// <p>The status of the operation in details.</p>
+        pub fn status_reason(mut self, input: impl Into<std::string::String>) -> Self {
+            self.status_reason = Some(input.into());
+            self
+        }
+        /// <p>The status of the operation in details.</p>
+        pub fn set_status_reason(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.status_reason = input;
+            self
+        }
         /// Consumes the builder and constructs a [`StackSetOperationSummary`](crate::model::StackSetOperationSummary)
         pub fn build(self) -> crate::model::StackSetOperationSummary {
             crate::model::StackSetOperationSummary {
@@ -3266,6 +3302,7 @@ pub mod stack_set_operation_summary {
                 status: self.status,
                 creation_timestamp: self.creation_timestamp,
                 end_timestamp: self.end_timestamp,
+                status_reason: self.status_reason,
             }
         }
     }
@@ -3489,6 +3526,7 @@ impl std::fmt::Debug for StackSetOperationResultSummary {
 }
 /// See [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary)
 pub mod stack_set_operation_result_summary {
+
     /// A builder for [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3658,6 +3696,7 @@ impl std::fmt::Debug for AccountGateResult {
 }
 /// See [`AccountGateResult`](crate::model::AccountGateResult)
 pub mod account_gate_result {
+
     /// A builder for [`AccountGateResult`](crate::model::AccountGateResult)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3880,7 +3919,7 @@ pub struct StackSummary {
     /// <p>For nested stacks--stacks created as resources for another stack--the stack ID of the top-level stack to which the nested stack ultimately belongs.</p>
     /// <p>For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.</p>
     pub root_id: std::option::Option<std::string::String>,
-    /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub drift_information: std::option::Option<crate::model::StackDriftInformationSummary>,
 }
 impl StackSummary {
@@ -3926,7 +3965,7 @@ impl StackSummary {
     pub fn root_id(&self) -> std::option::Option<&str> {
         self.root_id.as_deref()
     }
-    /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub fn drift_information(
         &self,
     ) -> std::option::Option<&crate::model::StackDriftInformationSummary> {
@@ -3952,6 +3991,7 @@ impl std::fmt::Debug for StackSummary {
 }
 /// See [`StackSummary`](crate::model::StackSummary)
 pub mod stack_summary {
+
     /// A builder for [`StackSummary`](crate::model::StackSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4092,7 +4132,7 @@ pub mod stack_summary {
             self.root_id = input;
             self
         }
-        /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn drift_information(
             mut self,
             input: crate::model::StackDriftInformationSummary,
@@ -4100,7 +4140,7 @@ pub mod stack_summary {
             self.drift_information = Some(input);
             self
         }
-        /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn set_drift_information(
             mut self,
             input: std::option::Option<crate::model::StackDriftInformationSummary>,
@@ -4174,6 +4214,7 @@ impl std::fmt::Debug for StackDriftInformationSummary {
 }
 /// See [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary)
 pub mod stack_drift_information_summary {
+
     /// A builder for [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4476,6 +4517,7 @@ impl std::fmt::Debug for StackResourceSummary {
 }
 /// See [`StackResourceSummary`](crate::model::StackResourceSummary)
 pub mod stack_resource_summary {
+
     /// A builder for [`StackResourceSummary`](crate::model::StackResourceSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4621,7 +4663,7 @@ impl StackResourceSummary {
 }
 
 /// <p>Contains information about the module from which the resource was created, if the resource was created from a module included in the stack template.</p>
-/// <p>For more information on modules, see <a href="AWSCloudFormation/latest/UserGuide/modules.html">Using modules to encapsulate and reuse resource configurations</a> in the <i>CloudFormation User Guide</i>.</p>
+/// <p>For more information about modules, see <a href="AWSCloudFormation/latest/UserGuide/modules.html">Using modules to encapsulate and reuse resource configurations</a> in the <i>CloudFormation User Guide</i>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModuleInfo {
@@ -4660,6 +4702,7 @@ impl std::fmt::Debug for ModuleInfo {
 }
 /// See [`ModuleInfo`](crate::model::ModuleInfo)
 pub mod module_info {
+
     /// A builder for [`ModuleInfo`](crate::model::ModuleInfo)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4728,7 +4771,7 @@ pub struct StackResourceDriftInformationSummary {
     /// <ul>
     /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
     /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
     /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
     /// </ul>
     pub stack_resource_drift_status: std::option::Option<crate::model::StackResourceDriftStatus>,
@@ -4740,7 +4783,7 @@ impl StackResourceDriftInformationSummary {
     /// <ul>
     /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
     /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
     /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
     /// </ul>
     pub fn stack_resource_drift_status(
@@ -4766,6 +4809,7 @@ impl std::fmt::Debug for StackResourceDriftInformationSummary {
 }
 /// See [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary)
 pub mod stack_resource_drift_information_summary {
+
     /// A builder for [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4779,7 +4823,7 @@ pub mod stack_resource_drift_information_summary {
         /// <ul>
         /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
         /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
         /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
         /// </ul>
         pub fn stack_resource_drift_status(
@@ -4793,7 +4837,7 @@ pub mod stack_resource_drift_information_summary {
         /// <ul>
         /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
         /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
         /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
         /// </ul>
         pub fn set_stack_resource_drift_status(
@@ -5173,6 +5217,7 @@ impl std::fmt::Debug for StackInstanceSummary {
 }
 /// See [`StackInstanceSummary`](crate::model::StackInstanceSummary)
 pub mod stack_instance_summary {
+
     /// A builder for [`StackInstanceSummary`](crate::model::StackInstanceSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5403,6 +5448,7 @@ impl std::fmt::Debug for StackInstanceComprehensiveStatus {
 }
 /// See [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus)
 pub mod stack_instance_comprehensive_status {
+
     /// A builder for [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5618,6 +5664,7 @@ impl std::fmt::Debug for StackInstanceFilter {
 }
 /// See [`StackInstanceFilter`](crate::model::StackInstanceFilter)
 pub mod stack_instance_filter {
+
     /// A builder for [`StackInstanceFilter`](crate::model::StackInstanceFilter)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5752,6 +5799,7 @@ impl std::fmt::Debug for Export {
 }
 /// See [`Export`](crate::model::Export)
 pub mod export {
+
     /// A builder for [`Export`](crate::model::Export)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -5910,6 +5958,7 @@ impl std::fmt::Debug for ChangeSetSummary {
 }
 /// See [`ChangeSetSummary`](crate::model::ChangeSetSummary)
 pub mod change_set_summary {
+
     /// A builder for [`ChangeSetSummary`](crate::model::ChangeSetSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6300,6 +6349,7 @@ impl std::fmt::Debug for ResourceIdentifierSummary {
 }
 /// See [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary)
 pub mod resource_identifier_summary {
+
     /// A builder for [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6436,6 +6486,7 @@ impl std::fmt::Debug for ParameterDeclaration {
 }
 /// See [`ParameterDeclaration`](crate::model::ParameterDeclaration)
 pub mod parameter_declaration {
+
     /// A builder for [`ParameterDeclaration`](crate::model::ParameterDeclaration)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6562,6 +6613,7 @@ impl std::fmt::Debug for ParameterConstraints {
 }
 /// See [`ParameterConstraints`](crate::model::ParameterConstraints)
 pub mod parameter_constraints {
+
     /// A builder for [`ParameterConstraints`](crate::model::ParameterConstraints)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -6779,6 +6831,7 @@ impl std::fmt::Debug for StackResourceDrift {
 }
 /// See [`StackResourceDrift`](crate::model::StackResourceDrift)
 pub mod stack_resource_drift {
+
     /// A builder for [`StackResourceDrift`](crate::model::StackResourceDrift)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7053,6 +7106,7 @@ impl std::fmt::Debug for PropertyDifference {
 }
 /// See [`PropertyDifference`](crate::model::PropertyDifference)
 pub mod property_difference {
+
     /// A builder for [`PropertyDifference`](crate::model::PropertyDifference)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7228,6 +7282,7 @@ impl std::fmt::Debug for PhysicalResourceIdContextKeyValuePair {
 }
 /// See [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair)
 pub mod physical_resource_id_context_key_value_pair {
+
     /// A builder for [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7318,6 +7373,7 @@ impl std::fmt::Debug for RequiredActivatedType {
 }
 /// See [`RequiredActivatedType`](crate::model::RequiredActivatedType)
 pub mod required_activated_type {
+
     /// A builder for [`RequiredActivatedType`](crate::model::RequiredActivatedType)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7490,7 +7546,7 @@ pub struct StackSetOperation {
     pub operation_preferences: std::option::Option<crate::model::StackSetOperationPreferences>,
     /// <p>For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack instances from the specified stack set, but doesn't delete the stacks. You can't re-associate a retained stack, or add an existing, saved stack to a new stack set.</p>
     pub retain_stacks: std::option::Option<bool>,
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
     pub administration_role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the IAM execution role used to create or update the stack set.</p>
@@ -7507,6 +7563,8 @@ pub struct StackSetOperation {
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged Changes in Stack Sets</a> in the CloudFormation User Guide.</p>
     pub stack_set_drift_detection_details:
         std::option::Option<crate::model::StackSetDriftDetectionDetails>,
+    /// <p>The status of the operation in details.</p>
+    pub status_reason: std::option::Option<std::string::String>,
 }
 impl StackSetOperation {
     /// <p>The unique ID of a stack set operation.</p>
@@ -7543,7 +7601,7 @@ impl StackSetOperation {
     pub fn retain_stacks(&self) -> std::option::Option<bool> {
         self.retain_stacks
     }
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
     pub fn administration_role_arn(&self) -> std::option::Option<&str> {
         self.administration_role_arn.as_deref()
@@ -7573,6 +7631,10 @@ impl StackSetOperation {
     ) -> std::option::Option<&crate::model::StackSetDriftDetectionDetails> {
         self.stack_set_drift_detection_details.as_ref()
     }
+    /// <p>The status of the operation in details.</p>
+    pub fn status_reason(&self) -> std::option::Option<&str> {
+        self.status_reason.as_deref()
+    }
 }
 impl std::fmt::Debug for StackSetOperation {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -7592,11 +7654,13 @@ impl std::fmt::Debug for StackSetOperation {
             "stack_set_drift_detection_details",
             &self.stack_set_drift_detection_details,
         );
+        formatter.field("status_reason", &self.status_reason);
         formatter.finish()
     }
 }
 /// See [`StackSetOperation`](crate::model::StackSetOperation)
 pub mod stack_set_operation {
+
     /// A builder for [`StackSetOperation`](crate::model::StackSetOperation)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -7615,6 +7679,7 @@ pub mod stack_set_operation {
         pub(crate) deployment_targets: std::option::Option<crate::model::DeploymentTargets>,
         pub(crate) stack_set_drift_detection_details:
             std::option::Option<crate::model::StackSetDriftDetectionDetails>,
+        pub(crate) status_reason: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The unique ID of a stack set operation.</p>
@@ -7705,13 +7770,13 @@ pub mod stack_set_operation {
             self.retain_stacks = input;
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn administration_role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.administration_role_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn set_administration_role_arn(
             mut self,
@@ -7794,6 +7859,19 @@ pub mod stack_set_operation {
             self.stack_set_drift_detection_details = input;
             self
         }
+        /// <p>The status of the operation in details.</p>
+        pub fn status_reason(mut self, input: impl Into<std::string::String>) -> Self {
+            self.status_reason = Some(input.into());
+            self
+        }
+        /// <p>The status of the operation in details.</p>
+        pub fn set_status_reason(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.status_reason = input;
+            self
+        }
         /// Consumes the builder and constructs a [`StackSetOperation`](crate::model::StackSetOperation)
         pub fn build(self) -> crate::model::StackSetOperation {
             crate::model::StackSetOperation {
@@ -7809,6 +7887,7 @@ pub mod stack_set_operation {
                 end_timestamp: self.end_timestamp,
                 deployment_targets: self.deployment_targets,
                 stack_set_drift_detection_details: self.stack_set_drift_detection_details,
+                status_reason: self.status_reason,
             }
         }
     }
@@ -7952,6 +8031,7 @@ impl std::fmt::Debug for StackSetDriftDetectionDetails {
 }
 /// See [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails)
 pub mod stack_set_drift_detection_details {
+
     /// A builder for [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8286,9 +8366,9 @@ pub struct StackSet {
     pub capabilities: std::option::Option<std::vec::Vec<crate::model::Capability>>,
     /// <p>A list of tags that specify information about the stack set. A maximum number of 50 tags can be specified.</p>
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
-    /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
     pub stack_set_arn: std::option::Option<std::string::String>,
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
     pub administration_role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the IAM execution role used to create or update the stack set.</p>
@@ -8344,11 +8424,11 @@ impl StackSet {
     pub fn tags(&self) -> std::option::Option<&[crate::model::Tag]> {
         self.tags.as_deref()
     }
-    /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
     pub fn stack_set_arn(&self) -> std::option::Option<&str> {
         self.stack_set_arn.as_deref()
     }
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
     pub fn administration_role_arn(&self) -> std::option::Option<&str> {
         self.administration_role_arn.as_deref()
@@ -8413,6 +8493,7 @@ impl std::fmt::Debug for StackSet {
 }
 /// See [`StackSet`](crate::model::StackSet)
 pub mod stack_set {
+
     /// A builder for [`StackSet`](crate::model::StackSet)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -8552,12 +8633,12 @@ pub mod stack_set {
             self.tags = input;
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
         pub fn stack_set_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.stack_set_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
         pub fn set_stack_set_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -8565,13 +8646,13 @@ pub mod stack_set {
             self.stack_set_arn = input;
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn administration_role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.administration_role_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn set_administration_role_arn(
             mut self,
@@ -8754,7 +8835,7 @@ pub struct Stack {
     /// <p>A list of <code>Tag</code>s that specify information about the stack.</p>
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Whether termination protection is enabled for the stack.</p>
-    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
     pub enable_termination_protection: std::option::Option<bool>,
     /// <p>For nested stacks--stacks created as resources for another stack--the stack ID of the direct parent of this stack. For the first level of nested stacks, the root stack is also the parent stack.</p>
     /// <p>For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.</p>
@@ -8762,7 +8843,7 @@ pub struct Stack {
     /// <p>For nested stacks--stacks created as resources for another stack--the stack ID of the top-level stack to which the nested stack ultimately belongs.</p>
     /// <p>For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.</p>
     pub root_id: std::option::Option<std::string::String>,
-    /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub drift_information: std::option::Option<crate::model::StackDriftInformation>,
 }
 impl Stack {
@@ -8845,7 +8926,7 @@ impl Stack {
         self.tags.as_deref()
     }
     /// <p>Whether termination protection is enabled for the stack.</p>
-    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
     pub fn enable_termination_protection(&self) -> std::option::Option<bool> {
         self.enable_termination_protection
     }
@@ -8859,7 +8940,7 @@ impl Stack {
     pub fn root_id(&self) -> std::option::Option<&str> {
         self.root_id.as_deref()
     }
-    /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub fn drift_information(&self) -> std::option::Option<&crate::model::StackDriftInformation> {
         self.drift_information.as_ref()
     }
@@ -8897,6 +8978,7 @@ impl std::fmt::Debug for Stack {
 }
 /// See [`Stack`](crate::model::Stack)
 pub mod stack {
+
     /// A builder for [`Stack`](crate::model::Stack)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9183,13 +9265,13 @@ pub mod stack {
             self
         }
         /// <p>Whether termination protection is enabled for the stack.</p>
-        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn enable_termination_protection(mut self, input: bool) -> Self {
             self.enable_termination_protection = Some(input);
             self
         }
         /// <p>Whether termination protection is enabled for the stack.</p>
-        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn set_enable_termination_protection(
             mut self,
             input: std::option::Option<bool>,
@@ -9221,12 +9303,12 @@ pub mod stack {
             self.root_id = input;
             self
         }
-        /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn drift_information(mut self, input: crate::model::StackDriftInformation) -> Self {
             self.drift_information = Some(input);
             self
         }
-        /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn set_drift_information(
             mut self,
             input: std::option::Option<crate::model::StackDriftInformation>,
@@ -9311,6 +9393,7 @@ impl std::fmt::Debug for StackDriftInformation {
 }
 /// See [`StackDriftInformation`](crate::model::StackDriftInformation)
 pub mod stack_drift_information {
+
     /// A builder for [`StackDriftInformation`](crate::model::StackDriftInformation)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9416,6 +9499,7 @@ impl std::fmt::Debug for Output {
 }
 /// See [`Output`](crate::model::Output)
 pub mod output {
+
     /// A builder for [`Output`](crate::model::Output)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9578,6 +9662,7 @@ impl std::fmt::Debug for StackResource {
 }
 /// See [`StackResource`](crate::model::StackResource)
 pub mod stack_resource {
+
     /// A builder for [`StackResource`](crate::model::StackResource)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9804,6 +9889,7 @@ impl std::fmt::Debug for StackResourceDriftInformation {
 }
 /// See [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation)
 pub mod stack_resource_drift_information {
+
     /// A builder for [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -9971,6 +10057,7 @@ impl std::fmt::Debug for StackResourceDetail {
 }
 /// See [`StackResourceDetail`](crate::model::StackResourceDetail)
 pub mod stack_resource_detail {
+
     /// A builder for [`StackResourceDetail`](crate::model::StackResourceDetail)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10290,6 +10377,7 @@ impl std::fmt::Debug for StackInstance {
 }
 /// See [`StackInstance`](crate::model::StackInstance)
 pub mod stack_instance {
+
     /// A builder for [`StackInstance`](crate::model::StackInstance)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -10642,6 +10730,7 @@ impl std::fmt::Debug for StackEvent {
 }
 /// See [`StackEvent`](crate::model::StackEvent)
 pub mod stack_event {
+
     /// A builder for [`StackEvent`](crate::model::StackEvent)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11343,6 +11432,7 @@ impl std::fmt::Debug for ChangeSetHook {
 }
 /// See [`ChangeSetHook`](crate::model::ChangeSetHook)
 pub mod change_set_hook {
+
     /// A builder for [`ChangeSetHook`](crate::model::ChangeSetHook)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11515,6 +11605,7 @@ impl std::fmt::Debug for ChangeSetHookTargetDetails {
 }
 /// See [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails)
 pub mod change_set_hook_target_details {
+
     /// A builder for [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11605,6 +11696,7 @@ impl std::fmt::Debug for ChangeSetHookResourceTargetDetails {
 }
 /// See [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails)
 pub mod change_set_hook_resource_target_details {
+
     /// A builder for [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11824,6 +11916,7 @@ impl std::fmt::Debug for Change {
 }
 /// See [`Change`](crate::model::Change)
 pub mod change {
+
     /// A builder for [`Change`](crate::model::Change)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -11963,6 +12056,7 @@ impl std::fmt::Debug for ResourceChange {
 }
 /// See [`ResourceChange`](crate::model::ResourceChange)
 pub mod resource_change {
+
     /// A builder for [`ResourceChange`](crate::model::ResourceChange)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12195,6 +12289,7 @@ impl std::fmt::Debug for ResourceChangeDetail {
 }
 /// See [`ResourceChangeDetail`](crate::model::ResourceChangeDetail)
 pub mod resource_change_detail {
+
     /// A builder for [`ResourceChangeDetail`](crate::model::ResourceChangeDetail)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12459,6 +12554,7 @@ impl std::fmt::Debug for ResourceTargetDefinition {
 }
 /// See [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition)
 pub mod resource_target_definition {
+
     /// A builder for [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12806,6 +12902,7 @@ impl std::fmt::Debug for AccountLimit {
 }
 /// See [`AccountLimit`](crate::model::AccountLimit)
 pub mod account_limit {
+
     /// A builder for [`AccountLimit`](crate::model::AccountLimit)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -12951,6 +13048,7 @@ impl std::fmt::Debug for ResourceToImport {
 }
 /// See [`ResourceToImport`](crate::model::ResourceToImport)
 pub mod resource_to_import {
+
     /// A builder for [`ResourceToImport`](crate::model::ResourceToImport)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13109,7 +13207,7 @@ pub struct TypeConfigurationDetails {
     pub type_arn: std::option::Option<std::string::String>,
     /// <p>The name of the extension.</p>
     pub type_name: std::option::Option<std::string::String>,
-    /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+    /// <p>Whether this configuration data is the default configuration for the extension.</p>
     pub is_default_configuration: std::option::Option<bool>,
 }
 impl TypeConfigurationDetails {
@@ -13140,7 +13238,7 @@ impl TypeConfigurationDetails {
     pub fn type_name(&self) -> std::option::Option<&str> {
         self.type_name.as_deref()
     }
-    /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+    /// <p>Whether this configuration data is the default configuration for the extension.</p>
     pub fn is_default_configuration(&self) -> std::option::Option<bool> {
         self.is_default_configuration
     }
@@ -13160,6 +13258,7 @@ impl std::fmt::Debug for TypeConfigurationDetails {
 }
 /// See [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails)
 pub mod type_configuration_details {
+
     /// A builder for [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13245,12 +13344,12 @@ pub mod type_configuration_details {
             self.type_name = input;
             self
         }
-        /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+        /// <p>Whether this configuration data is the default configuration for the extension.</p>
         pub fn is_default_configuration(mut self, input: bool) -> Self {
             self.is_default_configuration = Some(input);
             self
         }
-        /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+        /// <p>Whether this configuration data is the default configuration for the extension.</p>
         pub fn set_is_default_configuration(mut self, input: std::option::Option<bool>) -> Self {
             self.is_default_configuration = input;
             self
@@ -13328,6 +13427,7 @@ impl std::fmt::Debug for TypeConfigurationIdentifier {
 }
 /// See [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier)
 pub mod type_configuration_identifier {
+
     /// A builder for [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -13461,6 +13561,7 @@ impl std::fmt::Debug for BatchDescribeTypeConfigurationsError {
 }
 /// See [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError)
 pub mod batch_describe_type_configurations_error {
+
     /// A builder for [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

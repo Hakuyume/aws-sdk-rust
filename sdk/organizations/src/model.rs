@@ -228,6 +228,8 @@ pub enum ConstraintViolationExceptionReason {
     #[allow(missing_docs)] // documentation missing in model
     HandshakeRateLimitExceeded,
     #[allow(missing_docs)] // documentation missing in model
+    InvalidPaymentInstrument,
+    #[allow(missing_docs)] // documentation missing in model
     MasterAccountAddressDoesNotMatchMarketplace,
     #[allow(missing_docs)] // documentation missing in model
     MasterAccountMissingBusinessLicense,
@@ -283,6 +285,7 @@ impl std::convert::From<&str> for ConstraintViolationExceptionReason {
             "DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE" => ConstraintViolationExceptionReason::DelegatedAdministratorExistsForThisService,
             "EMAIL_VERIFICATION_CODE_EXPIRED" => ConstraintViolationExceptionReason::EmailVerificationCodeExpired,
             "HANDSHAKE_RATE_LIMIT_EXCEEDED" => ConstraintViolationExceptionReason::HandshakeRateLimitExceeded,
+            "INVALID_PAYMENT_INSTRUMENT" => ConstraintViolationExceptionReason::InvalidPaymentInstrument,
             "MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE" => ConstraintViolationExceptionReason::MasterAccountAddressDoesNotMatchMarketplace,
             "MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE" => ConstraintViolationExceptionReason::MasterAccountMissingBusinessLicense,
             "MASTER_ACCOUNT_MISSING_CONTACT_INFO" => ConstraintViolationExceptionReason::MasterAccountMissingContactInfo,
@@ -330,6 +333,7 @@ impl ConstraintViolationExceptionReason {
             ConstraintViolationExceptionReason::DelegatedAdministratorExistsForThisService => "DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE",
             ConstraintViolationExceptionReason::EmailVerificationCodeExpired => "EMAIL_VERIFICATION_CODE_EXPIRED",
             ConstraintViolationExceptionReason::HandshakeRateLimitExceeded => "HANDSHAKE_RATE_LIMIT_EXCEEDED",
+            ConstraintViolationExceptionReason::InvalidPaymentInstrument => "INVALID_PAYMENT_INSTRUMENT",
             ConstraintViolationExceptionReason::MasterAccountAddressDoesNotMatchMarketplace => "MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE",
             ConstraintViolationExceptionReason::MasterAccountMissingBusinessLicense => "MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE",
             ConstraintViolationExceptionReason::MasterAccountMissingContactInfo => "MASTER_ACCOUNT_MISSING_CONTACT_INFO",
@@ -368,6 +372,7 @@ impl ConstraintViolationExceptionReason {
             "DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE",
             "EMAIL_VERIFICATION_CODE_EXPIRED",
             "HANDSHAKE_RATE_LIMIT_EXCEEDED",
+            "INVALID_PAYMENT_INSTRUMENT",
             "MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE",
             "MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE",
             "MASTER_ACCOUNT_MISSING_CONTACT_INFO",
@@ -424,6 +429,7 @@ impl std::fmt::Debug for Policy {
 }
 /// See [`Policy`](crate::model::Policy)
 pub mod policy {
+
     /// A builder for [`Policy`](crate::model::Policy)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -534,6 +540,7 @@ impl std::fmt::Debug for PolicySummary {
 }
 /// See [`PolicySummary`](crate::model::PolicySummary)
 pub mod policy_summary {
+
     /// A builder for [`PolicySummary`](crate::model::PolicySummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -742,6 +749,7 @@ impl std::fmt::Debug for OrganizationalUnit {
 }
 /// See [`OrganizationalUnit`](crate::model::OrganizationalUnit)
 pub mod organizational_unit {
+
     /// A builder for [`OrganizationalUnit`](crate::model::OrganizationalUnit)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -840,6 +848,7 @@ impl std::fmt::Debug for Tag {
 }
 /// See [`Tag`](crate::model::Tag)
 pub mod tag {
+
     /// A builder for [`Tag`](crate::model::Tag)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -943,6 +952,7 @@ impl std::fmt::Debug for PolicyTargetSummary {
 }
 /// See [`PolicyTargetSummary`](crate::model::PolicyTargetSummary)
 pub mod policy_target_summary {
+
     /// A builder for [`PolicyTargetSummary`](crate::model::PolicyTargetSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1139,6 +1149,7 @@ impl std::fmt::Debug for Root {
 }
 /// See [`Root`](crate::model::Root)
 pub mod root {
+
     /// A builder for [`Root`](crate::model::Root)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1256,6 +1267,7 @@ impl std::fmt::Debug for PolicyTypeSummary {
 }
 /// See [`PolicyTypeSummary`](crate::model::PolicyTypeSummary)
 pub mod policy_type_summary {
+
     /// A builder for [`PolicyTypeSummary`](crate::model::PolicyTypeSummary)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1401,6 +1413,7 @@ impl std::fmt::Debug for Parent {
 }
 /// See [`Parent`](crate::model::Parent)
 pub mod parent {
+
     /// A builder for [`Parent`](crate::model::Parent)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1612,6 +1625,7 @@ impl std::fmt::Debug for Handshake {
 }
 /// See [`Handshake`](crate::model::Handshake)
 pub mod handshake {
+
     /// A builder for [`Handshake`](crate::model::Handshake)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1837,6 +1851,7 @@ impl std::fmt::Debug for HandshakeResource {
 }
 /// See [`HandshakeResource`](crate::model::HandshakeResource)
 pub mod handshake_resource {
+
     /// A builder for [`HandshakeResource`](crate::model::HandshakeResource)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2190,6 +2205,7 @@ impl std::fmt::Debug for HandshakeParty {
 }
 /// See [`HandshakeParty`](crate::model::HandshakeParty)
 pub mod handshake_party {
+
     /// A builder for [`HandshakeParty`](crate::model::HandshakeParty)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2333,6 +2349,7 @@ impl std::fmt::Debug for HandshakeFilter {
 }
 /// See [`HandshakeFilter`](crate::model::HandshakeFilter)
 pub mod handshake_filter {
+
     /// A builder for [`HandshakeFilter`](crate::model::HandshakeFilter)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2418,6 +2435,7 @@ impl std::fmt::Debug for DelegatedService {
 }
 /// See [`DelegatedService`](crate::model::DelegatedService)
 pub mod delegated_service {
+
     /// A builder for [`DelegatedService`](crate::model::DelegatedService)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2539,6 +2557,7 @@ impl std::fmt::Debug for DelegatedAdministrator {
 }
 /// See [`DelegatedAdministrator`](crate::model::DelegatedAdministrator)
 pub mod delegated_administrator {
+
     /// A builder for [`DelegatedAdministrator`](crate::model::DelegatedAdministrator)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2811,6 +2830,7 @@ pub struct CreateAccountStatus {
     /// <li> <p>IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete business license validation because it doesn't have valid identity data.</p> </li>
     /// <li> <p>INVALID_ADDRESS: The account could not be created because the address you provided is not valid.</p> </li>
     /// <li> <p>INVALID_EMAIL: The account could not be created because the email address you provided is not valid.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: The Amazon Web Services account that owns your organization does not have a supported payment method associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the problem persists, contact Amazon Web Services Customer Support.</p> </li>
     /// <li> <p>MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received Business Validation.</p> </li>
     /// <li> <p> MISSING_PAYMENT_INSTRUMENT: You must configure the management account with a valid payment method, such as a credit card.</p> </li>
@@ -2860,6 +2880,7 @@ impl CreateAccountStatus {
     /// <li> <p>IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete business license validation because it doesn't have valid identity data.</p> </li>
     /// <li> <p>INVALID_ADDRESS: The account could not be created because the address you provided is not valid.</p> </li>
     /// <li> <p>INVALID_EMAIL: The account could not be created because the email address you provided is not valid.</p> </li>
+    /// <li> <p>INVALID_PAYMENT_INSTRUMENT: The Amazon Web Services account that owns your organization does not have a supported payment method associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
     /// <li> <p>INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the problem persists, contact Amazon Web Services Customer Support.</p> </li>
     /// <li> <p>MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received Business Validation.</p> </li>
     /// <li> <p> MISSING_PAYMENT_INSTRUMENT: You must configure the management account with a valid payment method, such as a credit card.</p> </li>
@@ -2886,6 +2907,7 @@ impl std::fmt::Debug for CreateAccountStatus {
 }
 /// See [`CreateAccountStatus`](crate::model::CreateAccountStatus)
 pub mod create_account_status {
+
     /// A builder for [`CreateAccountStatus`](crate::model::CreateAccountStatus)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2996,6 +3018,7 @@ pub mod create_account_status {
         /// <li> <p>IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete business license validation because it doesn't have valid identity data.</p> </li>
         /// <li> <p>INVALID_ADDRESS: The account could not be created because the address you provided is not valid.</p> </li>
         /// <li> <p>INVALID_EMAIL: The account could not be created because the email address you provided is not valid.</p> </li>
+        /// <li> <p>INVALID_PAYMENT_INSTRUMENT: The Amazon Web Services account that owns your organization does not have a supported payment method associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
         /// <li> <p>INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the problem persists, contact Amazon Web Services Customer Support.</p> </li>
         /// <li> <p>MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received Business Validation.</p> </li>
         /// <li> <p> MISSING_PAYMENT_INSTRUMENT: You must configure the management account with a valid payment method, such as a credit card.</p> </li>
@@ -3016,6 +3039,7 @@ pub mod create_account_status {
         /// <li> <p>IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete business license validation because it doesn't have valid identity data.</p> </li>
         /// <li> <p>INVALID_ADDRESS: The account could not be created because the address you provided is not valid.</p> </li>
         /// <li> <p>INVALID_EMAIL: The account could not be created because the email address you provided is not valid.</p> </li>
+        /// <li> <p>INVALID_PAYMENT_INSTRUMENT: The Amazon Web Services account that owns your organization does not have a supported payment method associated with the account. Amazon Web Services does not support cards issued by financial institutions in Russia or Belarus. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-general.html">Managing your Amazon Web Services payments</a>.</p> </li>
         /// <li> <p>INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the problem persists, contact Amazon Web Services Customer Support.</p> </li>
         /// <li> <p>MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received Business Validation.</p> </li>
         /// <li> <p> MISSING_PAYMENT_INSTRUMENT: You must configure the management account with a valid payment method, such as a credit card.</p> </li>
@@ -3082,6 +3106,8 @@ pub enum CreateAccountFailureReason {
     #[allow(missing_docs)] // documentation missing in model
     InvalidIdentityForBusinessValidation,
     #[allow(missing_docs)] // documentation missing in model
+    InvalidPaymentInstrument,
+    #[allow(missing_docs)] // documentation missing in model
     MissingBusinessValidation,
     #[allow(missing_docs)] // documentation missing in model
     MissingPaymentInstrument,
@@ -3110,6 +3136,7 @@ impl std::convert::From<&str> for CreateAccountFailureReason {
             "INVALID_IDENTITY_FOR_BUSINESS_VALIDATION" => {
                 CreateAccountFailureReason::InvalidIdentityForBusinessValidation
             }
+            "INVALID_PAYMENT_INSTRUMENT" => CreateAccountFailureReason::InvalidPaymentInstrument,
             "MISSING_BUSINESS_VALIDATION" => CreateAccountFailureReason::MissingBusinessValidation,
             "MISSING_PAYMENT_INSTRUMENT" => CreateAccountFailureReason::MissingPaymentInstrument,
             "PENDING_BUSINESS_VALIDATION" => CreateAccountFailureReason::PendingBusinessValidatioNv,
@@ -3144,6 +3171,7 @@ impl CreateAccountFailureReason {
             CreateAccountFailureReason::InvalidIdentityForBusinessValidation => {
                 "INVALID_IDENTITY_FOR_BUSINESS_VALIDATION"
             }
+            CreateAccountFailureReason::InvalidPaymentInstrument => "INVALID_PAYMENT_INSTRUMENT",
             CreateAccountFailureReason::MissingBusinessValidation => "MISSING_BUSINESS_VALIDATION",
             CreateAccountFailureReason::MissingPaymentInstrument => "MISSING_PAYMENT_INSTRUMENT",
             CreateAccountFailureReason::PendingBusinessValidatioNv => "PENDING_BUSINESS_VALIDATION",
@@ -3163,6 +3191,7 @@ impl CreateAccountFailureReason {
             "INVALID_ADDRESS",
             "INVALID_EMAIL",
             "INVALID_IDENTITY_FOR_BUSINESS_VALIDATION",
+            "INVALID_PAYMENT_INSTRUMENT",
             "MISSING_BUSINESS_VALIDATION",
             "MISSING_PAYMENT_INSTRUMENT",
             "PENDING_BUSINESS_VALIDATION",
@@ -3274,6 +3303,7 @@ impl std::fmt::Debug for Child {
 }
 /// See [`Child`](crate::model::Child)
 pub mod child {
+
     /// A builder for [`Child`](crate::model::Child)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3412,6 +3442,7 @@ impl std::fmt::Debug for EnabledServicePrincipal {
 }
 /// See [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal)
 pub mod enabled_service_principal {
+
     /// A builder for [`EnabledServicePrincipal`](crate::model::EnabledServicePrincipal)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3534,6 +3565,7 @@ impl std::fmt::Debug for Account {
 }
 /// See [`Account`](crate::model::Account)
 pub mod account {
+
     /// A builder for [`Account`](crate::model::Account)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3833,6 +3865,7 @@ impl std::fmt::Debug for Organization {
 }
 /// See [`Organization`](crate::model::Organization)
 pub mod organization {
+
     /// A builder for [`Organization`](crate::model::Organization)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -4071,6 +4104,7 @@ impl std::fmt::Debug for EffectivePolicy {
 }
 /// See [`EffectivePolicy`](crate::model::EffectivePolicy)
 pub mod effective_policy {
+
     /// A builder for [`EffectivePolicy`](crate::model::EffectivePolicy)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

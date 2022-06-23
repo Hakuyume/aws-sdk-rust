@@ -5,13 +5,12 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>All Amazon Connect Wisdom functionality is accessible using the API. For example, you can create an
-//! assistant and a knowledge base.</p>
-//!
-//! <p>Some more advanced features are only accessible using the Wisdom API. For example, you
-//! can manually manage content by uploading custom files and control their lifecycle. </p>
+//! <p>Amazon Connect Wisdom delivers agents the information they need to solve customer issues as they're actively
+//! speaking with customers. Agents can search across connected repositories from within their agent desktop
+//! to find answers quickly. Use the Amazon Connect Wisdom APIs to create an assistant and a knowledge base, for example, or manage content by uploading custom files.</p>
 //!
 //! # Crate Organization
 //!
@@ -46,7 +45,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

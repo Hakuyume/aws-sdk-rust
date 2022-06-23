@@ -891,13 +891,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `AssociateAssessmentReportEvidenceFolder`.
     ///
     /// <p> Associates an evidence folder to an assessment report in a Audit Manager assessment. </p>
@@ -2050,7 +2049,14 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `DeleteAssessmentReport`.
     ///
-    /// <p> Deletes an assessment report from an assessment in Audit Manager. </p>
+    /// <p>Deletes an assessment report in Audit Manager. </p>
+    /// <p>When you run the <code>DeleteAssessmentReport</code> operation, Audit Manager attempts to delete the following data:</p>
+    /// <ol>
+    /// <li> <p>The specified assessment report that’s stored in your S3 bucket</p> </li>
+    /// <li> <p>The associated metadata that’s stored in Audit Manager</p> </li>
+    /// </ol>
+    /// <p>If Audit Manager can’t access the assessment report in your S3 bucket, the report isn’t deleted. In this event, the <code>DeleteAssessmentReport</code> operation doesn’t fail. Instead, it proceeds to delete the associated metadata only. You must then delete the assessment report from the S3 bucket yourself. </p>
+    /// <p>This scenario happens when Audit Manager receives a <code>403 (Forbidden)</code> or <code>404 (Not Found)</code> error from Amazon S3. To avoid this, make sure that your S3 bucket is available, and that you configured the correct permissions for Audit Manager to delete resources in your S3 bucket. For an example permissions policy that you can use, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/security_iam_id-based-policy-examples.html#full-administrator-access-assessment-report-destination">Assessment report destination permissions</a> in the <i>Audit Manager User Guide</i>. For information about the issues that could cause a <code>403 (Forbidden)</code> or <code>404 (Not Found</code>) error from Amazon S3, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#ErrorCodeList">List of Error Codes</a> in the <i>Amazon Simple Storage Service API Reference</i>. </p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct DeleteAssessmentReport {
         handle: std::sync::Arc<super::Handle>,
@@ -3434,7 +3440,7 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `GetServicesInScope`.
     ///
-    /// <p> Returns a list of the in-scope Amazon Web Services services for the specified assessment. </p>
+    /// <p> Returns a list of the in-scope Amazon Web Services for the specified assessment. </p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct GetServicesInScope {
         handle: std::sync::Arc<super::Handle>,
@@ -4618,7 +4624,17 @@ pub mod fluent_builders {
     /// Fluent builder constructing a request to `StartAssessmentFrameworkShare`.
     ///
     /// <p> Creates a share request for a custom framework in Audit Manager. </p>
-    /// <p>The share request specifies a recipient and notifies them that a custom framework is available. Recipients have 120 days to accept or decline the request. If no action is taken, the share request expires.</p> <important>
+    /// <p>The share request specifies a recipient and notifies them that a custom framework is available. Recipients have 120 days to accept or decline the request. If no action is taken, the share request expires.</p>
+    /// <p>When you create a share request, Audit Manager stores a snapshot of your custom framework in the US East (N. Virginia) Amazon Web Services Region. Audit Manager also stores a backup of the same snapshot in the US West (Oregon) Amazon Web Services Region.</p>
+    /// <p>Audit Manager deletes the snapshot and the backup snapshot when one of the following events occurs:</p>
+    /// <ul>
+    /// <li> <p>The sender revokes the share request.</p> </li>
+    /// <li> <p>The recipient declines the share request.</p> </li>
+    /// <li> <p>The recipient encounters an error and doesn't successfully accept the share request.</p> </li>
+    /// <li> <p>The share request expires before the recipient responds to the request.</p> </li>
+    /// </ul>
+    /// <p>When a sender <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/framework-sharing.html#framework-sharing-resend">resends a share request</a>, the snapshot is replaced with an updated version that corresponds with the latest version of the custom framework. </p>
+    /// <p>When a recipient accepts a share request, the snapshot is replicated into their Amazon Web Services account under the Amazon Web Services Region that was specified in the share request. </p> <important>
     /// <p>When you invoke the <code>StartAssessmentFrameworkShare</code> API, you are about to share a custom framework with another Amazon Web Services account. You may not share a custom framework that is derived from a standard framework if the standard framework is designated as not eligible for sharing by Amazon Web Services, unless you have obtained permission to do so from the owner of the standard framework. To learn more about which standard frameworks are eligible for sharing, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility">Framework sharing eligibility</a> in the <i>Audit Manager User Guide</i>.</p>
     /// </important>
     #[derive(std::clone::Clone, std::fmt::Debug)]

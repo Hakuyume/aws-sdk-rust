@@ -1649,135 +1649,6 @@ impl std::error::Error for CopyOptionGroupError {
     }
 }
 
-/// Error type for the `CreateCustomAvailabilityZone` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub struct CreateCustomAvailabilityZoneError {
-    /// Kind of error that occurred.
-    pub kind: CreateCustomAvailabilityZoneErrorKind,
-    /// Additional metadata about the error, including error code, message, and request ID.
-    pub(crate) meta: aws_smithy_types::Error,
-}
-/// Types of errors that can occur for the `CreateCustomAvailabilityZone` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub enum CreateCustomAvailabilityZoneErrorKind {
-    /// <p> <code>CustomAvailabilityZoneName</code> is already used by an existing custom Availability Zone.</p>
-    CustomAvailabilityZoneAlreadyExistsFault(
-        crate::error::CustomAvailabilityZoneAlreadyExistsFault,
-    ),
-    /// <p>You have exceeded the maximum number of custom Availability Zones.</p>
-    CustomAvailabilityZoneQuotaExceededFault(
-        crate::error::CustomAvailabilityZoneQuotaExceededFault,
-    ),
-    /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
-    KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
-    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
-    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
-}
-impl std::fmt::Display for CreateCustomAvailabilityZoneError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match &self.kind {
-            CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneAlreadyExistsFault(
-                _inner,
-            ) => _inner.fmt(f),
-            CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneQuotaExceededFault(
-                _inner,
-            ) => _inner.fmt(f),
-            CreateCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault(_inner) => {
-                _inner.fmt(f)
-            }
-            CreateCustomAvailabilityZoneErrorKind::Unhandled(_inner) => _inner.fmt(f),
-        }
-    }
-}
-impl aws_smithy_types::retry::ProvideErrorKind for CreateCustomAvailabilityZoneError {
-    fn code(&self) -> Option<&str> {
-        CreateCustomAvailabilityZoneError::code(self)
-    }
-    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
-        None
-    }
-}
-impl CreateCustomAvailabilityZoneError {
-    /// Creates a new `CreateCustomAvailabilityZoneError`.
-    pub fn new(kind: CreateCustomAvailabilityZoneErrorKind, meta: aws_smithy_types::Error) -> Self {
-        Self { kind, meta }
-    }
-
-    /// Creates the `CreateCustomAvailabilityZoneError::Unhandled` variant from any error type.
-    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
-        Self {
-            kind: CreateCustomAvailabilityZoneErrorKind::Unhandled(err.into()),
-            meta: Default::default(),
-        }
-    }
-
-    /// Creates the `CreateCustomAvailabilityZoneError::Unhandled` variant from a `aws_smithy_types::Error`.
-    pub fn generic(err: aws_smithy_types::Error) -> Self {
-        Self {
-            meta: err.clone(),
-            kind: CreateCustomAvailabilityZoneErrorKind::Unhandled(err.into()),
-        }
-    }
-
-    /// Returns the error message if one is available.
-    pub fn message(&self) -> Option<&str> {
-        self.meta.message()
-    }
-
-    /// Returns error metadata, which includes the error code, message,
-    /// request ID, and potentially additional information.
-    pub fn meta(&self) -> &aws_smithy_types::Error {
-        &self.meta
-    }
-
-    /// Returns the request ID if it's available.
-    pub fn request_id(&self) -> Option<&str> {
-        self.meta.request_id()
-    }
-
-    /// Returns the error code if it's available.
-    pub fn code(&self) -> Option<&str> {
-        self.meta.code()
-    }
-    /// Returns `true` if the error kind is `CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneAlreadyExistsFault`.
-    pub fn is_custom_availability_zone_already_exists_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneAlreadyExistsFault(_)
-        )
-    }
-    /// Returns `true` if the error kind is `CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneQuotaExceededFault`.
-    pub fn is_custom_availability_zone_quota_exceeded_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneQuotaExceededFault(_)
-        )
-    }
-    /// Returns `true` if the error kind is `CreateCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault`.
-    pub fn is_kms_key_not_accessible_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            CreateCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault(_)
-        )
-    }
-}
-impl std::error::Error for CreateCustomAvailabilityZoneError {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.kind {
-            CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneAlreadyExistsFault(
-                _inner,
-            ) => Some(_inner),
-            CreateCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneQuotaExceededFault(
-                _inner,
-            ) => Some(_inner),
-            CreateCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault(_inner) => Some(_inner),
-            CreateCustomAvailabilityZoneErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
-        }
-    }
-}
-
 /// Error type for the `CreateCustomDBEngineVersion` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -2639,6 +2510,8 @@ pub enum CreateDBInstanceErrorKind {
     InvalidVpcNetworkStateFault(crate::error::InvalidVpcNetworkStateFault),
     /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
     KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
+    /// <p>The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and <code>DUAL</code>.</p>
+    NetworkTypeNotSupported(crate::error::NetworkTypeNotSupported),
     /// <p>The specified option group could not be found.</p>
     OptionGroupNotFoundFault(crate::error::OptionGroupNotFoundFault),
     /// <p>Provisioned IOPS not available in the specified Availability Zone.</p>
@@ -2668,6 +2541,7 @@ impl std::fmt::Display for CreateDBInstanceError {
             CreateDBInstanceErrorKind::InvalidSubnet(_inner) => _inner.fmt(f),
             CreateDBInstanceErrorKind::InvalidVpcNetworkStateFault(_inner) => _inner.fmt(f),
             CreateDBInstanceErrorKind::KmsKeyNotAccessibleFault(_inner) => _inner.fmt(f),
+            CreateDBInstanceErrorKind::NetworkTypeNotSupported(_inner) => _inner.fmt(f),
             CreateDBInstanceErrorKind::OptionGroupNotFoundFault(_inner) => _inner.fmt(f),
             CreateDBInstanceErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => {
                 _inner.fmt(f)
@@ -2830,6 +2704,13 @@ impl CreateDBInstanceError {
             CreateDBInstanceErrorKind::KmsKeyNotAccessibleFault(_)
         )
     }
+    /// Returns `true` if the error kind is `CreateDBInstanceErrorKind::NetworkTypeNotSupported`.
+    pub fn is_network_type_not_supported(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateDBInstanceErrorKind::NetworkTypeNotSupported(_)
+        )
+    }
     /// Returns `true` if the error kind is `CreateDBInstanceErrorKind::OptionGroupNotFoundFault`.
     pub fn is_option_group_not_found_fault(&self) -> bool {
         matches!(
@@ -2877,6 +2758,7 @@ impl std::error::Error for CreateDBInstanceError {
             CreateDBInstanceErrorKind::InvalidSubnet(_inner) => Some(_inner),
             CreateDBInstanceErrorKind::InvalidVpcNetworkStateFault(_inner) => Some(_inner),
             CreateDBInstanceErrorKind::KmsKeyNotAccessibleFault(_inner) => Some(_inner),
+            CreateDBInstanceErrorKind::NetworkTypeNotSupported(_inner) => Some(_inner),
             CreateDBInstanceErrorKind::OptionGroupNotFoundFault(_inner) => Some(_inner),
             CreateDBInstanceErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => Some(_inner),
             CreateDBInstanceErrorKind::StorageQuotaExceededFault(_inner) => Some(_inner),
@@ -2929,6 +2811,8 @@ pub enum CreateDBInstanceReadReplicaErrorKind {
     InvalidVpcNetworkStateFault(crate::error::InvalidVpcNetworkStateFault),
     /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
     KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
+    /// <p>The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and <code>DUAL</code>.</p>
+    NetworkTypeNotSupported(crate::error::NetworkTypeNotSupported),
     /// <p>The specified option group could not be found.</p>
     OptionGroupNotFoundFault(crate::error::OptionGroupNotFoundFault),
     /// <p>Provisioned IOPS not available in the specified Availability Zone.</p>
@@ -2980,6 +2864,7 @@ impl std::fmt::Display for CreateDBInstanceReadReplicaError {
                 _inner.fmt(f)
             }
             CreateDBInstanceReadReplicaErrorKind::KmsKeyNotAccessibleFault(_inner) => _inner.fmt(f),
+            CreateDBInstanceReadReplicaErrorKind::NetworkTypeNotSupported(_inner) => _inner.fmt(f),
             CreateDBInstanceReadReplicaErrorKind::OptionGroupNotFoundFault(_inner) => _inner.fmt(f),
             CreateDBInstanceReadReplicaErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => {
                 _inner.fmt(f)
@@ -3149,6 +3034,13 @@ impl CreateDBInstanceReadReplicaError {
             CreateDBInstanceReadReplicaErrorKind::KmsKeyNotAccessibleFault(_)
         )
     }
+    /// Returns `true` if the error kind is `CreateDBInstanceReadReplicaErrorKind::NetworkTypeNotSupported`.
+    pub fn is_network_type_not_supported(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateDBInstanceReadReplicaErrorKind::NetworkTypeNotSupported(_)
+        )
+    }
     /// Returns `true` if the error kind is `CreateDBInstanceReadReplicaErrorKind::OptionGroupNotFoundFault`.
     pub fn is_option_group_not_found_fault(&self) -> bool {
         matches!(
@@ -3216,6 +3108,7 @@ impl std::error::Error for CreateDBInstanceReadReplicaError {
                 Some(_inner)
             }
             CreateDBInstanceReadReplicaErrorKind::KmsKeyNotAccessibleFault(_inner) => Some(_inner),
+            CreateDBInstanceReadReplicaErrorKind::NetworkTypeNotSupported(_inner) => Some(_inner),
             CreateDBInstanceReadReplicaErrorKind::OptionGroupNotFoundFault(_inner) => Some(_inner),
             CreateDBInstanceReadReplicaErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => {
                 Some(_inner)
@@ -4381,116 +4274,6 @@ impl std::error::Error for CreateOptionGroupError {
             CreateOptionGroupErrorKind::OptionGroupAlreadyExistsFault(_inner) => Some(_inner),
             CreateOptionGroupErrorKind::OptionGroupQuotaExceededFault(_inner) => Some(_inner),
             CreateOptionGroupErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
-        }
-    }
-}
-
-/// Error type for the `DeleteCustomAvailabilityZone` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub struct DeleteCustomAvailabilityZoneError {
-    /// Kind of error that occurred.
-    pub kind: DeleteCustomAvailabilityZoneErrorKind,
-    /// Additional metadata about the error, including error code, message, and request ID.
-    pub(crate) meta: aws_smithy_types::Error,
-}
-/// Types of errors that can occur for the `DeleteCustomAvailabilityZone` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub enum DeleteCustomAvailabilityZoneErrorKind {
-    /// <p> <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.</p>
-    CustomAvailabilityZoneNotFoundFault(crate::error::CustomAvailabilityZoneNotFoundFault),
-    /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
-    KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
-    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
-    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
-}
-impl std::fmt::Display for DeleteCustomAvailabilityZoneError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match &self.kind {
-            DeleteCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneNotFoundFault(_inner) => {
-                _inner.fmt(f)
-            }
-            DeleteCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault(_inner) => {
-                _inner.fmt(f)
-            }
-            DeleteCustomAvailabilityZoneErrorKind::Unhandled(_inner) => _inner.fmt(f),
-        }
-    }
-}
-impl aws_smithy_types::retry::ProvideErrorKind for DeleteCustomAvailabilityZoneError {
-    fn code(&self) -> Option<&str> {
-        DeleteCustomAvailabilityZoneError::code(self)
-    }
-    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
-        None
-    }
-}
-impl DeleteCustomAvailabilityZoneError {
-    /// Creates a new `DeleteCustomAvailabilityZoneError`.
-    pub fn new(kind: DeleteCustomAvailabilityZoneErrorKind, meta: aws_smithy_types::Error) -> Self {
-        Self { kind, meta }
-    }
-
-    /// Creates the `DeleteCustomAvailabilityZoneError::Unhandled` variant from any error type.
-    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
-        Self {
-            kind: DeleteCustomAvailabilityZoneErrorKind::Unhandled(err.into()),
-            meta: Default::default(),
-        }
-    }
-
-    /// Creates the `DeleteCustomAvailabilityZoneError::Unhandled` variant from a `aws_smithy_types::Error`.
-    pub fn generic(err: aws_smithy_types::Error) -> Self {
-        Self {
-            meta: err.clone(),
-            kind: DeleteCustomAvailabilityZoneErrorKind::Unhandled(err.into()),
-        }
-    }
-
-    /// Returns the error message if one is available.
-    pub fn message(&self) -> Option<&str> {
-        self.meta.message()
-    }
-
-    /// Returns error metadata, which includes the error code, message,
-    /// request ID, and potentially additional information.
-    pub fn meta(&self) -> &aws_smithy_types::Error {
-        &self.meta
-    }
-
-    /// Returns the request ID if it's available.
-    pub fn request_id(&self) -> Option<&str> {
-        self.meta.request_id()
-    }
-
-    /// Returns the error code if it's available.
-    pub fn code(&self) -> Option<&str> {
-        self.meta.code()
-    }
-    /// Returns `true` if the error kind is `DeleteCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneNotFoundFault`.
-    pub fn is_custom_availability_zone_not_found_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            DeleteCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneNotFoundFault(_)
-        )
-    }
-    /// Returns `true` if the error kind is `DeleteCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault`.
-    pub fn is_kms_key_not_accessible_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            DeleteCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault(_)
-        )
-    }
-}
-impl std::error::Error for DeleteCustomAvailabilityZoneError {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.kind {
-            DeleteCustomAvailabilityZoneErrorKind::CustomAvailabilityZoneNotFoundFault(_inner) => {
-                Some(_inner)
-            }
-            DeleteCustomAvailabilityZoneErrorKind::KmsKeyNotAccessibleFault(_inner) => Some(_inner),
-            DeleteCustomAvailabilityZoneErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -6225,103 +6008,6 @@ impl std::error::Error for DeleteGlobalClusterError {
     }
 }
 
-/// Error type for the `DeleteInstallationMedia` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub struct DeleteInstallationMediaError {
-    /// Kind of error that occurred.
-    pub kind: DeleteInstallationMediaErrorKind,
-    /// Additional metadata about the error, including error code, message, and request ID.
-    pub(crate) meta: aws_smithy_types::Error,
-}
-/// Types of errors that can occur for the `DeleteInstallationMedia` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub enum DeleteInstallationMediaErrorKind {
-    /// <p> <code>InstallationMediaID</code> doesn't refer to an existing installation medium.</p>
-    InstallationMediaNotFoundFault(crate::error::InstallationMediaNotFoundFault),
-    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
-    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
-}
-impl std::fmt::Display for DeleteInstallationMediaError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match &self.kind {
-            DeleteInstallationMediaErrorKind::InstallationMediaNotFoundFault(_inner) => {
-                _inner.fmt(f)
-            }
-            DeleteInstallationMediaErrorKind::Unhandled(_inner) => _inner.fmt(f),
-        }
-    }
-}
-impl aws_smithy_types::retry::ProvideErrorKind for DeleteInstallationMediaError {
-    fn code(&self) -> Option<&str> {
-        DeleteInstallationMediaError::code(self)
-    }
-    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
-        None
-    }
-}
-impl DeleteInstallationMediaError {
-    /// Creates a new `DeleteInstallationMediaError`.
-    pub fn new(kind: DeleteInstallationMediaErrorKind, meta: aws_smithy_types::Error) -> Self {
-        Self { kind, meta }
-    }
-
-    /// Creates the `DeleteInstallationMediaError::Unhandled` variant from any error type.
-    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
-        Self {
-            kind: DeleteInstallationMediaErrorKind::Unhandled(err.into()),
-            meta: Default::default(),
-        }
-    }
-
-    /// Creates the `DeleteInstallationMediaError::Unhandled` variant from a `aws_smithy_types::Error`.
-    pub fn generic(err: aws_smithy_types::Error) -> Self {
-        Self {
-            meta: err.clone(),
-            kind: DeleteInstallationMediaErrorKind::Unhandled(err.into()),
-        }
-    }
-
-    /// Returns the error message if one is available.
-    pub fn message(&self) -> Option<&str> {
-        self.meta.message()
-    }
-
-    /// Returns error metadata, which includes the error code, message,
-    /// request ID, and potentially additional information.
-    pub fn meta(&self) -> &aws_smithy_types::Error {
-        &self.meta
-    }
-
-    /// Returns the request ID if it's available.
-    pub fn request_id(&self) -> Option<&str> {
-        self.meta.request_id()
-    }
-
-    /// Returns the error code if it's available.
-    pub fn code(&self) -> Option<&str> {
-        self.meta.code()
-    }
-    /// Returns `true` if the error kind is `DeleteInstallationMediaErrorKind::InstallationMediaNotFoundFault`.
-    pub fn is_installation_media_not_found_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            DeleteInstallationMediaErrorKind::InstallationMediaNotFoundFault(_)
-        )
-    }
-}
-impl std::error::Error for DeleteInstallationMediaError {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.kind {
-            DeleteInstallationMediaErrorKind::InstallationMediaNotFoundFault(_inner) => {
-                Some(_inner)
-            }
-            DeleteInstallationMediaErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
-        }
-    }
-}
-
 /// Error type for the `DeleteOptionGroup` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -6727,106 +6413,6 @@ impl std::error::Error for DescribeCertificatesError {
         match &self.kind {
             DescribeCertificatesErrorKind::CertificateNotFoundFault(_inner) => Some(_inner),
             DescribeCertificatesErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
-        }
-    }
-}
-
-/// Error type for the `DescribeCustomAvailabilityZones` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub struct DescribeCustomAvailabilityZonesError {
-    /// Kind of error that occurred.
-    pub kind: DescribeCustomAvailabilityZonesErrorKind,
-    /// Additional metadata about the error, including error code, message, and request ID.
-    pub(crate) meta: aws_smithy_types::Error,
-}
-/// Types of errors that can occur for the `DescribeCustomAvailabilityZones` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub enum DescribeCustomAvailabilityZonesErrorKind {
-    /// <p> <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.</p>
-    CustomAvailabilityZoneNotFoundFault(crate::error::CustomAvailabilityZoneNotFoundFault),
-    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
-    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
-}
-impl std::fmt::Display for DescribeCustomAvailabilityZonesError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match &self.kind {
-            DescribeCustomAvailabilityZonesErrorKind::CustomAvailabilityZoneNotFoundFault(
-                _inner,
-            ) => _inner.fmt(f),
-            DescribeCustomAvailabilityZonesErrorKind::Unhandled(_inner) => _inner.fmt(f),
-        }
-    }
-}
-impl aws_smithy_types::retry::ProvideErrorKind for DescribeCustomAvailabilityZonesError {
-    fn code(&self) -> Option<&str> {
-        DescribeCustomAvailabilityZonesError::code(self)
-    }
-    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
-        None
-    }
-}
-impl DescribeCustomAvailabilityZonesError {
-    /// Creates a new `DescribeCustomAvailabilityZonesError`.
-    pub fn new(
-        kind: DescribeCustomAvailabilityZonesErrorKind,
-        meta: aws_smithy_types::Error,
-    ) -> Self {
-        Self { kind, meta }
-    }
-
-    /// Creates the `DescribeCustomAvailabilityZonesError::Unhandled` variant from any error type.
-    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
-        Self {
-            kind: DescribeCustomAvailabilityZonesErrorKind::Unhandled(err.into()),
-            meta: Default::default(),
-        }
-    }
-
-    /// Creates the `DescribeCustomAvailabilityZonesError::Unhandled` variant from a `aws_smithy_types::Error`.
-    pub fn generic(err: aws_smithy_types::Error) -> Self {
-        Self {
-            meta: err.clone(),
-            kind: DescribeCustomAvailabilityZonesErrorKind::Unhandled(err.into()),
-        }
-    }
-
-    /// Returns the error message if one is available.
-    pub fn message(&self) -> Option<&str> {
-        self.meta.message()
-    }
-
-    /// Returns error metadata, which includes the error code, message,
-    /// request ID, and potentially additional information.
-    pub fn meta(&self) -> &aws_smithy_types::Error {
-        &self.meta
-    }
-
-    /// Returns the request ID if it's available.
-    pub fn request_id(&self) -> Option<&str> {
-        self.meta.request_id()
-    }
-
-    /// Returns the error code if it's available.
-    pub fn code(&self) -> Option<&str> {
-        self.meta.code()
-    }
-    /// Returns `true` if the error kind is `DescribeCustomAvailabilityZonesErrorKind::CustomAvailabilityZoneNotFoundFault`.
-    pub fn is_custom_availability_zone_not_found_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            DescribeCustomAvailabilityZonesErrorKind::CustomAvailabilityZoneNotFoundFault(_)
-        )
-    }
-}
-impl std::error::Error for DescribeCustomAvailabilityZonesError {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.kind {
-            DescribeCustomAvailabilityZonesErrorKind::CustomAvailabilityZoneNotFoundFault(
-                _inner,
-            ) => Some(_inner),
-            DescribeCustomAvailabilityZonesErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -9516,103 +9102,6 @@ impl std::error::Error for DescribeGlobalClustersError {
     }
 }
 
-/// Error type for the `DescribeInstallationMedia` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub struct DescribeInstallationMediaError {
-    /// Kind of error that occurred.
-    pub kind: DescribeInstallationMediaErrorKind,
-    /// Additional metadata about the error, including error code, message, and request ID.
-    pub(crate) meta: aws_smithy_types::Error,
-}
-/// Types of errors that can occur for the `DescribeInstallationMedia` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub enum DescribeInstallationMediaErrorKind {
-    /// <p> <code>InstallationMediaID</code> doesn't refer to an existing installation medium.</p>
-    InstallationMediaNotFoundFault(crate::error::InstallationMediaNotFoundFault),
-    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
-    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
-}
-impl std::fmt::Display for DescribeInstallationMediaError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match &self.kind {
-            DescribeInstallationMediaErrorKind::InstallationMediaNotFoundFault(_inner) => {
-                _inner.fmt(f)
-            }
-            DescribeInstallationMediaErrorKind::Unhandled(_inner) => _inner.fmt(f),
-        }
-    }
-}
-impl aws_smithy_types::retry::ProvideErrorKind for DescribeInstallationMediaError {
-    fn code(&self) -> Option<&str> {
-        DescribeInstallationMediaError::code(self)
-    }
-    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
-        None
-    }
-}
-impl DescribeInstallationMediaError {
-    /// Creates a new `DescribeInstallationMediaError`.
-    pub fn new(kind: DescribeInstallationMediaErrorKind, meta: aws_smithy_types::Error) -> Self {
-        Self { kind, meta }
-    }
-
-    /// Creates the `DescribeInstallationMediaError::Unhandled` variant from any error type.
-    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
-        Self {
-            kind: DescribeInstallationMediaErrorKind::Unhandled(err.into()),
-            meta: Default::default(),
-        }
-    }
-
-    /// Creates the `DescribeInstallationMediaError::Unhandled` variant from a `aws_smithy_types::Error`.
-    pub fn generic(err: aws_smithy_types::Error) -> Self {
-        Self {
-            meta: err.clone(),
-            kind: DescribeInstallationMediaErrorKind::Unhandled(err.into()),
-        }
-    }
-
-    /// Returns the error message if one is available.
-    pub fn message(&self) -> Option<&str> {
-        self.meta.message()
-    }
-
-    /// Returns error metadata, which includes the error code, message,
-    /// request ID, and potentially additional information.
-    pub fn meta(&self) -> &aws_smithy_types::Error {
-        &self.meta
-    }
-
-    /// Returns the request ID if it's available.
-    pub fn request_id(&self) -> Option<&str> {
-        self.meta.request_id()
-    }
-
-    /// Returns the error code if it's available.
-    pub fn code(&self) -> Option<&str> {
-        self.meta.code()
-    }
-    /// Returns `true` if the error kind is `DescribeInstallationMediaErrorKind::InstallationMediaNotFoundFault`.
-    pub fn is_installation_media_not_found_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            DescribeInstallationMediaErrorKind::InstallationMediaNotFoundFault(_)
-        )
-    }
-}
-impl std::error::Error for DescribeInstallationMediaError {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.kind {
-            DescribeInstallationMediaErrorKind::InstallationMediaNotFoundFault(_inner) => {
-                Some(_inner)
-            }
-            DescribeInstallationMediaErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
-        }
-    }
-}
-
 /// Error type for the `DescribeOptionGroupOptions` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -10718,118 +10207,6 @@ impl std::error::Error for FailoverGlobalClusterError {
             FailoverGlobalClusterErrorKind::InvalidDbClusterStateFault(_inner) => Some(_inner),
             FailoverGlobalClusterErrorKind::InvalidGlobalClusterStateFault(_inner) => Some(_inner),
             FailoverGlobalClusterErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
-        }
-    }
-}
-
-/// Error type for the `ImportInstallationMedia` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub struct ImportInstallationMediaError {
-    /// Kind of error that occurred.
-    pub kind: ImportInstallationMediaErrorKind,
-    /// Additional metadata about the error, including error code, message, and request ID.
-    pub(crate) meta: aws_smithy_types::Error,
-}
-/// Types of errors that can occur for the `ImportInstallationMedia` operation.
-#[non_exhaustive]
-#[derive(std::fmt::Debug)]
-pub enum ImportInstallationMediaErrorKind {
-    /// <p> <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.</p>
-    CustomAvailabilityZoneNotFoundFault(crate::error::CustomAvailabilityZoneNotFoundFault),
-    /// <p>The specified installation medium has already been imported.</p>
-    InstallationMediaAlreadyExistsFault(crate::error::InstallationMediaAlreadyExistsFault),
-    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
-    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
-}
-impl std::fmt::Display for ImportInstallationMediaError {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match &self.kind {
-            ImportInstallationMediaErrorKind::CustomAvailabilityZoneNotFoundFault(_inner) => {
-                _inner.fmt(f)
-            }
-            ImportInstallationMediaErrorKind::InstallationMediaAlreadyExistsFault(_inner) => {
-                _inner.fmt(f)
-            }
-            ImportInstallationMediaErrorKind::Unhandled(_inner) => _inner.fmt(f),
-        }
-    }
-}
-impl aws_smithy_types::retry::ProvideErrorKind for ImportInstallationMediaError {
-    fn code(&self) -> Option<&str> {
-        ImportInstallationMediaError::code(self)
-    }
-    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
-        None
-    }
-}
-impl ImportInstallationMediaError {
-    /// Creates a new `ImportInstallationMediaError`.
-    pub fn new(kind: ImportInstallationMediaErrorKind, meta: aws_smithy_types::Error) -> Self {
-        Self { kind, meta }
-    }
-
-    /// Creates the `ImportInstallationMediaError::Unhandled` variant from any error type.
-    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
-        Self {
-            kind: ImportInstallationMediaErrorKind::Unhandled(err.into()),
-            meta: Default::default(),
-        }
-    }
-
-    /// Creates the `ImportInstallationMediaError::Unhandled` variant from a `aws_smithy_types::Error`.
-    pub fn generic(err: aws_smithy_types::Error) -> Self {
-        Self {
-            meta: err.clone(),
-            kind: ImportInstallationMediaErrorKind::Unhandled(err.into()),
-        }
-    }
-
-    /// Returns the error message if one is available.
-    pub fn message(&self) -> Option<&str> {
-        self.meta.message()
-    }
-
-    /// Returns error metadata, which includes the error code, message,
-    /// request ID, and potentially additional information.
-    pub fn meta(&self) -> &aws_smithy_types::Error {
-        &self.meta
-    }
-
-    /// Returns the request ID if it's available.
-    pub fn request_id(&self) -> Option<&str> {
-        self.meta.request_id()
-    }
-
-    /// Returns the error code if it's available.
-    pub fn code(&self) -> Option<&str> {
-        self.meta.code()
-    }
-    /// Returns `true` if the error kind is `ImportInstallationMediaErrorKind::CustomAvailabilityZoneNotFoundFault`.
-    pub fn is_custom_availability_zone_not_found_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            ImportInstallationMediaErrorKind::CustomAvailabilityZoneNotFoundFault(_)
-        )
-    }
-    /// Returns `true` if the error kind is `ImportInstallationMediaErrorKind::InstallationMediaAlreadyExistsFault`.
-    pub fn is_installation_media_already_exists_fault(&self) -> bool {
-        matches!(
-            &self.kind,
-            ImportInstallationMediaErrorKind::InstallationMediaAlreadyExistsFault(_)
-        )
-    }
-}
-impl std::error::Error for ImportInstallationMediaError {
-    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
-        match &self.kind {
-            ImportInstallationMediaErrorKind::CustomAvailabilityZoneNotFoundFault(_inner) => {
-                Some(_inner)
-            }
-            ImportInstallationMediaErrorKind::InstallationMediaAlreadyExistsFault(_inner) => {
-                Some(_inner)
-            }
-            ImportInstallationMediaErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -11946,6 +11323,8 @@ pub enum ModifyDBInstanceErrorKind {
     InvalidVpcNetworkStateFault(crate::error::InvalidVpcNetworkStateFault),
     /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
     KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
+    /// <p>The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and <code>DUAL</code>.</p>
+    NetworkTypeNotSupported(crate::error::NetworkTypeNotSupported),
     /// <p>The specified option group could not be found.</p>
     OptionGroupNotFoundFault(crate::error::OptionGroupNotFoundFault),
     /// <p>Provisioned IOPS not available in the specified Availability Zone.</p>
@@ -11975,6 +11354,7 @@ impl std::fmt::Display for ModifyDBInstanceError {
             ModifyDBInstanceErrorKind::InvalidDbSecurityGroupStateFault(_inner) => _inner.fmt(f),
             ModifyDBInstanceErrorKind::InvalidVpcNetworkStateFault(_inner) => _inner.fmt(f),
             ModifyDBInstanceErrorKind::KmsKeyNotAccessibleFault(_inner) => _inner.fmt(f),
+            ModifyDBInstanceErrorKind::NetworkTypeNotSupported(_inner) => _inner.fmt(f),
             ModifyDBInstanceErrorKind::OptionGroupNotFoundFault(_inner) => _inner.fmt(f),
             ModifyDBInstanceErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => {
                 _inner.fmt(f)
@@ -12140,6 +11520,13 @@ impl ModifyDBInstanceError {
             ModifyDBInstanceErrorKind::KmsKeyNotAccessibleFault(_)
         )
     }
+    /// Returns `true` if the error kind is `ModifyDBInstanceErrorKind::NetworkTypeNotSupported`.
+    pub fn is_network_type_not_supported(&self) -> bool {
+        matches!(
+            &self.kind,
+            ModifyDBInstanceErrorKind::NetworkTypeNotSupported(_)
+        )
+    }
     /// Returns `true` if the error kind is `ModifyDBInstanceErrorKind::OptionGroupNotFoundFault`.
     pub fn is_option_group_not_found_fault(&self) -> bool {
         matches!(
@@ -12187,6 +11574,7 @@ impl std::error::Error for ModifyDBInstanceError {
             ModifyDBInstanceErrorKind::InvalidDbSecurityGroupStateFault(_inner) => Some(_inner),
             ModifyDBInstanceErrorKind::InvalidVpcNetworkStateFault(_inner) => Some(_inner),
             ModifyDBInstanceErrorKind::KmsKeyNotAccessibleFault(_inner) => Some(_inner),
+            ModifyDBInstanceErrorKind::NetworkTypeNotSupported(_inner) => Some(_inner),
             ModifyDBInstanceErrorKind::OptionGroupNotFoundFault(_inner) => Some(_inner),
             ModifyDBInstanceErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => Some(_inner),
             ModifyDBInstanceErrorKind::StorageQuotaExceededFault(_inner) => Some(_inner),
@@ -15944,6 +15332,8 @@ pub enum RestoreDBInstanceFromDBSnapshotErrorKind {
     InvalidVpcNetworkStateFault(crate::error::InvalidVpcNetworkStateFault),
     /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
     KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
+    /// <p>The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and <code>DUAL</code>.</p>
+    NetworkTypeNotSupported(crate::error::NetworkTypeNotSupported),
     /// <p>The specified option group could not be found.</p>
     OptionGroupNotFoundFault(crate::error::OptionGroupNotFoundFault),
     /// <p>Provisioned IOPS not available in the specified Availability Zone.</p>
@@ -15998,6 +15388,9 @@ impl std::fmt::Display for RestoreDBInstanceFromDBSnapshotError {
                 _inner.fmt(f)
             }
             RestoreDBInstanceFromDBSnapshotErrorKind::KmsKeyNotAccessibleFault(_inner) => {
+                _inner.fmt(f)
+            }
+            RestoreDBInstanceFromDBSnapshotErrorKind::NetworkTypeNotSupported(_inner) => {
                 _inner.fmt(f)
             }
             RestoreDBInstanceFromDBSnapshotErrorKind::OptionGroupNotFoundFault(_inner) => {
@@ -16181,6 +15574,13 @@ impl RestoreDBInstanceFromDBSnapshotError {
             RestoreDBInstanceFromDBSnapshotErrorKind::KmsKeyNotAccessibleFault(_)
         )
     }
+    /// Returns `true` if the error kind is `RestoreDBInstanceFromDBSnapshotErrorKind::NetworkTypeNotSupported`.
+    pub fn is_network_type_not_supported(&self) -> bool {
+        matches!(
+            &self.kind,
+            RestoreDBInstanceFromDBSnapshotErrorKind::NetworkTypeNotSupported(_)
+        )
+    }
     /// Returns `true` if the error kind is `RestoreDBInstanceFromDBSnapshotErrorKind::OptionGroupNotFoundFault`.
     pub fn is_option_group_not_found_fault(&self) -> bool {
         matches!(
@@ -16255,6 +15655,9 @@ impl std::error::Error for RestoreDBInstanceFromDBSnapshotError {
             RestoreDBInstanceFromDBSnapshotErrorKind::KmsKeyNotAccessibleFault(_inner) => {
                 Some(_inner)
             }
+            RestoreDBInstanceFromDBSnapshotErrorKind::NetworkTypeNotSupported(_inner) => {
+                Some(_inner)
+            }
             RestoreDBInstanceFromDBSnapshotErrorKind::OptionGroupNotFoundFault(_inner) => {
                 Some(_inner)
             }
@@ -16312,6 +15715,8 @@ pub enum RestoreDBInstanceFromS3ErrorKind {
     InvalidVpcNetworkStateFault(crate::error::InvalidVpcNetworkStateFault),
     /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
     KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
+    /// <p>The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and <code>DUAL</code>.</p>
+    NetworkTypeNotSupported(crate::error::NetworkTypeNotSupported),
     /// <p>The specified option group could not be found.</p>
     OptionGroupNotFoundFault(crate::error::OptionGroupNotFoundFault),
     /// <p>Provisioned IOPS not available in the specified Availability Zone.</p>
@@ -16345,6 +15750,7 @@ impl std::fmt::Display for RestoreDBInstanceFromS3Error {
             RestoreDBInstanceFromS3ErrorKind::InvalidSubnet(_inner) => _inner.fmt(f),
             RestoreDBInstanceFromS3ErrorKind::InvalidVpcNetworkStateFault(_inner) => _inner.fmt(f),
             RestoreDBInstanceFromS3ErrorKind::KmsKeyNotAccessibleFault(_inner) => _inner.fmt(f),
+            RestoreDBInstanceFromS3ErrorKind::NetworkTypeNotSupported(_inner) => _inner.fmt(f),
             RestoreDBInstanceFromS3ErrorKind::OptionGroupNotFoundFault(_inner) => _inner.fmt(f),
             RestoreDBInstanceFromS3ErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => {
                 _inner.fmt(f)
@@ -16496,6 +15902,13 @@ impl RestoreDBInstanceFromS3Error {
             RestoreDBInstanceFromS3ErrorKind::KmsKeyNotAccessibleFault(_)
         )
     }
+    /// Returns `true` if the error kind is `RestoreDBInstanceFromS3ErrorKind::NetworkTypeNotSupported`.
+    pub fn is_network_type_not_supported(&self) -> bool {
+        matches!(
+            &self.kind,
+            RestoreDBInstanceFromS3ErrorKind::NetworkTypeNotSupported(_)
+        )
+    }
     /// Returns `true` if the error kind is `RestoreDBInstanceFromS3ErrorKind::OptionGroupNotFoundFault`.
     pub fn is_option_group_not_found_fault(&self) -> bool {
         matches!(
@@ -16545,6 +15958,7 @@ impl std::error::Error for RestoreDBInstanceFromS3Error {
             RestoreDBInstanceFromS3ErrorKind::InvalidSubnet(_inner) => Some(_inner),
             RestoreDBInstanceFromS3ErrorKind::InvalidVpcNetworkStateFault(_inner) => Some(_inner),
             RestoreDBInstanceFromS3ErrorKind::KmsKeyNotAccessibleFault(_inner) => Some(_inner),
+            RestoreDBInstanceFromS3ErrorKind::NetworkTypeNotSupported(_inner) => Some(_inner),
             RestoreDBInstanceFromS3ErrorKind::OptionGroupNotFoundFault(_inner) => Some(_inner),
             RestoreDBInstanceFromS3ErrorKind::ProvisionedIopsNotAvailableInAzFault(_inner) => {
                 Some(_inner)
@@ -16604,6 +16018,8 @@ pub enum RestoreDBInstanceToPointInTimeErrorKind {
     InvalidVpcNetworkStateFault(crate::error::InvalidVpcNetworkStateFault),
     /// <p>An error occurred accessing an Amazon Web Services KMS key.</p>
     KmsKeyNotAccessibleFault(crate::error::KmsKeyNotAccessibleFault),
+    /// <p>The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and <code>DUAL</code>.</p>
+    NetworkTypeNotSupported(crate::error::NetworkTypeNotSupported),
     /// <p>The specified option group could not be found.</p>
     OptionGroupNotFoundFault(crate::error::OptionGroupNotFoundFault),
     /// <p> <code>SourceDBInstanceIdentifier</code> refers to a DB instance with <code>BackupRetentionPeriod</code> equal to 0.</p>
@@ -16663,6 +16079,9 @@ impl std::fmt::Display for RestoreDBInstanceToPointInTimeError {
                 _inner.fmt(f)
             }
             RestoreDBInstanceToPointInTimeErrorKind::KmsKeyNotAccessibleFault(_inner) => {
+                _inner.fmt(f)
+            }
+            RestoreDBInstanceToPointInTimeErrorKind::NetworkTypeNotSupported(_inner) => {
                 _inner.fmt(f)
             }
             RestoreDBInstanceToPointInTimeErrorKind::OptionGroupNotFoundFault(_inner) => {
@@ -16856,6 +16275,13 @@ impl RestoreDBInstanceToPointInTimeError {
             RestoreDBInstanceToPointInTimeErrorKind::KmsKeyNotAccessibleFault(_)
         )
     }
+    /// Returns `true` if the error kind is `RestoreDBInstanceToPointInTimeErrorKind::NetworkTypeNotSupported`.
+    pub fn is_network_type_not_supported(&self) -> bool {
+        matches!(
+            &self.kind,
+            RestoreDBInstanceToPointInTimeErrorKind::NetworkTypeNotSupported(_)
+        )
+    }
     /// Returns `true` if the error kind is `RestoreDBInstanceToPointInTimeErrorKind::OptionGroupNotFoundFault`.
     pub fn is_option_group_not_found_fault(&self) -> bool {
         matches!(
@@ -16938,6 +16364,9 @@ impl std::error::Error for RestoreDBInstanceToPointInTimeError {
                 Some(_inner)
             }
             RestoreDBInstanceToPointInTimeErrorKind::KmsKeyNotAccessibleFault(_inner) => {
+                Some(_inner)
+            }
+            RestoreDBInstanceToPointInTimeErrorKind::NetworkTypeNotSupported(_inner) => {
                 Some(_inner)
             }
             RestoreDBInstanceToPointInTimeErrorKind::OptionGroupNotFoundFault(_inner) => {
@@ -18437,6 +17866,7 @@ impl std::fmt::Display for InvalidDbInstanceStateFault {
 impl std::error::Error for InvalidDbInstanceStateFault {}
 /// See [`InvalidDbInstanceStateFault`](crate::error::InvalidDbInstanceStateFault)
 pub mod invalid_db_instance_state_fault {
+
     /// A builder for [`InvalidDbInstanceStateFault`](crate::error::InvalidDbInstanceStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18501,6 +17931,7 @@ impl std::fmt::Display for DbInstanceNotFoundFault {
 impl std::error::Error for DbInstanceNotFoundFault {}
 /// See [`DbInstanceNotFoundFault`](crate::error::DbInstanceNotFoundFault)
 pub mod db_instance_not_found_fault {
+
     /// A builder for [`DbInstanceNotFoundFault`](crate::error::DbInstanceNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18565,6 +17996,7 @@ impl std::fmt::Display for SnapshotQuotaExceededFault {
 impl std::error::Error for SnapshotQuotaExceededFault {}
 /// See [`SnapshotQuotaExceededFault`](crate::error::SnapshotQuotaExceededFault)
 pub mod snapshot_quota_exceeded_fault {
+
     /// A builder for [`SnapshotQuotaExceededFault`](crate::error::SnapshotQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18629,6 +18061,7 @@ impl std::fmt::Display for InvalidDbClusterStateFault {
 impl std::error::Error for InvalidDbClusterStateFault {}
 /// See [`InvalidDbClusterStateFault`](crate::error::InvalidDbClusterStateFault)
 pub mod invalid_db_cluster_state_fault {
+
     /// A builder for [`InvalidDbClusterStateFault`](crate::error::InvalidDbClusterStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18696,6 +18129,7 @@ impl std::fmt::Display for DbSnapshotAlreadyExistsFault {
 impl std::error::Error for DbSnapshotAlreadyExistsFault {}
 /// See [`DbSnapshotAlreadyExistsFault`](crate::error::DbSnapshotAlreadyExistsFault)
 pub mod db_snapshot_already_exists_fault {
+
     /// A builder for [`DbSnapshotAlreadyExistsFault`](crate::error::DbSnapshotAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18760,6 +18194,7 @@ impl std::fmt::Display for DbClusterNotFoundFault {
 impl std::error::Error for DbClusterNotFoundFault {}
 /// See [`DbClusterNotFoundFault`](crate::error::DbClusterNotFoundFault)
 pub mod db_cluster_not_found_fault {
+
     /// A builder for [`DbClusterNotFoundFault`](crate::error::DbClusterNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18824,6 +18259,7 @@ impl std::fmt::Display for ResourceNotFoundFault {
 impl std::error::Error for ResourceNotFoundFault {}
 /// See [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault)
 pub mod resource_not_found_fault {
+
     /// A builder for [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18888,6 +18324,7 @@ impl std::fmt::Display for KmsKeyNotAccessibleFault {
 impl std::error::Error for KmsKeyNotAccessibleFault {}
 /// See [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault)
 pub mod kms_key_not_accessible_fault {
+
     /// A builder for [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -18952,6 +18389,7 @@ impl std::fmt::Display for InvalidS3BucketFault {
 impl std::error::Error for InvalidS3BucketFault {}
 /// See [`InvalidS3BucketFault`](crate::error::InvalidS3BucketFault)
 pub mod invalid_s3_bucket_fault {
+
     /// A builder for [`InvalidS3BucketFault`](crate::error::InvalidS3BucketFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19016,6 +18454,7 @@ impl std::fmt::Display for InvalidExportSourceStateFault {
 impl std::error::Error for InvalidExportSourceStateFault {}
 /// See [`InvalidExportSourceStateFault`](crate::error::InvalidExportSourceStateFault)
 pub mod invalid_export_source_state_fault {
+
     /// A builder for [`InvalidExportSourceStateFault`](crate::error::InvalidExportSourceStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19080,6 +18519,7 @@ impl std::fmt::Display for InvalidExportOnlyFault {
 impl std::error::Error for InvalidExportOnlyFault {}
 /// See [`InvalidExportOnlyFault`](crate::error::InvalidExportOnlyFault)
 pub mod invalid_export_only_fault {
+
     /// A builder for [`InvalidExportOnlyFault`](crate::error::InvalidExportOnlyFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19144,6 +18584,7 @@ impl std::fmt::Display for IamRoleNotFoundFault {
 impl std::error::Error for IamRoleNotFoundFault {}
 /// See [`IamRoleNotFoundFault`](crate::error::IamRoleNotFoundFault)
 pub mod iam_role_not_found_fault {
+
     /// A builder for [`IamRoleNotFoundFault`](crate::error::IamRoleNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19208,6 +18649,7 @@ impl std::fmt::Display for IamRoleMissingPermissionsFault {
 impl std::error::Error for IamRoleMissingPermissionsFault {}
 /// See [`IamRoleMissingPermissionsFault`](crate::error::IamRoleMissingPermissionsFault)
 pub mod iam_role_missing_permissions_fault {
+
     /// A builder for [`IamRoleMissingPermissionsFault`](crate::error::IamRoleMissingPermissionsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19272,6 +18714,7 @@ impl std::fmt::Display for ExportTaskAlreadyExistsFault {
 impl std::error::Error for ExportTaskAlreadyExistsFault {}
 /// See [`ExportTaskAlreadyExistsFault`](crate::error::ExportTaskAlreadyExistsFault)
 pub mod export_task_already_exists_fault {
+
     /// A builder for [`ExportTaskAlreadyExistsFault`](crate::error::ExportTaskAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19336,6 +18779,7 @@ impl std::fmt::Display for DbSnapshotNotFoundFault {
 impl std::error::Error for DbSnapshotNotFoundFault {}
 /// See [`DbSnapshotNotFoundFault`](crate::error::DbSnapshotNotFoundFault)
 pub mod db_snapshot_not_found_fault {
+
     /// A builder for [`DbSnapshotNotFoundFault`](crate::error::DbSnapshotNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19403,6 +18847,7 @@ impl std::fmt::Display for DbClusterSnapshotNotFoundFault {
 impl std::error::Error for DbClusterSnapshotNotFoundFault {}
 /// See [`DbClusterSnapshotNotFoundFault`](crate::error::DbClusterSnapshotNotFoundFault)
 pub mod db_cluster_snapshot_not_found_fault {
+
     /// A builder for [`DbClusterSnapshotNotFoundFault`](crate::error::DbClusterSnapshotNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19467,6 +18912,7 @@ impl std::fmt::Display for StorageTypeNotSupportedFault {
 impl std::error::Error for StorageTypeNotSupportedFault {}
 /// See [`StorageTypeNotSupportedFault`](crate::error::StorageTypeNotSupportedFault)
 pub mod storage_type_not_supported_fault {
+
     /// A builder for [`StorageTypeNotSupportedFault`](crate::error::StorageTypeNotSupportedFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19531,6 +18977,7 @@ impl std::fmt::Display for DbInstanceAutomatedBackupQuotaExceededFault {
 impl std::error::Error for DbInstanceAutomatedBackupQuotaExceededFault {}
 /// See [`DbInstanceAutomatedBackupQuotaExceededFault`](crate::error::DbInstanceAutomatedBackupQuotaExceededFault)
 pub mod db_instance_automated_backup_quota_exceeded_fault {
+
     /// A builder for [`DbInstanceAutomatedBackupQuotaExceededFault`](crate::error::DbInstanceAutomatedBackupQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19598,6 +19045,7 @@ impl std::fmt::Display for InvalidVpcNetworkStateFault {
 impl std::error::Error for InvalidVpcNetworkStateFault {}
 /// See [`InvalidVpcNetworkStateFault`](crate::error::InvalidVpcNetworkStateFault)
 pub mod invalid_vpc_network_state_fault {
+
     /// A builder for [`InvalidVpcNetworkStateFault`](crate::error::InvalidVpcNetworkStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19662,6 +19110,7 @@ impl std::fmt::Display for InvalidSubnet {
 impl std::error::Error for InvalidSubnet {}
 /// See [`InvalidSubnet`](crate::error::InvalidSubnet)
 pub mod invalid_subnet {
+
     /// A builder for [`InvalidSubnet`](crate::error::InvalidSubnet)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19729,6 +19178,7 @@ impl std::fmt::Display for InsufficientDbInstanceCapacityFault {
 impl std::error::Error for InsufficientDbInstanceCapacityFault {}
 /// See [`InsufficientDbInstanceCapacityFault`](crate::error::InsufficientDbInstanceCapacityFault)
 pub mod insufficient_db_instance_capacity_fault {
+
     /// A builder for [`InsufficientDbInstanceCapacityFault`](crate::error::InsufficientDbInstanceCapacityFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19793,6 +19243,7 @@ impl std::fmt::Display for DbSubnetGroupNotFoundFault {
 impl std::error::Error for DbSubnetGroupNotFoundFault {}
 /// See [`DbSubnetGroupNotFoundFault`](crate::error::DbSubnetGroupNotFoundFault)
 pub mod db_subnet_group_not_found_fault {
+
     /// A builder for [`DbSubnetGroupNotFoundFault`](crate::error::DbSubnetGroupNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19860,6 +19311,7 @@ impl std::fmt::Display for DbSubnetGroupDoesNotCoverEnoughAZs {
 impl std::error::Error for DbSubnetGroupDoesNotCoverEnoughAZs {}
 /// See [`DbSubnetGroupDoesNotCoverEnoughAZs`](crate::error::DbSubnetGroupDoesNotCoverEnoughAZs)
 pub mod db_subnet_group_does_not_cover_enough_a_zs {
+
     /// A builder for [`DbSubnetGroupDoesNotCoverEnoughAZs`](crate::error::DbSubnetGroupDoesNotCoverEnoughAZs)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19925,6 +19377,7 @@ impl std::fmt::Display for AuthorizationNotFoundFault {
 impl std::error::Error for AuthorizationNotFoundFault {}
 /// See [`AuthorizationNotFoundFault`](crate::error::AuthorizationNotFoundFault)
 pub mod authorization_not_found_fault {
+
     /// A builder for [`AuthorizationNotFoundFault`](crate::error::AuthorizationNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -19992,6 +19445,7 @@ impl std::fmt::Display for InvalidDbSecurityGroupStateFault {
 impl std::error::Error for InvalidDbSecurityGroupStateFault {}
 /// See [`InvalidDbSecurityGroupStateFault`](crate::error::InvalidDbSecurityGroupStateFault)
 pub mod invalid_db_security_group_state_fault {
+
     /// A builder for [`InvalidDbSecurityGroupStateFault`](crate::error::InvalidDbSecurityGroupStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20059,6 +19513,7 @@ impl std::fmt::Display for DbSecurityGroupNotFoundFault {
 impl std::error::Error for DbSecurityGroupNotFoundFault {}
 /// See [`DbSecurityGroupNotFoundFault`](crate::error::DbSecurityGroupNotFoundFault)
 pub mod db_security_group_not_found_fault {
+
     /// A builder for [`DbSecurityGroupNotFoundFault`](crate::error::DbSecurityGroupNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20123,6 +19578,7 @@ impl std::fmt::Display for StorageQuotaExceededFault {
 impl std::error::Error for StorageQuotaExceededFault {}
 /// See [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault)
 pub mod storage_quota_exceeded_fault {
+
     /// A builder for [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20190,6 +19646,7 @@ impl std::fmt::Display for ProvisionedIopsNotAvailableInAzFault {
 impl std::error::Error for ProvisionedIopsNotAvailableInAzFault {}
 /// See [`ProvisionedIopsNotAvailableInAzFault`](crate::error::ProvisionedIopsNotAvailableInAzFault)
 pub mod provisioned_iops_not_available_in_az_fault {
+
     /// A builder for [`ProvisionedIopsNotAvailableInAzFault`](crate::error::ProvisionedIopsNotAvailableInAzFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20254,6 +19711,7 @@ impl std::fmt::Display for PointInTimeRestoreNotEnabledFault {
 impl std::error::Error for PointInTimeRestoreNotEnabledFault {}
 /// See [`PointInTimeRestoreNotEnabledFault`](crate::error::PointInTimeRestoreNotEnabledFault)
 pub mod point_in_time_restore_not_enabled_fault {
+
     /// A builder for [`PointInTimeRestoreNotEnabledFault`](crate::error::PointInTimeRestoreNotEnabledFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20318,6 +19776,7 @@ impl std::fmt::Display for OptionGroupNotFoundFault {
 impl std::error::Error for OptionGroupNotFoundFault {}
 /// See [`OptionGroupNotFoundFault`](crate::error::OptionGroupNotFoundFault)
 pub mod option_group_not_found_fault {
+
     /// A builder for [`OptionGroupNotFoundFault`](crate::error::OptionGroupNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20350,6 +19809,71 @@ impl OptionGroupNotFoundFault {
     }
 }
 
+/// <p>The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and <code>DUAL</code>.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct NetworkTypeNotSupported {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for NetworkTypeNotSupported {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("NetworkTypeNotSupported");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl NetworkTypeNotSupported {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for NetworkTypeNotSupported {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "NetworkTypeNotSupported")?;
+        if let Some(inner_31) = &self.message {
+            write!(f, ": {}", inner_31)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for NetworkTypeNotSupported {}
+/// See [`NetworkTypeNotSupported`](crate::error::NetworkTypeNotSupported)
+pub mod network_type_not_supported {
+
+    /// A builder for [`NetworkTypeNotSupported`](crate::error::NetworkTypeNotSupported)
+    #[non_exhaustive]
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`NetworkTypeNotSupported`](crate::error::NetworkTypeNotSupported)
+        pub fn build(self) -> crate::error::NetworkTypeNotSupported {
+            crate::error::NetworkTypeNotSupported {
+                message: self.message,
+            }
+        }
+    }
+}
+impl NetworkTypeNotSupported {
+    /// Creates a new builder-style object to manufacture [`NetworkTypeNotSupported`](crate::error::NetworkTypeNotSupported)
+    pub fn builder() -> crate::error::network_type_not_supported::Builder {
+        crate::error::network_type_not_supported::Builder::default()
+    }
+}
+
 /// <p>Cannot restore from VPC backup to non-VPC DB instance.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -20373,8 +19897,8 @@ impl InvalidRestoreFault {
 impl std::fmt::Display for InvalidRestoreFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidRestoreFault")?;
-        if let Some(inner_31) = &self.message {
-            write!(f, ": {}", inner_31)?;
+        if let Some(inner_32) = &self.message {
+            write!(f, ": {}", inner_32)?;
         }
         Ok(())
     }
@@ -20382,6 +19906,7 @@ impl std::fmt::Display for InvalidRestoreFault {
 impl std::error::Error for InvalidRestoreFault {}
 /// See [`InvalidRestoreFault`](crate::error::InvalidRestoreFault)
 pub mod invalid_restore_fault {
+
     /// A builder for [`InvalidRestoreFault`](crate::error::InvalidRestoreFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20437,8 +19962,8 @@ impl InstanceQuotaExceededFault {
 impl std::fmt::Display for InstanceQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InstanceQuotaExceededFault")?;
-        if let Some(inner_32) = &self.message {
-            write!(f, ": {}", inner_32)?;
+        if let Some(inner_33) = &self.message {
+            write!(f, ": {}", inner_33)?;
         }
         Ok(())
     }
@@ -20446,6 +19971,7 @@ impl std::fmt::Display for InstanceQuotaExceededFault {
 impl std::error::Error for InstanceQuotaExceededFault {}
 /// See [`InstanceQuotaExceededFault`](crate::error::InstanceQuotaExceededFault)
 pub mod instance_quota_exceeded_fault {
+
     /// A builder for [`InstanceQuotaExceededFault`](crate::error::InstanceQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20501,8 +20027,8 @@ impl DomainNotFoundFault {
 impl std::fmt::Display for DomainNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DomainNotFoundFault")?;
-        if let Some(inner_33) = &self.message {
-            write!(f, ": {}", inner_33)?;
+        if let Some(inner_34) = &self.message {
+            write!(f, ": {}", inner_34)?;
         }
         Ok(())
     }
@@ -20510,6 +20036,7 @@ impl std::fmt::Display for DomainNotFoundFault {
 impl std::error::Error for DomainNotFoundFault {}
 /// See [`DomainNotFoundFault`](crate::error::DomainNotFoundFault)
 pub mod domain_not_found_fault {
+
     /// A builder for [`DomainNotFoundFault`](crate::error::DomainNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20568,8 +20095,8 @@ impl std::fmt::Display for DbParameterGroupNotFoundFault {
             f,
             "DbParameterGroupNotFoundFault [DBParameterGroupNotFoundFault]"
         )?;
-        if let Some(inner_34) = &self.message {
-            write!(f, ": {}", inner_34)?;
+        if let Some(inner_35) = &self.message {
+            write!(f, ": {}", inner_35)?;
         }
         Ok(())
     }
@@ -20577,6 +20104,7 @@ impl std::fmt::Display for DbParameterGroupNotFoundFault {
 impl std::error::Error for DbParameterGroupNotFoundFault {}
 /// See [`DbParameterGroupNotFoundFault`](crate::error::DbParameterGroupNotFoundFault)
 pub mod db_parameter_group_not_found_fault {
+
     /// A builder for [`DbParameterGroupNotFoundFault`](crate::error::DbParameterGroupNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20635,8 +20163,8 @@ impl std::fmt::Display for DbInstanceAutomatedBackupNotFoundFault {
             f,
             "DbInstanceAutomatedBackupNotFoundFault [DBInstanceAutomatedBackupNotFoundFault]"
         )?;
-        if let Some(inner_35) = &self.message {
-            write!(f, ": {}", inner_35)?;
+        if let Some(inner_36) = &self.message {
+            write!(f, ": {}", inner_36)?;
         }
         Ok(())
     }
@@ -20644,6 +20172,7 @@ impl std::fmt::Display for DbInstanceAutomatedBackupNotFoundFault {
 impl std::error::Error for DbInstanceAutomatedBackupNotFoundFault {}
 /// See [`DbInstanceAutomatedBackupNotFoundFault`](crate::error::DbInstanceAutomatedBackupNotFoundFault)
 pub mod db_instance_automated_backup_not_found_fault {
+
     /// A builder for [`DbInstanceAutomatedBackupNotFoundFault`](crate::error::DbInstanceAutomatedBackupNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20702,8 +20231,8 @@ impl std::fmt::Display for DbInstanceAlreadyExistsFault {
             f,
             "DbInstanceAlreadyExistsFault [DBInstanceAlreadyExistsFault]"
         )?;
-        if let Some(inner_36) = &self.message {
-            write!(f, ": {}", inner_36)?;
+        if let Some(inner_37) = &self.message {
+            write!(f, ": {}", inner_37)?;
         }
         Ok(())
     }
@@ -20711,6 +20240,7 @@ impl std::fmt::Display for DbInstanceAlreadyExistsFault {
 impl std::error::Error for DbInstanceAlreadyExistsFault {}
 /// See [`DbInstanceAlreadyExistsFault`](crate::error::DbInstanceAlreadyExistsFault)
 pub mod db_instance_already_exists_fault {
+
     /// A builder for [`DbInstanceAlreadyExistsFault`](crate::error::DbInstanceAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20766,8 +20296,8 @@ impl BackupPolicyNotFoundFault {
 impl std::fmt::Display for BackupPolicyNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "BackupPolicyNotFoundFault")?;
-        if let Some(inner_37) = &self.message {
-            write!(f, ": {}", inner_37)?;
+        if let Some(inner_38) = &self.message {
+            write!(f, ": {}", inner_38)?;
         }
         Ok(())
     }
@@ -20775,6 +20305,7 @@ impl std::fmt::Display for BackupPolicyNotFoundFault {
 impl std::error::Error for BackupPolicyNotFoundFault {}
 /// See [`BackupPolicyNotFoundFault`](crate::error::BackupPolicyNotFoundFault)
 pub mod backup_policy_not_found_fault {
+
     /// A builder for [`BackupPolicyNotFoundFault`](crate::error::BackupPolicyNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20833,8 +20364,8 @@ impl std::fmt::Display for InvalidDbSnapshotStateFault {
             f,
             "InvalidDbSnapshotStateFault [InvalidDBSnapshotStateFault]"
         )?;
-        if let Some(inner_38) = &self.message {
-            write!(f, ": {}", inner_38)?;
+        if let Some(inner_39) = &self.message {
+            write!(f, ": {}", inner_39)?;
         }
         Ok(())
     }
@@ -20842,6 +20373,7 @@ impl std::fmt::Display for InvalidDbSnapshotStateFault {
 impl std::error::Error for InvalidDbSnapshotStateFault {}
 /// See [`InvalidDbSnapshotStateFault`](crate::error::InvalidDbSnapshotStateFault)
 pub mod invalid_db_snapshot_state_fault {
+
     /// A builder for [`InvalidDbSnapshotStateFault`](crate::error::InvalidDbSnapshotStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20900,8 +20432,8 @@ impl std::fmt::Display for InvalidDbClusterSnapshotStateFault {
             f,
             "InvalidDbClusterSnapshotStateFault [InvalidDBClusterSnapshotStateFault]"
         )?;
-        if let Some(inner_39) = &self.message {
-            write!(f, ": {}", inner_39)?;
+        if let Some(inner_40) = &self.message {
+            write!(f, ": {}", inner_40)?;
         }
         Ok(())
     }
@@ -20909,6 +20441,7 @@ impl std::fmt::Display for InvalidDbClusterSnapshotStateFault {
 impl std::error::Error for InvalidDbClusterSnapshotStateFault {}
 /// See [`InvalidDbClusterSnapshotStateFault`](crate::error::InvalidDbClusterSnapshotStateFault)
 pub mod invalid_db_cluster_snapshot_state_fault {
+
     /// A builder for [`InvalidDbClusterSnapshotStateFault`](crate::error::InvalidDbClusterSnapshotStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -20964,8 +20497,8 @@ impl InsufficientStorageClusterCapacityFault {
 impl std::fmt::Display for InsufficientStorageClusterCapacityFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InsufficientStorageClusterCapacityFault")?;
-        if let Some(inner_40) = &self.message {
-            write!(f, ": {}", inner_40)?;
+        if let Some(inner_41) = &self.message {
+            write!(f, ": {}", inner_41)?;
         }
         Ok(())
     }
@@ -20973,6 +20506,7 @@ impl std::fmt::Display for InsufficientStorageClusterCapacityFault {
 impl std::error::Error for InsufficientStorageClusterCapacityFault {}
 /// See [`InsufficientStorageClusterCapacityFault`](crate::error::InsufficientStorageClusterCapacityFault)
 pub mod insufficient_storage_cluster_capacity_fault {
+
     /// A builder for [`InsufficientStorageClusterCapacityFault`](crate::error::InsufficientStorageClusterCapacityFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21031,8 +20565,8 @@ impl std::fmt::Display for InsufficientDbClusterCapacityFault {
             f,
             "InsufficientDbClusterCapacityFault [InsufficientDBClusterCapacityFault]"
         )?;
-        if let Some(inner_41) = &self.message {
-            write!(f, ": {}", inner_41)?;
+        if let Some(inner_42) = &self.message {
+            write!(f, ": {}", inner_42)?;
         }
         Ok(())
     }
@@ -21040,6 +20574,7 @@ impl std::fmt::Display for InsufficientDbClusterCapacityFault {
 impl std::error::Error for InsufficientDbClusterCapacityFault {}
 /// See [`InsufficientDbClusterCapacityFault`](crate::error::InsufficientDbClusterCapacityFault)
 pub mod insufficient_db_cluster_capacity_fault {
+
     /// A builder for [`InsufficientDbClusterCapacityFault`](crate::error::InsufficientDbClusterCapacityFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21098,8 +20633,8 @@ impl std::fmt::Display for DbClusterQuotaExceededFault {
             f,
             "DbClusterQuotaExceededFault [DBClusterQuotaExceededFault]"
         )?;
-        if let Some(inner_42) = &self.message {
-            write!(f, ": {}", inner_42)?;
+        if let Some(inner_43) = &self.message {
+            write!(f, ": {}", inner_43)?;
         }
         Ok(())
     }
@@ -21107,6 +20642,7 @@ impl std::fmt::Display for DbClusterQuotaExceededFault {
 impl std::error::Error for DbClusterQuotaExceededFault {}
 /// See [`DbClusterQuotaExceededFault`](crate::error::DbClusterQuotaExceededFault)
 pub mod db_cluster_quota_exceeded_fault {
+
     /// A builder for [`DbClusterQuotaExceededFault`](crate::error::DbClusterQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21165,8 +20701,8 @@ impl std::fmt::Display for DbClusterParameterGroupNotFoundFault {
             f,
             "DbClusterParameterGroupNotFoundFault [DBClusterParameterGroupNotFoundFault]"
         )?;
-        if let Some(inner_43) = &self.message {
-            write!(f, ": {}", inner_43)?;
+        if let Some(inner_44) = &self.message {
+            write!(f, ": {}", inner_44)?;
         }
         Ok(())
     }
@@ -21174,6 +20710,7 @@ impl std::fmt::Display for DbClusterParameterGroupNotFoundFault {
 impl std::error::Error for DbClusterParameterGroupNotFoundFault {}
 /// See [`DbClusterParameterGroupNotFoundFault`](crate::error::DbClusterParameterGroupNotFoundFault)
 pub mod db_cluster_parameter_group_not_found_fault {
+
     /// A builder for [`DbClusterParameterGroupNotFoundFault`](crate::error::DbClusterParameterGroupNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21232,8 +20769,8 @@ impl std::fmt::Display for DbClusterAlreadyExistsFault {
             f,
             "DbClusterAlreadyExistsFault [DBClusterAlreadyExistsFault]"
         )?;
-        if let Some(inner_44) = &self.message {
-            write!(f, ": {}", inner_44)?;
+        if let Some(inner_45) = &self.message {
+            write!(f, ": {}", inner_45)?;
         }
         Ok(())
     }
@@ -21241,6 +20778,7 @@ impl std::fmt::Display for DbClusterAlreadyExistsFault {
 impl std::error::Error for DbClusterAlreadyExistsFault {}
 /// See [`DbClusterAlreadyExistsFault`](crate::error::DbClusterAlreadyExistsFault)
 pub mod db_cluster_already_exists_fault {
+
     /// A builder for [`DbClusterAlreadyExistsFault`](crate::error::DbClusterAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21299,8 +20837,8 @@ impl std::fmt::Display for InvalidDbSubnetGroupStateFault {
             f,
             "InvalidDbSubnetGroupStateFault [InvalidDBSubnetGroupStateFault]"
         )?;
-        if let Some(inner_45) = &self.message {
-            write!(f, ": {}", inner_45)?;
+        if let Some(inner_46) = &self.message {
+            write!(f, ": {}", inner_46)?;
         }
         Ok(())
     }
@@ -21308,6 +20846,7 @@ impl std::fmt::Display for InvalidDbSubnetGroupStateFault {
 impl std::error::Error for InvalidDbSubnetGroupStateFault {}
 /// See [`InvalidDbSubnetGroupStateFault`](crate::error::InvalidDbSubnetGroupStateFault)
 pub mod invalid_db_subnet_group_state_fault {
+
     /// A builder for [`InvalidDbSubnetGroupStateFault`](crate::error::InvalidDbSubnetGroupStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21366,8 +20905,8 @@ impl std::fmt::Display for InvalidDbParameterGroupStateFault {
             f,
             "InvalidDbParameterGroupStateFault [InvalidDBParameterGroupStateFault]"
         )?;
-        if let Some(inner_46) = &self.message {
-            write!(f, ": {}", inner_46)?;
+        if let Some(inner_47) = &self.message {
+            write!(f, ": {}", inner_47)?;
         }
         Ok(())
     }
@@ -21375,6 +20914,7 @@ impl std::fmt::Display for InvalidDbParameterGroupStateFault {
 impl std::error::Error for InvalidDbParameterGroupStateFault {}
 /// See [`InvalidDbParameterGroupStateFault`](crate::error::InvalidDbParameterGroupStateFault)
 pub mod invalid_db_parameter_group_state_fault {
+
     /// A builder for [`InvalidDbParameterGroupStateFault`](crate::error::InvalidDbParameterGroupStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21433,8 +20973,8 @@ impl std::fmt::Display for DbProxyTargetGroupNotFoundFault {
             f,
             "DbProxyTargetGroupNotFoundFault [DBProxyTargetGroupNotFoundFault]"
         )?;
-        if let Some(inner_47) = &self.message {
-            write!(f, ": {}", inner_47)?;
+        if let Some(inner_48) = &self.message {
+            write!(f, ": {}", inner_48)?;
         }
         Ok(())
     }
@@ -21442,6 +20982,7 @@ impl std::fmt::Display for DbProxyTargetGroupNotFoundFault {
 impl std::error::Error for DbProxyTargetGroupNotFoundFault {}
 /// See [`DbProxyTargetGroupNotFoundFault`](crate::error::DbProxyTargetGroupNotFoundFault)
 pub mod db_proxy_target_group_not_found_fault {
+
     /// A builder for [`DbProxyTargetGroupNotFoundFault`](crate::error::DbProxyTargetGroupNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21497,8 +21038,8 @@ impl DbProxyNotFoundFault {
 impl std::fmt::Display for DbProxyNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DbProxyNotFoundFault [DBProxyNotFoundFault]")?;
-        if let Some(inner_48) = &self.message {
-            write!(f, ": {}", inner_48)?;
+        if let Some(inner_49) = &self.message {
+            write!(f, ": {}", inner_49)?;
         }
         Ok(())
     }
@@ -21506,6 +21047,7 @@ impl std::fmt::Display for DbProxyNotFoundFault {
 impl std::error::Error for DbProxyNotFoundFault {}
 /// See [`DbProxyNotFoundFault`](crate::error::DbProxyNotFoundFault)
 pub mod db_proxy_not_found_fault {
+
     /// A builder for [`DbProxyNotFoundFault`](crate::error::DbProxyNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21561,8 +21103,8 @@ impl SubscriptionNotFoundFault {
 impl std::fmt::Display for SubscriptionNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SubscriptionNotFoundFault")?;
-        if let Some(inner_49) = &self.message {
-            write!(f, ": {}", inner_49)?;
+        if let Some(inner_50) = &self.message {
+            write!(f, ": {}", inner_50)?;
         }
         Ok(())
     }
@@ -21570,6 +21112,7 @@ impl std::fmt::Display for SubscriptionNotFoundFault {
 impl std::error::Error for SubscriptionNotFoundFault {}
 /// See [`SubscriptionNotFoundFault`](crate::error::SubscriptionNotFoundFault)
 pub mod subscription_not_found_fault {
+
     /// A builder for [`SubscriptionNotFoundFault`](crate::error::SubscriptionNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21625,8 +21168,8 @@ impl SourceNotFoundFault {
 impl std::fmt::Display for SourceNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SourceNotFoundFault")?;
-        if let Some(inner_50) = &self.message {
-            write!(f, ": {}", inner_50)?;
+        if let Some(inner_51) = &self.message {
+            write!(f, ": {}", inner_51)?;
         }
         Ok(())
     }
@@ -21634,6 +21177,7 @@ impl std::fmt::Display for SourceNotFoundFault {
 impl std::error::Error for SourceNotFoundFault {}
 /// See [`SourceNotFoundFault`](crate::error::SourceNotFoundFault)
 pub mod source_not_found_fault {
+
     /// A builder for [`SourceNotFoundFault`](crate::error::SourceNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21692,8 +21236,8 @@ impl std::fmt::Display for DbInstanceRoleNotFoundFault {
             f,
             "DbInstanceRoleNotFoundFault [DBInstanceRoleNotFoundFault]"
         )?;
-        if let Some(inner_51) = &self.message {
-            write!(f, ": {}", inner_51)?;
+        if let Some(inner_52) = &self.message {
+            write!(f, ": {}", inner_52)?;
         }
         Ok(())
     }
@@ -21701,6 +21245,7 @@ impl std::fmt::Display for DbInstanceRoleNotFoundFault {
 impl std::error::Error for DbInstanceRoleNotFoundFault {}
 /// See [`DbInstanceRoleNotFoundFault`](crate::error::DbInstanceRoleNotFoundFault)
 pub mod db_instance_role_not_found_fault {
+
     /// A builder for [`DbInstanceRoleNotFoundFault`](crate::error::DbInstanceRoleNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21756,8 +21301,8 @@ impl DbClusterRoleNotFoundFault {
 impl std::fmt::Display for DbClusterRoleNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DbClusterRoleNotFoundFault [DBClusterRoleNotFoundFault]")?;
-        if let Some(inner_52) = &self.message {
-            write!(f, ": {}", inner_52)?;
+        if let Some(inner_53) = &self.message {
+            write!(f, ": {}", inner_53)?;
         }
         Ok(())
     }
@@ -21765,6 +21310,7 @@ impl std::fmt::Display for DbClusterRoleNotFoundFault {
 impl std::error::Error for DbClusterRoleNotFoundFault {}
 /// See [`DbClusterRoleNotFoundFault`](crate::error::DbClusterRoleNotFoundFault)
 pub mod db_cluster_role_not_found_fault {
+
     /// A builder for [`DbClusterRoleNotFoundFault`](crate::error::DbClusterRoleNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21820,8 +21366,8 @@ impl InvalidGlobalClusterStateFault {
 impl std::fmt::Display for InvalidGlobalClusterStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidGlobalClusterStateFault")?;
-        if let Some(inner_53) = &self.message {
-            write!(f, ": {}", inner_53)?;
+        if let Some(inner_54) = &self.message {
+            write!(f, ": {}", inner_54)?;
         }
         Ok(())
     }
@@ -21829,6 +21375,7 @@ impl std::fmt::Display for InvalidGlobalClusterStateFault {
 impl std::error::Error for InvalidGlobalClusterStateFault {}
 /// See [`InvalidGlobalClusterStateFault`](crate::error::InvalidGlobalClusterStateFault)
 pub mod invalid_global_cluster_state_fault {
+
     /// A builder for [`InvalidGlobalClusterStateFault`](crate::error::InvalidGlobalClusterStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21884,8 +21431,8 @@ impl GlobalClusterNotFoundFault {
 impl std::fmt::Display for GlobalClusterNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "GlobalClusterNotFoundFault")?;
-        if let Some(inner_54) = &self.message {
-            write!(f, ": {}", inner_54)?;
+        if let Some(inner_55) = &self.message {
+            write!(f, ": {}", inner_55)?;
         }
         Ok(())
     }
@@ -21893,6 +21440,7 @@ impl std::fmt::Display for GlobalClusterNotFoundFault {
 impl std::error::Error for GlobalClusterNotFoundFault {}
 /// See [`GlobalClusterNotFoundFault`](crate::error::GlobalClusterNotFoundFault)
 pub mod global_cluster_not_found_fault {
+
     /// A builder for [`GlobalClusterNotFoundFault`](crate::error::GlobalClusterNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -21948,8 +21496,8 @@ impl InvalidDbProxyStateFault {
 impl std::fmt::Display for InvalidDbProxyStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidDbProxyStateFault [InvalidDBProxyStateFault]")?;
-        if let Some(inner_55) = &self.message {
-            write!(f, ": {}", inner_55)?;
+        if let Some(inner_56) = &self.message {
+            write!(f, ": {}", inner_56)?;
         }
         Ok(())
     }
@@ -21957,6 +21505,7 @@ impl std::fmt::Display for InvalidDbProxyStateFault {
 impl std::error::Error for InvalidDbProxyStateFault {}
 /// See [`InvalidDbProxyStateFault`](crate::error::InvalidDbProxyStateFault)
 pub mod invalid_db_proxy_state_fault {
+
     /// A builder for [`InvalidDbProxyStateFault`](crate::error::InvalidDbProxyStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22012,8 +21561,8 @@ impl InsufficientAvailableIPsInSubnetFault {
 impl std::fmt::Display for InsufficientAvailableIPsInSubnetFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InsufficientAvailableIPsInSubnetFault")?;
-        if let Some(inner_56) = &self.message {
-            write!(f, ": {}", inner_56)?;
+        if let Some(inner_57) = &self.message {
+            write!(f, ": {}", inner_57)?;
         }
         Ok(())
     }
@@ -22021,6 +21570,7 @@ impl std::fmt::Display for InsufficientAvailableIPsInSubnetFault {
 impl std::error::Error for InsufficientAvailableIPsInSubnetFault {}
 /// See [`InsufficientAvailableIPsInSubnetFault`](crate::error::InsufficientAvailableIPsInSubnetFault)
 pub mod insufficient_available_i_ps_in_subnet_fault {
+
     /// A builder for [`InsufficientAvailableIPsInSubnetFault`](crate::error::InsufficientAvailableIPsInSubnetFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22079,8 +21629,8 @@ impl std::fmt::Display for DbProxyTargetAlreadyRegisteredFault {
             f,
             "DbProxyTargetAlreadyRegisteredFault [DBProxyTargetAlreadyRegisteredFault]"
         )?;
-        if let Some(inner_57) = &self.message {
-            write!(f, ": {}", inner_57)?;
+        if let Some(inner_58) = &self.message {
+            write!(f, ": {}", inner_58)?;
         }
         Ok(())
     }
@@ -22088,6 +21638,7 @@ impl std::fmt::Display for DbProxyTargetAlreadyRegisteredFault {
 impl std::error::Error for DbProxyTargetAlreadyRegisteredFault {}
 /// See [`DbProxyTargetAlreadyRegisteredFault`](crate::error::DbProxyTargetAlreadyRegisteredFault)
 pub mod db_proxy_target_already_registered_fault {
+
     /// A builder for [`DbProxyTargetAlreadyRegisteredFault`](crate::error::DbProxyTargetAlreadyRegisteredFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22146,8 +21697,8 @@ impl std::fmt::Display for ReservedDbInstancesOfferingNotFoundFault {
             f,
             "ReservedDbInstancesOfferingNotFoundFault [ReservedDBInstancesOfferingNotFoundFault]"
         )?;
-        if let Some(inner_58) = &self.message {
-            write!(f, ": {}", inner_58)?;
+        if let Some(inner_59) = &self.message {
+            write!(f, ": {}", inner_59)?;
         }
         Ok(())
     }
@@ -22155,6 +21706,7 @@ impl std::fmt::Display for ReservedDbInstancesOfferingNotFoundFault {
 impl std::error::Error for ReservedDbInstancesOfferingNotFoundFault {}
 /// See [`ReservedDbInstancesOfferingNotFoundFault`](crate::error::ReservedDbInstancesOfferingNotFoundFault)
 pub mod reserved_db_instances_offering_not_found_fault {
+
     /// A builder for [`ReservedDbInstancesOfferingNotFoundFault`](crate::error::ReservedDbInstancesOfferingNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22213,8 +21765,8 @@ impl std::fmt::Display for ReservedDbInstanceQuotaExceededFault {
             f,
             "ReservedDbInstanceQuotaExceededFault [ReservedDBInstanceQuotaExceededFault]"
         )?;
-        if let Some(inner_59) = &self.message {
-            write!(f, ": {}", inner_59)?;
+        if let Some(inner_60) = &self.message {
+            write!(f, ": {}", inner_60)?;
         }
         Ok(())
     }
@@ -22222,6 +21774,7 @@ impl std::fmt::Display for ReservedDbInstanceQuotaExceededFault {
 impl std::error::Error for ReservedDbInstanceQuotaExceededFault {}
 /// See [`ReservedDbInstanceQuotaExceededFault`](crate::error::ReservedDbInstanceQuotaExceededFault)
 pub mod reserved_db_instance_quota_exceeded_fault {
+
     /// A builder for [`ReservedDbInstanceQuotaExceededFault`](crate::error::ReservedDbInstanceQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22280,8 +21833,8 @@ impl std::fmt::Display for ReservedDbInstanceAlreadyExistsFault {
             f,
             "ReservedDbInstanceAlreadyExistsFault [ReservedDBInstanceAlreadyExistsFault]"
         )?;
-        if let Some(inner_60) = &self.message {
-            write!(f, ": {}", inner_60)?;
+        if let Some(inner_61) = &self.message {
+            write!(f, ": {}", inner_61)?;
         }
         Ok(())
     }
@@ -22289,6 +21842,7 @@ impl std::fmt::Display for ReservedDbInstanceAlreadyExistsFault {
 impl std::error::Error for ReservedDbInstanceAlreadyExistsFault {}
 /// See [`ReservedDbInstanceAlreadyExistsFault`](crate::error::ReservedDbInstanceAlreadyExistsFault)
 pub mod reserved_db_instance_already_exists_fault {
+
     /// A builder for [`ReservedDbInstanceAlreadyExistsFault`](crate::error::ReservedDbInstanceAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22344,8 +21898,8 @@ impl InvalidOptionGroupStateFault {
 impl std::fmt::Display for InvalidOptionGroupStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidOptionGroupStateFault")?;
-        if let Some(inner_61) = &self.message {
-            write!(f, ": {}", inner_61)?;
+        if let Some(inner_62) = &self.message {
+            write!(f, ": {}", inner_62)?;
         }
         Ok(())
     }
@@ -22353,6 +21907,7 @@ impl std::fmt::Display for InvalidOptionGroupStateFault {
 impl std::error::Error for InvalidOptionGroupStateFault {}
 /// See [`InvalidOptionGroupStateFault`](crate::error::InvalidOptionGroupStateFault)
 pub mod invalid_option_group_state_fault {
+
     /// A builder for [`InvalidOptionGroupStateFault`](crate::error::InvalidOptionGroupStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22408,8 +21963,8 @@ impl SubscriptionCategoryNotFoundFault {
 impl std::fmt::Display for SubscriptionCategoryNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SubscriptionCategoryNotFoundFault")?;
-        if let Some(inner_62) = &self.message {
-            write!(f, ": {}", inner_62)?;
+        if let Some(inner_63) = &self.message {
+            write!(f, ": {}", inner_63)?;
         }
         Ok(())
     }
@@ -22417,6 +21972,7 @@ impl std::fmt::Display for SubscriptionCategoryNotFoundFault {
 impl std::error::Error for SubscriptionCategoryNotFoundFault {}
 /// See [`SubscriptionCategoryNotFoundFault`](crate::error::SubscriptionCategoryNotFoundFault)
 pub mod subscription_category_not_found_fault {
+
     /// A builder for [`SubscriptionCategoryNotFoundFault`](crate::error::SubscriptionCategoryNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22472,8 +22028,8 @@ impl SnsTopicArnNotFoundFault {
 impl std::fmt::Display for SnsTopicArnNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SnsTopicArnNotFoundFault [SNSTopicArnNotFoundFault]")?;
-        if let Some(inner_63) = &self.message {
-            write!(f, ": {}", inner_63)?;
+        if let Some(inner_64) = &self.message {
+            write!(f, ": {}", inner_64)?;
         }
         Ok(())
     }
@@ -22481,6 +22037,7 @@ impl std::fmt::Display for SnsTopicArnNotFoundFault {
 impl std::error::Error for SnsTopicArnNotFoundFault {}
 /// See [`SnsTopicArnNotFoundFault`](crate::error::SnsTopicArnNotFoundFault)
 pub mod sns_topic_arn_not_found_fault {
+
     /// A builder for [`SnsTopicArnNotFoundFault`](crate::error::SnsTopicArnNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22536,8 +22093,8 @@ impl SnsNoAuthorizationFault {
 impl std::fmt::Display for SnsNoAuthorizationFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SnsNoAuthorizationFault [SNSNoAuthorizationFault]")?;
-        if let Some(inner_64) = &self.message {
-            write!(f, ": {}", inner_64)?;
+        if let Some(inner_65) = &self.message {
+            write!(f, ": {}", inner_65)?;
         }
         Ok(())
     }
@@ -22545,6 +22102,7 @@ impl std::fmt::Display for SnsNoAuthorizationFault {
 impl std::error::Error for SnsNoAuthorizationFault {}
 /// See [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault)
 pub mod sns_no_authorization_fault {
+
     /// A builder for [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22600,8 +22158,8 @@ impl SnsInvalidTopicFault {
 impl std::fmt::Display for SnsInvalidTopicFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SnsInvalidTopicFault [SNSInvalidTopicFault]")?;
-        if let Some(inner_65) = &self.message {
-            write!(f, ": {}", inner_65)?;
+        if let Some(inner_66) = &self.message {
+            write!(f, ": {}", inner_66)?;
         }
         Ok(())
     }
@@ -22609,6 +22167,7 @@ impl std::fmt::Display for SnsInvalidTopicFault {
 impl std::error::Error for SnsInvalidTopicFault {}
 /// See [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault)
 pub mod sns_invalid_topic_fault {
+
     /// A builder for [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22664,8 +22223,8 @@ impl EventSubscriptionQuotaExceededFault {
 impl std::fmt::Display for EventSubscriptionQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "EventSubscriptionQuotaExceededFault")?;
-        if let Some(inner_66) = &self.message {
-            write!(f, ": {}", inner_66)?;
+        if let Some(inner_67) = &self.message {
+            write!(f, ": {}", inner_67)?;
         }
         Ok(())
     }
@@ -22673,6 +22232,7 @@ impl std::fmt::Display for EventSubscriptionQuotaExceededFault {
 impl std::error::Error for EventSubscriptionQuotaExceededFault {}
 /// See [`EventSubscriptionQuotaExceededFault`](crate::error::EventSubscriptionQuotaExceededFault)
 pub mod event_subscription_quota_exceeded_fault {
+
     /// A builder for [`EventSubscriptionQuotaExceededFault`](crate::error::EventSubscriptionQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22728,8 +22288,8 @@ impl SubnetAlreadyInUse {
 impl std::fmt::Display for SubnetAlreadyInUse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SubnetAlreadyInUse")?;
-        if let Some(inner_67) = &self.message {
-            write!(f, ": {}", inner_67)?;
+        if let Some(inner_68) = &self.message {
+            write!(f, ": {}", inner_68)?;
         }
         Ok(())
     }
@@ -22737,6 +22297,7 @@ impl std::fmt::Display for SubnetAlreadyInUse {
 impl std::error::Error for SubnetAlreadyInUse {}
 /// See [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse)
 pub mod subnet_already_in_use {
+
     /// A builder for [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22792,8 +22353,8 @@ impl DbSubnetQuotaExceededFault {
 impl std::fmt::Display for DbSubnetQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DbSubnetQuotaExceededFault [DBSubnetQuotaExceededFault]")?;
-        if let Some(inner_68) = &self.message {
-            write!(f, ": {}", inner_68)?;
+        if let Some(inner_69) = &self.message {
+            write!(f, ": {}", inner_69)?;
         }
         Ok(())
     }
@@ -22801,6 +22362,7 @@ impl std::fmt::Display for DbSubnetQuotaExceededFault {
 impl std::error::Error for DbSubnetQuotaExceededFault {}
 /// See [`DbSubnetQuotaExceededFault`](crate::error::DbSubnetQuotaExceededFault)
 pub mod db_subnet_quota_exceeded_fault {
+
     /// A builder for [`DbSubnetQuotaExceededFault`](crate::error::DbSubnetQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22856,8 +22418,8 @@ impl SharedSnapshotQuotaExceededFault {
 impl std::fmt::Display for SharedSnapshotQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SharedSnapshotQuotaExceededFault")?;
-        if let Some(inner_69) = &self.message {
-            write!(f, ": {}", inner_69)?;
+        if let Some(inner_70) = &self.message {
+            write!(f, ": {}", inner_70)?;
         }
         Ok(())
     }
@@ -22865,6 +22427,7 @@ impl std::fmt::Display for SharedSnapshotQuotaExceededFault {
 impl std::error::Error for SharedSnapshotQuotaExceededFault {}
 /// See [`SharedSnapshotQuotaExceededFault`](crate::error::SharedSnapshotQuotaExceededFault)
 pub mod shared_snapshot_quota_exceeded_fault {
+
     /// A builder for [`SharedSnapshotQuotaExceededFault`](crate::error::SharedSnapshotQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22923,8 +22486,8 @@ impl std::fmt::Display for InvalidDbProxyEndpointStateFault {
             f,
             "InvalidDbProxyEndpointStateFault [InvalidDBProxyEndpointStateFault]"
         )?;
-        if let Some(inner_70) = &self.message {
-            write!(f, ": {}", inner_70)?;
+        if let Some(inner_71) = &self.message {
+            write!(f, ": {}", inner_71)?;
         }
         Ok(())
     }
@@ -22932,6 +22495,7 @@ impl std::fmt::Display for InvalidDbProxyEndpointStateFault {
 impl std::error::Error for InvalidDbProxyEndpointStateFault {}
 /// See [`InvalidDbProxyEndpointStateFault`](crate::error::InvalidDbProxyEndpointStateFault)
 pub mod invalid_db_proxy_endpoint_state_fault {
+
     /// A builder for [`InvalidDbProxyEndpointStateFault`](crate::error::InvalidDbProxyEndpointStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -22990,8 +22554,8 @@ impl std::fmt::Display for DbProxyEndpointNotFoundFault {
             f,
             "DbProxyEndpointNotFoundFault [DBProxyEndpointNotFoundFault]"
         )?;
-        if let Some(inner_71) = &self.message {
-            write!(f, ": {}", inner_71)?;
+        if let Some(inner_72) = &self.message {
+            write!(f, ": {}", inner_72)?;
         }
         Ok(())
     }
@@ -22999,6 +22563,7 @@ impl std::fmt::Display for DbProxyEndpointNotFoundFault {
 impl std::error::Error for DbProxyEndpointNotFoundFault {}
 /// See [`DbProxyEndpointNotFoundFault`](crate::error::DbProxyEndpointNotFoundFault)
 pub mod db_proxy_endpoint_not_found_fault {
+
     /// A builder for [`DbProxyEndpointNotFoundFault`](crate::error::DbProxyEndpointNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23057,8 +22622,8 @@ impl std::fmt::Display for DbProxyEndpointAlreadyExistsFault {
             f,
             "DbProxyEndpointAlreadyExistsFault [DBProxyEndpointAlreadyExistsFault]"
         )?;
-        if let Some(inner_72) = &self.message {
-            write!(f, ": {}", inner_72)?;
+        if let Some(inner_73) = &self.message {
+            write!(f, ": {}", inner_73)?;
         }
         Ok(())
     }
@@ -23066,6 +22631,7 @@ impl std::fmt::Display for DbProxyEndpointAlreadyExistsFault {
 impl std::error::Error for DbProxyEndpointAlreadyExistsFault {}
 /// See [`DbProxyEndpointAlreadyExistsFault`](crate::error::DbProxyEndpointAlreadyExistsFault)
 pub mod db_proxy_endpoint_already_exists_fault {
+
     /// A builder for [`DbProxyEndpointAlreadyExistsFault`](crate::error::DbProxyEndpointAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23121,8 +22687,8 @@ impl DbProxyAlreadyExistsFault {
 impl std::fmt::Display for DbProxyAlreadyExistsFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DbProxyAlreadyExistsFault [DBProxyAlreadyExistsFault]")?;
-        if let Some(inner_73) = &self.message {
-            write!(f, ": {}", inner_73)?;
+        if let Some(inner_74) = &self.message {
+            write!(f, ": {}", inner_74)?;
         }
         Ok(())
     }
@@ -23130,6 +22696,7 @@ impl std::fmt::Display for DbProxyAlreadyExistsFault {
 impl std::error::Error for DbProxyAlreadyExistsFault {}
 /// See [`DbProxyAlreadyExistsFault`](crate::error::DbProxyAlreadyExistsFault)
 pub mod db_proxy_already_exists_fault {
+
     /// A builder for [`DbProxyAlreadyExistsFault`](crate::error::DbProxyAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23188,8 +22755,8 @@ impl std::fmt::Display for DbUpgradeDependencyFailureFault {
             f,
             "DbUpgradeDependencyFailureFault [DBUpgradeDependencyFailureFault]"
         )?;
-        if let Some(inner_74) = &self.message {
-            write!(f, ": {}", inner_74)?;
+        if let Some(inner_75) = &self.message {
+            write!(f, ": {}", inner_75)?;
         }
         Ok(())
     }
@@ -23197,6 +22764,7 @@ impl std::fmt::Display for DbUpgradeDependencyFailureFault {
 impl std::error::Error for DbUpgradeDependencyFailureFault {}
 /// See [`DbUpgradeDependencyFailureFault`](crate::error::DbUpgradeDependencyFailureFault)
 pub mod db_upgrade_dependency_failure_fault {
+
     /// A builder for [`DbUpgradeDependencyFailureFault`](crate::error::DbUpgradeDependencyFailureFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23252,8 +22820,8 @@ impl CertificateNotFoundFault {
 impl std::fmt::Display for CertificateNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "CertificateNotFoundFault")?;
-        if let Some(inner_75) = &self.message {
-            write!(f, ": {}", inner_75)?;
+        if let Some(inner_76) = &self.message {
+            write!(f, ": {}", inner_76)?;
         }
         Ok(())
     }
@@ -23261,6 +22829,7 @@ impl std::fmt::Display for CertificateNotFoundFault {
 impl std::error::Error for CertificateNotFoundFault {}
 /// See [`CertificateNotFoundFault`](crate::error::CertificateNotFoundFault)
 pub mod certificate_not_found_fault {
+
     /// A builder for [`CertificateNotFoundFault`](crate::error::CertificateNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23319,8 +22888,8 @@ impl std::fmt::Display for InvalidDbClusterEndpointStateFault {
             f,
             "InvalidDbClusterEndpointStateFault [InvalidDBClusterEndpointStateFault]"
         )?;
-        if let Some(inner_76) = &self.message {
-            write!(f, ": {}", inner_76)?;
+        if let Some(inner_77) = &self.message {
+            write!(f, ": {}", inner_77)?;
         }
         Ok(())
     }
@@ -23328,6 +22897,7 @@ impl std::fmt::Display for InvalidDbClusterEndpointStateFault {
 impl std::error::Error for InvalidDbClusterEndpointStateFault {}
 /// See [`InvalidDbClusterEndpointStateFault`](crate::error::InvalidDbClusterEndpointStateFault)
 pub mod invalid_db_cluster_endpoint_state_fault {
+
     /// A builder for [`InvalidDbClusterEndpointStateFault`](crate::error::InvalidDbClusterEndpointStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23386,8 +22956,8 @@ impl std::fmt::Display for DbClusterEndpointNotFoundFault {
             f,
             "DbClusterEndpointNotFoundFault [DBClusterEndpointNotFoundFault]"
         )?;
-        if let Some(inner_77) = &self.message {
-            write!(f, ": {}", inner_77)?;
+        if let Some(inner_78) = &self.message {
+            write!(f, ": {}", inner_78)?;
         }
         Ok(())
     }
@@ -23395,6 +22965,7 @@ impl std::fmt::Display for DbClusterEndpointNotFoundFault {
 impl std::error::Error for DbClusterEndpointNotFoundFault {}
 /// See [`DbClusterEndpointNotFoundFault`](crate::error::DbClusterEndpointNotFoundFault)
 pub mod db_cluster_endpoint_not_found_fault {
+
     /// A builder for [`DbClusterEndpointNotFoundFault`](crate::error::DbClusterEndpointNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23453,8 +23024,8 @@ impl std::fmt::Display for InvalidCustomDbEngineVersionStateFault {
             f,
             "InvalidCustomDbEngineVersionStateFault [InvalidCustomDBEngineVersionStateFault]"
         )?;
-        if let Some(inner_78) = &self.message {
-            write!(f, ": {}", inner_78)?;
+        if let Some(inner_79) = &self.message {
+            write!(f, ": {}", inner_79)?;
         }
         Ok(())
     }
@@ -23462,6 +23033,7 @@ impl std::fmt::Display for InvalidCustomDbEngineVersionStateFault {
 impl std::error::Error for InvalidCustomDbEngineVersionStateFault {}
 /// See [`InvalidCustomDbEngineVersionStateFault`](crate::error::InvalidCustomDbEngineVersionStateFault)
 pub mod invalid_custom_db_engine_version_state_fault {
+
     /// A builder for [`InvalidCustomDbEngineVersionStateFault`](crate::error::InvalidCustomDbEngineVersionStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23520,8 +23092,8 @@ impl std::fmt::Display for CustomDbEngineVersionNotFoundFault {
             f,
             "CustomDbEngineVersionNotFoundFault [CustomDBEngineVersionNotFoundFault]"
         )?;
-        if let Some(inner_79) = &self.message {
-            write!(f, ": {}", inner_79)?;
+        if let Some(inner_80) = &self.message {
+            write!(f, ": {}", inner_80)?;
         }
         Ok(())
     }
@@ -23529,6 +23101,7 @@ impl std::fmt::Display for CustomDbEngineVersionNotFoundFault {
 impl std::error::Error for CustomDbEngineVersionNotFoundFault {}
 /// See [`CustomDbEngineVersionNotFoundFault`](crate::error::CustomDbEngineVersionNotFoundFault)
 pub mod custom_db_engine_version_not_found_fault {
+
     /// A builder for [`CustomDbEngineVersionNotFoundFault`](crate::error::CustomDbEngineVersionNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23587,8 +23160,8 @@ impl std::fmt::Display for InvalidDbClusterCapacityFault {
             f,
             "InvalidDbClusterCapacityFault [InvalidDBClusterCapacityFault]"
         )?;
-        if let Some(inner_80) = &self.message {
-            write!(f, ": {}", inner_80)?;
+        if let Some(inner_81) = &self.message {
+            write!(f, ": {}", inner_81)?;
         }
         Ok(())
     }
@@ -23596,6 +23169,7 @@ impl std::fmt::Display for InvalidDbClusterCapacityFault {
 impl std::error::Error for InvalidDbClusterCapacityFault {}
 /// See [`InvalidDbClusterCapacityFault`](crate::error::InvalidDbClusterCapacityFault)
 pub mod invalid_db_cluster_capacity_fault {
+
     /// A builder for [`InvalidDbClusterCapacityFault`](crate::error::InvalidDbClusterCapacityFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23628,134 +23202,6 @@ impl InvalidDbClusterCapacityFault {
     }
 }
 
-/// <p>The specified installation medium has already been imported.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct InstallationMediaAlreadyExistsFault {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for InstallationMediaAlreadyExistsFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("InstallationMediaAlreadyExistsFault");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl InstallationMediaAlreadyExistsFault {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for InstallationMediaAlreadyExistsFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "InstallationMediaAlreadyExistsFault")?;
-        if let Some(inner_81) = &self.message {
-            write!(f, ": {}", inner_81)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for InstallationMediaAlreadyExistsFault {}
-/// See [`InstallationMediaAlreadyExistsFault`](crate::error::InstallationMediaAlreadyExistsFault)
-pub mod installation_media_already_exists_fault {
-    /// A builder for [`InstallationMediaAlreadyExistsFault`](crate::error::InstallationMediaAlreadyExistsFault)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`InstallationMediaAlreadyExistsFault`](crate::error::InstallationMediaAlreadyExistsFault)
-        pub fn build(self) -> crate::error::InstallationMediaAlreadyExistsFault {
-            crate::error::InstallationMediaAlreadyExistsFault {
-                message: self.message,
-            }
-        }
-    }
-}
-impl InstallationMediaAlreadyExistsFault {
-    /// Creates a new builder-style object to manufacture [`InstallationMediaAlreadyExistsFault`](crate::error::InstallationMediaAlreadyExistsFault)
-    pub fn builder() -> crate::error::installation_media_already_exists_fault::Builder {
-        crate::error::installation_media_already_exists_fault::Builder::default()
-    }
-}
-
-/// <p> <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct CustomAvailabilityZoneNotFoundFault {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for CustomAvailabilityZoneNotFoundFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("CustomAvailabilityZoneNotFoundFault");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl CustomAvailabilityZoneNotFoundFault {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for CustomAvailabilityZoneNotFoundFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "CustomAvailabilityZoneNotFoundFault")?;
-        if let Some(inner_82) = &self.message {
-            write!(f, ": {}", inner_82)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for CustomAvailabilityZoneNotFoundFault {}
-/// See [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
-pub mod custom_availability_zone_not_found_fault {
-    /// A builder for [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
-        pub fn build(self) -> crate::error::CustomAvailabilityZoneNotFoundFault {
-            crate::error::CustomAvailabilityZoneNotFoundFault {
-                message: self.message,
-            }
-        }
-    }
-}
-impl CustomAvailabilityZoneNotFoundFault {
-    /// Creates a new builder-style object to manufacture [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
-    pub fn builder() -> crate::error::custom_availability_zone_not_found_fault::Builder {
-        crate::error::custom_availability_zone_not_found_fault::Builder::default()
-    }
-}
-
 /// <p> <code>LogFileName</code> doesn't refer to an existing DB log file.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -23779,8 +23225,8 @@ impl DbLogFileNotFoundFault {
 impl std::fmt::Display for DbLogFileNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DbLogFileNotFoundFault [DBLogFileNotFoundFault]")?;
-        if let Some(inner_83) = &self.message {
-            write!(f, ": {}", inner_83)?;
+        if let Some(inner_82) = &self.message {
+            write!(f, ": {}", inner_82)?;
         }
         Ok(())
     }
@@ -23788,6 +23234,7 @@ impl std::fmt::Display for DbLogFileNotFoundFault {
 impl std::error::Error for DbLogFileNotFoundFault {}
 /// See [`DbLogFileNotFoundFault`](crate::error::DbLogFileNotFoundFault)
 pub mod db_log_file_not_found_fault {
+
     /// A builder for [`DbLogFileNotFoundFault`](crate::error::DbLogFileNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23846,8 +23293,8 @@ impl std::fmt::Display for ReservedDbInstanceNotFoundFault {
             f,
             "ReservedDbInstanceNotFoundFault [ReservedDBInstanceNotFoundFault]"
         )?;
-        if let Some(inner_84) = &self.message {
-            write!(f, ": {}", inner_84)?;
+        if let Some(inner_83) = &self.message {
+            write!(f, ": {}", inner_83)?;
         }
         Ok(())
     }
@@ -23855,6 +23302,7 @@ impl std::fmt::Display for ReservedDbInstanceNotFoundFault {
 impl std::error::Error for ReservedDbInstanceNotFoundFault {}
 /// See [`ReservedDbInstanceNotFoundFault`](crate::error::ReservedDbInstanceNotFoundFault)
 pub mod reserved_db_instance_not_found_fault {
+
     /// A builder for [`ReservedDbInstanceNotFoundFault`](crate::error::ReservedDbInstanceNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -23887,70 +23335,6 @@ impl ReservedDbInstanceNotFoundFault {
     }
 }
 
-/// <p> <code>InstallationMediaID</code> doesn't refer to an existing installation medium.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct InstallationMediaNotFoundFault {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for InstallationMediaNotFoundFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("InstallationMediaNotFoundFault");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl InstallationMediaNotFoundFault {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for InstallationMediaNotFoundFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "InstallationMediaNotFoundFault")?;
-        if let Some(inner_85) = &self.message {
-            write!(f, ": {}", inner_85)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for InstallationMediaNotFoundFault {}
-/// See [`InstallationMediaNotFoundFault`](crate::error::InstallationMediaNotFoundFault)
-pub mod installation_media_not_found_fault {
-    /// A builder for [`InstallationMediaNotFoundFault`](crate::error::InstallationMediaNotFoundFault)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`InstallationMediaNotFoundFault`](crate::error::InstallationMediaNotFoundFault)
-        pub fn build(self) -> crate::error::InstallationMediaNotFoundFault {
-            crate::error::InstallationMediaNotFoundFault {
-                message: self.message,
-            }
-        }
-    }
-}
-impl InstallationMediaNotFoundFault {
-    /// Creates a new builder-style object to manufacture [`InstallationMediaNotFoundFault`](crate::error::InstallationMediaNotFoundFault)
-    pub fn builder() -> crate::error::installation_media_not_found_fault::Builder {
-        crate::error::installation_media_not_found_fault::Builder::default()
-    }
-}
-
 /// <p>The export task doesn't exist.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -23974,8 +23358,8 @@ impl ExportTaskNotFoundFault {
 impl std::fmt::Display for ExportTaskNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "ExportTaskNotFoundFault")?;
-        if let Some(inner_86) = &self.message {
-            write!(f, ": {}", inner_86)?;
+        if let Some(inner_84) = &self.message {
+            write!(f, ": {}", inner_84)?;
         }
         Ok(())
     }
@@ -23983,6 +23367,7 @@ impl std::fmt::Display for ExportTaskNotFoundFault {
 impl std::error::Error for ExportTaskNotFoundFault {}
 /// See [`ExportTaskNotFoundFault`](crate::error::ExportTaskNotFoundFault)
 pub mod export_task_not_found_fault {
+
     /// A builder for [`ExportTaskNotFoundFault`](crate::error::ExportTaskNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24038,8 +23423,8 @@ impl DbProxyTargetNotFoundFault {
 impl std::fmt::Display for DbProxyTargetNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DbProxyTargetNotFoundFault [DBProxyTargetNotFoundFault]")?;
-        if let Some(inner_87) = &self.message {
-            write!(f, ": {}", inner_87)?;
+        if let Some(inner_85) = &self.message {
+            write!(f, ": {}", inner_85)?;
         }
         Ok(())
     }
@@ -24047,6 +23432,7 @@ impl std::fmt::Display for DbProxyTargetNotFoundFault {
 impl std::error::Error for DbProxyTargetNotFoundFault {}
 /// See [`DbProxyTargetNotFoundFault`](crate::error::DbProxyTargetNotFoundFault)
 pub mod db_proxy_target_not_found_fault {
+
     /// A builder for [`DbProxyTargetNotFoundFault`](crate::error::DbProxyTargetNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24105,8 +23491,8 @@ impl std::fmt::Display for DbClusterBacktrackNotFoundFault {
             f,
             "DbClusterBacktrackNotFoundFault [DBClusterBacktrackNotFoundFault]"
         )?;
-        if let Some(inner_88) = &self.message {
-            write!(f, ": {}", inner_88)?;
+        if let Some(inner_86) = &self.message {
+            write!(f, ": {}", inner_86)?;
         }
         Ok(())
     }
@@ -24114,6 +23500,7 @@ impl std::fmt::Display for DbClusterBacktrackNotFoundFault {
 impl std::error::Error for DbClusterBacktrackNotFoundFault {}
 /// See [`DbClusterBacktrackNotFoundFault`](crate::error::DbClusterBacktrackNotFoundFault)
 pub mod db_cluster_backtrack_not_found_fault {
+
     /// A builder for [`DbClusterBacktrackNotFoundFault`](crate::error::DbClusterBacktrackNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24169,8 +23556,8 @@ impl InvalidEventSubscriptionStateFault {
 impl std::fmt::Display for InvalidEventSubscriptionStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidEventSubscriptionStateFault")?;
-        if let Some(inner_89) = &self.message {
-            write!(f, ": {}", inner_89)?;
+        if let Some(inner_87) = &self.message {
+            write!(f, ": {}", inner_87)?;
         }
         Ok(())
     }
@@ -24178,6 +23565,7 @@ impl std::fmt::Display for InvalidEventSubscriptionStateFault {
 impl std::error::Error for InvalidEventSubscriptionStateFault {}
 /// See [`InvalidEventSubscriptionStateFault`](crate::error::InvalidEventSubscriptionStateFault)
 pub mod invalid_event_subscription_state_fault {
+
     /// A builder for [`InvalidEventSubscriptionStateFault`](crate::error::InvalidEventSubscriptionStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24233,8 +23621,8 @@ impl InvalidDbSubnetStateFault {
 impl std::fmt::Display for InvalidDbSubnetStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidDbSubnetStateFault [InvalidDBSubnetStateFault]")?;
-        if let Some(inner_90) = &self.message {
-            write!(f, ": {}", inner_90)?;
+        if let Some(inner_88) = &self.message {
+            write!(f, ": {}", inner_88)?;
         }
         Ok(())
     }
@@ -24242,6 +23630,7 @@ impl std::fmt::Display for InvalidDbSubnetStateFault {
 impl std::error::Error for InvalidDbSubnetStateFault {}
 /// See [`InvalidDbSubnetStateFault`](crate::error::InvalidDbSubnetStateFault)
 pub mod invalid_db_subnet_state_fault {
+
     /// A builder for [`InvalidDbSubnetStateFault`](crate::error::InvalidDbSubnetStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24297,8 +23686,8 @@ impl InvalidDbInstanceAutomatedBackupStateFault {
 impl std::fmt::Display for InvalidDbInstanceAutomatedBackupStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidDbInstanceAutomatedBackupStateFault [InvalidDBInstanceAutomatedBackupStateFault]")?;
-        if let Some(inner_91) = &self.message {
-            write!(f, ": {}", inner_91)?;
+        if let Some(inner_89) = &self.message {
+            write!(f, ": {}", inner_89)?;
         }
         Ok(())
     }
@@ -24306,6 +23695,7 @@ impl std::fmt::Display for InvalidDbInstanceAutomatedBackupStateFault {
 impl std::error::Error for InvalidDbInstanceAutomatedBackupStateFault {}
 /// See [`InvalidDbInstanceAutomatedBackupStateFault`](crate::error::InvalidDbInstanceAutomatedBackupStateFault)
 pub mod invalid_db_instance_automated_backup_state_fault {
+
     /// A builder for [`InvalidDbInstanceAutomatedBackupStateFault`](crate::error::InvalidDbInstanceAutomatedBackupStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24364,8 +23754,8 @@ impl std::fmt::Display for DbClusterSnapshotAlreadyExistsFault {
             f,
             "DbClusterSnapshotAlreadyExistsFault [DBClusterSnapshotAlreadyExistsFault]"
         )?;
-        if let Some(inner_92) = &self.message {
-            write!(f, ": {}", inner_92)?;
+        if let Some(inner_90) = &self.message {
+            write!(f, ": {}", inner_90)?;
         }
         Ok(())
     }
@@ -24373,6 +23763,7 @@ impl std::fmt::Display for DbClusterSnapshotAlreadyExistsFault {
 impl std::error::Error for DbClusterSnapshotAlreadyExistsFault {}
 /// See [`DbClusterSnapshotAlreadyExistsFault`](crate::error::DbClusterSnapshotAlreadyExistsFault)
 pub mod db_cluster_snapshot_already_exists_fault {
+
     /// A builder for [`DbClusterSnapshotAlreadyExistsFault`](crate::error::DbClusterSnapshotAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24428,8 +23819,8 @@ impl OptionGroupQuotaExceededFault {
 impl std::fmt::Display for OptionGroupQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "OptionGroupQuotaExceededFault")?;
-        if let Some(inner_93) = &self.message {
-            write!(f, ": {}", inner_93)?;
+        if let Some(inner_91) = &self.message {
+            write!(f, ": {}", inner_91)?;
         }
         Ok(())
     }
@@ -24437,6 +23828,7 @@ impl std::fmt::Display for OptionGroupQuotaExceededFault {
 impl std::error::Error for OptionGroupQuotaExceededFault {}
 /// See [`OptionGroupQuotaExceededFault`](crate::error::OptionGroupQuotaExceededFault)
 pub mod option_group_quota_exceeded_fault {
+
     /// A builder for [`OptionGroupQuotaExceededFault`](crate::error::OptionGroupQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24492,8 +23884,8 @@ impl OptionGroupAlreadyExistsFault {
 impl std::fmt::Display for OptionGroupAlreadyExistsFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "OptionGroupAlreadyExistsFault")?;
-        if let Some(inner_94) = &self.message {
-            write!(f, ": {}", inner_94)?;
+        if let Some(inner_92) = &self.message {
+            write!(f, ": {}", inner_92)?;
         }
         Ok(())
     }
@@ -24501,6 +23893,7 @@ impl std::fmt::Display for OptionGroupAlreadyExistsFault {
 impl std::error::Error for OptionGroupAlreadyExistsFault {}
 /// See [`OptionGroupAlreadyExistsFault`](crate::error::OptionGroupAlreadyExistsFault)
 pub mod option_group_already_exists_fault {
+
     /// A builder for [`OptionGroupAlreadyExistsFault`](crate::error::OptionGroupAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24556,8 +23949,8 @@ impl GlobalClusterQuotaExceededFault {
 impl std::fmt::Display for GlobalClusterQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "GlobalClusterQuotaExceededFault")?;
-        if let Some(inner_95) = &self.message {
-            write!(f, ": {}", inner_95)?;
+        if let Some(inner_93) = &self.message {
+            write!(f, ": {}", inner_93)?;
         }
         Ok(())
     }
@@ -24565,6 +23958,7 @@ impl std::fmt::Display for GlobalClusterQuotaExceededFault {
 impl std::error::Error for GlobalClusterQuotaExceededFault {}
 /// See [`GlobalClusterQuotaExceededFault`](crate::error::GlobalClusterQuotaExceededFault)
 pub mod global_cluster_quota_exceeded_fault {
+
     /// A builder for [`GlobalClusterQuotaExceededFault`](crate::error::GlobalClusterQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24620,8 +24014,8 @@ impl GlobalClusterAlreadyExistsFault {
 impl std::fmt::Display for GlobalClusterAlreadyExistsFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "GlobalClusterAlreadyExistsFault")?;
-        if let Some(inner_96) = &self.message {
-            write!(f, ": {}", inner_96)?;
+        if let Some(inner_94) = &self.message {
+            write!(f, ": {}", inner_94)?;
         }
         Ok(())
     }
@@ -24629,6 +24023,7 @@ impl std::fmt::Display for GlobalClusterAlreadyExistsFault {
 impl std::error::Error for GlobalClusterAlreadyExistsFault {}
 /// See [`GlobalClusterAlreadyExistsFault`](crate::error::GlobalClusterAlreadyExistsFault)
 pub mod global_cluster_already_exists_fault {
+
     /// A builder for [`GlobalClusterAlreadyExistsFault`](crate::error::GlobalClusterAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24684,8 +24079,8 @@ impl SubscriptionAlreadyExistFault {
 impl std::fmt::Display for SubscriptionAlreadyExistFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "SubscriptionAlreadyExistFault")?;
-        if let Some(inner_97) = &self.message {
-            write!(f, ": {}", inner_97)?;
+        if let Some(inner_95) = &self.message {
+            write!(f, ": {}", inner_95)?;
         }
         Ok(())
     }
@@ -24693,6 +24088,7 @@ impl std::fmt::Display for SubscriptionAlreadyExistFault {
 impl std::error::Error for SubscriptionAlreadyExistFault {}
 /// See [`SubscriptionAlreadyExistFault`](crate::error::SubscriptionAlreadyExistFault)
 pub mod subscription_already_exist_fault {
+
     /// A builder for [`SubscriptionAlreadyExistFault`](crate::error::SubscriptionAlreadyExistFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24751,8 +24147,8 @@ impl std::fmt::Display for DbSubnetGroupQuotaExceededFault {
             f,
             "DbSubnetGroupQuotaExceededFault [DBSubnetGroupQuotaExceededFault]"
         )?;
-        if let Some(inner_98) = &self.message {
-            write!(f, ": {}", inner_98)?;
+        if let Some(inner_96) = &self.message {
+            write!(f, ": {}", inner_96)?;
         }
         Ok(())
     }
@@ -24760,6 +24156,7 @@ impl std::fmt::Display for DbSubnetGroupQuotaExceededFault {
 impl std::error::Error for DbSubnetGroupQuotaExceededFault {}
 /// See [`DbSubnetGroupQuotaExceededFault`](crate::error::DbSubnetGroupQuotaExceededFault)
 pub mod db_subnet_group_quota_exceeded_fault {
+
     /// A builder for [`DbSubnetGroupQuotaExceededFault`](crate::error::DbSubnetGroupQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24818,8 +24215,8 @@ impl std::fmt::Display for DbSubnetGroupAlreadyExistsFault {
             f,
             "DbSubnetGroupAlreadyExistsFault [DBSubnetGroupAlreadyExistsFault]"
         )?;
-        if let Some(inner_99) = &self.message {
-            write!(f, ": {}", inner_99)?;
+        if let Some(inner_97) = &self.message {
+            write!(f, ": {}", inner_97)?;
         }
         Ok(())
     }
@@ -24827,6 +24224,7 @@ impl std::fmt::Display for DbSubnetGroupAlreadyExistsFault {
 impl std::error::Error for DbSubnetGroupAlreadyExistsFault {}
 /// See [`DbSubnetGroupAlreadyExistsFault`](crate::error::DbSubnetGroupAlreadyExistsFault)
 pub mod db_subnet_group_already_exists_fault {
+
     /// A builder for [`DbSubnetGroupAlreadyExistsFault`](crate::error::DbSubnetGroupAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24885,8 +24283,8 @@ impl std::fmt::Display for DbSecurityGroupQuotaExceededFault {
             f,
             "DbSecurityGroupQuotaExceededFault [DBSecurityGroupQuotaExceededFault]"
         )?;
-        if let Some(inner_100) = &self.message {
-            write!(f, ": {}", inner_100)?;
+        if let Some(inner_98) = &self.message {
+            write!(f, ": {}", inner_98)?;
         }
         Ok(())
     }
@@ -24894,6 +24292,7 @@ impl std::fmt::Display for DbSecurityGroupQuotaExceededFault {
 impl std::error::Error for DbSecurityGroupQuotaExceededFault {}
 /// See [`DbSecurityGroupQuotaExceededFault`](crate::error::DbSecurityGroupQuotaExceededFault)
 pub mod db_security_group_quota_exceeded_fault {
+
     /// A builder for [`DbSecurityGroupQuotaExceededFault`](crate::error::DbSecurityGroupQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -24952,8 +24351,8 @@ impl std::fmt::Display for DbSecurityGroupNotSupportedFault {
             f,
             "DbSecurityGroupNotSupportedFault [DBSecurityGroupNotSupportedFault]"
         )?;
-        if let Some(inner_101) = &self.message {
-            write!(f, ": {}", inner_101)?;
+        if let Some(inner_99) = &self.message {
+            write!(f, ": {}", inner_99)?;
         }
         Ok(())
     }
@@ -24961,6 +24360,7 @@ impl std::fmt::Display for DbSecurityGroupNotSupportedFault {
 impl std::error::Error for DbSecurityGroupNotSupportedFault {}
 /// See [`DbSecurityGroupNotSupportedFault`](crate::error::DbSecurityGroupNotSupportedFault)
 pub mod db_security_group_not_supported_fault {
+
     /// A builder for [`DbSecurityGroupNotSupportedFault`](crate::error::DbSecurityGroupNotSupportedFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25019,8 +24419,8 @@ impl std::fmt::Display for DbSecurityGroupAlreadyExistsFault {
             f,
             "DbSecurityGroupAlreadyExistsFault [DBSecurityGroupAlreadyExistsFault]"
         )?;
-        if let Some(inner_102) = &self.message {
-            write!(f, ": {}", inner_102)?;
+        if let Some(inner_100) = &self.message {
+            write!(f, ": {}", inner_100)?;
         }
         Ok(())
     }
@@ -25028,6 +24428,7 @@ impl std::fmt::Display for DbSecurityGroupAlreadyExistsFault {
 impl std::error::Error for DbSecurityGroupAlreadyExistsFault {}
 /// See [`DbSecurityGroupAlreadyExistsFault`](crate::error::DbSecurityGroupAlreadyExistsFault)
 pub mod db_security_group_already_exists_fault {
+
     /// A builder for [`DbSecurityGroupAlreadyExistsFault`](crate::error::DbSecurityGroupAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25086,8 +24487,8 @@ impl std::fmt::Display for DbProxyEndpointQuotaExceededFault {
             f,
             "DbProxyEndpointQuotaExceededFault [DBProxyEndpointQuotaExceededFault]"
         )?;
-        if let Some(inner_103) = &self.message {
-            write!(f, ": {}", inner_103)?;
+        if let Some(inner_101) = &self.message {
+            write!(f, ": {}", inner_101)?;
         }
         Ok(())
     }
@@ -25095,6 +24496,7 @@ impl std::fmt::Display for DbProxyEndpointQuotaExceededFault {
 impl std::error::Error for DbProxyEndpointQuotaExceededFault {}
 /// See [`DbProxyEndpointQuotaExceededFault`](crate::error::DbProxyEndpointQuotaExceededFault)
 pub mod db_proxy_endpoint_quota_exceeded_fault {
+
     /// A builder for [`DbProxyEndpointQuotaExceededFault`](crate::error::DbProxyEndpointQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25150,8 +24552,8 @@ impl DbProxyQuotaExceededFault {
 impl std::fmt::Display for DbProxyQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DbProxyQuotaExceededFault [DBProxyQuotaExceededFault]")?;
-        if let Some(inner_104) = &self.message {
-            write!(f, ": {}", inner_104)?;
+        if let Some(inner_102) = &self.message {
+            write!(f, ": {}", inner_102)?;
         }
         Ok(())
     }
@@ -25159,6 +24561,7 @@ impl std::fmt::Display for DbProxyQuotaExceededFault {
 impl std::error::Error for DbProxyQuotaExceededFault {}
 /// See [`DbProxyQuotaExceededFault`](crate::error::DbProxyQuotaExceededFault)
 pub mod db_proxy_quota_exceeded_fault {
+
     /// A builder for [`DbProxyQuotaExceededFault`](crate::error::DbProxyQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25217,8 +24620,8 @@ impl std::fmt::Display for DbParameterGroupQuotaExceededFault {
             f,
             "DbParameterGroupQuotaExceededFault [DBParameterGroupQuotaExceededFault]"
         )?;
-        if let Some(inner_105) = &self.message {
-            write!(f, ": {}", inner_105)?;
+        if let Some(inner_103) = &self.message {
+            write!(f, ": {}", inner_103)?;
         }
         Ok(())
     }
@@ -25226,6 +24629,7 @@ impl std::fmt::Display for DbParameterGroupQuotaExceededFault {
 impl std::error::Error for DbParameterGroupQuotaExceededFault {}
 /// See [`DbParameterGroupQuotaExceededFault`](crate::error::DbParameterGroupQuotaExceededFault)
 pub mod db_parameter_group_quota_exceeded_fault {
+
     /// A builder for [`DbParameterGroupQuotaExceededFault`](crate::error::DbParameterGroupQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25284,8 +24688,8 @@ impl std::fmt::Display for DbParameterGroupAlreadyExistsFault {
             f,
             "DbParameterGroupAlreadyExistsFault [DBParameterGroupAlreadyExistsFault]"
         )?;
-        if let Some(inner_106) = &self.message {
-            write!(f, ": {}", inner_106)?;
+        if let Some(inner_104) = &self.message {
+            write!(f, ": {}", inner_104)?;
         }
         Ok(())
     }
@@ -25293,6 +24697,7 @@ impl std::fmt::Display for DbParameterGroupAlreadyExistsFault {
 impl std::error::Error for DbParameterGroupAlreadyExistsFault {}
 /// See [`DbParameterGroupAlreadyExistsFault`](crate::error::DbParameterGroupAlreadyExistsFault)
 pub mod db_parameter_group_already_exists_fault {
+
     /// A builder for [`DbParameterGroupAlreadyExistsFault`](crate::error::DbParameterGroupAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25348,8 +24753,8 @@ impl InvalidDbSubnetGroupFault {
 impl std::fmt::Display for InvalidDbSubnetGroupFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidDbSubnetGroupFault [InvalidDBSubnetGroupFault]")?;
-        if let Some(inner_107) = &self.message {
-            write!(f, ": {}", inner_107)?;
+        if let Some(inner_105) = &self.message {
+            write!(f, ": {}", inner_105)?;
         }
         Ok(())
     }
@@ -25357,6 +24762,7 @@ impl std::fmt::Display for InvalidDbSubnetGroupFault {
 impl std::error::Error for InvalidDbSubnetGroupFault {}
 /// See [`InvalidDbSubnetGroupFault`](crate::error::InvalidDbSubnetGroupFault)
 pub mod invalid_db_subnet_group_fault {
+
     /// A builder for [`InvalidDbSubnetGroupFault`](crate::error::InvalidDbSubnetGroupFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25415,8 +24821,8 @@ impl std::fmt::Display for DbSubnetGroupNotAllowedFault {
             f,
             "DbSubnetGroupNotAllowedFault [DBSubnetGroupNotAllowedFault]"
         )?;
-        if let Some(inner_108) = &self.message {
-            write!(f, ": {}", inner_108)?;
+        if let Some(inner_106) = &self.message {
+            write!(f, ": {}", inner_106)?;
         }
         Ok(())
     }
@@ -25424,6 +24830,7 @@ impl std::fmt::Display for DbSubnetGroupNotAllowedFault {
 impl std::error::Error for DbSubnetGroupNotAllowedFault {}
 /// See [`DbSubnetGroupNotAllowedFault`](crate::error::DbSubnetGroupNotAllowedFault)
 pub mod db_subnet_group_not_allowed_fault {
+
     /// A builder for [`DbSubnetGroupNotAllowedFault`](crate::error::DbSubnetGroupNotAllowedFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25482,8 +24889,8 @@ impl std::fmt::Display for DbClusterEndpointQuotaExceededFault {
             f,
             "DbClusterEndpointQuotaExceededFault [DBClusterEndpointQuotaExceededFault]"
         )?;
-        if let Some(inner_109) = &self.message {
-            write!(f, ": {}", inner_109)?;
+        if let Some(inner_107) = &self.message {
+            write!(f, ": {}", inner_107)?;
         }
         Ok(())
     }
@@ -25491,6 +24898,7 @@ impl std::fmt::Display for DbClusterEndpointQuotaExceededFault {
 impl std::error::Error for DbClusterEndpointQuotaExceededFault {}
 /// See [`DbClusterEndpointQuotaExceededFault`](crate::error::DbClusterEndpointQuotaExceededFault)
 pub mod db_cluster_endpoint_quota_exceeded_fault {
+
     /// A builder for [`DbClusterEndpointQuotaExceededFault`](crate::error::DbClusterEndpointQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25549,8 +24957,8 @@ impl std::fmt::Display for DbClusterEndpointAlreadyExistsFault {
             f,
             "DbClusterEndpointAlreadyExistsFault [DBClusterEndpointAlreadyExistsFault]"
         )?;
-        if let Some(inner_110) = &self.message {
-            write!(f, ": {}", inner_110)?;
+        if let Some(inner_108) = &self.message {
+            write!(f, ": {}", inner_108)?;
         }
         Ok(())
     }
@@ -25558,6 +24966,7 @@ impl std::fmt::Display for DbClusterEndpointAlreadyExistsFault {
 impl std::error::Error for DbClusterEndpointAlreadyExistsFault {}
 /// See [`DbClusterEndpointAlreadyExistsFault`](crate::error::DbClusterEndpointAlreadyExistsFault)
 pub mod db_cluster_endpoint_already_exists_fault {
+
     /// A builder for [`DbClusterEndpointAlreadyExistsFault`](crate::error::DbClusterEndpointAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25616,8 +25025,8 @@ impl std::fmt::Display for CustomDbEngineVersionQuotaExceededFault {
             f,
             "CustomDbEngineVersionQuotaExceededFault [CustomDBEngineVersionQuotaExceededFault]"
         )?;
-        if let Some(inner_111) = &self.message {
-            write!(f, ": {}", inner_111)?;
+        if let Some(inner_109) = &self.message {
+            write!(f, ": {}", inner_109)?;
         }
         Ok(())
     }
@@ -25625,6 +25034,7 @@ impl std::fmt::Display for CustomDbEngineVersionQuotaExceededFault {
 impl std::error::Error for CustomDbEngineVersionQuotaExceededFault {}
 /// See [`CustomDbEngineVersionQuotaExceededFault`](crate::error::CustomDbEngineVersionQuotaExceededFault)
 pub mod custom_db_engine_version_quota_exceeded_fault {
+
     /// A builder for [`CustomDbEngineVersionQuotaExceededFault`](crate::error::CustomDbEngineVersionQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25683,8 +25093,8 @@ impl std::fmt::Display for CustomDbEngineVersionAlreadyExistsFault {
             f,
             "CustomDbEngineVersionAlreadyExistsFault [CustomDBEngineVersionAlreadyExistsFault]"
         )?;
-        if let Some(inner_112) = &self.message {
-            write!(f, ": {}", inner_112)?;
+        if let Some(inner_110) = &self.message {
+            write!(f, ": {}", inner_110)?;
         }
         Ok(())
     }
@@ -25692,6 +25102,7 @@ impl std::fmt::Display for CustomDbEngineVersionAlreadyExistsFault {
 impl std::error::Error for CustomDbEngineVersionAlreadyExistsFault {}
 /// See [`CustomDbEngineVersionAlreadyExistsFault`](crate::error::CustomDbEngineVersionAlreadyExistsFault)
 pub mod custom_db_engine_version_already_exists_fault {
+
     /// A builder for [`CustomDbEngineVersionAlreadyExistsFault`](crate::error::CustomDbEngineVersionAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25724,103 +25135,40 @@ impl CustomDbEngineVersionAlreadyExistsFault {
     }
 }
 
-/// <p>You have exceeded the maximum number of custom Availability Zones.</p>
+/// <p> <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct CustomAvailabilityZoneQuotaExceededFault {
+pub struct CustomAvailabilityZoneNotFoundFault {
     #[allow(missing_docs)] // documentation missing in model
     pub message: std::option::Option<std::string::String>,
 }
-impl std::fmt::Debug for CustomAvailabilityZoneQuotaExceededFault {
+impl std::fmt::Debug for CustomAvailabilityZoneNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("CustomAvailabilityZoneQuotaExceededFault");
+        let mut formatter = f.debug_struct("CustomAvailabilityZoneNotFoundFault");
         formatter.field("message", &self.message);
         formatter.finish()
     }
 }
-impl CustomAvailabilityZoneQuotaExceededFault {
+impl CustomAvailabilityZoneNotFoundFault {
     /// Returns the error message.
     pub fn message(&self) -> Option<&str> {
         self.message.as_deref()
     }
 }
-impl std::fmt::Display for CustomAvailabilityZoneQuotaExceededFault {
+impl std::fmt::Display for CustomAvailabilityZoneNotFoundFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "CustomAvailabilityZoneQuotaExceededFault")?;
-        if let Some(inner_113) = &self.message {
-            write!(f, ": {}", inner_113)?;
+        write!(f, "CustomAvailabilityZoneNotFoundFault")?;
+        if let Some(inner_111) = &self.message {
+            write!(f, ": {}", inner_111)?;
         }
         Ok(())
     }
 }
-impl std::error::Error for CustomAvailabilityZoneQuotaExceededFault {}
-/// See [`CustomAvailabilityZoneQuotaExceededFault`](crate::error::CustomAvailabilityZoneQuotaExceededFault)
-pub mod custom_availability_zone_quota_exceeded_fault {
-    /// A builder for [`CustomAvailabilityZoneQuotaExceededFault`](crate::error::CustomAvailabilityZoneQuotaExceededFault)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`CustomAvailabilityZoneQuotaExceededFault`](crate::error::CustomAvailabilityZoneQuotaExceededFault)
-        pub fn build(self) -> crate::error::CustomAvailabilityZoneQuotaExceededFault {
-            crate::error::CustomAvailabilityZoneQuotaExceededFault {
-                message: self.message,
-            }
-        }
-    }
-}
-impl CustomAvailabilityZoneQuotaExceededFault {
-    /// Creates a new builder-style object to manufacture [`CustomAvailabilityZoneQuotaExceededFault`](crate::error::CustomAvailabilityZoneQuotaExceededFault)
-    pub fn builder() -> crate::error::custom_availability_zone_quota_exceeded_fault::Builder {
-        crate::error::custom_availability_zone_quota_exceeded_fault::Builder::default()
-    }
-}
+impl std::error::Error for CustomAvailabilityZoneNotFoundFault {}
+/// See [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
+pub mod custom_availability_zone_not_found_fault {
 
-/// <p> <code>CustomAvailabilityZoneName</code> is already used by an existing custom Availability Zone.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct CustomAvailabilityZoneAlreadyExistsFault {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for CustomAvailabilityZoneAlreadyExistsFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("CustomAvailabilityZoneAlreadyExistsFault");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl CustomAvailabilityZoneAlreadyExistsFault {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for CustomAvailabilityZoneAlreadyExistsFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "CustomAvailabilityZoneAlreadyExistsFault")?;
-        if let Some(inner_114) = &self.message {
-            write!(f, ": {}", inner_114)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for CustomAvailabilityZoneAlreadyExistsFault {}
-/// See [`CustomAvailabilityZoneAlreadyExistsFault`](crate::error::CustomAvailabilityZoneAlreadyExistsFault)
-pub mod custom_availability_zone_already_exists_fault {
-    /// A builder for [`CustomAvailabilityZoneAlreadyExistsFault`](crate::error::CustomAvailabilityZoneAlreadyExistsFault)
+    /// A builder for [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
@@ -25837,18 +25185,18 @@ pub mod custom_availability_zone_already_exists_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CustomAvailabilityZoneAlreadyExistsFault`](crate::error::CustomAvailabilityZoneAlreadyExistsFault)
-        pub fn build(self) -> crate::error::CustomAvailabilityZoneAlreadyExistsFault {
-            crate::error::CustomAvailabilityZoneAlreadyExistsFault {
+        /// Consumes the builder and constructs a [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
+        pub fn build(self) -> crate::error::CustomAvailabilityZoneNotFoundFault {
+            crate::error::CustomAvailabilityZoneNotFoundFault {
                 message: self.message,
             }
         }
     }
 }
-impl CustomAvailabilityZoneAlreadyExistsFault {
-    /// Creates a new builder-style object to manufacture [`CustomAvailabilityZoneAlreadyExistsFault`](crate::error::CustomAvailabilityZoneAlreadyExistsFault)
-    pub fn builder() -> crate::error::custom_availability_zone_already_exists_fault::Builder {
-        crate::error::custom_availability_zone_already_exists_fault::Builder::default()
+impl CustomAvailabilityZoneNotFoundFault {
+    /// Creates a new builder-style object to manufacture [`CustomAvailabilityZoneNotFoundFault`](crate::error::CustomAvailabilityZoneNotFoundFault)
+    pub fn builder() -> crate::error::custom_availability_zone_not_found_fault::Builder {
+        crate::error::custom_availability_zone_not_found_fault::Builder::default()
     }
 }
 
@@ -25875,8 +25223,8 @@ impl InvalidExportTaskStateFault {
 impl std::fmt::Display for InvalidExportTaskStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidExportTaskStateFault")?;
-        if let Some(inner_115) = &self.message {
-            write!(f, ": {}", inner_115)?;
+        if let Some(inner_112) = &self.message {
+            write!(f, ": {}", inner_112)?;
         }
         Ok(())
     }
@@ -25884,6 +25232,7 @@ impl std::fmt::Display for InvalidExportTaskStateFault {
 impl std::error::Error for InvalidExportTaskStateFault {}
 /// See [`InvalidExportTaskStateFault`](crate::error::InvalidExportTaskStateFault)
 pub mod invalid_export_task_state_fault {
+
     /// A builder for [`InvalidExportTaskStateFault`](crate::error::InvalidExportTaskStateFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -25939,8 +25288,8 @@ impl AuthorizationQuotaExceededFault {
 impl std::fmt::Display for AuthorizationQuotaExceededFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "AuthorizationQuotaExceededFault")?;
-        if let Some(inner_116) = &self.message {
-            write!(f, ": {}", inner_116)?;
+        if let Some(inner_113) = &self.message {
+            write!(f, ": {}", inner_113)?;
         }
         Ok(())
     }
@@ -25948,6 +25297,7 @@ impl std::fmt::Display for AuthorizationQuotaExceededFault {
 impl std::error::Error for AuthorizationQuotaExceededFault {}
 /// See [`AuthorizationQuotaExceededFault`](crate::error::AuthorizationQuotaExceededFault)
 pub mod authorization_quota_exceeded_fault {
+
     /// A builder for [`AuthorizationQuotaExceededFault`](crate::error::AuthorizationQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -26003,8 +25353,8 @@ impl AuthorizationAlreadyExistsFault {
 impl std::fmt::Display for AuthorizationAlreadyExistsFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "AuthorizationAlreadyExistsFault")?;
-        if let Some(inner_117) = &self.message {
-            write!(f, ": {}", inner_117)?;
+        if let Some(inner_114) = &self.message {
+            write!(f, ": {}", inner_114)?;
         }
         Ok(())
     }
@@ -26012,6 +25362,7 @@ impl std::fmt::Display for AuthorizationAlreadyExistsFault {
 impl std::error::Error for AuthorizationAlreadyExistsFault {}
 /// See [`AuthorizationAlreadyExistsFault`](crate::error::AuthorizationAlreadyExistsFault)
 pub mod authorization_already_exists_fault {
+
     /// A builder for [`AuthorizationAlreadyExistsFault`](crate::error::AuthorizationAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -26070,8 +25421,8 @@ impl std::fmt::Display for DbInstanceRoleQuotaExceededFault {
             f,
             "DbInstanceRoleQuotaExceededFault [DBInstanceRoleQuotaExceededFault]"
         )?;
-        if let Some(inner_118) = &self.message {
-            write!(f, ": {}", inner_118)?;
+        if let Some(inner_115) = &self.message {
+            write!(f, ": {}", inner_115)?;
         }
         Ok(())
     }
@@ -26079,6 +25430,7 @@ impl std::fmt::Display for DbInstanceRoleQuotaExceededFault {
 impl std::error::Error for DbInstanceRoleQuotaExceededFault {}
 /// See [`DbInstanceRoleQuotaExceededFault`](crate::error::DbInstanceRoleQuotaExceededFault)
 pub mod db_instance_role_quota_exceeded_fault {
+
     /// A builder for [`DbInstanceRoleQuotaExceededFault`](crate::error::DbInstanceRoleQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -26137,8 +25489,8 @@ impl std::fmt::Display for DbInstanceRoleAlreadyExistsFault {
             f,
             "DbInstanceRoleAlreadyExistsFault [DBInstanceRoleAlreadyExistsFault]"
         )?;
-        if let Some(inner_119) = &self.message {
-            write!(f, ": {}", inner_119)?;
+        if let Some(inner_116) = &self.message {
+            write!(f, ": {}", inner_116)?;
         }
         Ok(())
     }
@@ -26146,6 +25498,7 @@ impl std::fmt::Display for DbInstanceRoleAlreadyExistsFault {
 impl std::error::Error for DbInstanceRoleAlreadyExistsFault {}
 /// See [`DbInstanceRoleAlreadyExistsFault`](crate::error::DbInstanceRoleAlreadyExistsFault)
 pub mod db_instance_role_already_exists_fault {
+
     /// A builder for [`DbInstanceRoleAlreadyExistsFault`](crate::error::DbInstanceRoleAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -26204,8 +25557,8 @@ impl std::fmt::Display for DbClusterRoleQuotaExceededFault {
             f,
             "DbClusterRoleQuotaExceededFault [DBClusterRoleQuotaExceededFault]"
         )?;
-        if let Some(inner_120) = &self.message {
-            write!(f, ": {}", inner_120)?;
+        if let Some(inner_117) = &self.message {
+            write!(f, ": {}", inner_117)?;
         }
         Ok(())
     }
@@ -26213,6 +25566,7 @@ impl std::fmt::Display for DbClusterRoleQuotaExceededFault {
 impl std::error::Error for DbClusterRoleQuotaExceededFault {}
 /// See [`DbClusterRoleQuotaExceededFault`](crate::error::DbClusterRoleQuotaExceededFault)
 pub mod db_cluster_role_quota_exceeded_fault {
+
     /// A builder for [`DbClusterRoleQuotaExceededFault`](crate::error::DbClusterRoleQuotaExceededFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -26271,8 +25625,8 @@ impl std::fmt::Display for DbClusterRoleAlreadyExistsFault {
             f,
             "DbClusterRoleAlreadyExistsFault [DBClusterRoleAlreadyExistsFault]"
         )?;
-        if let Some(inner_121) = &self.message {
-            write!(f, ": {}", inner_121)?;
+        if let Some(inner_118) = &self.message {
+            write!(f, ": {}", inner_118)?;
         }
         Ok(())
     }
@@ -26280,6 +25634,7 @@ impl std::fmt::Display for DbClusterRoleAlreadyExistsFault {
 impl std::error::Error for DbClusterRoleAlreadyExistsFault {}
 /// See [`DbClusterRoleAlreadyExistsFault`](crate::error::DbClusterRoleAlreadyExistsFault)
 pub mod db_cluster_role_already_exists_fault {
+
     /// A builder for [`DbClusterRoleAlreadyExistsFault`](crate::error::DbClusterRoleAlreadyExistsFault)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]

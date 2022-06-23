@@ -5,17 +5,20 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
-//! <p>App Mesh is a service mesh based on the Envoy proxy that makes it easy to monitor and
-//! control microservices. App Mesh standardizes how your microservices communicate, giving you
-//! end-to-end visibility and helping to ensure high availability for your applications.</p>
-//! <p>App Mesh gives you consistent visibility and network traffic controls for every
-//! microservice in an application. You can use App Mesh with Amazon Web Services Fargate, Amazon ECS, Amazon EKS,
-//! Kubernetes on Amazon Web Services, and Amazon EC2.</p>
+//! <p>App Mesh is a service mesh based on the Envoy proxy that makes it easy to
+//! monitor and control microservices. App Mesh standardizes how your microservices
+//! communicate, giving you end-to-end visibility and helping to ensure high availability for
+//! your applications.</p>
+//! <p>App Mesh gives you consistent visibility and network traffic controls for
+//! every microservice in an application. You can use App Mesh with Amazon Web Services Fargate, Amazon ECS, Amazon EKS, Kubernetes on Amazon Web Services, and
+//! Amazon EC2.</p>
 //! <note>
-//! <p>App Mesh supports microservice applications that use service discovery naming for their
-//! components. For more information about service discovery on Amazon ECS, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a> in the <i>Amazon Elastic Container Service Developer Guide</i>. Kubernetes
+//! <p>App Mesh supports microservice applications that use service discovery
+//! naming for their components. For more information about service discovery on Amazon ECS, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+//! Discovery</a> in the <i>Amazon Elastic Container Service Developer Guide</i>. Kubernetes
 //! <code>kube-dns</code> and <code>coredns</code> are supported. For more information,
 //! see <a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/">DNS
 //! for Services and Pods</a> in the Kubernetes documentation.</p>
@@ -55,7 +58,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

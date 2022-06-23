@@ -197,6 +197,7 @@ impl Client {
     ///   - [`preferred_outpost_arn(impl Into<String>)`](crate::client::fluent_builders::CreateCacheCluster::preferred_outpost_arn) / [`set_preferred_outpost_arn(Option<String>)`](crate::client::fluent_builders::CreateCacheCluster::set_preferred_outpost_arn): <p>The outpost ARN in which the cache cluster is created.</p>
     ///   - [`preferred_outpost_arns(Vec<String>)`](crate::client::fluent_builders::CreateCacheCluster::preferred_outpost_arns) / [`set_preferred_outpost_arns(Option<Vec<String>>)`](crate::client::fluent_builders::CreateCacheCluster::set_preferred_outpost_arns): <p>The outpost ARNs in which the cache cluster is created.</p>
     ///   - [`log_delivery_configurations(Vec<LogDeliveryConfigurationRequest>)`](crate::client::fluent_builders::CreateCacheCluster::log_delivery_configurations) / [`set_log_delivery_configurations(Option<Vec<LogDeliveryConfigurationRequest>>)`](crate::client::fluent_builders::CreateCacheCluster::set_log_delivery_configurations): <p>Specifies the destination, format and type of the logs. </p>
+    ///   - [`transit_encryption_enabled(bool)`](crate::client::fluent_builders::CreateCacheCluster::transit_encryption_enabled) / [`set_transit_encryption_enabled(Option<bool>)`](crate::client::fluent_builders::CreateCacheCluster::set_transit_encryption_enabled): <p>A flag that enables in-transit encryption when set to true. You cannot modify the value of <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>  <p> <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version <code>1.6.12</code> or later.</p>
     /// - On success, responds with [`CreateCacheClusterOutput`](crate::output::CreateCacheClusterOutput) with field(s):
     ///   - [`cache_cluster(Option<CacheCluster>)`](crate::output::CreateCacheClusterOutput::cache_cluster): <p>Contains all of the attributes of a specific cluster.</p>
     /// - On failure, responds with [`SdkError<CreateCacheClusterError>`](crate::error::CreateCacheClusterError)
@@ -1111,13 +1112,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `AddTagsToResource`.
     ///
     /// <p>A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track all your ElastiCache resources, with the exception of global replication group. When you add or remove tags on replication groups, those actions will be replicated to all nodes in the replication group. For more information, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ResourceLevelPermissions.html">Resource-level permissions</a>.</p>
@@ -2226,6 +2226,18 @@ pub mod fluent_builders {
             >,
         ) -> Self {
             self.inner = self.inner.set_log_delivery_configurations(input);
+            self
+        }
+        /// <p>A flag that enables in-transit encryption when set to true. You cannot modify the value of <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>
+        /// <p> <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version <code>1.6.12</code> or later.</p>
+        pub fn transit_encryption_enabled(mut self, input: bool) -> Self {
+            self.inner = self.inner.transit_encryption_enabled(input);
+            self
+        }
+        /// <p>A flag that enables in-transit encryption when set to true. You cannot modify the value of <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>
+        /// <p> <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version <code>1.6.12</code> or later.</p>
+        pub fn set_transit_encryption_enabled(mut self, input: std::option::Option<bool>) -> Self {
+            self.inner = self.inner.set_transit_encryption_enabled(input);
             self
         }
     }

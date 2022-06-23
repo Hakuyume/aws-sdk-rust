@@ -11,6 +11,7 @@ impl std::fmt::Debug for UpdateStandardsControlOutput {
 }
 /// See [`UpdateStandardsControlOutput`](crate::output::UpdateStandardsControlOutput)
 pub mod update_standards_control_output {
+
     /// A builder for [`UpdateStandardsControlOutput`](crate::output::UpdateStandardsControlOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -41,6 +42,7 @@ impl std::fmt::Debug for UpdateSecurityHubConfigurationOutput {
 }
 /// See [`UpdateSecurityHubConfigurationOutput`](crate::output::UpdateSecurityHubConfigurationOutput)
 pub mod update_security_hub_configuration_output {
+
     /// A builder for [`UpdateSecurityHubConfigurationOutput`](crate::output::UpdateSecurityHubConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -71,6 +73,7 @@ impl std::fmt::Debug for UpdateOrganizationConfigurationOutput {
 }
 /// See [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
 pub mod update_organization_configuration_output {
+
     /// A builder for [`UpdateOrganizationConfigurationOutput`](crate::output::UpdateOrganizationConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -101,6 +104,7 @@ impl std::fmt::Debug for UpdateInsightOutput {
 }
 /// See [`UpdateInsightOutput`](crate::output::UpdateInsightOutput)
 pub mod update_insight_output {
+
     /// A builder for [`UpdateInsightOutput`](crate::output::UpdateInsightOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -131,6 +135,7 @@ impl std::fmt::Debug for UpdateFindingsOutput {
 }
 /// See [`UpdateFindingsOutput`](crate::output::UpdateFindingsOutput)
 pub mod update_findings_output {
+
     /// A builder for [`UpdateFindingsOutput`](crate::output::UpdateFindingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -195,6 +200,7 @@ impl std::fmt::Debug for UpdateFindingAggregatorOutput {
 }
 /// See [`UpdateFindingAggregatorOutput`](crate::output::UpdateFindingAggregatorOutput)
 pub mod update_finding_aggregator_output {
+
     /// A builder for [`UpdateFindingAggregatorOutput`](crate::output::UpdateFindingAggregatorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -293,6 +299,7 @@ impl std::fmt::Debug for UpdateActionTargetOutput {
 }
 /// See [`UpdateActionTargetOutput`](crate::output::UpdateActionTargetOutput)
 pub mod update_action_target_output {
+
     /// A builder for [`UpdateActionTargetOutput`](crate::output::UpdateActionTargetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -323,6 +330,7 @@ impl std::fmt::Debug for UntagResourceOutput {
 }
 /// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
 pub mod untag_resource_output {
+
     /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -353,6 +361,7 @@ impl std::fmt::Debug for TagResourceOutput {
 }
 /// See [`TagResourceOutput`](crate::output::TagResourceOutput)
 pub mod tag_resource_output {
+
     /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -397,6 +406,7 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
 }
 /// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
 pub mod list_tags_for_resource_output {
+
     /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -473,6 +483,7 @@ impl std::fmt::Debug for ListOrganizationAdminAccountsOutput {
 }
 /// See [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
 pub mod list_organization_admin_accounts_output {
+
     /// A builder for [`ListOrganizationAdminAccountsOutput`](crate::output::ListOrganizationAdminAccountsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -555,6 +566,7 @@ impl std::fmt::Debug for ListMembersOutput {
 }
 /// See [`ListMembersOutput`](crate::output::ListMembersOutput)
 pub mod list_members_output {
+
     /// A builder for [`ListMembersOutput`](crate::output::ListMembersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -637,6 +649,7 @@ impl std::fmt::Debug for ListInvitationsOutput {
 }
 /// See [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
 pub mod list_invitations_output {
+
     /// A builder for [`ListInvitationsOutput`](crate::output::ListInvitationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -721,6 +734,7 @@ impl std::fmt::Debug for ListFindingAggregatorsOutput {
 }
 /// See [`ListFindingAggregatorsOutput`](crate::output::ListFindingAggregatorsOutput)
 pub mod list_finding_aggregators_output {
+
     /// A builder for [`ListFindingAggregatorsOutput`](crate::output::ListFindingAggregatorsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -806,6 +820,7 @@ impl std::fmt::Debug for ListEnabledProductsForImportOutput {
 }
 /// See [`ListEnabledProductsForImportOutput`](crate::output::ListEnabledProductsForImportOutput)
 pub mod list_enabled_products_for_import_output {
+
     /// A builder for [`ListEnabledProductsForImportOutput`](crate::output::ListEnabledProductsForImportOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -881,6 +896,7 @@ impl std::fmt::Debug for InviteMembersOutput {
 }
 /// See [`InviteMembersOutput`](crate::output::InviteMembersOutput)
 pub mod invite_members_output {
+
     /// A builder for [`InviteMembersOutput`](crate::output::InviteMembersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -951,6 +967,7 @@ impl std::fmt::Debug for GetMembersOutput {
 }
 /// See [`GetMembersOutput`](crate::output::GetMembersOutput)
 pub mod get_members_output {
+
     /// A builder for [`GetMembersOutput`](crate::output::GetMembersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1035,6 +1052,7 @@ impl std::fmt::Debug for GetMasterAccountOutput {
 }
 /// See [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput)
 pub mod get_master_account_output {
+
     /// A builder for [`GetMasterAccountOutput`](crate::output::GetMasterAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1089,6 +1107,7 @@ impl std::fmt::Debug for GetInvitationsCountOutput {
 }
 /// See [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput)
 pub mod get_invitations_count_output {
+
     /// A builder for [`GetInvitationsCountOutput`](crate::output::GetInvitationsCountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1150,6 +1169,7 @@ impl std::fmt::Debug for GetInsightsOutput {
 }
 /// See [`GetInsightsOutput`](crate::output::GetInsightsOutput)
 pub mod get_insights_output {
+
     /// A builder for [`GetInsightsOutput`](crate::output::GetInsightsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1225,6 +1245,7 @@ impl std::fmt::Debug for GetInsightResultsOutput {
 }
 /// See [`GetInsightResultsOutput`](crate::output::GetInsightResultsOutput)
 pub mod get_insight_results_output {
+
     /// A builder for [`GetInsightResultsOutput`](crate::output::GetInsightResultsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1289,6 +1310,7 @@ impl std::fmt::Debug for GetFindingsOutput {
 }
 /// See [`GetFindingsOutput`](crate::output::GetFindingsOutput)
 pub mod get_findings_output {
+
     /// A builder for [`GetFindingsOutput`](crate::output::GetFindingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1388,6 +1410,7 @@ impl std::fmt::Debug for GetFindingAggregatorOutput {
 }
 /// See [`GetFindingAggregatorOutput`](crate::output::GetFindingAggregatorOutput)
 pub mod get_finding_aggregator_output {
+
     /// A builder for [`GetFindingAggregatorOutput`](crate::output::GetFindingAggregatorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1506,6 +1529,7 @@ impl std::fmt::Debug for GetEnabledStandardsOutput {
 }
 /// See [`GetEnabledStandardsOutput`](crate::output::GetEnabledStandardsOutput)
 pub mod get_enabled_standards_output {
+
     /// A builder for [`GetEnabledStandardsOutput`](crate::output::GetEnabledStandardsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1585,6 +1609,7 @@ impl std::fmt::Debug for GetAdministratorAccountOutput {
 }
 /// See [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput)
 pub mod get_administrator_account_output {
+
     /// A builder for [`GetAdministratorAccountOutput`](crate::output::GetAdministratorAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1632,6 +1657,7 @@ impl std::fmt::Debug for EnableSecurityHubOutput {
 }
 /// See [`EnableSecurityHubOutput`](crate::output::EnableSecurityHubOutput)
 pub mod enable_security_hub_output {
+
     /// A builder for [`EnableSecurityHubOutput`](crate::output::EnableSecurityHubOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1662,6 +1688,7 @@ impl std::fmt::Debug for EnableOrganizationAdminAccountOutput {
 }
 /// See [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
 pub mod enable_organization_admin_account_output {
+
     /// A builder for [`EnableOrganizationAdminAccountOutput`](crate::output::EnableOrganizationAdminAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1702,6 +1729,7 @@ impl std::fmt::Debug for EnableImportFindingsForProductOutput {
 }
 /// See [`EnableImportFindingsForProductOutput`](crate::output::EnableImportFindingsForProductOutput)
 pub mod enable_import_findings_for_product_output {
+
     /// A builder for [`EnableImportFindingsForProductOutput`](crate::output::EnableImportFindingsForProductOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1749,6 +1777,7 @@ impl std::fmt::Debug for DisassociateMembersOutput {
 }
 /// See [`DisassociateMembersOutput`](crate::output::DisassociateMembersOutput)
 pub mod disassociate_members_output {
+
     /// A builder for [`DisassociateMembersOutput`](crate::output::DisassociateMembersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1779,6 +1808,7 @@ impl std::fmt::Debug for DisassociateFromMasterAccountOutput {
 }
 /// See [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput)
 pub mod disassociate_from_master_account_output {
+
     /// A builder for [`DisassociateFromMasterAccountOutput`](crate::output::DisassociateFromMasterAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1809,6 +1839,7 @@ impl std::fmt::Debug for DisassociateFromAdministratorAccountOutput {
 }
 /// See [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput)
 pub mod disassociate_from_administrator_account_output {
+
     /// A builder for [`DisassociateFromAdministratorAccountOutput`](crate::output::DisassociateFromAdministratorAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1839,6 +1870,7 @@ impl std::fmt::Debug for DisableSecurityHubOutput {
 }
 /// See [`DisableSecurityHubOutput`](crate::output::DisableSecurityHubOutput)
 pub mod disable_security_hub_output {
+
     /// A builder for [`DisableSecurityHubOutput`](crate::output::DisableSecurityHubOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1869,6 +1901,7 @@ impl std::fmt::Debug for DisableOrganizationAdminAccountOutput {
 }
 /// See [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
 pub mod disable_organization_admin_account_output {
+
     /// A builder for [`DisableOrganizationAdminAccountOutput`](crate::output::DisableOrganizationAdminAccountOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1899,6 +1932,7 @@ impl std::fmt::Debug for DisableImportFindingsForProductOutput {
 }
 /// See [`DisableImportFindingsForProductOutput`](crate::output::DisableImportFindingsForProductOutput)
 pub mod disable_import_findings_for_product_output {
+
     /// A builder for [`DisableImportFindingsForProductOutput`](crate::output::DisableImportFindingsForProductOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -1946,6 +1980,7 @@ impl std::fmt::Debug for DescribeStandardsControlsOutput {
 }
 /// See [`DescribeStandardsControlsOutput`](crate::output::DescribeStandardsControlsOutput)
 pub mod describe_standards_controls_output {
+
     /// A builder for [`DescribeStandardsControlsOutput`](crate::output::DescribeStandardsControlsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2028,6 +2063,7 @@ impl std::fmt::Debug for DescribeStandardsOutput {
 }
 /// See [`DescribeStandardsOutput`](crate::output::DescribeStandardsOutput)
 pub mod describe_standards_output {
+
     /// A builder for [`DescribeStandardsOutput`](crate::output::DescribeStandardsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2110,6 +2146,7 @@ impl std::fmt::Debug for DescribeProductsOutput {
 }
 /// See [`DescribeProductsOutput`](crate::output::DescribeProductsOutput)
 pub mod describe_products_output {
+
     /// A builder for [`DescribeProductsOutput`](crate::output::DescribeProductsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2172,6 +2209,10 @@ pub struct DescribeOrganizationConfigurationOutput {
     pub auto_enable: bool,
     /// <p>Whether the maximum number of allowed member accounts are already associated with the Security Hub administrator account.</p>
     pub member_account_limit_reached: bool,
+    /// <p>Whether to automatically enable Security Hub <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default standards</a> for new member accounts in the organization.</p>
+    /// <p>The default value of this parameter is equal to <code>DEFAULT</code>.</p>
+    /// <p>If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member accounts.</p>
+    pub auto_enable_standards: std::option::Option<crate::model::AutoEnableStandards>,
 }
 impl DescribeOrganizationConfigurationOutput {
     /// <p>Whether to automatically enable Security Hub for new accounts in the organization.</p>
@@ -2183,6 +2224,12 @@ impl DescribeOrganizationConfigurationOutput {
     pub fn member_account_limit_reached(&self) -> bool {
         self.member_account_limit_reached
     }
+    /// <p>Whether to automatically enable Security Hub <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default standards</a> for new member accounts in the organization.</p>
+    /// <p>The default value of this parameter is equal to <code>DEFAULT</code>.</p>
+    /// <p>If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member accounts.</p>
+    pub fn auto_enable_standards(&self) -> std::option::Option<&crate::model::AutoEnableStandards> {
+        self.auto_enable_standards.as_ref()
+    }
 }
 impl std::fmt::Debug for DescribeOrganizationConfigurationOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -2192,17 +2239,20 @@ impl std::fmt::Debug for DescribeOrganizationConfigurationOutput {
             "member_account_limit_reached",
             &self.member_account_limit_reached,
         );
+        formatter.field("auto_enable_standards", &self.auto_enable_standards);
         formatter.finish()
     }
 }
 /// See [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
 pub mod describe_organization_configuration_output {
+
     /// A builder for [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_enable: std::option::Option<bool>,
         pub(crate) member_account_limit_reached: std::option::Option<bool>,
+        pub(crate) auto_enable_standards: std::option::Option<crate::model::AutoEnableStandards>,
     }
     impl Builder {
         /// <p>Whether to automatically enable Security Hub for new accounts in the organization.</p>
@@ -2230,11 +2280,29 @@ pub mod describe_organization_configuration_output {
             self.member_account_limit_reached = input;
             self
         }
+        /// <p>Whether to automatically enable Security Hub <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default standards</a> for new member accounts in the organization.</p>
+        /// <p>The default value of this parameter is equal to <code>DEFAULT</code>.</p>
+        /// <p>If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member accounts.</p>
+        pub fn auto_enable_standards(mut self, input: crate::model::AutoEnableStandards) -> Self {
+            self.auto_enable_standards = Some(input);
+            self
+        }
+        /// <p>Whether to automatically enable Security Hub <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-enable-disable.html">default standards</a> for new member accounts in the organization.</p>
+        /// <p>The default value of this parameter is equal to <code>DEFAULT</code>.</p>
+        /// <p>If equal to <code>DEFAULT</code>, then Security Hub default standards are automatically enabled for new member accounts. If equal to <code>NONE</code>, then default standards are not automatically enabled for new member accounts.</p>
+        pub fn set_auto_enable_standards(
+            mut self,
+            input: std::option::Option<crate::model::AutoEnableStandards>,
+        ) -> Self {
+            self.auto_enable_standards = input;
+            self
+        }
         /// Consumes the builder and constructs a [`DescribeOrganizationConfigurationOutput`](crate::output::DescribeOrganizationConfigurationOutput)
         pub fn build(self) -> crate::output::DescribeOrganizationConfigurationOutput {
             crate::output::DescribeOrganizationConfigurationOutput {
                 auto_enable: self.auto_enable.unwrap_or_default(),
                 member_account_limit_reached: self.member_account_limit_reached.unwrap_or_default(),
+                auto_enable_standards: self.auto_enable_standards,
             }
         }
     }
@@ -2284,6 +2352,7 @@ impl std::fmt::Debug for DescribeHubOutput {
 }
 /// See [`DescribeHubOutput`](crate::output::DescribeHubOutput)
 pub mod describe_hub_output {
+
     /// A builder for [`DescribeHubOutput`](crate::output::DescribeHubOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2374,6 +2443,7 @@ impl std::fmt::Debug for DescribeActionTargetsOutput {
 }
 /// See [`DescribeActionTargetsOutput`](crate::output::DescribeActionTargetsOutput)
 pub mod describe_action_targets_output {
+
     /// A builder for [`DescribeActionTargetsOutput`](crate::output::DescribeActionTargetsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2449,6 +2519,7 @@ impl std::fmt::Debug for DeleteMembersOutput {
 }
 /// See [`DeleteMembersOutput`](crate::output::DeleteMembersOutput)
 pub mod delete_members_output {
+
     /// A builder for [`DeleteMembersOutput`](crate::output::DeleteMembersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2512,6 +2583,7 @@ impl std::fmt::Debug for DeleteInvitationsOutput {
 }
 /// See [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput)
 pub mod delete_invitations_output {
+
     /// A builder for [`DeleteInvitationsOutput`](crate::output::DeleteInvitationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2575,6 +2647,7 @@ impl std::fmt::Debug for DeleteInsightOutput {
 }
 /// See [`DeleteInsightOutput`](crate::output::DeleteInsightOutput)
 pub mod delete_insight_output {
+
     /// A builder for [`DeleteInsightOutput`](crate::output::DeleteInsightOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2619,6 +2692,7 @@ impl std::fmt::Debug for DeleteFindingAggregatorOutput {
 }
 /// See [`DeleteFindingAggregatorOutput`](crate::output::DeleteFindingAggregatorOutput)
 pub mod delete_finding_aggregator_output {
+
     /// A builder for [`DeleteFindingAggregatorOutput`](crate::output::DeleteFindingAggregatorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2659,6 +2733,7 @@ impl std::fmt::Debug for DeleteActionTargetOutput {
 }
 /// See [`DeleteActionTargetOutput`](crate::output::DeleteActionTargetOutput)
 pub mod delete_action_target_output {
+
     /// A builder for [`DeleteActionTargetOutput`](crate::output::DeleteActionTargetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2716,6 +2791,7 @@ impl std::fmt::Debug for DeclineInvitationsOutput {
 }
 /// See [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput)
 pub mod decline_invitations_output {
+
     /// A builder for [`DeclineInvitationsOutput`](crate::output::DeclineInvitationsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2779,6 +2855,7 @@ impl std::fmt::Debug for CreateMembersOutput {
 }
 /// See [`CreateMembersOutput`](crate::output::CreateMembersOutput)
 pub mod create_members_output {
+
     /// A builder for [`CreateMembersOutput`](crate::output::CreateMembersOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2842,6 +2919,7 @@ impl std::fmt::Debug for CreateInsightOutput {
 }
 /// See [`CreateInsightOutput`](crate::output::CreateInsightOutput)
 pub mod create_insight_output {
+
     /// A builder for [`CreateInsightOutput`](crate::output::CreateInsightOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -2920,6 +2998,7 @@ impl std::fmt::Debug for CreateFindingAggregatorOutput {
 }
 /// See [`CreateFindingAggregatorOutput`](crate::output::CreateFindingAggregatorOutput)
 pub mod create_finding_aggregator_output {
+
     /// A builder for [`CreateFindingAggregatorOutput`](crate::output::CreateFindingAggregatorOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3028,6 +3107,7 @@ impl std::fmt::Debug for CreateActionTargetOutput {
 }
 /// See [`CreateActionTargetOutput`](crate::output::CreateActionTargetOutput)
 pub mod create_action_target_output {
+
     /// A builder for [`CreateActionTargetOutput`](crate::output::CreateActionTargetOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3098,6 +3178,7 @@ impl std::fmt::Debug for BatchUpdateFindingsOutput {
 }
 /// See [`BatchUpdateFindingsOutput`](crate::output::BatchUpdateFindingsOutput)
 pub mod batch_update_findings_output {
+
     /// A builder for [`BatchUpdateFindingsOutput`](crate::output::BatchUpdateFindingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3206,6 +3287,7 @@ impl std::fmt::Debug for BatchImportFindingsOutput {
 }
 /// See [`BatchImportFindingsOutput`](crate::output::BatchImportFindingsOutput)
 pub mod batch_import_findings_output {
+
     /// A builder for [`BatchImportFindingsOutput`](crate::output::BatchImportFindingsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3297,6 +3379,7 @@ impl std::fmt::Debug for BatchEnableStandardsOutput {
 }
 /// See [`BatchEnableStandardsOutput`](crate::output::BatchEnableStandardsOutput)
 pub mod batch_enable_standards_output {
+
     /// A builder for [`BatchEnableStandardsOutput`](crate::output::BatchEnableStandardsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3367,6 +3450,7 @@ impl std::fmt::Debug for BatchDisableStandardsOutput {
 }
 /// See [`BatchDisableStandardsOutput`](crate::output::BatchDisableStandardsOutput)
 pub mod batch_disable_standards_output {
+
     /// A builder for [`BatchDisableStandardsOutput`](crate::output::BatchDisableStandardsOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3424,6 +3508,7 @@ impl std::fmt::Debug for AcceptInvitationOutput {
 }
 /// See [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
 pub mod accept_invitation_output {
+
     /// A builder for [`AcceptInvitationOutput`](crate::output::AcceptInvitationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
@@ -3454,6 +3539,7 @@ impl std::fmt::Debug for AcceptAdministratorInvitationOutput {
 }
 /// See [`AcceptAdministratorInvitationOutput`](crate::output::AcceptAdministratorInvitationOutput)
 pub mod accept_administrator_invitation_output {
+
     /// A builder for [`AcceptAdministratorInvitationOutput`](crate::output::AcceptAdministratorInvitationOutput)
     #[non_exhaustive]
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
